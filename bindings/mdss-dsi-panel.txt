@@ -79,6 +79,18 @@ then 3 options can be tried.
 
 Optional properties:
 - qcom,mdss-dsi-panel-name:		A string used as a descriptive name of the panel
+- qcom,vid-on-commands:			same as "qcom,mdss-dsi-on-command" except commands are
+						only sent for video mode.
+- qcom,vid-on-commands-state: String that specifies the ctrl state for sending panel on commands.
+					for video mode.
+					"dsi_lp_mode" = DSI low power mode (default)
+					"dsi_hs_mode" = DSI high speed mode
+- qcom,cmd-on-commands:			same as "qcom,mdss-dsi-on-command" except commands are
+					only sent for command mode.
+- qcom,cmd-on-commands-state: String that specifies the ctrl state for sending panel on commands.
+					for command mode.
+					"dsi_lp_mode" = DSI low power mode (default)
+					"dsi_hs_mode" = DSI high speed mode
 - qcom,mdss-dsi-physical-type:		A string used as a decriptive type of the panel.
 						"oled" : That indicate it's an OLED panel.
 						"lcd" : That indicate it's an LCD panel.
@@ -514,12 +526,34 @@ Optional properties:
 - qcom,mdss-dsi-post-mode-switch-on-command:		Multiple dcs packets used for turning on DSI panel
 					after panel has switch modes.
 					Refer to "qcom,mdss-dsi-on-command" section for adding commands.
-- qcom,video-to-cmd-mode-switch-commands:	List of commands that need to be sent
-					to panel in order to switch from video mode to command mode dynamically.
+- qcom,cmd-mode-switch-out-commands:		List of commands that need to be sent
+					to panel in order to switch out command mode dynamically.
 					Refer to "qcom,mdss-dsi-on-command" section for adding commands.
-- qcom,cmd-to-video-mode-switch-commands:	List of commands that need to be sent
-					to panel in order to switch from command mode to video mode dynamically.
+- qcom,cmd-mode-switch-out-commands-state: String that specifies the ctrl state for sending command mode switch out
+					commands.
+					"dsi_lp_mode" = DSI low power mode (default)
+					"dsi_hs_mode" = DSI high speed mode
+- qcom,cmd-mode-switch-in-commands:		List of commands that need to be sent
+					to panel in order to switch in command mode dynamically.
 					Refer to "qcom,mdss-dsi-on-command" section for adding commands.
+- qcom,cmd-mode-switch-in-commands-state: String that specifies the ctrl state for sending command mode switch in
+					commands.
+					"dsi_lp_mode" = DSI low power mode (default)
+					"dsi_hs_mode" = DSI high speed mode
+- qcom,video-mode-switch-out-commands:		List of commands that need to be sent
+					to panel in order to switch out video mode dynamically.
+					Refer to "qcom,mdss-dsi-on-command" section for adding commands.
+- qcom,video-mode-switch-out-commands-state: String that specifies the ctrl state for sending video mode switch out
+					commands.
+					"dsi_lp_mode" = DSI low power mode (default)
+					"dsi_hs_mode" = DSI high speed mode
+- qcom,video-mode-switch-in-commands:		List of commands that need to be sent
+					to panel in order to switch in video mode dynamically.
+					Refer to "qcom,mdss-dsi-on-command" section for adding commands.
+- qcom,video-mode-switch-in-commands-state: String that specifies the ctrl state for sending video mode switch in
+					commands.
+					"dsi_lp_mode" = DSI low power mode (default)
+					"dsi_hs_mode" = DSI high speed mode
 - qcom,send-pps-before-switch:		Boolean propety to indicate when PPS commands should be sent,
 					either before or after switch commands during dynamic resolution
 					switch in DSC panels. If the property is not present, the default
@@ -797,6 +831,7 @@ Example:
 		qcom,mdss-dsi-display-timings {
 			wqhd {
 				qcom,mdss-dsi-cmd-mode;
+				qcom,mdss-dsi-video-mode;
 				qcom,mdss-dsi-timing-default;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -824,6 +859,18 @@ Example:
 				qcom,mdss-dsi-qsync-on-commands-state = "dsi_hs_mode";
 				qcom,mdss-dsi-qsync-off-commands = [15 01 00 00 00 00 02 51 00];
 				qcom,mdss-dsi-qsync-off-commands-state = "dsi_hs_mode";
+				qcom,video-mode-switch-out-commands = [
+					39 01 00 00 00 00 06 b2 00 5d 04 80 49];
+				qcom,video-mode-switch-out-commands-state = "dsi_lp_mode";
+				qcom,video-mode-switch-in-commands = [
+					 39 01 00 00 00 00 06 b2 00 5d 04 80 40];
+				qcom,video-mode-switch-in-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-switch-in-commands = [
+					39 01 00 00 00 00 06 b2 00 5d 04 80 42];
+				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-switch-out-commands = [
+					39 01 00 00 00 00 06 b2 00 5d 01 02 50];
+				qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
 
 				qcom,mdss-dsc-slice-height = <16>;
 				qcom,mdss-dsc-slice-width = <360>;
