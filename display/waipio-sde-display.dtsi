@@ -8,6 +8,24 @@
 	};
 };
 
+&sde_dsi {
+	clocks = <&mdss_dsi_phy0 0>,
+			<&mdss_dsi_phy0 1>,
+			<&mdss_dsi_phy1 2>,
+			<&mdss_dsi_phy1 3>;
+	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+			"pll_byte_clk1", "pll_dsi_clk1";
+};
+
+&sde_dsi1 {
+	clocks = <&mdss_dsi_phy0 0>,
+			<&mdss_dsi_phy0 1>,
+			<&mdss_dsi_phy1 2>,
+			<&mdss_dsi_phy1 3>;
+	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+			"pll_byte_clk1", "pll_dsi_clk1";
+};
+
 &mdss_mdp {
 	connectors = <&smmu_sde_unsec &smmu_sde_sec &sde_wb>;
 };
