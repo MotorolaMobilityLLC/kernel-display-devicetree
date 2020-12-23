@@ -10,10 +10,6 @@
 			"vbif_phys",
 			"regdma_phys";
 
-		clock-rate = <0 0 0 0 500000000 19200000 500000000 19200000>;
-		clock-max-rate = <0 0 0 0 500000000 19200000 500000000
-					500000000>;
-
 		/* interrupt config */
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
 		interrupt-controller;
