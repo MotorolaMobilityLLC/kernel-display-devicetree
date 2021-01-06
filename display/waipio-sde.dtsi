@@ -1,5 +1,9 @@
-#include "waipio-sde-common.dtsi"
 #include <dt-bindings/clock/mdss-5nm-pll-clk.h>
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
+#include <dt-bindings/clock/qcom,dispcc-waipio.h>
+#include <dt-bindings/clock/qcom,gcc-waipio.h>
+#include <dt-bindings/interconnect/qcom,waipio.h>
+#include "waipio-sde-common.dtsi"
 
 &soc {
 	ext_disp: qcom,msm-ext-disp {
