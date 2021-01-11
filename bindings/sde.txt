@@ -264,6 +264,8 @@ Optional properties:
 - qcom,sde-dither-off:		A u32 offset indicates the dither block offset on pingpong.
 - qcom,sde-dither-version:	A u32 value indicates the dither block version.
 - qcom,sde-dither-size:		A u32 value indicates the dither block address range.
+- qcom,sde-cwb-dither:		Array of u32 flags indicating whether each dither block
+				may be configured as a cwb dither block.
 - qcom,sde-sspp-vig-blocks:	A node that lists the blocks inside the VIG hardware. There can
 				be more than one instance of this binding, in which case the
 				entry would be appended with the vcm entry index. Each entry will
@@ -680,6 +682,7 @@ Example:
 			  0x00072000 0x00072800>;
     qcom,sde-pp-slave = <0x0 0x0 0x0 0x0>;
     qcom,sde-pp-cwb = <0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1>;
+    qcom,sde-cwb-dither = <0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1>;
     qcom,sde-cdm-off = <0x0007a200>;
     qcom,sde-dsc-off = <0x00081000 0x00081400>;
     qcom,sde-vdc-off = <0x7C000>;
