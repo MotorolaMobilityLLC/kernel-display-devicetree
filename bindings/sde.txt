@@ -362,6 +362,8 @@ Optional properties:
                 corresponding DSPP block offset as base.
 - qcom,sde-dspp-demura-size:    A u32 value indicating the demura block register address range
 - qcom,sde-dspp-demura-version:    A u32 value indicating the version of demura hardware.
+- qcom,sde-lm-noise-off:	A u32 value indicating noise layer offset from mixer base.
+- qcom,sde-lm-noise-version:	A u32 value indicating the noise layer version.
 - qcom,sde-vbif-id:		Array of vbif ids corresponding to the
 				offsets defined in property: qcom,sde-vbif-off.
 - qcom,sde-vbif-default-ot-rd-limit:	A u32 value indicates the default read OT limit
@@ -661,7 +663,10 @@ Example:
     qcom,sde-dspp-spr-version = <0x00010000>:
     qcom,sde-dspp-demura-off = <0x15600 0x14800>;
     qcom,sde-dspp-demura-size = <0x200>;
-    qcom,sde-dspp-demura-version = <0x00010000>:
+    qcom,sde-dspp-demura-version = <0x00010000>;
+    qcom,sde-lm-noise-off = <0x320>;
+    qcom,sde-lm-noise-version = <0x00010000>;
+
     qcom,sde-dspp-rc-mem-size = <2720>;
     qcom,sde-dest-scaler-top-off = <0x00061000>;
     qcom,sde-dest-scaler-off = <0x800 0x1000>;
