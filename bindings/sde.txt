@@ -83,6 +83,10 @@ Required properties
 Optional properties:
 - clock-rate:		List of clock rates in Hz.
 - clock-max-rate:	List of maximum clock rate in Hz that this device supports.
+- clock-mmrm:          List of clocks that enable setting the clk rate through MMRM driver.
+                       The order of the list must match the 'clocks' and 'clock-names' properties.
+                       The 'DISP_CC' ID of the clock must be used to enable the property for the
+                       respective clock, whereas a value of zero disables the property.
 - qcom,platform-supply-entries:	A node that lists the elements of the supply. There
 				can be more than one instance of this binding,
 				in which case the entry would be appended with
@@ -600,6 +604,7 @@ Example:
       "vsync_clk";
     clock-rate = <0>, <0>, <0>;
     clock-max-rate= <0 320000000 0>;
+    clock-mmrm = <0 0 DISP_CC_MDSS_MDP_CLK_SRC 0 0 0 0>;
     mmagic-supply = <&gdsc_mmagic_mdss>;
     vdd-supply = <&gdsc_mdss>;
     interrupt-parent = <&intc>;
