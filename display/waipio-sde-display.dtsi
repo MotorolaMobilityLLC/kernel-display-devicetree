@@ -1,6 +1,22 @@
 #include "waipio-sde-display-common.dtsi"
+#include "waipio-sde-display-pinctrl.dtsi"
 
 &soc {
+	display_panel_avdd: display_gpio_regulator@1 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_avdd";
+		regulator-min-microvolt = <5500000>;
+		regulator-max-microvolt = <5500000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&tlmm 64 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_avdd>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_avdd_default>;
+	};
+
 	sde_wb: qcom,wb-display@0 {
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
@@ -15,29 +31,36 @@
 			<&mdss_dsi_phy1 3>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1";
+
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi_active &sde_te_active>;
+	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
+
+	qcom,platform-te-gpio = <&tlmm 86 0>;
+	qcom,panel-te-source = <0>;
+
+	vddio-supply = <&L12C>;
+	vci-supply = <&L13C>;
 };
 
 &sde_dsi1 {
+	status = "disabled";
 	clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
 			<&mdss_dsi_phy1 2>,
 			<&mdss_dsi_phy1 3>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1";
+
+	qcom,platform-te-gpio = <&tlmm 87 0>;
+	qcom,panel-te-source = <1>;
+
+	vddio-supply = <&L12C>;
+	vdd-supply = <&L13C>;
 };
 
 &mdss_mdp {
 	connectors = <&smmu_sde_unsec &smmu_sde_sec &sde_wb>;
-};
-
-&dsi_sw43404_amoled_cmd {
-	qcom,ulps-enabled;
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <720 180 180 180 1440 180>;
-		};
-	};
 };
 
 &dsi_r66451_amoled_cmd {
@@ -84,10 +107,6 @@
 			qcom,panel-roi-alignment = <540 8 8 8 1080 8>;
 		};
 	};
-};
-
-&dsi_dual_nt35597_truly_cmd {
-	qcom,ulps-enabled;
 };
 
 &dsi_nt35695b_truly_fhd_cmd {
