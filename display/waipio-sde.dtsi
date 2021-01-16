@@ -234,7 +234,6 @@
 };
 
 &mdss_dsi0 {
-	status = "disabled";
 	vdda-1p2-supply = <&L6B>;
 	clocks = <&clock_dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&clock_dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
@@ -247,7 +246,6 @@
 };
 
 &mdss_dsi1 {
-	status = "disabled";
 	vdda-1p2-supply = <&L6B>;
 	clocks = <&clock_dispcc DISP_CC_MDSS_BYTE1_CLK>,
 		<&clock_dispcc DISP_CC_MDSS_BYTE1_CLK_SRC>,
@@ -260,7 +258,6 @@
 };
 
 &mdss_dsi_phy0 {
-	status = "disabled";
 	vdda-0p9-supply = <&L5B>;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
@@ -268,7 +265,6 @@
 };
 
 &mdss_dsi_phy1 {
-	status = "disabled";
 	vdda-0p9-supply = <&L5B>;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
