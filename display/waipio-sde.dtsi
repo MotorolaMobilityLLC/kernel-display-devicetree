@@ -240,9 +240,10 @@
 		<&clock_dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
 		<&clock_dispcc DISP_CC_MDSS_PCLK0_CLK>,
 		<&clock_dispcc DISP_CC_MDSS_PCLK0_CLK_SRC>,
-		<&clock_dispcc DISP_CC_MDSS_ESC0_CLK>;
+		<&clock_dispcc DISP_CC_MDSS_ESC0_CLK>,
+		<&clock_rpmh RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "esc_clk";
+			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
 };
 
 &mdss_dsi1 {
@@ -252,9 +253,10 @@
 		<&clock_dispcc DISP_CC_MDSS_BYTE1_INTF_CLK>,
 		<&clock_dispcc DISP_CC_MDSS_PCLK1_CLK>,
 		<&clock_dispcc DISP_CC_MDSS_PCLK1_CLK_SRC>,
-		<&clock_dispcc DISP_CC_MDSS_ESC1_CLK>;
+		<&clock_dispcc DISP_CC_MDSS_ESC1_CLK>,
+		<&clock_rpmh RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "esc_clk";
+			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
 };
 
 &mdss_dsi_phy0 {
