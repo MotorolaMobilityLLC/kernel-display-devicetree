@@ -155,11 +155,9 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
-			<&mmss_noc MASTER_MDP0_DISP &gem_noc SLAVE_LLCC_DISP>,
-			<&mmss_noc MASTER_MDP1_DISP &gem_noc SLAVE_LLCC_DISP>,
-			<&mc_virt MASTER_LLCC_DISP &mc_virt SLAVE_EBI1_DISP>;
-		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-data-bus1",
-				"qcom,sde-ebi-bus";
+			<&mmss_noc MASTER_MDP0_DISP &mc_virt SLAVE_EBI1_DISP>,
+			<&mmss_noc MASTER_MDP1_DISP &mc_virt SLAVE_EBI1_DISP>;
+		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-data-bus1";
 	};
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
@@ -203,13 +201,15 @@
 	vdd-supply = <&disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
-	interconnects = <&mmss_noc MASTER_MDP0 &mc_virt SLAVE_EBI1>,
-			<&mmss_noc MASTER_MDP1 &mc_virt SLAVE_EBI1>,
+	interconnects = <&mmss_noc MASTER_MDP0 &gem_noc SLAVE_LLCC>,
+			<&mmss_noc MASTER_MDP1 &gem_noc SLAVE_LLCC>,
+			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
 			<&gem_noc MASTER_APPSS_PROC
 				&config_noc SLAVE_DISPLAY_CFG>;
 	interconnect-names = "qcom,sde-data-bus0", "qcom,sde-data-bus1",
-			"qcom,sde-reg-bus";
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
 	qcom,sde-has-idle-pc;
 	qcom,sde-dspp-ltm-version = <0x00010001>;
 	/* offsets are based off dspp 0 and dspp 1 */
