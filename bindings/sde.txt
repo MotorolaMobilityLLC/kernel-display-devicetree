@@ -537,6 +537,8 @@ Optional properties:
 - qcom,vram-size: 		A u32 value indicating the size of the VRAM in bytes
 - qcom,pmic-arb-address:	A u32 array of display related SPMI address
 				bit mask, which is a combination of SID and  pheripheral id's.
+- qcom,sde-ib-bw-vote:		A u32 array of IB bandwidth vote values in kbps for
+				MNOC, LLCC and DDR/EBI respectively.
 
 Bus Scaling:
 - interconnects                 An array of 4 cell properties with the format of
@@ -820,6 +822,8 @@ Example:
 
     qcom,vram-size = <0x200000>;
     qcom,pmic-arb-address = <0x3F800 0x3F900 0x3FA00>;
+
+    qcom,sde-ib-bw-vote = <2500000 0 800000>;
 
     qcom,sde-vbif-qos-rt-remap = <3 3 4 4 5 5 6 6>;
     qcom,sde-vbif-qos-nrt-remap = <3 3 3 3 3 3 3 3>;
