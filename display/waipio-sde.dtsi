@@ -1,8 +1,8 @@
-#include <dt-bindings/clock/mdss-5nm-pll-clk.h>
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
 #include <dt-bindings/clock/qcom,gcc-waipio.h>
 #include <dt-bindings/interconnect/qcom,waipio.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
 #include "waipio-sde-common.dtsi"
 
 &soc {
@@ -25,22 +25,24 @@
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
+		usb-phy = <&usb_qmp_dp_phy>;
+		qcom,dp-aux-switch = <&fsa4480>;
 		qcom,ext-disp = <&ext_disp>;
 		usb-controller = <&usb0>;
 
-		reg =   <0xae90000 0x0dc>,
+		reg =   <0xae90000 0x0fc>,
 			<0xae90200 0x0c0>,
-			<0xae90400 0x508>,
-			<0xae91000 0x094>,
+			<0xae90400 0x770>,
+			<0xae91000 0x098>,
 			<0x88eaa00 0x200>,
 			<0x88ea200 0x200>,
 			<0x88ea600 0x200>,
-			<0xaf02000 0x1a0>,
+			<0xaf08000 0x1f4>,
 			<0x88ea000 0x200>,
 			<0x88e8000 0x20>,
 			<0x0aee1000 0x034>,
-			<0xae91400 0x094>,
-			<0xaf03000 0x8>;
+			<0xae91400 0x098>,
+			<0xaf09000 0x14>;
 		reg-names = "dp_ahb", "dp_aux", "dp_link",
 			"dp_p0", "dp_phy", "dp_ln_tx0", "dp_ln_tx1",
 			"dp_mmss_cc", "dp_pll", "usb3_dp_com",
@@ -48,6 +50,22 @@
 
 		interrupt-parent = <&mdss_mdp>;
 		interrupts = <12 0>;
+
+		#clock-cells = <1>;
+		clocks =  <&clock_dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
+			<&clock_rpmh RPMH_CXO_CLK>,
+			<&clock_gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
+			<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
+			<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
+			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK_SRC>,
+			<&sde_dp 1>,
+			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
+			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
+			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
+		clock-names = "core_aux_clk", "core_usb_ref_clk_src",
+			"core_usb_pipe_clk", "link_clk", "link_iface_clk",
+			"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
+			"strm0_pixel_clk", "strm1_pixel_clk";
 
 		qcom,pll-revision = "5nm-v1";
 		qcom,phy-version = <0x420>;
@@ -82,7 +100,7 @@
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
 				qcom,supply-max-voltage = <1200000>;
-				qcom,supply-enable-load = <21700>;
+				qcom,supply-enable-load = <30100>;
 				qcom,supply-disable-load = <0>;
 			};
 		};
@@ -97,19 +115,6 @@
 				qcom,supply-min-voltage = <912000>;
 				qcom,supply-max-voltage = <912000>;
 				qcom,supply-enable-load = <115000>;
-				qcom,supply-disable-load = <0>;
-			};
-		};
-
-		qcom,core-supply-entries {
-			#address-cells = <1>;
-			#size-cells = <0>;
-
-			qcom,core-supply-entry@0 {
-				reg = <0>;
-				qcom,supply-min-voltage = <0>;
-				qcom,supply-max-voltage = <0>;
-				qcom,supply-enable-load = <0>;
 				qcom,supply-disable-load = <0>;
 			};
 		};
