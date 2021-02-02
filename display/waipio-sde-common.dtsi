@@ -231,12 +231,27 @@
 				<0 265000>;
 
 		qcom,sde-sspp-vig-blocks {
-			qcom,sde-vig-csc-off = <0x1a00>;
-			qcom,sde-vig-qseed-off = <0xa00>;
-			qcom,sde-vig-qseed-size = <0xe0>;
-			qcom,sde-vig-gamut = <0x1d00 0x00060001>;
-			qcom,sde-vig-igc = <0x1d00 0x00060000>;
-			qcom,sde-vig-inverse-pma;
+			vcm@0 {
+				cell-index = <0>;
+				qcom,sde-vig-csc-off = <0x1a00>;
+				qcom,sde-vig-qseed-off = <0xa00>;
+				qcom,sde-vig-qseed-size = <0xe0>;
+				qcom,sde-vig-gamut = <0x1d00 0x00060001>;
+				qcom,sde-vig-igc = <0x1d00 0x00060000>;
+				qcom,sde-vig-inverse-pma;
+				qcom,sde-fp16-igc = <0x200 0x00010000>;
+				qcom,sde-fp16-unmult = <0x200 0x00010000>;
+				qcom,sde-fp16-gc = <0x200 0x00010000>;
+				qcom,sde-fp16-csc = <0x200 0x00010000>;
+			};
+
+			vcm@1 {
+				cell-index = <1>;
+				qcom,sde-fp16-igc = <0x280 0x00010000>;
+				qcom,sde-fp16-unmult = <0x280 0x00010000>;
+				qcom,sde-fp16-gc = <0x280 0x00010000>;
+				qcom,sde-fp16-csc = <0x280 0x00010000>;
+			};
 		};
 
 		qcom,sde-sspp-dma-blocks {
@@ -246,6 +261,10 @@
 				qcom,sde-dma-gc = <0x600 0x00050000>;
 				qcom,sde-dma-inverse-pma;
 				qcom,sde-dma-csc-off = <0x200>;
+				qcom,sde-fp16-igc = <0x200 0x00010000>;
+				qcom,sde-fp16-unmult = <0x200 0x00010000>;
+				qcom,sde-fp16-gc = <0x200 0x00010000>;
+				qcom,sde-fp16-csc = <0x200 0x00010000>;
 			};
 
 			dgm@1 {
@@ -254,6 +273,10 @@
 				qcom,sde-dma-gc = <0x600 0x00050000>;
 				qcom,sde-dma-inverse-pma;
 				qcom,sde-dma-csc-off = <0x1200>;
+				qcom,sde-fp16-igc = <0x200 0x00010000>;
+				qcom,sde-fp16-unmult = <0x200 0x00010000>;
+				qcom,sde-fp16-gc = <0x200 0x00010000>;
+				qcom,sde-fp16-csc = <0x200 0x00010000>;
 			};
 		};
 
