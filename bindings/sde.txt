@@ -262,11 +262,15 @@ Optional properties:
 - qcom,sde-dither-off:		A u32 offset indicates the dither block offset on pingpong.
 - qcom,sde-dither-version:	A u32 value indicates the dither block version.
 - qcom,sde-dither-size:		A u32 value indicates the dither block address range.
-- qcom,sde-sspp-vig-blocks:	A node that lists the blocks inside the VIG hardware. The
-				block entries will contain the offset and version (if needed)
-				of each feature block. The presence of a block entry
-				indicates that the SSPP VIG contains that feature hardware.
+- qcom,sde-sspp-vig-blocks:	A node that lists the blocks inside the VIG hardware. There can
+				be more than one instance of this binding, in which case the
+				entry would be appended with the vcm entry index. Each entry will
+				contain the offset and version (if needed) of each feature block.
+				The presence of a block entry indicates that the SSPP VIG contains
+				that feature hardware.
 				e.g. qcom,sde-sspp-vig-blocks
+				-- vcm@0
+				-- cell-index: A u32 index for the sub-block.
 				-- qcom,sde-vig-csc-off: offset of CSC hardware
 				-- qcom,sde-vig-qseed-off: offset of QSEED hardware
 				-- qcom,sde-vig-qseed-size: A u32 address range for qseed scaler.
@@ -277,6 +281,10 @@ Optional properties:
 				-- qcom,sde-vig-igc: offset and version of 1D LUT IGC hardware
 				-- qcom,sde-vig-inverse-pma: Boolean property to indicate if
 				inverse PMA feature is available on VIG pipe
+				-- qcom,sde-fp16-igc: u32 offset and version of the FP16 IGC hardware
+				-- qcom,sde-fp16-unmult: u32 offset and version of the FP16 Unmult hardware
+				-- qcom,sde-fp16-gc: u32 offset and version of the FP16 GC hardware
+				-- qcom,sde-fp16-csc: u32 offset and version of the FP16 CSC hardware
 - qcom,sde-sspp-dma-blocks:	A node that lists the blocks inside the DMA hardware. There
 				can be more than one instance of this binding, in which case the
 				entry would be appended with dgm entry index. Each entry will
@@ -291,6 +299,10 @@ Optional properties:
 				-- qcom,sde-dma-inverse-pma: Boolean property to indicate if
 				inverse PMA feature is available on DMA pipe
 				-- qcom,sde-dma-csc-off: offset of CSC hardware
+				-- qcom,sde-fp16-igc: u32 offset and version of the FP16 IGC hardware
+				-- qcom,sde-fp16-unmult: u32 offset and version of the FP16 Unmult hardware
+				-- qcom,sde-fp16-gc: u32 offset and version of the FP16 GC hardware
+				-- qcom,sde-fp16-csc: u32 offset and version of the FP16 CSC hardware
 - qcom,sde-sspp-rgb-blocks:	A node that lists the blocks inside the RGB hardware. The
 				block entries will contain the offset and version (if needed)
 				of each feature block. The presence of a block entry
@@ -840,31 +852,57 @@ Example:
     qcom,sde-reg-dma-clk-ctrl = <0x2bc 20>;
 
     qcom,sde-sspp-vig-blocks {
-        qcom,sde-vig-csc-off = <0x320>;
-        qcom,sde-vig-qseed-off = <0x200>;
-        qcom,sde-vig-qseed-size = <0x74>;
-        /* Offset from vig top, version of HSIC */
-        qcom,sde-vig-hsic = <0x200 0x00010000>;
-        qcom,sde-vig-memcolor = <0x200 0x00010000>;
-        qcom,sde-vig-pcc = <0x1780 0x00010000>;
-        qcom,sde-vig-inverse-pma;
+        vcm@0 {
+            cell-index = <0>;
+            qcom,sde-vig-csc-off = <0x1a00>;
+            qcom,sde-vig-qseed-off = <0xa00>;
+            qcom,sde-vig-qseed-size = <0xe0>;
+            qcom,sde-vig-gamut = <0x1d00 0x00060001>;
+            qcom,sde-vig-igc = <0x1d00 0x00060000>;
+             /* Offset from vig top, version of HSIC */
+            qcom,sde-vig-hsic = <0x200 0x00010000>;
+            qcom,sde-vig-memcolor = <0x200 0x00010000>;
+            qcom,sde-vig-pcc = <0x1780 0x00010000>;
+            qcom,sde-vig-inverse-pma;
+            qcom,sde-fp16-igc = <0x200 0x00010000>;
+            qcom,sde-fp16-unmult = <0x200 0x00010000>;
+            qcom,sde-fp16-gc = <0x200 0x00010000>;
+            qcom,sde-fp16-csc = <0x200 0x00010000>;
+        };
+
+        vcm@1 {
+            cell-index = <1>;
+            qcom,sde-fp16-igc = <0x280 0x00010000>;
+            qcom,sde-fp16-unmult = <0x280 0x00010000>;
+            qcom,sde-fp16-gc = <0x280 0x00010000>;
+            qcom,sde-fp16-csc = <0x280 0x00010000>;
+        };
     };
 
     qcom,sde-sspp-dma-blocks {
-	dgm@0 {
-		cell-index = <0>;
-		qcom,sde-dma-igc = <0x400 0x00050000>;
-		qcom,sde-dma-gc = <0x600 0x00050000>;
-		qcom,sde-dma-inverse-pma;
-		qcom,sde-dma-csc-off = <0x200>;
-	}
-	dgm@1 {
-		cell-index = <1>;
-		qcom,sde-dma-igc = <0x1400 0x00050000>;
-		qcom,sde-dma-gc = <0x600 0x00050000>;
-		qcom,sde-dma-inverse-pma;
-		qcom,sde-dma-csc-off = <0x1200>;
-	}
+        dgm@0 {
+            cell-index = <0>;
+            qcom,sde-dma-igc = <0x400 0x00050000>;
+            qcom,sde-dma-gc = <0x600 0x00050000>;
+            qcom,sde-dma-inverse-pma;
+            qcom,sde-dma-csc-off = <0x200>;
+            qcom,sde-fp16-igc = <0x200 0x00010000>;
+            qcom,sde-fp16-unmult = <0x200 0x00010000>;
+            qcom,sde-fp16-gc = <0x200 0x00010000>;
+            qcom,sde-fp16-csc = <0x200 0x00010000>;
+        };
+
+        dgm@1 {
+            cell-index = <1>;
+            qcom,sde-dma-igc = <0x1400 0x00050000>;
+            qcom,sde-dma-gc = <0x600 0x00050000>;
+            qcom,sde-dma-inverse-pma;
+            qcom,sde-dma-csc-off = <0x1200>;
+            qcom,sde-fp16-igc = <0x200 0x00010000>;
+            qcom,sde-fp16-unmult = <0x200 0x00010000>;
+            qcom,sde-fp16-gc = <0x200 0x00010000>;
+            qcom,sde-fp16-csc = <0x200 0x00010000>;
+         };
     };
 
     qcom,sde-sspp-rgb-blocks {
