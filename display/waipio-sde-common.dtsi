@@ -27,13 +27,14 @@
 			    "none", "none", "none";
 
 		qcom,sde-mixer-off = <0x45000 0x46000 0x47000
-				      0x48000 0x49000 0x4a000>;
+				      0x48000 0x49000 0x4a000
+				      0x0f0f  0x0f0f>;
 		qcom,sde-mixer-size = <0x320>;
 		qcom,sde-mixer-display-pref = "primary", "primary", "none",
-					      "none", "none", "none";
+					"none", "none", "none", "none", "none";
 
-		qcom,sde-mixer-cwb-pref = "none", "none", "cwb",
-					      "cwb", "cwb", "cwb";
+		qcom,sde-mixer-dcwb-pref = "none", "none", "none", "none",
+					"none", "none", "dcwb", "dcwb";
 
 		qcom,sde-dspp-top-off = <0x1300>;
 		qcom,sde-dspp-top-size = <0x80>;
@@ -63,14 +64,15 @@
 		qcom,sde-intf-type = "dp", "dsi", "dsi", "dp";
 		qcom,sde-intf-tear-irq-off = <0 0x36800 0x37800 0>;
 
-		qcom,sde-pp-off = <0x6a000 0x6b000
-					0x6c000 0x6d000 0x6e000 0x6f000>;
-		qcom,sde-pp-slave = <0x0 0x0 0x0 0x0 0x0 0x0>;
+		qcom,sde-pp-off = <0x6a000 0x6b000 0x6c000 0x6d000
+					0x6e000 0x6f000 0x66800 0x66c00>;
+		qcom,sde-pp-slave = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0>;
 		qcom,sde-pp-size = <0xd4>;
-		qcom,sde-pp-merge-3d-id = <0x0 0x0 0x1 0x1 0x2 0x2>;
+		qcom,sde-pp-merge-3d-id = <0x0 0x0 0x1 0x1 0x2 0x2 0x3 0x3>;
 
-		qcom,sde-merge-3d-off = <0x4f000 0x50000 0x51000>;
+		qcom,sde-merge-3d-off = <0x4f000 0x50000 0x51000 0x66f00>;
 		qcom,sde-merge-3d-size = <0x10>;
+		qcom,sde-pp-cwb = <0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1>;
 
 		qcom,sde-cdm-off = <0x7a200>;
 		qcom,sde-cdm-size = <0x224>;
@@ -113,7 +115,7 @@
 		qcom,sde-sspp-smart-dma-priority = <5 6 7 8 1 2 3 4>;
 		qcom,sde-smart-dma-rev = "smart_dma_v2p5";
 
-		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5>;
+		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7>;
 
 		qcom,sde-mixer-blend-op-off = <0x20 0x38 0x50 0x68 0x80 0x98
 						0xb0 0xc8 0xe0 0xf8 0x110>;
