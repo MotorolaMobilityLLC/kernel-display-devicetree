@@ -476,33 +476,17 @@ Optional properties:
 				priority for lutdma client.
 - qcom,sde-qos-refresh-rates:	A u32 array indicates danger, safe and creq luts
 				qos configuration for different refresh rates.
-- qcom,sde-danger-lut:		A u32 array of 6 cell property, with a format of
-				<linear, tile, nrt, cwb, tile-qseed, linear-qseed>,
+- qcom,sde-danger-lut:		A u32 array of 7 cell property, with a format of
+				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted>,
 				indicating the danger luts on sspp and wb.
-- qcom,sde-safe-lut:		A u32 array of 6 cell property, with a format of
-				<linear, tile, nrt, cwb, tile-qseed, linear-qseed>,
+- qcom,sde-safe-lut:		A u32 array of 7 cell property, with a format of
+				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted>,
 				indicating the safe luts on sspp and wb.
-- qcom,sde-qos-lut-linear:	A u64 array of 2 cell property, with a format of
-				<lut hi, lut lo> in ascending fill level indicating
-				the creq luts for linear format on sspp.
-- qcom,sde-qos-lut-linear-qseed: A u64 array of 2 cell property, with a format of
-				<lut hi, lut lo> in ascending fill level indicating
-				the creq luts for linear format with qseed usage
-				(scaling) on sspp.
-- qcom,sde-qos-lut-macrotile:	A u64 array of 2 cell property, with a format of
-				<lut hi, lut lo> in ascending fill level indicating
-				the creq luts for macrotile format on sspp.
-- qcom,sde-qos-lut-macrotile-qseed: A u64 array of 2 cell property, with a format of
-				<lut hi, lut lo> in ascending fill level
-				indicating the creq luts for macrotile format
-				with qseed enabled (scaling enabled) on sspp.
-- qcom,sde-qos-lut-nrt:		A u64 array of 2 cell property, with a format of
-				<lut hi, lut lo> in ascending fill level
-				indicating the creq luts for nrt (e.g wfd) on sspp
-				and wb.
-- qcom,sde-qos-lut-cwb:		A u64 array of 2 cell property, with a format of
-				<lut hi, lut lo> in ascending fill level
-				indicating the creq luts for cwb on sspp.
+- qcom,sde-creq-lut:		A u64 array of 14 cell property, with a format of
+				<lut hi, lut lo> for each entry, first 7 u64 cells for all qos cases from
+				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted>,
+				in qseed disabled case, followed by next 7 u64 cells with same data for
+				qseed enabled case, with of-node count based on the qos refresh rates count.
 - qcom,sde-cdp-setting:		Array of 2 cell property, with a format of
 				<read enable, write enable> for cdp use cases in
 				order of <real_time>, and <non_real_time>.
@@ -786,20 +770,25 @@ Example:
     qcom,sde-wb-clk-ctrl = <0x2bc 16>;
     qcom,sde-wb-clk-status = <0x3bc 20>;
 
-    qcom,sde-danger-lut = <0x0000ffff 0x0000ffff 0x00000000
-		0x00000000 0x0000ffff 0x0000ffff>, <0x0003ffff
-		0x0003ffff 0x00000000 0x00000000 0x0003ffff 0x0003ffff>;
-
-    qcom,sde-safe-lut = <0xfff0 0xff00 0xffff 0x3ff 0xff00 0xff00>,
-		<0xfe00 0xfe00 0xffff 0x3ff 0xfe00 0xfe00>;
-
-    qcom,sde-qos-lut-linear = <0x00112233 0x44556677>, <0x00112234 0x45566777>;
-    qcom,sde-qos-lut-macrotile = <0x00112233 0x44556677>, <0x00112234 0x45566777>;
-    qcom,sde-qos-lut-macrotile-qseed = <0x00112233 0x66777777>, <0x00112236 0x67777777>;
-    qcom,sde-qos-lut-linear-qseed = <0x00112233 0x66777777>, <0x00112236 0x67777777>;
-    qcom,sde-qos-lut-nrt = <0x0 0x0>, <0x0 0x0>;
-    qcom,sde-qos-lut-cwb = <0x66666541 0x0>, <0x66666541 0x0>;
     qcom,sde-qos-refresh-rates = <60 120>;
+    qcom,sde-danger-lut = <0x3ffff 0x3ffff 0x0 0x0 0x0 0x3fffff 0x3fffff>,
+                    <0x3ffffff 0x3ffffff 0x0 0x0 0x0 0x3ffffff 0x3fffff>;
+    qcom,sde-safe-lut = <0xFE00 0xFE00 0xFFFF 0x01 0x03FF 0xF800 0xF800>,
+                    <0xE000 0xE000 0xFFFF 0x01 0x03FF 0xE000 0xF800>;
+    qcom,sde-creq-lut = <0x00112234 0x45566777 0x00112236 0x67777777
+                                0x00112234 0x45566777 0x00112236 0x67777777
+                                0x0        0x0         0x0        0x0
+                                0x77776666 0x66666540 0x77776666 0x66666540
+                                0x77776541 0x00000000 0x77776541 0x00000000
+                                0x00123445 0x56677777 0x00123667 0x77777777
+                                0x00123445 0x56677777 0x00123667 0x77777777>,
+                            <0x02344455 0x56667777 0x02366677 0x77777777
+                                0x02344455 0x56667777 0x02366677 0x77777777
+                                0x0        0x0        0x0        0x0
+                                0x77776666 0x66666540 0x77776666 0x66666540
+                                0x77776541 0x00000000 0x77776541 0x00000000
+                                0x02344455 0x56667777 0x02366677 0x77777777
+                                0x00123445 0x56677777 0x00123667 0x77777777>;
 
     qcom,sde-cdp-setting = <1 1>, <1 0>;
 
