@@ -285,6 +285,7 @@ Optional properties:
 				that feature hardware.
 				e.g. qcom,sde-sspp-dma-blocks
 				-- dgm@0
+				-- cell-index: A u32 index for the sub-block.
 				-- qcom,sde-dma-igc: offset and version of DMA IGC
 				-- qcom,sde-dma-gc: offset and version of DMA GC
 				-- qcom,sde-dma-inverse-pma: Boolean property to indicate if
@@ -851,12 +852,14 @@ Example:
 
     qcom,sde-sspp-dma-blocks {
 	dgm@0 {
+		cell-index = <0>;
 		qcom,sde-dma-igc = <0x400 0x00050000>;
 		qcom,sde-dma-gc = <0x600 0x00050000>;
 		qcom,sde-dma-inverse-pma;
 		qcom,sde-dma-csc-off = <0x200>;
 	}
 	dgm@1 {
+		cell-index = <1>;
 		qcom,sde-dma-igc = <0x1400 0x00050000>;
 		qcom,sde-dma-gc = <0x600 0x00050000>;
 		qcom,sde-dma-inverse-pma;
