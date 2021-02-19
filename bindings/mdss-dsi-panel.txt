@@ -63,6 +63,7 @@ Required properties:
 					byte 7 and beyond: number byte of payload
 - qcom,mdss-dsi-post-panel-on-command:	same as "qcom,mdss-dsi-on-command" except commands are
 					sent after displaying an image.
+- qcom,platform-reset-gpio:		Specifies the reset gpio of primary display, not required for simulation panels.
 
 Note, if a short DCS packet(i.e packet with Byte 0:dcs data type as 05) mentioned in
 qcom,mdss-dsi-on-command/qcom,mdss-dsi-off-command stream fails to transmit,
@@ -79,6 +80,8 @@ then 3 options can be tried.
 
 Optional properties:
 - cell-index:                   Timing node index to help driver maintain the device tree ordering.
+- qcom,platform-sec-reset-gpio:		Specifies the reset gpio of secondary display.
+- qcom,platform-bklight-en-gpio:	Specifies the gpio for enabling backlight.
 - qcom,mdss-dsi-panel-name:		A string used as a descriptive name of the panel
 - qcom,vid-on-commands:			same as "qcom,mdss-dsi-on-command" except commands are
 						only sent for video mode.
@@ -836,6 +839,7 @@ Example:
 		qcom,dsi-panel-gpio-address = <0x0F100000 0x1000>;
 		qcom,dsi-panel-gpio-pins = <12 24 82>;
 		qcom,dsi-panel-gpio-names = "reg-gpio", "reset-gpio", "platform-te-gpio";
+		qcom,platform-reset-gpio = <&tlmm 0 0>;
 
 		qcom,dsi-dyn-clk-enable;
 		qcom,dsi-dyn-clk-type = "constant-fps-adjust-hfp";
