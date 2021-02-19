@@ -51,10 +51,8 @@
 				qcom,mdss-dsi-v-pulse-width = <1>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
-				qcom,mdss-dsi-on-command =
-					[/* exit sleep mode, wait 0ms */
-					05 01 00 00 00 00 01 29];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 00 00 02 28 00
 					05 01 00 00 00 00 02 10 00];
@@ -85,11 +83,8 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <120>;
-				qcom,mdss-dsi-on-command =
-					[/* exit sleep mode, wait 0ms */
-					05 01 00 00 00 00 01 29];
-					/* Set display on, wait 16ms */
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 00 00 02 28 00
 					05 01 00 00 00 00 02 10 00];
@@ -121,10 +116,8 @@
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
-				qcom,mdss-dsi-on-command =
-					[/* exit sleep mode, wait 0ms */
-					05 01 00 00 00 00 01 29];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 00 00 02 28 00
 					05 01 00 00 00 00 02 10 00];
@@ -152,10 +145,8 @@
 				qcom,mdss-dsi-v-pulse-width = <1>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-panel-framerate = <40>;
-				qcom,mdss-dsi-on-command =
-					[/* exit sleep mode, wait 0ms */
-					05 01 00 00 00 00 01 29];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 00 00 02 28 00
 					05 01 00 00 00 00 02 10 00];
