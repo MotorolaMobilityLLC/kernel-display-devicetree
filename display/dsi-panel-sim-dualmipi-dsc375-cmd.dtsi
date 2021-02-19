@@ -71,10 +71,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -124,10 +121,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -177,10 +171,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -230,10 +221,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -283,10 +271,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -336,10 +321,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -389,10 +371,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -442,10 +421,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -626,9 +602,7 @@
 					15 01 00 00 00 00 02 BB 10
 					/* Non Reload MTP */
 					15 01 00 00 00 00 02 FB 01
-					/* SlpOut + DispOn */
-					05 01 00 00 78 00 02 11 00
-					05 01 00 00 78 00 02 29 00
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-off-command = [05 01 00 00 78 00
 					02 28 00 05 01 00 00 78 00 02 10 00];
@@ -807,9 +781,7 @@
 					15 01 00 00 00 00 02 BB 10
 					/* Non Reload MTP */
 					15 01 00 00 00 00 02 FB 01
-					/* SlpOut + DispOn */
-					05 01 00 00 78 00 02 11 00
-					05 01 00 00 78 00 02 29 00
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-off-command = [05 01 00 00 78 00
 					02 28 00 05 01 00 00 78 00 02 10 00];
@@ -988,9 +960,7 @@
 					15 01 00 00 00 00 02 BB 10
 					/* Non Reload MTP */
 					15 01 00 00 00 00 02 FB 01
-					/* SlpOut + DispOn */
-					05 01 00 00 78 00 02 11 00
-					05 01 00 00 78 00 02 29 00
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-off-command = [05 01 00 00 78 00
 					02 28 00 05 01 00 00 78 00 02 10 00];
@@ -1169,9 +1139,7 @@
 					15 01 00 00 00 00 02 BB 10
 					/* Non Reload MTP */
 					15 01 00 00 00 00 02 FB 01
-					/* SlpOut + DispOn */
-					05 01 00 00 78 00 02 11 00
-					05 01 00 00 78 00 02 29 00
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-off-command = [05 01 00 00 78 00
 					02 28 00 05 01 00 00 78 00 02 10 00];
@@ -1219,10 +1187,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -1272,10 +1237,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -1325,10 +1287,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -1378,10 +1337,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -1431,10 +1387,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -1484,10 +1437,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
@@ -1537,10 +1487,7 @@
 					15 01 00 00 00 00 02 6f 01
 					15 01 00 00 00 00 02 f3 10
 					39 01 00 00 00 00 05 ff aa 55 a5 00
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
