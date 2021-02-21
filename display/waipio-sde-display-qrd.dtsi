@@ -124,3 +124,11 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
+
+&qupv3_se4_spi {
+	focaltech@0 {
+		panel = <&dsi_r66451_amoled_144hz_cmd_cphy
+			&dsi_r66451_amoled_144hz_video_cphy
+			&dsi_r66451_amoled_120hz_cmd_cphy>;
+	};
+};
