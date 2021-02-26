@@ -480,9 +480,10 @@
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@1 { /* 60 FPS*/
-			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 15 07
-				07 07 02 04 00 17 0b];
+		timing@1 { /* 60 FPS run on 120fps clockrate to avoid corruption */
+			qcom,mdss-dsi-panel-clockrate = <580478688>;
+			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 13 06
+				06 06 02 04 00 13 0a];
 			qcom,display-topology = <2 2 2>;
 			qcom,default-topology-index = <0>;
 		};
