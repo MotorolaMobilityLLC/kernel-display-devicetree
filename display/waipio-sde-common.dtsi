@@ -19,6 +19,7 @@
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
 		interrupt-controller;
 		#interrupt-cells = <1>;
+		#cooling-cells = <2>;
 
 		/* hw blocks */
 		qcom,sde-off = <0x1000>;
