@@ -54,6 +54,7 @@
 		#clock-cells = <1>;
 		clocks =  <&clock_dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
 			<&clock_rpmh RPMH_CXO_CLK>,
+			<&clock_gcc GCC_USB3_0_CLKREF_EN>,
 			<&clock_gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
 			<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
 			<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
@@ -62,7 +63,7 @@
 			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
 			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
 			<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
-		clock-names = "core_aux_clk", "core_usb_ref_clk_src",
+		clock-names = "core_aux_clk", "rpmh_cxo_clk", "core_usb_ref_clk_src",
 			"core_usb_pipe_clk", "link_clk_src", "link_iface_clk",
 			"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 			"strm0_pixel_clk", "strm1_pixel_clk";
@@ -89,6 +90,7 @@
 
 		vdda-1p2-supply = <&L6B>;
 		vdda-0p9-supply = <&L1B>;
+		vdda_usb-0p9-supply = <&L5B>;
 		vdd_mx-supply = <&VDD_MXA_LEVEL>;
 
 		qcom,ctrl-supply-entries {
@@ -115,6 +117,15 @@
 				qcom,supply-min-voltage = <912000>;
 				qcom,supply-max-voltage = <912000>;
 				qcom,supply-enable-load = <115000>;
+				qcom,supply-disable-load = <0>;
+			};
+
+			qcom,phy-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda_usb-0p9";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <880000>;
+				qcom,supply-enable-load = <323000>;
 				qcom,supply-disable-load = <0>;
 			};
 		};
