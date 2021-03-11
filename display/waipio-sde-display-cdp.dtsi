@@ -187,6 +187,7 @@
 
 &qupv3_se4_i2c {
 	focaltech@38 {
-		panel = <&dsi_r66451_amoled_cmd>;
+		panel = <&dsi_r66451_amoled_cmd
+			&dsi_r66451_amoled_video>;
 	};
 };
