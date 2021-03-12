@@ -155,6 +155,8 @@
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
+	qcom,dsi-dyn-clk-enable;
+
 	qcom,dsi-panel-gpio-address = <0x0F100000 0x1000>;
 	qcom,dsi-panel-gpio-pins = <12 24 82>;
 	qcom,dsi-panel-gpio-names = "reg-gpio", "reset-gpio", "platform-te-gpio";
@@ -172,6 +174,8 @@
 				04 03 02 04 00 0e 09];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+
+			qcom,dsi-dyn-clk-list = <423187200 425303136 427429652>;
 		};
 
 		timing@1 {
@@ -179,6 +183,8 @@
 				06 06 02 04 00 14 0a];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+
+			qcom,dsi-dyn-clk-list = <634780800 637954704 641144480>;
 		};
 
 		timing@2 {
@@ -186,6 +192,8 @@
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+
+			qcom,dsi-dyn-clk-list = <846374400 850606272 854859312>;
 		};
 	};
 };
