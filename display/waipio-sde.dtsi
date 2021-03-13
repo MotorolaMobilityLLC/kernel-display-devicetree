@@ -7,7 +7,6 @@
 
 &soc {
 	ext_disp: qcom,msm-ext-disp {
-		status = "disabled";
 		compatible = "qcom,msm-ext-disp";
 
 		ext_disp_audio_codec: qcom,msm-ext-disp-audio-codec-rx {
