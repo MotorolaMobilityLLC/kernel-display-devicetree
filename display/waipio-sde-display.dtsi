@@ -129,6 +129,10 @@
 	qcom,ulps-enabled;
 };
 
+&dsi_dual_nt35597_truly_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_sim_cmd {
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
