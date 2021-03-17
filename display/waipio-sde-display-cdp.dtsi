@@ -225,4 +225,9 @@
 	atmel_mxt_ts@4a {
 		panel = <&dsi_sharp_qhd_plus_dsc_cmd>;
 	};
+
+	synaptics_dsx@22 {
+		panel = <&dsi_sharp_qsync_wqhd_cmd
+			&dsi_sharp_qsync_wqhd_video>;
+	};
 };
