@@ -78,6 +78,7 @@ then 3 options can be tried.
 	   combining multiple short packets and sending them in one burst.
 
 Optional properties:
+- cell-index:                   Timing node index to help driver maintain the device tree ordering.
 - qcom,mdss-dsi-panel-name:		A string used as a descriptive name of the panel
 - qcom,vid-on-commands:			same as "qcom,mdss-dsi-on-command" except commands are
 						only sent for video mode.
@@ -830,6 +831,7 @@ Example:
 
 		qcom,mdss-dsi-display-timings {
 			wqhd {
+				cell-index = <0>;
 				qcom,mdss-dsi-cmd-mode;
 				qcom,mdss-dsi-video-mode;
 				qcom,mdss-dsi-timing-default;
