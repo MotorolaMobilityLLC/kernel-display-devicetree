@@ -40,6 +40,7 @@
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
+				cell-index = <0>;
 				qcom,mdss-dsi-cmd-mode;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -164,6 +165,7 @@
 			};
 
 			timing@1 {
+				cell-index = <1>;
 				qcom,mdss-dsi-video-mode;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -272,6 +274,7 @@
 			};
 
 			timing@2 {
+				cell-index = <2>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <20>;
@@ -381,6 +384,7 @@
 			};
 
 			timing@3 {
+				cell-index = <3>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
 				qcom,mdss-dsi-h-front-porch = <20>;
@@ -489,6 +493,7 @@
 			};
 
 			timing@4 {
+				cell-index = <4>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
 				qcom,mdss-dsi-h-front-porch = <20>;
@@ -612,6 +617,7 @@
 			};
 
 			timing@5 {
+				cell-index = <5>;
 				qcom,mdss-dsi-video-mode;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -720,6 +726,7 @@
 			};
 
 			timing@6 {
+				cell-index = <6>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <20>;
@@ -829,6 +836,7 @@
 			};
 
 			timing@7 {
+				cell-index = <7>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <80>;

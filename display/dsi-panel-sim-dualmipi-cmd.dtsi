@@ -39,6 +39,7 @@
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
+				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <2520>;
 				qcom,mdss-dsi-panel-height = <2160>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -69,6 +70,7 @@
 			};
 
 			timing@1 {
+				cell-index = <1>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <28>;
@@ -103,6 +105,7 @@
 			};
 
 			timing@2 {
+				cell-index = <2>;
 				qcom,mdss-dsi-panel-width = <1280>;
 				qcom,mdss-dsi-panel-height = <1440>;
 				qcom,mdss-dsi-h-front-porch = <120>;
@@ -137,6 +140,7 @@
 			};
 
 			timing@3 {
+				cell-index = <3>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
 				qcom,mdss-dsi-h-front-porch = <30>;

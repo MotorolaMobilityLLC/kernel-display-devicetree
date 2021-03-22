@@ -39,6 +39,7 @@
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
+				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -91,6 +92,7 @@
 			};
 
 			timing@1 {
+				cell-index = <1>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -143,6 +145,7 @@
 			};
 
 			timing@2 {
+				cell-index = <2>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -195,6 +198,7 @@
 			};
 
 			timing@3 {
+				cell-index = <3>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -247,6 +251,7 @@
 			};
 
 			timing@4 {
+				cell-index = <4>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -299,6 +304,7 @@
 			};
 
 			timing@5 {
+				cell-index = <5>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -351,6 +357,7 @@
 			};
 
 			timing@6 {
+				cell-index = <6>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -403,6 +410,7 @@
 			};
 
 			timing@7 {
+				cell-index = <7>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -455,6 +463,7 @@
 			};
 
 			timing@8 {
+				cell-index = <8>;
 				qcom,mdss-dsi-panel-framerate = <30>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -635,6 +644,7 @@
 			};
 
 			timing@9 {
+				cell-index = <9>;
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -815,6 +825,7 @@
 			};
 
 			timing@10 {
+				cell-index = <10>;
 				qcom,mdss-dsi-panel-framerate = <90>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -995,6 +1006,7 @@
 			};
 
 			timing@11 {
+				cell-index = <11>;
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -1175,6 +1187,7 @@
 			};
 
 			timing@12 {
+				cell-index = <12>;
 				qcom,mdss-dsi-panel-width = <2520>;
 				qcom,mdss-dsi-panel-height = <2160>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -1227,6 +1240,7 @@
 			};
 
 			timing@13 {
+				cell-index = <13>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -1279,6 +1293,7 @@
 			};
 
 			timing@14 {
+				cell-index = <14>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -1331,6 +1346,7 @@
 			};
 
 			timing@15 {
+				cell-index = <15>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -1383,6 +1399,7 @@
 			};
 
 			timing@16 {
+				cell-index = <16>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -1435,6 +1452,7 @@
 			};
 
 			timing@17 {
+				cell-index = <17>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <30>;
@@ -1487,6 +1505,7 @@
 			};
 
 			timing@18 {
+				cell-index = <18>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
 				qcom,mdss-dsi-h-front-porch = <30>;
