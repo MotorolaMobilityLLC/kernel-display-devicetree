@@ -33,6 +33,7 @@
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
+				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
 				qcom,mdss-dsi-h-front-porch = <30>;
