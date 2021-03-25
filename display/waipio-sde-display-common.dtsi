@@ -30,6 +30,7 @@
 #include "dsi-panel-sim-sec-hd-cmd.dtsi"
 #include "dsi-panel-sim-vdc-vid.dtsi"
 #include "dsi-panel-sim-vdc-cmd.dtsi"
+#include "dsi-panel-nt35597-truly-dualmipi-wqxga-splitlink-cmd.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
@@ -152,6 +153,20 @@
 			qcom,default-topology-index = <0>;
 
 			qcom,dsi-dyn-clk-list = <846374400 842847840 844611120>;
+		};
+	};
+};
+
+&dsi_dual_nt35597_truly_sl_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			/* DPHY regular margins */
+			qcom,mdss-dsi-panel-phy-timings = [00 33 0e 0e 2c 29 0d
+				0e 0d 02 04 00 2b 1c];
+			qcom,display-topology = <2 0 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-clockrate = <1612000000>;
 		};
 	};
 };
