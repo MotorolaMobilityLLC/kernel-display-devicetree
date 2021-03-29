@@ -188,3 +188,12 @@
 			&dsi_r66451_amoled_video>;
 	};
 };
+
+&spmi_bus {
+	qcom,pm8350b@3 {
+		qcom,amoled-ecm@f900 {
+			display-panels = <&dsi_r66451_amoled_cmd
+					&dsi_r66451_amoled_video>;
+		};
+	};
+};

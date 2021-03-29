@@ -119,3 +119,13 @@
 			&dsi_r66451_amoled_120hz_cmd_cphy>;
 	};
 };
+
+&spmi_bus {
+	qcom,pm8350b@3 {
+		qcom,amoled-ecm@f900 {
+			display-panels = <&dsi_r66451_amoled_144hz_cmd_cphy
+				&dsi_r66451_amoled_144hz_video_cphy
+				&dsi_r66451_amoled_120hz_cmd_cphy>;
+		};
+	};
+};
