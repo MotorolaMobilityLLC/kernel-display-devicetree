@@ -44,7 +44,6 @@
 };
 
 &sde_dsi1 {
-	status = "disabled";
 	clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
 			<&mdss_dsi_phy1 2>,
@@ -52,15 +51,19 @@
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1";
 
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
+
 	qcom,platform-te-gpio = <&tlmm 87 0>;
 	qcom,panel-te-source = <1>;
 
 	vddio-supply = <&L12C>;
-	vdd-supply = <&L13C>;
+	vci-supply = <&L13C>;
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 };
 
 &dsi_r66451_amoled_cmd {
@@ -84,6 +87,10 @@
 };
 
 &dsi_r66451_amoled_144hz_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_sync_cmd {
 	qcom,ulps-enabled;
 };
 
