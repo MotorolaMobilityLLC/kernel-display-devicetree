@@ -228,4 +228,8 @@
 		panel = <&dsi_r66451_amoled_cmd
 			&dsi_r66451_amoled_video>;
 	};
+
+	atmel_mxt_ts@4a {
+		panel = <&dsi_sharp_qhd_plus_dsc_cmd>;
+	};
 };
