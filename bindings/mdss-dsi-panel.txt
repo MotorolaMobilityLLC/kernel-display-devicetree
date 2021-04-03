@@ -188,6 +188,12 @@ Optional properties:
 					corresponding to the mode in the qcom,dsi-supported-dfps-list with same index.
 					qcom,dsi-supported-qsync-min-fps-list cannot be defined along with
 					qcom,mdss-dsi-qsync-min-refresh-rate.
+- qcom,dsi-qsync-avr-step-list:		The u32 fps values in this optional list indicate the avr step
+					requirement for qsync/AVR video mode panels. When a late frame is triggered,
+					AVR will delay the trigger to ensure the frame transfer snaps to the next step
+					interval. The step rate must be a common multiple of refresh and min-fps rates.
+					The values in this list should correspond to the dfps-list with same indeces
+					when DFPS is used, or a single value which applies to all rates.
 - qcom,min-refresh-rate:		Minimum refresh rate supported by the panel.
 - qcom,max-refresh-rate:		Maximum refresh rate supported by the panel. If max refresh
 					rate is not specified, then the frame rate of the panel in
@@ -776,6 +782,7 @@ Example:
 		qcom,mdss-dsi-pan-fps-update = "dfps_suspend_resume_mode";
 		qcom,dsi-supported-dfps-list = <30 45 60>;
 		qcom,dsi-supported-qsync-min-fps-list = <30 40 55>;
+		qcom,dsi-qsync-avr-step-list = <0 360 660>;
 		qcom,min-refresh-rate = <30>;
 		qcom,max-refresh-rate = <60>;
 		qcom,mdss-dsi-bl-pmic-bank-select = <0>;
