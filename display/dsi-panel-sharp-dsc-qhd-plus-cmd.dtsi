@@ -24,6 +24,7 @@
 		qcom,mdss-dsi-wr-mem-start = <0x2c>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
 		qcom,mdss-dsi-te-dcs-command = <1>;
+		qcom,mdss-dsi-force-clock-lane-hs;
 		qcom,mdss-dsi-te-check-enable;
 		qcom,mdss-dsi-te-using-te-pin;
 
@@ -216,6 +217,7 @@
 				qcom,mdss-dsi-v-front-porch = <39>;
 				qcom,mdss-dsi-v-pulse-width = <2>;
 				qcom,mdss-dsi-panel-framerate = <60>;
+				qcom,mdss-mdp-transfer-time-us = <15600>;
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 de 00
 					39 01 00 00 00 00 34 c6 00 12 8a 00 08 00
