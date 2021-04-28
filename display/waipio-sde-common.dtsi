@@ -87,7 +87,7 @@
 		qcom,sde-dsc-ctl = <0xF00 0xF80 0xF00 0xF80>;
 		qcom,sde-dsc-ctl-size = <0x10>;
 		qcom,sde-dsc-native422-supp = <0 0 1 1>;
-		qcom,sde-dsc-linewidth = <2048>;
+		qcom,sde-dsc-linewidth = <2560>;
 
 		qcom,sde-dither-off = <0xe0 0xe0 0xe0
 				0xe0 0xe0 0xe0 0xe0 0xe0>;
