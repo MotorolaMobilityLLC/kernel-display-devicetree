@@ -104,11 +104,7 @@
 					/* write control brightness */
 					15 01 00 00 0a 00 02 55 00
 					/* CABC brightness */
-					05 01 00 00 78 00 01 11
-					/* exit sleep mode, wait 120ms */
-					05 01 00 00 10 00 01 29];
-
-					/* Set display on, wait 16ms */
+					05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 32 00 02 28 00
@@ -192,10 +188,7 @@
 					/* write control brightness */
 					15 01 00 00 0a 00 02 55 00
 					/* CABC brightness */
-					05 01 00 00 78 00 01 11
-					/* exit sleep mode, wait 120ms */
-					05 01 00 00 10 00 01 29];
-					/* Set display on, wait 16ms */
+					05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 32 00 02 28 00
@@ -258,10 +251,7 @@
 					 /* write control brightness */
 					15 01 00 00 0a 00 02 55 00
 					/* CABC brightness */
-					05 01 00 00 78 00 01 11
-					/* exit sleep mode, wait 120ms */
-					05 01 00 00 10 00 01 29];
-					/* Set display on, wait 16ms */
+					05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 32 00 02 28 00
@@ -315,10 +305,7 @@
 					 /* write control brightness */
 					15 01 00 00 0a 00 02 55 00
 					/* CABC brightness */
-					05 01 00 00 78 00 01 11
-					/* exit sleep mode, wait 120ms */
-					05 01 00 00 10 00 01 29];
-					/* Set display on, wait 16ms */
+					05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 32 00 02 28 00
@@ -422,9 +409,9 @@
 					/* write display brightness */
 					15 01 00 00 0a 00 02 53 24
 					 /* write control brightness */
-					15 01 00 00 0a 00 02 55 00];
+					15 01 00 00 0a 00 02 55 00
 					/* CABC brightness */
-
+					05 01 00 00 f0 00 01 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command =
 					[05 01 00 00 32 00 02 28 00

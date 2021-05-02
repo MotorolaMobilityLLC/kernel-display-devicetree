@@ -34,6 +34,21 @@
 #include "dsi-panel-nt35597-truly-dualmipi-wqxga-splitlink-cmd.dtsi"
 
 &soc {
+	dsi_panel_pwr_supply_sim: dsi_panel_pwr_supply_sim {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "dummy";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <200000>;
+			qcom,supply-disable-load = <80>;
+			qcom,supply-post-on-sleep = <20>;
+		};
+	};
+
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
 		#address-cells = <1>;
 		#size-cells = <0>;

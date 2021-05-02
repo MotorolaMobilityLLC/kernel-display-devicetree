@@ -49,12 +49,8 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
-
 				qcom,mdss-dsi-on-command = [
-					/* sleep out + delay 120ms */
-					05 01 00 00 78 00 01 11
-					/* display on + delay 120ms */
-					05 01 00 00 78 00 01 29
+					05 01 00 00 f0 00 01 00
 					];
 				qcom,mdss-dsi-off-command = [
 					05 01 00 00 78 00 02 28 00
