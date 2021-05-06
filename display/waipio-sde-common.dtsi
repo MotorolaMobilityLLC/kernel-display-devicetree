@@ -146,7 +146,7 @@
 		qcom,sde-sspp-qseed-off = <0xa00>;
 		qcom,sde-mixer-linewidth = <2560>;
 		qcom,sde-sspp-linewidth = <5120>;
-		qcom,sde-wb-linewidth = <5120>;
+		qcom,sde-wb-linewidth = <4096>;
 		qcom,sde-wb-linewidth-linear = <5120>;
 		qcom,sde-mixer-blendstages = <0xb>;
 		qcom,sde-highest-bank-bit = <0x8 0x3>,
