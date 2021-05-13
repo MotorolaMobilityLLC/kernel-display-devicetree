@@ -1,5 +1,4 @@
 #include "waipio-sde-display-common.dtsi"
-#include "waipio-sde-display-pinctrl.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
 
 &soc {
@@ -61,13 +60,6 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
-	pinctrl-names = "panel_active", "panel_suspend";
-	pinctrl-0 = <&sde_dsi_active &sde_te_active>;
-	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
-
-	qcom,platform-te-gpio = <&tlmm 86 0>;
-	qcom,panel-te-source = <0>;
-
 	vddio-supply = <&L12C>;
 	vci-supply = <&L13C>;
 };
@@ -95,13 +87,6 @@
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
-
-	pinctrl-names = "panel_active", "panel_suspend";
-	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
-	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
-
-	qcom,platform-te-gpio = <&tlmm 87 0>;
-	qcom,panel-te-source = <1>;
 
 	vddio-supply = <&L12C>;
 	vci-supply = <&L13C>;
