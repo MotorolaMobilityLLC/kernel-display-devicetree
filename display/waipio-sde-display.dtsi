@@ -147,41 +147,15 @@
 	qcom,ulps-enabled;
 };
 
-&dsi_sharp_qsync_wqhd_cmd {
-	qcom,ulps-enabled;
-	qcom,mdss-dsi-display-timings {
-		timing@0 { /* WQHD 60FPS CMD */
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <720 8 8 8 1440 8>;
-		};
-		timing@2 { /* FHD 60FPS CMD */
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 8 8 8 1080 8>;
-		};
-		timing@3 { /* WQHD 90FPS CMD */
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <720 8 8 8 1440 8>;
-		};
-		timing@4 { /* WQHD 120FPS CMD */
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <720 8 8 8 1440 8>;
-		};
-		timing@6 { /* FHD 120FPS CMD */
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 8 8 8 1080 8>;
-		};
-		timing@7 { /* FHD 90FPS CMD */
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 8 8 8 1080 8>;
-		};
-	};
-};
-
 &dsi_nt35695b_truly_fhd_cmd {
 	qcom,ulps-enabled;
 };
 
 &dsi_dual_nt35597_truly_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_sharp_qsync_wqhd_cmd {
 	qcom,ulps-enabled;
 };
 
