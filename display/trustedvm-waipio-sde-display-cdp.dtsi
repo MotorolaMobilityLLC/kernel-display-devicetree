@@ -132,6 +132,7 @@
 };
 
 &sde_dsi {
+	qcom,avdd-regulator-gpio = <&tlmm 64 0>;
 	qcom,dsi-default-panel = <&dsi_r66451_amoled_cmd>;
 };
 
