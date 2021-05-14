@@ -61,7 +61,7 @@
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-timings =
 					[00 21 09 09 24 23 08 08 08 03 04 00];
-				qcom,mdss-cmd-dsi-on-command =
+				qcom,cmd-on-commands =
 					[29 01 00 00 00 00 02 b0 03
 					05 01 00 00 0a 00 01 00
 					/* Soft reset, wait 10ms */
@@ -84,7 +84,7 @@
 					05 01 00 00 78 00 01 11
 					/* exit sleep mode, wait 120ms */
 					05 01 00 00 10 00 01 29];
-				qcom,mdss-vid-dsi-on-command =
+				qcom,vid-on-commands =
 					[29 01 00 00 00 00 02 b0 03
 					05 01 00 00 0a 00 01 00
 					/* Soft reset, wait 10ms */
@@ -194,16 +194,6 @@
 					[05 01 00 00 32 00 02 28 00
 					05 01 00 00 78 00 02 10 00];
 				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
-				qcom,video-to-cmd-mode-switch-commands = [
-				  39 01 00 00 00 00 03 b0 a5 00
-				  07 01 00 00 00 00 02 01 00
-				  39 01 00 00 00 00 06 b2 00 5d 04 80 49
-				  15 01 00 00 00 00 02 3d 11
-				  15 01 00 00 00 00 02 36 00
-				  15 01 00 00 00 00 02 55 0b
-				];
-				qcom,video-to-cmd-mode-switch-commands-state =
-					"dsi_lp_mode";
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <40>;
 				qcom,mdss-dsc-slice-width = <720>;
