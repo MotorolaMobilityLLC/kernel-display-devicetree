@@ -13,6 +13,8 @@ dtbo-$(CONFIG_ARCH_NEO) += display/neo-sde.dtbo \
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+#remove useless qcom device tree in moto build
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
 		display/waipio-sde-display-mtp-overlay.dtbo \
 		display/waipio-sde-display-cphy-mtp-overlay.dtbo \
@@ -23,6 +25,10 @@ dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
 		display/waipio-sde-display-waipio-lemur-cdp-overlay.dtbo \
 		display/waipio-sde-display-waipio-lemur-mtp-overlay.dtbo \
 		display/waipio-sde-display-rumi-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
+		display/waipio-sde-display-hiphi-evb1-overlay.dtbo
+endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_WAIPIO) += display/trustedvm-waipio-sde-display-mtp-overlay.dtbo \
 		display/trustedvm-waipio-sde-display-cdp-overlay.dtbo \
