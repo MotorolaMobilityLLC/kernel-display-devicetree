@@ -1,4 +1,6 @@
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+#remove useless qcom device tree in moto build
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-rumi-overlay.dtbo \
 		display/kalama-sde-display-cdp-overlay.dtbo \
@@ -11,6 +13,12 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-rcm-overlay.dtbo \
 		display/kalama-sde-display-cdp-nfc-overlay.dtbo \
 		display/kalama-sde-display-atp-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo
+dtbo-$(CONFIG_RTWO_DTB) += display/kalama-sde-display-rtwo-evb1-overlay.dtbo
+
+endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
+
 else
 dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.dtbo \
                   display/trustedvm-kalama-sde-display-mtp-nfc-overlay.dtbo \
