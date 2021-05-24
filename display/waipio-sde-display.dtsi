@@ -128,6 +128,14 @@
 	qcom,ulps-enabled;
 };
 
+&dsi_r66451_amoled_144hz_cmd_cphy {
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_120hz_cmd_cphy {
+	qcom,ulps-enabled;
+};
+
 &dsi_sharp_4k_dsc_cmd {
 	qcom,ulps-enabled;
 };
