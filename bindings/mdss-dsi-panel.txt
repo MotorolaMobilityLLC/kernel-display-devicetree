@@ -681,6 +681,8 @@ Additional properties added to the second level nodes that represent timings pro
 - qcom,dsi-dyn-clk-list:                An u32 array of all the supported dsi bit clock
                                         frequencies in Hz for the given mode, listed in
                                         order of preference.
+- qcom,disable-rsc-solver:              Timing node property to dynamically disable RSC solver for
+                                        high FPS usecase due to lower bitclk rate.
 
 Note, if a given optional qcom,* binding is not present, then the driver will configure
 the default values specified.
