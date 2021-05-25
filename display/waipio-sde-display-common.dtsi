@@ -604,9 +604,17 @@
 			qcom,default-topology-index = <1>;
 		};
 
-		timing@3 { /* HD 60FPS cmd mode*/
+		timing@3 { /* HD 60FPS cmd mode */
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0a 09 10 0e 0a
 				0a 07 02 04 00 1d 0e];
+			qcom,display-topology = <1 1 1>,
+						<2 2 1>;
+			qcom,default-topology-index = <1>;
+		};
+
+		timing@4 { /* FHD+ 00FPS cmd mode*/
+			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 13 06
+				06 06 02 04 00 13 0a];
 			qcom,display-topology = <1 1 1>,
 						<2 2 1>;
 			qcom,default-topology-index = <1>;
