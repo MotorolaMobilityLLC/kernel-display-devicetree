@@ -135,6 +135,10 @@
 	qcom,ulps-enabled;
 };
 
+&dsi_dual_nt35597_truly_sl_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_r66451_amoled_sync_cmd {
 	qcom,ulps-enabled;
 };
