@@ -114,9 +114,3 @@
 &sde_dsi {
 	qcom,dsi-default-panel = <&dsi_r66451_amoled_cmd>;
 };
-
-&qupv3_se4_i2c {
-	focaltech@38 {
-		panel = <&dsi_r66451_amoled_cmd>;
-	};
-};
