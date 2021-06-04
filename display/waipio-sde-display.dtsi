@@ -161,6 +161,12 @@
 
 &dsi_sharp_qsync_wqhd_cmd {
 	qcom,ulps-enabled;
+	qcom,mdss-dsi-display-timings {
+		timing@0 { /* WQHD 60FPS CMD */
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <720 8 8 8 1440 8>;
+		};
+	};
 };
 
 &dsi_sim_cmd {
