@@ -223,6 +223,7 @@
 	pinctrl-names = "panel_active", "panel_suspend", "pwm_pin";
 	pinctrl-2 = <&lcd_backlight_ctrl_default>;
 	avdd-supply = <&display_panel_avdd>;
+	qcom,avdd-regulator-gpio = <&tlmm 64 0>;
 	qcom,dsi-default-panel = <&dsi_r66451_amoled_cmd>;
 };
 
