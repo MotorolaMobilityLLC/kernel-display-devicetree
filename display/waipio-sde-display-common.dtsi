@@ -31,6 +31,7 @@
 #include "dsi-panel-sim-vdc-vid.dtsi"
 #include "dsi-panel-sim-vdc-cmd.dtsi"
 #include "dsi-panel-nt35597-truly-dualmipi-wqxga-splitlink-cmd.dtsi"
+#include "dsi-panel-nt35695b-truly-fhd-splitlink-cmd.dtsi"
 
 #include "waipio-sde-display-pinctrl.dtsi"
 
@@ -197,6 +198,20 @@
 			qcom,display-topology = <2 0 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-clockrate = <1612000000>;
+		};
+	};
+};
+
+&dsi_nt35695b_truly_fhd_sl_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			/* DPHY regular margins */
+			qcom,mdss-dsi-panel-phy-timings = [00 1b 07 06 22 21 07
+				07 07 02 04 00 18 16];
+			qcom,display-topology = <2 0 1>;
+			qcom,default-topology-index = <0>;
 		};
 	};
 };
