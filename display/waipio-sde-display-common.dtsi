@@ -530,6 +530,7 @@
 &dsi_sharp_qsync_wqhd_video {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
+	qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <55>;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
