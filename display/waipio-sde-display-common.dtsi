@@ -789,10 +789,7 @@
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [01 09 01 01 0e 1b 01
-				01 02 02 04 00 08 06];
-			qcom,display-topology = <1 0 1>,
-						<2 0 1>;
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
