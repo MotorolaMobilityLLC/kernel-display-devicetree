@@ -42,10 +42,9 @@ Required properties:
 - qcom,mdss-dsi-on-command:		A byte stream formed by multiple dcs packets base on
 					qcom dsi controller protocol.
 					byte 0: dcs data type
-					byte 1: set to indicate this is an individual packet
-						 (no chain)
+					byte 1: Unused
 					byte 2: virtual channel number
-					byte 3: expect ack from client (dcs read command)
+					byte 3: Message flags
 					byte 4: wait number of specified ms after dcs command
 						 transmitted
 					byte 5, 6: 16 bits length in network byte order
@@ -53,10 +52,9 @@ Required properties:
 - qcom,mdss-dsi-off-command:		A byte stream formed by multiple dcs packets base on
 					qcom dsi controller protocol.
 					byte 0: dcs data type
-					byte 1: set to indicate this is an individual packet
-						 (no chain)
+					byte 1: Unused
 					byte 2: virtual channel number
-					byte 3: expect ack from client (dcs read command)
+					byte 3: Message flags
 					byte 4: wait number of specified ms after dcs command
 						 transmitted
 					byte 5, 6: 16 bits length in network byte order
@@ -72,8 +70,8 @@ then 3 options can be tried.
 				Byte 0: dcs data type = 05 (DCS short Packet)
 				Byte 0: dcs data type = 29 (DCS long Packet)
 	2. Send the packet in one burst by prepending with the next packet in packet stream
-				Byte 1 = 01 (indicates this is an individual packet)
-				Byte 1 = 00 (indicates this will be appended to the next
+				Byte 3 = 00 (indicates this is an individual packet)
+				Byte 3 = 40 (indicates this will be appended to the next
 					     individual packet in the packet stream)
 	3. Prepend a NULL packet to the short packet and send both in one burst instead of
 	   combining multiple short packets and sending them in one burst.
@@ -469,8 +467,7 @@ Optional properties:
 					qcom dsi controller protocol, to read the panel status.
 					This value is used to kick in the ESD recovery.
 					byte 0: dcs data type
-					byte 1: set to indicate this is an individual packet
-						 (no chain)
+					byte 1: Unused
 					byte 2: virtual channel number
 					byte 3: expect ack from client (dcs read command)
 					byte 4: wait number of specified ms after dcs command
@@ -641,13 +638,6 @@ Optional properties:
 					to identify the default topology for the
 					display. The first set is indexed by the
 					value 0.
-- qcom,dsi-panel-gpio-address:		An u32 pair consisting of base address of the
-					TLMM register space and size of each GPIO pin.
-- qcom,dsi-panel-gpio-pins:		An u32 array consisting of all the GPIO pins used
-					for driving the DSI host and the panels
-					connected to the host.
-- qcom,dsi-panel-gpio-names:		A string array consisting of names of all the
-					GPIO pins used for driving the DSI host and panels.
 - qcom,mdss-dsi-ext-bridge-mode:	External bridge chip is connected instead of panel.
 - qcom,mdss-dsi-dma-schedule-line:	An integer value indicates the line number after vertical active
 					region for video mode panels and line number after TE for command mode
@@ -684,6 +674,8 @@ Additional properties added to the second level nodes that represent timings pro
 - qcom,dsi-dyn-clk-list:                An u32 array of all the supported dsi bit clock
                                         frequencies in Hz for the given mode, listed in
                                         order of preference.
+- qcom,disable-rsc-solver:              Timing node property to dynamically disable RSC solver for
+                                        high FPS usecase due to lower bitclk rate.
 
 Note, if a given optional qcom,* binding is not present, then the driver will configure
 the default values specified.
@@ -835,10 +827,6 @@ Example:
 		qcom,mdss-dsi-force-clock-lane-hs;
 		qcom,compression-mode = "dsc";
 		qcom,adjust-timer-wakeup-ms = <1>;
-
-		qcom,dsi-panel-gpio-address = <0x0F100000 0x1000>;
-		qcom,dsi-panel-gpio-pins = <12 24 82>;
-		qcom,dsi-panel-gpio-names = "reg-gpio", "reset-gpio", "platform-te-gpio";
 		qcom,platform-reset-gpio = <&tlmm 0 0>;
 
 		qcom,dsi-dyn-clk-enable;

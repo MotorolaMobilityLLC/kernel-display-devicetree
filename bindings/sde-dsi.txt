@@ -129,3 +129,5 @@ Optional properties:
 					to be programmed for the SSC.
 - qcom,ssc-ppm:                         Integer property to specify the Parts per Million
 					value of SSC.
+- qcom,avdd-regulator-gpio:		Specifies the gpio pin used for avdd
+					power supply regulator.
