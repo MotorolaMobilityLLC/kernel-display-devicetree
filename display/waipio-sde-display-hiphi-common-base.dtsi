@@ -207,3 +207,9 @@
 &sde_dsi {
 	qcom,dsi-default-panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
 };
+
+&qupv3_se4_i2c {
+	st_fts@49 {
+		panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
+	};
+};
