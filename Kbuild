@@ -13,7 +13,8 @@ dtbo-y += display/waipio-sde.dtbo \
 else
 dtbo-y += display/waipio-sde.dtbo \
 		display/waipio-sde-display-hiphi-evb1-overlay.dtbo \
-		display/waipio-sde-display-hiphic-evb1-overlay.dtbo
+		display/waipio-sde-display-hiphic-evb1-overlay.dtbo\
+		display/waipio-mot-ironmn-display-evb1-overlay.dtbo
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-y += display/trustedvm-waipio-sde-display-mtp-overlay.dtbo \
