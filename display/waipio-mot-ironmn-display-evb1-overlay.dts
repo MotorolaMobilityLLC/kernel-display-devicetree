@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+#include "waipio-mot-ironmn-display.dtsi"
+
+/ {
+	model = "ironmn";
+	compatible = "qcom,waipio-mtp", "qcom,waipio", "qcom,mtp", "moto,ironmn";
+	qcom,msm-id = <457 0x10000>, <482 0x10000>;
+	qcom,board-id = <0x41 0x9100>;
+};
