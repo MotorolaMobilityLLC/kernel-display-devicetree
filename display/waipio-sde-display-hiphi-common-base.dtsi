@@ -75,15 +75,6 @@
 		qcom,mdp = <&mdss_mdp>;
 		qcom,dsi-default-panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
 	};
-
-	sde_dsi1: qcom,dsi-display-secondary {
-		compatible = "qcom,dsi-display";
-		label = "secondary";
-
-		qcom,dsi-ctrl = <&mdss_dsi0>;
-		qcom,dsi-phy = <&mdss_dsi_phy0>;
-		qcom,mdp = <&mdss_mdp>;
-	};
 };
 
 
