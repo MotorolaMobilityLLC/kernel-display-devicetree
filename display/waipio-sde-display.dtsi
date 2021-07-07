@@ -67,7 +67,8 @@
 &sde_dsi {
 	clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
-
+			<&mdss_dsi_phy1 2>,
+			<&mdss_dsi_phy1 3>,
 			 /*
 			  * Currently the dsi clock handles are under the dsi
 			  * controller DT node. As soon as the controller probe
@@ -84,23 +85,71 @@
 			  */
 			 <&clock_dispcc DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
 	vddio-supply = <&L12C>;
-	ddic-supply = <&L1D>;
 	vci-supply = <&L13C>;
 };
 
-&L1D {
-	regulator-min-microvolt = <1200000>;
-	regulator-max-microvolt = <1200000>;
-	qcom,init-voltage = <1200000>;
+&sde_dsi1 {
+	clocks = <&mdss_dsi_phy0 0>,
+			<&mdss_dsi_phy0 1>,
+			<&mdss_dsi_phy1 2>,
+			<&mdss_dsi_phy1 3>,
+			 /*
+			  * Currently the dsi clock handles are under the dsi
+			  * controller DT node. As soon as the controller probe
+			  * finishes, the dispcc sync state can get called before
+			  * the dsi_display probe potentially disturbing the clock
+			  * votes for cont_splash use case. Hence we are no longer
+			  * protected by the component model in this case against the
+			  * disp cc sync state getting triggered after the dsi_ctrl
+			  * probe. To protect against this incorrect sync state trigger
+			  * add this dummy MDP clk vote handle to the dsi_display
+			  * DT node. Since the dsi_display driver does not parse
+			  * MDP clock nodes, no actual vote shall be added and this
+			  * change is done just to satisfy sync state requirements.
+			  */
+			 <&clock_dispcc DISP_CC_MDSS_MDP_CLK>;
+	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+			"pll_byte_clk1", "pll_dsi_clk1",
+			"mdp_core_clk";
+
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
+
+	qcom,platform-te-gpio = <&tlmm 87 0>;
+	qcom,panel-te-source = <1>;
+
+	vddio-supply = <&L12C>;
+	vci-supply = <&L13C>;
 };
 
 &mdss_mdp {
-	connectors = <&sde_wb &sde_dsi &sde_rscc>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 };
 
+&dsi_r66451_amoled_cmd {
+	qcom,ulps-enabled;
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
+		};
+
+		timing@1 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
+		};
+
+		timing@2 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
+		};
+	};
+};
 
 &dsi_r66451_amoled_144hz_cmd {
 	qcom,ulps-enabled;
