@@ -63,43 +63,44 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-	qcom,panel-supply-entry@0 {
-		reg = <0>;
-		qcom,supply-name = "vddio";
-		qcom,supply-min-voltage = <1800000>;
-		qcom,supply-max-voltage = <1800000>;
-		qcom,supply-enable-load = <300000>;
-		qcom,supply-disable-load = <100>;
-		qcom,supply-pre-on-sleep = <0>;
-		qcom,supply-post-on-sleep = <1>;
-		qcom,supply-pre-off-sleep = <3>;
-		qcom,supply-post-off-sleep = <0>;
-        };
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <200000>;
+			qcom,supply-disable-load = <80>;
+			qcom,supply-post-on-sleep = <20>;
+		};
 
-        qcom,panel-supply-entry@1 {
-		reg = <1>;
-		qcom,supply-name = "ddic";
-		qcom,supply-min-voltage = <1200000>;
-		qcom,supply-max-voltage = <1200000>;
-		qcom,supply-enable-load = <300000>;
-		qcom,supply-disable-load = <0>;
-		qcom,supply-pre-on-sleep = <1>;
-		qcom,supply-post-on-sleep = <0>;
-		qcom,supply-pre-off-sleep = <2>;
-		qcom,supply-post-off-sleep = <0>;
-        };
-        qcom,panel-supply-entry@2 {
-		reg = <2>;
-		qcom,supply-name = "vci";
-		qcom,supply-min-voltage = <3000000>;
-		qcom,supply-max-voltage = <3000000>;
-		qcom,supply-enable-load = <300000>;
-		qcom,supply-disable-load = <0>;
-		qcom,supply-pre-on-sleep = <0>;
-		qcom,supply-post-on-sleep = <0>;
-		qcom,supply-pre-off-sleep = <2>;
-		qcom,supply-post-off-sleep = <0>;
-        };
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <2000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <0>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "lab";
+			qcom,supply-min-voltage = <4600000>;
+			qcom,supply-max-voltage = <6000000>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,panel-supply-entry@3 {
+			reg = <3>;
+			qcom,supply-name = "ibb";
+			qcom,supply-min-voltage = <4600000>;
+			qcom,supply-max-voltage = <6000000>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <20>;
+		};
 	};
 
 	dsi_panel_pwr_supply_avdd: dsi_panel_pwr_supply_avdd {
@@ -284,24 +285,43 @@
 
 &dsi_r66451_amoled_cmd {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-	//qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
-	//qcom,dsi-dyn-clk-enable;
+	qcom,dsi-dyn-clk-enable;
 
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-value = <0x1c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-clockrate = <687000000>;
-			qcom,display-topology = <1 1 1>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 1e 04
+				04 03 02 04 00 0e 09];
+			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 18 06 06 15 20 06
-							06 07 02 04 00 15 0B];
+
+			qcom,dsi-dyn-clk-list = <423187200 425303136 427429652>;
+		};
+
+		timing@1 {
+			qcom,mdss-dsi-panel-phy-timings = [00 16 06 05 14 1f 06
+				06 06 02 04 00 14 0a];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+
+			qcom,dsi-dyn-clk-list = <634780800 637954704 641144480>;
+		};
+
+		timing@2 {
+			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 16 07
+				07 08 02 04 00 19 0c];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+
+			qcom,dsi-dyn-clk-list = <846374400 850606272 854859312>;
 		};
 	};
 };
