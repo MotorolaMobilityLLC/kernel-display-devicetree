@@ -99,6 +99,22 @@
 		cell-index = <0>;
 		label = "wb_display";
 	};
+
+	disp_rdump_memory: disp_rdump_region@e1000000 {
+		reg = <0xb8000000 0x00800000>;
+		label = "disp_rdump_region";
+	};
+
+	sde_dp: qcom,dp_display@ae90000 {
+		qcom,dp-aux-switch-mot;
+	};
+};
+
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xb8000000 0x0 0x02b00000>;
+		label = "cont_splash_region";
+	};
 };
 
 &sde_dsi {
@@ -142,7 +158,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_wb &sde_dsi &sde_rscc>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 };
 
 
@@ -204,4 +220,8 @@
 	st_fts@49 {
 		panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
 	};
+};
+
+&fsa4480 {
+	status = "disabled";
 };
