@@ -1,6 +1,8 @@
 /*
    this is original from waipio-sde-display-hiphi-common-base.dtsi
 */
+#include <dt-bindings/clock/qcom,gcc-waipio.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
 #include "waipio-sde-display-pinctrl.dtsi"
 #include "dsi-panel-sim-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
@@ -105,9 +107,6 @@
 		label = "disp_rdump_region";
 	};
 
-	sde_dp: qcom,dp_display@ae90000 {
-		qcom,dp-aux-switch-mot;
-	};
 };
 
 &reserved_memory {
@@ -158,7 +157,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_wb &sde_dsi &sde_rscc>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 	delete-cooling-cells;
 };
 
@@ -232,4 +231,25 @@
 
 &fsa4480 {
 	status = "disabled";
+};
+
+&sde_dp {
+	#clock-cells = <1>;
+	clocks =  <&clock_dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
+		<&clock_rpmh RPMH_CXO_CLK>,
+		<&clock_gcc GCC_USB3_0_CLKREF_EN>,
+		<&clock_gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_CLK_SRC>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK_SRC>,
+		<&sde_dp 1>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
+		<&clock_dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
+	clock-names = "core_aux_clk", "rpmh_cxo_clk", "core_usb_ref_clk_src",
+		"core_usb_pipe_clk", "link_clk", "link_clk_src", "link_iface_clk",
+		"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
+		"strm0_pixel_clk", "strm1_pixel_clk";
+	clock-mmrm = <0 0 0 0 0 DISP_CC_MDSS_DPTX0_LINK_CLK_SRC 0 0 0 0 0 0>;
 };
