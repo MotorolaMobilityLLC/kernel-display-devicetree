@@ -225,3 +225,15 @@
 		};
 	};
 };
+
+&dsi_panel_pwr_supply {
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1968000>;
+			qcom,supply-max-voltage = <1968000>;
+			qcom,supply-enable-load = <200000>;
+			qcom,supply-disable-load = <80>;
+			qcom,supply-post-on-sleep = <20>;
+		};
+};
