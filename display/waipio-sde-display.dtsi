@@ -152,6 +152,10 @@
 	qcom,ulps-enabled;
 };
 
+&dsi_nt35695b_truly_fhd_sl_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_sharp_qsync_wqhd_cmd {
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {

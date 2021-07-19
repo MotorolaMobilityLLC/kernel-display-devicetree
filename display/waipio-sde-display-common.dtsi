@@ -31,6 +31,7 @@
 #include "dsi-panel-sim-vdc-vid.dtsi"
 #include "dsi-panel-sim-vdc-cmd.dtsi"
 #include "dsi-panel-nt35597-truly-dualmipi-wqxga-splitlink-cmd.dtsi"
+#include "dsi-panel-nt35695b-truly-fhd-splitlink-cmd.dtsi"
 
 #include "waipio-sde-display-pinctrl.dtsi"
 
@@ -201,6 +202,20 @@
 	};
 };
 
+&dsi_nt35695b_truly_fhd_sl_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			/* DPHY regular margins */
+			qcom,mdss-dsi-panel-phy-timings = [00 1b 07 06 22 21 07
+				07 07 02 04 00 18 16];
+			qcom,display-topology = <2 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
 &dsi_r66451_amoled_cmd {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
@@ -270,6 +285,13 @@
 		timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 20 1b 05
 					19 06 02 04 00 00 00];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing@3 {
+			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 1e 17 04
+					19 03 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 		};

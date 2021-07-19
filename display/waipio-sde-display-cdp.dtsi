@@ -164,6 +164,14 @@
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
+&dsi_nt35695b_truly_fhd_sl_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_avdd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
+};
+
 &dsi_sim_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
