@@ -322,10 +322,11 @@
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 1d 13 03
-					19 02 02 04 00 00 00];
+			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 20 1b 05
+					19 06 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 		};
@@ -338,8 +339,8 @@
 		};
 
 		timing@2 {
-			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 20 1b 05
-					19 06 02 04 00 00 00];
+			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 1d 13 03
+					19 02 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 		};
