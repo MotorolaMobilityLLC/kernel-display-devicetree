@@ -180,6 +180,12 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
+	        16000 13000 35500 7000 2500>;
+	qcom,mdss-dsi-panel-peak-brightness = <5000000>;
+	qcom,mdss-dsi-panel-blackness-level = <100>;
+
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -189,11 +195,11 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-clockrate = <687000000>;
+			//qcom,mdss-dsi-panel-clockrate = <400000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 18 06 06 15 20 06
-							06 07 02 04 00 15 0B];
+			qcom,mdss-dsi-panel-phy-timings = [00 10 03 03 11 1E 04
+							04 03 02 04 00 0E 08];
 		};
 	};
 };
