@@ -5,24 +5,9 @@
 #include <dt-bindings/clock/qcom,rpmh.h>
 #include "waipio-sde-display-pinctrl.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
-#include "dsi-panel-sim-video.dtsi"
+#include "dsi-panel-mot-dummy-qhd-video.dtsi"
 
 &soc {
-	dsi_panel_pwr_supply_sim: dsi_panel_pwr_supply_sim {
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		qcom,panel-supply-entry@0 {
-			reg = <0>;
-			qcom,supply-name = "dummy";
-			qcom,supply-min-voltage = <1800000>;
-			qcom,supply-max-voltage = <1800000>;
-			qcom,supply-enable-load = <200000>;
-			qcom,supply-disable-load = <80>;
-			qcom,supply-post-on-sleep = <20>;
-		};
-	};
-
 	sde_dsi: qcom,dsi-display-primary {
 		compatible = "qcom,dsi-display";
 		label = "primary";
@@ -45,7 +30,7 @@
 		qcom,platform-te-gpio = <&tlmm 86 0>;
 		qcom,panel-te-source = <0>;
 
-		qcom,dsi-default-panel = <&dsi_sim_vid>;
+		qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 
 	};
 
@@ -74,15 +59,13 @@
 	delete-cooling-cells;
 };
 
-&dsi_sim_vid {
+&mot_dummy_vid_qhd {
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
+
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,display-topology = <1 0 1>,
-						<2 0 1>;
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
