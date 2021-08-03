@@ -45,7 +45,7 @@ qcom,mdss-dsi-te-pin-select = <1>;
 qcom,mdss-dsi-te-dcs-command = <1>;
 qcom,mdss-dsi-te-using-te-pin;
 
-qcom,bklt-dcs-2bytes-enabled;
+//qcom,bklt-dcs-2bytes-enabled;
 qcom,mdss-dsi-bl-min-level = <3>;
 qcom,mdss-dsi-bl-max-level = <2047>;
 qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
