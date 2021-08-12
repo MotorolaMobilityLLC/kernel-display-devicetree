@@ -34,6 +34,18 @@
 		reg = <0x0 0xb8000000 0x0 0x02b00000>;
 		label = "cont_splash_region";
 	};
+	/*
+	 * Demura memory regions are to be commented out if
+	 * feature not in use.
+	 */
+	demura_memory_0: demura_region_0 {
+		reg = <0x0 0x0 0x0 0x0>;
+		label = "demura hfc region 0";
+	};
+	demura_memory_1: demura_region_1 {
+		reg = <0x0 0x0 0x0 0x0>;
+		label = "demura hfc region 1";
+	};
 };
 
 &sde_dsi {

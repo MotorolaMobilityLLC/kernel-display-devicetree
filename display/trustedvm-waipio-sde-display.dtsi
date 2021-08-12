@@ -19,7 +19,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec>;
 };
 
 &dsi_sw43404_amoled_cmd {

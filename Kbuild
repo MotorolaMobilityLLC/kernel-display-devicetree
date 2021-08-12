@@ -9,7 +9,8 @@ dtbo-y += display/waipio-sde.dtbo \
 else
 dtbo-y += display/trustedvm-waipio-sde-display-mtp-overlay.dtbo \
 	  display/trustedvm-waipio-sde-display-cdp-overlay.dtbo \
-	  display/trustedvm-waipio-sde-display-rumi-overlay.dtbo
+	  display/trustedvm-waipio-sde-display-rumi-overlay.dtbo \
+	  display/trustedvm-waipio-sde-display-qrd-overlay.dtbo
 endif
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
