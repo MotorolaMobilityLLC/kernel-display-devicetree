@@ -188,7 +188,14 @@ Optional properties:
 - qcom,dsi-supported-qsync-min-fps-list:	The fps value in this list indicates the qsync min fps
 					corresponding to the mode in the qcom,dsi-supported-dfps-list with same index.
 					qcom,dsi-supported-qsync-min-fps-list cannot be defined along with
-					qcom,mdss-dsi-qsync-min-refresh-rate.
+					qcom,mdss-dsi-qsync-min-refresh-rate. "qcom,qsync-enable" property should be
+					set along with this property.
+- qcom,qsync-mode-min-refresh-rate:	This u32 property is used to define qsync min fps per timing node instead
+					of using same qsync min fps for different timing modes. For defining qsync min
+					fps per timing node, this property should be defined in all timing nodes or else
+					to define single qsync fps for all modes,
+					"qcom,mdss-dsi-qsync-min-refresh-rate" property can be used.
+					"qcom,qsync-enable" property should be set along with this property.
 - qcom,dsi-qsync-avr-step-list:		The u32 fps values in this optional list indicate the avr step
 					requirement for qsync/AVR video mode panels. When a late frame is triggered,
 					AVR will delay the trigger to ensure the frame transfer snaps to the next step
@@ -259,7 +266,9 @@ Optional properties:
 - qcom,mdss-dsi-te-using-wd:		Boolean entry enables the watchdog timer support to generate the vsync signal
 					for command mode panel. By default, panel TE will be used to generate the vsync.
 - qcom,mdss-dsi-te-using-te-pin:	Boolean to specify whether using hardware vsync.
+- qcom,qsync-enable:			Boolean property to indicate if qsync is enabled/disabled.
 - qcom,mdss-dsi-qsync-min-refresh-rate: A u32 entry to specify minimum refresh rate supported by the panel to enable qsync feature.
+					"qcom,qsync-enable" property should be set along with this property.
 - qcom,mdss-dsi-qsync-on-commands:	String that specifies the commands to enable qsync feature.
 - qcom,mdss-dsi-qsync-on-commands-state: String that specifies the ctrl state for sending qsync on commands.
 					"dsi_lp_mode" = DSI low power mode (default)
@@ -740,6 +749,7 @@ Example:
 		qcom,mdss-dsi-te-check-enable;
 		qcom,mdss-dsi-te-using-wd;
 		qcom,mdss-dsi-te-using-te-pin;
+		qcom,qsync-enable;
 		qcom,mdss-dsi-qsync-min-refresh-rate = <30>;
 		qcom,mdss-dsi-te-dcs-command = <1>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
@@ -865,6 +875,7 @@ Example:
 					29 00 00 00 00 00 02 B0 04
 					29 00 00 00 00 00 02 F1 00];
 				qcom,mdss-dsi-timing-switch-command-state = "dsi_lp_mode";
+				qcom,qsync-mode-min-refresh-rate = <48>;
 				qcom,mdss-dsi-qsync-on-commands = [15 01 00 00 00 00 02 51 00];
 				qcom,mdss-dsi-qsync-on-commands-state = "dsi_hs_mode";
 				qcom,mdss-dsi-qsync-off-commands = [15 01 00 00 00 00 02 51 00];
