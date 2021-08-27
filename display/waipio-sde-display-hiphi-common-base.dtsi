@@ -318,6 +318,10 @@
 	st_fts@49 {
 		panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
 	};
+
+	goodix_ts_i2c@5d {
+		panel = <&mot_csot_ili7838A_667_1080x2400_dsc_cmd>;
+	};
 };
 
 &fsa4480 {
