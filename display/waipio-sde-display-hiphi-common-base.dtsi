@@ -4,26 +4,12 @@
 #include <dt-bindings/clock/qcom,gcc-waipio.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 #include "waipio-sde-display-pinctrl.dtsi"
-#include "dsi-panel-sim-video.dtsi"
+#include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
 #include "dsi-panel-mot-csot-nt37701-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-ili7838A-667-1080x2400-dsc-cmd-common.dtsi"
 
 &soc {
-	dsi_panel_pwr_supply_sim: dsi_panel_pwr_supply_sim {
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		qcom,panel-supply-entry@0 {
-			reg = <0>;
-			qcom,supply-name = "dummy";
-			qcom,supply-min-voltage = <1800000>;
-			qcom,supply-max-voltage = <1800000>;
-			qcom,supply-enable-load = <200000>;
-			qcom,supply-disable-load = <80>;
-			qcom,supply-post-on-sleep = <20>;
-		};
-	};
 
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
 		#address-cells = <1>;
@@ -76,7 +62,7 @@
 		qcom,dsi-phy = <&mdss_dsi_phy0>;
 
 		qcom,mdp = <&mdss_mdp>;
-		qcom,dsi-default-panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
+		qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 	};
 };
 
@@ -301,24 +287,20 @@
 	};
 };
 
-&dsi_sim_vid {
+&mot_dummy_vid_qhd {
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
+
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [01 05 01 01 03 03 01
-				01 01 02 04 00 06 06];
-			qcom,display-topology = <1 0 1>,
-						<2 0 1>;
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
 };
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&dsi_sim_vid>;
+	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 };
 
 &qupv3_se4_i2c {
