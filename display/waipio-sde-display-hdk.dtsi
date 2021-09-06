@@ -3,7 +3,7 @@
 &pm8350c_gpios {
 	lcd_bias_enable {
 		lcd_bias_enable_default: lcd_bias_enable_default {
-			pins = "gpio3";
+			pins = "gpio8";
 			function = "normal";
 			output-enable;
 			bias-disable;
@@ -14,7 +14,7 @@
 
 	lcd_wled_enable {
 		lcd_wled_enable_default: lcd_wled_enable_default {
-			pins = "gpio4";
+			pins = "gpio9";
 			function = "normal";
 			output-enable;
 			bias-disable;
@@ -33,8 +33,8 @@
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <255>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
-	qcom,platform-bklight-en-gpio = <&pm8350c_gpios 3 0>;
-	qcom,platform-en-gpio = <&pm8350c_gpios 4 0>;
+	qcom,platform-bklight-en-gpio = <&pm8350c_gpios 9 0>;
+	qcom,platform-en-gpio = <&pm8350c_gpios 8 0>;
 };
 
 &sde_dsi {
