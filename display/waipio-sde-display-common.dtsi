@@ -329,7 +329,7 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 1a 29 0a
 				19 09 02 04 00 00 00];
-			qcom,display-topology = <2 0 1>;
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
