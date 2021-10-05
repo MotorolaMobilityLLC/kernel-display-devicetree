@@ -263,6 +263,10 @@
 		panel = <&dsi_sharp_qsync_wqhd_cmd
 			&dsi_sharp_qsync_wqhd_video>;
 	};
+
+	novatek@62 {
+		panel = <&dsi_nt36672e_fhd_plus_120_video>;
+	};
 };
 
 &spmi_bus {
