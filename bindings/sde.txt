@@ -550,6 +550,16 @@ Optional properties:
 				bit mask, which is a combination of SID and  pheripheral id's.
 - qcom,sde-ib-bw-vote:		A u32 array of IB bandwidth vote values in kbps for
 				MNOC, LLCC and DDR/EBI respectively.
+- qcom,sde-dnsc-blur-version:	A u32 value indicating the downscale blur version
+- qcom,sde-dnsc-blur-off:	An array of u32 values with the offset for the downscale blur
+				block, from the "mdp_phys".
+- qcom,sde-dnsc-blur-size:	A u32 value indicates the downscale blur block address range.
+- qcom,sde-dnsc-blur-gaus-lut-off:	An array of u32 values with the offset for gaussian LUT
+				block, from the dnsc-blur-off
+- qcom,sde-dnsc-blur-gaus-lut-size:	A u32 value indicates the gaussian LUT block address range.
+- qcom,sde-dnsc-blur-dither-off:	An array of u32 values with the offset for dither
+				block, from the dnsc-blur-off
+- qcom,sde-dnsc-blur-dither-size:	A u32 value indicates the dither block address range.
 
 Bus Scaling:
 - interconnects                 An array of 4 cell properties with the format of
@@ -842,6 +852,14 @@ Example:
         2400000 2400000 2400000 2400000>;
     qcom,sde-amortizable-threshold = <11>;
     qcom,sde-secure-sid-mask = <0x200801 0x200c01>;
+
+    qcom,sde-dnsc-blur-version = <0x100>;
+    qcom,sde-dnsc-blur-off = <0x7D000>;
+    qcom,sde-dnsc-blur-size = <0x40>;
+    qcom,sde-dnsc-blur-gaus-lut-off = <0x100>;
+    qcom,sde-dnsc-blur-gaus-lut-size = <0x400>;
+    qcom,sde-dnsc-blur-dither-off = <0x5E0>;
+    qcom,sde-dnsc-blur-dither-size = <0x20>;
 
     qcom,vram-size = <0x200000>;
     qcom,pmic-arb-address = <0x3F800 0x3F900 0x3FA00>;
