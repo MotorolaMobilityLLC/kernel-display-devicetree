@@ -25,8 +25,8 @@
 };
 
 &dsi_r66451_amoled_120hz_cmd_cphy {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_extvdd>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_extvdd>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
