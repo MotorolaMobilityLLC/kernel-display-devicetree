@@ -11,10 +11,16 @@ dtbo-y += display/waipio-sde.dtbo \
 		display/waipio-sde-display-waipio-lemur-mtp-overlay.dtbo \
 		display/waipio-sde-display-rumi-overlay.dtbo
 else
+# Li display bringup
+ifeq ($(CONFIG_LI_DTB),y)
+dtbo-y += display/waipio-sde.dtbo \
+		display/waipio-sde-display-li-evb1-overlay.dtbo
+else
 dtbo-y += display/waipio-sde.dtbo \
 		display/waipio-sde-display-hiphi-evb1-overlay.dtbo \
 		display/waipio-sde-display-hiphic-evb1-overlay.dtbo\
 		display/waipio-mot-ironmn-display-evb1-overlay.dtbo
+endif  #($CONFIG_LI_DTB,y)
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-y += display/trustedvm-waipio-sde-display-mtp-overlay.dtbo \
