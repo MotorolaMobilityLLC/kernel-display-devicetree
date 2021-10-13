@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+#include "waipio-sde-display-li-common.dtsi"
+
+/ {
+	model = "li";
+	compatible = "qcom,waipio-mtp", "qcom,waipio", "qcom,mtp", "moto,li";
+	qcom,msm-id = <457 0x10000>, <482 0x10000>, <457 0x20000>, <482 0x20000>;
+	qcom,board-id = <0x4A 0x9100>;
+};
