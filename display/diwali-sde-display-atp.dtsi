@@ -116,3 +116,17 @@
 	extvdd-supply = <&display_panel_extvdd>;
 	qcom,avdd-regulator-gpio = <&tlmm 148 0>;
 };
+
+&qupv3_se0_spi{
+	focaltech@0{
+		panel = <&dsi_r66451_amoled_144hz_cmd
+			&dsi_r66451_amoled_video
+			&dsi_r66451_amoled_60hz_video
+			&dsi_r66451_amoled_cmd
+			&dsi_r66451_amoled_120hz_cmd_cphy
+			&dsi_r66451_amoled_144hz_video_cphy
+			&dsi_r66451_amoled_144hz_cmd_cphy
+			&dsi_r66451_amoled_video_cphy
+			&dsi_r66451_amoled_cmd_cphy>;
+	};
+};
