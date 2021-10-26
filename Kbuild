@@ -27,6 +27,8 @@ dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
 		display/diwali-sde-display-atp-overlay.dtbo \
 		display/diwali-sde-display-idp-overlay.dtbo \
 		display/diwali-sde-display-idp-amoled-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
