@@ -230,6 +230,17 @@
 	qcom,mdss-dsi-bl-max-level = <1023>;
 };
 
+&dsi_nt36672e_fhd_plus_120_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_avdd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
+	pwms = <&pm8350c_pwm_2 0 0>;
+	qcom,bl-pmic-pwm-period-usecs = <100>;
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,platform-bklight-en-gpio = <&tlmm 65 0>;
+};
+
 &sde_dsi {
 	pinctrl-names = "panel_active", "panel_suspend", "pwm_pin";
 	pinctrl-2 = <&lcd_backlight_ctrl_default>;
@@ -251,6 +262,10 @@
 	synaptics_dsx@22 {
 		panel = <&dsi_sharp_qsync_wqhd_cmd
 			&dsi_sharp_qsync_wqhd_video>;
+	};
+
+	novatek@62 {
+		panel = <&dsi_nt36672e_fhd_plus_120_video>;
 	};
 };
 
