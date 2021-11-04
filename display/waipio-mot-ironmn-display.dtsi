@@ -90,4 +90,5 @@
 		"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 		"strm0_pixel_clk", "strm1_pixel_clk";
 	clock-mmrm = <0 0 0 0 0 DISP_CC_MDSS_DPTX0_LINK_CLK_SRC 0 0 0 0 0 0>;
+	altmode-typec-bridge;
 };
