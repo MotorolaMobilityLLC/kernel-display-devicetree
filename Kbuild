@@ -20,6 +20,9 @@ dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-atp-overlay.dtbo \
 		display/cape-sde-display-cdp-overlay.dtbo \
 		display/cape-sde-display-mtp-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-cdp-overlay.dtbo \
+		display/trustedvm-cape-sde-display-mtp-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
