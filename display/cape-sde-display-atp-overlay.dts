@@ -5,8 +5,8 @@
 
 / {
 	model = "Qualcomm Technologies, Inc. Cape ATP";
-	compatible = "qcom,cape-atp", "qcom,cape", "qcom,atp", "qcom,cape-v2-atp", "qcom,cape-v2";
-	qcom,msm-id = <530 0x10000>, <540 0x10000>;
-	qcom,board-id = <33 0>;
+	compatible = "qcom,cape-atp", "qcom,cape", "qcom,atp";
+	qcom,msm-id = <530 0x10000>, <531 0x10000>, <540 0x10000>;
+	qcom,board-id = <0x10021 0>;
 };
 
