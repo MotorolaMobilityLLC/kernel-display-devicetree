@@ -1,14 +1,19 @@
 #include "kalama-sde.dtsi"
 
 &soc {
-	sde_wb: qcom,wb-display@0 {
+	sde_wb1: qcom,wb-display@1 {
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
-		label = "wb_display";
+		label = "wb_display1";
+	};
+	sde_wb2: qcom,wb-display@2 {
+		compatible = "qcom,wb-display";
+		cell-index = <1>;
+		label = "wb_display2";
 	};
 };
 
 &mdss_mdp {
-	connectors = <&smmu_sde_unsec &sde_wb>;
+	connectors = <&smmu_sde_unsec &sde_wb1 &sde_wb2>;
 };
 
