@@ -31,7 +31,8 @@ else
 dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
 		display/waipio-sde-display-hiphi-evb1-overlay.dtbo \
 		display/waipio-sde-display-hiphic-evb1-overlay.dtbo\
-		display/waipio-mot-ironmn-display-evb1-overlay.dtbo
+		display/waipio-mot-ironmn-display-evb1-overlay.dtbo \
+		display/waipio-sde-display-hiphid-pvt-overlay.dtbo
 endif  #($CONFIG_LI_DTB,y)
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
