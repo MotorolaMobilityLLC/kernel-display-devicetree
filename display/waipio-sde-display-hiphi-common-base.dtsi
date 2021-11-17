@@ -358,7 +358,7 @@
 	};
 };
 
-&mot_csot_nt37701_667_1080x2400_cam_cmd {
+&mot_csot_nt37701_667_1080x2400_camera_cmd {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	//qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
@@ -430,7 +430,8 @@
 
 &qupv3_se4_i2c {
 	st_fts@49 {
-		panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd>;
+		panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd
+			&mot_csot_nt37701_667_1080x2400_camera_cmd>;
 	};
 
 	goodix_ts_i2c@5d {
