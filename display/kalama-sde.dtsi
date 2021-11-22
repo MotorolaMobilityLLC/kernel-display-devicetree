@@ -45,8 +45,8 @@
 	qcom,sde-ib-bw-vote = <2500000 0 800000>;
 	qcom,sde-has-idle-pc;
 	qcom,sde-dspp-ltm-version = <0x00010001>;
-	/* offsets are based off dspp 0 and dspp 1 */
-	qcom,sde-dspp-ltm-off = <0x15300 0x14300>;
+	/* offsets are based off dspp 0, 1, 2, and 3 */
+	qcom,sde-dspp-ltm-off = <0x15300 0x14300 0x13300 0x12300>;
 
 	qcom,platform-supply-entries {
 		#address-cells = <1>;

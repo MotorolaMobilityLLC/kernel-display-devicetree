@@ -42,7 +42,7 @@
 		qcom,sde-dspp-size = <0x1800>;
 
 		qcom,sde-dspp-rc-version = <0x00010001>;
-		qcom,sde-dspp-rc-off = <0x15800 0x14800>;
+		qcom,sde-dspp-rc-off = <0x15800 0x14800 0x13800 0x12800>;
 		qcom,sde-dspp-rc-size = <0x38>;
 		qcom,sde-dspp-rc-mem-size = <2720>;
 
