@@ -95,8 +95,8 @@
 	qcom,dsi-default-panel = <&dsi_r66451_amoled_60hz_video>;
 };
 
-&qupv3_se4_i2c {
-	focaltech@38 {
+&qupv3_se4_spi {
+	focaltech@0 {
 		panel = <&dsi_r66451_amoled_144hz_cmd_cphy
 			&dsi_r66451_amoled_144hz_video_cphy
 			&dsi_r66451_amoled_120hz_cmd_cphy
