@@ -46,6 +46,14 @@
 		qcom,sde-dspp-rc-size = <0x38>;
 		qcom,sde-dspp-rc-mem-size = <2720>;
 
+		qcom,sde-dnsc-blur-version = <0x100>;
+		qcom,sde-dnsc-blur-off = <0x7D000>;
+		qcom,sde-dnsc-blur-size = <0x40>;
+		qcom,sde-dnsc-blur-gaus-lut-off = <0x100>;
+		qcom,sde-dnsc-blur-gaus-lut-size = <0x400>;
+		qcom,sde-dnsc-blur-dither-off = <0x5E0>;
+		qcom,sde-dnsc-blur-dither-size = <0x20>;
+
 		qcom,sde-wb-off = <0x65000 0x66000>;
 		qcom,sde-wb-size = <0x2c8>;
 		qcom,sde-wb-xin-id = <0xa 6>;
