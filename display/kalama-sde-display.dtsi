@@ -1,4 +1,6 @@
 #include "kalama-sde.dtsi"
+#include "kalama-sde-display-common.dtsi"
+#include <dt-bindings/clock/qcom,dispcc-kalama.h>
 
 &soc {
 	sde_wb1: qcom,wb-display@1 {
@@ -13,7 +15,61 @@
 	};
 };
 
-&mdss_mdp {
-	connectors = <&smmu_sde_unsec &sde_wb1 &sde_wb2>;
+&sde_dsi {
+	clocks = <&mdss_dsi_phy0 0>,
+		 <&mdss_dsi_phy0 1>,
+		 <&mdss_dsi_phy1 2>,
+		 <&mdss_dsi_phy1 3>,
+		 /*
+		  * Currently the dsi clock handles are under the dsi
+		  * controller DT node. As soon as the controller probe
+		  * finishes, the dispcc sync state can get called before
+		  * the dsi_display probe potentially disturbing the clock
+		  * votes for cont_splash use case. Hence we are no longer
+		  * protected by the component model in this case against the
+		  * disp cc sync state getting triggered after the dsi_ctrl
+		  * probe. To protect against this incorrect sync state trigger
+		  * add this dummy MDP clk vote handle to the dsi_display
+		  * DT node. Since the dsi_display driver does not parse
+		  * MDP clock nodes, no actual vote shall be added and this
+		  * change is done just to satisfy sync state requirements.
+		  */
+		 <&dispcc DISP_CC_MDSS_MDP_CLK>;
+	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+		      "pll_byte_clk1", "pll_dsi_clk1",
+		      "mdp_core_clk";
+	vddio-supply = <&L12B>;
+	vci-supply = <&L13B>;
 };
 
+&sde_dsi1 {
+	clocks = <&mdss_dsi_phy0 0>,
+		 <&mdss_dsi_phy0 1>,
+		 <&mdss_dsi_phy1 2>,
+		 <&mdss_dsi_phy1 3>,
+		 /*
+		  * Currently the dsi clock handles are under the dsi
+		  * controller DT node. As soon as the controller probe
+		  * finishes, the dispcc sync state can get called before
+		  * the dsi_display probe potentially disturbing the clock
+		  * votes for cont_splash use case. Hence we are no longer
+		  * protected by the component model in this case against the
+		  * disp cc sync state getting triggered after the dsi_ctrl
+		  * probe. To protect against this incorrect sync state trigger
+		  * add this dummy MDP clk vote handle to the dsi_display
+		  * DT node. Since the dsi_display driver does not parse
+		  * MDP clock nodes, no actual vote shall be added and this
+		  * change is done just to satisfy sync state requirements.
+		  */
+		 <&dispcc DISP_CC_MDSS_MDP_CLK>;
+	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+		      "pll_byte_clk1", "pll_dsi_clk1",
+		      "mdp_core_clk";
+	vddio-supply = <&L12B>;
+	vci-supply = <&L13B>;
+
+};
+
+&mdss_mdp {
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2>;
+};
