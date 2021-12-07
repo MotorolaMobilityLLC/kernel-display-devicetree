@@ -334,7 +334,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
-				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-max-voltage = <1304000>;
 				qcom,supply-enable-load = <16600>;
 				qcom,supply-disable-load = <0>;
 			};
@@ -360,7 +360,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
-				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-max-voltage = <1304000>;
 				qcom,supply-enable-load = <16600>;
 				qcom,supply-disable-load = <0>;
 			};
@@ -396,7 +396,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-0p9";
 				qcom,supply-min-voltage = <880000>;
-				qcom,supply-max-voltage = <880000>;
+				qcom,supply-max-voltage = <958000>;
 				qcom,supply-enable-load = <97800>;
 				qcom,supply-disable-load = <0>;
 			};
@@ -432,7 +432,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-0p9";
 				qcom,supply-min-voltage = <880000>;
-				qcom,supply-max-voltage = <880000>;
+				qcom,supply-max-voltage = <958000>;
 				qcom,supply-enable-load = <97800>;
 				qcom,supply-disable-load = <0>;
 			};

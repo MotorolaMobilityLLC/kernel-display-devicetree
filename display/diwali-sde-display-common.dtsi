@@ -17,6 +17,7 @@
 #include "dsi-panel-sim-video.dtsi"
 #include "dsi-panel-sim-dualmipi-cmd.dtsi"
 #include "dsi-panel-sim-dualmipi-video.dtsi"
+#include "dsi-r66451-amoled-120hz-video-cphy.dtsi"
 
 #include "diwali-sde-display-pinctrl.dtsi"
 
@@ -44,7 +45,7 @@
 			reg = <0>;
 			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1800000>;
-			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-max-voltage = <2000000>;
 			qcom,supply-enable-load = <200000>;
 			qcom,supply-disable-load = <80>;
 			qcom,supply-post-on-sleep = <20>;
@@ -68,7 +69,7 @@
 			reg = <0>;
 			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1800000>;
-			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-max-voltage = <2000000>;
 			qcom,supply-enable-load = <200000>;
 			qcom,supply-disable-load = <80>;
 			qcom,supply-post-on-sleep = <20>;
@@ -78,7 +79,7 @@
 			reg = <1>;
 			qcom,supply-name = "vci";
 			qcom,supply-min-voltage = <3000000>;
-			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-max-voltage = <3300000>;
 			qcom,supply-enable-load = <2000>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-post-on-sleep = <0>;
@@ -261,6 +262,26 @@
 		};
 
 		timing@2 {
+			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 14 1b 05
+				19 06 02 04 00 00 00];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_r66451_amoled_120hz_video_cphy {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x1c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 14 1b 05
 				19 06 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
