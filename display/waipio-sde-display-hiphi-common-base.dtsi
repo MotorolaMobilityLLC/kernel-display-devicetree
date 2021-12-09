@@ -56,6 +56,48 @@
         };
 	};
 
+	dsi_panel_pwr_supply_ili: dsi_panel_pwr_supply_ili {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+	qcom,panel-supply-entry@0 {
+		reg = <0>;
+		qcom,supply-name = "vddio";
+		qcom,supply-min-voltage = <1800000>;
+		qcom,supply-max-voltage = <1800000>;
+		qcom,supply-enable-load = <300000>;
+		qcom,supply-disable-load = <100>;
+		qcom,supply-pre-on-sleep = <0>;
+		qcom,supply-post-on-sleep = <1>;
+		qcom,supply-pre-off-sleep = <3>;
+		qcom,supply-post-off-sleep = <0>;
+        };
+        qcom,panel-supply-entry@1 {
+		reg = <1>;
+		qcom,supply-name = "vci";
+		qcom,supply-min-voltage = <3000000>;
+		qcom,supply-max-voltage = <3000000>;
+		qcom,supply-enable-load = <300000>;
+		qcom,supply-disable-load = <0>;
+		qcom,supply-pre-on-sleep = <1>;
+		qcom,supply-post-on-sleep = <0>;
+		qcom,supply-pre-off-sleep = <2>;
+		qcom,supply-post-off-sleep = <0>;
+        };
+        qcom,panel-supply-entry@2 {
+		reg = <2>;
+		qcom,supply-name = "ddic";
+		qcom,supply-min-voltage = <1200000>;
+		qcom,supply-max-voltage = <1200000>;
+		qcom,supply-enable-load = <300000>;
+		qcom,supply-disable-load = <0>;
+		qcom,supply-pre-on-sleep = <1>;
+		qcom,supply-post-on-sleep = <0>;
+		qcom,supply-pre-off-sleep = <2>;
+		qcom,supply-post-off-sleep = <0>;
+        };
+
+	};
 	sde_dsi: qcom,dsi-display-primary {
 		compatible = "qcom,dsi-display";
 		label = "primary";
@@ -226,7 +268,7 @@
 
 	//qcom,dsi-dyn-clk-enable;
 
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_ili>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <9>;
