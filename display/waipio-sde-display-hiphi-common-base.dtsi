@@ -205,7 +205,6 @@
 	qcom,mdss-dsi-bl-max-level = <2047>;
 	//qcom,mdss-dsi-bl-default-level = <1024>;
 	qcom,mdss-brightness-max-level = <2047>;
-	qcom,backlight_map_type = <2>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -291,6 +290,7 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
+	qcom,mdss-dsi-bl-is-exponent;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -361,6 +361,7 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
+	qcom,mdss-dsi-bl-is-exponent;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
