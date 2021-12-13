@@ -394,6 +394,8 @@
 
 	qcom,dsi-dyn-clk-enable;
 	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
+	qcom,qsync-enable;
+	qcom,mdss-dsi-qsync-min-refresh-rate = <48>;
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -422,6 +424,8 @@
 
 	qcom,dsi-dyn-clk-enable;
 	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
+	qcom,qsync-enable;
+	qcom,mdss-dsi-qsync-min-refresh-rate = <48>;
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
