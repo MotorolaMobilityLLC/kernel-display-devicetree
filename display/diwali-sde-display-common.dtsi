@@ -408,7 +408,7 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 20 08 08 18 23 08
 				08 08 02 04 00 1b 0d];
-			qcom,display-topology = <1 1 1>;
+			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <957616128 950966016 954291072>;
 		};
@@ -438,7 +438,7 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1e 08 07 18 22 08
 				08 08 02 04 00 1a 0d];
-			qcom,display-topology = <1 1 1>;
+			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <912015360 904415232 908215296>;
 		};
