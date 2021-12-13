@@ -95,4 +95,30 @@
 	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 };
 
+&dsi_r66451_amoled_cmd_cphy{
+	qcom,ulps-enabled;
+};
 
+&dsi_r66451_amoled_144hz_cmd_cphy{
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_120hz_cmd_cphy{
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_cmd{
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_144hz_cmd{
+	qcom,ulps-enabled;
+};
+
+&dsi_sim_cmd{
+	qcom,ulps-enabled;
+};
+
+&dsi_dual_sim_cmd{
+	qcom,ulps-enabled;
+};
