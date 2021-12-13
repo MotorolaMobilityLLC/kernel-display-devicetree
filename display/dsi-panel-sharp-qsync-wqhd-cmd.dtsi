@@ -204,28 +204,28 @@
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 
 				qcom,video-mode-switch-in-commands = [
-					39 00 00 00 00 00 02 ff 10
-					39 00 00 00 00 00 02 fb 01
+					39 00 00 40 00 00 02 ff 10
+					39 00 00 40 00 00 02 fb 01
 					39 00 00 00 00 00 02 bb 13
 				];
 				qcom,video-mode-switch-in-commands-state = "dsi_lp_mode";
 
 				qcom,video-mode-switch-out-commands = [
-					39 00 00 00 00 00 02 ff 10
-					39 00 00 00 00 00 02 fb 01
-					39 01 00 00 00 00 02 bb 10
+					39 00 00 40 00 00 02 ff 10
+					39 00 00 40 00 00 02 fb 01
+					39 00 00 00 00 00 02 bb 10
 				];
 				qcom,video-mode-switch-out-commands-state = "dsi_lp_mode";
 
 				qcom,cmd-mode-switch-in-commands = [
-					39 00 00 00 00 00 02 ff 10
-					39 00 00 00 00 00 02 fb 01
+					39 00 00 40 00 00 02 ff 10
+					39 00 00 40 00 00 02 fb 01
 					39 00 00 00 00 00 02 bb 10
 				];
 				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
 				qcom,cmd-mode-switch-out-commands = [
-					39 01 00 00 00 00 05 2a 00 00 02 cf
-					39 01 00 00 00 00 05 2b 00 00 09 ff
+					39 00 00 40 00 00 05 2a 00 00 02 cf
+					39 00 00 00 00 00 05 2b 00 00 09 ff
 				];
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <8>;
