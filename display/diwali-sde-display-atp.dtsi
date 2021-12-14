@@ -108,6 +108,7 @@
 &dsi_sim_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 42 0>;
 };
 
 &dsi_dual_sim_cmd {
@@ -119,6 +120,7 @@
 &dsi_dual_sim_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 42 0>;
 };
 
 &sde_dsi {
