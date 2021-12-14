@@ -32,6 +32,13 @@
 		pinctrl-0 = <&display_panel_extvdd_default>;
 	};
 
+	display_panel_ibb: display_panel_ibb_stub {
+		compatible = "qcom,stub-regulator";
+		regulator-name = "display_panel_ibb";
+		regulator-min-microvolt = <4600000>;
+		regulator-max-microvolt = <6000000>;
+	};
+
 	sde_wb: qcom,wb-display@0 {
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
@@ -89,6 +96,7 @@
 
 	vddio-supply = <&L12C>;
 	vci-supply = <&L13C>;
+	ibb-supply = <&display_panel_ibb>;
 };
 
 &mdss_mdp {
