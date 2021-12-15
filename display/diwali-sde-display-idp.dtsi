@@ -87,6 +87,16 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
+&dsi_sim_dsc_375_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+};
+
+&dsi_sim_dsc_10b_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+};
+
 &sde_dsi {
 	pinctrl-names = "panel_active", "panel_suspend", "pwm_pin";
 	pinctrl-2 = <&lcd_backlight_ctrl_default>;
