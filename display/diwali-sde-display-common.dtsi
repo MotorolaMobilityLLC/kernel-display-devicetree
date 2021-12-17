@@ -21,6 +21,8 @@
 #include "dsi-panel-sim-dsc-10bit-cmd.dtsi"
 #include "dsi-panel-sim-dsc375-cmd.dtsi"
 #include "dsi-panel-sharp-dsc-qhd-plus-cmd.dtsi"
+#include "dsi-panel-sharp-qsync-wqhd-cmd.dtsi"
+#include "dsi-panel-sharp-qsync-wqhd-video.dtsi"
 
 #include "diwali-sde-display-pinctrl.dtsi"
 
@@ -752,6 +754,83 @@
 		timing@1 { /* 60 FPS*/
 			qcom,mdss-dsi-panel-phy-timings = [00 10 03 03 11 1e 04
 				04 03 02 04 00 03 09];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sharp_qsync_wqhd_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 { /* WQHD 60FPS CMD */
+			qcom,mdss-dsi-panel-phy-timings = [00 0d 03 03 10 1c 04
+				03 02 02 04 00 0c 08];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing@1 { /* FHD 60FPS CMD */
+			qcom,mdss-dsi-panel-phy-timings = [00 0a 01 02 0e 1c 02
+				02 01 02 04 00 09 07];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing@2 { /* WQHD 90FPS CMD */
+			qcom,mdss-dsi-panel-phy-timings = [00 12 04 04 12 1e 04
+				05 03 02 04 00 0f 0a];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing@3 { /* WQHD 120FPS CMD */
+			qcom,mdss-dsi-panel-phy-timings = [00 16 06 05 14 1f 06
+				 06 06 02 04 00 14 0b];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing@4 { /* FHD 120FPS CMD */
+			qcom,mdss-dsi-panel-phy-timings = [00 0d 03 03 10 1c 04
+				03 02 02 04 00 0c 08];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing@5 { /* FHD 90FPS CMD */
+			qcom,mdss-dsi-panel-phy-timings = [00 0b 02 02 0f 1c 03
+				02 02 02 04 00 0a 07];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sharp_qsync_wqhd_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,qsync-enable;
+	qcom,mdss-dsi-qsync-min-refresh-rate = <55>;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 16 06 05 14 1f 06
+				06 06 02 04 00 14 0b];
 			qcom,display-topology = <2 2 2>;
 			qcom,default-topology-index = <0>;
 		};
