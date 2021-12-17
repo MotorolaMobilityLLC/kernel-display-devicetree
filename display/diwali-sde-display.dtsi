@@ -181,3 +181,11 @@
 &dsi_dual_sim_cmd{
 	qcom,ulps-enabled;
 };
+
+&dsi_sim_dsc_375_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_sim_dsc_10b_cmd {
+	qcom,ulps-enabled;
+};

@@ -63,6 +63,16 @@
 	qcom,platform-reset-gpio = <&tlmm 42 0>;
 };
 
+&dsi_sim_dsc_375_cmd {
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 42 0>;
+};
+
+&dsi_sim_dsc_10b_cmd {
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 42 0>;
+};
+
 &sde_dsi {
 	qcom,avdd-regulator-gpio = <&tlmm 168 0>;
 	qcom,dsi-default-panel = <&dsi_nt36672e_fhd_plus_120_video>;
