@@ -45,6 +45,7 @@
 		qcom,sde-dspp-rc-off = <0x15800 0x14800>;
 		qcom,sde-dspp-rc-size = <0x38>;
 		qcom,sde-dspp-rc-mem-size = <2720>;
+		qcom,sde-dspp-rc-min-region-width = <20>;
 
 		qcom,sde-dnsc-blur-version = <0x100>;
 		qcom,sde-dnsc-blur-off = <0x7D000>;
