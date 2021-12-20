@@ -392,6 +392,9 @@
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
+	qcom,dsi-dyn-clk-enable;
+	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
+
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
@@ -405,6 +408,7 @@
 				08 08 02 04 00 1b 0d];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <957616128 950966016 954291072>;
 		};
 	};
 };
@@ -415,6 +419,9 @@
 	qcom,dsi-supported-dfps-list = <120 60 48>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
+	qcom,dsi-dyn-clk-enable;
+	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -429,6 +436,7 @@
 				08 08 02 04 00 1a 0d];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <912015360 904415232 908215296>;
 		};
 	};
 };
