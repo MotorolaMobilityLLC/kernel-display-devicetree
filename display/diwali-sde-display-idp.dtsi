@@ -190,4 +190,9 @@
 		panel = <&dsi_sharp_qsync_wqhd_cmd
 			&dsi_sharp_qsync_wqhd_video>;
 	};
+
+	focaltech@38 {
+		panel = <&dsi_r66451_amoled_60hz_video
+			&dsi_r66451_amoled_60hz_cmd>;
+	};
 };
