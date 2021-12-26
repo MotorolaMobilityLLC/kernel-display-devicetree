@@ -127,4 +127,8 @@
 			&dsi_nt36672e_dsc_fhd_plus_60hz_video
 			&dsi_nt36672e_fhd_plus_144hz_video_cphy>;
 	};
+
+	atmel_mxt_ts@4a {
+		panel = <&dsi_sharp_qhd_plus_dsc_cmd>;
+	};
 };
