@@ -138,47 +138,10 @@
 
 &dsi_r66451_amoled_144hz_cmd_cphy{
 	qcom,ulps-enabled;
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-
-		timing@1 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-
-		timing@2 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-
-		timing@3 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-	};
 };
 
 &dsi_r66451_amoled_120hz_cmd_cphy{
 	qcom,ulps-enabled;
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-
-		timing@1 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-
-		timing@2 {
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
-		};
-	};
 };
 
 &dsi_r66451_amoled_cmd{
