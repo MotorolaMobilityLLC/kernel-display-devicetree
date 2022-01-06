@@ -19,7 +19,8 @@ ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-atp-overlay.dtbo \
 		display/cape-sde-display-cdp-overlay.dtbo \
-		display/cape-sde-display-mtp-overlay.dtbo
+		display/cape-sde-display-mtp-overlay.dtbo \
+		display/cape-sde-display-qrd-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-cdp-overlay.dtbo \
 		display/trustedvm-cape-sde-display-mtp-overlay.dtbo
@@ -30,7 +31,8 @@ dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
 		display/diwali-sde-display-atp-overlay.dtbo \
 		display/diwali-sde-display-idp-overlay.dtbo \
 		display/diwali-sde-display-idp-amoled-overlay.dtbo \
-		display/diwali-sde-display-qrd-overlay.dtbo
+		display/diwali-sde-display-qrd-overlay.dtbo \
+		display/diwali-sde-display-rumi-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.dtbo
 endif
