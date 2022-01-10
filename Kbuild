@@ -1,6 +1,8 @@
 ifeq ($(CONFIG_ARCH_KALAMA), y)
 	dtbo-y += display/kalama-sde.dtbo \
-		display/kalama-sde-display-rumi-overlay.dtbo
+		display/kalama-sde-display-rumi-overlay.dtbo \
+		display/kalama-sde-display-cdp-overlay.dtbo \
+		display/kalama-sde-display-mtp-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
