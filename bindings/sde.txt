@@ -469,27 +469,39 @@ Optional properties:
 - qcom,sde-downscaling-prefill-lines:	A u32 value indicates the latency of downscaling in lines.
 - qcom,sde-max-per-pipe-bw-kbps:	Array of u32 value indicates the max per pipe bandwidth in Kbps.
 - qcom,sde-amortizable-threshold:	This value indicates the min for traffic shaping in lines.
-- qcom,sde-vbif-qos-rt-remap:	This array is used to program vbif qos remapper register
-				priority for realtime clients.
-- qcom,sde-vbif-qos-nrt-remap:	This array is used to program vbif qos remapper register
-				priority for non-realtime clients.
-- qcom,sde-vbif-qos-cwb-remap:	This array is used to program vbif qos remapper register
-				priority for concurrent writeback clients.
-- qcom,sde-vbif-qos-lutdma-remap:	This array is used to program vbif qos remapper register
-				priority for lutdma client.
-- qcom,sde-qos-refresh-rates:	A u32 array indicates danger, safe and creq luts
+- qcom,sde-vbif-qos-rt-remap:	This u32 array is used to program vbif qos remapper register
+				priority for realtime clients. First 8 entries are for rp_remap and
+				the next 8 entries are for lvl_remap.
+- qcom,sde-vbif-qos-nrt-remap:	This u32 array is used to program vbif qos remapper register
+				priority for non-realtime clients. First 8 entries are for rp_remap and
+				the next 8 entries are for lvl_remap.
+- qcom,sde-vbif-qos-cwb-remap:	This u32 array is used to program vbif qos remapper register
+				priority for concurrent writeback clients. First 8 entries are
+				for rp_remap and the next 8 entries are for lvl_remap.
+- qcom,sde-vbif-qos-lutdma-remap:	This u32 array is used to program vbif qos remapper register
+				priority for lutdma client. First 8 entries are for rp_remap and
+				the next 8 entries are for lvl_remap.
+- qcom,sde-vbif-qos-cnoc-remap:	This u32 array is used to program vbif qos remapper register
+				priority for cnoc clients. First 8 entries are for rp_remap and
+				the next 8 entries are for lvl_remap.
+- qcom,sde-vbif-qos-offline-wb-remap:	This u32 array is used to program vbif qos remapper register
+				priority for offline-wb clients. First 8 entries are for rp_remap
+				and the next 8 entries are for lvl_remap.
+- qcom,sde-qos-refresh-rates:	This u32 array indicates danger, safe and creq luts
 				qos configuration for different refresh rates.
-- qcom,sde-danger-lut:		A u32 array of 7 cell property, with a format of
-				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted>,
-				indicating the danger luts on sspp and wb.
-- qcom,sde-safe-lut:		A u32 array of 7 cell property, with a format of
-				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted>,
-				indicating the safe luts on sspp and wb.
-- qcom,sde-creq-lut:		A u64 array of 14 cell property, with a format of
-				<lut hi, lut lo> for each entry, first 7 u64 cells for all qos cases from
-				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted>,
-				in qseed disabled case, followed by next 7 u64 cells with same data for
-				qseed enabled case, with of-node count based on the qos refresh rates count.
+- qcom,sde-danger-lut:		This u32 array of 16 cell property, with a format of
+				<portrait-panel, landscape-panel> for each entry,
+				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted,
+				offline-wb>, indicating the danger luts on sspp and wb.
+- qcom,sde-safe-lut:		This u32 array of 16 cell property, with a format of
+				<portrait-panel, landscape-panel> for each entry,
+				<linear, tile, nrt, cwb-linear, cwb-tile, inline, inline-restricted,
+				offline-wb>, indicating the safe luts on sspp and wb.
+- qcom,sde-creq-lut:		This u64 array of 16 cell property, with a format of
+				<lut hi, lut lo, lut hi wiht-qseed, lut lo with-qseed> for each
+				entry, for qos cases from <linear, tile, nrt, cwb-linear, cwb-tile,
+				inline, inline-restricted, offline-wb>, with of-node count based
+				on the qos refresh rates count.
 - qcom,sde-cdp-setting:		Array of 2 cell property, with a format of
 				<read enable, write enable> for cdp use cases in
 				order of <real_time>, and <non_real_time>.
@@ -868,10 +880,12 @@ Example:
 
     qcom,sde-ib-bw-vote = <2500000 0 800000>;
 
-    qcom,sde-vbif-qos-rt-remap = <3 3 4 4 5 5 6 6>;
-    qcom,sde-vbif-qos-nrt-remap = <3 3 3 3 3 3 3 3>;
-    qcom,sde-vbif-qos-cwb-remap = <3 3 4 4 5 5 6 3>;
-    qcom,sde-vbif-qos-lutdma-remap = <3 3 3 3 4 4 4 4>;
+    qcom,sde-vbif-qos-rt-remap = <3 3 4 4 5 5 6 6 3 3 4 4 5 5 6 6>;
+    qcom,sde-vbif-qos-nrt-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
+    qcom,sde-vbif-qos-cwb-remap = <3 3 4 4 5 5 6 3 3 3 4 4 5 5 6 3>;
+    qcom,sde-vbif-qos-lutdma-remap = <3 3 3 3 4 4 4 4 3 3 3 3 4 4 4 4>;
+    qcom,sde-vbif-qos-offline-wb-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
+    qcom,sde-vbif-qos-cnoc-remap = <3 3 4 4 5 5 5 5 3 3 3 3 3 3 3 3>;
 
     qcom,sde-reg-dma-off = <0 0x400>;
     qcom,sde-reg-dma-id = <0 1>;
