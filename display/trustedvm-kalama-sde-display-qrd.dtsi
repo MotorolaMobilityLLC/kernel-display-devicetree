@@ -1,5 +1,22 @@
 #include "trustedvm-kalama-sde-display.dtsi"
 
+&dsi_vtdr6130_amoled_144hz_cmd {
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
+};
+
+&dsi_vtdr6130_amoled_144hz_video {
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
+};
 
 &dsi_sharp_4k_dsc_cmd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
@@ -59,5 +76,5 @@
 };
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&dsi_r66451_amoled_144hz_cmd_cphy>;
+	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_144hz_cmd>;
 };
