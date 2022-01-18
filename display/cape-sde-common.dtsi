@@ -368,7 +368,7 @@
 	};
 
 	mdss_dsi_phy0: qcom,mdss_dsi_phy0@ae94900 {
-		compatible = "qcom,dsi-phy-v4.3";
+		compatible = "qcom,dsi-phy-v4.3.2";
 		label = "dsi-phy-0";
 		cell-index = <0>;
 		#clock-cells = <1>;
@@ -404,7 +404,7 @@
 	};
 
 	mdss_dsi_phy1: qcom,mdss_dsi_phy1@ae96900 {
-		compatible = "qcom,dsi-phy-v4.3";
+		compatible = "qcom,dsi-phy-v4.3.2";
 		label = "dsi-phy-1";
 		cell-index = <1>;
 		#clock-cells = <1>;
