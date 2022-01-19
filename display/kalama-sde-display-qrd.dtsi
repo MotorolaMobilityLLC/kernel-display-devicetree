@@ -132,3 +132,10 @@
 &sde_dsi {
 	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_144hz_cmd>;
 };
+
+&qupv3_se4_spi {
+	goodix-berlin@0 {
+		panel = <&dsi_vtdr6130_amoled_144hz_cmd
+			 &dsi_vtdr6130_amoled_144hz_video>;
+	};
+};
