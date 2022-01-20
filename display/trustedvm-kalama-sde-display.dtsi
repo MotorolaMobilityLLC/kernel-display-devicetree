@@ -22,9 +22,3 @@
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec>;
 };
 
-&dsi_sw43404_amoled_cmd {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <1>;
-	qcom,mdss-dsi-bl-max-level = <1023>;
-	qcom,mdss-brightness-max-level = <255>;
-};
