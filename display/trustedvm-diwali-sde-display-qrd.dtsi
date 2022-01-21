@@ -2,7 +2,7 @@
 
 &dsi_r66451_amoled_video_cphy {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-min-level = <150>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -29,7 +29,7 @@
 
 &dsi_r66451_amoled_144hz_video_cphy {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-min-level = <150>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -47,7 +47,7 @@
 
 &dsi_r66451_amoled_120hz_video_cphy {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-min-level = <150>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
