@@ -2,20 +2,6 @@
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
 
 &soc {
-	display_panel_avdd: display_gpio_regulator@1 {
-		compatible = "qti-regulator-fixed";
-		regulator-name = "display_panel_avdd";
-		regulator-min-microvolt = <5500000>;
-		regulator-max-microvolt = <5500000>;
-		regulator-enable-ramp-delay = <233>;
-		gpio = <&tlmm 64 0>;
-		enable-active-high;
-		regulator-boot-on;
-		proxy-supply = <&display_panel_avdd>;
-		qcom,proxy-consumer-enable;
-		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_avdd_default>;
-	};
 
 	display_panel_avee: display_gpio_regulator@2 {
 		status = "disabled";
@@ -120,7 +106,7 @@
 	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
 	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
 
-	qcom,platform-te-gpio = <&tlmm 87 0>;
+	//qcom,platform-te-gpio = <&tlmm 87 0>;
 	qcom,panel-te-source = <1>;
 
 	vddio-supply = <&L12C>;
@@ -159,9 +145,6 @@
 	qcom,ulps-enabled;
 };
 
-&dsi_r66451_amoled_sync_cmd {
-	qcom,ulps-enabled;
-};
 
 &dsi_r66451_amoled_144hz_cmd_cphy {
 	qcom,ulps-enabled;
