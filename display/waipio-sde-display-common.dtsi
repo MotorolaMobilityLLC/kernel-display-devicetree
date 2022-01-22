@@ -254,7 +254,7 @@
 		pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
 		pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
 
-		qcom,platform-te-gpio = <&tlmm 87 0>;
+		//qcom,platform-te-gpio = <&tlmm 87 0>;
 		qcom,panel-te-source = <1>;
 
 		qcom,mdp = <&mdss_mdp>;
@@ -521,20 +521,11 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x1c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	qcom,esd-check-enabled;
+	//qcom,esd-check-enabled;
 
 	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [00 13 04 04 13 1e 05
-				05 04 02 04 00 10 0a];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
-		};
-
-		timing@1 {
-			qcom,mdss-dsi-panel-phy-timings = [00 13 04 04 13 1e 05
-				05 04 02 04 00 10 0a];
-			qcom,display-topology = <1 1 1>;
+		timing@0{
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};

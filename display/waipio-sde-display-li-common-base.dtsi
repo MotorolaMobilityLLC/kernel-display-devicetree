@@ -10,6 +10,7 @@
 #include "dsi-panel-mot-csot-ili7838A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-tianma-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
+#include "dsi-panel-r66451-dsc-fhd-plus-sync-cmd.dtsi"
 
 &soc {
 
@@ -56,15 +57,70 @@
         };
 	};
 
+	dsi_panel_pwr_supply_sec: dsi_panel_pwr_supply_sec {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+	qcom,panel-supply-entry@0 {
+		reg = <0>;
+		qcom,supply-name = "vddio";
+		qcom,supply-min-voltage = <1800000>;
+		qcom,supply-max-voltage = <1800000>;
+		qcom,supply-enable-load = <300000>;
+		qcom,supply-disable-load = <100>;
+		qcom,supply-pre-on-sleep = <0>;
+		qcom,supply-post-on-sleep = <1>;
+		qcom,supply-pre-off-sleep = <3>;
+		qcom,supply-post-off-sleep = <0>;
+        };
+
+        qcom,panel-supply-entry@1 {
+		reg = <2>;
+		qcom,supply-name = "vci";
+		qcom,supply-min-voltage = <3000000>;
+		qcom,supply-max-voltage = <3000000>;
+		qcom,supply-enable-load = <300000>;
+		qcom,supply-disable-load = <0>;
+		qcom,supply-pre-on-sleep = <0>;
+		qcom,supply-post-on-sleep = <0>;
+		qcom,supply-pre-off-sleep = <2>;
+		qcom,supply-post-off-sleep = <0>;
+        };
+	};
 	sde_dsi: qcom,dsi-display-primary {
 		compatible = "qcom,dsi-display";
 		label = "primary";
 
-		qcom,dsi-ctrl = <&mdss_dsi0>;
-		qcom,dsi-phy = <&mdss_dsi_phy0>;
+		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
+		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
+
+		pinctrl-names = "panel_active", "panel_suspend";
+		pinctrl-0 = <&sde_dsi_active &sde_te_active>;
+		pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
+
+		qcom,platform-te-gpio = <&tlmm 86 0>;
+		qcom,panel-te-source = <0>;
 
 		qcom,mdp = <&mdss_mdp>;
 		qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
+	};
+
+	sde_dsi1: qcom,dsi-display-secondary {
+		compatible = "qcom,dsi-display";
+		label = "secondary";
+
+		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
+		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
+
+		pinctrl-names = "panel_active", "panel_suspend";
+		pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+		pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
+
+		qcom,platform-te-gpio = <&tlmm 124 0>;
+		qcom,panel-te-source = <1>;
+
+		qcom,mdp = <&mdss_mdp>;
+		qcom,dsi-default-panel = <&dsi_r66451_amoled_sync_cmd>;
 	};
 };
 
@@ -108,7 +164,8 @@
 &sde_dsi {
 	clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
-
+			<&mdss_dsi_phy1 2>,
+			<&mdss_dsi_phy1 3>,
 			 /*
 			  * Currently the dsi clock handles are under the dsi
 			  * controller DT node. As soon as the controller probe
@@ -125,6 +182,7 @@
 			  */
 			 <&clock_dispcc DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
 	pinctrl-names = "panel_active", "panel_suspend";
@@ -139,6 +197,41 @@
 	vci-supply = <&L13C>;
 };
 
+&sde_dsi1 {
+	clocks = <&mdss_dsi_phy0 0>,
+			<&mdss_dsi_phy0 1>,
+			<&mdss_dsi_phy1 2>,
+			<&mdss_dsi_phy1 3>,
+			 /*
+			  * Currently the dsi clock handles are under the dsi
+			  * controller DT node. As soon as the controller probe
+			  * finishes, the dispcc sync state can get called before
+			  * the dsi_display probe potentially disturbing the clock
+			  * votes for cont_splash use case. Hence we are no longer
+			  * protected by the component model in this case against the
+			  * disp cc sync state getting triggered after the dsi_ctrl
+			  * probe. To protect against this incorrect sync state trigger
+			  * add this dummy MDP clk vote handle to the dsi_display
+			  * DT node. Since the dsi_display driver does not parse
+			  * MDP clock nodes, no actual vote shall be added and this
+			  * change is done just to satisfy sync state requirements.
+			  */
+			 <&clock_dispcc DISP_CC_MDSS_MDP_CLK>;
+	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
+			"pll_byte_clk1", "pll_dsi_clk1",
+			"mdp_core_clk";
+
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
+
+	qcom,platform-te-gpio = <&tlmm 124 0>;
+	qcom,panel-te-source = <1>;
+
+	vddio-supply = <&L12C>;
+	vci-supply = <&L13C>;
+};
+
 &L1D {
 	regulator-min-microvolt = <1200000>;
 	regulator-max-microvolt = <1200000>;
@@ -146,8 +239,42 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 	delete-cooling-cells;
+};
+
+
+&dsi_r66451_amoled_sync_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_sec>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,platform-sec-reset-gpio = <&tlmm 123 0>;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x1c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	//qcom,esd-check-enabled;
+
+
+        qcom,mdss-dsi-no-panel-on-read-support;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0{
+			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
 };
 
 &mot_csot_nt37701A_667_1080x2400_dsc_cmd {
@@ -178,7 +305,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	qcom,esd-check-enabled;
+	//qcom,esd-check-enabled;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
