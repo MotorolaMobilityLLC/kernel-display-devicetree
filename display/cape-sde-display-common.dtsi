@@ -189,7 +189,7 @@
 		pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
 		pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
 
-		qcom,platform-te-gpio = <&tlmm 87 0>;
+		//qcom,platform-te-gpio = <&tlmm 87 0>;
 		qcom,panel-te-source = <1>;
 
 		qcom,mdp = <&mdss_mdp>;
