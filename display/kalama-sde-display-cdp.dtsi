@@ -150,3 +150,8 @@
 	qcom,avdd-regulator-gpio = <&pm8550_gpios 11 0>;
 	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_144hz_cmd>;
 };
+
+&qupv3_se4_spi {
+	panel = <&dsi_vtdr6130_amoled_144hz_cmd
+		&dsi_vtdr6130_amoled_144hz_video>;
+};
