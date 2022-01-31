@@ -4,6 +4,6 @@
 #include "kalama-sde.dtsi"
 
 / {
-	qcom,msm-id = <519 0x10000>;
+	qcom,msm-id = <519 0x10000>, <536 0x10000>;
 	qcom,board-id = <0 0>;
 };

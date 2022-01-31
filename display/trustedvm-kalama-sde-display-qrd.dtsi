@@ -1,30 +1,21 @@
 #include "trustedvm-kalama-sde-display.dtsi"
 
-&dsi_r66451_amoled_cmd {
+&dsi_vtdr6130_amoled_144hz_cmd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <255>;
+	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
 };
 
-&dsi_r66451_amoled_video {
+&dsi_vtdr6130_amoled_144hz_video {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <255>;
+	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
-};
-
-&dsi_r66451_amoled_144hz_cmd {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <1>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <255>;
-	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
 };
 
 &dsi_sharp_4k_dsc_cmd {
@@ -35,13 +26,6 @@
 };
 
 &dsi_sharp_4k_dsc_video {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
-	qcom,mdss-dsi-bl-min-level = <1>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
-};
-
-&dsi_sharp_1080_cmd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -69,26 +53,6 @@
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
-&dsi_nt35695b_truly_fhd_cmd {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
-};
-
-&dsi_sim_dsc_375_cmd {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
-};
-
-&dsi_sim_vdc_cmd {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
-};
-
-&dsi_sim_vdc_vid {
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
-};
-
 &dsi_dual_sim_dsc_375_cmd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
@@ -112,5 +76,5 @@
 };
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&dsi_r66451_amoled_144hz_cmd_cphy>;
+	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_144hz_cmd>;
 };

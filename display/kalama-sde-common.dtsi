@@ -55,6 +55,11 @@
 		qcom,sde-dnsc-blur-dither-off = <0x5E0>;
 		qcom,sde-dnsc-blur-dither-size = <0x20>;
 
+		qcom,sde-dest-scaler-top-off = <0x00061000>;
+		qcom,sde-dest-scaler-top-size = <0x1c>;
+		qcom,sde-dest-scaler-off = <0x0 0x1000>;
+		qcom,sde-dest-scaler-size = <0x800>;
+
 		qcom,sde-wb-off = <0x65000 0x66000>;
 		qcom,sde-wb-size = <0x2c8>;
 		qcom,sde-wb-xin-id = <0xa 6>;
@@ -294,7 +299,7 @@
 			qcom,sde-dspp-hsic = <0x800 0x00010007>;
 			qcom,sde-dspp-memcolor = <0x880 0x00010007>;
 			qcom,sde-dspp-hist = <0x800 0x00010007>;
-			qcom,sde-dspp-sixzone = <0x900 0x00010007>;
+			qcom,sde-dspp-sixzone = <0x900 0x00020000>;
 			qcom,sde-dspp-vlut = <0xa00 0x00010008>;
 			qcom,sde-dspp-gamut = <0x1000 0x00040003>;
 			qcom,sde-dspp-pcc = <0x1700 0x00040000>;
