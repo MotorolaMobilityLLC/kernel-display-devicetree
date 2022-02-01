@@ -92,3 +92,23 @@
 &mdss_mdp {
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_rscc &sde_dp>;
 };
+
+&dsi_r66451_amoled_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_cmd_cphy {
+        qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_120hz_cmd_cphy {
+        qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_144hz_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_r66451_amoled_144hz_cmd_cphy {
+        qcom,ulps-enabled;
+};
