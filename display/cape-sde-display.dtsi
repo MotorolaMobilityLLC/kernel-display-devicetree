@@ -112,3 +112,11 @@
 &dsi_r66451_amoled_144hz_cmd_cphy {
         qcom,ulps-enabled;
 };
+
+&dsi_sim_dsc_375_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_sim_dsc_10b_cmd {
+	qcom,ulps-enabled;
+};
