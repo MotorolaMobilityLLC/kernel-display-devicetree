@@ -19,7 +19,9 @@ ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-atp-overlay.dtbo \
 		display/cape-sde-display-cdp-overlay.dtbo \
+		display/cape-sde-display-cdp-qhd-overlay.dtbo \
 		display/cape-sde-display-mtp-overlay.dtbo \
+		display/cape-sde-display-mtp-120fps-overlay.dtbo \
 		display/cape-sde-display-qrd-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-cdp-overlay.dtbo \
