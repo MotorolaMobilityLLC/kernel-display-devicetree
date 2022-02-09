@@ -15,7 +15,6 @@
 	};
 
 	qcom_msmhdcp: qcom,msm_hdcp {
-		status = "disabled";
 		compatible = "qcom,msm-hdcp";
 	};
 
