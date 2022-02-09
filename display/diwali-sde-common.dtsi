@@ -161,6 +161,7 @@
 		qcom,sde-min-dram-ib-kbps = <800000>;
 		qcom,sde-dram-channels = <2>;
 		qcom,sde-num-nrt-paths = <0>;
+		qcom,sde-num-ddr-channels = <2>;
 
 		qcom,sde-dspp-spr-off = <0x15400 0x14400>;
 		qcom,sde-dspp-spr-size = <0x200>;
