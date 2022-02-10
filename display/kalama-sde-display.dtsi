@@ -4,17 +4,13 @@
 
 &pm8550_gpios {
 	display_panel_avdd_default: display_panel_avdd_default {
-		mux {
-			pins = "gpio11";
-			function = "gpio";
-		};
-
-		config {
-			pins = "gpio11";
-			drive-strength = <8>;
-			bias-disable = <0>;
-			output-high;
-		};
+		pins = "gpio11";
+		function = "normal";
+		input-disable;
+		output-enable;
+		bias-disable;
+		power-source = <1>;
+		qcom,drive-strength = <3>;
 	};
 };
 
