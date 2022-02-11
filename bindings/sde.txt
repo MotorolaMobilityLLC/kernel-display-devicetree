@@ -144,7 +144,7 @@ Optional properties:
 				bank bit used for tile format buffers. First value
 				in the array represents the ddr type and the second
 				value is the hbb value corresponding to the ddr type.
-- qcom,sde-ubwc-version:	Property to specify the UBWC feature version.
+- qcom,sde-ubwc-version:	Property to specify the UBWC feature version. A u32 UBWC version is based on MDSS support.
 - qcom,sde-ubwc-static:	Property to specify the default UBWC static
 				configuration value.
 - qcom,sde-ubwc-bw-calc-version:	A u32 property to specify version of UBWC bandwidth
@@ -740,7 +740,7 @@ Example:
     qcom,sde-mixer-blendstages = <0x7>;
     qcom,sde-dsc-linewidth = <2048>;
     qcom,sde-highest-bank-bit = <0x7 0x2>;
-    qcom,sde-ubwc-version = <0x100>;
+    qcom,sde-ubwc-version = <0x10000000>;
     qcom,sde-ubwc-static = <0x100>;
     qcom,sde-ubwc-swizzle = <0>;
     qcom,sde-ubwc-bw-calc-version = <0x1>;
