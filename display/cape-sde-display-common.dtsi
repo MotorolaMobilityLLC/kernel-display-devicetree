@@ -15,6 +15,7 @@
 #include "dsi-panel-sim-dualmipi-video.dtsi"
 #include "dsi-panel-sim-dsc-10bit-cmd.dtsi"
 #include "dsi-panel-sim-dsc375-cmd.dtsi"
+#include "dsi-panel-sim-fhd-plus-120hz-video-cphy.dtsi"
 
 #include "cape-sde-display-pinctrl.dtsi"
 
@@ -303,6 +304,18 @@
 	};
 };
 
+&dsi_sim_fhd_plus_120hz_video_cphy {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 00 00 00 20 1b 05
+				19 06 02 04 00 00 00];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
 
 &dsi_r66451_amoled_cmd_cphy {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
