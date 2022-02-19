@@ -23,7 +23,7 @@
 &dsi_r66451_amoled_144hz_video_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_extvdd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-min-level = <150>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -33,7 +33,7 @@
 &dsi_r66451_amoled_video_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_extvdd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-min-level = <150>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -53,7 +53,7 @@
 &dsi_r66451_amoled_120hz_video_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_extvdd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-min-level = <150>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -95,5 +95,18 @@
 			&dsi_r66451_amoled_video_cphy
 			&dsi_r66451_amoled_120hz_cmd_cphy
 			&dsi_r66451_amoled_120hz_video_cphy>;
+	};
+};
+
+&spmi_bus {
+	qcom,pm8350b@3 {
+		qcom,amoled-ecm@f900 {
+			display-panels = <&dsi_r66451_amoled_cmd_cphy
+					&dsi_r66451_amoled_144hz_cmd_cphy
+					&dsi_r66451_amoled_144hz_video_cphy
+					&dsi_r66451_amoled_video_cphy
+					&dsi_r66451_amoled_120hz_cmd_cphy
+					&dsi_r66451_amoled_120hz_video_cphy>;
+		};
 	};
 };
