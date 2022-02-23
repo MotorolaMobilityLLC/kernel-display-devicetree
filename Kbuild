@@ -43,6 +43,8 @@ dtbo-$(CONFIG_ARCH_WAIPIO) += display/trustedvm-waipio-sde-display-mtp-overlay.d
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+#remove useless qcom device tree in moto build
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-atp-overlay.dtbo \
 		display/cape-sde-display-cdp-overlay.dtbo \
@@ -51,6 +53,12 @@ dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-mtp-120fps-overlay.dtbo \
 		display/cape-sde-display-mtp-nodisplay-overlay.dtbo \
 		display/cape-sde-display-qrd-overlay.dtbo
+else
+ifeq ($(CONFIG_ONELI_DTB),y)
+dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
+		display/cape-sde-display-oneli-evt1-overlay.dtbo
+endif  #($CONFIG_ONELI_DTB,y)
+endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-qrd-overlay.dtbo
 endif
