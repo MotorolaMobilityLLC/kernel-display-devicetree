@@ -453,6 +453,8 @@
 &dsi_r66451_amoled_120hz_cmd_cphy {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
+	qcom,dsi-dyn-clk-enable;
+
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
@@ -466,6 +468,7 @@
 					19 02 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <394760128 393115296 393937712>;
 		};
 
 		timing@1 {
@@ -473,6 +476,7 @@
 					19 03 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <293887076 292254368 293070722>;
 		};
 
 		timing@2 {
@@ -480,6 +484,7 @@
 					19 06 02 04 00 00 00];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <193300506 192495086 192897796>;
 		};
 	};
 };
