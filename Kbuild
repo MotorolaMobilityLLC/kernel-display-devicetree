@@ -59,6 +59,10 @@ ifeq ($(CONFIG_ONELI_DTB),y)
 dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-oneli-evt1-overlay.dtbo
 endif  #($CONFIG_ONELI_DTB,y)
+ifeq ($(CONFIG_EQS_DTB),y)
+dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
+		display/cape-sde-display-eqs-evt1-overlay.dtbo
+endif  #($CONFIG_EQS_DTB,y)
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-qrd-overlay.dtbo \
