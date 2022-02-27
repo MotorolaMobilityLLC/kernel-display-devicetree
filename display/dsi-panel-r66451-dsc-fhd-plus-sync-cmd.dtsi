@@ -11,9 +11,6 @@
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
 
-		qcom,dsi-ctrl-num = <0>;
-		qcom,dsi-phy-num = <0>;
-
 		qcom,dsi-sec-ctrl-num = <1>;
 		qcom,dsi-sec-phy-num = <1>;
 
