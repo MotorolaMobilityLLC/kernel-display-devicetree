@@ -4,17 +4,13 @@
 
 &pm8550_gpios {
 	display_panel_avdd_default: display_panel_avdd_default {
-		mux {
-			pins = "gpio11";
-			function = "gpio";
-		};
-
-		config {
-			pins = "gpio11";
-			drive-strength = <8>;
-			bias-disable = <0>;
-			output-high;
-		};
+		pins = "gpio11";
+		function = "normal";
+		input-disable;
+		output-enable;
+		bias-disable;
+		power-source = <1>;
+		qcom,drive-strength = <3>;
 	};
 };
 
@@ -71,6 +67,7 @@
 		      "mdp_core_clk";
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
+	vdd-supply = <&L11B>;
 };
 
 &sde_dsi1 {
@@ -98,6 +95,7 @@
 		      "mdp_core_clk";
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
+	vdd-supply = <&L11B>;
 
 };
 
@@ -105,7 +103,7 @@
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2>;
 };
 
-&dsi_vtdr6130_amoled_144hz_cmd {
+&dsi_vtdr6130_amoled_cmd {
 	qcom,ulps-enabled;
 };
 
