@@ -60,7 +60,7 @@ qcom,mdss-dsi-panel-blackness-level = <3230>;
 qcom,mdss-dsi-hbm-on-command = [
 		39 00 00 00 00 00 03 51 0F FF];
 qcom,mdss-dsi-hbm-off-command = [
-		39 00 00 00 00 00 03 51 07 FF];
+		39 00 00 00 00 00 03 51 0D BB];
 
 //qcom,mdss-dsi-acl-on-command = [
 //		39 01 00 00 00 00 06 F0 55 AA 52 08 00
