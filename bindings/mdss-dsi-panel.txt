@@ -169,6 +169,10 @@ Optional properties:
 					followed by denominator. The jitter configurition causes
 					the early wakeup if panel needs to adjust before vsync.
 					Default jitter value is 2.0%. Max allowed value is 10%.
+- qcom,dsi-wd-jitter-enable:		Boolean used to enable watchdog jitter in simulator panels
+- qcom,dsi-wd-ltj-max-jitter:		A u32 pair with numerator and denominator specifying the
+					maximum jitter over a long time.
+- qcom,dsi-wd-ltj-time-sec:		A u32 value to specify the time over which the jitter increases.
 - qcom,mdss-dsi-panel-prefill-lines:	An integer value defines the panel prefill lines required to
 					calculate the backoff time of rsc.
 					Default value is 16 lines. Max allowed value is vtotal.
@@ -865,6 +869,10 @@ Example:
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-clockrate = <424000000>;
 				qcom,mdss-mdp-transfer-time-us = <12500>;
+				qcom,dsi-wd-jitter-enable;
+				qcom,mdss-dsi-panel-jitter = <0x2 0x1>;
+				qcom,dsi-wd-ltj-max-jitter = <0x4 0x1>;
+				qcom,dsi-wd-ltj-time-sec = <3600>;
 				qcom,mdss-dsi-panel-timings = [E6 38 26 00 68 6E 2A 3C 2C 03 04 00];
 				qcom,mdss-dsi-t-clk-post = <0x02>;
 				qcom,mdss-dsi-t-clk-pre = <0x2a>;
