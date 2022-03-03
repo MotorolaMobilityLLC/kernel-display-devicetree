@@ -15,13 +15,13 @@
 	};
 
 	sde_dp: qcom,dp_display@ae90000 {
-		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
 		usb-phy = <&usb_qmp_dp_phy>;
+		qcom,dp-aux-switch = <&fsa4480>;
 		qcom,ext-disp = <&ext_disp>;
-		qcom,dp-hpd-gpio = <&tlmm 47 0>;
+		qcom,altmode-dev = <&altmode 0>;
 		usb-controller = <&usb0>;
 
 		reg =   <0xae90000 0x0fc>,
