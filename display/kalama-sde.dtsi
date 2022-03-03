@@ -3,6 +3,7 @@
 #include <dt-bindings/clock/qcom,gcc-kalama.h>
 #include <dt-bindings/interconnect/qcom,kalama.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
+#include <dt-bindings/clock/qcom,tcsrcc-kalama.h>
 #include "kalama-sde-common.dtsi"
 
 &soc {
@@ -48,6 +49,7 @@
 		#clock-cells = <1>;
 		clocks =  <&dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
 			<&rpmhcc RPMH_CXO_CLK>,
+			<&tcsrcc TCSR_USB3_CLKREF_EN>,
 			<&gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK_SRC>,
@@ -57,7 +59,7 @@
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
-		clock-names = "core_aux_clk", "rpmh_cxo_clk",
+		clock-names = "core_aux_clk", "rpmh_cxo_clk", "core_usb_ref_clk_src",
 			"core_usb_pipe_clk", "link_clk", "link_clk_src", "link_iface_clk",
 			"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 			"strm0_pixel_clk", "strm1_pixel_clk";
