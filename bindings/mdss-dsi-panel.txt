@@ -206,6 +206,15 @@ Optional properties:
 					interval. The step rate must be a common multiple of refresh and min-fps rates.
 					The values in this list should correspond to the dfps-list with same indeces
 					when DFPS is used, or a single value which applies to all rates.
+- qcom,mdss-dsi-transfer-time-us-min	Minimum supported mdp transfer time in us. This entry enables support to
+					dynamically set the transfer time for the given mode within the defined
+					range. Both min & max must be defined to enable.
+					qcom,mdss-dsi-transfer-time-us must be greater than this value.
+- qcom,mdss-dsi-transfer-time-us-max	Maximum supported mdp transfer time in us. This entry enables support to
+					dynamically set the transfer time for the given mode within the defined
+					range. Both min & max must be defined to enable. This time should not be
+					greater than vsync duration.
+					qcom,mdss-dsi-transfer-time-us must be less than this value.
 - qcom,min-refresh-rate:		Minimum refresh rate supported by the panel.
 - qcom,max-refresh-rate:		Maximum refresh rate supported by the panel. If max refresh
 					rate is not specified, then the frame rate of the panel in
@@ -873,6 +882,8 @@ Example:
 				qcom,mdss-dsi-panel-jitter = <0x2 0x1>;
 				qcom,dsi-wd-ltj-max-jitter = <0x4 0x1>;
 				qcom,dsi-wd-ltj-time-sec = <3600>;
+				qcom,mdss-mdp-transfer-time-us-min = <10000>;
+				qcom,mdss-mdp-transfer-time-us-max = <15000>;
 				qcom,mdss-dsi-panel-timings = [E6 38 26 00 68 6E 2A 3C 2C 03 04 00];
 				qcom,mdss-dsi-t-clk-post = <0x02>;
 				qcom,mdss-dsi-t-clk-pre = <0x2a>;
