@@ -624,14 +624,10 @@
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@6 { /* FHD+ 240 FPS cmd mode*/
-			qcom,mdss-dsi-panel-phy-timings = [00 6d 1d 1e 2e 27 1c
-				1e 18 02 04 00 53 21];
-			qcom,display-topology = <2 2 1>;
-			qcom,default-topology-index = <0>;
-		};
+		/delete-node/ timing@6; /* FHD+ 240 FPS cmd mode*/
 
 		timing@7 { /* FHD+ 120FPS cmd mode*/
+			cell-index = <6>;
 			qcom,mdss-dsi-panel-phy-timings = [00 3b 0f 0f 18 15 0f
 				0f 0d 02 04 00 2d 12];
 			qcom,display-topology = <1 1 1>,
