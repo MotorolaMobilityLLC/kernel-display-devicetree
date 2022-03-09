@@ -1,4 +1,3 @@
-#include <dt-bindings/clock/mdss-5nm-pll-clk.h>
 #include <dt-bindings/clock/qcom,gcc-waipio.h>
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
 #include "waipio-sde-common.dtsi"
