@@ -1,6 +1,7 @@
 #include "dsi-panel-sharp-dsc-4k-cmd.dtsi"
 #include "dsi-panel-sharp-dsc-4k-video.dtsi"
 #include "dsi-panel-sharp-dsc-qhd-plus-cmd.dtsi"
+#include "dsi-panel-sharp-dsc-qhd-plus-video.dtsi"
 #include "dsi-panel-sharp-qsync-wqhd-cmd.dtsi"
 #include "dsi-panel-sharp-qsync-wqhd-video.dtsi"
 #include "dsi-panel-sharp-1080p-cmd.dtsi"
@@ -371,6 +372,18 @@
 		timing@1 { /* 60 FPS*/
 			qcom,mdss-dsi-panel-phy-timings = [00 10 03 03 11 1e 04
 				04 03 02 04 00 03 09];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sharp_qhd_plus_dsc_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+		timing@0 { /* 120 FPS */
+			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 21 07
+				07 07 02 04 00 17 0c];
 			qcom,display-topology = <2 2 2>;
 			qcom,default-topology-index = <0>;
 		};
