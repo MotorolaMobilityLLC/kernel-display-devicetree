@@ -100,7 +100,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc &sde_dp>;
 };
 
 &dsi_vtdr6130_amoled_cmd {

@@ -16,13 +16,13 @@
 	};
 
 	sde_dp: qcom,dp_display@ae90000 {
-		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
 		usb-phy = <&usb_qmp_dp_phy>;
+		qcom,dp-aux-switch = <&fsa4480>;
 		qcom,ext-disp = <&ext_disp>;
-		qcom,dp-hpd-gpio = <&tlmm 47 0>;
+		qcom,altmode-dev = <&altmode 0>;
 		usb-controller = <&usb0>;
 
 		reg =   <0xae90000 0x0fc>,
@@ -145,6 +145,28 @@
 		};
 	};
 
+	sde_rscc: qcom,sde_rscc@af20000 {
+		cell-index = <0>;
+		compatible = "qcom,sde-rsc";
+		reg = <0xaf20000 0x4d68>,
+			<0xaf30000 0x3fd4>;
+		reg-names = "drv", "wrapper";
+		qcom,sde-rsc-version = <5>;
+
+		qcom,sde-dram-channels = <2>;
+
+		vdd-supply = <&disp_cc_mdss_core_gdsc>;
+		clocks = <&dispcc DISP_CC_MDSS_RSCC_VSYNC_CLK>,
+			<&dispcc DISP_CC_MDSS_NON_GDSC_AHB_CLK>,
+			<&dispcc DISP_CC_MDSS_RSCC_AHB_CLK>;
+		clock-names = "vsync_clk", "gdsc_clk", "iface_clk";
+
+		qcom,msm-bus,active-only;
+		interconnects =
+			<&mmss_noc MASTER_MDP_DISP &mc_virt SLAVE_EBI1_DISP>;
+		interconnect-names = "qcom,sde-data-bus0";
+	};
+
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
 		iommus = <&apps_smmu 0x1c00 0x2>;
@@ -179,7 +201,6 @@
 	clock-max-rate = <0 0 0 514000000 514000000 19200000 514000000>;
 
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
-	vdd-supply = <&disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
@@ -206,18 +227,17 @@
 			qcom,supply-max-voltage = <0>;
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
-			};
-		qcom,platform-supply-entry@1 {
-			reg = <1>;
-			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <0>;
-			qcom,supply-max-voltage = <0>;
-			qcom,supply-enable-load = <0>;
-			qcom,supply-disable-load = <0>;
-			};
-
+		};
 	};
 };
+
+&disp_rsc_drv0 {
+	sde_rsc_rpmh {
+		compatible = "qcom,sde-rsc-rpmh";
+		cell-index = <0>;
+	};
+};
+
 &mdss_dsi0 {
 	vdda-1p2-supply = <&L3E>;
 	qcom,split-link-supported;
