@@ -722,17 +722,11 @@
 };
 
 &qupv3_se4_i2c {
-	st_fts@49 {
-		panel = <&mot_csot_nt37701_667_1080x2400_dsc_cmd
-			&mot_csot_nt37701_667_1080x2400_camera_cmd>;
-	};
-
 	goodix_ts_i2c@5d {
-		panel = <&mot_csot_ili7838A_667_1080x2400_dsc_cmd
+		panel = <&mot_csot_nt37701A_667_curve_1080x2400_dsc_cmd
+			&mot_csot_ili7838A_667_1080x2400_dsc_cmd
 			&mot_tianma_nt37701A_667_1080x2400_dsc_cmd
-			&mot_tianma_nt37701A_667_1080x2400_dsc_cmd_v1
-			&mot_csot_nt37701_667_1080x2400_camera_gdx_cmd
-			&mot_csot_nt37701_667_1080x2400_camera_gdx_cmd_v1>;
+			&mot_tianma_nt37701A_667_1080x2400_dsc_cmd_v1>;
 	};
 };
 
