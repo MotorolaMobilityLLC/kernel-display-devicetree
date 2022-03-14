@@ -10,7 +10,7 @@
 #include "dsi-panel-mot-csot-ili7838A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-tianma-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
-#include "dsi-panel-r66451-dsc-fhd-plus-sync-cmd.dtsi"
+#include "dsi-panel-mot-boe-269-800x600-cmd-common.dtsi"
 
 &soc {
 
@@ -120,7 +120,7 @@
 		qcom,panel-te-source = <1>;
 
 		qcom,mdp = <&mdss_mdp>;
-		qcom,dsi-default-panel = <&dsi_r66451_amoled_sync_cmd>;
+		qcom,dsi-default-panel = <&mot_boe_269_800x600_cmd>;
 	};
 };
 
@@ -244,7 +244,7 @@
 };
 
 
-&dsi_r66451_amoled_sync_cmd {
+&mot_boe_269_800x600_cmd {
 	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
@@ -581,7 +581,7 @@
 
 &qupv3_se13_i2c {
 	tsc@24 {
-		panel = <&dsi_r66451_amoled_sync_cmd>;
+		panel = <&mot_boe_269_800x600_cmd>;
 	};
 };
 
