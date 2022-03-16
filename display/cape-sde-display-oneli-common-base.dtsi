@@ -12,7 +12,128 @@
 #include "dsi-panel-mot-csot-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-boe-269-800x600-cmd-common.dtsi"
 
+&tlmm {
+	vio_en_m {
+		vio_en_m_default: vio_en_m_default {
+			mux {
+				pins = "gpio106";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio106";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-high;
+			};
+		};
+	};
+	vci_en_m {
+		vci_en_m_default: vci_en_m_default {
+			mux {
+				pins = "gpio107";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio107";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
+	vio_en_s {
+		vio_en_s_default: vio_en_s_default {
+			mux {
+				pins = "gpio127";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio127";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-high;
+			};
+		};
+	};
+	vci_en_s {
+		vci_en_s_default: vci_en_s_default {
+			mux {
+				pins = "gpio128";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio128";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
+};
+
 &soc {
+	vci_disp_m_vreg:  vci_disp_m_vreg{
+		compatible = "regulator-fixed";
+		regulator-name = "vci_disp_m_supply";
+		regulator-min-microvolt = <3000000>;
+		regulator-max-microvolt = <3000000>;
+		enable-active-high;
+		regulator-boot-on;
+
+		gpio = <&tlmm 107 0>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&vci_en_m_default>;
+		vin-supply = <&L13C>;
+	};
+
+	vio_disp_m_vreg: vio_disp_m_vreg{
+		compatible = "regulator-fixed";
+		regulator-name = "vio_disp_m_vreg";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		regulator-enable-ramp-delay = <233>;
+		enable-active-high;
+		regulator-boot-on;
+
+		gpio = <&tlmm 106 0>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&vio_en_m_default>;
+		vin-supply = <&L12C>;
+	};
+
+	vci_disp_s_vreg:  vci_disp_s_vreg{
+		compatible = "regulator-fixed";
+		regulator-name = "vci_disp_s_supply";
+		regulator-min-microvolt = <3000000>;
+		regulator-max-microvolt = <3000000>;
+		enable-active-high;
+		regulator-boot-on;
+
+		gpio = <&tlmm 128 0>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&vci_en_s_default>;
+		vin-supply = <&L3C>;
+	};
+
+	vio_disp_s_vreg: vio_disp_s_vreg{
+		compatible = "regulator-fixed";
+		regulator-name = "vio_disp_s_vreg";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		regulator-enable-ramp-delay = <233>;
+		enable-active-high;
+		regulator-boot-on;
+
+		gpio = <&tlmm 127 0>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&vio_en_s_default>;
+		vin-supply = <&L2C>;
+	};
+
 
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
 		#address-cells = <1>;
@@ -186,9 +307,9 @@
 	qcom,platform-te-gpio = <&tlmm 86 0>;
 	qcom,panel-te-source = <0>;
 
-	vddio-supply = <&L12C>;
+	vddio-supply = <&vio_disp_m_vreg>;
 	ddic-supply = <&L1D>;
-	vci-supply = <&L13C>;
+	vci-supply = <&vci_disp_m_vreg>;
 };
 
 &sde_dsi1 {
@@ -222,8 +343,8 @@
 	qcom,platform-te-gpio = <&tlmm 124 0>;
 	qcom,panel-te-source = <1>;
 
-	vddio-supply = <&L12C>;
-	vci-supply = <&L13C>;
+	vddio-supply = <&vio_disp_s_vreg>;
+	vci-supply = <&vci_disp_s_vreg>;
 };
 
 &L1D {
