@@ -94,6 +94,7 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
+	touch_avdd-supply = <&L3C>;
 	vddio-supply = <&L12C>;
 	vci-supply = <&L13C>;
 	ibb-supply = <&display_panel_ibb>;
@@ -123,6 +124,7 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
+	touch_avdd-supply = <&L3C>;
 	vddio-supply = <&L12C>;
 	vci-supply = <&L13C>;
 	ibb-supply = <&display_panel_ibb>;
