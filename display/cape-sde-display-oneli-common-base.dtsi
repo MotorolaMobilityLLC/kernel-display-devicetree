@@ -237,7 +237,7 @@
 		pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
 		pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
 
-		qcom,platform-te-gpio = <&tlmm 124 0>;
+		qcom,platform-te-gpio = <&tlmm 87 0>;
 		qcom,panel-te-source = <1>;
 
 		qcom,mdp = <&mdss_mdp>;
@@ -300,13 +300,6 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
-	pinctrl-names = "panel_active", "panel_suspend";
-	pinctrl-0 = <&sde_dsi_active &sde_te_active>;
-	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
-
-	qcom,platform-te-gpio = <&tlmm 86 0>;
-	qcom,panel-te-source = <0>;
-
 	vddio-supply = <&vio_disp_m_vreg>;
 	ddic-supply = <&L1D>;
 	vci-supply = <&vci_disp_m_vreg>;
@@ -335,13 +328,6 @@
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
-
-	pinctrl-names = "panel_active", "panel_suspend";
-	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
-	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
-
-	qcom,platform-te-gpio = <&tlmm 124 0>;
-	qcom,panel-te-source = <1>;
 
 	vddio-supply = <&vio_disp_s_vreg>;
 	vci-supply = <&vci_disp_s_vreg>;
@@ -378,9 +364,7 @@
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
 
-	qcom,mdss-dsi-te-using-wd;
-
-        qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-no-panel-on-read-support;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{
