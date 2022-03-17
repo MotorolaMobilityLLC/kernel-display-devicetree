@@ -183,6 +183,7 @@
 &dsi_sim_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
 &dsi_sim_dsc_375_cmd {
@@ -204,6 +205,7 @@
 &dsi_dual_sim_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
 &dsi_sim_vdc_cmd {
@@ -214,6 +216,7 @@
 &dsi_sim_vdc_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
 &dsi_dual_sim_dsc_375_cmd {
