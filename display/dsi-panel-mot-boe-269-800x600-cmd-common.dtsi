@@ -6,6 +6,8 @@
 		qcom,mdss-dsi-panel-physical-type = "oled";
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
+		qcom,mdss-pan-physical-width-dimension = <55>;
+		qcom,mdss-pan-physical-height-dimension = <41>;
 		qcom,mdss-dsi-bpp = <24>;
 		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
 		qcom,mdss-dsi-underflow-color = <0xff>;
@@ -14,21 +16,30 @@
 		qcom,dsi-sec-ctrl-num = <1>;
 		qcom,dsi-sec-phy-num = <1>;
 
-		qcom,mdss-dsi-traffic-mode = "non_burst_sync_event";
-		qcom,mdss-dsi-lane-map = "lane_map_0123";
+		qcom,mdss-dsi-traffic-mode = "burst_mode";
 		qcom,mdss-dsi-bllp-eof-power-mode;
 		qcom,mdss-dsi-bllp-power-mode;
 		qcom,mdss-dsi-lane-0-state;
 		qcom,mdss-dsi-lane-1-state;
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
-		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 35>;
+		qcom,mdss-dsi-reset-sequence = <0 2>, <1 35>;
+		qcom,mdss-dsi-lp11-init;
 
 		qcom,mdss-dsi-te-pin-select = <1>;
 
 		qcom,mdss-dsi-te-dcs-command = <1>;
 		qcom,mdss-dsi-te-check-enable;
 		qcom,mdss-dsi-te-using-te-pin;
+		qcom,mdss-dsi-bl-min-level = <3>;
+		qcom,mdss-dsi-bl-max-level = <255>;
+		qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+		/* MOT panel params */
+		qcom,mdss-dsi-hbm-on-command = [15 01 00 00 00 00 02 53 e0];
+		qcom,mdss-dsi-hbm-off-command = [15 01 00 00 00 00 02 53 20];
+		qcom,mdss-dsi-acl-on-command = [15 01 00 00 00 00 02 55 03];
+		qcom,mdss-dsi-acl-off-command = [15 01 00 00 00 00 02 55 00];
+
 qcom,mdss-dsi-display-timings {
 	timing@0{
 		qcom,mdss-dsi-panel-width = <800>;
