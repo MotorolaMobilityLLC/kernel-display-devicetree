@@ -59,6 +59,10 @@
 				qcom,mdss-dsi-video-mode;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
+				qcom,dsi-wd-jitter-enable;
+				qcom,mdss-dsi-panel-jitter = <0x2 0x1>;
+				qcom,dsi-wd-ltj-max-jitter = <0x4 0x1>;
+				qcom,dsi-wd-ltj-time-sec = <3600>;
 				qcom,mdss-dsi-panel-timings =
 					[00 21 09 09 24 23 08 08 08 03 04 00];
 				qcom,cmd-on-commands =
@@ -219,6 +223,10 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
+				qcom,dsi-wd-jitter-enable;
+				qcom,mdss-dsi-panel-jitter = <0x2 0x1>;
+				qcom,dsi-wd-ltj-max-jitter = <0x4 0x1>;
+				qcom,dsi-wd-ltj-time-sec = <3600>;
 				qcom,mdss-dsi-panel-timings =
 					[00 21 09 09 24 23 08 08 08 03 04 00];
 				qcom,mdss-dsi-on-command =

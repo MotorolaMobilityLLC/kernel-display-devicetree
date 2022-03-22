@@ -3,7 +3,8 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-rumi-overlay.dtbo \
 		display/kalama-sde-display-cdp-overlay.dtbo \
 		display/kalama-sde-display-mtp-overlay.dtbo \
-		display/kalama-sde-display-qrd-overlay.dtbo
+		display/kalama-sde-display-qrd-overlay.dtbo \
+		display/kalama-sde-display-rcm-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-cdp-overlay.dtbo \
