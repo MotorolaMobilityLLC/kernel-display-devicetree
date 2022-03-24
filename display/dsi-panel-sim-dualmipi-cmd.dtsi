@@ -70,6 +70,8 @@
 					[15 01 00 00 00 00 02 51 00];
 				qcom,mdss-dsi-qsync-off-commands-state =
 					"dsi_hs_mode";
+				qcom,mdss-mdp-transfer-time-us-min = <14000>;
+				qcom,mdss-mdp-transfer-time-us-max = <16000>;
 			};
 
 			timing@1 {
@@ -106,6 +108,8 @@
 					[15 01 00 00 00 00 02 51 00];
 				qcom,mdss-dsi-qsync-off-commands-state =
 					"dsi_hs_mode";
+				qcom,mdss-mdp-transfer-time-us-min = <6900>;
+				qcom,mdss-mdp-transfer-time-us-max = <7900>;
 			};
 
 			timing@2 {
