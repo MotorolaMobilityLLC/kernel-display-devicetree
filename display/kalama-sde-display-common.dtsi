@@ -24,6 +24,7 @@
 #include "dsi-panel-sim-dualmipi-video.dtsi"
 #include "dsi-panel-sim-dualmipi-dsc375-cmd.dtsi"
 #include "dsi-panel-sim-sec-hd-cmd.dtsi"
+#include "dsi-panel-sim-cmd-au.dtsi"
 #include "dsi-panel-nt35597-truly-dualmipi-wqxga-splitlink-cmd.dtsi"
 #include "dsi-panel-r66451-fhd-plus-90hz-video-cphy.dtsi"
 #include "dsi-panel-nt35695b-truly-fhd-splitlink-cmd.dtsi"
@@ -179,6 +180,18 @@
 		timing@3 {
 			qcom,mdss-dsi-panel-phy-timings = [00 0f 03 03 11 1d 04
 				04 03 02 04 00 0d 09];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sim_panel_au {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
+				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 		};

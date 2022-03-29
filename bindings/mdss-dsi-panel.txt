@@ -662,6 +662,8 @@ Optional properties:
 - qcom,mdss-dsi-mdp-idle-ctrl-len:	An u32 value indicating the number of dsi pclk cycles of idle time
 					to insert between command mode mdp packets. This time must be long
 					enough to cover the time link takes to switch between HS to LP11 mode.
+- qcom,vert-padding-value:	An u32 value indicating the second display height while using two displays
+					in shared display feature.
 
 Required properties for sub-nodes:	None
 Optional properties:
@@ -903,6 +905,7 @@ Example:
 
 				qcom,dsi-dyn-clk-list = <524637388 525735938 528842882>;
 
+				qcom,vert-padding-value = <2940>;
 				qcom,mdss-dsc-slice-height = <16>;
 				qcom,mdss-dsc-slice-width = <360>;
 				qcom,mdss-dsc-slice-per-pkt = <2>;
