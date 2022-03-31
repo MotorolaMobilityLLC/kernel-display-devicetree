@@ -1,3 +1,6 @@
+dtbo-$(CONFIG_ARCH_NEO) += display/neo-sde.dtbo \
+		display/neo-sde-display-idp-overlay.dtbo
+
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
 		display/waipio-sde-display-mtp-overlay.dtbo \
