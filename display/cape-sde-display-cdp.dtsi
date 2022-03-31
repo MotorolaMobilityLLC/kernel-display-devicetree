@@ -54,6 +54,23 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 	qcom,platform-sec-reset-gpio = <&tlmm 4 0>;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
+		};
+
+		timing@1 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
+		};
+
+		timing@2 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 20 20 20 1080 20>;
+		};
+	};
 };
 
 &dsi_r66451_amoled_60hz_video {
