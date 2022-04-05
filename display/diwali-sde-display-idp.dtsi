@@ -148,7 +148,7 @@
 };
 
 &dsi_sharp_qhd_plus_dsc_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_avdd>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_qhd_avdd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
 	pwms = <&pm8350c_pwm_2 0 0>;
 	qcom,bl-pmic-pwm-period-usecs = <100>;
