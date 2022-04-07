@@ -696,15 +696,7 @@
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@1 { /* WQHD 60FPS cmd mode*/
-			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 21 07
-				07 07 02 04 00 17 0c];
-			qcom,display-topology = <2 0 2>,
-						<1 0 2>;
-			qcom,default-topology-index = <0>;
-		};
-
-		timing@2 { /* 4K 40FPS cmd mode*/
+		timing@1 { /* 4K 40FPS cmd mode*/
 			qcom,mdss-dsi-panel-phy-timings = [00 25 0a 0a 1b 24 0a
 				0a 0a 02 04 00 1f 0f];
 			qcom,display-topology = <2 0 2>;
