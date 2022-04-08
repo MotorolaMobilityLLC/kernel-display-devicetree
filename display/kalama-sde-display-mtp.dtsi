@@ -170,3 +170,8 @@
 			&dsi_vtdr6130_amoled_video>;
 	};
 };
+
+&battery_charger {
+	qcom,display-panels = <&dsi_vtdr6130_amoled_cmd
+			      &dsi_vtdr6130_amoled_video>;
+};
