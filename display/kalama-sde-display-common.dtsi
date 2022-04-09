@@ -126,7 +126,7 @@
 
 		qcom,mdp = <&mdss_mdp>;
 		qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_cmd>;
-		qcom,demura-panel-id = <0x0122e700 0x000000b0>;
+		qcom,demura-panel-id = <0x0122e700 0x00000471>;
 	};
 
 	sde_dsi1: qcom,dsi-display-secondary {
