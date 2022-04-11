@@ -687,8 +687,10 @@
 		timing@0 { /* QHD 60fps */
 			qcom,mdss-dsi-panel-phy-timings = [00 15 05 05 14 1f 05
 				05 06 02 04 00 13 0a];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
+			qcom,display-topology = <1 1 1>,
+						<2 2 1>, /* dsc merge */
+						<2 1 1>; /* 3d mux */
+			qcom,default-topology-index = <1>;
 		};
 
 		timing@1 { /* FHD+ 60fps cmd mode */
@@ -697,14 +699,16 @@
 			qcom,display-topology = <1 1 1>,
 						<2 2 1>, /* dsc merge */
 						<2 1 1>; /* 3d mux */
-			qcom,default-topology-index = <0>;
+			qcom,default-topology-index = <1>;
 		};
 
 		timing@2 { /* QHD 90fps */
 			qcom,mdss-dsi-panel-phy-timings = [00 1d 08 07 17 22 08
 				08 08 02 04 00 19 0d];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
+			qcom,display-topology = <1 1 1>,
+						<2 2 1>, /* dsc merge */
+						<2 1 1>; /* 3d mux */
+			qcom,default-topology-index = <1>;
 		};
 
 		timing@3 { /* FHD+ 180FPS cmd mode*/
