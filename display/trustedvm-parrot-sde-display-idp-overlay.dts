@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "trustedvm-parrot-sde-display.dtsi"
+#include "trustedvm-parrot-sde.dtsi"
 #include "trustedvm-parrot-sde-display-idp.dtsi"
 
 / {

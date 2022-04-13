@@ -31,7 +31,7 @@
 		sde_te_active: sde_te_active {
 			mux {
 				pins = "gpio99";
-				function = "mdp_vsync";
+				function = "mdp_vsync_p";
 			};
 
 			config {
@@ -44,7 +44,7 @@
 		sde_te_suspend: sde_te_suspend {
 			mux {
 				pins = "gpio99";
-				function = "mdp_vsync";
+				function = "mdp_vsync_p";
 			};
 
 			config {

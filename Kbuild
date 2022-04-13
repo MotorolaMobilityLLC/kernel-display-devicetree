@@ -44,6 +44,15 @@ dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.d
 		display/trustedvm-diwali-sde-display-qrd-overlay.dtbo
 endif
 
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
+		display/parrot-sde-display-atp-overlay.dtbo \
+		display/parrot-sde-display-idp-overlay.dtbo \
+		display/parrot-sde-display-idp-amoled-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
