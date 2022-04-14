@@ -389,6 +389,10 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <180>;
+				qcom,dsi-wd-jitter-enable;
+				qcom,mdss-dsi-panel-jitter = <0x2 0x1>;
+				qcom,dsi-wd-ltj-max-jitter = <0x4 0x1>;
+				qcom,dsi-wd-ltj-time-sec = <3600>;
 				qcom,disable-rsc-solver;
 
 				qcom,mdss-dsi-on-command =
@@ -443,6 +447,10 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <240>;
+				qcom,dsi-wd-jitter-enable;
+				qcom,mdss-dsi-panel-jitter = <0x2 0x1>;
+				qcom,dsi-wd-ltj-max-jitter = <0x4 0x1>;
+				qcom,dsi-wd-ltj-time-sec = <3600>;
 				qcom,disable-rsc-solver;
 
 				qcom,mdss-dsi-on-command =
