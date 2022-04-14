@@ -12,7 +12,7 @@
 #include "dsi-panel-mot-csot-nt37701-667-1080x2400-camera-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701-667-1080x2400-camera-cmd-gdx-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701-667-1080x2400-camera-cmd-gdx-common_v1.dtsi"
-#include "dsi-panel-mot-tianma-nt37701A-667-1080x2400-dsc-cmd-common-v1.dtsi"
+#include "dsi-panel-mot-tianma-nt37701A-667-curve-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701A-667-curve-1080x2400-dsc-cmd-common.dtsi"
 
 &soc {
@@ -409,10 +409,10 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <9>;
-	qcom,mdss-dsi-bl-max-level = <2047>;
+	qcom,mdss-dsi-bl-max-level = <3515>;
 	//qcom,mdss-dsi-bl-default-level = <1024>;
-	qcom,mdss-brightness-max-level = <2047>;
-	qcom,backlight_map_type = <1>;
+	qcom,mdss-brightness-max-level = <3515>;
+	//qcom,backlight_map_type = <1>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -470,7 +470,7 @@
 	};
 };
 
-&mot_tianma_nt37701A_667_1080x2400_dsc_cmd_v1 {
+&mot_tianma_nt37701A_667_curve_1080x2400_dsc_cmd {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	//qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
@@ -480,10 +480,10 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <9>;
-	qcom,mdss-dsi-bl-max-level = <2047>;
+	qcom,mdss-dsi-bl-max-level = <3515>;
 	//qcom,mdss-dsi-bl-default-level = <1024>;
-	qcom,mdss-brightness-max-level = <2047>;
-	qcom,backlight_map_type = <1>;
+	qcom,mdss-brightness-max-level = <3515>;
+	//qcom,backlight_map_type = <1>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -726,7 +726,7 @@
 		panel = <&mot_csot_nt37701A_667_curve_1080x2400_dsc_cmd
 			&mot_csot_ili7838A_667_1080x2400_dsc_cmd
 			&mot_tianma_nt37701A_667_1080x2400_dsc_cmd
-			&mot_tianma_nt37701A_667_1080x2400_dsc_cmd_v1>;
+			&mot_tianma_nt37701A_667_curve_1080x2400_dsc_cmd>;
 	};
 };
 
