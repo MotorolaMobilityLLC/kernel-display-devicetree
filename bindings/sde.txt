@@ -420,6 +420,8 @@ Optional properties:
 				for particular chipset.
 				These paths must be defined after rt-paths in
 				"qcom,msm-bus,vectors-KBps" vector request.
+- qcom,qcom,sde-ddr-type:	A u32 array indicates per pipe bandwidth and vbif qos
+				configurations for different ddr types.
 - qcom,sde-max-bw-low-kbps:	First value in the array represents the ddr type and the
 				second value indicates the max bandwidth in Kbps that can
 				be supported without underflow corresponding to the ddr
