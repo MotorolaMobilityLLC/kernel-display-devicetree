@@ -4,9 +4,11 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-cdp-overlay.dtbo \
 		display/kalama-sde-display-mtp-overlay.dtbo \
 		display/kalama-sde-display-qrd-overlay.dtbo \
+		display/kalama-sde-display-mtp-nfc-overlay.dtbo \
 		display/kalama-sde-display-rcm-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.dtbo \
+                  display/trustedvm-kalama-sde-display-mtp-nfc-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-cdp-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-rumi-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-qrd-overlay.dtbo
@@ -27,28 +29,6 @@ dtbo-$(CONFIG_ARCH_WAIPIO) += display/trustedvm-waipio-sde-display-mtp-overlay.d
 		display/trustedvm-waipio-sde-display-cdp-overlay.dtbo \
 		display/trustedvm-waipio-sde-display-rumi-overlay.dtbo \
 		display/trustedvm-waipio-sde-display-qrd-overlay.dtbo
-endif
-
-ifneq ($(CONFIG_ARCH_QTI_VM), y)
-dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
-		display/cape-sde-display-atp-overlay.dtbo \
-		display/cape-sde-display-cdp-overlay.dtbo \
-		display/cape-sde-display-mtp-overlay.dtbo \
-		display/cape-sde-display-qrd-overlay.dtbo
-else
-dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-cdp-overlay.dtbo \
-		display/trustedvm-cape-sde-display-mtp-overlay.dtbo
-endif
-
-ifneq ($(CONFIG_ARCH_QTI_VM), y)
-dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
-		display/diwali-sde-display-atp-overlay.dtbo \
-		display/diwali-sde-display-idp-overlay.dtbo \
-		display/diwali-sde-display-idp-amoled-overlay.dtbo \
-		display/diwali-sde-display-qrd-overlay.dtbo \
-		display/diwali-sde-display-rumi-overlay.dtbo
-else
-dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)

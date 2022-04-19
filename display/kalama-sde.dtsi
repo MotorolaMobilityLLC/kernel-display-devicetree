@@ -64,7 +64,7 @@
 			"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 			"strm0_pixel_clk", "strm1_pixel_clk";
 
-		qcom,pll-revision = "4nm-v1";
+		qcom,pll-revision = "4nm-v1.1";
 		qcom,phy-version = <0x600>;
 		qcom,aux-cfg0-settings = [20 00];
 		qcom,aux-cfg1-settings = [24 13];
@@ -199,6 +199,8 @@
 			"lut_clk";
 	clock-rate = <0 0 0 514000000 514000000 19200000 514000000>;
 	clock-max-rate = <0 0 0 514000000 514000000 19200000 514000000>;
+
+	clock-mmrm = <0 0 0 0 DISP_CC_MDSS_MDP_CLK_SRC 0 0>;
 
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
