@@ -220,6 +220,7 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
+	qcom,mot_nt37701A_read_cellid;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -289,6 +290,7 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
+	qcom,mot_nt37701A_read_cellid;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
