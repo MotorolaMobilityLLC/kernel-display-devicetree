@@ -420,19 +420,21 @@ Optional properties:
 				for particular chipset.
 				These paths must be defined after rt-paths in
 				"qcom,msm-bus,vectors-KBps" vector request.
-- qcom,sde-max-bw-low-kbps:	This value indicates the max bandwidth in Kbps
-				that can be supported without underflow.
-				This is a low bandwidth threshold which should
-				be applied in most scenarios to be safe from
-				underflows when unable to satisfy bandwidth
-				requirements.
-- qcom,sde-max-bw-high-kbps:	This value indicates the max bandwidth in Kbps
-				that can be supported without underflow in the
-				event where there is no VFE.
-				This is a high bandwidth threshold which can be
-				applied in scenarios where panel interface can
-				be more tolerant to memory latency such as
-				command mode panels.
+- qcom,sde-max-bw-low-kbps:	First value in the array represents the ddr type and the
+				second value indicates the max bandwidth in Kbps that can
+				be supported without underflow corresponding to the ddr
+				type. This is a low bandwidth threshold which should be
+				applied in most scenarios to be safe from underflows when
+				unable to satisfy bandwidth requirements. For targets with
+				bandwidth of undefined ddr type set ddr value as 0x0.
+- qcom,sde-max-bw-high-kbps:	First value in the array represents the ddr type and the
+				second value indicates the max bandwidth in Kbps that can
+				be supported without underflow in the event where there
+				is no VFE corresponding to the ddr type. This is a high
+				bandwidth threshold which can be applied in scenarios
+				where panel interface can be more tolerant to memory
+				latency such as command mode panels. For targets with
+				bandwidth of undefined ddr type set ddr value as 0x0.
 - qcom,sde-core-ib-ff:		A string entry indicating the fudge factor for
 				core ib calculation.
 - qcom,sde-core-clk-ff:		A string entry indicating the fudge factor for
