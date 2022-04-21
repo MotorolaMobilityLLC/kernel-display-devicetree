@@ -244,6 +244,7 @@
 		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
 		interrupt-parent = <&mdss_mdp>;
 		interrupts = <4 0>;
+		qcom,split-link-supported;
 
 		qcom,ctrl-supply-entries {
 			#address-cells = <1>;
