@@ -122,5 +122,10 @@
 };
 
 &sde_dsi {
+	vddio-supply = <&display_panel_vddio>;
+	vci-supply = <&L4E>;
+	ibb-supply = <&display_panel_ibb>;
+	extvdd-supply = <&display_panel_extvdd>;
+
 	qcom,dsi-default-panel = <&dsi_r66451_amoled_video_cphy>;
 };

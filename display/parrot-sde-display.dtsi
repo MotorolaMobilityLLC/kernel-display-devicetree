@@ -2,58 +2,6 @@
 #include "parrot-sde-display-common.dtsi"
 
 &soc {
-	display_panel_vddio: display_gpio_regulator@1 {
-		compatible = "qti-regulator-fixed";
-		regulator-name = "display_panel_vddio";
-		regulator-min-microvolt = <1800000>;
-		regulator-max-microvolt = <1800000>;
-		regulator-enable-ramp-delay = <233>;
-		gpio = <&pm6150l_gpios 9 0>;
-		enable-active-high;
-		regulator-boot-on;
-		proxy-supply = <&display_panel_vddio>;
-		qcom,proxy-consumer-enable;
-		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_vddio_default>;
-	};
-
-	display_panel_avdd: display_gpio_regulator@2 {
-		compatible = "qti-regulator-fixed";
-		regulator-name = "display_panel_avdd";
-		regulator-min-microvolt = <5500000>;
-		regulator-max-microvolt = <5500000>;
-		regulator-enable-ramp-delay = <233>;
-		gpio = <&pm6150l_gpios 4 0>;
-		enable-active-high;
-		regulator-boot-on;
-		proxy-supply = <&display_panel_avdd>;
-		qcom,proxy-consumer-enable;
-		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_avdd_default>;
-	};
-
-	display_panel_extvdd: display_gpio_regulator@3 {
-		compatible = "qti-regulator-fixed";
-		regulator-name = "display_panel_extvdd";
-		regulator-min-microvolt = <1200000>;
-		regulator-max-microvolt = <1200000>;
-		regulator-enable-ramp-delay = <233>;
-		gpio = <&pm6150l_gpios 3 0>;
-		enable-active-high;
-		regulator-boot-on;
-		proxy-supply = <&display_panel_extvdd>;
-		qcom,proxy-consumer-enable;
-		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_extvdd_default>;
-	};
-
-	display_panel_ibb: display_panel_ibb_stub {
-		compatible = "qcom,stub-regulator";
-		regulator-name = "display_panel_ibb";
-		regulator-min-microvolt = <4600000>;
-		regulator-max-microvolt = <6000000>;
-	};
-
 	sde_wb: qcom,wb-display@0 {
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
@@ -86,12 +34,6 @@
 			 <&dispcc DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"mdp_core_clk";
-
-	vddio-supply = <&display_panel_vddio>;
-	avdd-supply = <&display_panel_avdd>;
-	extvdd-supply = <&display_panel_extvdd>;
-	vci-supply = <&L4E>;
-	ibb-supply = <&display_panel_ibb>;
 };
 
 &mdss_mdp {
