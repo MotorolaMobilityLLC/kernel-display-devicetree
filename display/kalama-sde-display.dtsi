@@ -2,7 +2,7 @@
 #include "kalama-sde-display-common.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-kalama.h>
 
-&pm8550_gpios {
+/*&pm8550_gpios {
 	display_panel_avdd_default: display_panel_avdd_default {
 		pins = "gpio11";
 		function = "normal";
@@ -12,7 +12,7 @@
 		power-source = <1>;
 		qcom,drive-strength = <3>;
 	};
-};
+};*/
 
 &soc {
 	sde_wb1: qcom,wb-display@1 {
@@ -26,7 +26,7 @@
 		label = "wb_display2";
 	};
 
-	display_panel_avdd: display_gpio_regulator@1 {
+	/*display_panel_avdd: display_gpio_regulator@1 {
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_panel_avdd";
 		regulator-min-microvolt = <5500000>;
@@ -39,7 +39,7 @@
 		qcom,proxy-consumer-enable;
 		pinctrl-names = "default";
 		pinctrl-0 = <&display_panel_avdd_default>;
-	};
+        };*/
 
 	disp_rdump_memory: disp_rdump_region@b8000000 {
 		reg = <0xb8000000 0x00800000>;
@@ -126,7 +126,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc &sde_dp>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc>;
 };
 
 &dsi_vtdr6130_amoled_cmd {
