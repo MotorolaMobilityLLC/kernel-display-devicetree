@@ -228,7 +228,6 @@
 
 &mdss_dsi0 {
 	vdda-1p2-supply = <&L16B>;
-	qcom,split-link-supported;
 	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
