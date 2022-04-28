@@ -162,6 +162,7 @@
 		qcom,sde-min-dram-ib-kbps = <1600000>;
 		qcom,sde-dram-channels = <1>;
 		qcom,sde-num-nrt-paths = <0>;
+		qcom,sde-num-ddr-channels = <1>;
 
 		qcom,sde-lm-noise-off = <0x320>;
 		qcom,sde-lm-noise-version = <0x00010000>;
