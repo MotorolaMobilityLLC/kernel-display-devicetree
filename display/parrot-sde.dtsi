@@ -85,7 +85,7 @@
 		qcom,widebus-enable;
 
 		vdda-1p2-supply = <&L16B>;
-		vdda-0p9-supply = <&L5B>;
+		vdda-0p9-supply = <&L7B>;
 		vdda_usb-0p9-supply = <&L5B>;
 		vdd_mx-supply = <&VDD_MXA_LEVEL>;
 
