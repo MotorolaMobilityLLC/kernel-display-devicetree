@@ -84,9 +84,9 @@
 
 		qcom,widebus-enable;
 
-		vdda-1p2-supply = <&L6B>;
-		vdda-0p9-supply = <&L1B>;
-		vdda_usb-0p9-supply = <&L10C>;
+		vdda-1p2-supply = <&L16B>;
+		vdda-0p9-supply = <&L5B>;
+		vdda_usb-0p9-supply = <&L5B>;
 		vdd_mx-supply = <&VDD_MXA_LEVEL>;
 
 		qcom,ctrl-supply-entries {
@@ -205,7 +205,7 @@
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
 			<&gem_noc MASTER_APPSS_PROC
-				&config_noc SLAVE_DISPLAY_CFG>;
+				&cnoc2 SLAVE_DISPLAY_CFG>;
 	interconnect-names = "qcom,sde-data-bus0", "qcom,sde-ebi-bus",
 				"qcom,sde-reg-bus";
 
