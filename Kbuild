@@ -17,8 +17,7 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.d
 endif
 
 ifeq ($(CONFIG_ARCH_SA8155), y)
-dtbo-y += display/sm8150-sde.dtbo \
-          display/sa8155-adp-star-display.dtbo
+dtbo-y += display/sa8155-adp-star-display.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
