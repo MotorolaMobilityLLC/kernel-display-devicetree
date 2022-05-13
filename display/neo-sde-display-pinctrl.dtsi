@@ -1,18 +1,4 @@
 &tlmm {
-	display_1p3_parent_buck_en_default: display_1p3_parent_buck_en_default {
-		mux {
-			pins = "gpio117";
-			function = "gpio";
-		};
-
-		config {
-			pins = "gpio117";
-			drive-strength = <8>;
-			bias-disable = <0>;
-			output-high;
-		};
-	};
-
 	display_1p8_1p2_pwr_en_default: display_1p8_1p2_pwr_en_default {
 		mux {
 			pins = "gpio116";
