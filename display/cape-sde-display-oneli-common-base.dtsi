@@ -76,50 +76,6 @@
 };
 
 &soc {
-	vio_disp_m_vreg: vio_disp_m_vreg{
-		compatible = "regulator-fixed";
-		regulator-name = "vio_disp_m_vreg";
-		regulator-min-microvolt = <1800000>;
-		regulator-max-microvolt = <1800000>;
-		regulator-enable-ramp-delay = <233>;
-		enable-active-high;
-		regulator-boot-on;
-
-		gpio = <&tlmm 106 0>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&vio_en_m_default>;
-		vin-supply = <&L12C>;
-	};
-
-	vci_disp_s_vreg:  vci_disp_s_vreg{
-		compatible = "regulator-fixed";
-		regulator-name = "vci_disp_s_supply";
-		regulator-min-microvolt = <3000000>;
-		regulator-max-microvolt = <3000000>;
-		enable-active-high;
-		regulator-boot-on;
-
-		gpio = <&tlmm 128 0>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&vci_en_s_default>;
-		vin-supply = <&L3C>;
-	};
-
-	vio_disp_s_vreg: vio_disp_s_vreg{
-		compatible = "regulator-fixed";
-		regulator-name = "vio_disp_s_vreg";
-		regulator-min-microvolt = <1800000>;
-		regulator-max-microvolt = <1800000>;
-		regulator-enable-ramp-delay = <233>;
-		enable-active-high;
-		regulator-boot-on;
-
-		gpio = <&tlmm 127 0>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&vio_en_s_default>;
-		vin-supply = <&L2C>;
-	};
-
 
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
 		#address-cells = <1>;
@@ -286,9 +242,8 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
-	vddio-supply = <&vio_disp_m_vreg>;
+	vddio-supply = <&L12C>;
 	ddic-supply = <&L1D>;
-	vci-supply = <&vci_disp_m_vreg>;
 };
 
 &sde_dsi1 {
@@ -315,8 +270,8 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
-	vddio-supply = <&vio_disp_s_vreg>;
-	vci-supply = <&vci_disp_s_vreg>;
+	vddio-supply = <&L2C>;
+	vci-supply = <&L3C>;
 };
 
 &L1D {
@@ -342,6 +297,8 @@
 	qcom,mdss-dsi-bl-max-level = <255>;
 	qcom,mdss-brightness-max-level = <255>;
 	qcom,platform-sec-reset-gpio = <&tlmm 123 0>;
+	qcom,platform-sec-vio-enable-gpio = <&tlmm 127 0>;
+	qcom,platform-sec-vci-enable-gpio = <&tlmm 128 0>;
 	qcom,mdss-dsi-panel-orientation = "180";
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
@@ -375,6 +332,8 @@
 	//qcom,mdss-dsi-bl-default-level = <1024>;
 	qcom,mdss-brightness-max-level = <3515>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,platform-vio-enable-gpio = <&tlmm 106 0>;
+	qcom,platform-vci-enable-gpio = <&tlmm 107 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
