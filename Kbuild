@@ -61,6 +61,12 @@ dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-oneli-dvt1b-overlay.dtbo \
 		display/cape-sde-display-oneli-dvt2a-overlay.dtbo
 endif  #($CONFIG_ONELI_DTB,y)
+ifeq ($(CONFIG_FELIX_DTB),y)
+dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
+		display/cape-sde-display-felix-evt1-overlay.dtbo \
+		display/cape-sde-display-oneli-dvt1b-overlay.dtbo \
+		display/cape-sde-display-oneli-dvt2a-overlay.dtbo
+endif  #($CONFIG_FELIX_DTB,y)
 ifeq ($(CONFIG_EQS_DTB),y)
 dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-eqs-evt1-overlay.dtbo
