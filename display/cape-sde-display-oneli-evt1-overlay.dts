@@ -29,21 +29,8 @@
 	};
 };
 
-&soc {
-	vci_disp_m_vreg:  vci_disp_m_vreg{
-		compatible = "regulator-fixed";
-		regulator-name = "vci_disp_m_supply";
-		regulator-min-microvolt = <3000000>;
-		regulator-max-microvolt = <3000000>;
-		enable-active-high;
-		regulator-boot-on;
-
-		gpio = <&tlmm 107 0>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&vci_en_m_default>;
-		vin-supply = <&L13C>;
-	};
-
+&sde_dsi {
+	vci-supply = <&L13C>;
 };
 
 &sde_dsi1 {
