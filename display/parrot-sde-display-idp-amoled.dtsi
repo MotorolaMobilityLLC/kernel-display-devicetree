@@ -69,7 +69,7 @@
 	ibb-supply = <&display_panel_ibb>;
 	extvdd-supply = <&display_panel_extvdd>;
 
-	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_video>;
+	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_cmd>;
 };
 
 &qupv3_se9_spi {
