@@ -30,6 +30,11 @@
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
 
+		qcom,mdss-dsi-panel-hdr-color-primaries = <14500 15500 32000
+				17000 15500 30000 8000 3000>;
+		qcom,mdss-dsi-panel-peak-brightness = <4200000>;
+		qcom,mdss-dsi-panel-blackness-level = <3230>;
+
 		qcom,mdss-dsi-te-pin-select = <1>;
 		qcom,mdss-dsi-wr-mem-start = <0x2c>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
@@ -56,6 +61,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
+				qcom,mdss-dsi-panel-clockrate = <847480320>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 6c 01
@@ -213,28 +219,6 @@
 				qcom,mdss-dsi-timing-switch-command-state =
 					"dsi_lp_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
-				qcom,mdss-dsi-lp1-command = [
-					39 01 00 00 14 00 02 6C 00
-					39 01 00 00 00 00 02 39 00
-					39 01 00 00 00 00 02 6D 00
-				];
-				qcom,mdss-dsi-lp1-command-state =
-					"dsi_lp_mode";
-				qcom,mdss-dsi-nolp-command = [
-					39 01 00 00 00 00 02 38 00
-					39 01 00 00 00 00 02 6C 01
-					39 01 00 00 00 00 03 F0 AA 10
-					39 01 00 00 00 00 16 B1 01 38 00 14 00
-					   1C 00 01 66 00 14 00 14 00 01 66 00
-					   14 05 CC 00
-					39 01 00 00 00 00 03 F0 AA 13
-					39 01 00 00 00 00 18 CE 09 11 09 11 08
-					   C1 07 FA 05 A4 00 3C 00 34 00 24 00
-					   0C 00 0C 04 00 35
-					39 01 00 00 00 00 03 F0 AA 00
-				];
-				qcom,mdss-dsi-nolp-command-state =
-					"dsi_lp_mode";
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <40>;
 				qcom,mdss-dsc-slice-width = <540>;
@@ -261,6 +245,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
+				qcom,mdss-dsi-panel-clockrate = <847480320>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 6c 01
@@ -340,28 +325,6 @@
 				qcom,mdss-dsi-timing-switch-command-state =
 					"dsi_lp_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
-				qcom,mdss-dsi-lp1-command = [
-					39 01 00 00 14 00 02 6C 00
-					39 01 00 00 00 00 02 39 00
-					39 01 00 00 00 00 02 6D 00
-				];
-				qcom,mdss-dsi-lp1-command-state =
-					"dsi_lp_mode";
-				qcom,mdss-dsi-nolp-command = [
-					39 01 00 00 00 00 02 38 00
-					39 01 00 00 00 00 02 6C 01
-					39 01 00 00 00 00 03 F0 AA 10
-					39 01 00 00 00 00 16 B1 01 38 00 14 00
-					   1C 00 01 66 00 14 01 FC 00 01 66 00
-					   14 0D 6C 00
-					39 01 00 00 00 00 03 F0 AA 13
-					39 01 00 00 00 00 18 CE 0A E1 0A E1 0A
-					   81 09 92 06 C5 00 48 00 3E 00 2B 00
-					   0C 00 0C 05 00 3F
-					39 01 00 00 00 00 03 F0 AA 00
-				];
-				qcom,mdss-dsi-nolp-command-state =
-					"dsi_lp_mode";
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <40>;
 				qcom,mdss-dsc-slice-width = <540>;
@@ -388,6 +351,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
+				qcom,mdss-dsi-panel-clockrate = <847480320>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 6c 02
@@ -467,28 +431,6 @@
 				qcom,mdss-dsi-timing-switch-command-state =
 					"dsi_lp_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
-				qcom,mdss-dsi-lp1-command = [
-					39 01 00 00 14 00 02 6C 00
-					39 01 00 00 00 00 02 39 00
-					39 01 00 00 00 00 02 6D 00
-				];
-				qcom,mdss-dsi-lp1-command-state =
-					"dsi_lp_mode";
-				qcom,mdss-dsi-nolp-command = [
-					39 01 00 00 00 00 02 38 00
-					39 01 00 00 00 00 02 6C 02
-					39 01 00 00 00 00 03 F0 AA 10
-					39 01 00 00 00 00 16 B1 01 38 00 14 00
-					   1C 00 01 66 00 14 00 14 00 01 66 00
-					   14 05 CC 00
-					39 01 00 00 00 00 03 F0 AA 13
-					39 01 00 00 00 00 18 D3 0E 81 0E 81 0E
-					   01 0C C3 09 06 00 60 00 53 00 3A 00
-					   0C 00 0C 07 00 54
-					39 01 00 00 00 00 03 F0 AA 00
-				];
-				qcom,mdss-dsi-nolp-command-state =
-					"dsi_lp_mode";
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <40>;
 				qcom,mdss-dsc-slice-width = <540>;
@@ -515,6 +457,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
+				qcom,mdss-dsi-panel-clockrate = <847480320>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 6c 02
@@ -594,28 +537,6 @@
 				qcom,mdss-dsi-timing-switch-command-state =
 					"dsi_lp_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
-				qcom,mdss-dsi-lp1-command = [
-					39 01 00 00 14 00 02 6C 00
-					39 01 00 00 00 00 02 39 00
-					39 01 00 00 00 00 02 6D 00
-				];
-				qcom,mdss-dsi-lp1-command-state =
-					"dsi_lp_mode";
-				qcom,mdss-dsi-nolp-command = [
-					39 01 00 00 00 00 02 38 00
-					39 01 00 00 00 00 02 6C 02
-					39 01 00 00 00 00 03 F0 AA 10
-					39 01 00 00 00 00 16 B1 01 38 00 14 00
-					   1C 00 01 66 00 14 01 FC 00 01 66 00
-					   14 0D 6C 00
-					39 01 00 00 00 00 03 F0 AA 13
-					39 01 00 00 00 00 18 D3 16 E0 16 E0 16
-					   E0 16 E0 16 E0 16 E0 16 E0 16 E0 16
-					   E0 16 E0 0B 00 7E
-					39 01 00 00 00 00 03 F0 AA 00
-				];
-				qcom,mdss-dsi-nolp-command-state =
-					"dsi_lp_mode";
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <40>;
 				qcom,mdss-dsc-slice-width = <540>;

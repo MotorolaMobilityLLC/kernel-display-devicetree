@@ -15,6 +15,10 @@
 		};
 	};
 
+	qcom_msmhdcp: qcom,msm_hdcp {
+		compatible = "qcom,msm-hdcp";
+	};
+
 	sde_dp: qcom,dp_display@ae90000 {
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
@@ -32,7 +36,6 @@
 			<0x88eaa00 0x200>,
 			<0x88ea200 0x200>,
 			<0x88ea600 0x200>,
-			<0xaf08000 0x1f4>,
 			<0x88ea000 0x200>,
 			<0x88e8000 0x20>,
 			<0x0aee1000 0x034>,
@@ -40,8 +43,8 @@
 			<0xaf09000 0x14>;
 		reg-names = "dp_ahb", "dp_aux", "dp_link",
 			"dp_p0", "dp_phy", "dp_ln_tx0", "dp_ln_tx1",
-			"dp_mmss_cc", "dp_pll", "usb3_dp_com",
-			"hdcp_physical", "dp_p1", "gdsc";
+			"dp_pll", "usb3_dp_com", "hdcp_physical",
+			"dp_p1", "gdsc";
 
 		interrupt-parent = <&mdss_mdp>;
 		interrupts = <12 0>;
@@ -84,6 +87,9 @@
 		qcom,dsc-feature-enable;
 		qcom,fec-feature-enable;
 		qcom,dsc-continuous-pps;
+
+		qcom,qos-cpu-mask = <0xf>;
+		qcom,qos-cpu-latency-us = <300>;
 
 		vdda-1p2-supply = <&L3E>;
 		vdda-0p9-supply = <&L3F>;

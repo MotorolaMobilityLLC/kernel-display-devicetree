@@ -5,8 +5,8 @@
 #include "trustedvm-kalama-sde-display-cdp.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Kalama CDP - TrustedVM";
+	model = "Qualcomm Technologies, Inc. Kalama CDP - TrustedVM - WSA883X";
 	compatible = "qcom,kalama-cdp", "qcom,kalama", "qcom,cdp";
 	qcom,msm-id = <519 0x10000>, <536 0x10000>, <519 0x20000>, <536 0x20000>;
-	qcom,board-id = <0x10001 0>;
+	qcom,board-id = <0x1010001 0>;
 };
