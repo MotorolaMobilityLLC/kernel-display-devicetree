@@ -147,7 +147,7 @@
 };
 
 &mot_dummy_vid_qhd {
-	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-display-timings {
