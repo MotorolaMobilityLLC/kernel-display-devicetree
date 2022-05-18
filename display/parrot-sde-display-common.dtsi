@@ -413,6 +413,10 @@
 	qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <48>;
 
+	qcom,dsi-supported-dfps-list = <144 120 60 48>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
@@ -435,6 +439,10 @@
 
 	qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <48>;
+
+	qcom,dsi-supported-dfps-list = <120 60 48>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -553,6 +561,10 @@
 
 &dsi_vtdr6130_amoled_video {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
