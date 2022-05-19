@@ -168,6 +168,14 @@
 	qcom,ulps-enabled;
 };
 
+&dsi_vtdr6130_amoled_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_vtdr6130_amoled_qsync_144hz_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_sharp_qsync_wqhd_cmd {
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
