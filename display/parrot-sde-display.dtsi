@@ -37,7 +37,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 };
 
 &dsi_sim_cmd{
@@ -64,4 +64,11 @@
 
 &dsi_sim_dsc_10b_cmd {
 	qcom,ulps-enabled;
+};
+
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xb8000000 0x0 0x02b00000>;
+		label = "cont_splash_region";
+	};
 };
