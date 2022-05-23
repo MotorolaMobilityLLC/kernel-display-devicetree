@@ -2,21 +2,6 @@
 #include <dt-bindings/clock/qcom,dispcc-neo.h>
 
 &soc {
-	display_1p3_parent_buck_en: display_gpio_regulator@0 {
-		compatible = "qti-regulator-fixed";
-		regulator-name = "display_1p3_parent_buck_en";
-		regulator-min-microvolt = <5500000>;
-		regulator-max-microvolt = <5500000>;
-		regulator-enable-ramp-delay = <233>;
-		gpio = <&tlmm 117 0>;
-		enable-active-high;
-		regulator-boot-on;
-		proxy-supply = <&display_1p3_parent_buck_en>;
-		qcom,proxy-consumer-enable;
-		pinctrl-names = "default";
-		pinctrl-0 = <&display_1p3_parent_buck_en_default>;
-	};
-
 	display_1p8_1p2_pwr_en: display_gpio_regulator@1 {
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_1p8_1p2_pwr_en";
@@ -72,10 +57,9 @@
 			"pll_byte_clk1", "pll_dsi_clk1",
 			"mdp_core_clk";
 
-	parent_buck-supply = <&display_1p3_parent_buck_en>;
 	disp_pwr-supply = <&display_1p8_1p2_pwr_en>;
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_rscc>;
 };

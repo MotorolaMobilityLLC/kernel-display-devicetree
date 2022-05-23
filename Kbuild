@@ -1,6 +1,13 @@
+ifeq ($(CONFIG_TARGET), neo_le)
 dtbo-$(CONFIG_ARCH_NEO) += display/neo-sde.dtbo \
-		display/neo-sde-display-idp-overlay.dtbo \
-		display/neo-sde-display-qxr-overlay.dtbo
+                display/neo-sde-display-idp-overlay.dtbo \
+                display/neo-sde-display-qxr-overlay.dtbo
+endif
+
+ifeq ($(CONFIG_TARGET), neo_la)
+dtbo-$(CONFIG_ARCH_NEO) += display/neo-sde.dtbo \
+                display/neo_la-sde-no-display-overlay.dtbo
+endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
@@ -42,6 +49,16 @@ dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
 else
 dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.dtbo \
 		display/trustedvm-diwali-sde-display-qrd-overlay.dtbo
+endif
+
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
+		display/parrot-sde-display-atp-overlay.dtbo \
+		display/parrot-sde-display-idp-overlay.dtbo \
+		display/parrot-sde-display-idp-amoled-overlay.dtbo \
+		display/parrot-sde-display-rumi-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
