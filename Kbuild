@@ -123,6 +123,16 @@ dtbo-$(CONFIG_ARCH_VIENNA) += display/vienna-sde.dtbo \
 		display/vienna-sde-display-atp-overlay.dtbo \
 		display/vienna-sde-display-rcm-overlay.dtbo
 
+dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
+		display/khaje-sde-display-idp-overlay.dtbo \
+		display/khaje-sde-display-qrd-overlay.dtbo \
+		display/khaje-sde-display-qrd-hvdcp3p5-overlay.dtbo \
+		display/khaje-sde-display-idps-90hz-overlay.dtbo \
+		display/khaje-sde-display-atp-overlay.dtbo \
+		display/khaje-sde-display-idp-nopmi-overlay.dtbo \
+		display/khaje-sde-display-qrd-nopmi-overlay.dtbo \
+		display/khaje-sde-display-qrd-nowcd9375-overlay.dtbo
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
