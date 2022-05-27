@@ -56,7 +56,8 @@ dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
 		display/parrot-sde-display-atp-overlay.dtbo \
 		display/parrot-sde-display-idp-overlay.dtbo \
 		display/parrot-sde-display-idp-amoled-overlay.dtbo \
-		display/parrot-sde-display-rumi-overlay.dtbo
+		display/parrot-sde-display-rumi-overlay.dtbo \
+		display/parrot-sde-display-qrd-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
 endif
