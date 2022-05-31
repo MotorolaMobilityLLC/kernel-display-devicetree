@@ -321,3 +321,9 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <1023>;
 };
+
+&qupv3_se4_spi {
+    goodix-berlin@0 {
+        panel = <&mot_csot_nt37701A_667_curve_1080x2400_dsc_cmd>;
+    };
+};
