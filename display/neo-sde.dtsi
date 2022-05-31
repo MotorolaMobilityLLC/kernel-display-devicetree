@@ -35,8 +35,9 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
-			<&mmss_noc MASTER_MDP_DISP &mc_virt SLAVE_EBI1_DISP>;
-		interconnect-names = "qcom,sde-data-bus0";
+			<&mmss_noc MASTER_MDP_DISP &gem_noc SLAVE_LLCC_DISP>,
+			<&mc_virt MASTER_LLCC_DISP &mc_virt SLAVE_EBI1_DISP>;
+		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-ebi-bus";
 	};
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
@@ -81,7 +82,7 @@
 	interconnect-names = "qcom,sde-data-bus0",
 			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
-	qcom,sde-ib-bw-vote = <2500000 0 1600000>;
+	qcom,sde-ib-bw-vote = <2500000 0 200000>;
 	qcom,sde-has-idle-pc;
 
 	qcom,platform-supply-entries {
