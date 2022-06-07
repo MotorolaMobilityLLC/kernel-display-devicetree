@@ -10,5 +10,5 @@
 	model = "rtwo";
 	compatible = "qcom,kalama-mtp", "qcom,kalama", "qcom,mtp", "mot,rtwo";
 	qcom,msm-id = <519 0x10000>, <536 0x10000>;
-	qcom,board-id = <0x10008 0>;
+	qcom,board-id = <0x41 0x9100>, <0x41 0xA100>;
 };
