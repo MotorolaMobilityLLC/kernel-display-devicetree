@@ -7,10 +7,12 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-qrd-overlay.dtbo \
 		display/kalama-sde-display-mtp-nfc-overlay.dtbo \
 		display/kalama-sde-display-rcm-overlay.dtbo \
+		display/kalama-sde-display-cdp-nfc-overlay.dtbo \
 		display/kalama-sde-display-atp-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.dtbo \
                   display/trustedvm-kalama-sde-display-mtp-nfc-overlay.dtbo \
+                  display/trustedvm-kalama-sde-display-cdp-nfc-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-cdp-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-cdp-wsa883x-overlay.dtbo \
 		  display/trustedvm-kalama-sde-display-rumi-overlay.dtbo \
