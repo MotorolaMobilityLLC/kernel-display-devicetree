@@ -112,6 +112,7 @@ qcom,mdss-dsi-display-timings {
 		];
 
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 02 05 80
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 02 6F 1C
@@ -177,6 +178,7 @@ qcom,mdss-dsi-display-timings {
 		];
 
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 02 05 80
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 02 6F 1C
@@ -242,6 +244,7 @@ qcom,mdss-dsi-display-timings {
 		];
 
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 02 05 80
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 02 6F 1C
@@ -307,6 +310,7 @@ qcom,mdss-dsi-display-timings {
 		];
 
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 02 05 80
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 02 6F 1C
@@ -372,6 +376,7 @@ qcom,mdss-dsi-display-timings {
 		];
 
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 02 05 80
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
                         39 01 00 00 00 00 02 6F 1C
