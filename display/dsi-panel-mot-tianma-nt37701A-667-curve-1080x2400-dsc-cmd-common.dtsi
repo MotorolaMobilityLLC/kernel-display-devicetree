@@ -79,9 +79,9 @@ qcom,mdss-dsi-hbm-off-command = [
 qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
 qcom,mdss-dsi-hbm-fod;
 qcom,mdss-dsi-hbm-fod-on-command = [
-		39 00 00 00 00 00 03 51 0F FF
-		39 00 00 00 00 00 03 87 1F FF
-		39 00 00 00 00 00 06 88 01 02 1C 08 68
+		39 00 00 40 00 00 03 51 0F FF
+		39 00 00 40 00 00 03 87 1F FF
+		39 00 00 40 00 00 06 88 01 02 1C 08 68
 		15 00 00 00 00 00 02 85 01];
 qcom,mdss-dsi-hbm-fod-on-command-state = "dsi_hs_mode";
 
