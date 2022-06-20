@@ -70,6 +70,10 @@ ifeq ($(CONFIG_EQS_DTB),y)
 dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde.dtbo \
 		display/cape-sde-display-eqs-evt1-overlay.dtbo
 endif  #($CONFIG_EQS_DTB,y)
+
+dtbo-$(CONFIG_BRONCO_DTB) += display/cape-sde.dtbo \
+		display/cape-sde-display-bronco-evb1-overlay.dtbo
+
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-qrd-overlay.dtbo
