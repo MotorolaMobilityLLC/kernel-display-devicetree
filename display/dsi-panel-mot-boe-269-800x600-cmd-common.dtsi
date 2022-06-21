@@ -37,8 +37,6 @@
 		/* MOT panel params */
 		qcom,mdss-dsi-hbm-on-command = [15 01 00 00 00 00 02 53 e0];
 		qcom,mdss-dsi-hbm-off-command = [15 01 00 00 00 00 02 53 20];
-		qcom,mdss-dsi-acl-on-command = [15 01 00 00 00 00 02 55 03];
-		qcom,mdss-dsi-acl-off-command = [15 01 00 00 00 00 02 55 00];
 
 qcom,mdss-dsi-display-timings {
 	timing@0{
@@ -64,10 +62,10 @@ qcom,mdss-dsi-display-timings {
 			15 00 00 00 00 00 02 A3 23
 			15 00 00 00 00 00 02 A4 2E
 			15 00 00 00 00 00 02 FE 00
+			15 00 00 00 00 00 02 FA 07
+			15 00 00 00 00 00 02 C2 08
 			15 00 00 00 00 00 02 35 00
-			15 00 00 00 00 00 02 53 20
 			15 00 00 00 00 00 02 51 00
-			15 00 00 00 00 00 02 55 03   /* ACL on */
 			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
