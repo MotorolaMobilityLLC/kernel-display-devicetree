@@ -261,6 +261,10 @@ Optional properties:
 - qcom,mdss-dsi-panel-type:		Specifies the panel operating mode.
 					"dsi_video_mode" = enable video mode (default).
 					"dsi_cmd_mode" = enable command mode.
+- qcom,panel-rgb-left-led:		Specifies the panel rgb left led module.
+					Required if this is XR device with rgb led driver IC installed.
+- qcom,panel-rgb-right-led:		Specifies the panel rgb right led module.
+					Required if this is XR device with rgb led driver IC installed.
 - qcom,5v-boost-gpio:			Specifies the panel gpio for display 5v boost.
 - qcom,mdss-dsi-te-check-enable:	Boolean to enable Tear Check configuration.
 - qcom,mdss-dsi-te-using-wd:		Boolean entry enables the watchdog timer support to generate the vsync signal
