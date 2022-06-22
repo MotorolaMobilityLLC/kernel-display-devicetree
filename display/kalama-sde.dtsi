@@ -88,6 +88,9 @@
 		qcom,fec-feature-enable;
 		qcom,dsc-continuous-pps;
 
+		qcom,qos-cpu-mask = <0xf>;
+		qcom,qos-cpu-latency-us = <300>;
+
 		vdda-1p2-supply = <&L3E>;
 		vdda-0p9-supply = <&L3F>;
 		vdda_usb-0p9-supply = <&L1E>;
