@@ -7,17 +7,6 @@
 #include <dt-bindings/interconnect/qcom,sm8150.h>
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
 
-&dispcc {
-	clocks = <&gcc GCC_DISP_AHB_CLK>, <&rpmhcc RPMH_CXO_CLK>,
-		<&mdss_dsi_phy0 0>, <&mdss_dsi_phy0 1>,
-		<&mdss_dsi_phy1 2>, <&mdss_dsi_phy1 3>;
-	clock-names = "iface", "bi_tcxo",
-			"dsi0_phy_pll_out_byteclk",
-			"dsi0_phy_pll_out_dsiclk",
-			"dsi1_phy_pll_out_byteclk",
-			"dsi1_phy_pll_out_dsiclk";
-};
-
 &soc {
 	mdss_mdp: qcom,mdss_mdp@ae00000 {
 		compatible = "qcom,sde-kms";
