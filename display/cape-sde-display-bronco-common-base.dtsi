@@ -803,10 +803,6 @@
 	};
 };
 
-&fsa4480 {
-	status = "disabled";
-};
-
 &sde_dp {
 	#clock-cells = <1>;
 	clocks =  <&clock_dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
