@@ -1,0 +1,15 @@
+/dts-v1/;
+/plugin/;
+
+#include "cape-sde.dtsi"
+
+/ {
+	qcom,msm-id = <530 0x10000>, <531 0x10000>, <540 0x10000>;
+	qcom,board-id = <0 0>;
+};
+
+/* Can not do delete-property in overlay dtsi, have to add cap-sde-oneli file */
+&sde_dp {
+	/delete-property/ qcom,mst-enable;
+};
+
