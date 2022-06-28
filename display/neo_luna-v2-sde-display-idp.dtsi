@@ -1,4 +1,4 @@
-#include "neo-sde-display.dtsi"
+#include "neo_luna-v2-sde-display.dtsi"
 
 &dsi_vtdr6130_amoled_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
