@@ -644,6 +644,7 @@
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-bl-is-exponent;
+	qcom,mot_nt37701A_read_cellid;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
