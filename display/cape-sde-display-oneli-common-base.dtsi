@@ -17,12 +17,12 @@
 	vio_en_m {
 		vio_en_m_default: vio_en_m_default {
 			mux {
-				pins = "gpio106";
+				pins = "gpio107";
 				function = "gpio";
 			};
 
 			config {
-				pins = "gpio106";
+				pins = "gpio107";
 				drive-strength = <2>;   /* 2 mA */
 				bias-disable = <0>;   /* no pull */
 				output-high;
@@ -32,12 +32,12 @@
 	vci_en_m {
 		vci_en_m_default: vci_en_m_default {
 			mux {
-				pins = "gpio107";
+				pins = "gpio106";
 				function = "gpio";
 			};
 
 			config {
-				pins = "gpio107";
+				pins = "gpio106";
 				drive-strength = <2>;   /* 2 mA */
 				bias-disable = <0>;   /* no pull */
 				output-enable;
@@ -47,12 +47,12 @@
 	vio_en_s {
 		vio_en_s_default: vio_en_s_default {
 			mux {
-				pins = "gpio127";
+				pins = "gpio128";
 				function = "gpio";
 			};
 
 			config {
-				pins = "gpio127";
+				pins = "gpio128";
 				drive-strength = <2>;   /* 2 mA */
 				bias-disable = <0>;   /* no pull */
 				output-high;
@@ -62,12 +62,12 @@
 	vci_en_s {
 		vci_en_s_default: vci_en_s_default {
 			mux {
-				pins = "gpio128";
+				pins = "gpio127";
 				function = "gpio";
 			};
 
 			config {
-				pins = "gpio128";
+				pins = "gpio127";
 				drive-strength = <2>;   /* 2 mA */
 				bias-disable = <0>;   /* no pull */
 				output-enable;
@@ -89,7 +89,7 @@
 		qcom,supply-max-voltage = <1800000>;
 		qcom,supply-enable-load = <300000>;
 		qcom,supply-disable-load = <100>;
-		qcom,supply-pre-on-sleep = <0>;
+		qcom,supply-pre-on-sleep = <1>;
 		qcom,supply-post-on-sleep = <1>;
 		qcom,supply-pre-off-sleep = <3>;
 		qcom,supply-post-off-sleep = <0>;
@@ -102,7 +102,7 @@
 		qcom,supply-max-voltage = <1200000>;
 		qcom,supply-enable-load = <300000>;
 		qcom,supply-disable-load = <0>;
-		qcom,supply-pre-on-sleep = <1>;
+		qcom,supply-pre-on-sleep = <0>;
 		qcom,supply-post-on-sleep = <0>;
 		qcom,supply-pre-off-sleep = <2>;
 		qcom,supply-post-off-sleep = <0>;
@@ -114,7 +114,7 @@
 		qcom,supply-max-voltage = <3000000>;
 		qcom,supply-enable-load = <300000>;
 		qcom,supply-disable-load = <0>;
-		qcom,supply-pre-on-sleep = <0>;
+		qcom,supply-pre-on-sleep = <1>;
 		qcom,supply-post-on-sleep = <0>;
 		qcom,supply-pre-off-sleep = <2>;
 		qcom,supply-post-off-sleep = <0>;
@@ -298,8 +298,8 @@
 	qcom,mdss-dsi-bl-max-level = <255>;
 	qcom,mdss-brightness-max-level = <255>;
 	qcom,platform-sec-reset-gpio = <&tlmm 123 0>;
-	qcom,platform-sec-vio-enable-gpio = <&tlmm 127 0>;
-	qcom,platform-sec-vci-enable-gpio = <&tlmm 128 0>;
+	qcom,platform-sec-vio-enable-gpio = <&tlmm 128 0>;
+	qcom,platform-sec-vci-enable-gpio = <&tlmm 127 0>;
 	qcom,mdss-dsi-panel-orientation = "180";
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
@@ -333,8 +333,8 @@
 	//qcom,mdss-dsi-bl-default-level = <1024>;
 	qcom,mdss-brightness-max-level = <3515>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
-	qcom,platform-vio-enable-gpio = <&tlmm 106 0>;
-	qcom,platform-vci-enable-gpio = <&tlmm 107 0>;
+	qcom,platform-vio-enable-gpio = <&tlmm 107 0>;
+	qcom,platform-vci-enable-gpio = <&tlmm 106 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
@@ -404,8 +404,8 @@
 	//qcom,mdss-dsi-bl-default-level = <1024>;
 	qcom,mdss-brightness-max-level = <3515>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
-	qcom,platform-vio-enable-gpio = <&tlmm 106 0>;
-	qcom,platform-vci-enable-gpio = <&tlmm 107 0>;
+	qcom,platform-vio-enable-gpio = <&tlmm 107 0>;
+	qcom,platform-vci-enable-gpio = <&tlmm 106 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
