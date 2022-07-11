@@ -57,10 +57,28 @@ qcom,mdss-dsi-panel-peak-brightness = <4200000>;
 
 qcom,mdss-dsi-panel-blackness-level = <3230>;
 
+
 qcom,mdss-dsi-hbm-on-command = [
-		39 00 00 00 00 00 03 51 0F FF];
+		39 00 00 40 00 00 06 F0 55 AA 52 08 00
+		39 00 00 40 00 00 0A 88 01 02 1C 08 5E 00 00 00 00
+		39 00 00 40 00 00 02 6F 4C
+		39 00 00 40 00 00 03 DF 3F FF
+		39 00 00 40 00 00 02 6F 01
+		39 00 00 40 00 00 03 87 0F FF
+		39 00 00 00 00 00 02 87 25];
 qcom,mdss-dsi-hbm-off-command = [
-		39 00 00 00 00 00 03 51 0D BB];
+		39 00 00 00 00 00 02 87 00];
+
+qcom,mdss-dsi-hbm-fod;
+qcom,mdss-dsi-hbm-fod-on-command = [
+		39 00 00 40 00 00 06 F0 55 AA 52 08 00
+		39 00 00 40 00 00 0A 88 01 02 1C 08 5E 00 00 00 00
+		39 00 00 40 00 00 02 6F 4C
+		39 00 00 40 00 00 03 DF 3F FF
+		39 00 00 40 00 00 02 6F 01
+		39 00 00 40 00 00 03 87 0F FF
+		39 00 00 00 00 00 02 87 25];
+
 
 qcom,mdss-dsi-display-timings {
 	timing@0{
