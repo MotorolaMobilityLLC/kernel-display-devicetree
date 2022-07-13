@@ -14,8 +14,10 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-cdp-nfc-overlay.dtbo \
 		display/kalama-sde-display-atp-overlay.dtbo
 else
-dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo
-dtbo-$(CONFIG_RTWO_DTB) += display/kalama-sde-display-rtwo-evb1-overlay.dtbo
+ifeq ($(CONFIG_RTWO_DTB),y)
+dtbo-$(CONFIG_RTWO_DTB) += display/kalama-sde-rtwo.dtbo \
+		  display/kalama-sde-display-rtwo-evb1-overlay.dtbo
+endif  #($(CONFIG_RTWO_DTB),y)
 
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 
