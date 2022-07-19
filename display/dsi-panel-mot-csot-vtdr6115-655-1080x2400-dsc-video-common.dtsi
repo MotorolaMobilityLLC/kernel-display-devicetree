@@ -10,8 +10,8 @@
  * GNU General Public License for more details.
  */
 &mdss_mdp {
-	mot_csot_vtdr6115_667_1080x2400_dsc_vid: qcom,mdss_dsi_mot_csot_vtdr6115_667_1080x2400_dsc_vid {
-		qcom,mdss-dsi-panel-name = "mipi_mot_vid_csot_1080p_dsc_667";
+	mot_csot_vtdr6115_655_1080x2400_dsc_vid: qcom,mdss_dsi_mot_csot_vtdr6115_655_1080x2400_dsc_vid {
+		qcom,mdss-dsi-panel-name = "mipi_mot_vid_csot_1080p_dsc_655";
 		qcom,mdss-dsi-panel-supplier = "csot";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,mdss-dsi-panel-physical-type = "oled";
@@ -138,6 +138,9 @@
 				qcom,mdss-dsi-v-bottom-border = <0>;
 
 				qcom,mdss-dsi-on-command = [
+					39 01 00 00 00 00 33 70 11 00 00 AB 30 80 09 60 04 38 00 0C 02 1C 02 1C 02 00 02 0E 00 20 01 1F 00 07 00 0C 08 BB 08 7A 18 00 10 F0 07 10 20 00 06 0F 0F 33 0E 1C 2A 38 46 54
+					39 01 00 00 00 00 02 65 32
+					39 01 00 00 00 00 2D 70 62 69 70 77 79 7B 7D 7E 02 02 22 00 2A 40 2A BE 3A FC 3A FA 3A F8 3B 38 3B 78 3B B6 4B B6 4B F4 4B F4 6C 34 84 74 00 00 00 00 00 00
 					39 01 00 00 00 00 02 53 20
 					39 01 00 00 00 00 03 51 00 00
  					39 01 00 00 00 00 02 6F 01
@@ -150,6 +153,8 @@
 								 06 0b 0b 33 0e 1c 2a 38 46 54 62 69 70 77 79 7b 7d 7e 01 02
 								 01 00 09 40 09 be 19 fc 19 fa 19 f8 1a 38 1a 78 1a b6 2a b6
 								 2a f4 2a f4 4b 34 63 74 00 00 00 00 00 00*/
+
+
 
 					39 01 00 00 00 00 03 F0 AA 10
 					39 01 00 00 00 00 06 CF 09 07 1D 1C 77
@@ -178,7 +183,7 @@
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <12>;
 				qcom,mdss-dsc-slice-width = <540>;
-				qcom,mdss-dsc-slice-per-pkt = <1>;
+				qcom,mdss-dsc-slice-per-pkt = <2>;
 				qcom,mdss-dsc-bit-per-component = <8>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
