@@ -6,7 +6,7 @@
 #include "cape-sde-display-pinctrl.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
-#include "dsi-panel-mot-csot-vtdr6115-667-1080x2400-dsc-video-common.dtsi"
+#include "dsi-panel-mot-csot-vtdr6115-655-1080x2400-dsc-video-common.dtsi"
 
 &soc {
 
@@ -126,7 +126,7 @@
 	delete-cooling-cells;
 };
 
-&mot_csot_vtdr6115_667_1080x2400_dsc_vid {
+&mot_csot_vtdr6115_655_1080x2400_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	//qcom,dsi-dyn-clk-enable;
@@ -186,7 +186,7 @@
 
 &qupv3_se4_i2c {
 	goodix_ts_i2c@5d {
-		panel = <&mot_csot_vtdr6115_667_1080x2400_dsc_vid>;
+		panel = <&mot_csot_vtdr6115_655_1080x2400_dsc_vid>;
 	};
 };
 
