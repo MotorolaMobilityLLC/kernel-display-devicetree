@@ -41,15 +41,15 @@
 		pinctrl-0 = <&display_panel_avdd_default>;
 	};
 
-	disp_rdump_memory: disp_rdump_region@e3940000 {
-		reg = <0xe3940000 0x00800000>;
+	disp_rdump_memory: disp_rdump_region@b8000000 {
+		reg = <0xb8000000 0x00800000>;
 		label = "disp_rdump_region";
 	};
 };
 
 &reserved_memory {
 	splash_memory: splash_region {
-		reg = <0x0 0xe3940000 0x0 0x02b00000>;
+		reg = <0x0 0xb8000000 0x0 0x02b00000>;
 		label = "cont_splash_region";
 	};
 
