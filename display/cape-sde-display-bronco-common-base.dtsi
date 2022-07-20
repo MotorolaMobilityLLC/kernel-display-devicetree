@@ -129,6 +129,11 @@
 &mot_csot_vtdr6115_655_1080x2400_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
+	qcom,dsi-supported-dfps-list = <120 90 60 48>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+	qcom,mdss-dsi-pan-dpfs-send-command;
+
 	//qcom,dsi-dyn-clk-enable;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
