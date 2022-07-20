@@ -46,8 +46,8 @@ qcom,mdss-dsi-te-dcs-command = <1>;
 qcom,mdss-dsi-te-using-te-pin;
 
 //qcom,bklt-dcs-2bytes-enabled;
-qcom,mdss-dsi-bl-min-level = <3>;
-qcom,mdss-dsi-bl-max-level = <2047>;
+qcom,mdss-dsi-bl-min-level = <4>;
+qcom,mdss-dsi-bl-max-level = <14056>;
 qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 
 qcom,mdss-dsi-panel-hdr-enabled;
@@ -92,13 +92,9 @@ qcom,mdss-dsi-dc-on-command = [
 qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
 qcom,mdss-dsi-hbm-on-command = [
-		39 00 00 40 00 00 06 F0 55 AA 52 08 00
-		39 00 00 40 00 00 0A 88 01 02 1C 08 5E 00 00 00 00
-		39 00 00 40 00 00 02 6F 4C
-		39 00 00 40 00 00 03 DF 3F FF
-		39 00 00 40 00 00 02 6F 01
-		39 00 00 40 00 00 03 87 0F FF
-		39 00 00 00 00 00 02 87 25];
+		39 00 00 00 00 00 03 51 3F FC
+		39 00 00 00 00 00 02 87 00];
+
 qcom,mdss-dsi-hbm-off-command = [
 		39 00 00 00 00 00 02 87 00];
 
@@ -136,6 +132,8 @@ qcom,mdss-dsi-display-timings {
 			15 01 00 00 10 00 02 2F 00 //04:48Hz 00:60Hz 03:90Hz 01:120Hz 02:165HZ
 		];
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         39 01 00 00 00 00 06 F0 55 AA 52 08 04
                         39 01 00 00 00 00 02 6F 01
                         39 01 00 00 00 00 04 B5 00 14 03
@@ -224,6 +222,8 @@ qcom,mdss-dsi-display-timings {
 			15 01 00 00 10 00 02 2F 01 //04:48Hz 00:60Hz 03:90Hz 01:120Hz 02:165HZ
 		];
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         39 01 00 00 00 00 06 F0 55 AA 52 08 04
                         39 01 00 00 00 00 02 6F 01
                         39 01 00 00 00 00 04 B5 00 14 03
@@ -311,6 +311,8 @@ qcom,mdss-dsi-display-timings {
 			15 01 00 00 10 00 02 2F 03 //04:48Hz 00:60Hz 03:90Hz 01:120Hz 02:165HZ
 		];
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         39 01 00 00 00 00 06 F0 55 AA 52 08 04
                         39 01 00 00 00 00 02 6F 01
                         39 01 00 00 00 00 04 B5 00 14 03
@@ -398,6 +400,8 @@ qcom,mdss-dsi-display-timings {
 			15 01 00 00 10 00 02 2F 04 //04:48Hz 00:60Hz 03:90Hz 01:120Hz 02:165HZ
 		];
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         39 01 00 00 00 00 06 F0 55 AA 52 08 04
                         39 01 00 00 00 00 02 6F 01
                         39 01 00 00 00 00 04 B5 00 14 03
@@ -485,6 +489,8 @@ qcom,mdss-dsi-display-timings {
 			15 01 00 00 10 00 02 2F 02 //04:48Hz 00:60Hz 03:90Hz 01:120Hz 02:165HZ
 		];
 		qcom,mdss-dsi-on-command = [
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         39 01 00 00 00 00 06 F0 55 AA 52 08 04
                         39 01 00 00 00 00 02 6F 01
                         39 01 00 00 00 00 04 B5 00 14 03
