@@ -4,6 +4,6 @@
 #include "cape-sde.dtsi"
 
 / {
-	qcom,msm-id = <530 0x10000>, <531 0x10000>, <540 0x10000>;
+	qcom,msm-id = <530 0x10000>, <531 0x10000>, <540 0x10000>, <591 0x10000>;
 	qcom,board-id = <0 0>;
 };
