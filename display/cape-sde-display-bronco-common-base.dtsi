@@ -184,8 +184,8 @@
 	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 };
 
-&qupv3_se4_i2c {
-	goodix_ts_i2c@5d {
+&qupv3_se4_spi {
+	goodix-berlin@0 {
 		panel = <&mot_csot_vtdr6115_655_1080x2400_dsc_vid>;
 	};
 };
