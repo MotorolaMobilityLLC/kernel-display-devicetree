@@ -170,28 +170,28 @@
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,dsi-dyn-clk-list = <847480320 850422960 853365600>;
+			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 		timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,dsi-dyn-clk-list = <847480320 850422960 853365600>;
+			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 		timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,dsi-dyn-clk-list = <847480320 850422960 853365600>;
+			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 		timing@3 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,dsi-dyn-clk-list = <847480320 850422960 853365600>;
+			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 	};
 };
