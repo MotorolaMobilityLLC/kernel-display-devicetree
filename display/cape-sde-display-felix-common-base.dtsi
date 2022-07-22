@@ -10,6 +10,7 @@
 #include "dsi-panel-mot-csot-ili7838A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-tianma-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701A-667-1080x2400-dsc-cmd-common.dtsi"
+#include "dsi-panel-mot-boe-nt37701A-667-1080x2992-dsc-cmd-common.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
@@ -128,6 +129,70 @@
 &mdss_mdp {
 	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 	delete-cooling-cells;
+};
+
+&mot_boe_nt37701A_667_1080x2992_dsc_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	//qcom,dsi-dyn-clk-enable;
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <9>;
+	qcom,mdss-dsi-bl-max-level = <3515>;
+	//qcom,mdss-dsi-bl-default-level = <1024>;
+	qcom,mdss-brightness-max-level = <3515>;
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
+	        16000 13000 35500 7000 2500>;
+	qcom,mdss-dsi-panel-peak-brightness = <5000000>;
+	qcom,mdss-dsi-panel-blackness-level = <100>;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 3B 0F 0F 18 15 0F
+							0F 0D 02 04 00 2D 12];
+		};
+		timing@1 {
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 54 16 16 23 1E 15
+							17 13 02 04 00 40 1A];
+		};
+		timing@2 {
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 6D 1D 1E 2E 26 1D
+							1E 18 02 04 00 53 21];
+		};
+		timing@3 {
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 80 23 24 37 2E 22
+							24 1D 02 04 00 62 26];
+		};
+		timing@4 {
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 2D 0C 0C 1D 27 0C
+							0D 0B 02 04 00 25 11];
+		};
+	};
 };
 
 &mot_csot_nt37701A_667_1080x2400_dsc_cmd {
