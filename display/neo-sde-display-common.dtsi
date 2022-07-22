@@ -1,5 +1,7 @@
 #include "dsi-panel-dual-rdp370f-fsc-video.dtsi"
 #include "dsi-panel-dual-rdp370f-fhd-video.dtsi"
+#include "dsi-panel-vtdr6130-dsc-fhd-plus-cmd.dtsi"
+#include "dsi-panel-vtdr6130-dsc-fhd-plus-video.dtsi"
 #include "dsi-panel-sim-dual-fsc-video.dtsi"
 
 #include "neo-sde-display-pinctrl.dtsi"
@@ -72,6 +74,62 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1d 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <2 0 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_vtdr6130_amoled_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 1C 08 07 17 22 07
+				07 08 02 04 00 19 0C];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+		timing@1 {
+			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
+				06 07 02 04 00 16 0B];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+		timing@2 {
+			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1E 05
+				05 06 02 04 00 12 0A];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+		timing@3 {
+			qcom,mdss-dsi-panel-phy-timings = [00 0F 03 03 11 1D 04
+				04 03 02 04 00 0D 09];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_vtdr6130_amoled_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
+				07 08 02 04 00 19 0c];
+			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
