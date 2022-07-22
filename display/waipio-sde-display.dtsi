@@ -17,6 +17,21 @@
 		pinctrl-0 = <&display_panel_avdd_default>;
 	};
 
+	display_panel_avee: display_gpio_regulator@2 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_avee";
+		regulator-min-microvolt = <5500000>;
+		regulator-max-microvolt = <5500000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&tlmm 65 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_avee>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_avee_default>;
+	};
+
 	sde_wb: qcom,wb-display@0 {
 		compatible = "qcom,wb-display";
 		cell-index = <0>;

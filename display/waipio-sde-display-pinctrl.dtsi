@@ -13,6 +13,20 @@
 		};
 	};
 
+	display_panel_avee_default: display_panel_avee_default {
+		mux {
+			pins = "gpio65";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio65";
+			drive-strength = <8>;
+			bias-disable = <0>;
+			output-high;
+		};
+	};
+
 	pmx_sde: pmx_sde {
 		sde_dsi_active: sde_dsi_active {
 			mux {
