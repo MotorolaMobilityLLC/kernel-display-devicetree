@@ -6,6 +6,7 @@
 #include "dsi-panel-mot-tianma-nt37701A-667-curve-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701A-667-curve-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
+#include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
 
 &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v0 {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
