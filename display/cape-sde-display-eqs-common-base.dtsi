@@ -697,7 +697,7 @@
 	qcom,mdss-dsi-bl-max-level = <3515>;
 	//qcom,mdss-dsi-bl-default-level = <1024>;
 	qcom,mdss-brightness-max-level = <3515>;
-	//qcom,backlight_map_type = <1>;
+	qcom,backlight_map_type = <2>;
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
