@@ -6,6 +6,7 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-mtp-overlay.dtbo \
 		display/kalama-sde-display-qrd-overlay.dtbo \
 		display/kalama-sde-display-hdk-overlay.dtbo \
+		display/kalama-sde-display-hhg-overlay.dtbo \
 		display/kalama-sde-display-mtp-nfc-overlay.dtbo \
 		display/kalama-sde-display-rcm-overlay.dtbo \
 		display/kalama-sde-display-cdp-nfc-overlay.dtbo \
