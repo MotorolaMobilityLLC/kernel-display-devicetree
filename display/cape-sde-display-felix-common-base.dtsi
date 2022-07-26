@@ -490,6 +490,15 @@
 	status = "disabled";
 };
 
+&qupv3_se4_i2c {
+	goodix_ts_i2c@5d {
+		panel = <&mot_boe_nt37701A_667_1080x2992_dsc_cmd
+			&mot_csot_ili7838A_667_1080x2400_dsc_cmd
+			&mot_csot_nt37701A_667_1080x2400_dsc_cmd
+			&mot_tianma_nt37701A_667_1080x2400_dsc_cmd>;
+	};
+};
+
 &sde_dp {
 	#clock-cells = <1>;
 	clocks =  <&clock_dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
