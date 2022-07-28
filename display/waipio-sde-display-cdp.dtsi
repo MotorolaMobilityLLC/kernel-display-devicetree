@@ -194,7 +194,7 @@
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
-&dsi_sy103_dsc_2544p_90hz_video {
+&dsi_sy103_dsc_2544p_75hz_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_seeya>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -203,7 +203,7 @@
 	qcom,platform-reset-gpio = <&tlmm 0 0>;
 };
 
-&dsi_sy103_dual_dsc_2544p_90hz_video {
+&dsi_sy103_dual_dsc_2544p_75hz_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_seeya>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <1>;
