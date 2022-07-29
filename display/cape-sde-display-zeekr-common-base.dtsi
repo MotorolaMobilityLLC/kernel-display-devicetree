@@ -7,6 +7,7 @@
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
+#include "dsi-panel-mot-csot-nt37705-1056x1068-dsc-cmd-common-cli_v0.dtsi"
 
 &tlmm {
 	vio_en_m {
@@ -179,7 +180,7 @@
 		qcom,panel-te-source = <1>;
 
 		qcom,mdp = <&mdss_mdp>;
-		qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
+		qcom,dsi-default-panel = <&mot_csot_nt37705_1056x1068_dsc_cmd_cli_v0>;
 	};
 };
 
@@ -349,6 +350,38 @@
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 24 0A
 							0A 09 02 04 00 1E 0F];
+		};
+	};
+};
+
+&mot_csot_nt37705_1056x1068_dsc_cmd_cli_v0 {
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_sec>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <9>;
+	qcom,mdss-dsi-bl-max-level = <3515>;
+	qcom,mdss-brightness-max-level = <3515>;
+	qcom,platform-sec-reset-gpio = <&tlmm 123 0>;
+	qcom,platform-sec-vio-enable-gpio = <&tlmm 128 0>;
+	qcom,platform-sec-vci-enable-gpio = <&tlmm 127 0>;
+	//qcom,mdss-dsi-panel-orientation = "180";
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-no-panel-on-read-support;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0{
+		//qcom,mdss-dsi-panel-clockrate = <601000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
 		};
 	};
 };
