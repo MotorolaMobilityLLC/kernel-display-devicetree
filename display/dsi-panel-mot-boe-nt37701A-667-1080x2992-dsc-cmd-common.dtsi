@@ -110,7 +110,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-dsi-timing-switch-command = [
-			15 01 00 00 10 00 02 2F 03 //08:49Hz 03:60Hz 07:90Hz 02:120Hz 04:144Hz
+			15 01 00 00 10 00 02 2F 01 // 01:60Hz 02:90Hz 03:120Hz
 		];
 
 		qcom,mdss-dsi-on-command = [
@@ -197,94 +197,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-dsi-timing-switch-command = [
-			15 01 00 00 10 00 02 2F 07 //08:49Hz 03:60Hz 07:90Hz 02:120Hz 04:144Hz
-		];
-
-		qcom,mdss-dsi-on-command = [
-			39 01 00 00 00 00 06 F0 55 AA 52 08 00
-			39 01 00 00 00 00 02 6F 05
-			39 01 00 00 00 00 05 B5 7F 2B 1A 32
-			39 01 00 00 00 00 02 6F 0B
-			39 01 00 00 00 00 04 B5 2B 1F 32
-			39 01 00 00 00 00 02 6F 10
-			39 01 00 00 00 00 06 B5 1A 1A 1A 1A 1A
-			39 01 00 00 00 00 02 6F 16
-			39 01 00 00 00 00 06 B5 00 00 00 00 00
-			39 01 00 00 00 00 02 6F 1B
-			39 01 00 00 00 00 06 B5 00 00 00 00 00
-			39 01 00 00 00 00 05 FF AA 55 A5 80
-			39 01 00 00 00 00 02 6F 1D
-			39 01 00 00 00 00 02 F2 05
-			39 01 00 00 00 00 01 35
-			39 01 00 00 00 00 02 53 20
-			39 01 00 00 00 00 05 51 0D BB 0F FE
-			39 01 00 00 00 00 05 2A 00 00 04 37
-			39 01 00 00 00 00 05 2B 00 00 0B AF
-			39 01 00 00 00 00 03 81 01 19
-			39 01 00 00 00 00 02 03 01
-			39 01 00 00 00 00 02 90 11
-			39 01 00 00 00 00 13 91 AB 28 00 10 C2 00 02 0E 01 84 00 07 06 67 06 5C 10 F0
-			39 01 00 00 00 00 01 2C
-			39 01 00 00 00 00 02 2F 07
-			39 01 00 00 00 00 06 F0 55 AA 52 08 00
-			39 01 00 00 00 00 04 C0 66 B3 01
-			39 01 00 00 00 00 02 6F 11
-			39 01 00 00 00 00 02 C0 30
-			39 01 00 00 00 00 06 F0 55 AA 52 08 04
-			39 01 00 00 00 00 02 C2 14
-			39 01 00 00 00 00 02 B1 02
-			39 01 00 00 00 00 02 B2 00
-			39 01 00 00 00 00 02 6F 01
-			39 01 00 00 00 00 04 B2 00 02 00
-			39 01 00 00 00 00 02 6F 04
-			39 01 00 00 00 00 04 B2 09 45 C0
-			39 01 00 00 00 00 07 B4 01 09 48 00 04 B0
-			39 01 00 00 00 00 02 D0 00
-			39 01 00 00 00 00 05 FF AA 55 A5 80
-			39 01 00 00 00 00 02 6F 20
-			39 01 00 00 00 00 02 F7 32
-			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
-		qcom,mdss-dsi-off-command = [
-			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
-
-		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
-		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
-		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_lp_mode";
-		qcom,compression-mode = "dsc";
-		/* Why QCOM doesn't use this, even it used 2 encoder
-		 * as for that dsi_sw43404_amoled_cmd, for ex */
-		/* qcom,mdss-dsc-encoders = <2>; */
-		qcom,mdss-dsc-version = <0x11>;
-		qcom,mdss-dsc-slice-height = <16>;
-		qcom,mdss-dsc-slice-width = <540>;
-		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <10>;
-		qcom,mdss-dsc-bit-per-pixel = <8>;
-		qcom,mdss-dsc-block-prediction-enable;
-	};
-	timing@2{
-		qcom,mdss-dsi-cmd-mode;
-		qcom,mdss-dsi-panel-framerate = <120>;
-		qcom,mdss-dsi-panel-width = <1080>;
-		qcom,mdss-dsi-panel-height = <2992>;
-		qcom,mdss-dsi-h-front-porch = <100>;
-		qcom,mdss-dsi-h-back-porch = <100>;
-		qcom,mdss-dsi-h-pulse-width = <8>;
-		qcom,mdss-dsi-h-sync-skew = <0>;
-		qcom,mdss-dsi-h-sync-pulse = <0>;
-		qcom,mdss-dsi-v-back-porch = <16>;
-		qcom,mdss-dsi-v-front-porch = <16>;
-		qcom,mdss-dsi-v-pulse-width = <2>;
-		qcom,mdss-dsi-h-left-border = <0>;
-		qcom,mdss-dsi-h-right-border = <0>;
-		qcom,mdss-dsi-v-top-border = <0>;
-		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
-		qcom,mdss-dsi-timing-switch-command = [
-			15 01 00 00 10 00 02 2F 02 //08:49Hz 03:60Hz 07:90Hz 02:120Hz 04:144Hz
+			15 01 00 00 10 00 02 2F 02 // 01:60Hz 02:90Hz 03:120Hz
 		];
 
 		qcom,mdss-dsi-on-command = [
@@ -352,9 +265,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 	};
-	timing@3{
+	timing@2{
 		qcom,mdss-dsi-cmd-mode;
-		qcom,mdss-dsi-panel-framerate = <144>;
+		qcom,mdss-dsi-panel-framerate = <120>;
 		qcom,mdss-dsi-panel-width = <1080>;
 		qcom,mdss-dsi-panel-height = <2992>;
 		qcom,mdss-dsi-h-front-porch = <100>;
@@ -371,7 +284,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-dsi-timing-switch-command = [
-			15 01 00 00 10 00 02 2F 04 //08:49Hz 03:60Hz 07:90Hz 02:120Hz 04:144Hz
+			15 01 00 00 10 00 02 2F 03 // 01:60Hz 02:90Hz 03:120Hz
 		];
 
 		qcom,mdss-dsi-on-command = [
@@ -399,94 +312,7 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 02 90 11
 			39 01 00 00 00 00 13 91 AB 28 00 10 C2 00 02 0E 01 84 00 07 06 67 06 5C 10 F0
 			39 01 00 00 00 00 01 2C
-			39 01 00 00 00 00 02 2F 04
-			39 01 00 00 00 00 06 F0 55 AA 52 08 00
-			39 01 00 00 00 00 04 C0 66 B3 01
-			39 01 00 00 00 00 02 6F 11
-			39 01 00 00 00 00 02 C0 30
-			39 01 00 00 00 00 06 F0 55 AA 52 08 04
-			39 01 00 00 00 00 02 C2 14
-			39 01 00 00 00 00 02 B1 02
-			39 01 00 00 00 00 02 B2 00
-			39 01 00 00 00 00 02 6F 01
-			39 01 00 00 00 00 04 B2 00 02 00
-			39 01 00 00 00 00 02 6F 04
-			39 01 00 00 00 00 04 B2 09 45 C0
-			39 01 00 00 00 00 07 B4 01 09 48 00 04 B0
-			39 01 00 00 00 00 02 D0 00
-			39 01 00 00 00 00 05 FF AA 55 A5 80
-			39 01 00 00 00 00 02 6F 20
-			39 01 00 00 00 00 02 F7 32
-			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
-		qcom,mdss-dsi-off-command = [
-			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
-
-		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
-		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
-		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_lp_mode";
-		qcom,compression-mode = "dsc";
-		/* Why QCOM doesn't use this, even it used 2 encoder
-		 * as for that dsi_sw43404_amoled_cmd, for ex */
-		/* qcom,mdss-dsc-encoders = <2>; */
-		qcom,mdss-dsc-version = <0x11>;
-		qcom,mdss-dsc-slice-height = <16>;
-		qcom,mdss-dsc-slice-width = <540>;
-		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <10>;
-		qcom,mdss-dsc-bit-per-pixel = <8>;
-		qcom,mdss-dsc-block-prediction-enable;
-	};
-	timing@4{
-		qcom,mdss-dsi-cmd-mode;
-		qcom,mdss-dsi-panel-framerate = <48>;
-		qcom,mdss-dsi-panel-width = <1080>;
-		qcom,mdss-dsi-panel-height = <2992>;
-		qcom,mdss-dsi-h-front-porch = <100>;
-		qcom,mdss-dsi-h-back-porch = <100>;
-		qcom,mdss-dsi-h-pulse-width = <8>;
-		qcom,mdss-dsi-h-sync-skew = <0>;
-		qcom,mdss-dsi-h-sync-pulse = <0>;
-		qcom,mdss-dsi-v-back-porch = <16>;
-		qcom,mdss-dsi-v-front-porch = <16>;
-		qcom,mdss-dsi-v-pulse-width = <2>;
-		qcom,mdss-dsi-h-left-border = <0>;
-		qcom,mdss-dsi-h-right-border = <0>;
-		qcom,mdss-dsi-v-top-border = <0>;
-		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
-		qcom,mdss-dsi-timing-switch-command = [
-			15 01 00 00 10 00 02 2F 08 //08:49Hz 03:60Hz 07:90Hz 02:120Hz 04:144Hz
-		];
-
-		qcom,mdss-dsi-on-command = [
-			39 01 00 00 00 00 06 F0 55 AA 52 08 00
-			39 01 00 00 00 00 02 6F 05
-			39 01 00 00 00 00 05 B5 7F 2B 1A 32
-			39 01 00 00 00 00 02 6F 0B
-			39 01 00 00 00 00 04 B5 2B 1F 32
-			39 01 00 00 00 00 02 6F 10
-			39 01 00 00 00 00 06 B5 1A 1A 1A 1A 1A
-			39 01 00 00 00 00 02 6F 16
-			39 01 00 00 00 00 06 B5 00 00 00 00 00
-			39 01 00 00 00 00 02 6F 1B
-			39 01 00 00 00 00 06 B5 00 00 00 00 00
-			39 01 00 00 00 00 05 FF AA 55 A5 80
-			39 01 00 00 00 00 02 6F 1D
-			39 01 00 00 00 00 02 F2 05
-			39 01 00 00 00 00 01 35
-			39 01 00 00 00 00 02 53 20
-			39 01 00 00 00 00 05 51 0D BB 0F FE
-			39 01 00 00 00 00 05 2A 00 00 04 37
-			39 01 00 00 00 00 05 2B 00 00 0B AF
-			39 01 00 00 00 00 03 81 01 19
-			39 01 00 00 00 00 02 03 01
-			39 01 00 00 00 00 02 90 11
-			39 01 00 00 00 00 13 91 AB 28 00 10 C2 00 02 0E 01 84 00 07 06 67 06 5C 10 F0
-			39 01 00 00 00 00 01 2C
-			39 01 00 00 00 00 02 2F 08
+			39 01 00 00 00 00 02 2F 03
 			39 01 00 00 00 00 06 F0 55 AA 52 08 00
 			39 01 00 00 00 00 04 C0 66 B3 01
 			39 01 00 00 00 00 02 6F 11
