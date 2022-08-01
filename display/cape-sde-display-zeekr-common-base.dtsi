@@ -394,3 +394,9 @@
 	mmi,aux-switch-enable-gpio = <&tlmm 2 0x00>;
 	mmi,aux-switch-flip-gpio = <&tlmm 71 0x00>;
 };
+
+&qupv3_se4_spi {
+    goodix-berlin@0 {
+        panel = <&mot_csot_nt37705_667_1080x2640_dsc_cmd_v0>;
+    };
+};
