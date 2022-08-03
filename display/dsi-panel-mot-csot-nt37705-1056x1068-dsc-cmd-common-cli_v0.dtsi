@@ -17,7 +17,7 @@ mot_csot_nt37705_1056x1068_dsc_cmd_cli_v0: qcom,mdss_dsi_mot_csot_1056x1068_cmd_
 		qcom,mdss-dsi-panel-physical-type = "oled";
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
-		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-bpp = <30>;
 		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
@@ -56,8 +56,8 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-pulse-width = <16>;
 		qcom,mdss-dsi-h-sync-skew = <0>;
 		qcom,mdss-dsi-h-sync-pulse = <0>;
-		qcom,mdss-dsi-v-back-porch = <4>;
-		qcom,mdss-dsi-v-front-porch = <12>;
+		qcom,mdss-dsi-v-back-porch = <16>;
+		qcom,mdss-dsi-v-front-porch = <30>;
 		qcom,mdss-dsi-v-pulse-width = <4>;
 		qcom,mdss-dsi-h-left-border = <0>;
 		qcom,mdss-dsi-h-right-border = <0>;
@@ -96,6 +96,7 @@ qcom,mdss-dsi-display-timings {
                         39 01 00 00 00 00 02 6F 04
                         39 01 00 00 00 00 03 51 00 00
                         39 01 00 00 00 00 02 53 20
+                        39 01 00 00 00 00 03 90 03 03
                         39 01 00 00 00 00 13 91 AB 28 00 0C D2 00 02 1E 01 11 00 07 09 75 08 AB 10 F0
                         39 01 00 00 00 00 06 F0 55 AA 52 08 01
                         39 01 00 00 00 00 02 6F 01
