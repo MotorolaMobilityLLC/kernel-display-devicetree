@@ -100,12 +100,17 @@ dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.d
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
 		display/parrot-sde-display-atp-overlay.dtbo \
 		display/parrot-sde-display-idp-overlay.dtbo \
 		display/parrot-sde-display-idp-amoled-overlay.dtbo \
 		display/parrot-sde-display-rumi-overlay.dtbo \
 		display/parrot-sde-display-qrd-overlay.dtbo
+else
+dtbo-$(CONFIG_GENEVA_DTB) += display/parrot-sde.dtbo \
+               display/parrot-sde-display-geneva-evb0-overlay.dtbo
+endif  #($CONFIG_EQS_DTB,y)
 else
 dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
 endif
