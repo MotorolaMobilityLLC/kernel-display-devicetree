@@ -19,8 +19,8 @@ qcom,mdss-dsi-panel-supplier = "boe";
 qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
 qcom,mdss-dsi-virtual-channel-id = <0>;
 qcom,mdss-dsi-stream = <0>;
-qcom,mdss-pan-physical-width-dimension = <69>;
-qcom,mdss-pan-physical-height-dimension = <154>;
+qcom,mdss-pan-physical-width-dimension = <63>;
+qcom,mdss-pan-physical-height-dimension = <176>;
 qcom,mdss-dsi-bpp = <30>;
 qcom,mdss-dsi-underflow-color = <0xff>;
 qcom,mdss-dsi-border-color = <0>;
@@ -95,7 +95,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-cmd-mode;
 		qcom,mdss-dsi-panel-framerate = <60>;
 		qcom,mdss-dsi-panel-width = <1080>;
-		qcom,mdss-dsi-panel-height = <2992>;
+		qcom,mdss-dsi-panel-height = <2880>;
 		qcom,mdss-dsi-h-front-porch = <100>;
 		qcom,mdss-dsi-h-back-porch = <100>;
 		qcom,mdss-dsi-h-pulse-width = <8>;
@@ -156,6 +156,12 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 05 FF AA 55 A5 80
 			39 01 00 00 00 00 02 6F 20
 			39 01 00 00 00 00 02 F7 32
+			39 01 00 00 00 00 05 2A 00 00 04 37
+			39 01 00 00 00 00 05 2B 00 70 0B AF
+			39 01 00 00 00 00 05 30 00 70 0B AF
+			39 01 00 00 00 00 05 31 00 00 04 37
+			39 01 00 00 00 00 02 63 03
+			39 01 00 00 00 00 01 12
 			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
@@ -182,7 +188,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-cmd-mode;
 		qcom,mdss-dsi-panel-framerate = <90>;
 		qcom,mdss-dsi-panel-width = <1080>;
-		qcom,mdss-dsi-panel-height = <2992>;
+		qcom,mdss-dsi-panel-height = <2880>;
 		qcom,mdss-dsi-h-front-porch = <100>;
 		qcom,mdss-dsi-h-back-porch = <100>;
 		qcom,mdss-dsi-h-pulse-width = <8>;
@@ -243,6 +249,12 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 05 FF AA 55 A5 80
 			39 01 00 00 00 00 02 6F 20
 			39 01 00 00 00 00 02 F7 32
+			39 01 00 00 00 00 05 2A 00 00 04 37
+			39 01 00 00 00 00 05 2B 00 70 0B AF
+			39 01 00 00 00 00 05 30 00 70 0B AF
+			39 01 00 00 00 00 05 31 00 00 04 37
+			39 01 00 00 00 00 02 63 03
+			39 01 00 00 00 00 01 12
 			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
@@ -269,7 +281,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-cmd-mode;
 		qcom,mdss-dsi-panel-framerate = <120>;
 		qcom,mdss-dsi-panel-width = <1080>;
-		qcom,mdss-dsi-panel-height = <2992>;
+		qcom,mdss-dsi-panel-height = <2880>;
 		qcom,mdss-dsi-h-front-porch = <100>;
 		qcom,mdss-dsi-h-back-porch = <100>;
 		qcom,mdss-dsi-h-pulse-width = <8>;
@@ -330,6 +342,12 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 05 FF AA 55 A5 80
 			39 01 00 00 00 00 02 6F 20
 			39 01 00 00 00 00 02 F7 32
+			39 01 00 00 00 00 05 2A 00 00 04 37
+			39 01 00 00 00 00 05 2B 00 70 0B AF
+			39 01 00 00 00 00 05 30 00 70 0B AF
+			39 01 00 00 00 00 05 31 00 00 04 37
+			39 01 00 00 00 00 02 63 03
+			39 01 00 00 00 00 01 12
 			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
