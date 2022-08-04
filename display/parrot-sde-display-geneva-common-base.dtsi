@@ -203,3 +203,9 @@
 	};
 
 };
+
+&qupv3_se9_spi {
+	goodix-berlin@0 {
+		panel = <&mot_csot_vtdr6115_geneva_1080x2400_dsc_vid>;
+	};
+};
