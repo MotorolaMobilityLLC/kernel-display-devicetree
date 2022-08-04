@@ -6,7 +6,7 @@
 #include "cape-sde-display-pinctrl.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-waipio.h>
-#include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
+#include "dsi-panel-mot-csot-nt37705-667-1080x2640-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-csot-nt37705-1056x1068-dsc-cmd-common-cli_v0.dtsi"
 
 &tlmm {
@@ -283,7 +283,7 @@
 	delete-cooling-cells;
 };
 
-&mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v0 {
+&mot_csot_nt37705_667_1080x2640_dsc_cmd_v0 {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	//qcom,dsi-dyn-clk-enable;
