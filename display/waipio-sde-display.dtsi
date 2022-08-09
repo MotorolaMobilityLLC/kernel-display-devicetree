@@ -18,6 +18,7 @@
 	};
 
 	display_panel_avee: display_gpio_regulator@2 {
+		status = "disabled";
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_panel_avee";
 		regulator-min-microvolt = <5500000>;
