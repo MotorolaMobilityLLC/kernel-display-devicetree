@@ -45,7 +45,6 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 133 0>;
-	qcom,platform-bklight-en-gpio = <&tlmm 91 0>;
 };
 
 &dsi_sharp_4k_dsc_video {
@@ -53,7 +52,6 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 133 0>;
-	qcom,platform-bklight-en-gpio = <&tlmm 91 0>;
 };
 
 &dsi_sharp_qsync_wqhd_cmd {
@@ -61,7 +59,6 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 133 0>;
-	qcom,platform-bklight-en-gpio = <&tlmm 91 0>;
 };
 
 &dsi_sharp_qsync_wqhd_video {
@@ -69,7 +66,6 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 133 0>;
-	qcom,platform-bklight-en-gpio = <&tlmm 91 0>;
 };
 
 &dsi_sharp_qhd_plus_dsc_cmd {
@@ -77,7 +73,6 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 133 0>;
-	qcom,platform-bklight-en-gpio = <&tlmm 91 0>;
 };
 
 &dsi_sharp_qhd_plus_dsc_video {
@@ -110,7 +105,6 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 133 0>;
-	qcom,platform-bklight-en-gpio = <&tlmm 91 0>;
 };
 
 &dsi_dual_nt35597_truly_cmd {
