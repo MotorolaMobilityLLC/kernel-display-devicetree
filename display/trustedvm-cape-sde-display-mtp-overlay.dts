@@ -1,7 +1,8 @@
 /dts-v1/;
 /plugin/;
 
-#include "cape-sde-display-mtp.dtsi"
+#include "trustedvm-cape-sde.dtsi"
+#include "trustedvm-cape-sde-display-mtp.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Cape MTP";
