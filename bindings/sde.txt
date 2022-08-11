@@ -218,6 +218,8 @@ Optional properties:
 				tear effect (TE) IRQ blocks from "mdp_phys".
 				There should be one entry per INTF instance with
 				a zero value for INTFs without TE IRQ block.
+- qcom,sde-emulated-env:	Boolean property to indicate if the MDSS is running in an
+				emulated environment.
 - qcom,sde-off:			SDE offset from "mdp_phys" defined in reg property.
 - qcom,sde-cdm-off:	 	Array of offset addresses for the available
 				cdm blocks. These offsets will be calculated from
@@ -653,6 +655,7 @@ Example:
     #power-domain-cells = <0>;
 
     qcom,sde-hw-version = <0x70000000>;
+    qcom,sde-emulated-env;
     qcom,sde-off = <0x1000>;
     qcom,sde-ctl-off = <0x00002000 0x00002200 0x00002400
 		     0x00002600 0x00002800>;
