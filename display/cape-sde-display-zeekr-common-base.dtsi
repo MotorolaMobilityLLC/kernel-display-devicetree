@@ -93,18 +93,6 @@
 
         qcom,panel-supply-entry@1 {
 		reg = <1>;
-		qcom,supply-name = "ddic";
-		qcom,supply-min-voltage = <1200000>;
-		qcom,supply-max-voltage = <1200000>;
-		qcom,supply-enable-load = <300000>;
-		qcom,supply-disable-load = <0>;
-		qcom,supply-pre-on-sleep = <0>;
-		qcom,supply-post-on-sleep = <0>;
-		qcom,supply-pre-off-sleep = <2>;
-		qcom,supply-post-off-sleep = <0>;
-        };
-        qcom,panel-supply-entry@2 {
-		reg = <2>;
 		qcom,supply-name = "vci";
 		qcom,supply-min-voltage = <3000000>;
 		qcom,supply-max-voltage = <3000000>;
@@ -240,7 +228,7 @@
 			"mdp_core_clk";
 
 	vddio-supply = <&L12C>;
-	ddic-supply = <&L1D>;
+	// ddic-supply = <&L1D>;
 	vci-supply = <&L13C>;
 };
 
@@ -270,12 +258,6 @@
 
 	vddio-supply = <&L2C>;
 	vci-supply = <&L3C>;
-};
-
-&L1D {
-	regulator-min-microvolt = <1200000>;
-	regulator-max-microvolt = <1200000>;
-	qcom,init-voltage = <1200000>;
 };
 
 &mdss_mdp {
