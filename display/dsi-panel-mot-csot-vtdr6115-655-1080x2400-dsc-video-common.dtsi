@@ -21,7 +21,7 @@
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-pan-physical-width-dimension = <68>;
 		qcom,mdss-pan-physical-height-dimension = <152>;
-		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-bpp = <30>;
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
 
@@ -374,7 +374,7 @@
 					39 01 00 00 00 00 03 FF 5A 00
 					39 01 00 00 00 00 03 F0 AA 00
 
-					39 01 00 00 00 00 02 5E 01
+					39 01 00 00 00 00 02 5E 00
 
 					05 01 00 00 78 00 01 11
 					05 01 00 00 00 00 01 29
@@ -391,7 +391,7 @@
 				qcom,mdss-dsc-slice-height = <12>;
 				qcom,mdss-dsc-slice-width = <540>;
 				qcom,mdss-dsc-slice-per-pkt = <2>;
-				qcom,mdss-dsc-bit-per-component = <8>;
+				qcom,mdss-dsc-bit-per-component = <10>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
 
