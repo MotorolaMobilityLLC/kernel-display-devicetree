@@ -110,6 +110,8 @@ dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
 else
 dtbo-$(CONFIG_GENEVA_DTB) += display/parrot-sde.dtbo \
                display/parrot-sde-display-geneva-evb0-overlay.dtbo
+dtbo-$(CONFIG_GENEVN_DTB) += display/parrot-sde.dtbo \
+               display/parrot-sde-display-genevn-evb-overlay.dtbo
 endif  #($CONFIG_EQS_DTB,y)
 else
 dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
