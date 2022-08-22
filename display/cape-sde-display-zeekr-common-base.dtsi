@@ -70,10 +70,24 @@
 			};
 		};
 	};
+	dvdd_en_m {
+		display_panel_dvdd_default: display_panel_dvdd_default {
+			mux {
+				pins = "gpio142";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio142";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
 };
 
 &soc {
-
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
 		#address-cells = <1>;
 		#size-cells = <0>;
@@ -90,9 +104,21 @@
 		qcom,supply-pre-off-sleep = <3>;
 		qcom,supply-post-off-sleep = <0>;
         };
-
-        qcom,panel-supply-entry@1 {
+	qcom,panel-supply-entry@1 {
 		reg = <1>;
+		qcom,supply-name = "dvdd";
+		qcom,supply-min-voltage = <1250000>;
+		qcom,supply-max-voltage = <1250000>;
+		qcom,supply-enable-load = <300000>;
+		qcom,supply-disable-load = <100>;
+		qcom,supply-pre-on-sleep = <1>;
+		qcom,supply-post-on-sleep = <1>;
+		qcom,supply-pre-off-sleep = <3>;
+		qcom,supply-post-off-sleep = <0>;
+        };
+
+        qcom,panel-supply-entry@2 {
+		reg = <2>;
 		qcom,supply-name = "vci";
 		qcom,supply-min-voltage = <3000000>;
 		qcom,supply-max-voltage = <3000000>;
@@ -174,20 +200,20 @@
 
 
 &soc {
-	/*display_panel_avdd: display_gpio_regulator@1 {
+       display_panel_dvdd: display_gpio_regulator@1 {
 		compatible = "qti-regulator-fixed";
-		regulator-name = "display_panel_avdd";
-		regulator-min-microvolt = <5500000>;
-		regulator-max-microvolt = <5500000>;
+		regulator-name = "display_panel_dvdd";
+		regulator-min-microvolt = <1250000>;
+		regulator-max-microvolt = <1250000>;
 		regulator-enable-ramp-delay = <233>;
-		gpio = <&tlmm 64 0>;
+		gpio = <&tlmm 142 0>;
 		enable-active-high;
 		regulator-boot-on;
-		proxy-supply = <&display_panel_avdd>;
+		proxy-supply = <&display_panel_dvdd>;
 		qcom,proxy-consumer-enable;
 		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_avdd_default>;
-	};*/
+		pinctrl-0 = <&display_panel_dvdd_default>;
+	};
 
 	sde_wb: qcom,wb-display@0 {
 		compatible = "qcom,wb-display";
@@ -228,7 +254,7 @@
 			"mdp_core_clk";
 
 	vddio-supply = <&L12C>;
-	// ddic-supply = <&L1D>;
+	dvdd-supply = <&display_panel_dvdd>;
 	vci-supply = <&L13C>;
 };
 
