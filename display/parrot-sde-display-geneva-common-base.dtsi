@@ -156,7 +156,7 @@
 	};
 };
 
-&mot_csot_vtdr6115_geneva_1080x2400_dsc_vid{
+&mot_csot_vtdr6115_655_1080x2400_dsc_vid{
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_amoled>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
@@ -175,11 +175,11 @@
 	qcom,ulps-enabled;
 	qcom,suspend-ulps-enabled;
 
-	/*qcom,mdss-dsi-panel-hdr-enable;
+	qcom,mdss-dsi-panel-hdr-enable;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
 					16000 13000 35500 7000 2500>;
 	qcom,mdss-dsi-panel-peak-brightness = <5000000>;
-	qcom,mdss-dsi-panel-blackness-level = <100>;*/
+	qcom,mdss-dsi-panel-blackness-level = <100>;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
@@ -188,12 +188,12 @@
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dpfs-send-command;
 
-	//qcom,esd-check-enabled;
+	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
-	qcom,mdss-dsi-panel-status-command-state = "dsi_hs_mode";
-	qcom,mdss-dsi-panel-status-value = <0x9c>;
-	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0 0 0>;
+	qcom,mdss-dsi-panel-status-read-length = <3>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -208,6 +208,6 @@
 
 &qupv3_se9_spi {
 	goodix-berlin@0 {
-		panel = <&mot_csot_vtdr6115_geneva_1080x2400_dsc_vid>;
+		panel = <&mot_csot_vtdr6115_655_1080x2400_dsc_vid>;
 	};
 };
