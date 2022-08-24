@@ -805,26 +805,26 @@
 	};
 };
 
-&dsi_sy103_dsc_2544p_90hz_video {
+&dsi_sy103_dsc_2544p_75hz_video {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	qcom,mdss-dsi-display-timings {
                 timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [00 2c 0c 0c 1d 27 0c
-				0c 0b 02 04 00 24 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 25 0a 0a 1b 24 0a
+				0a 0a 02 04 00 1f 0f];
                         qcom,display-topology = <2 2 1>;
                         qcom,default-topology-index = <0>;
                 };
         };
 };
 
-&dsi_sy103_dual_dsc_2544p_90hz_video {
+&dsi_sy103_dual_dsc_2544p_75hz_video {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [00 1b 07 06 16 21 07
-				07 07 02 04 00 17 0c];
+			qcom,mdss-dsi-panel-phy-timings = [00 17 06 05 15 1f 06
+				06 07 02 04 00 15 0b];
 			qcom,display-topology = <2 2 2>;
 			qcom,default-topology-index = <0>;
 		};
