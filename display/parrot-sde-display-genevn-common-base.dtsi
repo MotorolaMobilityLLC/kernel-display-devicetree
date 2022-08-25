@@ -6,7 +6,12 @@
 #include "parrot-sde-display-pinctrl.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
-#include "dsi-panel-vtdr6115-geneva-1080x2400-video-common.dtsi"
+#include "dsi-panel-nt36672c-genevn-1080x2400-video-common.dtsi"
+
+&display_panel_extvdd {
+		regulator-min-microvolt = <5500000>;
+		regulator-max-microvolt = <5500000>;
+};
 
 &soc {
 	dsi_panel_pwr_supply_amoled: dsi_panel_pwr_supply_amoled {
@@ -129,11 +134,13 @@
 };
 
 &sde_dsi {
-	vddio-supply = <&display_panel_vddio>;
-	vci-supply = <&L4E>;
+	/delete-property/ vddio-supply;
+	/delete-property/ vci-supply;
 	/delete-property/ lab-supply;
 	/delete-property/ ibb-supply;
-	extvdd-supply = <&display_panel_extvdd>;
+	/delete-property/ extvdd-supply;
+	lab-supply = <&display_panel_extvdd>;
+	ibb-supply = <&display_panel_avdd>;
 
 	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 };
@@ -156,18 +163,18 @@
 	};
 };
 
-&mot_csot_vtdr6115_geneva_1080x2400_dsc_vid{
+&mot_csot_nt36672c_genevn_1080x2400_dsc_vid{
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_amoled>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-min-level = <9>;
-	qcom,mdss-dsi-bl-max-level = <3515>;
-	qcom,mdss-brightness-max-level = <3515>;
-	qcom,mdss-dsi-bl-default-level = <3481>;
+	qcom,mdss-dsi-bl-max-level = <2047>;
+	qcom,mdss-brightness-max-level = <2047>;
+	qcom,mdss-dsi-bl-default-level = <2047>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
-	//qcom,platform-vio-enable-gpio = <&pm6150l_gpios 9 0>;
+	qcom,platform-vio-enable-gpio = <&tlmm 57 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
         qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
@@ -202,7 +209,7 @@
 };
 
 &qupv3_se9_spi {
-	goodix-berlin@0 {
-		panel = <&mot_csot_vtdr6115_geneva_1080x2400_dsc_vid>;
+	novatek@1{
+		panel = <&mot_csot_nt36672c_genevn_1080x2400_dsc_vid>;
 	};
 };
