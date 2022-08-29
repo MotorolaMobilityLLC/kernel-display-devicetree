@@ -218,28 +218,6 @@
 
 				qcom,mdss-dsi-timing-switch-command-state =
 					"dsi_lp_mode";
-				qcom,mdss-dsi-qsync-on-commands = [
-					39 01 00 00 00 00 03 f0 aa 13
-					39 01 00 00 00 00 18 ce 09 11 09 11 08
-					   c1 07 fa 05 a4 00 3c 00 3c 00 3c 00
-					   0c 00 0c 04 00 00
-					39 01 00 00 00 00 03 f0 aa 10
-					39 01 00 00 00 00 0c bb 00 4c 00 01 ff
-					   01 32 01 6e 01 6e
-					39 01 00 00 00 00 02 bb 01
-				];
-				qcom,mdss-dsi-qsync-on-commands-state =
-					"dsi_hs_mode";
-				qcom,mdss-dsi-qsync-off-commands = [
-					39 01 00 00 00 00 03 f0 aa 10
-					39 01 00 00 00 00 02 bb 00
-					39 01 00 00 00 00 03 f0 aa 13
-					39 01 00 00 00 00 18 ce 09 11 09 11 08
-					   c1 07 fa 05 a4 00 3c 00 34 00 24 00
-					   0c 00 0c 04 00 35
-				];
-				qcom,mdss-dsi-qsync-off-commands-state =
-					"dsi_hs_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <40>;
