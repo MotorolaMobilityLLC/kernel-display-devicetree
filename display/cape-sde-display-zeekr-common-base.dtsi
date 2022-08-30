@@ -379,8 +379,8 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <9>;
-	qcom,mdss-dsi-bl-max-level = <3515>;
-	qcom,mdss-brightness-max-level = <3515>;
+	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-brightness-max-level = <16380>;
 	qcom,platform-sec-reset-gpio = <&tlmm 123 0>;
 	qcom,platform-sec-vio-enable-gpio = <&tlmm 128 0>;
 	qcom,platform-sec-vci-enable-gpio = <&tlmm 127 0>;
@@ -391,6 +391,8 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
 
 	qcom,mdss-dsi-no-panel-on-read-support;
 
