@@ -6,6 +6,7 @@
 #include "dsi-panel-mot-tianma-nt37701A-667-curve-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37701A-667-curve-1080x2400-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
+#include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
@@ -14,6 +15,76 @@
        regulator-min-microvolt = <1230000>;
        regulator-max-microvolt = <1280000>;
        qcom,init-voltage = <1230000>;
+};
+
+&mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v1 {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	//qcom,dsi-dyn-clk-enable;
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <348>;
+	qcom,mdss-dsi-bl-max-level = <16380>;
+	//qcom,mdss-dsi-bl-default-level = <1024>;
+	qcom,mdss-brightness-max-level = <16380>;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
+	        16000 13000 35500 7000 2500>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+	qcom,mot_nt37705A_read_cellid;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			//qcom,mdss-dsi-panel-clockrate = <400000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 03 03 11 1E 04
+							04 03 02 04 00 0E 08];
+		};
+		timing@1 {
+			//qcom,mdss-dsi-panel-clockrate = <801000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1C 07 07 17 15 07
+							07 08 02 04 00 18 0C];
+		};
+		timing@2 {
+			//qcom,mdss-dsi-panel-clockrate = <601000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1F 06
+							06 06 02 04 00 13 0A];
+		};
+		timing@3 {
+			//qcom,mdss-dsi-panel-clockrate = <320000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 0D 03 03 10 1D 04
+							03 02 02 04 00 0C 08];
+		};
+		timing@4 {
+			//qcom,mdss-dsi-panel-clockrate = <1102000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 24 0A
+							0A 09 02 04 00 1E 0F];
+		};
+	};
 };
 
 &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v0 {
