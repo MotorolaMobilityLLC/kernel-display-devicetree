@@ -550,6 +550,7 @@
     goodix-berlin@0 {
         panel = <&mot_csot_nt37701A_667_curve_1080x2400_dsc_cmd
                 &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v0
+                &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v1
                 &mot_tm_nt37705_667_curve_1080x2400_dsc_cmd_v0>;
     };
 };
