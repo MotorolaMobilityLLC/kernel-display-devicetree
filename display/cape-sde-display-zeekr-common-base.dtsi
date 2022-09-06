@@ -368,6 +368,13 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 		};
+		timing@6 { //24
+			qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
+							08 08 02 04 00 19 0D];
+		};
 	};
 };
 
