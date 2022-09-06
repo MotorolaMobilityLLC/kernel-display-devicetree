@@ -601,6 +601,20 @@ Optional properties:
 - qcom,sde-dnsc-blur-dither-off:	An array of u32 values with the offset for dither
 				block, from the dnsc-blur-off
 - qcom,sde-dnsc-blur-dither-size:	A u32 value indicates the dither block address range.
+- qcom,sde-sspp-cac-mode:	A u32 array which denotes the expected CAC mode for each sspp
+- qcom,sde-sspp-parent-rec:	An array of offsets describing the parent rectangle for each
+				rect in CAC fetch mode. The first and second value represents
+				the parent rec id for rect0 and rect1 respectively. Value will be
+				set as 0xFF for those pipes which are not in CAC fetch mode.
+- qcom,sde-sspp-cac-lm-pref:	An array of offsets which denotes the preferred lm for each rect
+				in CAC fetch mode. The first and second value represents the
+				preferred lm id of rec0 and rec1 respectively. Value will be
+				set as 0xFF for those pipes which are not in CAC fetch mode.
+				Values for each rect differ based on cac version.
+- qcom,sde-mixer-cac-lb-lm-pair-pref:	An array of offsets which denote the parent and child
+					pair of mixers for dual pass CAC. The first value
+					represents parent mixer in pass1 and second value
+					represents child mixer in pass2.
 
 Bus Scaling:
 - interconnects                 An array of 4 cell properties with the format of
@@ -825,6 +839,14 @@ Example:
     qcom,sde-te-size = <0xffff>;
     qcom,sde-te2-size = <0xffff>;
     qcom,sde-trusted-vm-env;
+    qcom,sde-sspp-cac-mode = <0x2 0x2 0x2 0x2 0x1 0x1 0x2 0x2 0x0 0x0>;
+    qcom,sde-sspp-parent-rec = <0x4 0x4>, <0x5 0x5>, <0xa 0xa>, <0xb 0xb>,
+				<0xff 0xff>, <0xff 0xff>, <0x4 0xa>, <0x5 0xb>,
+				<0xff 0xff>, <0xff 0xff>;
+    qcom,sde-sspp-cac-lm-pref = <0x0 0x0>, <0x2 0x2>, <0x1 0x1>, <0x3 0x3>,
+				<0xff 0xff>, <0xff 0xff>, <0x0 0x1>, <0x2 0x3>,
+				<0xff 0xff>, <0xff 0xff>;
+    qcom,sde-mixer-cac-lb-lm-pair-pref = <0 4>, <1 5>, <2 6>, <3 7>;
 
     qcom,sde-wb-id = <2>;
     qcom,sde-wb-clk-ctrl = <0x2bc 16>;
