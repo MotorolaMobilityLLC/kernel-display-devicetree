@@ -154,7 +154,6 @@
 	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
 	qcom,dsi-dyn-clk-enable;
-	qcom,qsync-enable;
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -172,7 +171,6 @@
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
-			qcom,mdss-dsi-qsync-min-refresh-rate = <95>;
 		};
 		timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
@@ -180,7 +178,6 @@
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
-			qcom,mdss-dsi-qsync-min-refresh-rate = <120>;
 		};
 		timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
@@ -188,7 +185,6 @@
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
-			qcom,mdss-dsi-qsync-min-refresh-rate = <90>;
 		};
 		timing@3 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
@@ -196,7 +192,6 @@
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
-			qcom,mdss-dsi-qsync-min-refresh-rate = <60>;
 		};
 	};
 };
