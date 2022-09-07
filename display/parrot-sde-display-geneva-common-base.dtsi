@@ -233,7 +233,12 @@
 	qcom,mdss-dsi-panel-status-value = <0x9C>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
-	//qcom,mot_nt37701A_read_cellid;
+
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		39 01 00 00 00 00 03 F0 AA 10
+		06 01 00 01 00 00 01 AC];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -284,6 +289,10 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
+
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 C8];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
