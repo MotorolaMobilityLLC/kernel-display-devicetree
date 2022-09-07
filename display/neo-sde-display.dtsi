@@ -33,6 +33,13 @@
 
 };
 
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xeca00000 0x0 0x02b00000>;
+		label = "cont_splash_region";
+	};
+};
+
 &sde_dsi {
 	clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
