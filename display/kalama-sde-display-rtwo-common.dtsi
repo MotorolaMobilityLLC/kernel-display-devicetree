@@ -11,6 +11,15 @@
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
 
+&mot_dummy_vid_qhd {
+	qcom,mdss-dsi-display-timings {
+                timing@0{
+			qcom,mdss-dsi-panel-width = <1080>;
+			qcom,mdss-dsi-panel-height = <2400>;
+		};
+	};
+};
+
 &L11B {
        regulator-min-microvolt = <1230000>;
        regulator-max-microvolt = <1280000>;
