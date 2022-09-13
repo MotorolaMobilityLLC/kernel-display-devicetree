@@ -8,6 +8,7 @@
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
+#include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v1_lhbm.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
 
