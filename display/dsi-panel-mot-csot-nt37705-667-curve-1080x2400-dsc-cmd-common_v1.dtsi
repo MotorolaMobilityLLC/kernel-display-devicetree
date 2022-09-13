@@ -9,7 +9,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  */
-#include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
+#include "dsi-panel-mot-csot-nt37705-667-curve-1080x2400-dsc-cmd-common_v1_lhbm.dtsi"
 &mdss_mdp {
 mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v1: qcom,mdss_dsi_mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v1 {
 compatible = "qcom,mdss-dsi-panel";
