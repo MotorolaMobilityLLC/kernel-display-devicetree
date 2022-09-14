@@ -222,7 +222,12 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
-	qcom,mot_nt37701A_read_cellid;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
+
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -292,7 +297,11 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
-	qcom,mot_nt37701A_read_cellid;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -362,7 +371,11 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
-	qcom,mot_nt37701A_read_cellid;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -432,7 +445,11 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	//qcom,esd-check-enabled;
-	qcom,mot_nt37701A_read_cellid;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -715,7 +732,11 @@
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-bl-is-exponent;
-	qcom,mot_nt37701A_read_cellid;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
