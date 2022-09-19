@@ -158,6 +158,17 @@
 	qcom,platform-bklight-en-gpio = <&pm8350c_gpios 7 0>;
 };
 
+&dsi_sharp_qhd_plus_dsc_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_qhd_avdd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
+	pwms = <&pm8350c_pwm_2 0 0>;
+	qcom,bl-pmic-pwm-period-usecs = <100>;
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 42 0>;
+	qcom,platform-bklight-en-gpio = <&pm8350c_gpios 7 0>;
+};
+
 &sde_dsi {
 	pinctrl-names = "panel_active", "panel_suspend", "pwm_pin";
 	pinctrl-2 = <&lcd_backlight_ctrl_default>;
@@ -183,7 +194,8 @@
 	};
 
 	atmel_mxt_ts@4a {
-		panel = <&dsi_sharp_qhd_plus_dsc_cmd>;
+		panel = <&dsi_sharp_qhd_plus_dsc_cmd
+			&dsi_sharp_qhd_plus_dsc_video>;
 	};
 
 	synaptics_dsx@22 {
