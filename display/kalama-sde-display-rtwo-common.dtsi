@@ -564,3 +564,11 @@
                 &mot_tm_nt37705_667_curve_1080x2400_dsc_cmd_v0>;
     };
 };
+
+&sde_dp {
+
+	//mmi,aux-switch-enable-gpio = <&tlmm 2 0x00>;
+	//mmi,aux-switch-flip-gpio = <&tlmm 71 0x00>;
+
+       /delete-property/ qcom,mst-enable;
+};
