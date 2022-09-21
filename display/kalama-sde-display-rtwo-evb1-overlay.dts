@@ -13,7 +13,7 @@
 	model = "rtwo";
 	compatible = "qcom,kalama-mtp", "qcom,kalama", "qcom,mtp", "mot,rtwo";
 	qcom,msm-id = <519 0x10000>, <536 0x10000>, <519 0x20000>, <536 0x20000>;
-	qcom,board-id = <0x41 0x9100>, <0x41 0xA100>, <0x41 0xB1B0>,
+	qcom,board-id = <0x41 0x9100>, <0x41 0xA100>, <0x41 0xB1B0>, <0x41 0xC000>,
                     <(RTWO_RADIO_NA << 8 | 0x41) 0xA200>, <(RTWO_RADIO_VZM << 8 | 0x41) 0xA200>,
                     <(RTWO_RADIO_ROW << 8 | 0x41) 0xB1B0>;
 
