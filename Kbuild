@@ -76,7 +76,7 @@ dtbo-$(CONFIG_ARCH_CAPE) += display/cape-sde-eqs.dtbo \
 		display/cape-sde-display-eqs-evt1-overlay.dtbo
 endif  #($CONFIG_EQS_DTB,y)
 
-dtbo-$(CONFIG_BRONCO_DTB) += display/cape-sde.dtbo \
+dtbo-$(CONFIG_BRONCO_DTB) += display/cape-sde-bronco.dtbo \
 		display/cape-sde-display-bronco-evb1-overlay.dtbo
 
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
