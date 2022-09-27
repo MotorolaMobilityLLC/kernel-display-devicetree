@@ -176,7 +176,7 @@
 
 &mot_csot_nt36672c_660_1080x2400_dsc_vid_120hz{
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
 	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-min-level = <9>;
@@ -208,9 +208,17 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
+	qcom,mdss-dsi-panel-supplier = "csot";
+
 	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
+	qcom,mdss-dsi-hbm-on-command = [39 01 00 00 00 00 03 51 07 FF];
+	qcom,mdss-dsi-hbm-on-command-state =  "dsi_lp_mode";
+	qcom,mdss-dsi-hbm-off-command = [39 01 00 00 00 00 03 51 06 4B];
+	qcom,mdss-dsi-hbm-off-command-state =  "dsi_lp_mode";
+	qcom,mdss-dsi-hbm-type = "lcd-dcs-wled";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -225,13 +233,13 @@
 
 &mot_tm_ili7807s_660_1080x2400_dsc_vid_120hz{
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
 	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-min-level = <9>;
-	qcom,mdss-dsi-bl-max-level = <1023>;
-	qcom,mdss-brightness-max-level = <1023>;
-	qcom,mdss-dsi-bl-default-level = <1023>;
+	qcom,mdss-dsi-bl-max-level = <2047>;
+	qcom,mdss-brightness-max-level = <2047>;
+	qcom,mdss-dsi-bl-default-level = <2047>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	//qcom,platform-vio-enable-gpio = <&tlmm 57 0>;
@@ -257,9 +265,17 @@
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
+	qcom,mdss-dsi-panel-supplier = "tm";
+
 	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
+	qcom,mdss-dsi-hbm-on-command = [39 01 00 00 00 00 03 51 03 FF];
+	qcom,mdss-dsi-hbm-on-command-state =  "dsi_lp_mode";
+	qcom,mdss-dsi-hbm-off-command = [39 01 00 00 00 00 03 51 03 25];
+	qcom,mdss-dsi-hbm-off-command-state =  "dsi_lp_mode";
+	qcom,mdss-dsi-hbm-type = "lcd-dcs-wled";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -270,6 +286,43 @@
 		};
 	};
 
+};
+
+&qupv3_se2_i2c {
+	status = "ok";
+
+        lcd_backlight@36 {
+                compatible = "awinic,aw99703-bl";
+                reg = <0x36>;
+
+		/* Awinic, aw99703 */
+                aw99703,hwen-gpio = <&pm6150l_gpios 10 0>;
+                aw99703,bl-map = <3>; /* brightness map level 1:256,2:1024,3:2048 */
+                aw99703,using-lsb;
+                aw99703,ovp-level = <2>; /* 0:17.5V, 1:24V, 2:31V, 3:38V, 4:41.5V */
+                aw99703,ocp-level = <1>; /* 0:0.9A, 1:1.8A, 2:2.7A, 3:3.4A */
+                aw99703,switch-freq = <1>; /* 1000kHz(default) */
+                aw99703,auto-freq-high = <0x10>;
+                aw99703,auto-freq-low = <0x05>;
+                aw99703,bl-fscal-led = <0x17>; /* 23.2mA */
+                aw99703,bl-channel = <3>; /* 3 led string */
+                aw99703,turn-on-ramp = <0x00>; /* 512us */
+                aw99703,turn-off-ramp = <0x04>; /* 8ms */
+                aw99703,pwm-trans-dim = <0>; /* 2ms */
+                aw99703,i2c-trans-dim = <1>; /* 128ms */
+                aw99703,pwm-mode = <1>; /* 1 pwm enable,0 PWM disable */
+                aw99703,map-type = <0>; /* 0 exponential, 4 linear */
+                aw99703,work-mode = <1>; /* backlight */
+		aw99703,default-brightness = <1810>;
+	};
+};
+
+&qupv3_se2_i2c_sleep {
+    config {
+        /delete-property/ bias-disable;
+        bias-pull-up;
+        input-enable;
+    };
 };
 
 &qupv3_se9_spi {
