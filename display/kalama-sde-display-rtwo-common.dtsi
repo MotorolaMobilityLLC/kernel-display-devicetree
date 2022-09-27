@@ -43,6 +43,7 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+	qcom,mdss-dsi-bl-double-write;
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
@@ -113,6 +114,7 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+	qcom,mdss-dsi-bl-double-write;
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
