@@ -30,7 +30,14 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
-		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
+
+		qcom,mdss-dsi-cabc-mv-command = [15 01 00 00 00 00 02 55 03];
+		qcom,mdss-dsi-cabc-mv-command-state =  "dsi_hs_mode";
+		qcom,mdss-dsi-cabc-ui-command = [15 01 00 00 00 00 02 55 01];
+		qcom,mdss-dsi-cabc-ui-command-state =  "dsi_hs_mode";
+		qcom,mdss-dsi-cabc-dis-command = [15 01 00 00 00 00 02 55 00];
+		qcom,mdss-dsi-cabc-dis-command-state =  "dsi_hs_mode";
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
@@ -53,6 +60,7 @@
 				qcom,mdss-dsi-on-command = [
  					39 01 00 00 00 00 04 FF 78 07 06
  					15 01 00 00 00 00 02 3E E2
+					15 01 00 00 00 00 02 80 00
  					15 01 00 00 00 00 02 12 BD
  					15 01 00 00 00 00 02 08 20
 
@@ -77,10 +85,12 @@
 
  					39 01 00 00 00 00 04 FF 78 07 07
  					15 01 00 00 00 00 02 29 CF
+					15 01 00 00 00 00 02 11 16
 
  					39 01 00 00 00 00 04 FF 78 07 00
- 					39 01 00 00 00 00 03 51 03 FF
+ 					39 01 00 00 00 00 03 51 03 25
  					15 01 00 00 00 00 02 53 24
+ 					15 01 00 00 00 00 02 55 01
  					15 01 00 00 00 00 02 35 00
 
  					05 01 00 00 78 00 02 11 00
