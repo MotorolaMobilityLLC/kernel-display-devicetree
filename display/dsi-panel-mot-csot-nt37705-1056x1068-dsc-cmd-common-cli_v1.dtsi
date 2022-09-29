@@ -129,7 +129,9 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 02 6F 27
 			39 01 00 00 00 00 06 B5 0D 0D 0D 0D 0D
 			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
+			05 01 00 00 00 00 01 29
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -231,7 +233,9 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 02 6F 27
 			39 01 00 00 00 00 06 B5 0D 0D 0D 0D 0D
 			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
+			05 01 00 00 00 00 01 29
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -333,7 +337,9 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 02 6F 27
 			39 01 00 00 00 00 06 B5 0D 0D 0D 0D 0D
 			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
+			05 01 00 00 00 00 01 29
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -435,7 +441,9 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 02 6F 27
 			39 01 00 00 00 00 06 B5 0D 0D 0D 0D 0D
 			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
+			05 01 00 00 00 00 01 29
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -537,7 +545,9 @@ qcom,mdss-dsi-display-timings {
 			39 01 00 00 00 00 02 6F 27
 			39 01 00 00 00 00 06 B5 0D 0D 0D 0D 0D
 			05 01 00 00 78 00 01 11
-			05 01 00 00 00 00 01 29];	/* display on */
+			05 01 00 00 00 00 01 29
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
