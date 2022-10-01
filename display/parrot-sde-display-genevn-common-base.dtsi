@@ -210,7 +210,7 @@
 
 	qcom,mdss-dsi-panel-supplier = "csot";
 
-	qcom,dsi-supported-dfps-list = <120 90 60>;
+	qcom,dsi-supported-dfps-list = <120 90 60 30>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
@@ -267,7 +267,7 @@
 
 	qcom,mdss-dsi-panel-supplier = "tm";
 
-	qcom,dsi-supported-dfps-list = <120 90 60>;
+	qcom,dsi-supported-dfps-list = <120 90 60 30>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
