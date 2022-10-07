@@ -92,6 +92,15 @@
 	};
 };
 
+&sde_dp {
+		pinctrl-names = "mdss_dp_hpd_active", "mdss_dp_hpd_tlmm", "mdss_dp_hpd_ctrl", "mdss_dp_active", "mdss_dp_sleep";
+		pinctrl-0 = <&dp_hpd_pin>;
+		pinctrl-1 = <&dp_hpd_pin>;
+		pinctrl-2 = <&dp_hpd_ctrl>;
+		pinctrl-3 = <&dp_hpd_ctrl>;
+		pinctrl-4 = <&dp_hpd_ctrl>;
+};
+
 &dsi_dual_rdp370f_fsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-panel-status-check-mode = "esd_sw_sim_success";
