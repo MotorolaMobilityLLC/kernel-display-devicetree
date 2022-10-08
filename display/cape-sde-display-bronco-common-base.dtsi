@@ -46,8 +46,8 @@
 		qcom,panel-supply-entry@2 {
 			reg = <1>;
 			qcom,supply-name = "ddic";
-			qcom,supply-min-voltage = <1300000>;
-			qcom,supply-max-voltage = <1300000>;
+			qcom,supply-min-voltage = <1296000>;
+			qcom,supply-max-voltage = <1296000>;
 			qcom,supply-enable-load = <300000>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-pre-on-sleep = <0>;
@@ -167,7 +167,7 @@
 
 &L1D {
 	regulator-min-microvolt = <1250000>;
-	regulator-max-microvolt = <1250000>;
+	regulator-max-microvolt = <1296000>;
 	qcom,init-voltage = <1250000>;
 };
 
