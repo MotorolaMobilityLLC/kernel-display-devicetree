@@ -132,6 +132,8 @@
 					39 01 00 00 00 00 02 6F 07
 					39 01 00 00 00 00 05 B5 2B 1B 00 32
 
+					39 01 00 00 00 00 03 90 03 03
+
 					05 01 00 00 78 00 01 11
 					05 01 00 00 00 00 01 29
 				];
@@ -149,6 +151,7 @@
 				qcom,mdss-dsc-bit-per-component = <10>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
+				qcom,mdss-dsc-novateck-ic;
 /*
 				qcom,mdss-dsi-dfps-48-command = [
 						39 00 00 40 00 00 02 6C 00
