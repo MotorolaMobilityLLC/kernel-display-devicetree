@@ -39,7 +39,7 @@ qcom,mdss-dsi-lane-3-state;
 
 qcom,mdss-dsi-dma-trigger = "trigger_sw";
 qcom,mdss-dsi-mdp-trigger = "none";
-qcom,mdss-dsi-reset-sequence = <0 11>, <1 1>, <0 1>, <1 11>;
+qcom,mdss-dsi-reset-sequence = <0 11>, <1 2>, <0 30>, <1 20>;
 qcom,mdss-dsi-lp11-init;
 qcom,mdss-dsi-tx-eot-append;
 qcom,mdss-dsi-te-pin-select = <1>;
@@ -215,10 +215,10 @@ qcom,mdss-dsi-display-timings {
                         39 01 00 00 00 00 03 C7 00 00
                         39 01 00 00 00 00 02 26 00
                         39 01 00 00 00 00 02 1F 40
-                        05 01 00 00 78 00 01 11
-                        05 01 00 00 00 00 01 29
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
-                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
+                        39 01 00 00 00 00 03 B2 01 60
+                        05 01 00 00 78 00 01 11
+                        05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -335,10 +335,10 @@ qcom,mdss-dsi-display-timings {
                         39 01 00 00 00 00 03 C7 00 00
                         39 01 00 00 00 00 02 26 00
                         39 01 00 00 00 00 02 1F 40
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         05 01 00 00 78 00 01 11
-                        05 01 00 00 00 00 01 29
-			39 01 00 00 00 00 06 F0 55 AA 52 08 00
-                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
+                        05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -454,10 +454,10 @@ qcom,mdss-dsi-display-timings {
                         39 01 00 00 00 00 03 C7 00 00
                         39 01 00 00 00 00 02 26 00
                         39 01 00 00 00 00 02 1F 40
+                        39 01 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 01 00 00 00 00 03 B2 01 60
                         05 01 00 00 78 00 01 11
-                        05 01 00 00 00 00 01 29
-			39 01 00 00 00 00 06 F0 55 AA 52 08 00
-                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
+                        05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -573,10 +573,10 @@ qcom,mdss-dsi-display-timings {
                         39 01 00 00 00 00 03 C7 00 00
                         39 01 00 00 00 00 02 26 00
                         39 01 00 00 00 00 02 1F 40
-                        05 01 00 00 78 00 01 11
-                        05 01 00 00 00 00 01 29
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
-                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
+                        39 01 00 00 00 00 03 B2 01 60
+                        05 01 00 00 78 00 01 11
+                        05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
@@ -692,10 +692,10 @@ qcom,mdss-dsi-display-timings {
                         39 01 00 00 00 00 03 C7 00 00
                         39 01 00 00 00 00 02 26 00
                         39 01 00 00 00 00 02 1F 40
-                        05 01 00 00 78 00 01 11
-                        05 01 00 00 00 00 01 29
                         39 01 00 00 00 00 06 F0 55 AA 52 08 00
-                        39 01 00 00 00 00 03 B2 01 60];	/* display on */
+                        39 01 00 00 00 00 03 B2 01 60
+                        05 01 00 00 78 00 01 11
+                        05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
 			05 01 00 00 78 00 01 10];	/* enter sleep mode */
