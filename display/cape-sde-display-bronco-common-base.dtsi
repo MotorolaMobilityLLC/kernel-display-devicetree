@@ -317,7 +317,7 @@
 
 	qcom,cellid-read-enabled;
 	qcom,mdss-dsi-panel-cellid-read-length = <23>;
-	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 C8];
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
