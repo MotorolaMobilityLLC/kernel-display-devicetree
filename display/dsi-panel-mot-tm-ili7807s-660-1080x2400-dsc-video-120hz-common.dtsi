@@ -27,9 +27,10 @@
 		qcom,mdss-dsi-lane-1-state;
 		qcom,mdss-dsi-lane-2-state;
 		qcom,mdss-dsi-lane-3-state;
+		qcom,mdss-dsi-lp11-init;
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
-		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
+		qcom,mdss-dsi-reset-sequence = <1 4>, <0 1>, <1 12>;
 		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
 
 		qcom,mdss-dsi-cabc-mv-command = [15 01 00 00 00 00 02 55 03];
@@ -97,11 +98,12 @@
  					15 01 00 00 00 00 02 55 01
  					15 01 00 00 00 00 02 35 00
 
- 					05 01 00 00 78 00 02 11 00
- 					05 01 00 00 30 00 02 29 00
+					05 01 00 00 46 00 02 11 00
+					05 01 00 00 0A 00 02 29 00
 				];
 
 				qcom,mdss-dsi-off-command = [
+					39 01 00 00 01 00 04 FF 78 07 00
 					05 01 00 00 14 00 02 28 00
 					05 01 00 00 78 00 02 10 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";

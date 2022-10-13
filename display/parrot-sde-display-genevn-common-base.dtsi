@@ -9,14 +9,8 @@
 #include "dsi-panel-mot-csot-nt36672c-660-1080x2400-dsc-video-120hz-common.dtsi"
 #include "dsi-panel-mot-tm-ili7807s-660-1080x2400-dsc-video-120hz-common.dtsi"
 
-&display_panel_extvdd {
-		regulator-min-microvolt = <5500000>;
-		regulator-max-microvolt = <5500000>;
-};
-
-
 &tlmm {
-	panel_vio_en_default: panel_vio_en_default {
+	display_panel_vddio_default: display_panel_vddio_default {
 		mux {
 			pins = "gpio57";
 			function = "gpio";
@@ -31,8 +25,32 @@
 	};
 };
 
+&pm6150l_gpios {
+	display_panel_supply_ctrl {
+		display_panel_avdd_default: display_panel_avdd_default {
+			pins = "gpio3";
+			function = "normal";
+			input-disable;
+			output-enable;
+			bias-disable;
+			power-source = <0>;
+			qcom,drive-strength = <2>;
+		};
+
+		display_panel_avee_default: display_panel_avee_default {
+			pins = "gpio4";
+			function = "normal";
+			input-disable;
+			output-enable;
+			bias-disable;
+			power-source = <0>;
+			qcom,drive-strength = <2>;
+		};
+	};
+};
+
 &soc {
-	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
+	dsi_panel_pwr_supply_nt36672c: dsi_panel_pwr_supply_nt36672c {
 		#address-cells = <1>;
 		#size-cells = <0>;
 
@@ -70,18 +88,86 @@
 		};
 	};
 
-	panel_vio: panel_gpio_regulator@1 {
+	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1904000>;
+			qcom,supply-enable-load = <32000>;
+			qcom,supply-disable-load = <80>;
+			qcom,supply-pre-off-sleep = <20>;
+		};
+
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "lab";
+			qcom,supply-min-voltage = <5500000>;
+			qcom,supply-max-voltage = <5500000>;
+			qcom,supply-enable-load = <100000>;
+			qcom,supply-disable-load = <100>;
+			qcom,supply-pre-on-sleep = <3>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "ibb";
+			qcom,supply-min-voltage = <5500000>;
+			qcom,supply-max-voltage = <5500000>;
+			qcom,supply-enable-load = <100000>;
+			qcom,supply-disable-load = <100>;
+			qcom,supply-pre-off-sleep = <3>;
+			qcom,supply-post-on-sleep = <3>;
+		};
+	};
+
+	/delete-node/ display_panel_vddio;
+	/delete-node/ display_panel_avdd;
+	/delete-node/ display_panel_extvdd;
+
+	display_panel_vddio: display_gpio_regulator@0 {
 		compatible = "qti-regulator-fixed";
-		regulator-name = "panel_vio";
+		regulator-name = "display_panel_vddio";
 		regulator-min-microvolt = <1800000>;
 		regulator-max-microvolt = <1800000>;
 		regulator-enable-ramp-delay = <233>;
 		gpio = <&tlmm 57 0>;
 		enable-active-high;
 		regulator-boot-on;
-		proxy-supply = <&panel_vio>;
+		proxy-supply = <&display_panel_vddio>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&panel_vio_en_default>;
+		pinctrl-0 = <&display_panel_vddio_default>;
+	};
+
+	display_panel_avdd: display_gpio_regulator@1 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_avdd";
+		regulator-min-microvolt = <5500000>;
+		regulator-max-microvolt = <5500000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&pm6150l_gpios 3 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_avdd>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_avdd_default>;
+	};
+
+	display_panel_avee: display_gpio_regulator@2 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_avee";
+		regulator-min-microvolt = <5500000>;
+		regulator-max-microvolt = <5500000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&pm6150l_gpios 4 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_avee>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_avee_default>;
 	};
 
 	sde_dsi: qcom,dsi-display-primary {
@@ -155,9 +241,9 @@
 	/delete-property/ lab-supply;
 	/delete-property/ ibb-supply;
 	/delete-property/ extvdd-supply;
-        vddio-supply = <&panel_vio>;
-	lab-supply = <&display_panel_extvdd>;
-	ibb-supply = <&display_panel_avdd>;
+        vddio-supply = <&display_panel_vddio>;
+	lab-supply = <&display_panel_avdd>;
+	ibb-supply = <&display_panel_avee>;
 
 	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 };
@@ -175,7 +261,7 @@
 };
 
 &mot_csot_nt36672c_660_1080x2400_dsc_vid_120hz{
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_nt36672c>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
 	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-no-panel-on-read-support;
@@ -249,6 +335,8 @@
 
 	qcom,ulps-enabled;
 	qcom,suspend-ulps-enabled;
+
+	qcom,platform-need-execute-shutdown;
 
 	/*qcom,mdss-dsi-panel-hdr-enable;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
