@@ -80,6 +80,7 @@
 		qcom,aux-cfg9-settings = [44 03];
 
 		qcom,max-pclk-frequency-khz = <675000>;
+		qcom,display-type = "primary";
 
 		qcom,widebus-enable;
 
