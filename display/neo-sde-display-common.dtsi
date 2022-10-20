@@ -191,6 +191,10 @@
 	qcom,mdss-dsi-panel-status-check-mode = "esd_sw_sim_success";
 	qcom,esd-check-enabled;
 
+	qcom,dsi-supported-dfps-list = <60 55 48>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 10 03 03 11 1e 04
