@@ -131,7 +131,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-mdp-transfer-time-us = <5500>;
 		qcom,mdss-dsi-timing-switch-command = [
 			15 01 00 00 10 00 02 2F 01 //05:48Hz 01:60Hz 04:90Hz 02:120Hz 03:165HZ
@@ -251,7 +250,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-mdp-transfer-time-us = <5500>;
 		qcom,mdss-dsi-timing-switch-command = [
 			15 01 00 00 10 00 02 2F 02 //05:48Hz 01:60Hz 04:90Hz 02:120Hz 03:165HZ
@@ -370,7 +368,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-mdp-transfer-time-us = <5500>;
 		qcom,mdss-dsi-timing-switch-command = [
 			15 01 00 00 10 00 02 2F 04 //05:48Hz 01:60Hz 04:90Hz 02:120Hz 03:165HZ
@@ -489,7 +486,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-mdp-transfer-time-us = <5500>;
 		qcom,mdss-dsi-timing-switch-command = [
 			15 01 00 00 10 00 02 2F 05 //05:48Hz 01:60Hz 04:90Hz 02:120Hz 03:165HZ
@@ -608,7 +604,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
-		qcom,mdss-dsi-panel-jitter = <0x20 0xa>; /* 90fps +/- 2 */
 		qcom,mdss-mdp-transfer-time-us = <5500>;
 		qcom,mdss-dsi-timing-switch-command = [
 			15 01 00 00 10 00 02 2F 03 //05:48Hz 01:60Hz 04:90Hz 02:120Hz 03:165HZ
