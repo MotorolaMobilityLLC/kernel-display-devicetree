@@ -73,6 +73,7 @@
 			qcom,supply-enable-load = <100000>;
 			qcom,supply-disable-load = <100>;
 			qcom,supply-pre-on-sleep = <3>;
+			qcom,supply-post-on-sleep = <3>;
 		};
 
 		qcom,panel-supply-entry@2 {
@@ -278,6 +279,8 @@
 
 	qcom,ulps-enabled;
 	qcom,suspend-ulps-enabled;
+
+	qcom,platform-need-execute-shutdown;
 
 	/*qcom,mdss-dsi-panel-hdr-enable;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
