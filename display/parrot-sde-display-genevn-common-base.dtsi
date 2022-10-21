@@ -276,6 +276,8 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
         qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+	qcom,tp_state_check_enable;
+	qcom,tp_state_need_reset;
 
 	qcom,ulps-enabled;
 	qcom,suspend-ulps-enabled;
@@ -335,6 +337,7 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
         qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+	qcom,tp_state_check_enable;
 
 	qcom,ulps-enabled;
 	qcom,suspend-ulps-enabled;
