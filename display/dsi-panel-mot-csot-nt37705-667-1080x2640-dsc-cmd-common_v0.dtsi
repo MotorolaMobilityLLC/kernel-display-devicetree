@@ -245,6 +245,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 53 20
                         39 00 00 00 00 00 03 90 03 03
                         39 00 00 00 00 00 13 91 AB 28 00 0C D2 00 02 25 01 14 00 07 09 75 08 7A 10 F0
+                        39 00 00 00 00 00 02 5A 04
                         39 00 00 00 00 00 02 26 00
                         39 00 00 00 00 00 02 1F 40
 			39 00 00 00 00 00 06 F0 55 AA 52 08 00
@@ -270,6 +271,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 
 	timing@1{
@@ -417,6 +419,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 53 20
                         39 00 00 00 00 00 03 90 03 03
                         39 00 00 00 00 00 13 91 AB 28 00 0C D2 00 02 25 01 14 00 07 09 75 08 7A 10 F0
+                        39 00 00 00 00 00 02 5A 04
                         39 00 00 00 00 00 02 26 00
                         39 00 00 00 00 00 02 1F 40
 			            39 00 00 00 00 00 06 F0 55 AA 52 08 00
@@ -439,6 +442,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	/*timing@1{
 		qcom,mdss-dsi-cmd-mode;
@@ -752,6 +756,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 53 20
                         39 00 00 00 00 00 03 90 03 03
                         39 00 00 00 00 00 13 91 AB 28 00 0C D2 00 02 25 01 14 00 07 09 75 08 7A 10 F0
+                        39 00 00 00 00 00 02 5A 04
                         39 00 00 00 00 00 02 26 00
                         39 00 00 00 00 00 02 1F 40
                         39 00 00 00 00 00 06 F0 55 AA 52 08 00
@@ -775,6 +780,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@3{
 		qcom,mdss-dsi-cmd-mode;
@@ -922,6 +928,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 53 20
                         39 00 00 00 00 00 03 90 03 03
                         39 00 00 00 00 00 13 91 AB 28 00 0C D2 00 02 25 01 14 00 07 09 75 08 7A 10 F0
+                        39 00 00 00 00 00 02 5A 04
                         39 00 00 00 00 00 02 26 00
                         39 00 00 00 00 00 02 1F 40
                         39 00 00 00 00 00 06 F0 55 AA 52 08 00
@@ -945,6 +952,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 
 	timing@4{
@@ -1115,6 +1123,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 
 	timing@5{
@@ -1137,8 +1146,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 00 00 00 02 2f 30
-            39 00 00 00 00 00 02 6f 01
-			39 00 00 00 00 00 02 6d 00
 			39 00 00 00 00 00 03 6d 04 00
 		];
 		qcom,mdss-dsi-on-command = [
@@ -1289,6 +1296,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@6{
 		qcom,mdss-dsi-cmd-mode;
@@ -1459,6 +1467,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@7{
 		qcom,mdss-dsi-cmd-mode;
@@ -1625,6 +1634,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 };
 
