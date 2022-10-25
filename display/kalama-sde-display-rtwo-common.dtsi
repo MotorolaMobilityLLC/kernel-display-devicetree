@@ -13,7 +13,43 @@
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v1_lhbm.dtsi"
+&soc {
+	dsi_panel_pwr_supply_rtwo: dsi_panel_pwr_supply_rtwo {
+		#address-cells = <1>;
+		#size-cells = <0>;
 
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <200000>;
+			qcom,supply-disable-load = <1>;
+			qcom,supply-post-on-sleep = <1>;
+		};
+
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <1230000>;
+			qcom,supply-max-voltage = <1280000>;
+			qcom,supply-enable-load = <299000>;
+			qcom,supply-disable-load = <1>;
+			qcom,supply-post-on-sleep = <1>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <10000>;
+			qcom,supply-disable-load = <1>;
+			qcom,supply-post-on-sleep = <1>;
+		};
+	};
+
+};
 &mot_dummy_vid_qhd {
 	qcom,mdss-dsi-display-timings {
                 timing@0{
@@ -34,7 +70,7 @@
 
 	//qcom,dsi-dyn-clk-enable;
 
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_rtwo>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
@@ -105,7 +141,7 @@
 
 	//qcom,dsi-dyn-clk-enable;
 
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_rtwo>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
@@ -176,7 +212,7 @@
 
 	//qcom,dsi-dyn-clk-enable;
 
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_rtwo>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
@@ -246,7 +282,7 @@
 
 	//qcom,dsi-dyn-clk-enable;
 
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_rtwo>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
