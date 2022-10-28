@@ -13,3 +13,15 @@
 	/delete-property/ qcom,mst-enable;
 };
 
+&mdss_dsi_phy0 {
+	/delete-property/ qcom,dsi-pll-ssc-en;
+};
+
+&mdss_dsi_phy1 {
+        status = "disabled";
+};
+
+&mdss_dsi1 {
+        status = "disabled";
+};
+
