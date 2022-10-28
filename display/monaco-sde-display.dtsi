@@ -1,5 +1,7 @@
+#include "monaco-sde.dtsi"
 #include "dsi-panel-rm69090-amoled-178-cmd.dtsi"
 #include "dsi-panel-rm69090-amoled-178-vid.dtsi"
+#include "dsi-panel-rm6d030-amoled-141-cmd.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-monaco.h>
 &soc {
 	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
@@ -53,8 +55,7 @@
 		};
 	};
 
-	dsi_panel_pwr_supply_labibb_amoled: dsi_panel_pwr_supply_labibb_amoled
-{
+	dsi_panel_pwr_supply_labibb_amoled: dsi_panel_pwr_supply_labibb_amoled {
 		#address-cells = <1>;
 		#size-cells = <0>;
 
@@ -169,6 +170,23 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 0C 03 03 10 1D 03
 				03 03 02 02 04 0B 08];
+			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_rm6d030_amoled_cmd {
+	qcom,ulps-enabled;
+	qcom,skip-panel-power-off;
+	qcom,mdss-dsi-t-clk-post = <0x07>;
+	qcom,mdss-dsi-t-clk-pre = <0x0A>;
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 0A 02 02 0F 1D 02
+				02 02 02 02 04 0A 07];
 			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
