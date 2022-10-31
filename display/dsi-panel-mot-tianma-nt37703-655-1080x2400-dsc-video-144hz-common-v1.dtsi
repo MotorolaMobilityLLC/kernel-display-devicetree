@@ -10,7 +10,7 @@
  * GNU General Public License for more details.
  */
 &mdss_mdp {
-	mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz_v1: qcom,mdss_dsi_mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz_v1 {
+	mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz_v1: qcom,mdss_dsi_mot_tm_nt37703_655_1080x2400_dsc_vid_144hz_v1 {
 		qcom,mdss-dsi-panel-name = "mipi_mot_vid_tianma_1080p_dsc_655_144hz";
 		qcom,mdss-dsi-panel-supplier = "tianma";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
