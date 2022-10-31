@@ -73,6 +73,8 @@ dtbo-$(CONFIG_ARCH_RAVELIN) += display/ravelin-sde.dtbo \
 		display/ravelin-sde-display-idp-overlay.dtbo \
 		display/ravelin-sde-display-idp-amoled-overlay.dtbo \
 		display/ravelin-sde-display-rumi-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_RAVELIN) += display/trustedvm-ravelin-sde-display-idp-overlay.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
