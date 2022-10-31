@@ -448,6 +448,7 @@
 	goodix-berlin@0 {
 		panel = <&mot_csot_vtdr6115_655_1080x2400_dsc_vid
 			&mot_csot_vtdr6115_655_1080x2400_dsc_vid_144hz
+			&mot_csot_vtdr6115_655_1080x2400_dsc_vid_144hz_v1
 			&mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz
 			&mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz_v1>;
 	};
