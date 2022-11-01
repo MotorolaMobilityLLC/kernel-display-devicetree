@@ -19,6 +19,10 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde-rtwo.dtbo \
 		  display/kalama-sde-display-rtwo-evb1-overlay.dtbo
 endif  #($(CONFIG_RTWO_DTB),y)
 
+ifeq ($(CONFIG_OBERON_DTB),y)
+dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde-display-oberon-evb-overlay.dtbo
+endif
+
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 
 else
