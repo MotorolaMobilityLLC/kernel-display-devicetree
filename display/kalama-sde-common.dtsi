@@ -230,6 +230,7 @@
 		qcom,sde-qos-cpu-irq-latency = <300>;
 
 		qcom,sde-ipcc-protocol-id = <0x2>;
+		qcom,sde-ipcc-client-dpu-phys-id = <0x19>;
 
 		/* offsets are relative to "mdp_phys + qcom,sde-off */
 		qcom,sde-reg-dma-off = <0 0x400>;
