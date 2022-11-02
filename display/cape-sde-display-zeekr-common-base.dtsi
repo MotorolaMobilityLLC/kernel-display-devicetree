@@ -223,7 +223,6 @@
 		qcom,panel-te-source = <1>;
 
 		qcom,mdp = <&mdss_mdp>;
-		qcom,dsi-default-panel = <&mot_csot_nt37705_1056x1068_dsc_cmd_cli_v0>;
 	};
 };
 
