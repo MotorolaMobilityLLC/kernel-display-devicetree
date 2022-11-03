@@ -180,11 +180,10 @@
 &mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz_v1 {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	qcom,dsi-supported-dfps-list = <60 144 120 90>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
-	qcom,mdss-dsi-pan-on-fps = <60>;
 
 	//qcom,dsi-dyn-clk-enable;
 
@@ -232,11 +231,10 @@
 &mot_tianma_nt37703_655_1080x2400_dsc_vid_144hz {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	qcom,dsi-supported-dfps-list = <60 144 120 90>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
-	qcom,mdss-dsi-pan-on-fps = <60>;
 
 	//qcom,dsi-dyn-clk-enable;
 
@@ -284,11 +282,10 @@
 &mot_csot_vtdr6115_655_1080x2400_dsc_vid_144hz_v1 {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	qcom,dsi-supported-dfps-list = <60 144 120 90>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
-	qcom,mdss-dsi-pan-on-fps = <60>;
 
 	//qcom,dsi-dyn-clk-enable;
 
@@ -334,11 +331,10 @@
 &mot_csot_vtdr6115_655_1080x2400_dsc_vid_144hz {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	qcom,dsi-supported-dfps-list = <60 144 120 90>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
-	qcom,mdss-dsi-pan-on-fps = <60>;
 
 	//qcom,dsi-dyn-clk-enable;
 
@@ -384,11 +380,10 @@
 &mot_csot_vtdr6115_655_1080x2400_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <120 90 60 48>;
+	qcom,dsi-supported-dfps-list = <60 120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
-	qcom,mdss-dsi-pan-on-fps = <60>;
 
 	//qcom,dsi-dyn-clk-enable;
 
