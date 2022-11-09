@@ -72,7 +72,8 @@ dtbo-$(CONFIG_ARCH_RAVELIN) += display/ravelin-sde.dtbo \
 		display/ravelin-sde-display-atp-overlay.dtbo \
 		display/ravelin-sde-display-idp-overlay.dtbo \
 		display/ravelin-sde-display-idp-amoled-overlay.dtbo \
-		display/ravelin-sde-display-rumi-overlay.dtbo
+		display/ravelin-sde-display-rumi-overlay.dtbo \
+		display/ravelin-sde-display-qrd-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_RAVELIN) += display/trustedvm-ravelin-sde-display-idp-overlay.dtbo \
 		display/trustedvm-ravelin-sde-display-idp-amoled-overlay.dtbo
