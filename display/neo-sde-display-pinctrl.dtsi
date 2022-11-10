@@ -68,4 +68,32 @@
 			};
 		};
 	};
+
+	dp_hpd_pin: hpd_pin@103 {
+		mux {
+			pins = "gpio103";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio103";
+			bias-disable;
+			input-enable;
+			drive-strength = <2>;
+		};
+	};
+
+	dp_hpd_ctrl: hpd_ctrl@103 {
+		mux {
+			pins = "gpio103";
+			function = "dp0_hot";
+		};
+
+		config {
+			pins = "gpio103";
+			bias-disable;
+			input-enable;
+			drive-strength = <2>;
+		};
+	};
 };
