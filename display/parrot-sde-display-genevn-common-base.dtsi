@@ -335,6 +335,7 @@
 	qcom,mdss-dsi-bl-default-level = <2047>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
+        touch-rst-pin = <&tlmm 64 0>;
 	//qcom,platform-vio-enable-gpio = <&tlmm 57 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
         qcom,mdss-dsi-bl-inverted-dbv;
