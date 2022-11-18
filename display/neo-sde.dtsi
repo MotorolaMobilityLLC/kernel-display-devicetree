@@ -3,6 +3,7 @@
 #include <dt-bindings/clock/qcom,gcc-neo.h>
 #include <dt-bindings/interconnect/qcom,neo.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
+#include <dt-bindings/clock/qcom,tcsrcc.h>
 #include "neo-sde-common.dtsi"
 
 &soc {
@@ -14,8 +15,168 @@
 		};
 	};
 
+	sde_dp: qcom,dp_display@ae90000 {
+		status = "disabled";
+		cell-index = <0>;
+		compatible = "qcom,dp-display";
+		usb-phy = <&usb_qmp_dp_phy>;
+		qcom,ext-disp = <&ext_disp>;
+		usb-controller = <&usb0>;
 
+		reg =   <0xae90000 0x0fc>,
+			<0xae90200 0x0c0>,
+			<0xae90400 0x770>,
+			<0xae91000 0x098>,
+			<0x88eaa00 0x200>,
+			<0x88ea200 0x200>,
+			<0x88ea600 0x200>,
+			<0xaf07fd0 0x1f4>,
+			<0x88ea000 0x200>,
+			<0x88e8000 0x20>,
+			<0x0aee1000 0x034>,
+			<0xae91400 0x098>,
+			<0xaf09000 0x14>;
+		reg-names = "dp_ahb", "dp_aux", "dp_link",
+			"dp_p0", "dp_phy", "dp_ln_tx0", "dp_ln_tx1",
+			"dp_mmss_cc", "dp_pll", "usb3_dp_com",
+			"hdcp_physical", "dp_p1", "gdsc";
 
+		interrupt-parent = <&mdss_mdp>;
+		interrupts = <12 0>;
+
+		qcom,dp-hpd-gpio = <&tlmm 103 0>;
+		qcom,dp-low-power-hw-hpd;
+		qcom,dp-aux-switch = <&sde_dp>;
+
+		#clock-cells = <1>;
+		clocks =  <&dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
+			<&rpmhcc RPMH_CXO_CLK>,
+			<&tcsrcc TCSR_USB3_CLKREF_EN>,
+			<&gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
+			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
+			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK_SRC>,
+			<&dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
+			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK_SRC>,
+			<&sde_dp 1>,
+			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
+			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
+			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
+		clock-names = "core_aux_clk", "rpmh_cxo_clk", "core_usb_ref_clk_src",
+			"core_usb_pipe_clk", "link_clk", "link_clk_src", "link_iface_clk",
+			"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
+			"strm0_pixel_clk", "strm1_pixel_clk";
+
+		qcom,pll-revision = "4nm-v1";
+		qcom,phy-version = <0x420>;
+		qcom,aux-cfg0-settings = [20 00];
+		qcom,aux-cfg1-settings = [24 13];
+		qcom,aux-cfg2-settings = [28 A4];
+		qcom,aux-cfg3-settings = [2c 00];
+		qcom,aux-cfg4-settings = [30 0a];
+		qcom,aux-cfg5-settings = [34 26];
+		qcom,aux-cfg6-settings = [38 0a];
+		qcom,aux-cfg7-settings = [3c 03];
+		qcom,aux-cfg8-settings = [40 b7];
+		qcom,aux-cfg9-settings = [44 03];
+
+		qcom,max-pclk-frequency-khz = <675000>;
+		qcom,display-type = "primary";
+
+		qcom,widebus-enable;
+
+		qcom,qos-cpu-mask = <0xf>;
+		qcom,qos-cpu-latency-us = <300>;
+
+		vdda-1p2-supply = <&L3A>;
+		vdda-0p9-supply = <&L1A>;
+		vdda_usb-0p9-supply = <&L8A>;
+		vdda_aux-sbu-supply = <&L2A>;
+		vdd_mx-supply = <&VDD_MXA_LEVEL>;
+		vdd_usb3_dp_phy_gdsc-supply = <&gcc_usb3_phy_gdsc>;
+		hpd-pwr-supply = <&L15A>;
+
+		qcom,ctrl-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,ctrl-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-1p2";
+				qcom,supply-min-voltage = <1200000>;
+				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-enable-load = <30100>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+
+		qcom,phy-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,phy-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-0p9";
+				qcom,supply-min-voltage = <912000>;
+				qcom,supply-max-voltage = <912000>;
+				qcom,supply-enable-load = <115000>;
+				qcom,supply-disable-load = <0>;
+			};
+
+			qcom,phy-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda_usb-0p9";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <880000>;
+				qcom,supply-enable-load = <323000>;
+				qcom,supply-disable-load = <0>;
+			};
+
+			qcom,phy-supply-entry@2 {
+				reg = <2>;
+				qcom,supply-name = "vdda_usb-3P08";
+				qcom,supply-min-voltage = <3080000>;
+				qcom,supply-max-voltage = <3080000>;
+				qcom,supply-enable-load = <10000>;
+				qcom,supply-disable-load = <0>;
+			};
+
+			qcom,phy-supply-entry@3 {
+				reg = <3>;
+				qcom,supply-name = "vdd_usb3_dp_phy_gdsc";
+				qcom,supply-min-voltage =
+						<RPMH_REGULATOR_LEVEL_LOW_SVS>;
+				qcom,supply-max-voltage =
+						<RPMH_REGULATOR_LEVEL_NOM>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
+
+			qcom,phy-supply-entry@4 {
+				reg = <4>;
+				qcom,supply-name = "hpd-pwr";
+				qcom,supply-min-voltage = <1800000>;
+				qcom,supply-max-voltage = <1800000>;
+				qcom,supply-enable-load = <20000>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+
+		qcom,pll-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,pll-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdd_mx";
+				qcom,supply-min-voltage =
+						<RPMH_REGULATOR_LEVEL_TURBO>;
+				qcom,supply-max-voltage =
+						<RPMH_REGULATOR_LEVEL_MAX>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+	};
 
 	sde_rscc: qcom,sde_rscc@af20000 {
 		cell-index = <0>;
@@ -55,6 +216,7 @@
 		qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-vmid = <0xa>;
+		dma-coherent;
 	};
 };
 
