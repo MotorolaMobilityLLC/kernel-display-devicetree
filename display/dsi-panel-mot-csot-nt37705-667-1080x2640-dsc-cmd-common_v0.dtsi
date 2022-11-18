@@ -629,7 +629,8 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-			39 00 00 00 00 00 02 2F 30
+                        39 00 00 40 00 00 02 5A 04
+			39 00 00 40 00 00 02 2F 30
 			39 00 00 00 00 00 03 6d 00 00
 		];
 		qcom,mdss-dsi-on-command = [
@@ -801,7 +802,8 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-			39 00 00 00 00 00 02 2F 30
+                        39 00 00 40 00 00 02 5A 04
+			39 00 00 40 00 00 02 2F 30
 			39 00 00 00 00 00 03 6d 01 00
 		];
 		qcom,mdss-dsi-on-command = [
@@ -974,6 +976,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
+                        39 00 00 40 00 00 02 5A 00
 			39 00 00 40 00 00 02 2f 30
 			39 00 00 00 00 00 03 6d 03 00
 		];
@@ -1089,7 +1092,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 17 10
                         39 00 00 00 00 00 05 2A 00 00 04 37
                         39 00 00 00 00 00 05 2B 00 00 0A 4F
-                        39 00 00 00 00 00 02 5A 04
+                        39 00 00 00 00 00 02 5A 00
                         39 00 00 00 00 00 02 2F 30
                         39 00 00 00 00 00 03 6d 03 00
                         39 00 00 00 00 00 02 5F 80
@@ -1145,7 +1148,8 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-			39 00 00 00 00 00 02 2f 30
+                        39 00 00 40 00 00 02 5A 00
+			39 00 00 40 00 00 02 2f 30
 			39 00 00 00 00 00 03 6d 04 00
 		];
 		qcom,mdss-dsi-on-command = [
@@ -1260,7 +1264,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 17 10
                         39 00 00 00 00 00 05 2A 00 00 04 37
                         39 00 00 00 00 00 05 2B 00 00 0A 4F
-                        15 00 00 00 00 00 02 5A 04
+                        15 00 00 00 00 00 02 5A 00
                         15 00 00 00 00 00 02 2F 30
                         39 00 00 00 00 00 02 6F 01
                         15 00 00 00 00 00 02 6d 00
@@ -1317,6 +1321,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
+                        39 00 00 00 00 00 02 5A 04
 			39 00 00 00 00 00 02 2F 30
 			39 00 00 00 00 00 03 6d 02 00
 		];
