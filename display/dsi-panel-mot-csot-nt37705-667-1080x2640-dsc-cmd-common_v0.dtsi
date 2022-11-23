@@ -68,7 +68,8 @@ qcom,mdss-dsi-dc-off-command = [
 		39 00 00 40 00 00 02 CC 10
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 2E
-		39 00 00 00 00 00 03 C0 12 34
+		39 00 00 40 00 00 03 C0 12 34
+		39 00 00 00 00 00 03 6D 00 00
 		];
 
 qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
@@ -89,7 +90,8 @@ qcom,mdss-dsi-dc-on-command = [
 		39 00 00 40 00 00 02 CC 10
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 2E
-		39 00 00 00 00 00 03 C0 89 AB
+		39 00 00 40 00 00 03 C0 89 AB
+		39 00 00 00 00 00 03 6D 00 00
 		];
 qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
