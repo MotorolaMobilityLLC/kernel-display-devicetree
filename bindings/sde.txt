@@ -554,6 +554,8 @@ Optional properties:
 				bit mask, which is a combination of SID and  pheripheral id's.
 - qcom,sde-ib-bw-vote:		A u32 array of IB bandwidth vote values in kbps for
 				MNOC, LLCC and DDR/EBI respectively.
+- qcom,sde-mixer-stage-base-layer: A boolean property to indicate if a layer can be staged on base
+				stage instead of border fill
 
 Bus Scaling:
 - interconnects                 An array of 4 cell properties with the format of
