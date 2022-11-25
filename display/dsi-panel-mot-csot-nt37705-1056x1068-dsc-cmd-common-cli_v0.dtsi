@@ -21,7 +21,8 @@ mot_csot_nt37705_1056x1068_dsc_cmd_cli_v0: qcom,mdss_dsi_mot_csot_1056x1068_cmd_
 		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
-
+		qcom,mdss-pan-physical-width-dimension = <65>;
+		qcom,mdss-pan-physical-height-dimension = <66>;
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
 
