@@ -1,36 +1,5 @@
 #include "neo-sde-display.dtsi"
 
-&sde_rscc {
-        status = "disabled";
-};
-
-&mdss_mdp {
-	vdd-supply = <&disp_cc_mdss_core_gdsc>;
-
-	qcom,platform-supply-entries {
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		qcom,platform-supply-entry@0 {
-			reg = <0>;
-			qcom,supply-name = "mmcx";
-			qcom,supply-min-voltage = <0>;
-				qcom,supply-max-voltage = <0>;
-				qcom,supply-enable-load = <0>;
-				qcom,supply-disable-load = <0>;
-		};
-
-		qcom,platform-supply-entry@1 {
-			reg = <1>;
-			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <0>;
-				qcom,supply-max-voltage = <0>;
-				qcom,supply-enable-load = <0>;
-				qcom,supply-disable-load = <0>;
-		};
-	};
-};
-
 &tlmm {
 	display_panel_avdd_default: display_panel_avdd_default {
 		mux {
@@ -105,14 +74,6 @@
 	avee-supply = <&display_panel_avee>;
 };
 
-&disp_rsc {
-	sde_rsc_rpmh {
-	        status = "disabled";
-		compatible = "qcom,sde-rsc-rpmh";
-		cell-index = <0>;
-	};
-};
-
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_rscc>;
 };
