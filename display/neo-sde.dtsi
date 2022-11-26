@@ -133,7 +133,7 @@
 
 			qcom,phy-supply-entry@2 {
 				reg = <2>;
-				qcom,supply-name = "vdda_usb-3P08";
+				qcom,supply-name = "vdda_aux-sbu";
 				qcom,supply-min-voltage = <3080000>;
 				qcom,supply-max-voltage = <3080000>;
 				qcom,supply-enable-load = <10000>;
