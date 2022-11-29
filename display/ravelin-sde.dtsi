@@ -40,8 +40,8 @@
 
 		#list-cells = <1>;
 		qcom,mdss-rot-mode = <1>;
-		qcom,mdss-highest-bank-bit = <0x3>;
-
+		qcom,mdss-highest-bank-bit = <0x8 0x2>,
+					     <0x7 0x1>;
 		clocks = <&dispcc DISP_CC_MDSS_AHB_CLK>,
 			 <&dispcc DISP_CC_MDSS_ROT_CLK>;
 		clock-names = "iface_clk", "rot_clk";
