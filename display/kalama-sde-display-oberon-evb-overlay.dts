@@ -15,11 +15,17 @@
 /dts-v1/;
 /plugin/;
 
-#include "kalama-sde-display-rtwo-common.dtsi"
+#include "kalama-sde-display-oberon-common.dtsi"
 
 / {
 	model = "oberon";
 	compatible = "qcom,kalama-mtp", "qcom,kalama", "qcom,mtp", "mot,oberon";
 	qcom,msm-id = <519 0x10000>, <536 0x10000>, <519 0x20000>, <536 0x20000>;
 	qcom,board-id = <0x47 0x9000>;
+};
+
+&qupv3_se4_i2c {
+	goodix_ts_i2c@5d {
+		panel = <&mot_tianma_nt37701A_667_1080x2400_dsc_cmd>;
+	};
 };
