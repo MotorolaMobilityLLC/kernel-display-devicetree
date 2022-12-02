@@ -88,12 +88,20 @@ dtbo-$(CONFIG_ARCH_CAPE) += display/trustedvm-cape-sde-display-qrd-overlay.dtbo 
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+#remove useless qcom device tree in moto build
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
 		display/diwali-sde-display-atp-overlay.dtbo \
 		display/diwali-sde-display-idp-overlay.dtbo \
 		display/diwali-sde-display-idp-amoled-overlay.dtbo \
 		display/diwali-sde-display-qrd-overlay.dtbo \
 		display/diwali-sde-display-rumi-overlay.dtbo
+else
+ifeq ($(CONFIG_LYNKCO_DTB),y)
+dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
+		display/diwali-sde-display-lynkco-evb1-overlay.dtbo
+endif  #($CONFIG_LYNKCO_DTB,y)
+endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.dtbo \
 		display/trustedvm-diwali-sde-display-qrd-overlay.dtbo
