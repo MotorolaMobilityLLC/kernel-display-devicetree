@@ -369,6 +369,14 @@
 &dsi_ft8726_fhd_plus_120_video {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
+	qcom,dsi-supported-dfps-list = <120 90 60 48>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
+	qcom,dsi-dyn-clk-enable;
+	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
+
+	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -376,11 +384,12 @@
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
 	qcom,mdss-dsi-display-timings {
-	timing@0 {
+		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1b 07 06 16 21 07
 				07 07 02 04 00 17 0c];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <798013440 794688384 791363328>;
 		};
 	};
 };
