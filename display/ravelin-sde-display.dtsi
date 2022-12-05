@@ -83,10 +83,6 @@
 &dsi_sim_cmd{
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
-		timing@0 { /* WQHD 60FPS cmd vid mode*/
-			qcom,panel-roi-alignment = <720 40 720 40 720 40>;
-			qcom,partial-update-enabled = "single_roi";
-		};
 		timing@2 { /* FHD 60FPS cmd mode*/
 			qcom,panel-roi-alignment = <540 40 540 40 540 40>;
 			qcom,partial-update-enabled = "single_roi";
