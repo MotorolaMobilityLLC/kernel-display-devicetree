@@ -56,11 +56,11 @@ qcom,mdss-dsi-panel-peak-brightness = <4200000>;
 qcom,mdss-dsi-panel-blackness-level = <3230>;
 
 qcom,mdss-dsi-dc-off-command = [
-		39 00 00 00 00 00 06 F0 55 AA 52 08 05
-		39 00 00 40 00 00 02 6F 0E
-		39 00 00 00 00 00 03 EC 00 E0
+		39 00 00 40 00 00 06 F0 55 AA 52 08 05
+		39 00 00 40 00 00 02 6F 12
+		39 00 00 40 00 00 05 EC 00 80 E4 B0
 
-		39 00 00 00 00 00 06 F0 55 AA 52 08 00
+		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 2E
 		39 00 00 40 00 00 03 C0 12 34
 		39 00 00 40 00 00 02 B2 01
@@ -78,8 +78,8 @@ qcom,mdss-dsi-dc-off-command = [
 qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 qcom,mdss-dsi-dc-on-command = [
 		39 00 00 40 00 00 06 F0 55 AA 52 08 05
-		39 00 00 40 00 00 02 6F 0E
-		39 00 00 40 00 00 03 EC 00 A0
+		39 00 00 40 00 00 02 6F 12
+		39 00 00 40 00 00 05 EC 00 68 68 B0
 
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 2E
