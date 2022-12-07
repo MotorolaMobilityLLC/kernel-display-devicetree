@@ -1,7 +1,7 @@
 &mdss_mdp {
 	dsi_ft8726_fhd_plus_120_video: qcom,mdss_dsi_ft8726_fhd_plus_120_video {
 		qcom,mdss-dsi-panel-name =
-			"ft8726 fhd plus 120Hz Video panel";
+			"ft8726 lcd video mode dsi focaltech panel with DSC";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
