@@ -18,7 +18,7 @@
 	};
 
 	display_panel_ibb: display_panel_ibb_stub {
-		compatible = "qti-regulator-fixed";
+		compatible = "qcom,stub-regulator";
 		regulator-name = "display_panel_ibb";
 		regulator-min-microvolt = <4600000>;
 		regulator-max-microvolt = <6000000>;
