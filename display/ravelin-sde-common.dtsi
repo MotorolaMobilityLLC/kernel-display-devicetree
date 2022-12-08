@@ -6,10 +6,12 @@
 		compatible = "qcom,sde-kms";
 		reg = <0x0ae00000 0x84000>,
 			<0x0aeb0000 0x2008>,
-			<0x0aeac000 0x800>;
+			<0x0aeac000 0x800>,
+			<0x0ae8f000 0x30>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
-			"regdma_phys";
+			"regdma_phys",
+			"sid_phys";
 
 		/* interrupt config */
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
