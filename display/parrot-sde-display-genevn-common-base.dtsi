@@ -432,3 +432,9 @@
 		panel = <&mot_tm_ili7807s_660_1080x2400_dsc_vid_120hz>;
 	};
 };
+&soc {
+	fp_egistec {
+		panel = <&mot_csot_nt36672c_660_1080x2400_dsc_vid_120hz
+			&mot_tm_ili7807s_660_1080x2400_dsc_vid_120hz>;
+	};
+};
