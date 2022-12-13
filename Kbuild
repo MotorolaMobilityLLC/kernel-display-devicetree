@@ -67,6 +67,18 @@ else
 dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
 endif
 
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_RAVELIN) += display/ravelin-sde.dtbo \
+		display/ravelin-sde-display-atp-overlay.dtbo \
+		display/ravelin-sde-display-idp-overlay.dtbo \
+		display/ravelin-sde-display-idp-amoled-overlay.dtbo \
+		display/ravelin-sde-display-rumi-overlay.dtbo \
+		display/ravelin-sde-display-qrd-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_RAVELIN) += display/trustedvm-ravelin-sde-display-idp-overlay.dtbo \
+		display/trustedvm-ravelin-sde-display-idp-amoled-overlay.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo

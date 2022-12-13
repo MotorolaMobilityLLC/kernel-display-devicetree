@@ -4,6 +4,7 @@
 #include "ravelin-sde.dtsi"
 
 / {
-	qcom,msm-id = <568 0x10000>;
+	qcom,msm-id = <568 0x10000>, <602 0x10000>,
+			<581 0x10000>, <582 0x10000>;
 	qcom,board-id = <0 0>, <0 0x600>;
 };

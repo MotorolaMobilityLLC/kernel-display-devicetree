@@ -17,27 +17,12 @@
 		pinctrl-0 = <&display_1p8_1p2_pwr_en_default>;
 	};
 
-	sde_wb1: qcom,wb-display@0 {
+	sde_wb: qcom,wb-display@0 {
 		compatible = "qcom,wb-display";
-		status = "disabled";
 		cell-index = <0>;
-		label = "wb_display1";
+		label = "wb_display";
 	};
 
-	sde_wb2: qcom,wb-display@2 {
-		compatible = "qcom,wb-display";
-		status = "disabled";
-		cell-index = <0>;
-		label = "wb_display2";
-	};
-
-};
-
-&reserved_memory {
-	splash_memory: splash_region {
-		reg = <0x0 0xeca00000 0x0 0x02b00000>;
-		label = "cont_splash_region";
-	};
 };
 
 &sde_dsi {
@@ -68,5 +53,5 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_rscc>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_rscc &sde_wb>;
 };
