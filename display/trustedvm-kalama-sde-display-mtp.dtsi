@@ -116,7 +116,7 @@
 
 &dsi_dual_sim_cmd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
+	qcom,bl-dcs-cmd-state = "dsi_lp_mode";
 };
 
 &dsi_dual_sim_dsc_375_cmd {
