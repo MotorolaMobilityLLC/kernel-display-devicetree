@@ -36,7 +36,7 @@ qcom,mdss-dsi-lane-3-state;
 
 qcom,mdss-dsi-dma-trigger = "trigger_sw";
 qcom,mdss-dsi-mdp-trigger = "none";
-qcom,mdss-dsi-reset-sequence = <0 11>, <1 2>, <0 30>, <1 20>;
+qcom,mdss-dsi-reset-sequence = <0 12>, <1 1>, <0 1>, <1 13>;
 qcom,mdss-dsi-lp11-init;
 qcom,mdss-dsi-tx-eot-append;
 qcom,mdss-dsi-te-pin-select = <1>;
