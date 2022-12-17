@@ -5,7 +5,9 @@
 
 / {
 	model = "Qualcomm Technologies, Inc. Kalama HDK";
-	compatible = "qcom,kalama-hdk", "qcom,kalama", "qcom,hdk";
-	qcom,msm-id = <536 0x10000>, <536 0x20000>;
+	compatible = "qcom,kalama-hdk", "qcom,kalama", "qcom,hdk",
+			"qcom,kalamap";
+	qcom,msm-id = <536 0x10000>, <536 0x20000>, <603 0x20000>,
+			<604 0x20000>;
 	qcom,board-id = <0x1001f 0>;
 };
