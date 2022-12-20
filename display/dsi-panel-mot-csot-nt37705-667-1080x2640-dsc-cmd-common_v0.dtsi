@@ -806,7 +806,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-timing-switch-command = [
                         39 00 00 40 00 00 02 5A 04
 			39 00 00 40 00 00 02 2F 30
-			39 00 00 00 00 00 03 6d 01 00
+			39 00 00 00 00 00 03 6d 05 00
 		];
 		qcom,mdss-dsi-on-command = [
                         39 00 00 00 00 00 06 F0 55 AA 52 08 00
@@ -980,7 +980,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-timing-switch-command = [
                         39 00 00 40 00 00 02 5A 00
 			39 00 00 40 00 00 02 2f 30
-			39 00 00 00 00 00 03 6d 03 00
+			39 00 00 00 00 00 03 6d 06 00
 		];
 		qcom,mdss-dsi-on-command = [
                         39 00 00 00 00 00 06 F0 55 AA 52 08 00
@@ -1152,7 +1152,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-timing-switch-command = [
                         39 00 00 40 00 00 02 5A 00
 			39 00 00 40 00 00 02 2f 30
-			39 00 00 00 00 00 03 6d 04 00
+			39 00 00 00 00 00 03 6d 07 00
 		];
 		qcom,mdss-dsi-on-command = [
                         39 00 00 00 00 00 06 F0 55 AA 52 08 00
