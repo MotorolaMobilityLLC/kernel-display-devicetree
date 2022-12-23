@@ -177,7 +177,7 @@
 			"mdp_core_clk";
 
 	vddio-supply = <&L12C>;
-	//dvdd-supply = <&L1D>;
+	dvdd-supply = <&L1D>;
 	vci-supply = <&L13C>;
 };
 
@@ -213,12 +213,6 @@
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_dp &sde_rscc>;
 };
 
-//main display dvdd
-//&L1D {
-//	regulator-min-microvolt = <1260000>;
-//	regulator-max-microvolt = <1260000>;
-//	qcom,init-voltage = <1260000>;
-//};
 //sec display 1.8 vddio
 &L17B {
 	regulator-min-microvolt = <1800000>;
