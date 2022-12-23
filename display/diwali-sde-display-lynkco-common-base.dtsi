@@ -363,3 +363,9 @@
 &fsa4480 {
 	status = "disabled";
 };
+
+&qupv3_se0_spi {
+	goodix-berlin@0 {
+		panel = <&mot_csot_nt37705_667_1080x2640_dsc_cmd_v1>;
+	};
+};
