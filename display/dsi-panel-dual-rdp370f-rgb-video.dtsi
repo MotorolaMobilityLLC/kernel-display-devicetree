@@ -1,5 +1,5 @@
 &mdss_mdp {
-	dsi_dual_rdp370f_fhd_vid: qcom,mdss_dsi_dual_rdp370f_fhd_video {
+	dsi_dual_rdp370f_rgb_vid: qcom,mdss_dsi_dual_rdp370f_rgb_video {
 		qcom,mdss-dsi-panel-name = "RaonTech Non-FSC mode video mode dsi panel";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 
@@ -22,11 +22,12 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <0 10>, <1 10>;
-
+		qcom,mdss-dsi-tx-eot-append;
+		qcom,mdss-dsi-rx-eot-ignore;
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
-				qcom,mdss-dsi-panel-width = <1920>;
+				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <1080>;
 				qcom,mdss-dsi-h-front-porch = <88>;
 				qcom,mdss-dsi-h-back-porch = <148>;
@@ -39,7 +40,7 @@
 				qcom,mdss-dsi-h-right-border = <0>;
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
-				qcom,mdss-dsi-panel-framerate = <60>;
+				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-on-command =
 					[32 01 00 00 00 00 02 00 00];
 				qcom,mdss-dsi-off-command =
