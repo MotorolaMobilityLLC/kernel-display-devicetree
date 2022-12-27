@@ -414,14 +414,9 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 40 00 00 02 5A 01
+				39 00 00 00 0F 00 02 5A 01
 				39 00 00 40 00 00 02 2F 30
 				39 00 00 00 00 00 03 6d 01 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 08
-				39 00 00 00 00 00 02 E0 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 00
-				39 00 00 40 00 00 02 6F C5
-				39 00 00 00 00 00 02 BA 00//Skip Mode DBVseq1 Disable
 			];
 		};
 		timing@4 { //10 independent
@@ -432,14 +427,9 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 40 00 00 02 5A 00
+				39 00 00 00 0F 00 02 5A 00
 				39 00 00 40 00 00 02 2f 30
 				39 00 00 00 00 00 03 6d 03 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 08
-				39 00 00 00 00 00 02 E0 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 00
-				39 00 00 40 00 00 02 6F C5
-				39 00 00 00 00 00 02 BA 10//Skip Mode DBVseq1 Enable
 			];
 		};
 		timing@5 { //1 independent
@@ -450,14 +440,9 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 40 00 00 02 5A 00
+				39 00 00 00 0F 00 02 5A 00
 				39 00 00 40 00 00 02 2f 30
 				39 00 00 00 00 00 03 6d 04 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 08
-				39 00 00 00 00 00 02 E0 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 00
-				39 00 00 40 00 00 02 6F C5
-				39 00 00 00 00 00 02 BA 10//Skip Mode DBVseq1 Enable
 			];
 		};
 		timing@6 { //24
@@ -555,7 +540,7 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 40 00 00 02 5A 01
+				39 00 00 00 0F 00 02 5A 01
 				39 00 00 40 00 00 02 2F 30
 				39 00 00 00 00 00 03 6d 01 00
 				39 00 00 40 00 00 06 F0 55 AA 52 08 08
@@ -573,7 +558,7 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 40 00 00 02 5A 00
+				39 00 00 00 0F 00 02 5A 00
 				39 00 00 40 00 00 02 2f 30
 				39 00 00 00 00 00 03 6d 03 00
 				39 00 00 40 00 00 06 F0 55 AA 52 08 08
@@ -591,7 +576,7 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
 			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 40 00 00 02 5A 00
+				39 00 00 00 0F 00 02 5A 00
 				39 00 00 40 00 00 02 2f 30
 				39 00 00 00 00 00 03 6d 04 00
 				39 00 00 40 00 00 06 F0 55 AA 52 08 08
