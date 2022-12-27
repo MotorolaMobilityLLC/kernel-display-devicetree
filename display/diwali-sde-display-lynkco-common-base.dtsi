@@ -120,6 +120,14 @@
 	};
 };
 
+&mot_dummy_vid_qhd {
+       qcom,mdss-dsi-display-timings {
+                timing@0{
+                       qcom,mdss-dsi-panel-width = <1080>;
+                       qcom,mdss-dsi-panel-height = <2400>;
+               };
+       };
+};
 
 &soc {
 	sde_wb: qcom,wb-display@0 {
