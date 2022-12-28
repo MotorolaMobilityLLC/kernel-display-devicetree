@@ -36,7 +36,7 @@ qcom,mdss-dsi-lane-0-state;
 qcom,mdss-dsi-dma-trigger = "trigger_sw";
 qcom,mdss-dsi-mdp-trigger = "none";
 qcom,mdss-dsi-reset-sequence = <0 12>, <1 1>, <0 1>, <1 13>;
-qcom,mdss-dsi-lp11-init;
+//qcom,mdss-dsi-lp11-init;
 qcom,mdss-dsi-tx-eot-append;
 qcom,mdss-dsi-te-pin-select = <1>;
 qcom,mdss-dsi-te-dcs-command = <1>;
@@ -73,13 +73,12 @@ qcom,mdss-dsi-display-timings {
 39 01 00 00 00 00 02 35 02
 39 01 00 00 00 00 02 51 FF
 39 01 00 00 00 00 02 12 00
-39 01 00 00 00 00 02 6A 4A
-//FE 01 00 00 00 00 02 0A
-//C3 01 00 00 00 00 02 FF
-//C6 01 00 00 00 00 02 1F
-//C7 01 00 00 00 00 02 80
 05 01 00 00 78 00 01 11
 05 01 00 00 20 00 01 29
+//39 01 00 00 00 00 02 FE 0A
+//39 01 00 00 00 00 02 C3 FF
+//39 01 00 00 00 00 02 C6 1F
+//39 01 00 00 00 00 02 C7 80
 ];
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
