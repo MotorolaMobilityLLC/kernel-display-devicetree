@@ -662,11 +662,11 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-                        39 00 00 00 0F 00 02 5A 01
+                        39 00 00 00 00 00 02 5A 01
 			39 00 00 40 00 00 02 2F 30
 			39 00 00 00 00 00 03 6d 05 00
 			39 00 00 40 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F C5
 			39 00 00 00 00 00 02 BA 00//Skip Mode DBVseq1 Disable
@@ -745,7 +745,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 6F 02
 			39 00 00 00 00 00 02 FE 03
 			39 00 00 00 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
                         39 00 00 00 00 00 05 FF AA 55 A5 80
                         39 00 00 00 00 00 02 6F 19
                         39 00 00 00 00 00 02 F2 00
@@ -844,11 +844,11 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-                        39 00 00 00 0F 00 02 5A 00
+                        39 00 00 00 00 00 02 5A 00
 			39 00 00 40 00 00 02 2f 30
 			39 00 00 00 00 00 03 6d 06 00
 			39 00 00 40 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F C5
 			39 00 00 00 00 00 02 BA 10//Skip Mode DBVseq1 Enable
@@ -926,7 +926,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 6F 02
 			39 00 00 00 00 00 02 FE 03
 			39 00 00 00 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
                         39 00 00 00 00 00 05 FF AA 55 A5 80
                         39 00 00 00 00 00 02 6F 19
                         39 00 00 00 00 00 02 F2 00
@@ -1025,11 +1025,11 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-                        39 00 00 00 0F 00 02 5A 00
+                        39 00 00 00 00 00 02 5A 00
 			39 00 00 40 00 00 02 2f 30
 			39 00 00 00 00 00 03 6d 07 00
 			39 00 00 40 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F C5
 			39 00 00 00 00 00 02 BA 10//Skip Mode DBVseq1 Enable
@@ -1107,7 +1107,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 6F 02
 			39 00 00 00 00 00 02 FE 03
 			39 00 00 00 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
                         39 00 00 00 00 00 05 FF AA 55 A5 80
                         39 00 00 00 00 00 02 6F 19
                         39 00 00 00 00 00 02 F2 00
@@ -1207,11 +1207,11 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-                        39 00 00 00 0F 00 02 5A 01
+                        39 00 00 00 00 00 02 5A 01
 			39 00 00 00 00 00 02 2F 30
 			39 00 00 00 00 00 03 6d 02 00
 			39 00 00 40 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F C5
 			39 00 00 00 00 00 02 BA 00//Skip Mode DBVseq1 Disable
@@ -1290,7 +1290,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 6F 02
 			39 00 00 00 00 00 02 FE 03
 			39 00 00 00 00 00 06 F0 55 AA 52 08 08
-			39 00 00 00 00 00 02 E0 00
+			39 00 00 00 00 00 05 E0 41 70 70 70
                         39 00 00 00 00 00 05 FF AA 55 A5 80
                         39 00 00 00 00 00 02 6F 19
                         39 00 00 00 00 00 02 F2 00
