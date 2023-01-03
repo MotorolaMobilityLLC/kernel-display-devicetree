@@ -513,6 +513,9 @@ Optional properties:
 					silver or gold or gold+.
 - qcom,sde-qos-cpu-dma-latency:	A u32 value indicating desired PM QoS CPU DMA latency in usec.
 - qcom,sde-qos-cpu-irq-latency:	A u32 value indicating desired PM QoS CPU irq latency in usec.
+- qcom,sde-ipcc-protocol-id:	A u32 value indicating ipcc protocol id used for hw fencing feature.
+- qcom,sde-ipcc-client-dpu-phys-id:	A u32 value indicating ipcc physical client id of dpu used
+					for ipcc registers access.
 - qcom,sde-inline-rot-xin:	An integer array of xin-ids related to inline
 				rotation.
 - qcom,sde-inline-rot-xin-type:	A string array indicating the type of xin,
@@ -830,6 +833,9 @@ Example:
     qcom,sde-qos-cpu-mask-performance = <0xf>;
     qcom,sde-qos-cpu-dma-latency = <300>;
     qcom,sde-qos-cpu-irq-latency = <300>;
+
+    qcom,sde-ipcc-protocol-id = <0x2>;
+    qcom,sde-ipcc-client-dpu-phys-id = <0x19>;
 
     qcom,sde-vbif-off = <0 0>;
     qcom,sde-vbif-id = <0 1>;
