@@ -7,5 +7,5 @@
 	model = "lynkco";
 	compatible = "qcom,diwali-qrd", "qcom,diwali", "qcom,qrd", "moto,lynkco";
 	qcom,msm-id = <506 0x10000>, <547 0x10000>, <564 0x10000>;
-	qcom,board-id = <0x41 0x9100>;
+	qcom,board-id = <0x41 0x9100>, <0x41 0xA100>;
 };
