@@ -2,7 +2,7 @@
 #include <dt-bindings/clock/qcom,dispcc-diwali.h>
 
 &soc {
-	display_panel_avdd: display_gpio_regulator@1 {
+/*	display_panel_avdd: display_gpio_regulator@1 {
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_panel_avdd";
 		regulator-min-microvolt = <5500000>;
@@ -31,7 +31,7 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&display_panel_extvdd_default>;
 	};
-
+*/
 	display_panel_ibb: display_panel_ibb_stub {
 		compatible = "qcom,stub-regulator";
 		regulator-name = "display_panel_ibb";
