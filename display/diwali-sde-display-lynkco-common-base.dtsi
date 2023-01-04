@@ -265,3 +265,9 @@
 		panel = <&mot_csot_nt37705_667_1080x2640_dsc_cmd_v1>;
 	};
 };
+
+&qupv3_se1_i2c {
+	bt541_ts_device@20 {
+		panel = <&mot_tianma_rm690a0_194x368_dsc_cmd_cli_v0>;
+	};
+};
