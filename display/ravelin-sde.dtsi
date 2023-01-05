@@ -138,6 +138,7 @@
 
 	qcom,sde-ib-bw-vote = <2500000 0 1600000>;
 	qcom,sde-has-idle-pc;
+	qcom,sde-vm-exclude-reg-names = "sid_phys";
 };
 
 &disp_rsc {
