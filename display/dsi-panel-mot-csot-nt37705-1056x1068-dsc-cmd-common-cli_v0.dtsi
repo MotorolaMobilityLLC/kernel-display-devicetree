@@ -74,6 +74,24 @@ qcom,mdss-dsi-dc-off-command = [
 		];
 qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 
+qcom,mdss-dsi-bl-min-level = <4>;
+qcom,mdss-dsi-bl-max-level = <14056>;
+qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+
+qcom,mdss-dsi-panel-hdr-enabled;
+qcom,mdss-dsi-panel-hdr-color-primaries = <14500 15500 32000
+	        17000 15500 30000 8000 3000>;
+qcom,mdss-dsi-panel-peak-brightness = <4200000>;
+
+qcom,mdss-dsi-panel-blackness-level = <3230>;
+
+qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 00 00 00 03 51 3F FC
+		39 00 00 00 00 00 02 87 00];
+
+qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 00 00 00 02 87 00];
+
 qcom,mdss-dsi-display-timings {
 	timing@0{
 		qcom,mdss-dsi-cmd-mode;
