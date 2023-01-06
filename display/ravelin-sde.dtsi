@@ -9,7 +9,6 @@
 	sde_rscc: qcom,sde_rscc@af20000 {
 		cell-index = <0>;
 		compatible = "qcom,sde-rsc";
-		status = "disabled";
 		reg = <0xaf20000 0x4d68>,
 			<0xaf30000 0x3fd4>;
 		reg-names = "drv", "wrapper";
@@ -32,16 +31,16 @@
 	mdss_rotator: qcom,mdss_rotator {
 		compatible = "qcom,sde_rotator";
 		reg = <0xae00000 0xac000>,
-		      <0xaeb8000 0x2008>;
-		status = "disabled";
+		      <0xaeb0000 0x2008>;
+
 
 		reg-names = "mdp_phys",
 			"rot_vbif_phys";
 
 		#list-cells = <1>;
 		qcom,mdss-rot-mode = <1>;
-		qcom,mdss-highest-bank-bit = <0x3>;
-
+		qcom,mdss-highest-bank-bit = <0x8 0x2>,
+					     <0x7 0x1>;
 		clocks = <&dispcc DISP_CC_MDSS_AHB_CLK>,
 			 <&dispcc DISP_CC_MDSS_ROT_CLK>;
 		clock-names = "iface_clk", "rot_clk";
@@ -51,11 +50,11 @@
 
 		power-domains = <&mdss_mdp>;
 
-		interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_EBI1>,
+		interconnects = <&mmss_noc MASTER_MDP &mc_virt SLAVE_EBI1>,
 				<&gem_noc MASTER_APPSS_PROC
 					&cnoc2 SLAVE_DISPLAY_CFG>;
 		interconnect-names = "qcom,rot-data-bus0",
-				     "qcom,sde-reg-bus";
+					"qcom,sde-reg-bus";
 		qcom,sde-reg-bus,vectors-KBps = <0 0>,<0 76800>;
 
 		/*Offline rotator RT setting */
@@ -76,7 +75,7 @@
 
 		smmu_rot_unsec: qcom,smmu_rot_unsec_cb {
 			compatible = "qcom,smmu_sde_rot_unsec";
-			iommus = <&apps_smmu 0x043C 0x0>;
+			iommus = <&apps_smmu 0x081C 0x400>;
 			qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
 			qcom,iommu-faults = "non-fatal";
 			dma-coherent;
@@ -84,10 +83,12 @@
 
 		smmu_rot_sec: qcom,smmu_rot_sec_cb {
 			compatible = "qcom,smmu_sde_rot_sec";
-			iommus = <&apps_smmu 0x043D 0x0>;
+			iommus = <&apps_smmu 0x81D 0x0>,
+					<&apps_smmu 0xC1D 0x0>;
 			qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-vmid = <0xa>;
+			dma-coherent;
 		};
 	};
 
@@ -122,9 +123,10 @@
 	clock-names = "gcc_bus", "iface_clk",
 			"branch_clk", "core_clk", "vsync_clk",
 			"lut_clk", "rot_clk";
-	clock-rate = <0 0 506000000 506000000 19200000 506000000 300000000>;
+	clock-rate = <0 0 506000000 506000000 19200000 506000000 200000000>;
 	clock-max-rate = <0 0 608000000 608000000 19200000 608000000 300000000>;
-	vdd-supply = <&disp_cc_mdss_core_gdsc>;
+
+	#power-domain-cells = <0>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
@@ -136,20 +138,13 @@
 
 	qcom,sde-ib-bw-vote = <2500000 0 1600000>;
 	qcom,sde-has-idle-pc;
+};
 
-	qcom,platform-supply-entries {
-		#address-cells = <1>;
-		#size-cells = <0>;
-		qcom,platform-supply-entry@0 {
-			reg = <0>;
-			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <0>;
-			qcom,supply-max-voltage = <0>;
-			qcom,supply-enable-load = <0>;
-			qcom,supply-disable-load = <0>;
-		};
+&disp_rsc {
+	sde_rsc_rpmh {
+		compatible = "qcom,sde-rsc-rpmh";
+		cell-index = <0>;
 	};
-
 };
 
 &mdss_dsi0 {
