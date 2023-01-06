@@ -413,11 +413,6 @@
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
-			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 00 0F 00 02 5A 01
-				39 00 00 40 00 00 02 2F 30
-				39 00 00 00 00 00 03 6d 01 00
-			];
 		};
 		timing@4 { //10 independent
 			qcom,framerate-group-special-idle-10hz;
@@ -426,11 +421,6 @@
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
-			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 00 0F 00 02 5A 00
-				39 00 00 40 00 00 02 2f 30
-				39 00 00 00 00 00 03 6d 03 00
-			];
 		};
 		timing@5 { //1 independent
 			qcom,framerate-group-special-idle-1hz;
@@ -439,11 +429,6 @@
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 08
 							08 08 02 04 00 19 0D];
-			qcom,mdss-dsi-timing-switch-command-base = [
-				39 00 00 00 0F 00 02 5A 00
-				39 00 00 40 00 00 02 2f 30
-				39 00 00 00 00 00 03 6d 04 00
-			];
 		};
 		timing@6 { //24
 			qcom,framerate-group-no-duplicated;
