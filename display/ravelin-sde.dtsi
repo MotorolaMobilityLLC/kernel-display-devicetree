@@ -127,6 +127,7 @@
 	clock-max-rate = <0 0 608000000 608000000 19200000 608000000 300000000>;
 
 	#power-domain-cells = <0>;
+	#list-cells = <1>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
