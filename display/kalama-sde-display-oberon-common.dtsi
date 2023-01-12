@@ -302,9 +302,31 @@
 	qcom,mdss-dsi-bl-max-level = <1023>;
 };
 
-&sde_dp {
+&pcie1 {
+	status = "disabled";
+};
 
-	//mmi,aux-switch-enable-gpio = <&tlmm 2 0x00>;
+&tlmm {
+	aux_switch_enable_gpio: aux_switch_enable_gpio {
+		mux {
+			pins = "gpio97";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio97";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+};
+
+&sde_dp {
+	pinctrl-names = "mdss_dp_active", "mdss_dp_sleep";
+	pinctrl-0 = <&aux_switch_enable_gpio>;
+	pinctrl-1 = <&aux_switch_enable_gpio>;
+
+	mmi,aux-switch-enable-gpio = <&tlmm 97 0x01>;
 	//mmi,aux-switch-flip-gpio = <&tlmm 71 0x00>;
 	qcom,dp-downgrade;
 
