@@ -379,7 +379,7 @@
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
 	qcom,dsi-dyn-clk-enable;
-	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
+	qcom,dsi-dyn-clk-type = "constant-fps-adjust-hfp";
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
