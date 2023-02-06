@@ -329,6 +329,4 @@
 	mmi,aux-switch-enable-gpio = <&tlmm 97 0x01>;
 	//mmi,aux-switch-flip-gpio = <&tlmm 71 0x00>;
 	qcom,dp-downgrade;
-
-       /delete-property/ qcom,mst-enable;
 };
