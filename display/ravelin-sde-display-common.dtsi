@@ -391,11 +391,11 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [00 1b 07 06 16 21 07
-				07 07 02 04 00 17 0c];
+			qcom,mdss-dsi-panel-phy-timings = [00 1c 07 07 17 15 07
+				07 08 02 04 00 18 0c];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
-			qcom,dsi-dyn-clk-list = <798013440 794688384 791363328>;
+			qcom,dsi-dyn-clk-list = <801239040 797900544 794562048>;
 		};
 	};
 };
