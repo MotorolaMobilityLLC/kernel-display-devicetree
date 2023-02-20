@@ -15,6 +15,7 @@ mot_csot_nt37705_1056x1068_dsc_cmd_cli_v1: qcom,mdss_dsi_mot_csot_1056x1068_cmd_
 			"mipi_mot_cmd_csot_1056x1068_363";
 		qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
 		qcom,mdss-dsi-panel-physical-type = "oled";
+		qcom,mdss-dsi-panel-supplier = "csot_s";
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <30>;
