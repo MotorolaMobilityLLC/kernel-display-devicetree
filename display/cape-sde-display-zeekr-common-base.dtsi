@@ -298,7 +298,7 @@
 
 	vddio-supply = <&L12C>;
 	dvdd-supply = <&display_panel_dvdd>;
-	vci-supply = <&L13C>;
+	vci-supply = <&L11C>;
 };
 
 &sde_dsi1 {
