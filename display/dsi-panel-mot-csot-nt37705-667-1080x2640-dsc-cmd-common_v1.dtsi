@@ -68,10 +68,7 @@ qcom,mdss-dsi-dc-off-command = [
 
 		39 00 00 40 00 00 06 F0 55 AA 52 08 02
 		39 00 00 40 00 00 02 CC 10
-		39 00 00 00 10 00 02 2F 02
-
-		39 00 00 00 00 00 02 2F 30
-
+		39 00 00 00 00 00 03 6D 00 00
 		];
 
 qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
@@ -92,12 +89,10 @@ qcom,mdss-dsi-dc-on-command = [
 
 		39 00 00 40 00 00 06 F0 55 AA 52 08 02
 		39 00 00 40 00 00 02 CC 10
-		39 00 00 00 10 00 02 2F 02
-
-		39 00 00 00 00 00 02 2F 30
-
+		39 00 00 00 00 00 03 6D 00 00
 		];
 qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
+qcom,mdss-dsi-nt37705-dc-detect-fps;
 
 qcom,mdss-dsi-hbm-on-command = [
 		39 00 00 00 00 00 03 51 3F FC
