@@ -211,6 +211,14 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
 		};
+		timing@7 { //144
+			qcom,framerate-group-no-duplicated;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 20 08 08 18 23 08
+							08 08 02 04 00 1B 0D];
+		};
 	};
 };
 
