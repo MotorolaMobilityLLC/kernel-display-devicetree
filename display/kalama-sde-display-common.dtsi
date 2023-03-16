@@ -436,6 +436,11 @@
 
 &dsi_sharp_qhd_plus_dsc_video {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,dsi-supported-dfps-list = <120 90 60>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 { /* 120 FPS */
 			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 21 07
