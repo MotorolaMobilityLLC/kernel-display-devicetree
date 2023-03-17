@@ -270,7 +270,7 @@
 	qcom,mdss-dsi-bl-min-level = <9>;
 	qcom,mdss-dsi-bl-max-level = <2047>;
 	qcom,mdss-brightness-max-level = <2047>;
-	qcom,mdss-dsi-bl-default-level = <2047>;
+	qcom,mdss-dsi-bl-default-level = <1810>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	//qcom,platform-vio-enable-gpio = <&tlmm 57 0>;
@@ -331,7 +331,7 @@
 	qcom,mdss-dsi-bl-min-level = <9>;
 	qcom,mdss-dsi-bl-max-level = <2047>;
 	qcom,mdss-brightness-max-level = <2047>;
-	qcom,mdss-dsi-bl-default-level = <2047>;
+	qcom,mdss-dsi-bl-default-level = <1810>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
         touch-rst-pin = <&tlmm 64 0>;
@@ -407,7 +407,8 @@
                 aw99703,pwm-trans-dim = <0>; /* 2ms */
                 aw99703,i2c-trans-dim = <1>; /* 128ms */
                 aw99703,pwm-mode = <1>; /* 1 pwm enable,0 PWM disable */
-                aw99703,map-type = <4>; /* 0 exponential, 4 linear */
+                aw99703,map-type = <0>; /* 0 exponential, 4 linear */
+		current-align-type = <1>;
                 aw99703,work-mode = <1>; /* backlight */
 		aw99703,default-brightness = <1810>;
 	};
