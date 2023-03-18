@@ -35,6 +35,7 @@
 		qcom,mdss-dsi-lane-3-state;
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
+		qcom,mdss-dsi-dma-schedule-line = <15>;
 		qcom,mdss-dsi-reset-sequence = <1 1>, <0 1>, <1 10>;
 
 
