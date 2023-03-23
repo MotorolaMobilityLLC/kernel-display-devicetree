@@ -46,6 +46,8 @@ mot_tianma_rm690a0_194x368_dsc_cmd_cli_v0: qcom,mdss_dsi_mot_rm690a0_194x368_cmd
 		qcom,mdss-dsi-bl-min-level = <3>;
 		qcom,mdss-dsi-bl-max-level = <255>;
 		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+		qcom,mdss-dsi-rm690a0-backlight-config;
+
 qcom,mdss-dsi-display-timings {
 	timing@0{
 		qcom,mdss-dsi-cmd-mode;
@@ -123,9 +125,22 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 38 00];
 		//39 01 00 00 00 00 02 51 FF];
 
+		qcom,mdss-dsi-normal-backlight-command = [
+		39 00 00 40 00 00 02 FE 00
+		39 00 00 40 00 00 02 66 00
+		39 00 00 00 00 00 02 51 FF
+		];
+		qcom,mdss-dsi-hbm-backlight-command = [
+		39 00 00 40 00 00 02 FE 00
+		39 00 00 40 00 00 02 66 02
+		39 00 00 00 00 00 02 63 BA
+		];
+
 		qcom,mdss-dsi-lp1-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-lp2-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-nolp-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-normal-backlight-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-hbm-backlight-command-state = "dsi_hs_mode";
 	};
 };
 
