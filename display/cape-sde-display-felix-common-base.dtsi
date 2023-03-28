@@ -487,6 +487,21 @@
 	};
 };
 
+&tlmm {
+	aux_switch_enable_gpio: aux_switch_enable_gpio {
+		mux {
+			pins = "gpio51";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio51";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+};
+
 &sde_dp {
 	#clock-cells = <1>;
 	clocks =  <&clock_dispcc DISP_CC_MDSS_DPTX0_AUX_CLK>,
@@ -506,4 +521,10 @@
 		"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 		"strm0_pixel_clk", "strm1_pixel_clk";
 	clock-mmrm = <0 0 0 0 0 DISP_CC_MDSS_DPTX0_LINK_CLK_SRC 0 0 0 0 0 0>;
+
+	pinctrl-names = "mdss_dp_active", "mdss_dp_sleep";
+	pinctrl-0 = <&aux_switch_enable_gpio>;
+	pinctrl-1 = <&aux_switch_enable_gpio>;
+
+	mmi,aux-switch-enable-gpio = <&tlmm 51 0x01>;
 };
