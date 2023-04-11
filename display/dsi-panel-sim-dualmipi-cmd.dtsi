@@ -36,7 +36,7 @@
 		qcom,mdss-dsi-te-using-te-pin;
 		qcom,panel-ack-disabled;
 		qcom,qsync-enable;
-		qcom,mdss-dsi-qsync-min-refresh-rate = <45>;
+		qcom,mdss-dsi-qsync-min-refresh-rate = <30>;
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {

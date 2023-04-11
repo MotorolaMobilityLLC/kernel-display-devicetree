@@ -192,7 +192,7 @@
 		};
 
 		timing@2 { /* FHD 60FPS cmd mode*/
-			qcom,panel-roi-alignment = <540 40 540 40 540 40>;
+			qcom,panel-roi-alignment = <540 20 540 20 540 20>;
 			qcom,partial-update-enabled = "single_roi";
 		};
 

@@ -6,12 +6,14 @@ dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/pineapple-sde.dtbo \
 		display/pineapple-sde-display-mtp-overlay.dtbo \
 		display/pineapple-sde-display-qrd-overlay.dtbo \
 		display/pineapple-sde-display-cdp-nfc-overlay.dtbo \
-		display/pineapple-sde-display-mtp-nfc-overlay.dtbo
+		display/pineapple-sde-display-mtp-nfc-overlay.dtbo \
+		display/pineapple-sde-display-atp-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/trustedvm-pineapple-sde-display-mtp-overlay.dtbo \
 		  display/trustedvm-pineapple-sde-display-cdp-overlay.dtbo \
 		  display/trustedvm-pineapple-sde-display-rumi-overlay.dtbo \
-		  display/trustedvm-pineapple-sde-display-qrd-overlay.dtbo
+		  display/trustedvm-pineapple-sde-display-qrd-overlay.dtbo \
+		  display/trustedvm-pineapple-sde-display-atp-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)

@@ -11,11 +11,11 @@
 };
 
 &mdss_dsi0 {
-	qcom,dsi-phy-isolation-enabled;
+	qcom,dsi-phy-pll-bypass;
 };
 
 &mdss_dsi1 {
-	qcom,dsi-phy-isolation-enabled;
+	qcom,dsi-phy-pll-bypass;
 };
 
 &sde_dsi {
@@ -37,4 +37,13 @@
 	/delete-property/ qcom,poms-align-panel-vsync;
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			cell-index = <0>;
+			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+			/delete-property/ qcom,compression-mode;
+		};
+	};
 };

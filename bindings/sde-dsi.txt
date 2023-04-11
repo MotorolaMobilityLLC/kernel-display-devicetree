@@ -110,10 +110,9 @@ Optional properties:
 					If ping pong split enabled, this time should not be higher
 					than two times the dsi link rate time.
 					If the property is not specified, then the default value is 14000 us.
-- qcom,dsi-phy-isolation-enabled:	A boolean property enables the phy isolation from dsi
-					controller. This must be enabled for debugging purpose
-					only with simulator panel. It should not be enabled for
-					normal DSI panels.
+- qcom,dsi-phy-pll-bypass:		A boolean property that enables bypassing hardware access in DSI
+					PHY/PLL drivers to allow the DSI driver to run on emulation platforms
+					that might be missing those modules.
 - - qcom,null-insertion-enabled:	A boolean to enable NULL packet insertion feature for DSI controller.
 - ports:				This video port is used when external bridge is present.
 					The connection is modeled using the OF graph bindings

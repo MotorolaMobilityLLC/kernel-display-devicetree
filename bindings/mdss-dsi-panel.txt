@@ -206,6 +206,13 @@ Optional properties:
 					interval. The step rate must be a common multiple of refresh and min-fps rates.
 					The values in this list should correspond to the dfps-list with same indeces
 					when DFPS is used, or a single value which applies to all rates.
+- qcom,dsi-qsync-mode-avr-step-fps:		This u32 property is used to define avr step fps per timing node instead
+					of using same qsync avr step fps for different timing modes.
+					For defining avr step fps per timing node, this property should be defined
+					in all timing nodes or else to define single qsync avr step fps for all modes
+					use "qcom,mdss-dsi-qsync-avr-step-fps".
+- qcom,dsi-qsync-avr-step-fps:		A u32 entry to specify avr step rate supported by the panel.
+					"qcom,qsync-enable" property should be set along with this property.
 - qcom,mdss-dsi-transfer-time-us-min	Minimum supported mdp transfer time in us. This entry enables support to
 					dynamically set the transfer time for the given mode within the defined
 					range. Both min & max must be defined to enable.
@@ -808,6 +815,7 @@ Example:
 		qcom,dsi-supported-dfps-list = <30 45 60>;
 		qcom,dsi-supported-qsync-min-fps-list = <30 40 55>;
 		qcom,dsi-qsync-avr-step-list = <0 360 660>;
+		qcom,dsi-qsync-avr-step-fps = <360>;
 		qcom,min-refresh-rate = <30>;
 		qcom,max-refresh-rate = <60>;
 		qcom,mdss-dsi-bl-pmic-bank-select = <0>;
@@ -897,6 +905,7 @@ Example:
 					29 00 00 00 00 00 02 F1 00];
 				qcom,mdss-dsi-timing-switch-command-state = "dsi_lp_mode";
 				qcom,qsync-mode-min-refresh-rate = <48>;
+				qcom,dsi-qsync-mode-avr-step-fps = <360>;
 				qcom,mdss-dsi-qsync-on-commands = [15 01 00 00 00 00 02 51 00];
 				qcom,mdss-dsi-qsync-on-commands-state = "dsi_hs_mode";
 				qcom,mdss-dsi-qsync-off-commands = [15 01 00 00 00 00 02 51 00];

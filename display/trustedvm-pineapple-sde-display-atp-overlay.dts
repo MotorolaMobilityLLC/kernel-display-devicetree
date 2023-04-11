@@ -1,7 +1,8 @@
 /dts-v1/;
 /plugin/;
 
-#include "pineapple-sde-display-mtp.dtsi"
+#include "trustedvm-pineapple-sde.dtsi"
+#include "trustedvm-pineapple-sde-display-mtp.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Pineapple ATP";

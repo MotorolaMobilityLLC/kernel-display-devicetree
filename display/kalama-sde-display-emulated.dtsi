@@ -3,11 +3,11 @@
 };
 
 &mdss_dsi0 {
-	qcom,dsi-phy-isolation-enabled;
+	qcom,dsi-phy-pll-bypass;
 };
 
 &mdss_dsi1 {
-	qcom,dsi-phy-isolation-enabled;
+	qcom,dsi-phy-pll-bypass;
 };
 
 &sde_dsi {
