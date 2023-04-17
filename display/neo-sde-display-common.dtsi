@@ -7,6 +7,7 @@
 #include "dsi-panel-sim-dsc-10bit-cmd.dtsi"
 #include "dsi-panel-sim-dsc375-cmd.dtsi"
 #include "dsi-panel-sy103-1920x1080-60hz-video.dtsi"
+#include "dsi-panel-sy103-dualmipi-2560x1280-60hz-video.dtsi"
 
 #include "neo-sde-display-pinctrl.dtsi"
 
@@ -219,6 +220,19 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 07 07 17 22 07
 				07 08 02 04 00 18 0c];
 			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sy103_dual_2560x1280_60hz_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 18 06 06 15 20 06
+				06 07 02 04 00 15 0b];
+			qcom,display-topology = <2 0 2>;
 			qcom,default-topology-index = <0>;
 		};
 	};
