@@ -100,7 +100,8 @@ else
 ifeq ($(CONFIG_LYNKCO_DTB),y)
 dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
 		display/diwali-sde-display-lynkco-evb1-overlay.dtbo \
-		display/diwali-sde-display-lynkco-dvt2c-overlay.dtbo
+		display/diwali-sde-display-lynkco-dvt2c-overlay.dtbo \
+		display/diwali-sde-display-lynkco-pvt-overlay.dtbo
 endif  #($CONFIG_LYNKCO_DTB,y)
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
