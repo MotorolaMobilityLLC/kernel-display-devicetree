@@ -29,7 +29,7 @@ ifeq ($(CONFIG_LI_DTB),y)
 dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
 		display/waipio-sde-display-li-evb1-overlay.dtbo
 else
-dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde.dtbo \
+dtbo-$(CONFIG_ARCH_WAIPIO) += display/waipio-sde-hiphic.dtbo \
 		display/waipio-sde-display-hiphi-evb1-overlay.dtbo \
 		display/waipio-sde-display-hiphic-evb1-overlay.dtbo\
 		display/waipio-mot-ironmn-display-evb1-overlay.dtbo \
