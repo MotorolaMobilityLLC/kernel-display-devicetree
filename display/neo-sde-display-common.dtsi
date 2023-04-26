@@ -119,6 +119,8 @@
 
 &dsi_dual_rdp370f_rgb_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-panel-status-check-mode = "esd_sw_sim_success";
+	qcom,esd-check-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 2d 0c 0c 1d 27 0c
