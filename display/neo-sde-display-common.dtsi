@@ -8,6 +8,8 @@
 #include "dsi-panel-sim-dsc375-cmd.dtsi"
 #include "dsi-panel-sy103-1920x1080-60hz-video.dtsi"
 #include "dsi-panel-sy103-dualmipi-2560x1280-60hz-video.dtsi"
+#include "dsi-panel-sim-1280x1280-60hz-video.dtsi"
+#include "dsi-panel-sy103-1280x1280-60hz-video.dtsi"
 
 #include "neo-sde-display-pinctrl.dtsi"
 
@@ -91,6 +93,22 @@
 		qcom,mdp = <&mdss_mdp>;
 		qcom,dsi-default-panel = <&dsi_dual_rdp370f_fsc_vid>;
 		qcom,demura-panel-id = <0x0 0x0>;
+	};
+
+	sde_dsi1: qcom,dsi-display-secondary {
+		compatible = "qcom,dsi-display";
+		label = "secondary";
+
+		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
+		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
+
+		pinctrl-names = "panel_active", "panel_suspend";
+		pinctrl-0 = <>;
+		pinctrl-1 = <>;
+
+		qcom,panel-te-source = <1>;
+
+		qcom,mdp = <&mdss_mdp>;
 	};
 };
 
@@ -223,6 +241,37 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 07 07 17 22 07
 				07 08 02 04 00 18 0c];
+			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sim_1280x1280_60hz_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,mdss-dsi-panel-status-check-mode = "esd_sw_sim_success";
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 18 06 06 15 20 06
+				06 07 02 04 00 15 0b];
+			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sy103_1280x1280_60hz_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-panel-status-check-mode = "esd_sw_sim_success";
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 18 06 06 15 20 06
+				06 07 02 04 00 15 0b];
 			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
