@@ -178,7 +178,7 @@
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
 		iommus = <&apps_smmu 0x1c00 0x2>;
-		qcom,iommu-dma-addr-pool = <0x00060000 0xfffe0000>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-earlymap; /* for cont-splash */
 		dma-coherent;
