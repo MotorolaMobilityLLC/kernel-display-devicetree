@@ -108,6 +108,7 @@ qcom,mdss-dsi-hbm-on-command = [
 
 qcom,mdss-dsi-hbm-off-command = [
 		39 00 00 00 00 00 02 87 00];
+qcom,check_pcd;
 
 qcom,mdss-dsi-display-timings {
 	timing@0{
@@ -297,6 +298,36 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 06
+			39 00 00 40 00 00 06 B0 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B1 18 38 08 38 1D
+			39 00 00 40 00 00 06 B2 35 1C 38 02 35
+			39 00 00 40 00 00 06 B3 14 38 00 38 15
+			39 00 00 40 00 00 06 B6 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B7 18 38 08 38 1D
+			39 00 00 40 00 00 06 B8 35 1C 38 02 35
+			39 00 00 40 00 00 06 B9 14 38 00 38 15
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 13
+			39 00 00 40 00 00 03 F4 04 01
+			39 00 00 00 00 00 02 9B 00];
+
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 06
+			39 00 00 40 00 00 06 B0 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B1 18 38 08 38 1D
+			39 00 00 40 00 00 06 B2 37 1C 38 02 37
+			39 00 00 40 00 00 06 B3 14 38 00 38 15
+			39 00 00 40 00 00 06 B6 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B7 18 38 08 38 1D
+			39 00 00 40 00 00 06 B8 37 1C 38 02 37
+			39 00 00 40 00 00 06 B9 14 38 00 38 15
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 13
+			39 00 00 00 00 00 03 F4 00 00];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@1{
@@ -672,6 +703,36 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 06
+			39 00 00 40 00 00 06 B0 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B1 18 38 08 38 1D
+			39 00 00 40 00 00 06 B2 35 1C 38 02 35
+			39 00 00 40 00 00 06 B3 14 38 00 38 15
+			39 00 00 40 00 00 06 B6 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B7 18 38 08 38 1D
+			39 00 00 40 00 00 06 B8 35 1C 38 02 35
+			39 00 00 40 00 00 06 B9 14 38 00 38 15
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 13
+			39 00 00 40 00 00 03 F4 04 01
+			39 00 00 00 00 00 02 9B 00];
+
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 06
+			39 00 00 40 00 00 06 B0 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B1 18 38 08 38 1D
+			39 00 00 40 00 00 06 B2 37 1C 38 02 37
+			39 00 00 40 00 00 06 B3 14 38 00 38 15
+			39 00 00 40 00 00 06 B6 2A 2A 38 19 37
+			39 00 00 40 00 00 06 B7 18 38 08 38 1D
+			39 00 00 40 00 00 06 B8 37 1C 38 02 37
+			39 00 00 40 00 00 06 B9 14 38 00 38 15
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 13
+			39 00 00 00 00 00 03 F4 00 00];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 	timing@3{
 		qcom,mdss-dsi-cmd-mode;
