@@ -234,6 +234,8 @@ Optional properties:
                                           "bl_ctrl_dcs" = Backlight controlled by DCS commands.
                                           "bl_ctrl_external" = Backlight controlled by externally
                                           other: Unknown backlight control. (default)
+- qcom,mdss-dsi-bl-ctrl-dcs-subtype:	DCS command for set_display_brightness.
+					0x51 = default value.
 - qcom,mdss-dsi-bl-pwm-pmi:		Boolean to indicate that PWM control is through second pmic chip.
 - qcom,mdss-dsi-bl-pmic-bank-select:	LPG channel for backlight.
 					Required if backlight pmic control type is PWM
@@ -794,6 +796,7 @@ Example:
 		qcom,mdss-dsi-off-command = [22 01 00 00 00 00 00];
 		qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
+		qcom,mdss-dsi-bl-ctrl-dcs-subtype = <0xC2>;
 		qcom,mdss-dsi-pan-enable-dynamic-fps;
 		qcom,mdss-dsi-pan-fps-update = "dfps_suspend_resume_mode";
 		qcom,dsi-supported-dfps-list = <30 45 60>;
