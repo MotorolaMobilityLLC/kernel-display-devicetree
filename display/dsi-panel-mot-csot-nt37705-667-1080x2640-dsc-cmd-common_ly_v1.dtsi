@@ -56,10 +56,6 @@ qcom,mdss-dsi-panel-peak-brightness = <4200000>;
 qcom,mdss-dsi-panel-blackness-level = <3230>;
 
 qcom,mdss-dsi-dc-off-command = [
-		39 00 00 40 00 00 06 F0 55 AA 52 08 05
-		39 00 00 40 00 00 02 6F 12
-		39 00 00 40 00 00 05 EC 00 80 E4 B0
-
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 2E
 		39 00 00 40 00 00 03 C0 12 34
@@ -77,10 +73,6 @@ qcom,mdss-dsi-dc-off-command = [
 
 qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 qcom,mdss-dsi-dc-on-command = [
-		39 00 00 40 00 00 06 F0 55 AA 52 08 05
-		39 00 00 40 00 00 02 6F 12
-		39 00 00 40 00 00 05 EC 00 68 68 B0
-
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 2E
 		39 00 00 40 00 00 03 C0 89 AB
@@ -586,6 +578,9 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 15 BB 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
                         39 00 00 00 00 00 02 6F 1C
                         39 00 00 00 00 00 03 BB 00 00
+			39 00 00 00 00 00 06 F0 55 AA 52 08 00
+                        39 00 00 00 00 00 02 6F 0C
+                        39 00 00 00 00 00 02 C3 04
                         39 00 00 00 00 00 02 6F 07
                         39 00 00 00 00 00 06 B5 00 1C 00 00 00
                         39 00 00 00 00 00 02 6F 0C
@@ -775,9 +770,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 BA 00//Skip Mode DBVseq1 Disable
 		];
 		qcom,mdss-dsi-on-command = [
-			39 00 00 00 00 00 06 F0 55 AA 52 08 00
-                        39 00 00 00 00 00 02 6F 0C
-                        39 00 00 00 00 00 02 C3 04
                         39 00 00 00 00 00 06 F0 55 AA 52 08 00
                         39 00 00 00 00 00 02 6F 2E
                         39 00 00 00 00 00 03 C0 12 34
@@ -1518,7 +1510,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
 	};
-
 	timing@7{
 		qcom,mdss-dsi-cmd-mode;
 		qcom,mdss-dsi-panel-framerate = <144>;
@@ -1694,7 +1685,6 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-timing-switch-command-state =
 			"dsi_hs_mode";
 		qcom,compression-mode = "dsc";
-
 		qcom,mdss-dsc-version = <0x11>;
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
