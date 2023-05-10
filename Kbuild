@@ -17,7 +17,11 @@ dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/trustedvm-pineapple-sde-display-mtp-ove
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
-dtbo-$(CONFIG_ARCH_BLAIR) += display/blair-sde.dtbo
+dtbo-$(CONFIG_ARCH_BLAIR) += display/blair-sde.dtbo \
+		display/blair-sde-display-cdp-overlay.dtbo \
+		display/blair-sde-display-mtp-overlay.dtbo \
+		display/blair-sde-display-qrd-overlay.dtbo \
+		display/blair-sde-display-atp-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
