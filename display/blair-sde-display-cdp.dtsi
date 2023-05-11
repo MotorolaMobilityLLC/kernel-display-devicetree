@@ -163,3 +163,28 @@
 
         qcom,dsi-default-panel = <&dsi_rm69299_visionox_amoled_video>;
 };
+
+&qupv3_se8_i2c {
+	synaptics_tcm@20 {
+		panel = <&dsi_rm69299_visionox_amoled_video
+			&dsi_rm69299_visionox_amoled_cmd>;
+	};
+
+	focaltech@38 {
+		panel = <&dsi_r66451_amoled_cmd
+			&dsi_r66451_amoled_video>;
+	};
+
+	novatek@62 {
+		panel = <&dsi_nt36672e_fhd_plus_60_video
+			&dsi_nt36672e_fhd_plus_120_video
+			&dsi_nt36672e_fhd_plus_144_video>;
+	};
+	goodix-berlin@5d {
+		panel = <&dsi_vtdr6130_amoled_cmd
+			&dsi_vtdr6130_amoled_video
+			&dsi_vtdr6130_amoled_120hz_cmd
+			&dsi_vtdr6130_amoled_120hz_video>;
+	};
+
+};

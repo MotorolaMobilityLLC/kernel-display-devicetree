@@ -40,3 +40,10 @@
 &sde_dsi {
 	qcom,dsi-default-panel = <&dsi_rm69299_visionox_amoled_video>;
 };
+
+&qupv3_se8_i2c {
+	synaptics_tcm@20 {
+		panel = <&dsi_rm69299_visionox_amoled_video
+			&dsi_rm69299_visionox_amoled_cmd>;
+	};
+};
