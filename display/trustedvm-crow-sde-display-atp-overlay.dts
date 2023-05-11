@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-crow-sde.dtsi"
+#include "trustedvm-crow-sde-display-atp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Crow ATP - TrustedVM";
+	compatible = "qcom,crow-atp", "qcom,crow", "qcom,atp";
+	qcom,msm-id = <608 0x10000>;
+	qcom,board-id = <33 0>;
+};
