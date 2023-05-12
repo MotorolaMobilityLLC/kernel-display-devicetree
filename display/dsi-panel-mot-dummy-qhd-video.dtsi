@@ -71,7 +71,7 @@
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 			};
 		};
-
+/*
 		qcom,panel-supply-entries {
 			#address-cells = <1>;
 			#size-cells = <0>;
@@ -99,5 +99,6 @@
 				qcom,supply-post-off-sleep = <0>;
 			};
 		};
+*/
 	};
 };

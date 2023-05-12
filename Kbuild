@@ -55,6 +55,7 @@ dtbo-$(CONFIG_ARCH_WAIPIO) += display/trustedvm-waipio-sde-display-mtp-overlay.d
 		display/trustedvm-waipio-sde-display-qrd-overlay.dtbo
 endif
 
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
 		display/khaje-sde-display-idp-overlay.dtbo \
 		display/khaje-sde-display-qrd-overlay.dtbo \
@@ -64,6 +65,13 @@ dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
 		display/khaje-sde-display-idp-nopmi-overlay.dtbo \
 		display/khaje-sde-display-qrd-nopmi-overlay.dtbo \
 		display/khaje-sde-display-qrd-nowcd9375-overlay.dtbo
+else
+
+ifeq ($(CONFIG_RHODE_DTB),y)
+dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
+		  display/khaje-sde-display-rhode-evb-overlay.dtbo
+endif  #($(CONFIG_RHODE_DTB),y)
+endif
 
 dtbo-$(CONFIG_ARCH_MONACO) += display/monaco-sde.dtbo \
 		display/monaco-sde-display-idp-overlay.dtbo \

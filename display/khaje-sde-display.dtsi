@@ -28,8 +28,8 @@
                          <&dispcc DISP_CC_MDSS_MDP_CLK>;
         clock-names = "pll_byte_clk0", "pll_dsi_clk0",
                         "mdp_core_clk";
-
         vddio-supply = <&L9A>;
+
 };
 
 
