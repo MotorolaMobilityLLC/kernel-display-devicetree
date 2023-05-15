@@ -48,6 +48,8 @@ Optional properties:
 - pinctrl-n: the "sleep" pinctrl state
 - ports: contains DSI controller input and output ports as children, each
   containing one endpoint subnode.
+- qcom,dsi-ctrl-shared: Boolean value indicating if the DSI controller is
+  shared between dual displays.
 
   DSI Endpoint properties:
   - remote-endpoint: For port@0, set to phandle of the connected panel/bridge's
@@ -144,6 +146,8 @@ Optional properties:
 
 - dsi_pll_codes:	Contain an u32 array data to store dsi pll codes which were passed
 					from UEFI.
+- qcom,dsi-phy-shared:			Boolean value indicating if the DSI phy is shared
+					between dual displays.
 
 [1] Documentation/devicetree/bindings/clock/clock-bindings.txt
 [2] Documentation/devicetree/bindings/graph.txt
@@ -193,6 +197,7 @@ Example:
 		qcom,dual-dsi-mode;
 		qcom,master-dsi;
 		qcom,sync-dual-dsi;
+		qcom,dsi-ctrl-shared;
 
 		qcom,mdss-mdp-transfer-time-us = <12000>;
 		frame-threshold-time-us = <800>;
@@ -257,6 +262,7 @@ Example:
 		qcom,dsi-phy-regulator-min-datarate-bps = <1200000000>;
 		qcom,panel-force-clock-lane-hs;
 		pll_codes_region = <&dsi_pll_codes_data>;
+		qcom,dsi-phy-shared;
 	};
 
 	dsi_pll_codes_data:dsi_pll_codes {

@@ -124,6 +124,10 @@ Optional properties:
 				device node. Refer to pinctrl-bindings.txt
 - qcom,max-lclk-frequency-khz:	An integer specifying the max. link clock in KHz supported by Display Port.
 - qcom,mst-fixed-topology-ports: u32 values of which MST output port to reserve, start from one
+- qcom,hbr-rbr-voltage-swing: Specifies the voltage swing levels for HBR and RBR rates.
+- qcom,hbr-rbr-pre-emphasis: Specifies the pre-emphasis levels for HBR and RBR rates.
+- qcom,hbr2-3-voltage-swing: Specifies the voltage swing levels for HBR2 and HBR3 rates.
+- qcom,hbr2-3-pre-emphasis: Specifies the pre-emphasis levels for HBR2 and HBR3 rates.
 
 [Optional child nodes]: These nodes are for devices which are
 dependent on msm_ext_disp. If msm_ext_disp is disabled then
@@ -214,6 +218,24 @@ sde_dp: qcom,dp_display@0 {
 	vdda-1p2-supply = <&L6B>;
 	vdda-0p9-supply = <&L1B>;
 	vdd_mx-supply = <&VDD_MXA_LEVEL>;
+
+	qcom,hbr-rbr-voltage-swing = <0x07 0x0f 0x16 0x1f>,
+				<0x11 0x1e 0x1f 0xff>,
+				<0x16 0x1f 0xff 0xff>,
+				<0x1f 0xff 0xff 0xff>;
+	qcom,hbr-rbr-pre-emphasis = <0x00 0x0d 0x14 0x1a>,
+				<0x00 0x0e 0x15 0xff>,
+				<0x00 0x0e 0xff 0xff>,
+				<0x02 0xff 0xff 0xff>;
+
+	qcom,hbr2-3-voltage-swing = <0x02 0x12 0x16 0x1a>,
+				<0x09 0x19 0x1f 0xff>,
+				<0x10 0x1f 0xff 0xff>,
+				<0x1f 0xff 0xff 0xff>;
+	qcom,hbr2-3-pre-emphasis = <0x00 0x0c 0x15 0x1b>,
+				<0x02 0x0e 0x16 0xff>,
+				<0x02 0x11 0xff 0xff>,
+				<0x04 0xff 0xff 0xff>;
 
 	qcom,ctrl-supply-entries {
 	#address-cells = <1>;
