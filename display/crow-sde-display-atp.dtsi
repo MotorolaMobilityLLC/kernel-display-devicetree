@@ -1,1 +1,8 @@
 #include "crow-sde-display-idp.dtsi"
+
+&qupv3_se0_i2c {
+	goodix-berlin@5d {
+		panel = <&dsi_vtdr6130_amoled_cmd
+			&dsi_vtdr6130_amoled_video>;
+	};
+};
