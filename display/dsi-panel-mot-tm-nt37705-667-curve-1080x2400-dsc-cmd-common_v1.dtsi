@@ -212,6 +212,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 
 	timing@1{
@@ -310,6 +311,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@2{
 		qcom,mdss-dsi-cmd-mode;
@@ -409,6 +411,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@3{
 		qcom,mdss-dsi-cmd-mode;
@@ -508,6 +511,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@4{
 		qcom,mdss-dsi-cmd-mode;
@@ -607,6 +611,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 };
 
