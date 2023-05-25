@@ -75,5 +75,6 @@
 };
 
 &mdss_mdp {
+	qcom,sde-cdp-setting = <1 1>, <1 0>;
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_rscc &sde_wb>;
 };

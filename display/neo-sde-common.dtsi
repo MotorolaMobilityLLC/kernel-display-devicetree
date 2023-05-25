@@ -204,7 +204,7 @@
 				0x00112233 0x44556666 0x00112233 0x66666666
 				0x00112233 0x44556666 0x00112233 0x66666666>;
 
-		qcom,sde-cdp-setting = <1 1>, <1 0>;
+		qcom,sde-cdp-setting = <0 0>, <0 0>;
 
 		qcom,sde-qos-cpu-mask = <0x3>;
 		qcom,sde-qos-cpu-mask-performance = <0xf>;
