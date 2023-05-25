@@ -1,7 +1,8 @@
 ifeq ($(CONFIG_TARGET), neo_le)
 dtbo-$(CONFIG_ARCH_NEO) += display/neo-sde.dtbo \
                 display/neo-sde-display-idp-overlay.dtbo \
-                display/neo-sde-display-qxr-overlay.dtbo
+                display/neo-sde-display-qxr-overlay.dtbo \
+                display/foreseer-sde-display-qxr-overlay.dtbo
 endif
 
 ifeq ($(CONFIG_TARGET), neo_la)
