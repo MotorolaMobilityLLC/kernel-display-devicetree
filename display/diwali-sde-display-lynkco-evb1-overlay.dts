@@ -3,9 +3,10 @@
 
 #include "diwali-sde-display-lynkco-common.dtsi"
 
+#define LYNKCO_RADIO_ROW 2
 / {
 	model = "lynkco";
 	compatible = "qcom,diwali-qrd", "qcom,diwali", "qcom,qrd", "moto,lynkco";
 	qcom,msm-id = <506 0x10000>, <547 0x10000>, <564 0x10000>;
-	qcom,board-id = <0x41 0x9100>, <0x41 0xA100>, <0x41 0xB100>;
+	qcom,board-id = <0x41 0x9100>, <0x41 0xA100>, <0x41 0xB100>, <(LYNKCO_RADIO_ROW << 8 | 0x41) 0xB200>;
 };
