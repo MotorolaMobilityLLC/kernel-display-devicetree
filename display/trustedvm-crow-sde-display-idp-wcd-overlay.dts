@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-crow-sde.dtsi"
+#include "trustedvm-crow-sde-display-idp-wcd.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Crow IDP WCD - TrustedVM";
+	compatible = "qcom,crow-idp", "qcom,crow", "qcom,idp";
+	qcom,msm-id = <608 0x10000>;
+	qcom,board-id = <34 1>, <34 2>, <34 3>;
+};

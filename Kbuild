@@ -29,6 +29,12 @@ dtbo-$(CONFIG_ARCH_CROW) += display/crow-sde.dtbo \
 		display/crow-sde-display-atp-overlay.dtbo \
 		display/crow-sde-display-rumi-overlay.dtbo \
 		display/crow-sde-display-qrd-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_CROW) += display/trustedvm-crow-sde-display-idp-overlay.dtbo \
+		  display/trustedvm-crow-sde-display-idp-wcd-overlay.dtbo \
+		  display/trustedvm-crow-sde-display-atp-overlay.dtbo \
+		  display/trustedvm-crow-sde-display-rumi-overlay.dtbo \
+		  display/trustedvm-crow-sde-display-qrd-overlay.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SA8155), y)
