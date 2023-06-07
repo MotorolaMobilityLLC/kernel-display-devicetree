@@ -28,7 +28,9 @@ dtbo-$(CONFIG_ARCH_CROW) += display/crow-sde.dtbo \
 		display/crow-sde-display-idp-wcd-overlay.dtbo \
 		display/crow-sde-display-atp-overlay.dtbo \
 		display/crow-sde-display-rumi-overlay.dtbo \
-		display/crow-sde-display-qrd-overlay.dtbo
+		display/crow-sde-display-qrd-overlay.dtbo \
+		display/crow-sde-display-idps-overlay.dtbo \
+		display/crow-sde-display-idps-wcd-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_CROW) += display/trustedvm-crow-sde-display-idp-overlay.dtbo \
 		  display/trustedvm-crow-sde-display-idp-wcd-overlay.dtbo \
