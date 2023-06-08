@@ -90,8 +90,8 @@
 		qcom,panel-supply-entry@2 {
 			reg = <0>;
 			qcom,supply-name = "lab";
-			qcom,supply-min-voltage = <4600000>;
-			qcom,supply-max-voltage = <6000000>;
+			qcom,supply-min-voltage = <5400000>;
+			qcom,supply-max-voltage = <5600000>;
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
 		 };
@@ -99,8 +99,8 @@
 		qcom,panel-supply-entry@3 {
 			reg = <1>;
 			qcom,supply-name = "ibb";
-			qcom,supply-min-voltage = <4600000>;
-			qcom,supply-max-voltage = <6000000>;
+			qcom,supply-min-voltage = <5400000>;
+			qcom,supply-max-voltage = <5600000>;
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-post-on-sleep = <20>;
