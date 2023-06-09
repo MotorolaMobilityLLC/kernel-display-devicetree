@@ -1,0 +1,5 @@
+#include "crow-sde-display-idp.dtsi"
+
+&sde_dsi {
+	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_cmd>;
+};

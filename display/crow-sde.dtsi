@@ -1,10 +1,10 @@
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
-#include <dt-bindings/clock/qcom,dispcc-kalama.h>
-#include <dt-bindings/clock/qcom,gcc-kalama.h>
-#include <dt-bindings/interconnect/qcom,kalama.h>
+#include <dt-bindings/clock/qcom,dispcc-crow.h>
+#include <dt-bindings/clock/qcom,gcc-crow.h>
+#include <dt-bindings/interconnect/qcom,crow.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 #include <dt-bindings/clock/qcom,tcsrcc-kalama.h>
-#include "kalama-sde-common.dtsi"
+#include "crow-sde-common.dtsi"
 
 &soc {
 	ext_disp: qcom,msm-ext-disp {
@@ -20,13 +20,14 @@
 	};
 
 	sde_dp: qcom,dp_display@ae90000 {
+		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
-		usb-phy = <&usb_qmp_dp_phy>;
-		qcom,dp-aux-switch = <&fsa4480>;
+		//usb-phy = <&usb_qmp_dp_phy>;
+		//qcom,dp-aux-switch = <&fsa4480>;
 		qcom,ext-disp = <&ext_disp>;
-		qcom,altmode-dev = <&altmode 0>;
+		//qcom,altmode-dev = <&altmode 0>;
 		usb-controller = <&usb0>;
 
 		reg =   <0xae90000 0x0fc>,
@@ -84,7 +85,6 @@
 		qcom,max-pclk-frequency-khz = <675000>;
 
 		qcom,widebus-enable;
-		qcom,mst-enable;
 		qcom,dsc-feature-enable;
 		qcom,fec-feature-enable;
 		qcom,dsc-continuous-pps;
@@ -92,9 +92,9 @@
 		qcom,qos-cpu-mask = <0xf>;
 		qcom,qos-cpu-latency-us = <300>;
 
-		vdda-1p2-supply = <&L3E>;
-		vdda-0p9-supply = <&L3F>;
-		vdda_usb-0p9-supply = <&L1E>;
+		vdda-1p2-supply = <&L4B>;
+		vdda-0p9-supply = <&L3B>;
+		vdda_usb-0p9-supply = <&L2B>;
 		vdd_mx-supply = <&VDD_MXA_LEVEL>;
 		dp_phy_gdsc-supply = <&gcc_usb3_phy_gdsc>;
 
@@ -155,6 +155,7 @@
 	sde_rscc: qcom,sde_rscc@af20000 {
 		cell-index = <0>;
 		compatible = "qcom,sde-rsc";
+		status = "disabled";
 		reg = <0xaf20000 0x4d68>,
 			<0xaf30000 0x3fd4>;
 		reg-names = "drv", "wrapper";
@@ -194,24 +195,18 @@
 
 &mdss_mdp {
 	clocks =
-		<&gcc GCC_DISP_AHB_CLK>,
 		<&gcc GCC_DISP_HF_AXI_CLK>,
 		<&dispcc DISP_CC_MDSS_AHB_CLK>,
 		<&dispcc DISP_CC_MDSS_MDP_CLK>,
 		<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_VSYNC_CLK>,
 		<&dispcc DISP_CC_MDSS_MDP_LUT_CLK>;
-	clock-names = "gcc_iface", "gcc_bus",
+	clock-names =  "gcc_bus",
 			"iface_clk", "branch_clk", "core_clk", "vsync_clk",
 			"lut_clk";
-	clock-rate = <0 0 0 514000000 514000000 19200000 514000000>;
-	clock-max-rate = <0 0 0 514000000 514000000 19200000 514000000>;
-
-	clock-mmrm = <0 0 0 0 DISP_CC_MDSS_MDP_CLK_SRC 0 0>;
-
-	mmcx-supply = <&VDD_MMCX_LEVEL>;
-
-	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
+	clock-rate = <0 0 520000000 520000000 19200000 520000000>;
+	clock-max-rate = <0 0 520000000 520000000 19200000 520000000>;
+	vdd-supply = <&disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
@@ -224,8 +219,8 @@
 	qcom,sde-ib-bw-vote = <2500000 0 800000>;
 	qcom,sde-has-idle-pc;
 	qcom,sde-dspp-ltm-version = <0x00010002>;
-	/* offsets are based off dspp 0, 1, 2, and 3 */
-	qcom,sde-dspp-ltm-off = <0x15300 0x14300 0x13300 0x12300>;
+	/* offsets are based off dspp 0 and 1 */
+	qcom,sde-dspp-ltm-off = <0x15300 0x14300>;
 
 	qcom,platform-supply-entries {
 		#address-cells = <1>;
@@ -233,7 +228,7 @@
 
 		qcom,platform-supply-entry@0 {
 			reg = <0>;
-			qcom,supply-name = "mmcx";
+			qcom,supply-name = "vdd";
 			qcom,supply-min-voltage = <0>;
 			qcom,supply-max-voltage = <0>;
 			qcom,supply-enable-load = <0>;
@@ -242,15 +237,8 @@
 	};
 };
 
-&disp_rsc_drv0 {
-	sde_rsc_rpmh {
-		compatible = "qcom,sde-rsc-rpmh";
-		cell-index = <0>;
-	};
-};
-
 &mdss_dsi0 {
-	vdda-1p2-supply = <&L3E>;
+	vdda-1p2-supply = <&L4B>;
 	qcom,split-link-supported;
 	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
@@ -263,32 +251,11 @@
 			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
 };
 
-&mdss_dsi1 {
-	vdda-1p2-supply = <&L3E>;
-	qcom,split-link-supported;
-	clocks = <&dispcc DISP_CC_MDSS_BYTE1_CLK>,
-		<&dispcc DISP_CC_MDSS_BYTE1_CLK_SRC>,
-		<&dispcc DISP_CC_MDSS_BYTE1_INTF_CLK>,
-		<&dispcc DISP_CC_MDSS_PCLK1_CLK>,
-		<&dispcc DISP_CC_MDSS_PCLK1_CLK_SRC>,
-		<&dispcc DISP_CC_MDSS_ESC1_CLK>,
-		<&rpmhcc RPMH_CXO_CLK>;
-	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
-};
-
 &mdss_dsi_phy0 {
-	vdda-0p9-supply = <&L1E>;
+	vdda-0p9-supply = <&L2B>;
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
 	pll_codes_region = <&dsi_pll_codes_data>;
 
-};
-
-&mdss_dsi_phy1 {
-	vdda-0p9-supply = <&L1E>;
-	qcom,panel-allow-phy-poweroff;
-	qcom,dsi-pll-ssc-en;
-	qcom,dsi-pll-ssc-mode = "down-spread";
 };
