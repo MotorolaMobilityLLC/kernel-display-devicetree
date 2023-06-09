@@ -182,12 +182,19 @@
 		qcom,sde-vbif-default-ot-wr-limit = <32>;
 		qcom,sde-vbif-dynamic-ot-wr-limit = <62208000 2 124416000 6 497664000 16>;
 
-		qcom,sde-vbif-qos-rt-remap = <4 4 5 5 5 5 6 6 4 4 5 5 5 5 6 6>;
-		qcom,sde-vbif-qos-nrt-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
-		qcom,sde-vbif-qos-cwb-remap = <4 4 4 4 4 5 6 6 4 4 4 4 4 5 6 6>;
-		qcom,sde-vbif-qos-lutdma-remap = <4 4 5 5 5 5 6 6 4 4 5 5 5 5 6 6>;
-		qcom,sde-vbif-qos-offline-wb-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
-		qcom,sde-vbif-qos-cnoc-remap = <3 3 4 4 5 5 5 5 3 3 3 3 3 3 3 3>;
+		qcom,sde-ddr-type = <0x8 0x7>;
+		qcom,sde-vbif-qos-rt-remap = <4 4 5 5 6 6 6 6 4 4 5 5 6 6 6 6>,
+						<4 4 5 5 5 5 6 6 4 4 5 5 5 5 6 6>;
+		qcom,sde-vbif-qos-nrt-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>,
+						<3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
+		qcom,sde-vbif-qos-cwb-remap = <4 4 5 5 5 5 6 6 4 4 5 5 5 5 6 6>,
+						<4 4 4 4 4 5 6 6 4 4 4 4 4 5 6 6>;
+		qcom,sde-vbif-qos-lutdma-remap = <4 4 5 5 5 5 6 6 4 4 5 5 5 5 6 6>,
+						<4 4 5 5 5 5 6 6 4 4 5 5 5 5 6 6>;
+		qcom,sde-vbif-qos-offline-wb-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>,
+						<3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
+		qcom,sde-vbif-qos-cnoc-remap = <3 3 4 4 5 5 5 5 3 3 3 3 3 3 3 3>,
+						<3 3 4 4 5 5 5 5 3 3 3 3 3 3 3 3>;
 
 		qcom,sde-danger-lut = <0xffff 0xffff 0xffff 0xffff 0x0 0x0 0x0 0x0
 				0x0 0x0 0xffff 0xffff 0xffff 0xffff 0x0 0x0>;

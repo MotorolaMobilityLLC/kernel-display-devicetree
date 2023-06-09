@@ -471,24 +471,30 @@ Optional properties:
 - qcom,sde-downscaling-prefill-lines:	A u32 value indicates the latency of downscaling in lines.
 - qcom,sde-max-per-pipe-bw-kbps:	Array of u32 value indicates the max per pipe bandwidth in Kbps.
 - qcom,sde-amortizable-threshold:	This value indicates the min for traffic shaping in lines.
-- qcom,sde-vbif-qos-rt-remap:	This u32 array is used to program vbif qos remapper register
-				priority for realtime clients. First 8 entries are for rp_remap and
-				the next 8 entries are for lvl_remap.
-- qcom,sde-vbif-qos-nrt-remap:	This u32 array is used to program vbif qos remapper register
-				priority for non-realtime clients. First 8 entries are for rp_remap and
-				the next 8 entries are for lvl_remap.
+- qcom,sde-ddr-type:		A u32 array indicates per pipe bandwidth and vbif qos
+				configurations for different ddr types.
+- qcom,sde-vbif-qos-rt-remap:	This u32 array is used to program the target vbif qos remapper
+				register priority for realtime clients based on ddr-type.
+				First 8 entries are for rp_remap and the next 8 entries are
+				for lvl_remap.
+- qcom,sde-vbif-qos-nrt-remap:	This u32 array is used to program the target vbif qos remapper
+				register priority for non-realtime clients based on ddr-type.
+				First 8 entries are for rp_remap and the next 8 entries are
+				for lvl_remap.
 - qcom,sde-vbif-qos-cwb-remap:	This u32 array is used to program vbif qos remapper register
-				priority for concurrent writeback clients. First 8 entries are
+				priority for concurrent writeback clients based on ddr-type.
+				First 8 entries are for rp_remap and the next 8 entries are
+				for lvl_remap.
+- qcom,sde-vbif-qos-lutdma-remap:	This u32 array is used to program vbif qos remapper
+				register priority for lutdma client based on ddr-type.
+				First 8 entries are for rp_remap and the next 8 entries are
+				for lvl_remap.
+- qcom,sde-vbif-qos-cnoc-remap: This u32 array is used to program vbif qos remapper register
+				priority for cnoc clients based on ddr-type. First 8 entries are
 				for rp_remap and the next 8 entries are for lvl_remap.
-- qcom,sde-vbif-qos-lutdma-remap:	This u32 array is used to program vbif qos remapper register
-				priority for lutdma client. First 8 entries are for rp_remap and
-				the next 8 entries are for lvl_remap.
-- qcom,sde-vbif-qos-cnoc-remap:	This u32 array is used to program vbif qos remapper register
-				priority for cnoc clients. First 8 entries are for rp_remap and
-				the next 8 entries are for lvl_remap.
 - qcom,sde-vbif-qos-offline-wb-remap:	This u32 array is used to program vbif qos remapper register
-				priority for offline-wb clients. First 8 entries are for rp_remap
-				and the next 8 entries are for lvl_remap.
+				priority for offline-wb clients based on ddr-type. First 8 entries
+				are for rp_remap and the next 8 entries are for lvl_remap.
 - qcom,sde-qos-refresh-rates:	This u32 array indicates danger, safe and creq luts
 				qos configuration for different refresh rates.
 - qcom,sde-danger-lut:		This u32 array of 16 cell property, with a format of
