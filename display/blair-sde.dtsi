@@ -23,7 +23,6 @@
 	};
 
 	mdss_rotator: qcom,mdss_rotator {
-		status = "disabled";
 		compatible = "qcom,sde_rotator";
 		reg = <0x5e00000 0xac000>,
 			<0x5eb0000 0x2008>;
@@ -34,11 +33,10 @@
 		#list-cells = <1>;
 		qcom,mdss-rot-mode = <1>;
 
-		clocks = <&gcc GCC_DISP_AHB_CLK>,
+		clocks =
 			<&dispcc DISP_CC_MDSS_AHB_CLK>,
 			<&dispcc DISP_CC_MDSS_ROT_CLK>;
-		clock-names = "gcc_iface",
-			"iface_clk", "rot_clk";
+		clock-names = "iface_clk", "rot_clk";
 
 		interrupt-parent = <&mdss_mdp>;
 		interrupts = <2 0>;
@@ -102,6 +100,9 @@
 
 	clock-rate = <0 0 0 0 448000000 19200000 448000000 200000000>;
 	clock-max-rate = <0 0 0 0 560000000 19200000 560000000 560000000>;
+
+	#power-domain-cells = <0>;
+	#list-cells = <1>;
 
 	sde-vdd-supply = <&mdss_core_gdsc>;
 	/* data and reg bus scale settings */
