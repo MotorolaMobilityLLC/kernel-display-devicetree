@@ -10,6 +10,8 @@
 #include "dsi-panel-sy103-dualmipi-2560x1280-60hz-video.dtsi"
 #include "dsi-panel-sim-1280x1280-60hz-video.dtsi"
 #include "dsi-panel-sy103-1280x1280-60hz-video.dtsi"
+#include "dsi-panel-sy049-dual-dsc-1080p-60hz-video.dtsi"
+#include "dsi-panel-sy049-dual-dsc-1080p-90hz-video.dtsi"
 
 #include "neo-sde-display-pinctrl.dtsi"
 
@@ -288,6 +290,30 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 18 06 06 15 20 06
 				06 07 02 04 00 15 0b];
 			qcom,display-topology = <2 0 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sy049_dual_dsc_60hz_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings =  [00 1a 06 06 16 20
+				07 07 07 07 02 04 16 0c];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sy049_dual_dsc_90hz_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings =  [00 24 0a 0a 1a 24
+				0a 0a 0a 09 02 04 1e 0f];
+			qcom,display-topology = <2 2 2>;
 			qcom,default-topology-index = <0>;
 		};
 	};
