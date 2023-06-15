@@ -1,0 +1,15 @@
+
+/* This is derivated from qcom kalama-sde-display-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "kalama-sde-display-ctwo-common.dtsi"
+
+/ {
+	model = "ctwo";
+	compatible = "qcom,kalama-mtp", "qcom,kalama", "qcom,mtp", "mot,ctwo";
+	qcom,msm-id = <519 0x10000>, <536 0x10000>, <519 0x20000>, <536 0x20000>;
+	qcom,board-id = <0x4b 0x9000>;
+
+};

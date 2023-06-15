@@ -1,0 +1,10 @@
+#include "kalama-sde.dtsi"
+
+/* Can not do delete-property in overlay and dts, have to add kalama-sde-ctwo dtsi file */
+&sde_dp {
+
+	//mmi,aux-switch-enable-gpio = <&tlmm 2 0x00>;
+	//mmi,aux-switch-flip-gpio = <&tlmm 71 0x00>;
+
+       /delete-property/ qcom,mst-enable;
+};
