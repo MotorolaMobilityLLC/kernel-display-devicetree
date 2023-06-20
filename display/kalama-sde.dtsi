@@ -251,7 +251,7 @@
 
 &mdss_dsi0 {
 	vdda-1p2-supply = <&L3E>;
-	qcom,split-link-supported;
+
 	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
@@ -265,7 +265,7 @@
 
 &mdss_dsi1 {
 	vdda-1p2-supply = <&L3E>;
-	qcom,split-link-supported;
+
 	clocks = <&dispcc DISP_CC_MDSS_BYTE1_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE1_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_BYTE1_INTF_CLK>,
