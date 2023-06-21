@@ -18,6 +18,7 @@
 	};
 
 	display_panel_avdd: display_gpio_regulator@1 {
+		status= "disabled";
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_panel_avdd";
 		regulator-min-microvolt = <5500000>;
@@ -27,6 +28,21 @@
 		enable-active-high;
 		regulator-boot-on;
 		proxy-supply = <&display_panel_avdd>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_avdd_default>;
+	};
+
+	display_panel_dvdd: display_gpio_regulator@2 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_dvdd";
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&tlmm 47 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_dvdd>;
 		qcom,proxy-consumer-enable;
 		pinctrl-names = "default";
 		pinctrl-0 = <&display_panel_avdd_default>;
@@ -73,6 +89,7 @@
 	vddio-supply = <&L13A>;
 	vci-supply = <&display_panel_vci>;
 	avdd-supply = <&display_panel_avdd>;
+	dvdd-supply = <&display_panel_dvdd>;
 	ibb-supply = <&display_panel_ibb>;
 	lab-supply = <&display_panel_lab>;
 };
@@ -95,4 +112,30 @@
 
 &dsi_r66451_amoled_60hz_cmd {
 	qcom,ulps-enabled;
+};
+
+&dsi_vtdr6130_amoled_cmd {
+	qcom,ulps-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+
+		timing@1 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+
+		timing@2 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+
+		timing@3 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+	};
 };
