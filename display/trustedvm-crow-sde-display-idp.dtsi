@@ -7,7 +7,7 @@
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 127 0>;
+	qcom,platform-reset-gpio = <&tlmm 29 0>;
 };
 
 &dsi_vtdr6130_amoled_video {
@@ -17,7 +17,7 @@
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 127 0>;
+	qcom,platform-reset-gpio = <&tlmm 29 0>;
 };
 
 &dsi_vtdr6130_amoled_qsync_144hz_cmd {
@@ -26,7 +26,7 @@
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 127 0>;
+	qcom,platform-reset-gpio = <&tlmm 29 0>;
 };
 
 &dsi_vtdr6130_amoled_qsync_144hz_video {
@@ -35,7 +35,7 @@
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 127 0>;
+	qcom,platform-reset-gpio = <&tlmm 29 0>;
 };
 
 &dsi_sim_cmd {
