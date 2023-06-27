@@ -105,6 +105,10 @@ Optional properties:
 - qcom,mdss-dsi-fbc-enable:		Boolean used to enable frame buffer compression mode.
 - qcom,mdss-dsi-panel-mode-switch:	Boolean used to enable panel operating mode switch.
 - qcom,poms-align-panel-vsync:		Boolean used to align panel TE with timing engine vsync in POMS
+- qcom,mdss-dsi-bpp-switch:		Boolean used to enable bpp mode switch for non-DSC modes.
+- qcom,mdss-dsi-bpp-mode:		Specifies the panel bits per pixel per timing node, only used when "qcom,mdss-dsi-bpp-switch" is set.
+					24 = for rgb888, default mode if "qcom,mdss-dsi-bpp-mode" is not set.
+					30 = for rgb101010.
 - qcom,mdss-dsi-fbc-slice-height:	Slice height(in lines) of compressed block.
 					Expressed as power of 2. To set as 128 lines,
 					this should be set to 7.
@@ -730,6 +734,7 @@ Example:
 		qcom,mdss-dsi-fbc-enable;
 		qcom,mdss-dsi-panel-mode-switch;
 		qcom,poms-align-panel-vsync;
+		qcom,mdss-dsi-bpp-switch;
 		qcom,mdss-dsi-fbc-slice-height = <5>;
 		qcom,mdss-dsi-fbc-2d-pred-mode;
 		qcom,mdss-dsi-fbc-ver2-mode;
@@ -875,6 +880,7 @@ Example:
 				cell-index = <0>;
 				qcom,mdss-dsi-cmd-mode;
 				qcom,mdss-dsi-video-mode;
+				qcom,mdss-dsi-bpp-mode = <24>;
 				qcom,mdss-dsi-timing-default;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
