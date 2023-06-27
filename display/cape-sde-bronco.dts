@@ -11,6 +11,7 @@
 /* Can not do delete-property in overlay dtsi, have to add cap-sde-eqs file */
 &sde_dp {
 	/delete-property/ qcom,mst-enable;
+	qcom,dp-downgrade;
 };
 
 &mdss_dsi_phy0 {
