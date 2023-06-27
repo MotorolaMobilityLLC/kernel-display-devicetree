@@ -67,6 +67,11 @@ dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
 		display/khaje-sde-display-qrd-nowcd9375-overlay.dtbo
 else
 
+ifeq ($(CONFIG_FOGONA_DTB),y)
+dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
+		  display/khaje-sde-display-fogona-evb-overlay.dtbo
+endif  #($(CONFIG_FOGONA_DTB),y)
+
 ifeq ($(CONFIG_RHODE_DTB),y)
 dtbo-$(CONFIG_ARCH_KHAJE) += display/khaje-sde.dtbo \
 		  display/khaje-sde-display-rhode-evb-overlay.dtbo
