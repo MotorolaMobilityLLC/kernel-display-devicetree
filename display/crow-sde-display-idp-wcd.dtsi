@@ -1,1 +1,5 @@
 #include "crow-sde-display-idp.dtsi"
+
+&sde_dp {
+	qcom,dp-aux-switch = <&wcd_usbss>;
+};

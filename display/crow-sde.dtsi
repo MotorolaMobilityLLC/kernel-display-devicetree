@@ -20,14 +20,12 @@
 	};
 
 	sde_dp: qcom,dp_display@ae90000 {
-		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
-		//usb-phy = <&usb_qmp_dp_phy>;
-		//qcom,dp-aux-switch = <&fsa4480>;
+		usb-phy = <&usb_qmp_dp_phy>;
 		qcom,ext-disp = <&ext_disp>;
-		//qcom,altmode-dev = <&altmode 0>;
+		qcom,altmode-dev = <&altmode 0>;
 		usb-controller = <&usb0>;
 
 		reg =   <0xae90000 0x0fc>,
@@ -69,7 +67,7 @@
 			"link_parent", "pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 			"strm0_pixel_clk", "strm1_pixel_clk";
 
-		qcom,pll-revision = "4nm-v1.1";
+		qcom,pll-revision = "4nm-v1";
 		qcom,phy-version = <0x600>;
 		qcom,aux-cfg0-settings = [20 00];
 		qcom,aux-cfg1-settings = [24 13];

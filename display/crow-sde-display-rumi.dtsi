@@ -2,8 +2,12 @@
 
 &mdss_mdp {
 	qcom,sde-emulated-env;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb>;
 };
 
+&sde_dp {
+	status="disabled";
+};
 &mdss_dsi0 {
 	qcom,dsi-phy-isolation-enabled;
 };
