@@ -75,6 +75,10 @@
 	qcom,ulps-enabled;
 };
 
+&dsi_vtdr6130_amoled_120hz_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_sim_cmd {
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
