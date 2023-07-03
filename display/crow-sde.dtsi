@@ -153,8 +153,7 @@
 	sde_rscc: qcom,sde_rscc@af20000 {
 		cell-index = <0>;
 		compatible = "qcom,sde-rsc";
-		status = "disabled";
-		reg = <0xaf20000 0x4d68>,
+		reg = <0xaf20000 0x4d6c>,
 			<0xaf30000 0x3fd4>;
 		reg-names = "drv", "wrapper";
 		qcom,sde-rsc-version = <5>;
@@ -204,7 +203,6 @@
 			"lut_clk";
 	clock-rate = <0 0 520000000 520000000 19200000 520000000>;
 	clock-max-rate = <0 0 520000000 520000000 19200000 520000000>;
-	vdd-supply = <&disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
@@ -219,19 +217,12 @@
 	qcom,sde-dspp-ltm-version = <0x00010002>;
 	/* offsets are based off dspp 0 and 1 */
 	qcom,sde-dspp-ltm-off = <0x15300 0x14300>;
+};
 
-	qcom,platform-supply-entries {
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		qcom,platform-supply-entry@0 {
-			reg = <0>;
-			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <0>;
-			qcom,supply-max-voltage = <0>;
-			qcom,supply-enable-load = <0>;
-			qcom,supply-disable-load = <0>;
-		};
+&disp_rsc_drv0 {
+	sde_rsc_rpmh {
+		compatible = "qcom,sde-rsc-rpmh";
+		cell-index = <0>;
 	};
 };
 
