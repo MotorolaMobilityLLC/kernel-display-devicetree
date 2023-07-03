@@ -98,6 +98,14 @@
 	connectors = <&sde_dsi>;
 };
 
+&dsi_sim_dsc_375_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_sim_dsc_10b_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_rm69299_visionox_amoled_cmd {
 	qcom,ulps-enabled;
 };
