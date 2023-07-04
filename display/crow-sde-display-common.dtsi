@@ -349,14 +349,10 @@
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@6 { /* FHD+ 240 FPS cmd mode*/
-			qcom,mdss-dsi-panel-phy-timings = [00 89 26 27 42 39 25
-				27 1f 02 04 00 69 2a];
-			qcom,display-topology = <2 2 1>;
-			qcom,default-topology-index = <0>;
-		};
+		/delete-node/ timing@6; /* FHD+ 240 FPS cmd mode*/
 
 		timing@7 { /* FHD+ 120FPS cmd mode*/
+			cell-index = <6>;
 			qcom,mdss-dsi-panel-phy-timings = [00 4a 13 14 28 24 12
 				14 11 02 04 00 39 18];
 			qcom,display-topology = <1 1 1>,
@@ -365,6 +361,7 @@
 		};
 
 		timing@8 { /* FHD+ 1FPS cmd mode*/
+			cell-index = <7>;
 			qcom,mdss-dsi-panel-phy-timings = [03 04 00 00 0d 18 01
 				00 01 02 04 00 05 05];
 			qcom,display-topology = <1 1 1>,
@@ -373,6 +370,7 @@
 		};
 
 		timing@9 { /* FHD+ 5FPS cmd mode*/
+			cell-index = <8>;
 			qcom,mdss-dsi-panel-phy-timings = [03 06 00 00 0d 1a 01
 				00 01 02 04 00 06 05];
 			qcom,display-topology = <1 1 1>,
@@ -381,6 +379,7 @@
 		};
 
 		timing@10 { /* FHD+ 10FPS cmd mode*/
+			cell-index = <9>;
 			qcom,mdss-dsi-panel-phy-timings = [03 07 00 01 0d 1a 01
 				01 01 02 04 00 07 06];
 			qcom,display-topology = <1 1 1>,
@@ -389,6 +388,7 @@
 		};
 
 		timing@11 { /* FHD+ 24FPS cmd mode*/
+			cell-index = <10>;
 			qcom,mdss-dsi-panel-phy-timings = [00 09 01 01 0e 1b 02
 				01 01 02 04 00 08 06];
 			qcom,display-topology = <1 1 1>,
@@ -397,6 +397,7 @@
 		};
 
 		timing@12 { /* FHD+ 30FPS cmd mode*/
+			cell-index = <11>;
 			qcom,mdss-dsi-panel-phy-timings = [00 0a 01 02 0e 1b 02
 				02 01 02 04 00 09 07];
 			qcom,display-topology = <1 1 1>,
@@ -405,6 +406,7 @@
 		};
 
 		timing@13 { /* FHD+ 144FPS cmd mode*/
+			cell-index = <12>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1a 06 06 16 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <1 1 1>,
@@ -485,14 +487,10 @@
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@4 { /* FHD+ 240FPS cmd mode*/
-			qcom,mdss-dsi-panel-phy-timings = [00 28 0a 0b 1b 1a 0a
-				0b 0a 02 04 00 21 0f];
-			qcom,display-topology = <2 2 1>;
-			qcom,default-topology-index = <0>;
-		};
+		/delete-node/ timing@4; /* FHD+ 240FPS cmd mode*/
 
 		timing@5 { /* FHD+ 120FPS cmd mode*/
+			cell-index = <4>;
 			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 13 06
 				06 06 02 04 00 13 0b];
 			qcom,display-topology = <2 2 1>;
@@ -500,6 +498,7 @@
 		};
 
 		timing@6 { /* FHD+ 1FPS cmd mode*/
+			cell-index = <5>;
 			qcom,mdss-dsi-panel-phy-timings = [03 04 00 00 0d 18 01
 				00 01 02 04 00 05 05];
 			qcom,display-topology = <1 1 1>,
@@ -508,6 +507,7 @@
 		};
 
 		timing@7 { /* FHD+ 10FPS cmd mode*/
+			cell-index = <6>;
 			qcom,mdss-dsi-panel-phy-timings = [03 07 00 01 0d 1a 01
 				01 01 02 04 00 07 06];
 			qcom,display-topology = <1 1 1>,
@@ -516,6 +516,7 @@
 		};
 
 		timing@8 { /* FHD+ 24FPS cmd mode*/
+			cell-index = <7>;
 			qcom,mdss-dsi-panel-phy-timings = [00 09 01 01 0e 1b 02
 				01 01 02 04 00 08 06];
 			qcom,display-topology = <1 1 1>,
@@ -524,6 +525,7 @@
 		};
 
 		timing@9 { /* FHD+ 30FPS cmd mode*/
+			cell-index = <8>;
 			qcom,mdss-dsi-panel-phy-timings = [00 0a 01 02 0e 1b 02
 				02 01 02 04 00 09 07];
 			qcom,display-topology = <1 1 1>,
@@ -532,6 +534,7 @@
 		};
 
 		timing@10 { /* FHD+ 90FPS cmd mode*/
+			cell-index = <9>;
 			qcom,mdss-dsi-panel-phy-timings = [00 39 0f 0e 21 2a 0e
 				0f 0d 02 04 00 2d 13];
 			qcom,display-topology = <2 2 1>;
@@ -539,6 +542,7 @@
 		};
 
 		timing@11 { /* FHD+ 144FPS cmd mode*/
+			cell-index = <10>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1a 06 06 16 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <2 2 1>;
