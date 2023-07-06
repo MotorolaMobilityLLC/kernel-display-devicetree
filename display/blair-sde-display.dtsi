@@ -99,6 +99,18 @@
 	lab-supply = <&display_panel_lab>;
 };
 
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0x85200000 0x0 0x00c00000>;
+		label = "cont_splash_region";
+	};
+
+	dfps_data_memory: dfps_data_region {
+		reg = <0x0 0x85e00000 0x0 0x00100000>;
+		label = "dfps_data_region";
+	};
+};
+
 &mdss_mdp {
 	connectors = <&sde_dsi>;
 };
