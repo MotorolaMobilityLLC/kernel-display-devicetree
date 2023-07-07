@@ -60,6 +60,11 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&display_panel_avee_default>;
 	};
+
+	disp_rdump_memory: disp_rdump_region@eca00000 {
+		reg = <0xeca00000 0x00800000>;
+		label = "disp_rdump_region";
+	};
 };
 
 &reserved_memory {
