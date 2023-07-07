@@ -1,5 +1,9 @@
 #include "crow-sde-display.dtsi"
 
+&sde_dp {
+	qcom,dp-aux-switch = <&fsa4480>;
+};
+
 &dsi_vtdr6130_amoled_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
