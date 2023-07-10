@@ -165,9 +165,12 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			qcom,mdss-dsi-panel-phy-timings = [01 09 01 01 1b 1b 01
-				01 02 02 04 00 0a 11];
-			qcom,display-topology = <1 0 1>;
+			qcom,mdss-dsi-panel-width = <720>;
+			qcom,mdss-dsi-panel-height = <480>;
+
+			qcom,mdss-dsi-panel-phy-timings = [01 09 01 01 0e 0e 01
+				01 02 02 04 00 08 06];
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
