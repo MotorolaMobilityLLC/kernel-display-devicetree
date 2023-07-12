@@ -2,7 +2,7 @@
 /plugin/;
 
 #include "khaje-sde-display-fogona-common.dtsi"
-//#include "khaje-fogona-touchscreen-overlay.dtsi"
+#include "khaje-fogona-touchscreen-overlay.dtsi"
 
 / {
 	model = "fogona";
