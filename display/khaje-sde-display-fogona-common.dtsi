@@ -3,9 +3,25 @@
 
 #include "khaje-sde-display.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
-#include "dsi-panel-mot-csot-nt37701-655-1080x2400-dsc-cmd-common.dtsi"
+#include "dsi-panel-mot-tm-icnl9916c-652-720x1600-vid.dtsi"
+//#include "dsi-panel-mot-csot-nt37701-655-1080x2400-dsc-cmd-common.dtsi"
 
+&soc {
+        dsi_panel_pwr_supply_fogona: dsi_panel_pwr_supply_fogona {
+                #address-cells = <1>;
+                #size-cells = <0>;
 
+                qcom,panel-supply-entry@0 {
+                        reg = <0>;
+                        qcom,supply-name = "vddio";
+                        qcom,supply-min-voltage = <1800000>;
+                        qcom,supply-max-voltage = <1800000>;
+                        qcom,supply-enable-load = <62000>;
+                        qcom,supply-disable-load = <80>;
+                        qcom,supply-post-on-sleep = <20>;
+                };
+        };
+};
 
 
 &mdss_mdp {
@@ -14,9 +30,36 @@
 
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&mot_csot_nt37701_655_1080x2400_dsc_cmd_v0>;
+	qcom,dsi-default-panel = <&dsi_icnl9916c_tm_hd_video>;
 };
 
+&dsi_icnl9916c_tm_hd_video {
+        //qcom,esd-check-enabled;
+        qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+        qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+        qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+        qcom,mdss-dsi-panel-status-value = <0x9c>;
+        qcom,mdss-dsi-panel-status-read-length = <1>;
+
+        qcom,panel-supply-entries = <&dsi_panel_pwr_supply_fogona>;
+        qcom,mdss-dsi-no-panel-on-read-support;
+        qcom,mdss-dsi-reset-force-pull-low;
+        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+        qcom,mdss-dsi-bl-min-level = <9>;
+        qcom,mdss-dsi-bl-max-level = <2047>;
+        qcom,mdss-dsi-bl-default-level = <2047>;
+        qcom,mdss-brightness-max-level = <2047>;
+        qcom,platform-reset-gpio = <&tlmm 82 0>;
+        qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+                timing@0 {
+                        qcom,mdss-dsi-panel-phy-timings = [00 14 05 05 13 1F 05
+                                        05 06 02 04 00 12 0A];
+                        qcom,display-topology = <1 0 1>;
+                        qcom,default-topology-index = <0>;
+                };
+        };
+};
 
 &mot_dummy_vid_qhd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
