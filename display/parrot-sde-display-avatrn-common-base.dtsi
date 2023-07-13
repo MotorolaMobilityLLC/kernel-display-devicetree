@@ -56,8 +56,8 @@
 		qcom,panel-supply-entry@2 {
 			reg = <2>;
 			qcom,supply-name = "dvdd";
-			qcom,supply-min-voltage = <1296000>;
-			qcom,supply-max-voltage = <1296000>;
+			qcom,supply-min-voltage = <1250000>;
+			qcom,supply-max-voltage = <1250000>;
 			qcom,supply-enable-load = <300000>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-pre-on-sleep = <0>;
@@ -197,7 +197,7 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 
-	//qcom,esd-check-enabled;
+	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
