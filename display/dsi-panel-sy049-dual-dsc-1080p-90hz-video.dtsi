@@ -56,6 +56,8 @@
 				15 01 00 00 00 00 02 65 20
 				39 01 00 00 00 00 0D 70 18 00 10 F0 03
 				   0C 20 00 06 0B 0B 33
+				39 01 00 00 00 00 03 F0 AA 10
+				15 01 00 00 00 00 02 D1 11
 				39 01 00 00 00 00 03 F0 AA 11
 				15 01 00 00 00 00 02 C0 00
 				39 01 00 00 00 00 09 C2 03 FF 03 FF 03
@@ -86,7 +88,7 @@
 			qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
 			qcom,compression-mode = "dsc";
 			qcom,mdss-dsc-slice-height = <30>;
-			qcom,mdss-dsc-slice-width = <1920>;
+			qcom,mdss-dsc-slice-width = <960>;
 			qcom,mdss-dsc-pic-width-slice = <2>;
 			qcom,mdss-dsc-slice-per-pkt = <1>;
 			qcom,mdss-dsc-bit-per-component = <8>;
