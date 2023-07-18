@@ -7,6 +7,11 @@
 		cell-index = <0>;
 		label = "wb_display";
 	};
+
+	disp_rdump_memory: disp_rdump_region@b8000000 {
+		reg = <0xb8000000 0x00800000>;
+		label = "disp_rdump_region";
+	};
 };
 
 &reserved_memory {
