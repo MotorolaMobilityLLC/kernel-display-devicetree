@@ -1,4 +1,3 @@
-
 /* this is original from kalama-sde-display-mtp.dtsi */
 
 #include "kalama-sde-display.dtsi"
@@ -13,6 +12,7 @@
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v0_lhbm.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-tm-nt37705-667-curve-1080x2400-dsc-cmd-common_v1_lhbm.dtsi"
+#include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-video-144hz-common-v1.dtsi"
 &soc {
 	dsi_panel_pwr_supply_rtwo: dsi_panel_pwr_supply_rtwo {
 		#address-cells = <1>;
@@ -64,6 +64,58 @@
        regulator-max-microvolt = <1280000>;
        qcom,init-voltage = <1230000>;
 };
+
+&mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	//qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	//qcom,mdss-dsi-pan-enable-dynamic-fps;
+	//qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+	//qcom,mdss-dsi-pan-dfps-send-command;
+
+	//qcom,dsi-dyn-clk-enable;
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_rtwo>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <420>;//
+	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-default-level = <10230>;
+	qcom,mdss-brightness-max-level = <16380>;
+	qcom,platform-reset-gpio = <&tlmm 133 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+	qcom,mdss-dsi-bl-double-write;
+
+	//qcom,mdss-dsi-panel-hdr-enabled;//
+	//qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
+	//        16000 13000 35500 7000 2500>;
+	//qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	//qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	//qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	//qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
+	//qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	//qcom,mdss-dsi-panel-status-value = <0 0 0>;
+	//qcom,mdss-dsi-panel-status-read-length = <3>;
+	//qcom,esd-check-enabled;
+
+	//qcom,cellid-read-enabled;//
+	//qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	//qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
+				0A 09 02 04 00 1E 0F];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
 
 &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v1 {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
@@ -669,7 +721,8 @@
                 &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v0
                 &mot_csot_nt37705_667_curve_1080x2400_dsc_cmd_v1
                 &mot_tm_nt37705_667_curve_1080x2400_dsc_cmd_v0
-                &mot_tm_nt37705_667_curve_1080x2400_dsc_cmd_v1>;
+                &mot_tm_nt37705_667_curve_1080x2400_dsc_cmd_v1
+		&mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz>;
     };
 };
 
