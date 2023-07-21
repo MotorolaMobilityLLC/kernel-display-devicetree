@@ -40,6 +40,13 @@
 		qcom,mdss-dsi-wr-mem-start = <0x2c>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
 
+		qcom,mdss-dsi-dc-off-command = [
+				39 01 00 00 00 00 02 5E 00];
+		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-dc-on-command = [
+				39 01 00 00 00 00 02 5E 01];
+		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
+
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
@@ -69,7 +76,7 @@
 					39 00 00 00 00 00 02 5D 00
 					39 00 00 00 00 00 02 5E 00
 					39 00 00 00 00 00 02 6F 01
-					39 00 00 00 00 00 02 6C 03
+					39 00 00 00 00 00 02 6C 00
 					39 00 00 00 00 00 03 FF 5A 80
 					39 00 00 00 00 00 02 65 26
 					39 00 00 00 00 00 02 F7 01
@@ -103,6 +110,21 @@
 				qcom,mdss-dsc-bit-per-component = <8>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
+				qcom,mdss-dsi-dfps-60-command = [
+						39 00 00 00 00 00 02 6C 03];
+				qcom,mdss-dsi-dfps-60-command-state = "dsi_hs_mode";
+
+				qcom,mdss-dsi-dfps-90-command = [
+						39 00 00 00 00 00 02 6c 02];
+				qcom,mdss-dsi-dfps-90-command-state = "dsi_hs_mode";
+
+				qcom,mdss-dsi-dfps-120-command = [
+						39 00 00 00 00 00 02 6c 01];
+				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
+
+				qcom,mdss-dsi-dfps-144-command = [
+						39 00 00 00 00 00 02 6C 00];
+				qcom,mdss-dsi-dfps-144-command-state = "dsi_hs_mode";
 			};
 		};
 	};
