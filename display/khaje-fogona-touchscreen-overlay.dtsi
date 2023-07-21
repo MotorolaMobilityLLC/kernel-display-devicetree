@@ -169,8 +169,25 @@
 		pinctrl-3 = <&touch_int_active>;
 		pinctrl-4 = <&ts_int_suspend_high>;
 		panel = <&dsi_icnl9916c_tm_hd_video>;
-		//mmi,status = "/chosen","mmi,panel_name","contains","icnl9916c";
+		mmi,status = "/chosen","mmi,panel_name","contains","icnl9916c";
 		status = "ok";
 	};
+	novatek@0{
+                compatible = "novatek,NVT-ts-spi";
+                reg = <0>;
+                spi-max-frequency = <9600000>;  /* 4800000,9600000,15000000,19200000 */
+                novatek,reset-gpio = <&tlmm 86 0x00>;
+                novatek,irq-gpio = <&tlmm 80 0x2001>;
+                novatek,def-max-resolution = <720 1600>;
+                novatek,swrst-n8-addr = <0x03F0FE>;
+                novatek,spi-rd-fast-addr = <0x03F310>;
+                novatek,report_gesture_key;
+                novatek,usb_charger;
+                novatek,panel-supplier = "djn";
+                mmi,status = "/chosen","mmi,panel_name","contains","nt36528";
+                panel = <&dsi_nt36528_csot_hd_video>;
+                status = "ok";
+        };
+
 
 };
