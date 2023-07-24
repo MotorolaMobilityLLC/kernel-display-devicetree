@@ -8,6 +8,10 @@
         status = "disabled";
 };
 
+&sde_dsi1 {
+        status = "disabled";
+};
+
 &mdss_mdp {
         status = "disabled";
 };
