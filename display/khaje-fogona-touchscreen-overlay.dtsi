@@ -168,6 +168,12 @@
 		pinctrl-names = "pmx_ts_int_active","pmx_ts_int_suspend_high";
 		pinctrl-3 = <&touch_int_active>;
 		pinctrl-4 = <&ts_int_suspend_high>;
+                /* Charger detect */
+                chipone,touch-charger-detect-enable;
+                chipone,touch-charger-detect-type = "notify"; /* notify, poll */
+                chipone,touch-charger-detect-psy-name = "charger";
+                chipone,touch-charger-detect-psp = "POWER_SUPPLY_PROP_ONLINE";
+                chipone,touch-charger-detect-psp-poll-interval = <1000>;
 		panel = <&dsi_icnl9916c_tm_hd_video>;
 		mmi,status = "/chosen","mmi,panel_name","contains","icnl9916c";
 		status = "ok";
