@@ -147,3 +147,7 @@
 		};
 	};
 };
+
+&dsi_vtdr6130_amoled_qsync_144hz_cmd {
+	qcom,ulps-enabled;
+};
