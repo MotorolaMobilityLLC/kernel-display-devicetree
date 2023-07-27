@@ -146,6 +146,13 @@
         qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
         qcom,mdss-dsi-panel-status-value = <0x9c>;
         qcom,mdss-dsi-panel-status-read-length = <1>;
+        qcom,cellid-read-enabled;
+        qcom,mdss-dsi-panel-cellid-read-length = <23>;
+        qcom,mdss-dsi-panel-cellid-read-times = <1>;
+        qcom,mdss-dsi-panel-cellid-command = [
+		39 01 00 00 00 00 04 F0 99 16 0C
+		06 01 00 01 00 00 01 91
+		39 01 00 00 00 00 04 F0 00 00 00];
 
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply_fogona>;
         qcom,mdss-dsi-no-panel-on-read-support;
@@ -174,6 +181,15 @@
         qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
         qcom,mdss-dsi-panel-status-value = <0x9c>;
         qcom,mdss-dsi-panel-status-read-length = <1>;
+        qcom,cellid-read-enabled;
+        qcom,mdss-dsi-panel-cellid-read-length = <1>;
+        qcom,mdss-dsi-panel-cellid-read-times = <23>;
+        qcom,mdss-dsi-panel-cellid-command = [
+		39 01 00 00 00 00 02 FF 22
+		39 01 00 00 00 00 02 FB 01
+		06 01 00 01 00 00 01 00
+		39 01 00 00 00 00 02 FF 10
+		39 01 00 00 00 00 02 FB 01];
 
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply_fogona>;
         qcom,mdss-dsi-no-panel-on-read-support;
