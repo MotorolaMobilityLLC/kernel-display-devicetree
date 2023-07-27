@@ -15,6 +15,7 @@
 
 &mdss_dsi_phy0 {
 	/delete-property/ qcom,dsi-pll-ssc-en;
+	qcom,dsc-continuous-pps;
 };
 
 &mdss_dsi_phy1 {
