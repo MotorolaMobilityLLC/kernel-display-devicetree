@@ -168,6 +168,8 @@
 		pinctrl-names = "pmx_ts_int_active","pmx_ts_int_suspend_high";
 		pinctrl-3 = <&touch_int_active>;
 		pinctrl-4 = <&ts_int_suspend_high>;
+                chipone,supported_gesture_type = <0x06>;
+                chipone,rst-pull-flag;
                 /* Charger detect */
                 chipone,touch-charger-detect-enable;
                 chipone,touch-charger-detect-type = "notify"; /* notify, poll */
@@ -188,6 +190,8 @@
                 novatek,swrst-n8-addr = <0x03F0FE>;
                 novatek,spi-rd-fast-addr = <0x03F310>;
                 novatek,report_gesture_key;
+                novatek,supported_gesture_type = <0x06>;
+                novatek,rst-pull-flag;
                 novatek,usb_charger;
                 novatek,panel-supplier = "djn";
                 mmi,status = "/chosen","mmi,panel_name","contains","nt36528";

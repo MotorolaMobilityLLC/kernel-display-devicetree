@@ -141,6 +141,8 @@
 
 &dsi_icnl9916c_tm_hd_video {
         //qcom,esd-check-enabled;
+        qcom,suspend-ulps-enabled;
+        qcom,tp_state_check_enable;
         qcom,mdss-dsi-panel-status-check-mode = "reg_read";
         qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
         qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -175,6 +177,8 @@
 
 &dsi_nt36528_csot_hd_video {
         //qcom,esd-check-enabled;
+        qcom,suspend-ulps-enabled;
+        qcom,tp_state_check_enable;
         qcom,mdss-dsi-panel-status-check-mode = "reg_read";
         qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
         qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
