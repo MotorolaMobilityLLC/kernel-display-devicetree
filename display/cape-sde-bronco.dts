@@ -12,6 +12,7 @@
 &sde_dp {
 	/delete-property/ qcom,mst-enable;
 	qcom,dsc-continuous-pps;
+	qcom,dp-downgrade;
 };
 
 &mdss_dsi_phy0 {
