@@ -85,6 +85,13 @@
 	};
 };
 
+&reserved_memory {
+	dfps_data_memory: dfps_data_region {
+		reg = <0x0 0x85e00000 0x0 0x00100000>;
+		label = "dfps_data_region";
+	};
+};
+
 &mdss_mdp {
 	clocks =
 		<&gcc GCC_DISP_HF_AXI_CLK>,
@@ -148,4 +155,5 @@
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
+	memory-region = <&dfps_data_memory>;
 };
