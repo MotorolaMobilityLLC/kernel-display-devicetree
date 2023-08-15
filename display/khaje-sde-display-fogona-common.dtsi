@@ -159,16 +159,20 @@
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply_fogona>;
         qcom,mdss-dsi-no-panel-on-read-support;
         qcom,mdss-dsi-reset-force-pull-low;
+        qcom,platform-reset-gpio-always-on;
         qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
         qcom,mdss-dsi-bl-min-level = <9>;
         qcom,mdss-dsi-bl-max-level = <1637>;
         qcom,mdss-brightness-max-level = <255>;
         qcom,platform-reset-gpio = <&tlmm 82 0>;
+        //qcom,dsi-supported-dfps-list = <90 60>;
+        //qcom,mdss-dsi-pan-enable-dynamic-fps;
+        //qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
         qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-display-timings {
                 timing@0 {
-                        qcom,mdss-dsi-panel-phy-timings = [00 14 05 05 13 1F 05
-                                        05 06 02 04 00 12 0A];
+                        qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
+                                        0A 09 02 04 00 1E 0F];
                         qcom,display-topology = <1 0 1>;
                         qcom,default-topology-index = <0>;
                 };
@@ -197,11 +201,15 @@
         qcom,panel-supply-entries = <&dsi_panel_pwr_supply_fogona>;
         qcom,mdss-dsi-no-panel-on-read-support;
         qcom,mdss-dsi-reset-force-pull-low;
+        qcom,platform-reset-gpio-always-on;
         qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
         qcom,mdss-dsi-bl-min-level = <9>;
         qcom,mdss-dsi-bl-max-level = <1637>;
         qcom,mdss-brightness-max-level = <255>;
         qcom,platform-reset-gpio = <&tlmm 82 0>;
+        qcom,dsi-supported-dfps-list = <90 60>;
+        qcom,mdss-dsi-pan-enable-dynamic-fps;
+        qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
         qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
         qcom,mdss-dsi-display-timings {
                 timing@0 {
