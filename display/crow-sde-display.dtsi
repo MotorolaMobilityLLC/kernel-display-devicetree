@@ -82,6 +82,22 @@
 
 &dsi_vtdr6130_amoled_120hz_cmd {
 	qcom,ulps-enabled;
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+
+		timing@1 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+
+		timing@2 {
+			qcom,partial-update-enabled = "single_roi";
+			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
+		};
+	};
 };
 
 &dsi_sim_cmd {
