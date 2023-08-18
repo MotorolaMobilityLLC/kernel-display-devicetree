@@ -165,14 +165,20 @@
         qcom,mdss-dsi-bl-max-level = <1637>;
         qcom,mdss-brightness-max-level = <255>;
         qcom,platform-reset-gpio = <&tlmm 82 0>;
-        //qcom,dsi-supported-dfps-list = <90 60>;
-        //qcom,mdss-dsi-pan-enable-dynamic-fps;
-        //qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+        qcom,dsi-supported-dfps-list = <90 60>;
+        qcom,mdss-dsi-pan-enable-dynamic-fps;
+        qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+        qcom,mdss-dsi-panel-hbm-is-51cmd;
+        qcom,mdss-dsi-hbm-type = "lcd-dcs-wled";
+        qcom,mdss-dsi-hbm-on-command = [39 01 00 00 00 00 03 51 07 FF];
+        qcom,mdss-dsi-hbm-on-command-state =  "dsi_lp_mode";
+        qcom,mdss-dsi-hbm-off-command = [39 01 00 00 00 00 03 51 06 66];
+        qcom,mdss-dsi-hbm-off-command-state =  "dsi_lp_mode";
         qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-display-timings {
                 timing@0 {
-                        qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
-                                        0A 09 02 04 00 1E 0F];
+                        qcom,mdss-dsi-panel-phy-timings = [00 1D 08 07 17 22 07
+                                        07 08 02 04 00 19 0C];
                         qcom,display-topology = <1 0 1>;
                         qcom,default-topology-index = <0>;
                 };
@@ -210,6 +216,12 @@
         qcom,dsi-supported-dfps-list = <90 60>;
         qcom,mdss-dsi-pan-enable-dynamic-fps;
         qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+        qcom,mdss-dsi-panel-hbm-is-51cmd;
+        qcom,mdss-dsi-hbm-type = "lcd-dcs-wled";
+        qcom,mdss-dsi-hbm-on-command = [39 01 00 00 00 00 03 51 07 FF];
+        qcom,mdss-dsi-hbm-on-command-state =  "dsi_lp_mode";
+        qcom,mdss-dsi-hbm-off-command = [39 01 00 00 00 00 03 51 06 66];
+        qcom,mdss-dsi-hbm-off-command-state =  "dsi_lp_mode";
         qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
         qcom,mdss-dsi-display-timings {
                 timing@0 {
