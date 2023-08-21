@@ -1,0 +1,15 @@
+
+/* This is derivated from qcom crow-sde-display-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "crow-sde-display-eqe-common.dtsi"
+
+/ {
+	model = "eqe";
+	compatible = "qcom,crow-idp", "qcom,crow", "qcom,idp", "mot,eqe";
+	qcom,msm-id = <608 0x10000>;
+	qcom,board-id = <0x41 0x9000>;
+
+};

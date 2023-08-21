@@ -47,6 +47,8 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.d
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+#remove useless qcom device tree in moto build
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_CROW) += display/crow-sde.dtbo \
 		display/crow-sde-display-idp-overlay.dtbo \
 		display/crow-sde-display-idp-wcd-overlay.dtbo \
@@ -55,6 +57,14 @@ dtbo-$(CONFIG_ARCH_CROW) += display/crow-sde.dtbo \
 		display/crow-sde-display-qrd-overlay.dtbo \
 		display/crow-sde-display-idps-overlay.dtbo \
 		display/crow-sde-display-idps-wcd-overlay.dtbo
+else
+
+ifeq ($(CONFIG_EQE_DTB),y)
+dtbo-$(CONFIG_ARCH_CROW) += display/crow-sde-eqe.dtbo \
+		  display/crow-sde-display-eqe-evb-overlay.dtbo
+endif  #($(CONFIG_EQE_DTB),y)
+
+endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_CROW) += display/trustedvm-crow-sde-display-idp-overlay.dtbo \
 		  display/trustedvm-crow-sde-display-idp-wcd-overlay.dtbo \

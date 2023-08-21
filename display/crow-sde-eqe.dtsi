@@ -1,0 +1,3 @@
+#include "crow-sde.dtsi"
+
+/* Can not do delete-property in overlay and dts, have to add crow-sde-eqe dtsi file */
