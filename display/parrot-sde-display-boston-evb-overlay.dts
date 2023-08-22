@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "parrot-sde-display-genevn-common.dtsi"
+#include "parrot-sde-display-boston-common.dtsi"
 
 / {
 	model = "boston";
