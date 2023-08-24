@@ -194,7 +194,7 @@
 	clock-names = "gcc_bus", "iface_clk",
 			"branch_clk", "core_clk", "vsync_clk",
 			"lut_clk";
-	clock-rate = <0 0 506000000 506000000 19200000 506000000>;
+	clock-rate = <0 0 608000000 608000000 19200000 608000000>;
 	clock-max-rate = <0 0 608000000 608000000 19200000 608000000>;
 
 	/* data and reg bus scale settings */
