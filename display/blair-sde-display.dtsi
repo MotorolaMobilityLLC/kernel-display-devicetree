@@ -98,6 +98,14 @@
 	connectors = <&sde_dsi>;
 };
 
+&dsi_sim_dsc_375_cmd {
+	qcom,ulps-enabled;
+};
+
+&dsi_sim_dsc_10b_cmd {
+	qcom,ulps-enabled;
+};
+
 &dsi_rm69299_visionox_amoled_cmd {
 	qcom,ulps-enabled;
 };
@@ -138,4 +146,8 @@
 			qcom,panel-roi-alignment = <540 40 40 40 1080 40>;
 		};
 	};
+};
+
+&dsi_vtdr6130_amoled_qsync_144hz_cmd {
+	qcom,ulps-enabled;
 };
