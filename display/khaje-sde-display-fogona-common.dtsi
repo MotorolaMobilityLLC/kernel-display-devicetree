@@ -2,10 +2,9 @@
 /* this is original from kalama-sde-display-mtp.dtsi */
 
 #include "khaje-sde-display.dtsi"
-#include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include "dsi-panel-mot-tm-icnl9916c-652-720x1600-vid.dtsi"
 #include "dsi-panel-mot-csot-nt36528-652-720x1600-vid.dtsi"
-//#include "dsi-panel-mot-csot-nt37701-655-1080x2400-dsc-cmd-common.dtsi"
+#include "dsi-panel-mot-dummy-qhd-video.dtsi"
 
 &tlmm {
         lcd_panel_avdd_fogona: lcd_panel_avdd_fogona {
