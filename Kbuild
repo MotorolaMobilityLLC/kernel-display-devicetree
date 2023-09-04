@@ -5,6 +5,7 @@ dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/pineapple-sde.dtbo \
 		display/pineapple-sde-display-rcm-overlay.dtbo \
 		display/pineapple-sde-display-mtp-overlay.dtbo \
 		display/pineapple-sde-display-qrd-overlay.dtbo \
+		display/pineapple-sde-display-hdk-overlay.dtbo \
 		display/pineapple-sde-display-cdp-nfc-overlay.dtbo \
 		display/pineapple-sde-display-mtp-nfc-overlay.dtbo \
 		display/pineapple-sde-display-atp-overlay.dtbo

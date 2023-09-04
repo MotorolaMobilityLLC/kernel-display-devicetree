@@ -249,9 +249,9 @@
 		qcom,sde-secure-sid-mask = <0x0002801 0x0002c01>;
 
 		qcom,sde-reg-bus,vectors-KBps = <0 0>,
-				<0 74000>,
-				<0 5000000>,
-				<0 9700000>;
+				<0 14000>,
+				<0 140000>,
+				<0 310000>;
 
 		qcom,sde-sspp-vig-blocks {
 			vcm@0 {

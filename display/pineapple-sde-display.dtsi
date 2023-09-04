@@ -19,12 +19,16 @@
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
 		label = "wb_display1";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	sde_wb2: qcom,wb-display@2 {
 		compatible = "qcom,wb-display";
 		cell-index = <1>;
 		label = "wb_display2";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	display_panel_avdd: display_gpio_regulator@1 {
