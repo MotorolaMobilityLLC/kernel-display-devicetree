@@ -169,6 +169,7 @@
 		pinctrl-3 = <&touch_int_active>;
 		pinctrl-4 = <&ts_int_suspend_high>;
                 chipone,supported_gesture_type = <0x06>;
+                chipone,gesture-wait-pm;
                 chipone,rst-pull-flag;
                 /* Charger detect */
                 chipone,touch-charger-detect-enable;
