@@ -10,8 +10,8 @@
  * GNU General Public License for more details.
  */
 &mdss_mdp {
-	mot_tm_vtdr6115_655_1080x2400_dsc_120hz_vid: qcom,mdss_dsi_mot_tm_vtdr6115_655_1080x2400_dsc_120hz_vid {
-		qcom,mdss-dsi-panel-name = "mipi_mot_vid_tm_655_1080p_dsc_120hz";
+	mot_tm_vtdr6115_667_1080x2400_dsc_120hz_vid: qcom,mdss_dsi_mot_tm_vtdr6115_667_1080x2400_dsc_120hz_vid {
+		qcom,mdss-dsi-panel-name = "mipi_mot_vid_tm_667_1080p_dsc_120hz";
 		qcom,mdss-dsi-panel-supplier = "tm";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,mdss-dsi-panel-physical-type = "oled";
@@ -19,8 +19,8 @@
 		qcom,dsi-phy-num = <0>;
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
-		qcom,mdss-pan-physical-width-dimension = <68>;
-		qcom,mdss-pan-physical-height-dimension = <152>;
+		qcom,mdss-pan-physical-width-dimension = <69>;
+		qcom,mdss-pan-physical-height-dimension = <155>;
 		qcom,mdss-dsi-bpp = <30>;
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
@@ -352,7 +352,7 @@
 
 				qcom,mdss-dsi-on-command = [
 						39 01 00 00 00 00 03 F0 AA 10
-						39 01 00 00 00 00 17 D0 84 35 70 14 20 00 39 0D 22 19 00 00 0D 22 1A 00 00 0B 05 05 22 22
+						39 01 00 00 00 00 17 D0 84 34 70 14 20 00 39 0D 22 19 00 00 0D 32 19 00 00 0B 05 05 22 22
 
 						39 01 00 00 00 00 02 03 01
 						39 01 00 00 00 00 02 35 00
@@ -378,7 +378,7 @@
 						39 01 00 00 00 00 02 65 03
 						39 01 00 00 00 00 02 F4 03
 
-						05 01 00 00 78 00 01 11
+						05 01 00 00 50 00 01 11
 
 						39 01 00 00 00 00 03 FF 5A 81
 						39 01 00 00 00 00 02 F3 08
@@ -386,12 +386,12 @@
 						39 01 00 00 00 00 03 FF 5A 00
 						39 01 00 00 00 00 03 F0 AA 00
 
-						05 01 00 00 00 00 01 29
+						05 01 00 00 05 00 01 29
 				];
 
 				qcom,mdss-dsi-off-command = [
-						05 01 00 00 00 00 01 28
-						05 01 00 00 78 00 01 10];
+						05 01 00 00 05 00 01 28
+						05 01 00 00 3C 00 01 10];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
