@@ -6,7 +6,7 @@
 #include "parrot-sde-display-pinctrl.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
-#include "dsi-panel-mot-tm-vtdr6115-655-1080x2400-dsc-120hz-vid.dtsi"
+#include "dsi-panel-mot-tm-vtdr6115-667-1080x2400-dsc-120hz-vid.dtsi"
 
 &tlmm {
 	display_panel_vddio_default: display_panel_vddio_default {
@@ -52,7 +52,7 @@
 			qcom,supply-disable-load = <100>;
 			qcom,supply-pre-on-sleep = <0>;
 			qcom,supply-post-on-sleep = <1>;
-			qcom,supply-pre-off-sleep = <0>;
+			qcom,supply-pre-off-sleep = <2>;
 			qcom,supply-post-off-sleep = <3>;
 		};
 
@@ -65,7 +65,7 @@
 			qcom,supply-disable-load = <0>;
 			qcom,supply-pre-on-sleep = <0>;
 			qcom,supply-post-on-sleep = <1>;
-			qcom,supply-pre-off-sleep = <0>;
+			qcom,supply-pre-off-sleep = <2>;
 			qcom,supply-post-off-sleep = <1>;
 		};
 
@@ -205,7 +205,7 @@
 	};
 };
 
-&mot_tm_vtdr6115_655_1080x2400_dsc_120hz_vid {
+&mot_tm_vtdr6115_667_1080x2400_dsc_120hz_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	qcom,dsi-supported-dfps-list = <120 90 60>;
@@ -248,6 +248,6 @@
 
 &qupv3_se9_spi {
 	goodix-berlin@0 {
-		panel = <&mot_tm_vtdr6115_655_1080x2400_dsc_120hz_vid>;
+		panel = <&mot_tm_vtdr6115_667_1080x2400_dsc_120hz_vid>;
 	};
 };
