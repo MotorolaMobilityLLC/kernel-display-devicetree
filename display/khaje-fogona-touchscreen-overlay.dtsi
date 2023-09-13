@@ -170,7 +170,7 @@
 		pinctrl-4 = <&ts_int_suspend_high>;
                 chipone,supported_gesture_type = <0x06>;
                 chipone,gesture-wait-pm;
-                chipone,rst-pull-flag;
+               // chipone,rst-pull-flag;
                 /* Charger detect */
                 chipone,touch-charger-detect-enable;
                 chipone,touch-charger-detect-type = "poll"; /* notify, poll */
