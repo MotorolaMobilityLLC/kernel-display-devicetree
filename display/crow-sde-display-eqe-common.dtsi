@@ -4,6 +4,7 @@
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-video-144hz-common-v0.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126-c-667-1220x2712-dsc-video-144hz-common.dtsi"
+#include "crow-eqe-touchscreen-overlay.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply_eqe: dsi_panel_pwr_supply_eqe {
@@ -163,7 +164,13 @@
 
 &sde_dsi {
 	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
+};
 
+&qupv3_se0_spi {
+    goodix-berlin@0 {
+        panel = <&mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz
+                 &mot_csot_vtdr6126_c_667_1220x2712_dsc_vid_144hz>;
+    };
 };
 
 &sde_dp {
