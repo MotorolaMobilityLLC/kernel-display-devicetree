@@ -61,7 +61,8 @@ else
 
 ifeq ($(CONFIG_EQE_DTB),y)
 dtbo-$(CONFIG_ARCH_CROW) += display/crow-sde-eqe.dtbo \
-		  display/crow-sde-display-eqe-evb-overlay.dtbo
+		display/crow-sde-display-eqe-evb-overlay.dtbo \
+		display/crow-sde-display-eqe-evt-overlay.dtbo
 endif  #($(CONFIG_EQE_DTB),y)
 
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
