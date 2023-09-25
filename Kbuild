@@ -25,6 +25,18 @@ dtbo-$(CONFIG_ARCH_BLAIR) += display/blair-sde.dtbo \
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_HOLI) += display/holi-sde.dtbo \
+		display/holi-sde-display-cdp-overlay.dtbo \
+		display/holi-sde-display-cdp-lcd-overlay.dtbo \
+		display/holi-sde-display-mtp-overlay.dtbo \
+		display/holi-sde-display-qrd-overlay.dtbo \
+		display/holi-sde-display-atp-overlay.dtbo \
+		display/holi-sde-display-mtp-pm6125-overlay.dtbo \
+		display/holi-sde-display-qrd-pm6125-overlay.dtbo \
+		display/holi-sde-display-cdp-pm6125-overlay.dtbo
+endif
+
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-rumi-overlay.dtbo \
 		display/kalama-sde-display-cdp-overlay.dtbo \

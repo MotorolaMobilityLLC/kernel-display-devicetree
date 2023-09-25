@@ -1,8 +1,8 @@
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
-#include <dt-bindings/clock/qcom,dispcc-blair.h>
-#include <dt-bindings/clock/qcom,gcc-blair.h>
+#include <dt-bindings/clock/qcom,dispcc-holi.h>
+#include <dt-bindings/clock/qcom,gcc-holi.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
-#include <dt-bindings/interconnect/qcom,blair.h>
+#include <dt-bindings/interconnect/qcom,holi.h>
 #include "blair-sde-common.dtsi"
 
 &soc {
@@ -89,13 +89,6 @@
 	};
 };
 
-&reserved_memory {
-	dfps_data_memory: dfps_data_region {
-		reg = <0x0 0x85e00000 0x0 0x00100000>;
-		label = "dfps_data_region";
-	};
-};
-
 &mdss_mdp {
 	clocks =
 		<&gcc GCC_DISP_HF_AXI_CLK>,
@@ -142,7 +135,7 @@
 };
 
 &mdss_dsi0 {
-	vdda-1p2-supply = <&L4A>;
+	vdda-1p2-supply = <&L22A>;
 	refgen-supply = <&refgen>;
 	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
@@ -155,9 +148,38 @@
 };
 
 &mdss_dsi_phy0 {
-	vdda-0p9-supply = <&S1E_LEVEL>;
+	compatible = "qcom,dsi-phy-v3.0";
+	reg = <0x05e94400 0x800>,
+		<0x05e94a00 0x1e0>,
+		<0x05f01004 0x8>,
+		<0x05e94200 0x100>;
+	reg-names = "dsi_phy", "pll_base", "gdsc_base", "dyn_refresh_base";
+	pll-label = "dsi_pll_10nm";
+
+	vdda-0p9-supply = <&S5A_LEVEL>;
 	qcom,panel-allow-phy-poweroff;
-	qcom,dsi-pll-ssc-en;
+	qom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
-	memory-region = <&dfps_data_memory>;
+
+	qcom,platform-lane-config = [00 00 00 00
+					00 00 00 00
+					00 00 00 00
+					00 00 00 00
+					00 00 00 80];
+	qcom,phy-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		qcom,phy-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vdda-0p9";
+			qcom,supply-min-voltage =
+				<RPMH_REGULATOR_LEVEL_NOM>;
+			qcom,supply-max-voltage =
+				<RPMH_REGULATOR_LEVEL_TURBO_L1>;
+			qcom,supply-off-min-voltage =
+				<RPMH_REGULATOR_LEVEL_RETENTION>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
 };
