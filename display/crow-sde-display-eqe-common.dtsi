@@ -4,6 +4,7 @@
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-video-144hz-common-v0.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126-c-667-1220x2712-dsc-video-144hz-common.dtsi"
+#include "dsi-panel-mot-csot-vtdr6126-c-667-1220x2712-dsc-video-144hz-common-lhbm.dtsi"
 #include "crow-eqe-touchscreen-overlay.dtsi"
 
 &soc {

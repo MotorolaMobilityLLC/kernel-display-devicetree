@@ -51,8 +51,7 @@
 				39 00 00 40 00 00 03 51 3E 80
 				39 00 00 00 00 00 02 62 00];
 		qcom,mdss-dsi-hbm-off-command = [
-				39 00 00 40 00 00 02 62 00
-				39 00 00 00 00 00 03 51 10 80];
+				39 00 00 40 00 00 02 62 00];
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
@@ -65,11 +64,10 @@
 		qcom,mdss-dsi-panel-lhbm-not-allowed-fps-list = <60 90 144>;
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
-		/*qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <5291>;
+		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <5291>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16000>;
+		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
 		qcom,mdss-dsi-panel-bl-num = <1>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-table = <>;*/
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
@@ -91,7 +89,7 @@
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-on-command = [
 					39 00 00 00 00 00 03 F0 AA 10
-					39 00 00 00 00 00 08 B0 05 4C 01 31 01 04 C4
+					39 00 00 00 00 00 18 D0 C4 04 60 14 17 00 35 4B 19 4F 00 00 4B 30 50 00 00 00 04 44 19 19 19
 					39 00 00 00 00 00 02 03 01
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 02 53 20
