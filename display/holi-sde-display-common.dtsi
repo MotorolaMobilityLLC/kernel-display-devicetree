@@ -401,6 +401,9 @@
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 
+	qcom,dsi-dyn-clk-enable;
+	qcom,dsi-dyn-clk-type = "constant-fps-adjust-vfp";
+
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_hs_mode";
@@ -414,6 +417,8 @@
 							08 05 02 04 00];
 			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list =
+				<952174080 948206688 956141472>;
 		};
 	};
 };
