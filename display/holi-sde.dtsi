@@ -181,6 +181,7 @@
 	qcom,panel-allow-phy-poweroff;
 	qom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
+	memory-region = <&dfps_data_memory>;
 
 	qcom,platform-lane-config = [00 00 00 00
 					00 00 00 00
