@@ -34,7 +34,7 @@
 		//qcom,mdss-dsi-te-check-enable;
 		//qcom,mdss-dsi-te-using-te-pin;
 		qcom,mdss-dsi-cabc-mv-command = [
-				15 00 00 00 00 00 02 55 03
+				15 00 00 00 02 00 02 55 03
 				39 00 00 00 00 00 04 F0 99 16 0C
 				39 00 00 00 00 00 18 E0 0C 00 B0 0C 00 0A 8C 29 04 01 1F 00 00 00 00 24 12 08 11 48 47 00 00
 				39 00 00 00 00 00 20 E1 0F 1F 2F 3F 4F 5F 6F 7F 90 A0 B0 C0 D0 E0 E8 E7 E7 E7 E7 E9 EB EC ED F0 F0 F3 F6 F9 FD FF FF
@@ -43,7 +43,7 @@
 				];
 		qcom,mdss-dsi-cabc-mv-command-state =  "dsi_hs_mode";
 		qcom,mdss-dsi-cabc-ui-command = [
-				15 00 00 00 00 00 02 55 03
+				15 00 00 00 02 00 02 55 03
 				39 00 00 00 00 00 04 F0 99 16 0C
 				39 00 00 00 00 00 18 E0 0C 00 B0 0C 00 0A 8C 29 04 01 1F 00 00 00 00 24 12 08 11 48 47 00 00
 				39 00 00 00 00 00 20 E1 0F 1F 2F 3F 4F 5F 6F 7F 90 A0 B0 C0 D0 E0 E8 EC ED EF F1 F3 F5 F7 F9 FB FB FC FD FE FF FF FF
@@ -51,7 +51,7 @@
 				39 00 00 00 00 00 04 F0 00 00 00
 				];
 		qcom,mdss-dsi-cabc-ui-command-state =  "dsi_hs_mode";
-		qcom,mdss-dsi-cabc-dis-command = [15 01 00 00 00 00 02 55 00];
+		qcom,mdss-dsi-cabc-dis-command = [15 01 00 00 02 00 02 55 00];
 		qcom,mdss-dsi-cabc-dis-command-state =  "dsi_hs_mode";
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
@@ -70,11 +70,10 @@
 					39 01 00 00 00 00 04 F0 99 16 0C
 					39 01 00 00 00 00 15 C1 11 20 2C 2C 04 30 30 04 40 06 22 70 35 21 07 11 84 4C 00 93
 					39 01 00 00 00 00 05 C8 46 00 88 98
-					39 01 00 00 00 00 10 B3 B2 01 01 07 81 54 16 14 68 00 00 00 00 08 44
 					39 01 00 00 00 00 05 BD A1 0A 52 A6
 					39 01 00 00 00 00 03 35 00 00
 					39 01 00 00 00 00 03 53 2C 00
-					39 01 00 00 00 00 03 55 03 00
+					39 01 00 00 02 00 03 55 03 00
 					39 01 00 00 00 00 18 E0 0C 00 B0 0C 00 0A 8C 29 04 01 1F 00 00 00 00 24 12 08 11 48 47 00 00
 					39 01 00 00 00 00 20 E1 0F 1F 2F 3F 4F 5F 6F 7F 90 A0 B0 C0 D0 E0 E8 EC ED EF F1 F3 F5 F7 F9 FB FB FC FD FE FF FF FF
 					39 01 00 00 00 00 21 E2 36 24 37 4B 38 72 39 99 3A 1C 3A 9F 3B 22 3B A5 3C 28 3F 50 3D B1 3E 76 3F 3A 3F FF 3F FF 3F FF
