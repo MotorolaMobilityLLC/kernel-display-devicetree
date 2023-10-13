@@ -17,6 +17,14 @@ dtbo-$(CONFIG_ARCH_NEO) += display/neo-sde.dtbo \
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
+
+dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/pineapple-sde.dtbo
+
+dtbo-$(CONFIG_ARCF_DTB) += display/pineapple-sde-display-arcf-evt1a-overlay.dtbo
+dtbo-$(CONFIG_CTWOV_DTB) += display/pineapple-sde-display-ctwov-evb-overlay.dtbo
+
+else
 dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/pineapple-sde.dtbo \
 		display/pineapple-sde-display-rumi-overlay.dtbo \
 		display/pineapple-sde-display-cdp-overlay.dtbo \
@@ -28,6 +36,7 @@ dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/pineapple-sde.dtbo \
 		display/pineapple-sde-display-cdp-nfc-overlay.dtbo \
 		display/pineapple-sde-display-mtp-nfc-overlay.dtbo \
 		display/pineapple-sde-display-atp-overlay.dtbo
+endif # end of CONFIG_MMI_DEVICE_DTBS
 else
 dtbo-$(CONFIG_ARCH_PINEAPPLE) += display/trustedvm-pineapple-sde-display-mtp-overlay.dtbo \
 		  display/trustedvm-pineapple-sde-display-cdp-overlay.dtbo \
