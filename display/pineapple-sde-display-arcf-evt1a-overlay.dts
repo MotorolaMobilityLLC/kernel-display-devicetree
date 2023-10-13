@@ -1,0 +1,13 @@
+/* This is derivated from qcom pineapple-sde-display-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "pineapple-sde-display-arcf-common.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Pineapple MTP";
+	compatible = "qcom,pineapple-mtp", "qcom,pineapple", "qcom,pineapplep-mtp", "qcom,pineapplep", "qcom,mtp", "mot,arcf";
+	qcom,msm-id = <557 0x10000>, <557 0x20000>, <577 0x10000>, <577 0x20000>;
+	qcom,board-id = <0x8 0>;
+};
