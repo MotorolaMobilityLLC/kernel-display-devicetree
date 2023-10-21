@@ -26,6 +26,7 @@
 	};
 
 	sde_dp: qcom,dp_display@ae154000 {
+		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
@@ -232,8 +233,6 @@
 	clock-rate = <0 0 514000000 514000000 19200000 514000000>;
 	clock-max-rate = <0 0 514000000 514000000 19200000 514000000>;
 	clock-mmrm = <0 0 0 DISP_CC_MDSS_MDP_CLK_SRC 0 0>;
-
-	qcom,hw-fence-sw-version = <0x1>;
 
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
