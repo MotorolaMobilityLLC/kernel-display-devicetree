@@ -89,6 +89,13 @@
 	};
 };
 
+&reserved_memory {
+	dfps_data_memory: dfps_data_region {
+		reg = <0x0 0x85e00000 0x0 0x00100000>;
+		label = "dfps_data_region";
+	};
+};
+
 &mdss_mdp {
 	clocks =
 		<&gcc GCC_DISP_HF_AXI_CLK>,
@@ -145,6 +152,20 @@
 		<&dispcc DISP_CC_MDSS_ESC0_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
 			"pixel_clk", "pixel_clk_rcg", "esc_clk";
+
+	qcom,ctrl-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,ctrl-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vdda-1p2";
+			qcom,supply-min-voltage = <1200000>;
+			qcom,supply-max-voltage = <1305000>;
+			qcom,supply-enable-load = <21800>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
 };
 
 &mdss_dsi_phy0 {
@@ -160,6 +181,7 @@
 	qcom,panel-allow-phy-poweroff;
 	qom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
+	memory-region = <&dfps_data_memory>;
 
 	qcom,platform-lane-config = [00 00 00 00
 					00 00 00 00

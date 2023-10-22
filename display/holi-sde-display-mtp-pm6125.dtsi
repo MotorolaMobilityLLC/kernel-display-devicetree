@@ -6,6 +6,20 @@
 
 &mdss_dsi0 {
 	vdda-1p2-supply = <&L4A>;
+
+	qcom,ctrl-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,ctrl-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vdda-1p2";
+			qcom,supply-min-voltage = <1200000>;
+			qcom,supply-max-voltage = <1300000>;
+			qcom,supply-enable-load = <21800>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
 };
 
 &pmr735a_gpios {
