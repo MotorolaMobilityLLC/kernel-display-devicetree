@@ -6,8 +6,8 @@
 #include "pineapple-sde-display-ctwov-common.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Pineapple MTP";
+	model = "ctwov";
 	compatible = "qcom,pineapple-mtp", "qcom,pineapple", "qcom,pineapplep-mtp", "qcom,pineapplep", "qcom,mtp", "mot,ctwov";
 	qcom,msm-id = <557 0x10000>, <557 0x20000>, <577 0x10000>, <577 0x20000>;
-	qcom,board-id = <0x8 0>;
+	qcom,board-id = <0x41 0x9000>;
 };
