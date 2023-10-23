@@ -54,11 +54,11 @@
 	};
 };
 
-&L11B {
-       regulator-min-microvolt = <1230000>;
-       regulator-max-microvolt = <1280000>;
-       qcom,init-voltage = <1250000>;
-};
+//&L11B {
+//       regulator-min-microvolt = <1230000>;
+//       regulator-max-microvolt = <1280000>;
+//       qcom,init-voltage = <1250000>;
+//};
 
 &mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz {
 	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
