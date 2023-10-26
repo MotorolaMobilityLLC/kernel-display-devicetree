@@ -20,7 +20,13 @@
 		compatible = "qcom,msm-hdcp";
 	};
 
+	sde_dp_pll: qcom,dp_pll@88ea000 {
+		compatible = "qcom,dp-pll-4nm-v1.1";
+		#clock-cells = <1>;
+	};
+
 	sde_dp: qcom,dp_display@ae154000 {
+		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 
@@ -57,10 +63,10 @@
 			<&gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK_SRC>,
-			<&sde_dp 0>,
+			<&sde_dp_pll 0>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK_SRC>,
-			<&sde_dp 1>,
+			<&sde_dp_pll 1>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK_SRC>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
@@ -69,7 +75,7 @@
 			"link_iface_clk", "pixel_clk_rcg", "pixel_parent",
 			"pixel1_clk_rcg", "strm0_pixel_clk", "strm1_pixel_clk";
 
-		qcom,pll-revision = "4nm-v1.1";
+		qcom,dp-pll = <&sde_dp_pll>;
 		qcom,phy-version = <0x600>;
 		qcom,aux-cfg0-settings = [20 00];
 		qcom,aux-cfg1-settings = [24 13];
@@ -200,6 +206,8 @@
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-earlymap; /* for cont-splash */
 		dma-coherent;
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	smmu_sde_sec: qcom,smmu_sde_sec_cb {
@@ -225,8 +233,6 @@
 	clock-rate = <0 0 514000000 514000000 19200000 514000000>;
 	clock-max-rate = <0 0 514000000 514000000 19200000 514000000>;
 	clock-mmrm = <0 0 0 DISP_CC_MDSS_MDP_CLK_SRC 0 0>;
-
-	qcom,hw-fence-sw-version = <0x1>;
 
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;

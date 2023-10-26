@@ -19,12 +19,16 @@
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
 		label = "wb_display1";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	sde_wb2: qcom,wb-display@2 {
 		compatible = "qcom,wb-display";
 		cell-index = <1>;
 		label = "wb_display2";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	display_panel_avdd: display_gpio_regulator@1 {
@@ -71,8 +75,8 @@
 &sde_dsi {
 	clocks = <&mdss_dsi_phy0 0>,
 		 <&mdss_dsi_phy0 1>,
-		 <&mdss_dsi_phy1 2>,
-		 <&mdss_dsi_phy1 3>,
+		 <&mdss_dsi_phy1 0>,
+		 <&mdss_dsi_phy1 1>,
 		 /*
 		  * Currently the dsi clock handles are under the dsi
 		  * controller DT node. As soon as the controller probe
@@ -99,8 +103,8 @@
 &sde_dsi1 {
 	clocks = <&mdss_dsi_phy0 0>,
 		 <&mdss_dsi_phy0 1>,
-		 <&mdss_dsi_phy1 2>,
-		 <&mdss_dsi_phy1 3>,
+		 <&mdss_dsi_phy1 0>,
+		 <&mdss_dsi_phy1 1>,
 		 /*
 		  * Currently the dsi clock handles are under the dsi
 		  * controller DT node. As soon as the controller probe
@@ -125,7 +129,8 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc &sde_dp>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb1
+			&sde_wb2 &sde_rscc>;
 };
 
 &dsi_vtdr6130_amoled_cmd {

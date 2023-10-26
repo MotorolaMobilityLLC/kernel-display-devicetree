@@ -218,8 +218,8 @@
 
 		clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
-			<&mdss_dsi_phy1 2>,
-			<&mdss_dsi_phy1 3>;
+			<&mdss_dsi_phy1 0>,
+			<&mdss_dsi_phy1 1>;
 		clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1";
 
@@ -249,8 +249,8 @@
 
 		clocks = <&mdss_dsi_phy0 0>,
 			<&mdss_dsi_phy0 1>,
-			<&mdss_dsi_phy1 2>,
-			<&mdss_dsi_phy1 3>;
+			<&mdss_dsi_phy1 0>,
+			<&mdss_dsi_phy1 1>;
 		clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1";
 
