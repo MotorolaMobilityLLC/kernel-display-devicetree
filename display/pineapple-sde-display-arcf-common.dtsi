@@ -5,7 +5,7 @@
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v0.dtsi"
 &sde_dsi {
-	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
+	qcom,dsi-default-panel = <&mot_csot_nt37707_667_1080x2640_dsc_cmd_v0>;
 };
 
 &mot_dummy_vid_qhd {
