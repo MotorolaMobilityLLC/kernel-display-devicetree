@@ -4,6 +4,100 @@
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v0.dtsi"
+
+&tlmm {
+	vio_en_m {
+		vio_en_m_default: vio_en_m_default {//vio enable 1.8V
+			mux {
+				pins = "gpio124";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio124";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-high;
+			};
+		};
+	};
+	vci_en_m {
+		vci_en_m_default: vci_en_m_default {//vci enable 3.0V
+			mux {
+				pins = "gpio126";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio126";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
+	dvdd_en_m {
+		display_panel_dvdd_default: display_panel_dvdd_default { //dvdd 1.23V
+			mux {
+				pins = "gpio125";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio125";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
+	vio_en_s {
+		vio_en_s_default: vio_en_s_default {
+			mux {
+				pins = "gpio111";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio111";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-high;
+			};
+		};
+	};
+	vci_en_s {
+		vci_en_s_default: vci_en_s_default {
+			mux {
+				pins = "gpio10";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio10";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
+	dvdd_en_s {
+		display_panel_dvdd_s_default: display_panel_dvdd_s_default {
+			mux {
+				pins = "gpio70";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio70";
+				drive-strength = <2>;   /* 2 mA */
+				bias-disable = <0>;   /* no pull */
+				output-enable;
+			};
+		};
+	};
+};
+
 &sde_dsi {
 	qcom,dsi-default-panel = <&mot_csot_nt37707_667_1080x2640_dsc_cmd_v0>;
 };
@@ -163,6 +257,67 @@
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
+		};
+		timing@1 { //90
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@2 { //60
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@3 { //30
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@4 { //24
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@5 { //10 independent
+			qcom,framerate-group-special-idle-10hz;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@6 { //1 independent
+			qcom,framerate-group-special-idle-1hz;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@7 { //165
+			qcom,framerate-group-no-duplicated;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
+							0A 09 02 04 00 1E 0F];
 		};
 	};
 };
