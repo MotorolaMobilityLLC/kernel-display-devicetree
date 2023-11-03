@@ -121,7 +121,8 @@ dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
 		display/parrot-sde-display-qrd-overlay.dtbo
 else
 dtbo-$(CONFIG_AVATRN_DTB) += display/parrot-sde.dtbo \
-               display/parrot-sde-display-avatrn-evt1-overlay.dtbo
+               display/parrot-sde-display-avatrn-evt1-overlay.dtbo \
+               display/parrot-sde-display-avatrn-evt3-overlay.dtbo
 dtbo-$(CONFIG_GENEVN_DTB) += display/parrot-sde.dtbo \
                display/parrot-sde-display-genevn-evb-overlay.dtbo \
 	       display/parrot-sde-display-genevn-dvt1-overlay.dtbo
