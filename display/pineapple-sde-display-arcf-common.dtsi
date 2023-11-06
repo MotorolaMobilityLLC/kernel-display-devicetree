@@ -99,7 +99,7 @@
 };
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&mot_csot_nt37707_667_1080x2640_dsc_cmd_v0>;
+	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
 };
 
 &mot_dummy_vid_qhd {
