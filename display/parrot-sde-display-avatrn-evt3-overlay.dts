@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "parrot-sde-display-avatrn-common.dtsi"
+#include "parrot-sde-display-avatrn-common-evt3.dtsi"
 
 / {
 	model = "avatrn";
