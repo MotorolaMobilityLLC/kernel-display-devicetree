@@ -96,7 +96,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-			39 00 00 40 00 00 02 6F 03
+			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
 			39 00 00 00 00 00 02 2F 02 //120hz
@@ -230,7 +230,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-			39 00 00 40 00 00 02 6F 03
+			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
 			39 00 00 00 00 00 02 2F 04 //90hz
@@ -361,7 +361,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-		39 00 00 40 00 00 02 6F 03
+		39 00 00 40 00 00 02 6F 04
 		39 00 00 40 00 00 02 35 00
 		39 00 00 40 00 00 02 53 20
 		39 00 00 40 00 00 02 5A 01
@@ -499,7 +499,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-		39 00 00 40 00 00 02 6F 03
+		39 00 00 40 00 00 02 6F 04
 		39 00 00 40 00 00 02 35 00
 		39 00 00 40 00 00 02 53 20
 		39 00 00 40 00 00 02 5A 01
@@ -637,7 +637,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-		39 00 00 40 00 00 02 6F 03
+		39 00 00 40 00 00 02 6F 04
 		39 00 00 40 00 00 02 35 04 //TE = 4
 		39 00 00 40 00 00 02 53 28 //DBV Diming Enable
 		39 00 00 40 00 00 02 5A 01
@@ -776,7 +776,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-		39 00 00 40 00 00 02 6F 03
+		39 00 00 40 00 00 02 6F 04
 		39 00 00 40 00 00 02 35 00 //TE = 1
 		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
 		39 00 00 40 00 00 02 5A 00
@@ -916,7 +916,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
-		39 00 00 40 00 00 02 6F 03
+		39 00 00 40 00 00 02 6F 04
 		39 00 00 40 00 00 02 35 00 //TE = 1
 		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
 		39 00 00 40 00 00 02 5A 00
@@ -1054,7 +1054,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-timing-switch-command = [
-			39 00 00 40 00 00 02 6F 03
+			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
 			39 00 00 00 00 00 02 2F 03 //165hz
