@@ -445,3 +445,9 @@
         panel = <&mot_csot_nt37707_667_1080x2640_dsc_cmd_v0>;
     };
 };
+
+&qupv3_se7_spi {
+	gdx-cli@0 {
+		panel = <&mot_csot_nt37707_1080x1272_dsc_cmd_cli_v0>;
+	};
+};
