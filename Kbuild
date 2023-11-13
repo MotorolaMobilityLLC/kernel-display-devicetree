@@ -69,6 +69,14 @@ dtbo-$(CONFIG_ARCH_KALAMA) += display/trustedvm-kalama-sde-display-mtp-overlay.d
 		  display/trustedvm-kalama-sde-display-atp-overlay.dtbo
 endif
 
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
+
+dtbo-$(CONFIG_ARCH_CLIFFS) += display/cliffs-sde.dtbo
+
+dtbo-$(CONFIG_ARCFOX_DTB) += display/cliffs-sde-display-arcfox-evt3-overlay.dtbo
+dtbo-$(CONFIG_CTWO_DTB) += display/cliffs-sde-display-ctwo-evb3-overlay.dtbo
+
+else
 ifeq ($(CONFIG_ARCH_SA8155), y)
 dtbo-y += display/sa8155-adp-star-display.dtbo
 endif
