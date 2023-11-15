@@ -242,7 +242,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	//qcom,esd-check-enabled;
+	qcom,esd-check-enabled;
 	qcom,cellid-read-enabled;
 	qcom,mdss-dsi-panel-cellid-read-length = <36>;
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
@@ -343,7 +343,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	//qcom,esd-check-enabled;
+	qcom,esd-check-enabled;
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
 
