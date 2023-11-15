@@ -18,7 +18,7 @@ mot_csot_nt37707_1080x1272_dsc_cmd_cli_v0: qcom,mdss_dsi_mot_csot_1080x1272_cmd_
 		qcom,mdss-dsi-panel-supplier = "csot_s";
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
-		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-bpp = <30>;
 		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
@@ -255,9 +255,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@1{
 		qcom,mdss-dsi-cmd-mode;
@@ -436,9 +437,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@2{
 		qcom,mdss-dsi-cmd-mode;
@@ -620,9 +622,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@3{
 		qcom,mdss-dsi-cmd-mode;
@@ -812,9 +815,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@4{
 		qcom,mdss-dsi-cmd-mode;
@@ -1003,9 +1007,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@5{
 		qcom,mdss-dsi-cmd-mode;
@@ -1194,9 +1199,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@6{
 		qcom,mdss-dsi-cmd-mode;
@@ -1385,9 +1391,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 	timing@7{
 		qcom,mdss-dsi-cmd-mode;
@@ -1576,9 +1583,10 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
 	};
 };
 
