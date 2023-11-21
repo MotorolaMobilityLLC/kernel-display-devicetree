@@ -4,6 +4,7 @@
 #include "khaje-sde-display.dtsi"
 #include "dsi-panel-mot-tm-icnl9916c-652-720x1600-vid.dtsi"
 #include "dsi-panel-mot-csot-nt36528-652-720x1600-vid.dtsi"
+#include "dsi-panel-mot-txd-ili9883c-652-720x1600-vid.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 
 &tlmm {
@@ -230,6 +231,45 @@
                         qcom,default-topology-index = <0>;
                 };
         };
+};
+
+&dsi_ili9883c_txd_hd_video {
+        qcom,esd-check-enabled;
+        qcom,suspend-ulps-enabled;
+        qcom,tp_state_check_enable;
+        qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+        qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+        qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+        qcom,mdss-dsi-panel-status-value = <0x9c>;
+        qcom,mdss-dsi-panel-status-read-length = <1>;
+        qcom,panel-supply-entries = <&dsi_panel_pwr_supply_fogona>;
+        qcom,mdss-dsi-no-panel-on-read-support;
+        qcom,mdss-dsi-reset-force-pull-low;
+        qcom,platform-reset-gpio-always-on;
+        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+        qcom,mdss-dsi-bl-min-level = <9>;
+        qcom,mdss-dsi-bl-max-level = <1637>;
+        qcom,mdss-brightness-max-level = <1637>;
+        qcom,platform-reset-gpio = <&tlmm 82 0>;
+        qcom,dsi-supported-dfps-list = <60 90>;
+        qcom,mdss-dsi-pan-enable-dynamic-fps;
+        qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+        qcom,mdss-dsi-panel-hbm-is-51cmd;
+        qcom,mdss-dsi-hbm-type = "lcd-dcs-only";
+        qcom,mdss-dsi-hbm-on-command = [39 01 00 00 00 00 03 51 07 FF];
+        qcom,mdss-dsi-hbm-on-command-state =  "dsi_lp_mode";
+        qcom,mdss-dsi-hbm-off-command = [39 01 00 00 00 00 03 51 06 66];
+        qcom,mdss-dsi-hbm-off-command-state =  "dsi_lp_mode";
+        qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+        qcom,mdss-dsi-display-timings {
+                timing@0 {
+                        qcom,mdss-dsi-panel-phy-timings = [00 1D 07 07 17 22 07
+                                        07 08 02 04 00 19 0C];
+                        qcom,display-topology = <1 0 1>;
+                        qcom,default-topology-index = <0>;
+                };
+        };
+
 };
 
 &mot_dummy_vid_qhd {
