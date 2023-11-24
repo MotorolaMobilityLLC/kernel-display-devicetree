@@ -200,5 +200,24 @@
                 status = "ok";
         };
 
+	 ilitek@2{
+                compatible = "tchip,ilitek";
+                reg = <2>;
+                spi-max-frequency = <9600000>;
+                interrupt-parent = <&tlmm>;
+                interrupts = <80 0x2001>;
+                mmi,status = "/chosen","mmi,panel_name","contains","ili9883c";
+                touch,reset-gpio = <&tlmm 86 0x00>;
+                touch,irq-gpio = <&tlmm 80 0x2001>;
+                ilitek,def-max-resolution = <720 1600>;
+                pinctrl-names = "pmx_ts_int_active","pmx_ts_int_suspend_high";
+//              pinctrl-0 = <&ts_active>;
+ //             pinctrl-1 = <&ts_int_suspend_high>;
+                ilitek,report_gesture_key;
+                ilitek,supported_gesture_type = <0x06>;
+                ilitek,rst-pull-flag;
+                panel = <&dsi_ili9883c_txd_hd_video>;
+                status = "ok";
+	};
 
 };
