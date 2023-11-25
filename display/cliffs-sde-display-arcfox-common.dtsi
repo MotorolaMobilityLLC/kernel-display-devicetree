@@ -5,6 +5,10 @@
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v0.dtsi"
 
+&sde_dp {
+	status = "disabled";
+};
+
 &tlmm {
 	vio_en_m {
 		vio_en_m_default: vio_en_m_default {//vio enable 1.8V
