@@ -1,0 +1,14 @@
+/* This is derivated from qcom blair-sde-display-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "blair-sde-display-malmo-common.dtsi"
+
+/ {
+    model = "malmo";
+    compatible = "qcom,blair-mtp", "qcom,blair", "qcom,mtp", "qcom,moto";
+    qcom,msm-id = <507 0x10000>, <578 0x10000>;
+    qcom,board-id = <0x43 0x9000>;
+};
+
