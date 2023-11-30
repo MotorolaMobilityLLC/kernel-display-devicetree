@@ -105,6 +105,10 @@ dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
 		display/diwali-sde-display-lynkco-dvt2c-overlay.dtbo \
 		display/diwali-sde-display-lynkco-pvt-overlay.dtbo
 endif  #($CONFIG_LYNKCO_DTB,y)
+ifeq ($(CONFIG_TANK_DTB),y)
+dtbo-$(CONFIG_ARCH_DIWALI) += display/diwali-sde.dtbo \
+		display/diwali-sde-display-tank-evb1-overlay.dtbo
+endif  #($CONFIG_TANK_DTB,y)
 endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 else
 dtbo-$(CONFIG_ARCH_DIWALI) += display/trustedvm-diwali-sde-display-idp-overlay.dtbo \
