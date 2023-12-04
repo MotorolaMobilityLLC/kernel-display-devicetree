@@ -4,6 +4,7 @@
 /plugin/;
 
 #include "blair-sde-display-malmo-common.dtsi"
+#include "blair-sde-display-malmo-touchscreen.dtsi"
 
 / {
     model = "malmo";

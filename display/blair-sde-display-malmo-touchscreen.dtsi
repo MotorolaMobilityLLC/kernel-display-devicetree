@@ -1,0 +1,198 @@
+/*
+ * Copyright (c) 2023, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&qupv3_se0_i2c {
+	status = "disabled";
+};
+
+&tlmm {
+	touch_ts_active_mux {
+		touch_ts_active: touch_ts_active {
+			mux {
+				pins = "gpio21", "gpio22", "gpio84";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio21", "gpio22", "gpio84";
+				drive-strength = <8>;
+				bias-pull-up;
+			};
+		};
+	};
+
+	pmx_ts_avdd_suspend {
+		ts_avdd_suspend: ts_avdd_suspend {
+			mux {
+				pins = "gpio84";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio84";
+				drive-strength = <2>;
+				bias-pull-down;
+			};
+		};
+	};
+
+	touch_ts_release_mux {
+		touch_ts_release: touch_ts_release {
+			mux {
+				pins = "gpio21", "gpio22", "gpio84";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio21", "gpio22", "gpio84";
+				drive-strength = <2>;
+				bias-disable;
+			};
+		};
+	};
+};
+
+/*
+&qupv3_se0_spi_pins {
+	qupv3_se0_spi_active: qupv3_se0_spi_active {
+		mux {
+			pins = "gpio0", "gpio1", "gpio2";
+			function = "qup00";
+		};
+
+		config {
+			pins = "gpio0", "gpio1", "gpio2";
+			drive-strength = <6>;
+			bias-disable;
+		};
+	};
+
+	qupv3_se0_spi_sleep: qupv3_se0_spi_sleep {
+		mux {
+			pins = "gpio0", "gpio1", "gpio2";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio0", "gpio1", "gpio2";
+			drive-strength = <6>;
+			bias-disable;
+		};
+	};
+
+	qupv3_se0_spi_cs_active: qupv3_se0_spi_cs_active {
+		mux {
+			pins = "gpio3";
+			function = "qup00";
+		};
+
+		config {
+			pins = "gpio3";
+			drive-strength = <6>;
+			bias-disable;
+		};
+	};
+
+	qupv3_se0_spi_cs_sleep: qupv3_se0_spi_cs_sleep {
+		mux {
+			pins = "gpio3";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio3";
+			drive-strength = <6>;
+			bias-pull-up;
+		};
+	};
+};
+*/
+
+&qupv3_se0_spi {
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	status = "ok";
+
+	//pinctrl-0 = <&qupv3_se0_spi_active &qupv3_se0_spi_cs_active>;
+	//pinctrl-1 = <&qupv3_se0_spi_sleep &qupv3_se0_spi_cs_sleep>;
+
+	goodix-berlin@0 {
+		status = "ok";
+		compatible = "goodix,gt9916S";
+		reg = <0x0>;
+		spi-max-frequency = <9600000>;
+
+		panel = <&mot_csot_vtdr6115_gt9916_667_1080x2400_dsc_vid>;
+		mmi,status = "/chosen","mmi,panel_name","contains","gt9916";
+		//goodix,avdd-name = "avdd";
+		goodix,avdd-gpio = <&tlmm 84 0x0>;
+
+		goodix,reset-gpio = <&tlmm 21 0x0>;
+		goodix,irq-gpio = <&tlmm 22 0x0>;
+		goodix,irq-flags = <2>;
+		goodix,panel-max-x = <17280>;
+		goodix,panel-max-y = <38400>;
+		goodix,panel-max-w = <255>;
+		goodix,panel-max-p = <4096>;
+
+		pinctrl-names = "touch_ts_active_mux", "pmx_ts_suspend", "touch_ts_release_mux";
+		pinctrl-0 = <&touch_ts_active>;
+		pinctrl-1 = <&ts_int_suspend &ts_reset_suspend &ts_avdd_suspend>;
+		pinctrl-2 = <&touch_ts_release>;
+
+		//goodix,firmware-name = "goodix_firmware.bin";
+		//goodix,config-name = "goodix_cfg_group.bin";
+		//goodix,edge-ctrl;
+		//goodix,interpolation-ctrl;
+		//goodix,sample-ctrl;
+		goodix,gesture-wait-pm;
+		//mmi,power-off-suspend;
+		//mmi,usb-charger-detection;
+		mmi,enable-gestures;
+		mmi,supported_gesture_type = <0x07>;
+	};
+
+/*
+	focaltech@1{
+		status = "ok";
+		compatible = "focaltech,fts";
+		reg = <0x1>;
+		//mmi,status = "/chosen","vtdr6115";
+		mmi,status = "/chosen","mmi,panel_name","contains","vtdr6115";
+		spi-max-frequency = <9600000>;
+		interrupt-parent = <&tlmm>;
+		interrupts = <22 0x2008>;
+		focaltech,vdd-gpio = <&tlmm 11 0x00>;
+		focaltech,reset-gpio = <&tlmm 21 0x00>;
+		focaltech,irq-gpio = <&tlmm 22 0x02008>;
+		vcc_i2c-supply = <&L13A>;
+		focaltech,max-touch-number = <10>;
+		focaltech,display-coords =  <0 0 17280 38400>;
+		focaltech,edge-ctrl;
+		focaltech,interpolation-ctrl;
+		focaltech,sample-ctrl;
+		pinctrl-names = "pmx_ts_active","pmx_ts_suspend",
+						"touch_ts_release";
+		pinctrl-0 = <&touch_ts_active>;
+		pinctrl-1 = <&ts_int_suspend &ts_reset_suspend>;
+		pinctrl-2 = <&touch_ts_release>;
+
+		//panel = <&mot_csot_vtdr6115_655_1080x2400_dsc_vid &mot_csot_c7_vtdr6115_655_1080x2400_dsc_vid_v0 &mot_csot_c7_vtdr6115_655_1080x2400_dsc_vid_v1>;
+		//mmi,usb-charger-detection;
+		//mmi,enable-gestures;
+		//mmi,supported_gesture_type = <0x07>;
+ 	};
+*/
+
+};
