@@ -243,3 +243,7 @@
 		panel = <&mot_csot_vtdr6115_655_1080x2400_dsc_144hz_vid>;
 	};
 };
+
+&sde_dp {
+	qcom,dp-downgrade;
+};
