@@ -22,8 +22,8 @@
 		qcom,mdss-dsi-border-color = <0>;
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
-		//qcom,mdss-pan-physical-width-dimension = <69>;
-		//qcom,mdss-pan-physical-height-dimension = <154>;
+		qcom,mdss-pan-physical-width-dimension = <69>;
+		qcom,mdss-pan-physical-height-dimension = <154>;
 
 		qcom,mdss-dsi-traffic-mode = "non_burst_sync_event";
 		qcom,mdss-dsi-bllp-eof-power-mode;
