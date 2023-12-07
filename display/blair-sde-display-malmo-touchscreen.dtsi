@@ -133,7 +133,7 @@
 		reg = <0x0>;
 		spi-max-frequency = <9600000>;
 
-		panel = <&mot_csot_vtdr6115_gt9916_667_1080x2400_dsc_vid>;
+		panel = <&mot_csot_vtdr6115_gt9916_667_1080x2400_dsc_vid &mot_tm_vtdr6115_gt9916_667_1080x2400_dsc_vid>;
 		mmi,status = "/chosen","mmi,panel_name","contains","gt9916";
 		//goodix,avdd-name = "avdd";
 		goodix,avdd-gpio = <&tlmm 84 0x0>;
