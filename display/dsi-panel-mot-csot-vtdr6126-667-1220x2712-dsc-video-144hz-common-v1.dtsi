@@ -88,6 +88,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-on-command = [
+					39 00 00 00 00 00 03 BB 01 41
 					39 00 00 00 00 00 03 F0 AA 10
 					39 00 00 00 00 00 18 D0 C4 04 60 14 17 00 35 4B 1A 4F 00 00 4B 30 50 00 00 00 04 44 1A 1A 1A
 					39 00 00 00 00 00 03 F0 AA 13
