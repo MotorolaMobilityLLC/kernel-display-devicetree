@@ -9,5 +9,5 @@
 	model = "arcfox";
 	compatible = "qcom,cliffs-mtp", "qcom,cliffs", "qcom,mtp";
 	qcom,msm-id = <614 0x10000>, <632 0x10000>;
-	qcom,board-id = <0x43 0xA300>;
+	qcom,board-id = <0x43 0xA300>, <0x43 0xB1B0>;
 };
