@@ -1,3 +1,4 @@
+#include "cliffs-sde.dtsi"
 #include "cliffs-sde-display-common.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-pineapple.h>
 
