@@ -556,7 +556,7 @@
     };
 };
 
-&qupv3_se7_spi {
+&qupv3_se11_spi {
 	gdx-cli@0 {
 		panel = <&mot_csot_nt37707_1080x1272_dsc_cmd_cli_v0>;
 	};
