@@ -7,7 +7,7 @@
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
 #include "dsi-panel-mot-tm-vtdr6115-667-1080x2400-dsc-120hz-vid-fhd.dtsi"
-#include "dsi-panel-mot-csot-vtdr6115-667-1080x2400-dsc-120hz-vid_fhd.dtsi"
+#include "dsi-panel-mot-csot-vtdr6115-667-1080x2400-dsc-120hz-vid-fhd.dtsi"
 #include "dsi-panel-mot-tm-vtdr6115-667-1080x2400-dsc-120hz-vid.dtsi"
 
 &tlmm {

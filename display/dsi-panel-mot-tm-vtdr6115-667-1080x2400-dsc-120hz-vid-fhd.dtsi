@@ -400,7 +400,7 @@
 				];
 
 				qcom,mdss-dsi-off-command = [
-						05 01 00 00 00 00 01 28
+						05 01 00 00 10 00 01 28
 						39 01 00 00 05 00 02 6C 02
 						05 01 00 00 3C 00 01 10];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
