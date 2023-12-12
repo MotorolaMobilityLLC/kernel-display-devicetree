@@ -376,7 +376,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 		        qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
@@ -384,7 +384,7 @@
 		timing@1{//165hz
 			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 15 05 05 14 13 05
 							05 06 02 04 00 13 0A];
@@ -393,7 +393,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
@@ -402,7 +402,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
@@ -412,7 +412,7 @@
 			qcom,framerate-group-120hz-based;
 			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
@@ -421,7 +421,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
@@ -429,7 +429,7 @@
 		timing@6{//10hz
 			qcom,framerate-group-special-idle-10hz;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
@@ -437,7 +437,7 @@
 		timing@7{//1hz
 			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
 							04 03 02 04 00 0E 09];
