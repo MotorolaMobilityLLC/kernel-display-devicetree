@@ -192,7 +192,7 @@
 
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc>;
 };
 
 &mot_csot_nt37707_667_1080x2640_dsc_cmd_v1 {
@@ -223,6 +223,14 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
+
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -342,6 +350,14 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
+
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -463,6 +479,13 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz

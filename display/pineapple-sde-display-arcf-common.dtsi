@@ -248,6 +248,14 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
+
 	qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -370,6 +378,13 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
