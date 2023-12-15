@@ -20,33 +20,41 @@
 			qcom,supply-max-voltage = <1800000>;
 			qcom,supply-enable-load = <200000>;
 			qcom,supply-disable-load = <80>;
-			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-post-on-sleep = <1>;
 		};
 
 		qcom,panel-supply-entry@1 {
 			reg = <1>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <10000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-post-off-sleep = <1>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
 			qcom,supply-name = "vdd";
 			qcom,supply-min-voltage = <1250000>;
 			qcom,supply-max-voltage = <1250000>;
 			qcom,supply-enable-load = <299000>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-post-on-sleep = <0>;
-		};
-
-		qcom,panel-supply-entry@2 {
-			reg = <2>;
-			qcom,supply-name = "vci";
-			qcom,supply-min-voltage = <3000000>;
-			qcom,supply-max-voltage = <3000000>;
-			qcom,supply-enable-load = <10000>;
-			qcom,supply-disable-load = <0>;
-			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-post-off-sleep = <1>;
 		};
 	};
 };
 
 &mdss_mdp {
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb1 &sde_wb2 &sde_rscc &sde_dp>;
+};
+
+&L3C {
+       regulator-min-microvolt = <1250000>;
+       regulator-max-microvolt = <1250000>;
+       qcom,init-voltage = <1250000>;
 };
 
 &sde_dsi {
@@ -234,4 +242,8 @@
 		&mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz_v2
 		&mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz_v3>;
     };
+};
+
+&sde_dp {
+  qcom,dp-downgrade;
 };
