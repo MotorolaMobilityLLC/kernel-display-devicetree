@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+
+#include "parrot-sde-display-cusco-common.dtsi"
+
+/ {
+	model = "cuscoi";
+	compatible = "qcom,parrot-qrd", "qcom,parrot", "qcom,qrd", "moto,cuscoi";
+	qcom,msm-id = <613 0x10000>;
+	qcom,board-id = <0x44 0x9000>;
+};
+
