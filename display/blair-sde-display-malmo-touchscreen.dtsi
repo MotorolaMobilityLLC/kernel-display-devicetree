@@ -158,7 +158,7 @@
 		//goodix,sample-ctrl;
 		goodix,gesture-wait-pm;
 		//mmi,power-off-suspend;
-		//mmi,usb-charger-detection;
+		mmi,usb-charger-detection;
 		mmi,enable-gestures;
 		mmi,supported_gesture_type = <0x07>;
 	};
