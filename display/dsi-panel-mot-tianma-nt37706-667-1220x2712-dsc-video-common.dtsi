@@ -143,7 +143,6 @@
 				qcom,mdss-dsc-bit-per-component = <10>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
-				qcom,mdss-dsc-novateck-ic;
 
 				qcom,mdss-dsi-dfps-60-command = [
 						39 01 00 00 00 00 02 2F 03];
