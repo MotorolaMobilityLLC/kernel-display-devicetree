@@ -12,7 +12,7 @@
  */
 
 &mdss_mdp {
-mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz_v3 {
+mot_csot_vtdr6126_667_1220x2712_dsc_vid_144hz_v3: qcom,mdss_dsi_mot_csot_vtdr6126_667_1220x2712_dsc_vid_v3 {
 qcom,mdss-dsi-panel-local-hbm-alpha-table = <
 0
 305
