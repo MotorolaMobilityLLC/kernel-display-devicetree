@@ -196,6 +196,10 @@
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
 
+	qcom,cellid-read-enabled;
+        qcom,mdss-dsi-panel-cellid-read-length = <23>;
+        qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
+
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-t-clk-post = <0x0C>;
         qcom,mdss-dsi-t-clk-pre = <0x19>;
@@ -237,6 +241,10 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
+
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-t-clk-post = <0x0C>;
