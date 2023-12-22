@@ -51,7 +51,6 @@
 			qcom,supply-max-voltage = <1800000>;
 			qcom,supply-enable-load = <300000>;
 			qcom,supply-disable-load = <100>;
-			qcom,supply-pre-on-sleep = <0>;
 			qcom,supply-post-on-sleep = <1>;
 			qcom,supply-pre-off-sleep = <2>;
 			qcom,supply-post-off-sleep = <3>;
@@ -64,7 +63,6 @@
 			qcom,supply-max-voltage = <3000000>;
 			qcom,supply-enable-load = <300000>;
 			qcom,supply-disable-load = <0>;
-			qcom,supply-pre-on-sleep = <0>;
 			qcom,supply-post-on-sleep = <1>;
 			qcom,supply-pre-off-sleep = <2>;
 			qcom,supply-post-off-sleep = <1>;
@@ -77,8 +75,6 @@
 			qcom,supply-max-voltage = <1250000>;
 			qcom,supply-enable-load = <300000>;
 			qcom,supply-disable-load = <0>;
-			qcom,supply-pre-on-sleep = <0>;
-			qcom,supply-post-on-sleep = <3>;
 			qcom,supply-pre-off-sleep = <2>;
 			qcom,supply-post-off-sleep = <1>;
 		};
