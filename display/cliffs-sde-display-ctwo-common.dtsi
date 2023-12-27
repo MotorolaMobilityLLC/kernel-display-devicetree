@@ -85,10 +85,11 @@
 	qcom,mdss-dsi-bl-is-exponent;
 	qcom,mdss-dsi-bl-double-write;
 
-	qcom,mdss-dsi-panel-hdr-enabled;//
-	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
-	        16000 13000 35500 7000 2500>;
-	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <16000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -136,10 +137,10 @@
 	qcom,mdss-dsi-bl-is-exponent;
 	qcom,mdss-dsi-bl-double-write;
 
-	qcom,mdss-dsi-panel-hdr-enabled;//
-	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
-	        16000 13000 35500 7000 2500>;
-	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <16000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -187,10 +188,10 @@
 	qcom,mdss-dsi-bl-is-exponent;
 	qcom,mdss-dsi-bl-double-write;
 
-	qcom,mdss-dsi-panel-hdr-enabled;//
-	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
-	        16000 13000 35500 7000 2500>;
-	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <16000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";

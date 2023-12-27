@@ -224,6 +224,12 @@
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
 
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
+
 	qcom,apl-enabled;
 	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
 	qcom,mdss-dsi-panel-apl-on-command = [
@@ -350,6 +356,12 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
 	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
@@ -479,6 +491,12 @@
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
 	qcom,mdss-dsi-panel-cellid-command = [
 		06 01 00 01 00 00 01 AC];
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
 	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
