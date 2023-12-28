@@ -7,5 +7,5 @@
 	model = "tank";
 	compatible = "qcom,diwali-qrd", "qcom,diwali", "qcom,qrd", "moto,tank";
 	qcom,msm-id = <506 0x10000>, <547 0x10000>, <564 0x10000>;
-	qcom,board-id = <0x44 0x9100>;
+	qcom,board-id = <0x44 0x9100>, <0x44 0xA100>;
 };
