@@ -245,7 +245,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <777000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -256,7 +256,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -267,7 +267,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -279,7 +279,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -290,7 +290,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -300,7 +300,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -310,7 +310,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -320,7 +320,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
 							0A 09 02 04 00 1E 0F];
@@ -378,7 +378,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <777000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -389,7 +389,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -400,7 +400,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -412,7 +412,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -423,7 +423,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -433,7 +433,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -443,7 +443,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
 							07 07 02 04 00 17 0C];
@@ -453,7 +453,7 @@
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1080 120 1080 120 1080 120>;
 			//qcom,mdss-dsi-panel-clockrate = <880000000>;
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
 							0A 09 02 04 00 1E 0F];
