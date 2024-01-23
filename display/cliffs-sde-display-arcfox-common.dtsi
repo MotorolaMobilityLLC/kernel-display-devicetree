@@ -218,7 +218,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	qcom,esd-check-enabled;
+	//qcom,esd-check-enabled;
 	qcom,cellid-read-enabled;
 	qcom,mdss-dsi-panel-cellid-read-length = <36>;
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
@@ -238,7 +238,7 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 
-	qcom,ulps-enabled;
+	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -351,7 +351,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	qcom,esd-check-enabled;
+	//qcom,esd-check-enabled;
 	qcom,cellid-read-enabled;
 	qcom,mdss-dsi-panel-cellid-read-length = <36>;
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
@@ -371,7 +371,7 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 
-	qcom,ulps-enabled;
+	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -484,7 +484,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	qcom,esd-check-enabled;
+	//qcom,esd-check-enabled;
 	qcom,cellid-read-enabled;
 	qcom,mdss-dsi-panel-cellid-read-length = <36>;
 	qcom,mdss-dsi-panel-cellid-offset = <13>;
@@ -504,7 +504,7 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 
-	qcom,ulps-enabled;
+	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -615,7 +615,7 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9c>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
-	qcom,esd-check-enabled;
+	//qcom,esd-check-enabled;
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
 
