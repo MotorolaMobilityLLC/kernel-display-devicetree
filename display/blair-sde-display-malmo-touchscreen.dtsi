@@ -157,7 +157,7 @@
 		//goodix,interpolation-ctrl;
 		//goodix,sample-ctrl;
 		goodix,gesture-wait-pm;
-		//mmi,power-off-suspend;
+		mmi,power-off-suspend;
 		mmi,usb-charger-detection;
 		goodix,stowed-mode-ctrl;
 		mmi,enable-gestures;
