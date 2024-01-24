@@ -148,6 +148,10 @@
 	};
 };
 
+&L13A {
+	qcom,init-voltage = <1850000>;
+};
+
 &mot_dummy_vid_qhd {
     //qcom,panel-supply-entries = <&dsi_panel_pwr_supply_amoled>;
     qcom,platform-te-gpio = <&tlmm 23 0>;
