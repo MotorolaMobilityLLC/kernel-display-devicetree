@@ -149,7 +149,7 @@
 };
 
 &L13A {
-	qcom,init-voltage = <1850000>;
+	qcom,init-voltage = <1800000>;
 };
 
 &mot_dummy_vid_qhd {
