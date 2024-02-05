@@ -11,7 +11,7 @@
  */
 &mdss_mdp {
 	mot_csot_vtdr6115_667_1080x2400_144hz_vid_fhd_v1: qcom,mdss_dsi_mot_csot_vtdr6115_667_1080x2400_144hz_vid_fhd_v1 {
-		qcom,mdss-dsi-panel-name = "mipi_mot_vid_csot_667_1080p_144hz_fhd_v1";
+		qcom,mdss-dsi-panel-name = "mipi_mot_vid_csot_667_1080p_dsc_144hz_fhd";
 		qcom,mdss-dsi-panel-supplier = "csot";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,mdss-dsi-panel-physical-type = "oled";
