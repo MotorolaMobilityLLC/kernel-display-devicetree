@@ -42,7 +42,7 @@ Required properties:
 - qcom,mdss-dsi-on-command:		A byte stream formed by multiple dcs packets base on
 					qcom dsi controller protocol.
 					byte 0: dcs data type
-					byte 1: Unused
+					byte 1: first two MSBs specify DSI controller index
 					byte 2: virtual channel number
 					byte 3: Message flags
 					byte 4: wait number of specified ms after dcs command
@@ -52,7 +52,7 @@ Required properties:
 - qcom,mdss-dsi-off-command:		A byte stream formed by multiple dcs packets base on
 					qcom dsi controller protocol.
 					byte 0: dcs data type
-					byte 1: Unused
+					byte 1: first two MSBs specify DSI controller index
 					byte 2: virtual channel number
 					byte 3: Message flags
 					byte 4: wait number of specified ms after dcs command
