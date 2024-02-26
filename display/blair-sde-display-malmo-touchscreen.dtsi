@@ -153,9 +153,9 @@
 
 		//goodix,firmware-name = "goodix_firmware.bin";
 		//goodix,config-name = "goodix_cfg_group.bin";
-		//goodix,edge-ctrl;
-		//goodix,interpolation-ctrl;
-		//goodix,sample-ctrl;
+		goodix,edge-ctrl;
+		goodix,interpolation-ctrl;
+		goodix,sample-ctrl;
 		goodix,gesture-wait-pm;
 		mmi,power-off-suspend;
 		mmi,usb-charger-detection;
