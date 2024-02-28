@@ -156,6 +156,7 @@
 		goodix,edge-ctrl;
 		goodix,interpolation-ctrl;
 		goodix,sample-ctrl;
+		goodix,pocket-mode-ctrl;
 		goodix,gesture-wait-pm;
 		mmi,power-off-suspend;
 		mmi,usb-charger-detection;
