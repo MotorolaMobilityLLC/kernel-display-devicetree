@@ -684,6 +684,8 @@ Optional properties:
 					enough to cover the time link takes to switch between HS to LP11 mode.
 - qcom,vert-padding-value:	An u32 value indicating the second display height while using two displays
 					in shared display feature.
+- qcom,mdss-dsi-panel-skip-pps-update:	A boolean to skip pps update from driver.
+- qcom,mdss-dsi-panel-xr:		A boolean to indicate the panel is XR panel.
 
 Required properties for sub-nodes:	None
 Optional properties:
@@ -874,6 +876,10 @@ Example:
 
 		qcom,dsi-dyn-clk-enable;
 		qcom,dsi-dyn-clk-type = "constant-fps-adjust-hfp";
+
+		qcom,mdss-dsi-panel-skip-pps-update;
+
+		qcom,mdss-dsi-panel-xr;
 
 		qcom,mdss-dsi-display-timings {
 			wqhd {
