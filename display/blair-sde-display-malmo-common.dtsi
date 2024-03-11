@@ -122,6 +122,10 @@
 	//avdd-supply = <&display_panel_avdd>;
 	//ibb-supply = <&display_panel_ibb>;
 	//lab-supply = <&display_panel_lab>;
+	vdda-1p2-supply = <&L4A>;
+	vdda-0p9-supply = <&S1E_LEVEL>;
+	vdda-pll0p9-supply = <&L7A>;
+	refgen-supply = <&refgen>;
 };
 
 &reserved_memory {
