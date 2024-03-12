@@ -107,7 +107,7 @@
 	clocks = <&rpmhcc RPMH_CXO_CLK>,
 		<&rpmhcc RPMH_CXO_CLK_A>,
 		<&sleep_clk>,
-		<&gcc GCC_DISP1_AHB_CLK>,
+		<&gcc GCC_DISP_1_AHB_CLK>,
 		<&mdss_dsi_phy2 0>,
 		<&mdss_dsi_phy2 1>,
 		<&mdss_dsi_phy3 0>,
