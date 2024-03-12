@@ -261,6 +261,14 @@
 				qcom,supply-enable-load = <0>;
 				qcom,supply-disable-load = <0>;
 			};
+			qcom,phy-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda-pll0p9";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <950000>;
+				qcom,supply-enable-load = <97800>;
+				qcom,supply-disable-load = <0>;
+			};
 		};
 	};
 };

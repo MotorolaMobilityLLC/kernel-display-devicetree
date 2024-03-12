@@ -97,6 +97,22 @@
 	dvdd-supply = <&display_panel_dvdd>;
 	ibb-supply = <&display_panel_ibb>;
 	lab-supply = <&display_panel_lab>;
+
+
+	/*
+	 * Currently phy and clk supply handles are under dsi ctrl and
+	 * phy DT node. As soon as ctrl and phy probe is completed,
+	 * regulator sync state for those supplies will get called before
+	 * dsi_display probe which potentially discturbing the regulator
+	 * votes for cont_splash use case.To protect against this incorrect
+	 * sync state trigger add this supply reference to dsi_display DT node.
+	 * so sync state will be delayed till dsi_display probe is finished.
+	 * This change is done just to satisfy sync state requirements.
+	*/
+	vdda-1p2-supply = <&L4A>;
+	vdda-0p9-supply = <&S1E_LEVEL>;
+	vdda-pll0p9-supply = <&L7A>;
+	refgen-supply = <&refgen>;
 };
 
 &reserved_memory {
