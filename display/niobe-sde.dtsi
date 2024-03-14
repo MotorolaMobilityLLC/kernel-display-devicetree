@@ -5,6 +5,188 @@
 #include "niobe-sde-common.dtsi"
 
 &soc {
+	sde_rscc0: qcom,sde_rscc@af20000 {
+		status = "disabled";
+		cell-index = <0>;
+		compatible = "qcom,sde-rsc";
+		reg = <0xaf20000 0x4d68>,
+			<0xaf30000 0x3fd4>;
+		reg-names = "drv", "wrapper";
+		qcom,sde-rsc-version = <5>;
+
+		qcom,sde-dram-channels = <2>;
+
+		vdd-supply = <&disp0_cc_mdss_core_gdsc>;
+		clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_RSCC_VSYNC_CLK>,
+		    <&dispcc0 MDSS_0_DISP_CC_MDSS_NON_GDSC_AHB_CLK>,
+		    <&dispcc0 MDSS_0_DISP_CC_MDSS_RSCC_AHB_CLK>;
+
+		clock-names = "vsync_clk", "gdsc_clk", "iface_clk";
+
+		qcom,msm-bus,active-only;
+		interconnects = <&mmss_noc MASTER_MDP0_DISP &mc_virt SLAVE_EBI1_DISP>;
+		interconnect-names = "qcom,sde-data-bus0";
+	};
+
+	sde_rscc1: qcom,sde_rscc@a920000 {
+		status = "disabled";
+		cell-index = <1>;
+		compatible = "qcom,sde-rsc";
+		reg = <0xa920000 0x4d68>,
+			<0xa930000 0x3fd4>;
+		reg-names = "drv", "wrapper";
+		qcom,sde-rsc-version = <5>;
+		qcom,sde-dram-channels = <2>;
+
+		vdd-supply = <&disp1_cc_mdss_core_gdsc>;
+		clocks = <&dispcc1 MDSS_1_DISP_CC_MDSS_RSCC_VSYNC_CLK>,
+		    <&dispcc1 MDSS_1_DISP_CC_MDSS_NON_GDSC_AHB_CLK>,
+		    <&dispcc1 MDSS_1_DISP_CC_MDSS_RSCC_AHB_CLK>;
+
+		clock-names = "vsync_clk", "gdsc_clk", "iface_clk";
+
+		qcom,msm-bus,active-only;
+		interconnects = <&mmss_noc MASTER_MDP1_DISP2 &mc_virt SLAVE_EBI1_DISP2>;
+		interconnect-names = "qcom,sde-data-bus0";
+	};
+
+	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
+		compatible = "qcom,smmu_sde_unsec";
+		iommus = <&apps_smmu 0x1c00 0x2>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-earlymap; /* for cont-splash */
+		dma-coherent;
+		clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
+	};
+
+	smmu_sde_sec: qcom,smmu_sde_sec_cb {
+		compatible = "qcom,smmu_sde_sec";
+		iommus = <&apps_smmu 0x1c01 0x0>;
+		qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-vmid = <0xa>;
+	};
+
+	smmu_sde_unsec1: qcom,smmu_sde_unsec_cb1 {
+		compatible = "qcom,smmu_sde_unsec";
+		iommus = <&apps_smmu 0x2000 0x2>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-earlymap; /* for cont-splash */
+		dma-coherent;
+		clocks = <&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
+	};
+
+	smmu_sde_sec1: qcom,smmu_sde_sec_cb1 {
+		compatible = "qcom,smmu_sde_sec";
+		iommus = <&apps_smmu 0x2001 0x0>;
+		qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-vmid = <0xa>;
+	};
+};
+
+&mdss_mdp0 {
+	clocks =
+		<&gcc GCC_DISP_0_HF_AXI_CLK>,
+		<&dispcc0 MDSS_0_DISP_CC_MDSS_AHB_CLK>,
+		<&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>,
+		<&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK_SRC>,
+		<&dispcc0 MDSS_0_DISP_CC_MDSS_VSYNC_CLK>,
+		<&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_LUT_CLK>;
+	clock-names = "gcc_bus",
+		"iface_clk", "branch_clk", "core_clk", "vsync_clk", "lut_clk";
+	clock-rate = <0 0 660000000 660000000 19200000 660000000>;
+	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
+
+	dispcx-supply = <&VDD_DISP_CX_LEVEL>;
+	vdd-supply = <&disp0_cc_mdss_core_gdsc>;
+
+	/* data and reg bus scale settings */
+	interconnects = <&mmss_noc MASTER_MDP0 &gem_noc SLAVE_LLCC>,
+			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
+			<&gem_noc MASTER_APPSS_PROC
+				&config_noc SLAVE_DISPLAY_CFG>;
+	interconnect-names = "qcom,sde-data-bus0",
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
+
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+
+	qcom,platform-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,platform-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "dispcx";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,platform-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
+};
+
+&mdss_mdp1 {
+	clocks =
+		<&gcc GCC_DISP_1_HF_AXI_CLK>,
+		<&dispcc1 MDSS_1_DISP_CC_MDSS_AHB_CLK>,
+		<&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_CLK>,
+		<&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_CLK_SRC>,
+		<&dispcc1 MDSS_1_DISP_CC_MDSS_VSYNC_CLK>,
+		<&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_LUT_CLK>;
+	clock-names = "gcc_bus",
+			"iface_clk", "branch_clk", "core_clk", "vsync_clk", "lut_clk";
+	clock-rate = <0 0 660000000 660000000 19200000 660000000>;
+	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
+
+	dispcx-supply = <&VDD_DISP_CX_LEVEL>;
+	vdd-supply = <&disp1_cc_mdss_core_gdsc>;
+
+	/* data and reg bus scale settings */
+	interconnects = <&mmss_noc MASTER_MDP1 &gem_noc SLAVE_LLCC>,
+			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
+			<&gem_noc MASTER_APPSS_PROC
+				&config_noc SLAVE_DISPLAY_CFG>;
+	interconnect-names = "qcom,sde-data-bus0",
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
+
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+
+	qcom,platform-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,platform-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "dispcx";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,platform-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
 };
 
 &mdss_dsi0 {
