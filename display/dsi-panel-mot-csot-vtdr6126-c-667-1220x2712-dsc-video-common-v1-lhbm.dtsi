@@ -11,7 +11,7 @@
  * GNU General Public License for more details.
  */
 
-&mot_csot_vtdr6126_c_667_1220x2712_dsc_vid {
+&mot_csot_vtdr6126_c_667_1220x2712_dsc_vid_v1 {
 qcom,mdss-dsi-panel-local-hbm-alpha-table = <
 0
 353
