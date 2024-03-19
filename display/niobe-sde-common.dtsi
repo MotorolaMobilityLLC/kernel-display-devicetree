@@ -35,7 +35,7 @@
 					"primary", "none", "none", "none", "none",
 					"none", "none", "none", "none";
 		qcom,sde-mixer-dcwb-pref = "none", "none", "none", "none",
-					"none", "none", none", "none"
+					"none", "none", "none", "none",
 					"dcwb", "dcwb", "dcwb", "dcwb";
 
 		qcom,sde-dspp-top-off = <0x1300>;
@@ -306,7 +306,7 @@
 					"secondary", "none", "none", "none", "none",
 					"none", "none", "none", "none";
 		qcom,sde-mixer-dcwb-pref = "none", "none", "none", "none",
-					"none", "none", none", "none"
+					"none", "none", "none", "none",
 					"dcwb", "dcwb", "dcwb", "dcwb";
 
 		qcom,sde-dspp-top-off = <0x1300>;
