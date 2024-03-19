@@ -47,7 +47,7 @@
 			  * MDP clock nodes, no actual vote shall be added and this
 			  * change is done just to satisfy sync state requirements.
 			  */
-			 <&dispcc0 DISP_CC_MDSS_MDP_CLK>;
+			 <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "pll_byte_clk0",
 			"pll_dsi_clk0",
 			"pll_byte_clk1",
@@ -88,7 +88,7 @@
 			  * MDP clock nodes, no actual vote shall be added and this
 			  * change is done just to satisfy sync state requirements.
 			  */
-			 <&dispcc1 DISP_CC_MDSS_MDP_CLK>;
+			 <&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "pll_byte_clk0",
 			"pll_dsi_clk0",
 			"pll_byte_clk1",

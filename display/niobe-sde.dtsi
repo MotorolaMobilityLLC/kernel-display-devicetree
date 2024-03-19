@@ -1,6 +1,7 @@
 #include <dt-bindings/clock/qcom,dispcc0-niobe.h>
 #include <dt-bindings/clock/qcom,dispcc1-niobe.h>
 #include <dt-bindings/clock/qcom,gcc-niobe.h>
+#include <dt-bindings/interconnect/qcom,niobe.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 #include "niobe-sde-common.dtsi"
 
@@ -16,7 +17,7 @@
 
 		qcom,sde-dram-channels = <2>;
 
-		vdd-supply = <&disp0_cc_mdss_core_gdsc>;
+		vdd-supply = <&mdss_0_disp_cc_mdss_core_gdsc>;
 		clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_RSCC_VSYNC_CLK>,
 		    <&dispcc0 MDSS_0_DISP_CC_MDSS_NON_GDSC_AHB_CLK>,
 		    <&dispcc0 MDSS_0_DISP_CC_MDSS_RSCC_AHB_CLK>;
@@ -38,7 +39,7 @@
 		qcom,sde-rsc-version = <5>;
 		qcom,sde-dram-channels = <2>;
 
-		vdd-supply = <&disp1_cc_mdss_core_gdsc>;
+		vdd-supply = <&mdss_1_disp_cc_mdss_core_gdsc>;
 		clocks = <&dispcc1 MDSS_1_DISP_CC_MDSS_RSCC_VSYNC_CLK>,
 		    <&dispcc1 MDSS_1_DISP_CC_MDSS_NON_GDSC_AHB_CLK>,
 		    <&dispcc1 MDSS_1_DISP_CC_MDSS_RSCC_AHB_CLK>;
@@ -103,13 +104,13 @@
 	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
 
 	dispcx-supply = <&VDD_DISP_CX_LEVEL>;
-	vdd-supply = <&disp0_cc_mdss_core_gdsc>;
+	vdd-supply = <&mdss_0_disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP0 &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
 			<&gem_noc MASTER_APPSS_PROC
-				&config_noc SLAVE_DISPLAY_CFG>;
+				&cnoc_main SLAVE_DISPLAY_CFG>;
 	interconnect-names = "qcom,sde-data-bus0",
 			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
@@ -153,13 +154,13 @@
 	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
 
 	dispcx-supply = <&VDD_DISP_CX_LEVEL>;
-	vdd-supply = <&disp1_cc_mdss_core_gdsc>;
+	vdd-supply = <&mdss_1_disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP1 &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
 			<&gem_noc MASTER_APPSS_PROC
-				&config_noc SLAVE_DISPLAY_CFG>;
+				&cnoc_main SLAVE_DISPLAY_CFG>;
 	interconnect-names = "qcom,sde-data-bus0",
 			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
