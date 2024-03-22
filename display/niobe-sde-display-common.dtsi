@@ -27,7 +27,7 @@
 			reg = <0>;
 			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1800000>;
-			qcom,supply-max-voltage = <2000000>;
+			qcom,supply-max-voltage = <1800000>;
 			qcom,supply-enable-load = <200000>;
 			qcom,supply-disable-load = <80>;
 			qcom,supply-post-on-sleep = <10>;
