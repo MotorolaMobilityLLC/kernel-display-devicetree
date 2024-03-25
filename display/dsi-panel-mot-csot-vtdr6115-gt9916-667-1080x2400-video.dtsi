@@ -26,6 +26,7 @@
 		qcom,mdss-pan-physical-height-dimension = <154>;
 
 		qcom,mdss-dsi-traffic-mode = "non_burst_sync_event";
+		qcom,mdss-dsi-lp11-init;
 		qcom,mdss-dsi-bllp-eof-power-mode;
 		qcom,mdss-dsi-bllp-power-mode;
 		qcom,mdss-dsi-lane-0-state;
