@@ -87,8 +87,9 @@
 };
 
 &sde_dsi {
-	pinctrl-names = "panel_active";
+	pinctrl-names = "panel_active", "panel_suspend";
 	pinctrl-0 = <&sde_dsi_default>;
+	pinctrl-1 = <>;
 	avdd-supply = <&display_panel_avdd>;
 	qcom,dsi-default-panel = <&dsi_sony_dual_dsc_2664x2880_90hz_video>;
 };
