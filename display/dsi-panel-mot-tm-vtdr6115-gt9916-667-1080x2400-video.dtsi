@@ -34,7 +34,7 @@
 		qcom,mdss-dsi-lane-3-state;
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
-		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 20>;
+		qcom,mdss-dsi-reset-sequence = <1 5>, <0 5>, <1 20>;
 		qcom,delayms_after_resetlow = <1>;
 
 		qcom,mdss-dsi-dc-off-command = [
@@ -391,7 +391,7 @@
 					39 01 00 00 00 00 02 f3 08
 					39 01 00 00 00 00 03 FF 5A 00
 					39 01 00 00 00 00 03 F0 AA 00
-					05 01 00 00 14 00 01 29
+					05 01 00 00 00 00 01 29
 					39 01 00 00 00 00 03 F0 AA 12
 					39 01 00 00 00 00 02 65 10
 					39 01 00 00 00 00 02 D9 0F

@@ -49,7 +49,7 @@
 			qcom,supply-max-voltage = <1980000>;
 			qcom,supply-enable-load = <200000>;
 			qcom,supply-disable-load = <80>;
-			qcom,supply-post-on-sleep = <20>;
+			qcom,supply-post-on-sleep = <1>;
 		};
 
 		qcom,panel-supply-entry@1 {
