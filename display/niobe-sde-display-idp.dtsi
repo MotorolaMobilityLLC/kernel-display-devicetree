@@ -98,3 +98,7 @@
 	avdd-supply = <&display_panel_avdd>;
 	qcom,dsi-default-panel = <&dsi_sony_dual_dsc_2664x2880_90hz_video>;
 };
+
+&mdss_mdp1 {
+	status = "ok";
+};

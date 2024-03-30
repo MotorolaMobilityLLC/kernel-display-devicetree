@@ -272,7 +272,6 @@
 	};
 
 	mdss_mdp1: qcom,mdss_mdp@a800000 {
-		status = "disabled";
 		compatible = "qcom,sde-kms";
 		reg = <0x0a800000 0x92800>,
 		      <0x0a8b0000 0x2008>,
@@ -622,7 +621,7 @@
 	};
 
 	mdss_dsi3: qcom,mdss_mdp1_dsi_ctrl1@0a896000 {
-		compatible = "qcom,dsi-ctrl-hw-v2.7";
+		compatible = "qcom,dsi-ctrl-hw-v2.8";
 		label = "dsi-ctrl-3";
 		cell-index = <3>;
 		frame-threshold-time-us = <800>;
@@ -720,7 +719,7 @@
 	};
 
 	mdss_dsi_phy2: qcom,mdss_mdp1_dsi_phy0@a895500 {
-		compatible = "qcom,dsi-phy-v4.3";
+		compatible = "qcom,dsi-phy-v5.2";
 		label = "dsi-phy-2";
 		cell-index = <2>;
 		#clock-cells = <1>;
@@ -756,7 +755,7 @@
 	};
 
 	mdss_dsi_phy3: qcom,mdss_mdp1_dsi_phy1@a897500 {
-		compatible = "qcom,dsi-phy-v4.3";
+		compatible = "qcom,dsi-phy-v5.2";
 		label = "dsi-phy-3";
 		cell-index = <3>;
 		#clock-cells = <1>;
