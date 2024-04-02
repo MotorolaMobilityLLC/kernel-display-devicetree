@@ -177,7 +177,6 @@
 	};
 
 	sde_rscc0: qcom,sde_rscc@af20000 {
-		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,sde-rsc";
 		reg = <0xaf20000 0x4d68>,
@@ -200,7 +199,6 @@
 	};
 
 	sde_rscc1: qcom,sde_rscc@a920000 {
-		status = "disabled";
 		cell-index = <1>;
 		compatible = "qcom,sde-rsc";
 		reg = <0xa920000 0x4d68>,
@@ -274,7 +272,6 @@
 	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
 
 	dispcx-supply = <&VDD_DISP_CX_LEVEL>;
-	vdd-supply = <&mdss_0_disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP0 &gem_noc SLAVE_LLCC>,
@@ -298,15 +295,6 @@
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
 		};
-
-		qcom,platform-supply-entry@1 {
-			reg = <1>;
-			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <0>;
-			qcom,supply-max-voltage = <0>;
-			qcom,supply-enable-load = <0>;
-			qcom,supply-disable-load = <0>;
-		};
 	};
 };
 
@@ -324,7 +312,6 @@
 	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
 
 	dispcx-supply = <&VDD_DISP_CX_LEVEL>;
-	vdd-supply = <&mdss_1_disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP1 &gem_noc SLAVE_LLCC>,
@@ -348,15 +335,20 @@
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
 		};
+	};
+};
 
-		qcom,platform-supply-entry@1 {
-			reg = <1>;
-			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <0>;
-			qcom,supply-max-voltage = <0>;
-			qcom,supply-enable-load = <0>;
-			qcom,supply-disable-load = <0>;
-		};
+&disp_rsc_0_drv0 {
+	sde_rsc_rpmh {
+		compatible = "qcom,sde-rsc-rpmh";
+		cell-index = <0>;
+	};
+};
+
+&disp_rsc_1_drv0 {
+	sde_rsc_rpmh {
+		compatible = "qcom,sde-rsc-rpmh";
+		cell-index = <1>;
 	};
 };
 
