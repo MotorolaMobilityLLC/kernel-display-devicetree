@@ -4,20 +4,10 @@
 
 &soc {
 	sde_wb1: qcom,wb-display@1 {
-		status = "disabled";
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
 		label = "wb_display1";
 		clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
-		clock-names = "mdp_core_clk";
-	};
-
-	sde_wb2: qcom,wb-display@2 {
-		status = "disabled";
-		compatible = "qcom,wb-display";
-		cell-index = <1>;
-		label = "wb_display2";
-		clocks = <&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_CLK >;
 		clock-names = "mdp_core_clk";
 	};
 };
@@ -105,7 +95,7 @@
 };
 
 &mdss_mdp0 {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_dp>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_dp &sde_wb1>;
 };
 
 &mdss_mdp1 {
