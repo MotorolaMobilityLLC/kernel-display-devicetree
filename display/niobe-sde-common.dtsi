@@ -5,9 +5,11 @@
 		compatible = "qcom,sde-kms";
 		reg = <0x0ae00000 0x92800>,
 		      <0x0aeb0000 0x2008>,
+		      <0x0af80000 0x7000>,
 		      <0x400000 0x2000>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
+			"regdma_phys",
 			"ipcc";
 
 		/* interrupt config */
@@ -207,6 +209,14 @@
 		qcom,sde-qos-cpu-dma-latency = <300>;
 		qcom,sde-qos-cpu-irq-latency = <300>;
 
+		/* offsets are relative to "mdp_phys + qcom,sde-off */
+		qcom,sde-reg-dma-off = <0 0x800>;
+		qcom,sde-reg-dma-id = <0 1>;
+		qcom,sde-reg-dma-version = <0x00030000>;
+		qcom,sde-reg-dma-trigger-off = <0x119c>;
+		qcom,sde-reg-dma-xin-id = <7>;
+		qcom,sde-reg-dma-clk-ctrl = <0x2bc 20>;
+
 		qcom,sde-reg-bus,vectors-KBps = <0 0>,
 						<0 14000>,
 						<0 140000>,
@@ -275,9 +285,11 @@
 		compatible = "qcom,sde-kms";
 		reg = <0x0a800000 0x92800>,
 		      <0x0a8b0000 0x2008>,
+		      <0x0a980000 0x7000>,
 		      <0x400000 0x2000>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
+			"regdma_phys",
 			"ipcc";
 
 		/* interrupt config */
@@ -475,6 +487,14 @@
 		qcom,sde-qos-cpu-mask-performance = <0xf>;
 		qcom,sde-qos-cpu-dma-latency = <300>;
 		qcom,sde-qos-cpu-irq-latency = <300>;
+
+		/* offsets are relative to "mdp_phys + qcom,sde-off */
+		qcom,sde-reg-dma-off = <0 0x800>;
+		qcom,sde-reg-dma-id = <0 1>;
+		qcom,sde-reg-dma-version = <0x00030000>;
+		qcom,sde-reg-dma-trigger-off = <0x119c>;
+		qcom,sde-reg-dma-xin-id = <7>;
+		qcom,sde-reg-dma-clk-ctrl = <0x2bc 20>;
 
 		qcom,sde-reg-bus,vectors-KBps = <0 0>,
 						<0 14000>,
