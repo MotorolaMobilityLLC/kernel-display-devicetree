@@ -28,7 +28,7 @@
 	sde_dp: qcom,dp_display@af54000 {
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
-		status = "disabled";
+		status = "ok";
 
 		usb-phy = <&usb_qmp_dp_phy>;
 		qcom,ext-disp = <&ext_disp>;
