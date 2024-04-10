@@ -102,3 +102,9 @@
 &mdss_mdp1 {
 	status = "ok";
 };
+
+&battery_charger {
+	qcom,display-panels = <&dsi_sony_dual_dsc_3552x3840_90hz_video
+				&dsi_sony_dual_dsc_2664x2880_90hz_video
+				&dsi_sony_dual_dsc_1776x1920_90hz_video>;
+};
