@@ -276,7 +276,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -485,7 +485,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -693,7 +693,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -911,7 +911,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -1128,7 +1128,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -1345,7 +1345,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -1562,7 +1562,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -1779,7 +1779,7 @@ qcom,mdss-dsi-display-timings {
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
-			05 01 00 00 78 00 01 10];	/* enter sleep mode */
+			05 01 00 00 0A 00 01 10];	/* enter sleep mode */
 
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
