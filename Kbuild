@@ -47,6 +47,8 @@ dtbo-$(CONFIG_ARCH_NIOBE) += display/niobe-sde.dtbo \
 		display/niobe-sde-display-atp-4kdisp-overlay.dtbo \
 		display/niobe-sde-display-idp-overlay.dtbo \
 		display/niobe-sde-display-idp-4kdisp-overlay.dtbo \
+		display/niobe-sde-display-idp-sd-overlay.dtbo \
+		display/niobe-sde-display-idp-4kdisp-sd-overlay.dtbo \
 		display/niobe-sde-display-qxr-overlay.dtbo \
 		display/niobe-sde-display-qxr-4kdisp-overlay.dtbo \
 		display/niobe-sde-display-rumi-overlay.dtbo

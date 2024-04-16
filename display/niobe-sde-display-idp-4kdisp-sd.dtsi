@@ -1,0 +1,5 @@
+#include "niobe-sde-display-idp-sd.dtsi"
+
+&sde_dsi {
+	qcom,dsi-default-panel = <&dsi_sony_dual_dsc_3552x3840_90hz_video>;
+};
