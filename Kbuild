@@ -136,6 +136,8 @@ dtbo-$(CONFIG_CUSCO_DTB) += display/parrot-sde.dtbo \
                display/parrot-sde-display-cusco-evb-overlay.dtbo
 dtbo-$(CONFIG_CUSCO_DTB) += display/parrot-sde.dtbo \
                display/parrot-sde-display-cuscoi-evb-overlay.dtbo
+dtbo-$(CONFIG_PARO_DTB) += display/parrot-sde.dtbo \
+               display/parrot-sde-display-paro-evb-overlay.dtbo
 endif  #($CONFIG_EQS_DTB,y)
 else
 dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
