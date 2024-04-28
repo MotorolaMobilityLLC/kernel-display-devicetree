@@ -40,7 +40,7 @@ qcom,mdss-dsi-lane-3-state;
 
 qcom,mdss-dsi-dma-trigger = "trigger_sw";
 qcom,mdss-dsi-mdp-trigger = "none";
-qcom,mdss-dsi-reset-sequence = <0 12>, <1 1>, <0 1>, <1 21>;
+qcom,mdss-dsi-reset-sequence = <0 3>, <1 1>, <0 1>, <1 20>;
 qcom,mdss-dsi-lp11-init;
 qcom,mdss-dsi-tx-eot-append;
 qcom,mdss-dsi-te-pin-select = <1>;
@@ -272,7 +272,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -481,7 +481,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -689,7 +689,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -907,7 +907,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -1124,7 +1124,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -1341,7 +1341,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -1558,7 +1558,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
@@ -1775,7 +1775,7 @@ qcom,mdss-dsi-display-timings {
                         39 00 00 00 00 00 02 6F 02
                         39 00 00 00 00 00 03 C7 00 00
                         39 00 00 00 00 00 02 26 00
-			05 01 00 00 64 00 01 11
+			05 01 00 00 78 00 01 11
 			05 01 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			05 01 00 00 00 00 01 28		/* display_off */
