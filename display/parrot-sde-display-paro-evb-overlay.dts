@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "parrot-sde-display-cusco-common.dtsi"
+#include "parrot-sde-display-paros-common.dtsi"
 
 / {
 	model = "paro";
