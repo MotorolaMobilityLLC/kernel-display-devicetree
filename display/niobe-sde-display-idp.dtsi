@@ -48,8 +48,8 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <1>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-dsi-bl-max-level = <255>;
+	qcom,mdss-brightness-max-level = <255>;
 	qcom,platform-reset-gpio = <&pm8550b_gpios 2 0>;
 };
 
@@ -59,8 +59,8 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <1>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-dsi-bl-max-level = <255>;
+	qcom,mdss-brightness-max-level = <255>;
 	qcom,platform-reset-gpio = <&pm8550b_gpios 2 0>;
 };
 
@@ -70,8 +70,8 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <1>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-dsi-bl-max-level = <255>;
+	qcom,mdss-brightness-max-level = <255>;
 	qcom,platform-reset-gpio = <&pm8550b_gpios 2 0>;
 };
 
