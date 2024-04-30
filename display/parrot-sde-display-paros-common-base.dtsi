@@ -264,3 +264,8 @@
     };
 };
 
+&qupv3_se9_spi {
+	ilitek@1{
+		panel = <&mot_tm_ili7807s_678_1080x2388_dsc_vid_120hz>;
+	};
+};
