@@ -230,7 +230,7 @@
 	status = "ok";
 
         lcd_backlight@36 {
-                compatible = "awinic,aw99703-bl";
+                compatible = "awinic,aw99703-bl", "ktd,ktd3136";
                 reg = <0x36>;
 
 		/* Awinic, aw99703 */
@@ -253,6 +253,26 @@
 		current-align-type = <1>;
                 aw99703,work-mode = <1>; /* backlight */
 		aw99703,default-brightness = <1810>;
+
+		/* ktd3136*/
+		ktd,hwen-gpio = <&pm6150l_gpios 10 0>;
+                ktd,using-lsb;
+                ktd,pwm-frequency = <1>; /* 1MHZ */
+                ktd,bl-fscal-led = <0xC9>; /* 25mA */
+                ktd,turn-on-ramp = <0x00>;
+                ktd,turn-off-ramp = <0x04>;
+                ktd,pwm-trans-dim = <0>;
+                ktd,i2c-trans-dim = <128>;
+                ktd,skip-first-trans;
+                ktd,reset-trans-delay;
+                ktd,bl-channel = <3>;
+                ktd,ovp-level = <32>;  /*25.9v or 32v */
+                ktd,ocp-level = <2600>;
+                ktd,switching-frequency = <1>;
+                ktd,inductor-current = <1>;
+                ktd,default-brightness = <1023>;
+                ktd,map-type = <0>; /* 0 exponential, 1 linear */
+                ktd,current-align-type = <0x01>;
 	};
 };
 
