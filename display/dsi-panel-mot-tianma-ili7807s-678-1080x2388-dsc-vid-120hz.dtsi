@@ -8,10 +8,6 @@
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <24>;
 		qcom,mdss-dsi-border-color = <0>;
-		/*+S88523AA1-4200,zhangshaoxiong1.wt,add,20231114,add 120FPS config */
-		qcom,mdss-dsi-pan-enable-dynamic-fps;
-		qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
-		qcom,dsi-supported-dfps-list = <120 60>;
 		qcom,mdss-dsi-traffic-mode = "non_burst_sync_event";
 		qcom,mdss-dsi-bllp-power-mode;
 		qcom,mdss-dsi-bllp-eof-power-mode;
