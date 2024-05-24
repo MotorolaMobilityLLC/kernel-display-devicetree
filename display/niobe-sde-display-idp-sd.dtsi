@@ -48,6 +48,6 @@
 	/delete-property/ qcom,dsi-select-sec-clocks;
 };
 
-&dsi_dual_sim_vid {
+&dsi_xr_dual_sim_vid {
 	/delete-property/ qcom,dsi-select-sec-clocks;
 };
