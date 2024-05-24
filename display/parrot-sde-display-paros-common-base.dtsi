@@ -73,7 +73,7 @@
 	/delete-node/ display_gpio_regulator@1;
 	/delete-node/ display_gpio_regulator@2;
 	/delete-node/ display_gpio_regulator@3;
-	display_panel_avdd: display_gpio_regulator@1 {
+	display_panel_avdd: display_gpio_regulator@2 {
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_panel_avdd";
 		regulator-min-microvolt = <5500000>;
@@ -87,7 +87,7 @@
 		pinctrl-0 = <&display_panel_avdd_default>;
 	};
 
-	display_panel_avee: display_gpio_regulator@2 {
+	display_panel_avee: display_gpio_regulator@3 {
 		compatible = "qti-regulator-fixed";
 		regulator-name = "display_panel_avee";
 		regulator-min-microvolt = <5500000>;
