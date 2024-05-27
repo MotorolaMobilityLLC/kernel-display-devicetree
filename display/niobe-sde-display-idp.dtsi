@@ -108,3 +108,10 @@
 				&dsi_sony_dual_dsc_2664x2880_90hz_video
 				&dsi_sony_dual_dsc_1776x1920_90hz_video>;
 };
+
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xB8000000 0x0 0x09600000>;
+		label = "cont_splash_region";
+	};
+};
