@@ -1,7 +1,7 @@
 #include "dsi-panel-sony-dualmipi-dsc-3552x3840-video.dtsi"
 #include "dsi-panel-sony-dualmipi-dsc-2664x2880-video.dtsi"
 #include "dsi-panel-sony-dualmipi-dsc-1776x1920-video.dtsi"
-#include "dsi-panel-sim-dualmipi-video.dtsi"
+#include "dsi-xr-panel-sim-dualmipi-video.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply_sim: dsi_panel_pwr_supply_sim {
@@ -124,7 +124,7 @@
 	};
 };
 
-&dsi_dual_sim_vid {
+&dsi_xr_dual_sim_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,dsi-select-sec-clocks = "pll_byte_mclk", "pll_dsi_mclk";
 	qcom,mdss-dms-vid-type = "dms-vid-non-seamless";

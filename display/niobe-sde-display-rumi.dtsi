@@ -53,7 +53,7 @@
 };
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&dsi_dual_sim_vid>;
+	qcom,dsi-default-panel = <&dsi_xr_dual_sim_vid>;
 	clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "mdp_core_clk";
 };
@@ -62,7 +62,7 @@
 	status = "disabled";
 };
 
-&dsi_dual_sim_vid {
+&dsi_xr_dual_sim_vid {
 	/delete-property/ qcom,dsi-select-sec-clocks;
 
 	qcom,dsi-select-clocks = "";
