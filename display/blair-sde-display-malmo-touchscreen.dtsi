@@ -188,7 +188,7 @@
 		pinctrl-1 = <&ts_int_suspend &ts_reset_suspend>;
 		pinctrl-2 = <&pmx_ts_release>;
 
-		panel = <&mot_tm_icna3508_ft3683g_667_1080x2400_dsc_vid>;
+		panel = <&mot_tm_icna3508_ft3683g_667_1080x2400_dsc_vid &mot_boe_vtdr6130a_ft3683g_667_1080x2400_dsc_cmd>;
 		mmi,usb-charger-detection;
 		mmi,enable-gestures;
 		mmi,supported_gesture_type = <0x07>;
