@@ -64,6 +64,7 @@
 		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <6715>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
+		qcom,mdss-dsi-panel-local-hbm-DDIC-type = <0x6126>;
 		qcom,mdss-dsi-panel-bl-num = <1>;
 
 		qcom,mdss-dsi-display-timings {
