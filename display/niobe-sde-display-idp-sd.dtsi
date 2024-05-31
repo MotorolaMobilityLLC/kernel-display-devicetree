@@ -1,0 +1,53 @@
+#include "niobe-sde-display-idp.dtsi"
+
+&mdss_mdp1 {
+	status = "disabled";
+};
+
+&mdss_dsi2 {
+	status = "disabled";
+};
+
+&mdss_dsi3 {
+	status = "disabled";
+};
+
+&mdss_dsi_phy2 {
+	status = "disabled";
+};
+
+&mdss_dsi_phy3 {
+	status = "disabled";
+};
+
+&sde_dsi1 {
+	status = "disabled";
+};
+
+&smmu_sde_sec1 {
+	status = "disabled";
+};
+
+&smmu_sde_unsec1 {
+	status = "disabled";
+};
+
+&sde_rscc1 {
+	status = "disabled";
+};
+
+&dsi_sony_dual_dsc_3552x3840_90hz_video {
+	/delete-property/ qcom,dsi-select-sec-clocks;
+};
+
+&dsi_sony_dual_dsc_2664x2880_90hz_video {
+	/delete-property/ qcom,dsi-select-sec-clocks;
+};
+
+&dsi_sony_dual_dsc_1776x1920_90hz_video {
+	/delete-property/ qcom,dsi-select-sec-clocks;
+};
+
+&dsi_xr_dual_sim_vid {
+	/delete-property/ qcom,dsi-select-sec-clocks;
+};
