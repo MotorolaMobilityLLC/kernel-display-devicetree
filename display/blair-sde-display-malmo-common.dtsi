@@ -5,6 +5,8 @@
 #include "dsi-panel-mot-csot-vtdr6115-gt9916-667-1080x2400-video.dtsi"
 #include "dsi-panel-mot-tm-vtdr6115-gt9916-667-1080x2400-video.dtsi"
 #include "dsi-panel-mot-tm-icna3508-ft3683g-667-1080x2400-video.dtsi"
+#include "dsi-panel-mot-boe-vtdr6130a-ft3683g-667-1080x2400-cmd.dtsi"
+#include "dsi-panel-mot-boe-vtdr6130a-ft3683g-667-1080x2400-cmd-lhbm.dtsi"
 
 &soc {
 
@@ -300,6 +302,52 @@
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1C 07 07 17 15 07 07 08 02 04 00 18 0C];//3
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&mot_boe_vtdr6130a_ft3683g_667_1080x2400_dsc_cmd{
+	qcom,platform-te-gpio = <&tlmm 23 0>;
+	qcom,platform-reset-gpio = <&pmr735a_gpios 2 0>;
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <140>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-dsi-bl-default-level = <1757>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	//qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0 0 0>;
+	qcom,mdss-dsi-panel-status-read-length = <3>;
+
+	//qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 A1];
+
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 1F 08 07 18 17 08 08 08 02 04 00 1A 0D];//3 120hz
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+		timing@1 {
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A 0B 0A 02 04 00 21 10];//3 90hz
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+		timing@2 {
+			qcom,mdss-dsi-panel-phy-timings = [00 3E 10 10 23 1F 0F 10 1E 02 04 00 31 14];//3 60hz
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
