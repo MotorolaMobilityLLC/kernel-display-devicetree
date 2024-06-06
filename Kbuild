@@ -48,6 +48,19 @@ dtbo-$(CONFIG_ARCH_HOLI) += display/holi-sde.dtbo \
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_RAVELIN) += display/ravelin-sde.dtbo \
+                display/ravelin-sde-display-atp-overlay.dtbo \
+                display/ravelin-sde-display-idp-overlay.dtbo \
+                display/ravelin-sde-display-idp-amoled-overlay.dtbo \
+                display/ravelin-sde-display-rumi-overlay.dtbo \
+                display/ravelin-sde-display-qrd-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_RAVELIN) += display/trustedvm-ravelin-sde-display-idp-overlay.dtbo \
+                display/trustedvm-ravelin-sde-display-idp-amoled-overlay.dtbo
+endif
+
+
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_KALAMA) += display/kalama-sde.dtbo \
 		display/kalama-sde-display-rumi-overlay.dtbo \
 		display/kalama-sde-display-cdp-overlay.dtbo \
