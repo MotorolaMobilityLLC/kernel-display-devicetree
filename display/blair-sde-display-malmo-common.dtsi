@@ -6,7 +6,6 @@
 #include "dsi-panel-mot-tm-vtdr6115-gt9916-667-1080x2400-video.dtsi"
 #include "dsi-panel-mot-tm-icna3508-ft3683g-667-1080x2400-video.dtsi"
 #include "dsi-panel-mot-boe-vtdr6130a-ft3683g-667-1080x2400-cmd.dtsi"
-#include "dsi-panel-mot-boe-vtdr6130a-ft3683g-667-1080x2400-cmd-lhbm.dtsi"
 
 &soc {
 
