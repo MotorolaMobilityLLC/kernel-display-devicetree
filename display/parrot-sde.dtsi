@@ -55,7 +55,6 @@
 			<&gcc GCC_USB3_PRIM_PHY_PIPE_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_CLK_SRC>,
-                        <&sde_dp 0>,
 			<&dispcc DISP_CC_MDSS_DPTX0_LINK_INTF_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK_SRC>,
 			<&sde_dp 1>,
@@ -63,7 +62,7 @@
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL0_CLK>,
 			<&dispcc DISP_CC_MDSS_DPTX0_PIXEL1_CLK>;
 		clock-names = "core_aux_clk", "rpmh_cxo_clk", "core_usb_ref_clk_src",
-			"core_usb_pipe_clk", "link_clk", "link_clk_src", "link_parent", "link_iface_clk",
+			"core_usb_pipe_clk", "link_clk", "link_clk_src", "link_iface_clk",
 			"pixel_clk_rcg", "pixel_parent", "pixel1_clk_rcg",
 			"strm0_pixel_clk", "strm1_pixel_clk";
 
@@ -161,8 +160,9 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
+			<&mmss_noc MASTER_MDP_DISP &mc_virt SLAVE_EBI1_DISP>,
 			<&mmss_noc MASTER_MDP_DISP &mc_virt SLAVE_EBI1_DISP>;
-		interconnect-names = "qcom,sde-data-bus0";
+		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-data-bus1";
 	};
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
@@ -195,8 +195,10 @@
 	clock-names = "gcc_bus", "iface_clk",
 			"branch_clk", "core_clk", "vsync_clk",
 			"lut_clk";
-	clock-rate = <0 0 608000000 608000000 19200000 608000000>;
+	clock-rate = <0 0 506000000 506000000 19200000 506000000>;
 	clock-max-rate = <0 0 608000000 608000000 19200000 608000000>;
+
+	vdd-supply = <&disp_cc_mdss_core_gdsc>;
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
@@ -209,6 +211,18 @@
 	qcom,sde-ib-bw-vote = <2500000 0 1600000>;
 	qcom,sde-has-idle-pc;
 
+	qcom,platform-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		qcom,platform-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
 };
 
 &disp_rsc_drv0 {

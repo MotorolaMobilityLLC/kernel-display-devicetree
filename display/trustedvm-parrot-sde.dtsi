@@ -1,3 +1,4 @@
+#include <dt-bindings/clock/mdss-5nm-pll-clk.h>
 #include <dt-bindings/clock/qcom,gcc-parrot.h>
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
 #include "parrot-sde-common.dtsi"
@@ -31,8 +32,6 @@
 		"sid_phys";
 
 	qcom,sde-vm-exclude-reg-names = "sid_phys";
-	qcom,tvm-include-reg = <0xaf20000 0x4d68>,
-				<0xaf30000 0x3fd4>;
 
 	qcom,sde-hw-version =<0x80030000>;
 
