@@ -25,6 +25,17 @@ dtbo-$(CONFIG_ARCH_BLAIR) += display/blair-sde.dtbo \
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
+		display/parrot-sde-display-atp-overlay.dtbo \
+		display/parrot-sde-display-idp-overlay.dtbo \
+		display/parrot-sde-display-idp-amoled-overlay.dtbo \
+		display/parrot-sde-display-rumi-overlay.dtbo \
+		display/parrot-sde-display-qrd-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
+endif
+
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_HOLI) += display/holi-sde.dtbo \
 		display/holi-sde-display-cdp-overlay.dtbo \
 		display/holi-sde-display-cdp-lcd-overlay.dtbo \
