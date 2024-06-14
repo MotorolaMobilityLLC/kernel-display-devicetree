@@ -207,6 +207,7 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,tp_state_check_enable;
         qcom,tp_state_need_reset;
+	qcom,mdss-dsi-bl-enable-delay-ms = <10>;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
