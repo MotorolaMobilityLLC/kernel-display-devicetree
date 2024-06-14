@@ -209,6 +209,8 @@
         qcom,tp_state_need_reset;
 	qcom,mdss-dsi-bl-enable-delay-ms = <10>;
 
+	qcom,mdss-dsi-cmd-set-off-delay-ms = <1>;
+
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	qcom,dsi-supported-dfps-list = <120 90 60 45>;
