@@ -1,0 +1,103 @@
+#include <dt-bindings/clock/qcom,dispcc0-niobe.h>
+#include <dt-bindings/clock/qcom,dispcc1-niobe.h>
+#include "niobe-sde-display-common.dtsi"
+
+&soc {
+	sde_wb1: qcom,wb-display@1 {
+		compatible = "qcom,wb-display";
+		cell-index = <0>;
+		label = "wb_display1";
+		clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
+	};
+};
+
+&sde_dsi {
+	clocks = <&mdss_dsi_phy0 0>,
+			<&mdss_dsi_phy0 1>,
+			<&mdss_dsi_phy1 0>,
+			<&mdss_dsi_phy1 1>,
+			<&mdss_dsi_phy2 0>,
+			<&mdss_dsi_phy2 1>,
+			<&mdss_dsi_phy3 0>,
+			<&mdss_dsi_phy3 1>,
+			<&mdss_dsi_phy0 2>,
+			<&mdss_dsi_phy0 3>,
+			 /*
+			  * Currently the dsi clock handles are under the dsi
+			  * controller DT node. As soon as the controller probe
+			  * finishes, the dispcc sync state can get called before
+			  * the dsi_display probe potentially disturbing the clock
+			  * votes for cont_splash use case. Hence we are no longer
+			  * protected by the component model in this case against the
+			  * disp cc sync state getting triggered after the dsi_ctrl
+			  * probe. To protect against this incorrect sync state trigger
+			  * add this dummy MDP clk vote handle to the dsi_display
+			  * DT node. Since the dsi_display driver does not parse
+			  * MDP clock nodes, no actual vote shall be added and this
+			  * change is done just to satisfy sync state requirements.
+			  */
+			 <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
+	clock-names = "pll_byte_clk0",
+			"pll_dsi_clk0",
+			"pll_byte_clk1",
+			"pll_dsi_clk1",
+			"pll_byte_clk2",
+			"pll_dsi_clk2",
+			"pll_byte_clk3",
+			"pll_dsi_clk3",
+			"pll_byte_mclk",
+			"pll_dsi_mclk",
+			"mdp_core_clk";
+
+	vddio-supply = <&L7B>;
+};
+
+&sde_dsi1 {
+	clocks = <&mdss_dsi_phy0 0>,
+			<&mdss_dsi_phy0 1>,
+			<&mdss_dsi_phy1 0>,
+			<&mdss_dsi_phy1 1>,
+			<&mdss_dsi_phy2 0>,
+			<&mdss_dsi_phy2 1>,
+			<&mdss_dsi_phy3 0>,
+			<&mdss_dsi_phy3 1>,
+			<&mdss_dsi_phy0 2>,
+			<&mdss_dsi_phy0 3>,
+			 /*
+			  * Currently the dsi clock handles are under the dsi
+			  * controller DT node. As soon as the controller probe
+			  * finishes, the dispcc sync state can get called before
+			  * the dsi_display probe potentially disturbing the clock
+			  * votes for cont_splash use case. Hence we are no longer
+			  * protected by the component model in this case against the
+			  * disp cc sync state getting triggered after the dsi_ctrl
+			  * probe. To protect against this incorrect sync state trigger
+			  * add this dummy MDP clk vote handle to the dsi_display
+			  * DT node. Since the dsi_display driver does not parse
+			  * MDP clock nodes, no actual vote shall be added and this
+			  * change is done just to satisfy sync state requirements.
+			  */
+			 <&dispcc1 MDSS_1_DISP_CC_MDSS_MDP_CLK>;
+	clock-names = "pll_byte_clk0",
+			"pll_dsi_clk0",
+			"pll_byte_clk1",
+			"pll_dsi_clk1",
+			"pll_byte_clk2",
+			"pll_dsi_clk2",
+			"pll_byte_clk3",
+			"pll_dsi_clk3",
+			"pll_byte_mclk",
+			"pll_dsi_mclk",
+			"mdp_core_clk";
+
+	vddio-supply = <&L7B>;
+};
+
+&mdss_mdp0 {
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_dp &sde_wb1 &sde_rscc0>;
+};
+
+&mdss_mdp1 {
+	connectors = <&sde_dsi1 &smmu_sde_unsec1 &smmu_sde_sec1 &sde_rscc1>;
+};
