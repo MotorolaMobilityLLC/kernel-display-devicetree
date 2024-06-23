@@ -195,9 +195,8 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
-			<&mmss_noc MASTER_MDP0_DISP &mc_virt SLAVE_EBI1_DISP>,
-			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
-		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-ddr-rt";
+			<&mmss_noc MASTER_MDP0_DISP &mc_virt SLAVE_EBI1_DISP>;
+		interconnect-names = "qcom,sde-data-bus0";
 	};
 
 	sde_rscc1: qcom,sde_rscc@a920000 {
@@ -218,9 +217,8 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
-			<&mmss_noc MASTER_MDP1_DISP2 &mc_virt SLAVE_EBI1_DISP2>,
-			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
-		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-ddr-rt";
+			<&mmss_noc MASTER_MDP1_DISP2 &mc_virt SLAVE_EBI1_DISP2>;
+		interconnect-names = "qcom,sde-data-bus0";
 	};
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
@@ -280,13 +278,11 @@
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP0 &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
-			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>,
-			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
+			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>;
 	interconnect-names = "qcom,sde-data-bus0",
-			"qcom,sde-ebi-bus", "qcom,sde-reg-bus",
-			"qcom,sde-ddr-rt";
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
-	qcom,sde-ib-bw-vote = <2500000 0 800000 0>;
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
 
 	qcom,platform-supply-entries {
 		#address-cells = <1>;
@@ -321,13 +317,11 @@
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP1 &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
-			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>,
-			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
+			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>;
 	interconnect-names = "qcom,sde-data-bus0",
-			"qcom,sde-ebi-bus", "qcom,sde-reg-bus",
-			"qcom,sde-ddr-rt" ;
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
-	qcom,sde-ib-bw-vote = <2500000 0 800000 0>;
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
 
 	qcom,platform-supply-entries {
 		#address-cells = <1>;
