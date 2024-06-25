@@ -341,12 +341,12 @@
 			qcom,default-topology-index = <0>;
 		};
 		timing@1 {
-			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A 0B 0A 02 04 00 21 10];//3 90hz
+			qcom,mdss-dsi-panel-phy-timings = [00 1F 08 07 18 17 08 08 08 02 04 00 1A 0D];//3 90hz
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 		timing@2 {
-			qcom,mdss-dsi-panel-phy-timings = [00 3E 10 10 23 1F 0F 10 1E 02 04 00 31 14];//3 60hz
+			qcom,mdss-dsi-panel-phy-timings = [00 1F 08 07 18 17 08 08 08 02 04 00 1A 0D];//3 60hz
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
