@@ -28,9 +28,9 @@
 		//qcom,mdss-dsi-panel-peak-brightness = <6450000>;
 		//qcom,mdss-dsi-panel-blackness-level = <4961>;
 
-		qcom,mdss-dsi-cabc-mv-command = [15 01 00 00 00 00 02 55 03];
+		qcom,mdss-dsi-cabc-mv-command = [15 01 00 00 00 00 02 55 00];
 		qcom,mdss-dsi-cabc-mv-command-state =  "dsi_hs_mode";
-		qcom,mdss-dsi-cabc-ui-command = [15 01 00 00 00 00 02 55 01];
+		qcom,mdss-dsi-cabc-ui-command = [15 01 00 00 00 00 02 55 00];
 		qcom,mdss-dsi-cabc-ui-command-state =  "dsi_hs_mode";
 		qcom,mdss-dsi-cabc-dis-command = [15 01 00 00 00 00 02 55 00];
 		qcom,mdss-dsi-cabc-dis-command-state =  "dsi_hs_mode";
@@ -57,8 +57,12 @@
 					39 01 00 00 00 00 0f b4 00 0c 02 00 01 1f 00 07 08 bb 08 7a 10 f0
 					39 01 00 00 00 00 03 51 ff 0f
 					15 01 00 00 00 00 02 53 24
-					15 01 00 00 00 00 02 55 01
+					15 01 00 00 00 00 02 55 00
 					15 01 00 00 00 00 02 35 00
+
+					15 01 00 00 00 00 02 00 B0
+					39 01 00 00 00 00 04 CA 05 05 0B
+
 					05 01 00 00 78 00 02 11 00
 					05 01 00 00 14 00 02 29 00
 				];
