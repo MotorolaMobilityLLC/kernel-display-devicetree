@@ -71,6 +71,8 @@
 					/*S88528AA1-5111,huangxinglue.wt,mod,20240204,improve suspend sequence*/
 					05 01 00 00 14 00 01 28
 					05 01 00 00 64 00 01 10
+					15 01 00 00 00 00 02 00 00
+					39 01 00 00 00 00 05 f7 5A A5 95 27
 				];
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 				qcom,compression-mode = "dsc";

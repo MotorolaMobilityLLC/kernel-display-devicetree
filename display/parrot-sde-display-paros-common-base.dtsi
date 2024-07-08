@@ -218,6 +218,9 @@
 	touch-int-pin = <&tlmm 65 0>;
 	touch-cs-pin = <&tlmm 13 0>;
 
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
+
 	qcom,dsi-supported-dfps-list = <120 90 60 45>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
@@ -265,6 +268,9 @@
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	qcom,platform-need-execute-shutdown;
+
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
 
 	qcom,dsi-supported-dfps-list = <120 90 60 45>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
