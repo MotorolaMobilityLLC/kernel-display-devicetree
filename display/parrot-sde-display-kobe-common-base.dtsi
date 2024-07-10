@@ -205,22 +205,22 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <3514>;
 	qcom,mdss-dsi-bl-default-level = <1757>;
-	qcom,mdss-brightness-max-level = <3514>;
+	qcom,mdss-brightness-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 
-	//qcom,esd-check-enabled;
-	//qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	//qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
-	//qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	//qcom,mdss-dsi-panel-status-value = <0 0 0>;
-	//qcom,mdss-dsi-panel-status-read-length = <3>;
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0A];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9F>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
 
-	//qcom,cellid-read-enabled;
-	//qcom,mdss-dsi-panel-cellid-read-length = <23>;
-	//qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <37>;
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 A1];
 
 
 	qcom,mdss-dsi-display-timings {
