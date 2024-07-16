@@ -207,7 +207,7 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,tp_state_check_enable;
 
-	qcom,mdss-dsi-bl-enable-delay-ms = <10>;
+	qcom,mdss-dsi-bl-enable-delay-ms = <5>;
 
 	qcom,mdss-dsi-cmd-set-off-delay-ms = <1>;
 

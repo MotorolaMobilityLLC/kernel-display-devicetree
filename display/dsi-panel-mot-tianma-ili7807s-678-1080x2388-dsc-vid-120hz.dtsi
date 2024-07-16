@@ -18,7 +18,7 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-lp11-init;
-		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 30>;
+		qcom,mdss-dsi-reset-sequence = <1 1>, <0 1>, <1 15>;
 		qcom,mdss-dsi-tx-eot-append;
 		qcom,adjust-timer-wakeup-ms = <1>;
 		//qcom,mdss-dsi-panel-hdr-enabled;
@@ -102,11 +102,11 @@
 					15 01 00 00 00 00 02 53 24
 					15 01 00 00 00 00 02 55 01
 					15 01 00 00 00 00 02 35 00
-					05 01 00 00 78 00 02 11 00
+					05 01 00 00 46 00 02 11 00
 					39 01 00 00 00 00 04 FF 78 07 06
 					15 01 00 00 00 00 02 8D D8
 					39 01 00 00 00 00 04 FF 78 07 00
-					05 01 00 00 14 00 02 29 00
+					05 01 00 00 05 00 02 29 00
 				];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command = [
