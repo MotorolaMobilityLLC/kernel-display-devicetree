@@ -232,3 +232,9 @@
 		};
 	};
 };
+
+&qupv3_se9_i2c {
+	focaltech@38 {
+		panel = <&mot_samsung_s6e8fc3x02_1080x2160_dsc_vid_60hz>;
+	};
+};
