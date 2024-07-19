@@ -142,6 +142,8 @@ dtbo-$(CONFIG_PAROS_DTB) += display/parrot-sde.dtbo \
                display/parrot-sde-display-paros-evt-overlay.dtbo
 dtbo-$(CONFIG_KOBE_DTB) += display/parrot-sde.dtbo \
                display/parrot-sde-display-kobe-evt1-overlay.dtbo
+dtbo-$(CONFIG_MONA_DTB) += display/parrot-sde.dtbo \
+               display/parrot-sde-display-mona-evb-overlay.dtbo
 endif  #($CONFIG_EQS_DTB,y)
 else
 dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
