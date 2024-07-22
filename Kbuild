@@ -1,4 +1,10 @@
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
+
+dtbo-$(CONFIG_LEAP_DTB) += display/sun-sde-display-leap-evb-overlay.dtbo
+
+else
+
 dtbo-$(CONFIG_ARCH_SUN) += display/sun-sde.dtbo \
 		display/sun-sde-display-cdp-overlay.dtbo \
 		display/sun-sde-display-mtp-overlay.dtbo \
@@ -24,6 +30,7 @@ dtbo-$(CONFIG_ARCH_SUN) += display/sun-sde.dtbo \
 		display/sun-sde-display-mtp-qmp1000-v8-overlay.dtbo \
 		display/sun-sde-display-hdk-overlay.dtbo \
 		display/sun-sde-display-cdp-no-display-overlay.dtbo
+endif # end of CONFIG_MMI_DEVICE_DTBS
 else
 dtbo-$(CONFIG_ARCH_SUN) += display/trustedvm-sun-sde-display-cdp-overlay.dtbo \
 		display/trustedvm-sun-sde-display-mtp-overlay.dtbo \
