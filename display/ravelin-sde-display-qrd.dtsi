@@ -65,6 +65,7 @@
 &dsi_ft8726_fhd_plus_90_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_labibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
+	pwms = <&pm6450_pwm_1 0 0>;
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -75,6 +76,7 @@
 &dsi_ft8726_fhd_plus_60_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_labibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
+	pwms = <&pm6450_pwm_1 0 0>;
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -85,6 +87,7 @@
 &dsi_ft8726_fhd_plus_120_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_labibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
+	pwms = <&pm6450_pwm_1 0 0>;
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -119,7 +122,7 @@
 
 	vddio-supply = <&display_panel_vddio>;
 	extdvdd-supply = <&display_panel_extdvdd>;
-	pwms = <&pm6450_pwm_1 0 0>;
+
 	pinctrl-names = "panel_active", "panel_suspend", "pwm_pin";
 	pinctrl-2 = <&lcd_backlight_pwm_default>;
 
