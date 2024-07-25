@@ -2,11 +2,13 @@
 	mot_tm_ili7807s_678_1080x2388_dsc_vid_120hz: qcom,mdss_dsi_mot_tm_ili7807s_678_1080x2388_dsc_120hz_vid_fhd {
 		qcom,mdss-dsi-panel-name = "mipi_moto_vid_tm_1080p_dsc_678_120hz";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
+		qcom,mdss-dsi-panel-physical-type = "lcd";
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
 		qcom,mdss-dsi-traffic-mode = "non_burst_sync_event";
 		qcom,mdss-dsi-bllp-power-mode;
@@ -19,7 +21,6 @@
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-lp11-init;
 		qcom,mdss-dsi-reset-sequence = <1 1>, <0 1>, <1 15>;
-		qcom,mdss-dsi-tx-eot-append;
 		qcom,adjust-timer-wakeup-ms = <1>;
 		qcom,mdss-pan-physical-width-dimension = <71>;
 		qcom,mdss-pan-physical-height-dimension = <157>;
@@ -38,7 +39,7 @@
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
-				//cell-index = <0>;
+				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2388>;
 				qcom,mdss-dsi-h-front-porch = <21>;
@@ -49,6 +50,11 @@
 				qcom,mdss-dsi-v-front-porch = <38>;
 				qcom,mdss-dsi-v-pulse-width = <2>;
 				qcom,mdss-dsi-panel-framerate = <120>;
+				qcom,mdss-dsi-h-left-border = <0>;
+				qcom,mdss-dsi-h-right-border = <0>;
+				qcom,mdss-dsi-v-top-border = <0>;
+				qcom,mdss-dsi-v-bottom-border = <0>;
+
 				qcom,mdss-dsi-on-command = [
 					39 01 00 00 00 00 04 FF 78 07 06
 					15 01 00 00 00 00 02 3E E2
