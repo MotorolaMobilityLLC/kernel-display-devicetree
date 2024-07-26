@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+
+#include "monaco-sde.dtsi"
+#include "monaco-sde-display-idp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Monaco IDP V1.0";
+	compatible = "qcom,monaco";
+	qcom,msm-id = <486 0x10000>;
+	qcom,board-id = <0x010022 0x0>;
+};
