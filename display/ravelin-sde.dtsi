@@ -29,69 +29,6 @@
 		interconnect-names = "qcom,sde-data-bus0","qcom,sde-data-bus1";
 	};
 
-	mdss_rotator: qcom,mdss_rotator {
-		compatible = "qcom,sde_rotator";
-		reg = <0xae00000 0xac000>,
-		      <0xaeb0000 0x2008>;
-
-
-		reg-names = "mdp_phys",
-			"rot_vbif_phys";
-
-		#list-cells = <1>;
-		qcom,mdss-rot-mode = <1>;
-		qcom,mdss-highest-bank-bit = <0x8 0x2>,
-					     <0x7 0x1>;
-		clocks = <&dispcc DISP_CC_MDSS_AHB_CLK>,
-			 <&dispcc DISP_CC_MDSS_ROT_CLK>;
-		clock-names = "iface_clk", "rot_clk";
-
-		interrupt-parent = <&mdss_mdp>;
-		interrupts = <2 0>;
-
-		power-domains = <&mdss_mdp>;
-
-		interconnects = <&mmss_noc MASTER_MDP &mc_virt SLAVE_EBI1>,
-				<&gem_noc MASTER_APPSS_PROC
-					&cnoc2 SLAVE_DISPLAY_CFG>;
-		interconnect-names = "qcom,rot-data-bus0",
-					"qcom,sde-reg-bus";
-		qcom,sde-reg-bus,vectors-KBps = <0 0>,<0 76800>;
-
-		/*Offline rotator RT setting */
-		qcom,mdss-rot-parent = <&mdss_mdp 0>;
-		qcom,mdss-rot-xin-id = <10 11>;
-
-		/* Offline rotator QoS setting */
-		qcom,mdss-rot-vbif-qos-setting = <3 3 3 3 3 3 3 3>;
-		qcom,mdss-rot-cdp-setting = <1 1>;
-		qcom,mdss-rot-qos-lut = <0x0 0x0 0x0 0x0>;
-		qcom,mdss-rot-danger-lut = <0x0 0x0>;
-		qcom,mdss-rot-safe-lut = <0x0000ffff 0x0000ffff>;
-		qcom,mdss-rot-vbif-memtype = <3 3>;
-		qcom,mdss-default-ot-rd-limit = <32>;
-		qcom,mdss-default-ot-wr-limit = <32>;
-
-		qcom,mdss-sbuf-headroom = <20>;
-
-		smmu_rot_unsec: qcom,smmu_rot_unsec_cb {
-			compatible = "qcom,smmu_sde_rot_unsec";
-			iommus = <&apps_smmu 0x081C 0x400>;
-			qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
-			qcom,iommu-faults = "non-fatal";
-			dma-coherent;
-		};
-
-		smmu_rot_sec: qcom,smmu_rot_sec_cb {
-			compatible = "qcom,smmu_sde_rot_sec";
-			iommus = <&apps_smmu 0x81D 0x0>,
-					<&apps_smmu 0xC1D 0x0>;
-			qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
-			qcom,iommu-faults = "non-fatal";
-			qcom,iommu-vmid = <0xa>;
-			dma-coherent;
-		};
-	};
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
