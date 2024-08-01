@@ -27,9 +27,14 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-lp11-init;
+		qcom,mdss-dsi-hbm-on-command = [39 01 00 00 00 00 03 51 0D BB];
+		qcom,mdss-dsi-hbm-off-command = [39 01 00 00 00 00 03 51 0D BA];
+		qcom,mdss-dsi-hbm-on-command-state =  "dsi_lp_mode";
+		qcom,mdss-dsi-hbm-off-command-state =  "dsi_lp_mode";
 		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
 		//qcom,mdss-dsi-te-using-wd;
 		//qcom,sde-has-idle-pc;
+		qcom,mdss-dsi-pcd-check;
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 			 qcom,mdss-dsi-panel-width = <1080>;
