@@ -338,8 +338,10 @@
                 ktd,bl-fscal-led = <0xD1>; /* 25.8mA */
                 ktd,turn-on-ramp = <0x00>;
                 ktd,turn-off-ramp = <0x04>;
-                ktd,pwm-trans-dim = <0>;
+                ktd,pwm-trans-dim = <4>;
                 ktd,i2c-trans-dim = <128>;
+                ktd,pwm-hysteresis = <8>;
+                ktd,pwm-mode;
                 ktd,skip-first-trans;
                 ktd,reset-trans-delay;
                 ktd,bl-channel = <3>; /* 3 led string */
