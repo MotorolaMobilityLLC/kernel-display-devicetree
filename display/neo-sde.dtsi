@@ -3,7 +3,7 @@
 #include <dt-bindings/clock/qcom,gcc-neo.h>
 #include <dt-bindings/interconnect/qcom,neo.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
-#include <dt-bindings/clock/qcom,tcsrcc.h>
+#include <dt-bindings/clock/qcom,tcsrcc-neo.h>
 #include "neo-sde-common.dtsi"
 
 &soc {
