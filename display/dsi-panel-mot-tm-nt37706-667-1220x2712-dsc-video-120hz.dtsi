@@ -37,22 +37,11 @@
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <0 11>, <1 1>, <0 1>, <1 11>;
 
-		qcom,mdss-dsi-wr-mem-start = <0x2c>;
-		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
-
 		qcom,mdss-dsi-dc-on-command = [
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 40 00 00 02 8B 81
-				39 00 00 40 00 00 06 F0 55 AA 52 08 04
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 00 00 00 02 CC 04];
+				39 00 00 00 00 00 25 A9 01 00 8B 01 01 81 02 04 CC 01 01 04 02 01 E0 00 07 80 10 00 10 00 10 00 10 02 01 E0 08 0D 00 10 00 10 00 10];
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-dc-off-command = [
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 40 00 00 02 8B 00
-				39 00 00 40 00 00 06 F0 55 AA 52 08 04
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 00 00 00 02 CC 00];
+				39 00 00 00 00 00 25 A9 01 00 8B 01 01 00 02 04 CC 01 01 00 02 01 E0 00 07 80 00 00 00 00 00 00 00 02 01 E0 08 0D 00 00 00 00 00 00];
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
@@ -105,6 +94,7 @@
 					39 00 00 00 00 00 02 B5 01
 					39 00 00 00 00 00 02 6F 96
 					39 00 00 00 00 00 02 B5 4F
+
 					39 00 00 00 00 00 05 FF AA 55 A5 80
 					39 00 00 00 00 00 02 6F 0B
 					39 00 00 00 00 00 02 F5 02
@@ -122,6 +112,7 @@
 					39 00 00 00 00 00 02 F2 00
 					39 00 00 00 00 00 02 6F 32
 					39 00 00 00 00 00 02 F9 20
+
 					39 00 00 00 00 00 02 17 03
 					39 00 00 00 00 00 02 71 00
 					39 00 00 00 00 00 09 8D 00 00 04 C3 00 00 0A 97
@@ -159,8 +150,6 @@
 					05 01 00 00 78 00 01 10];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
-				qcom,mdss-dsi-timing-switch-command-state =
-					"dsi_lp_mode";
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <12>;
 				qcom,mdss-dsc-slice-width = <610>;
