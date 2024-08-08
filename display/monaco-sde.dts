@@ -4,6 +4,6 @@
 #include "monaco-sde.dtsi"
 
 /{
-	qcom,msm-id = <486 0x10000>;
+	qcom,msm-id = <486 0x10000>, <517 0x10000>;
 	qcom,board-id = <0 0>;
 };
