@@ -35,6 +35,7 @@
 		//qcom,mdss-dsi-te-using-wd;
 		//qcom,sde-has-idle-pc;
 		qcom,mdss-dsi-pcd-check;
+		qcom,mdss-bl-lvl-formula;
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 			 qcom,mdss-dsi-panel-width = <1080>;
