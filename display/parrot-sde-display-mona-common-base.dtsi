@@ -181,12 +181,12 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-/*
+
 	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
-*/
+
         qcom,cellid-read-enabled;
         qcom,mdss-dsi-panel-cellid-read-length = <23>;
         qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 AC];
