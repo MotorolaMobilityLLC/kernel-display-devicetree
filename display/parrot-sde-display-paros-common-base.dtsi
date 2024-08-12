@@ -327,7 +327,7 @@
                 aw99703,i2c-trans-dim = <1>; /* 128ms */
                 aw99703,pwm-mode = <1>; /* 1 pwm enable,0 PWM disable */
                 aw99703,map-type = <0>; /* 0 exponential, 4 linear */
-		current-align-type = <2>; /* 0 none, 1 450nit, 2 1000nit */
+		current-align-type = <3>; /* 0 none, 1 450nit, 2 1000nit, 3 gamma15 */
                 aw99703,work-mode = <1>; /* backlight */
 		aw99703,default-brightness = <1023>;
 
@@ -351,7 +351,7 @@
                 ktd,inductor-current = <1>;
                 ktd,default-brightness = <1023>;
                 ktd,map-type = <0>; /* 0 exponential, 1 linear */
-                ktd,current-align-type = <0x02>; /* 0 none, 1 450nit, 2 1000nit */
+                ktd,current-align-type = <0x03>; /* 0 none, 1 450nit, 2 1000nit, 3 gamma15*/
 	};
 };
 
