@@ -660,6 +660,37 @@ properties:
   qcom,mdss-dsi-te-using-te-pin:
     description: Boolean to specify whether using hardware vsync.
 
+  qcom,mdss-esync:
+    description: >
+      Boolean entry to enable esync. "qcom,mdss-esync-hsync-milli-pulse-width"
+      property should be set along with this property.
+
+  qcom,mdss-esync-milli-skew:
+    description: >
+      u32 entry to specify the skew between the esync signal and the timing
+      engine, in 1/1000ths of a pulse period. Example:
+      qcom,mdss-esync-milli-skew = <150>;
+      This would set the esync signal to precede the timing engine's output by
+      0.15 of a pulse period.
+    default: 0
+
+  qcom,mdss-esync-hsync-milli-pulse-width:
+    description: >
+      u32 entry to specify the pulse width of the hsync portion of the esync
+      signal, in 1/1000ths of a pulse period. Example:
+      qcom,mdss-esync-hsync-milli-pulse-width = <750>;
+      This would set the esync line high for 0.75 of a pulse period, every hsync.
+
+  qcom,mdss-esync-emsync-fps:
+    description: >
+      u32 entry to specify how frequently the esync signal should be modulated
+      with an EM pulse, in Hz.
+
+  qcom,mdss-esync-emsync-milli-pulse-width:
+    description: >
+      u32 entry to specify the pulse width of the modulated esync signal, in
+      1/1000ths of a pulse period. See "qcom,mdss-esync-hsync-milli-pulse-width".
+
   qcom,qsync-enable:
     description: Boolean property to indicate if qsync is enabled/disabled.
 
@@ -694,6 +725,79 @@ properties:
     $ref: /schemas/types.yaml#/definitions/string-array
     default: dsi_lp_mode
     enum: [dsi_lp_mode, dsi_hs_mode]
+
+  qcom,mdss-dsi-esync-post-on-commands:
+    description: >
+      List of panel resume commands that need to be sent after the esync
+      generator has been enabled.
+      Refer to "qcom,mdss-dsi-on-command" section for adding commands.
+
+  qcom,mdss-dsi-sticky_still_en-command:
+    description: >
+      Command to enable panel GRAM and write to it in video mode.
+
+  qcom,mdss-dsi-sticky_still_disable-command:
+    description: >
+      Command to disable panel GRAM in video mode.
+
+  qcom,mdss-dsi-sticky_on_fly-command:
+    description: >
+      Command to enable panel GRAM and write to it for a self refresh for
+      exactly one frame.
+
+  qcom,mdss-dsi-qsync-freq-step-sequence-interval:
+    description: >
+      Array of 3-value tuples that describe the value of the
+      "qcom,mdss-dsi-qsync-freq-step-sequence" property.
+      Within each tuple, first value corresponds to the type of frequency
+      stepping sequence (0 for normal usecase and 1 for video usecase), second
+      value corresponds to the starting framerate for the sequence (in mHz),
+      and third value corresponds to the number of steps in the sequence.
+
+  qcom,mdss-dsi-qsync-freq-step-sequence:
+    description: >
+      Array of 2-value tuples that describe the framerate and duration of a step
+      in a sequence.
+      Within each tuple, first value corresponds to the framerate for this step
+      in the sequence, and second value corresponds to the duration in frames
+      of this step.
+      The tuples are arranged into groups defined by the
+      "qcom,mdss-dsi-qsync-freq-step-sequence-interval" property, which specifies
+      the length of a frequency stepping sequence in steps.
+
+  qcom,mdss-dsi-freq-step-pattern1-command:
+    description: >
+      List of panel commands to indicate to the panel the beginning of the first
+      frequency stepping pattern, and information about that pattern.
+
+  qcom,mdss-dsi-freq-step-pattern2-command:
+    description: >
+      List of panel commands to indicate to the panel the beginning of the second
+      frequency stepping pattern, and information about that pattern.
+
+  qcom,mdss-dsi-freq-step-pattern3-command:
+    description: >
+      List of panel commands to indicate to the panel the beginning of the third
+      frequency stepping pattern, and information about that pattern.
+
+  qcom,mdss-dsi-freq-step-pattern4-command:
+    description: >
+      List of panel commands to indicate to the panel the beginning of the fourth
+      frequency stepping pattern, and information about that pattern.
+
+  qcom,mdss-dsi-freq-step-pattern5-command:
+    description: >
+      List of panel commands to indicate to the panel the beginning of the fifth
+      frequency stepping pattern, and information about that pattern.
+
+  qcom,vrr-enable:
+    description: >
+      Boolean entry that restricts the inter-vsync frame latching to discrete
+      boundaries.
+
+  qcom,video-psr-enable:
+    description: >
+      Boolean entry to specify that the panel supports GRAM usage in video mode.
 
   qcom,mdss-dsi-te-pin-select:
     description: >
@@ -1418,6 +1522,9 @@ properties:
   qcom,mdss-dsc-block-prediction-enable:
     description: A boolean value to enable/disable the block prediction at decoder.
 
+  qcom,mdss-dsc-rc-override_v1:
+    description: A boolean value to enable override rc_range_bpg_ofs in sde_dsc_rc_range_bpg_override_v1.
+
   qcom,mdss-dsc-config-by-manufacture-cmd:
     description: >
       A boolean to indicates panel use manufacture command to setup pps
@@ -1762,6 +1869,16 @@ examples:
         mdss-dsi-tx-eot-append;
         qcom,ulps-enabled;
         qcom,suspend-ulps-enabled;
+        qcom,mdss-esync;
+        qcom,mdss-esync-milli-skew = <150>;
+        qcom,mdss-esync-hsync-milli-pulse-width = <750>;
+        qcom,mdss-esync-emsync-fps = <240>;
+        qcom,mdss-esync-emsync-milli-pulse-width = <300>;
+        qcom,qsync-enable;
+        qcom,vrr-enable;
+        qcom,video-psr-enable;
+        qcom,dsi-qsync-avr-step-fps = <240>;
+        qcom,mdss-dsi-qsync-min-refresh-rate = <60>;
         qcom,esd-check-enabled;
         qcom,mdss-dsi-panel-status-command = [06 01 00 01 05 00 02 0A 08];
         qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -1786,6 +1903,7 @@ examples:
         qcom,mdss-dsi-panel-prefill-lines = <0x10>;
         qcom,mdss-dsi-force-clock-lane-hs;
         qcom,compression-mode = "dsc";
+        qcom,mdss-dsc-rc-override_v1;
         qcom,adjust-timer-wakeup-ms = <1>;
         qcom,platform-reset-gpio = <&tlmm 0 0>;
 
@@ -1823,6 +1941,29 @@ examples:
               qcom,mdss-dsi-on-command = [05 01 00 00 a0 00 02 11 00
                 05 01 00 00 02 00 02 29 00];
               qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+              qcom,mdss-dsi-esync-post-on-commands = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-sticky_still_en-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-sticky_still_disable-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-sticky_on_fly-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-qsync-freq-step-sequence-interval =
+                <0 120000 2>, <0 10000 1>;
+              qcom,mdss-dsi-qsync-freq-step-sequence =
+              <60000 1>, <10000 1>,
+              <10000 2>;
+              qcom,mdss-dsi-freq-step-pattern1-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-freq-step-pattern2-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-freq-step-pattern3-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-freq-step-pattern4-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-freq-step-pattern5-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
               qcom,mdss-dsi-timing-switch-command = [
                 29 00 00 00 00 00 02 B0 04
                 29 00 00 00 00 00 02 F1 00];

@@ -38,6 +38,11 @@
 		qcom,mdss-dsi-te-check-enable;
 		qcom,mdss-dsi-te-using-te-pin;
 		qcom,spr-pack-type = "pentile";
+		qcom,mdss-dsi-panel-hdr-enabled;
+		qcom,mdss-dsi-panel-hdr-color-primaries = <15150 15750 34250
+			15700 12250 35800 6750 2550>;
+		qcom,mdss-dsi-panel-peak-brightness = <13000000>;
+		qcom,mdss-dsi-panel-blackness-level = <10>;
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
@@ -109,6 +114,7 @@
 					"dsi_lp_mode";
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,compression-mode = "dsc";
+				qcom,mdss-dsc-rc-override_v1;
 				qcom,mdss-dsc-slice-height = <40>;
 				qcom,mdss-dsc-slice-width = <720>;
 				qcom,mdss-dsc-slice-per-pkt = <1>;

@@ -37,7 +37,8 @@
 
 	qcom,sde-vm-exclude-reg-names = "sid_phys";
 
-	qcom,tvm-include-reg = <0xaf30000 0x60>,
+	qcom,tvm-include-reg = <0x0af20000 0x850>,
+				<0xaf30000 0x60>,
 				<0xaf31000 0x30>,
 				<0xaf32000 0x30>,
 				<0xaf33000 0x30>,

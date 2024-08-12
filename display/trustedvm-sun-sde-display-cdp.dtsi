@@ -63,6 +63,15 @@
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 };
 
+&dsi_nt37801_amoled_vid_spr {
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+};
+
 &dsi_vtdr6130_amoled_120hz_video {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
@@ -158,7 +167,8 @@
 			&dsi_nt37801_amoled_video
 			&dsi_nt37801_amoled_dsc_10b_video
 			&dsi_nt37801_amoled_video_cphy
-			&dsi_nt37801_amoled_cmd_spr>;
+			&dsi_nt37801_amoled_cmd_spr
+			&dsi_nt37801_amoled_vid_spr>;
 	};
 };
 
@@ -169,6 +179,7 @@
 			&dsi_nt37801_amoled_cmd_cphy
 			&dsi_nt37801_amoled_video
 			&dsi_nt37801_amoled_video_cphy
-			&dsi_nt37801_amoled_cmd_spr>;
+			&dsi_nt37801_amoled_cmd_spr
+			&dsi_nt37801_amoled_vid_spr>;
 	};
 };

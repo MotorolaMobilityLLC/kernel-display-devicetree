@@ -210,14 +210,15 @@
 	sde_cesta: qcom,sde_cesta@0x0af30000 {
 		cell-index = <0>;
 		compatible = "qcom,sde-cesta";
-		reg = <0xaf30000 0x60>,
+		reg = <0x0af20000 0x850>,
+			<0xaf30000 0x60>,
 			<0xaf31000 0x30>,
 			<0xaf32000 0x30>,
 			<0xaf33000 0x30>,
 			<0xaf34000 0x30>,
 			<0xaf35000 0x30>,
 			<0xaf36000 0x30>;
-		reg-names = "wrapper", "scc_0", "scc_1", "scc_2", "scc_3", "scc_4", "scc_5";
+		reg-names = "rscc", "wrapper", "scc_0", "scc_1", "scc_2", "scc_3", "scc_4", "scc_5";
 
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>,
 				<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>;
@@ -312,15 +313,13 @@
 		<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK0_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK0_CLK_SRC>,
-		<&mdss_dsi_phy0 1>,
 		<&dispcc DISP_CC_ESYNC0_CLK>,
-		<&dispcc DISP_CC_ESYNC0_CLK_SRC>,
 		<&dispcc DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC0_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "pll_dsi_clk",
-			"esync_clk", "esync_clk_rcg", "osc_clk", "esc_clk", "xo";
+			"pixel_clk", "pixel_clk_rcg", "esync_clk", "osc_clk",
+			"esc_clk", "xo";
 };
 
 &mdss_dsi1 {
@@ -331,15 +330,13 @@
 		<&dispcc DISP_CC_MDSS_BYTE1_INTF_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK_SRC>,
-		<&mdss_dsi_phy1 1>,
 		<&dispcc DISP_CC_ESYNC1_CLK>,
-		<&dispcc DISP_CC_ESYNC1_CLK_SRC>,
 		<&dispcc DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC1_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "pll_dsi_clk",
-			"esync_clk", "esync_clk_rcg", "osc_clk", "esc_clk", "xo";
+			"pixel_clk", "pixel_clk_rcg", "esync_clk", "osc_clk",
+			"esc_clk", "xo";
 };
 
 &mdss_dsi_phy0 {
@@ -356,4 +353,5 @@
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
+	pll_codes_region = <&dsi_pll_codes_data>;
 };
