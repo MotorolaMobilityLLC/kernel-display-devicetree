@@ -226,7 +226,7 @@
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
 		iommus = <&apps_smmu 0x1c00 0x2>;
-		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xb7fa0000 0xc1600000 0x3e9f0000>;
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-earlymap; /* for cont-splash */
 		dma-coherent;
@@ -245,7 +245,7 @@
 	smmu_sde_unsec1: qcom,smmu_sde_unsec_cb1 {
 		compatible = "qcom,smmu_sde_unsec";
 		iommus = <&apps_smmu 0x2000 0x2>;
-		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xb7fa0000 0xc1600000 0x3e9f0000>;
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-earlymap; /* for cont-splash */
 		dma-coherent;
