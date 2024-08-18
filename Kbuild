@@ -58,6 +58,10 @@ ifeq ($(CONFIG_ARCH_SA8155), y)
 dtbo-y += display/sa8155-adp-star-display.dtbo
 endif
 
+dtbo-$(CONFIG_ARCH_MONACO) += display/monaco-sde.dtbo \
+		display/monaco-sde-display-idp-overlay.dtbo \
+		display/monaco-sde-display-wdp-overlay.dtbo
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo

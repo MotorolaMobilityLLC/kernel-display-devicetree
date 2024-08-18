@@ -10,6 +10,11 @@
 		clocks = <&dispcc0 MDSS_0_DISP_CC_MDSS_MDP_CLK>;
 		clock-names = "mdp_core_clk";
 	};
+
+	disp_rdump_memory: disp_rdump_region@b8000000 {
+		reg   = <0xb8000000 0x0800000>;
+		label = "disp_rdump_region";
+	};
 };
 
 &sde_dsi {

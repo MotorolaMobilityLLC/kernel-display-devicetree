@@ -195,8 +195,9 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
-			<&mmss_noc MASTER_MDP0_DISP &mc_virt SLAVE_EBI1_DISP>;
-		interconnect-names = "qcom,sde-data-bus0";
+			<&mmss_noc MASTER_MDP0_DISP &mc_virt SLAVE_EBI1_DISP>,
+			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
+		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-ddr-rt";
 	};
 
 	sde_rscc1: qcom,sde_rscc@a920000 {
@@ -217,14 +218,15 @@
 
 		qcom,msm-bus,active-only;
 		interconnects =
-			<&mmss_noc MASTER_MDP1_DISP2 &mc_virt SLAVE_EBI1_DISP2>;
-		interconnect-names = "qcom,sde-data-bus0";
+			<&mmss_noc MASTER_MDP1_DISP2 &mc_virt SLAVE_EBI1_DISP2>,
+			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
+		interconnect-names = "qcom,sde-data-bus0", "qcom,sde-ddr-rt";
 	};
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
 		iommus = <&apps_smmu 0x1c00 0x2>;
-		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xb7fa0000 0xc1600000 0x3e9f0000>;
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-earlymap; /* for cont-splash */
 		dma-coherent;
@@ -243,7 +245,7 @@
 	smmu_sde_unsec1: qcom,smmu_sde_unsec_cb1 {
 		compatible = "qcom,smmu_sde_unsec";
 		iommus = <&apps_smmu 0x2000 0x2>;
-		qcom,iommu-dma-addr-pool = <0x00060000 0xe38e0000 0xe6440000 0x19bc0000>;
+		qcom,iommu-dma-addr-pool = <0x00060000 0xb7fa0000 0xc1600000 0x3e9f0000>;
 		qcom,iommu-faults = "non-fatal";
 		qcom,iommu-earlymap; /* for cont-splash */
 		dma-coherent;
@@ -278,11 +280,13 @@
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP0 &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
-			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>;
+			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>,
+			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
 	interconnect-names = "qcom,sde-data-bus0",
-			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus",
+			"qcom,sde-ddr-rt";
 
-	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+	qcom,sde-ib-bw-vote = <2500000 0 800000 0>;
 
 	qcom,platform-supply-entries {
 		#address-cells = <1>;
@@ -317,11 +321,13 @@
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP1 &gem_noc SLAVE_LLCC>,
 			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
-			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>;
+			<&gem_noc MASTER_APPSS_PROC &cnoc_main SLAVE_DISPLAY_CFG>,
+			<&mc_virt MASTER_DDR_RT &mc_virt SLAVE_DDR_RT>;
 	interconnect-names = "qcom,sde-data-bus0",
-			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus",
+			"qcom,sde-ddr-rt" ;
 
-	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+	qcom,sde-ib-bw-vote = <2500000 0 800000 0>;
 
 	qcom,platform-supply-entries {
 		#address-cells = <1>;
