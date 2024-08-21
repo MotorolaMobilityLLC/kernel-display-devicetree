@@ -61,6 +61,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
+				qcom,mdss-dsi-panel-clockrate = <1223800000>;
 
 				qcom,mdss-dsi-on-command = [
 					39 01 00 00 00 00 06 f0 55 aa 52 08 01

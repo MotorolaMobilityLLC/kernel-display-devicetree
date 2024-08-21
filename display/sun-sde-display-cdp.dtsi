@@ -300,7 +300,6 @@
 };
 
 &qupv3_se15_i2c {
-	status = "disabled";
 	st_fts@49 {
 		panel = <&dsi_nt37801_amoled_cmd
 			&dsi_nt37801_amoled_cmd_cphy
