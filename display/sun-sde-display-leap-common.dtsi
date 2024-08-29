@@ -148,6 +148,9 @@
 };
 
 &sde_dsi1 {
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-1 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-2 = <&sde_dsi1_suspend &sde_te1_suspend>;
 	vddio-supply = <&L10B>;
 	vdd-supply = <&L11B>;
 	vci-supply = <&L16B>;
