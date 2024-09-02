@@ -182,6 +182,7 @@
 		focaltech,edge-ctrl;
 		focaltech,interpolation-ctrl;
 		focaltech,sample-ctrl;
+		fts,pocket-mode-ctrl;
 
 		pinctrl-names = "pmx_ts_active", "pmx_ts_suspend", "pmx_ts_release";
 		pinctrl-0 = <&ts_active>;
