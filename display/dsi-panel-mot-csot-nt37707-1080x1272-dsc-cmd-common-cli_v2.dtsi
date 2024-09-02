@@ -110,7 +110,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 2F 02 //120hz
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -255,7 +255,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 2F 03 //165hz
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -399,7 +399,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 02 2F 04 //90hz
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -551,7 +551,7 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 B2 80 //Skip Mode DBV切换回seq1 Disable
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -704,7 +704,7 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 B2 80 //Skip Mode DBV切换回seq1 Disable
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -857,7 +857,7 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 B2 80 //Skip Mode DBV切换回seq1 Disable
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -1010,7 +1010,7 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 B2 C0 //Skip Mode DBV切换回seq1 Enable
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
@@ -1163,7 +1163,7 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 B2 C0 //Skip Mode DBV切换回seq1 Enable
 		];
 		qcom,mdss-dsi-on-command = [
-                        39 00 00 40 00 00 06 39 FF AA 55 A5 80
+                        39 00 00 40 00 00 05 FF AA 55 A5 80
                         39 00 00 40 00 00 02 6F 47
                         39 00 00 40 00 00 02 F2 20
                         39 00 00 40 00 00 02 6F 05
