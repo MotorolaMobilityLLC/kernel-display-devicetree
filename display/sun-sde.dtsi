@@ -275,7 +275,7 @@
 
 	qcom,sde-soccp-controller = <&soccp_pas>;
 
-	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
+	qcom,sde-vm-exclude-reg-names = "ipcc_reg", "swfuse_phys";
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
