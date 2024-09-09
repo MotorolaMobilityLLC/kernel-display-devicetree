@@ -1372,6 +1372,159 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
 	};
+
+	timing@8{
+		qcom,mdss-dsi-cmd-mode;
+		qcom,mdss-dsi-panel-framerate = <120>;/* Actually 10-120-10 hz*/
+		qcom,mdss-dsi-panel-width = <1224>;
+		qcom,mdss-dsi-panel-height = <2992>;
+		qcom,mdss-dsi-h-front-porch = <20>;
+		qcom,mdss-dsi-h-back-porch = <16>;
+		qcom,mdss-dsi-h-pulse-width = <16>;
+		qcom,mdss-dsi-h-sync-skew = <0>;
+		qcom,mdss-dsi-h-sync-pulse = <0>;
+		qcom,mdss-dsi-v-back-porch = <2>;
+		qcom,mdss-dsi-v-front-porch = <2>;
+		qcom,mdss-dsi-v-pulse-width = <2>;
+		qcom,mdss-dsi-h-left-border = <0>;
+		qcom,mdss-dsi-h-right-border = <0>;
+		qcom,mdss-dsi-v-top-border = <0>;
+		qcom,mdss-dsi-v-bottom-border = <0>;
+		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 05
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 2F 02
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 40 00 00 05 6B 01 40 07 C0
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 0f 6B 01 0B 01 01 0B 01 01 0B 01 01 0B 01 01 0B
+			39 00 00 40 00 00 02 6F 20
+			39 00 00 40 00 00 0f 6B 01 00 01 01 00 01 01 00 01 01 00 01 01 00
+			39 00 00 40 00 00 02 6F 30
+			39 00 00 40 00 00 0f 6B 01 0B 01 01 0B 01 01 0B 01 01 0B 01 01 0B
+			39 00 00 40 00 00 06 F0 55 AA 52 08 05
+			39 00 00 00 00 00 02 6B 01
+		];
+		qcom,mdss-dsi-on-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 01
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 04 DD 00 00 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 08
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 05 E9 10 01 0F 0A
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 18
+			39 00 00 40 00 00 02 F5 10
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 47
+			39 00 00 40 00 00 02 F2 20
+			39 00 00 40 00 00 02 6F 05
+			39 00 00 40 00 00 02 F8 59
+			39 00 00 40 00 00 02 6F 21
+			39 00 00 40 00 00 02 F8 59
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 31
+			39 00 00 40 00 00 03 F8 01 8C
+			39 00 00 40 00 00 02 6F 15
+			39 00 00 40 00 00 03 F8 01 85
+			39 00 00 40 00 00 06 F0 55 AA 52 08 05
+			39 00 00 40 00 00 0a C1 06 00 00 00 00 00 80 00 00
+			39 00 00 40 00 00 02 6F 25
+			39 00 00 40 00 00 08 C1 01 11 11 80 00 80 00
+			39 00 00 40 00 00 0a C2 06 00 00 00 00 00 80 00 00
+			39 00 00 40 00 00 02 6F 09
+			39 00 00 40 00 00 08 C2 01 10 10 80 00 80 00
+			39 00 00 40 00 00 02 6F 05
+			39 00 00 40 00 00 03 6B FF FF
+			39 00 00 40 00 00 02 6F 07
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 05
+			39 00 00 40 00 00 02 6D 00
+			39 00 00 40 00 00 02 5A 01
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 0B
+			39 00 00 40 00 00 02 FD 04
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 32
+			39 00 00 40 00 00 02 F9 00
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 2A
+			39 00 00 40 00 00 02 F4 08
+			39 00 00 40 00 00 06 F0 55 AA 52 08 01
+			39 00 00 40 00 00 02 E5 00
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 F9 04
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 0C
+			39 00 00 40 00 00 02 FD 08
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 02 FB 40
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 05
+			39 00 00 40 00 00 03 FE 3C 3C
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 42
+			39 00 00 40 00 00 02 F4 00
+			39 00 00 40 00 00 02 6F 49
+			39 00 00 40 00 00 02 F2 10
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 05
+			39 00 00 40 00 00 03 FE 3C 3C
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 0A
+			39 00 00 40 00 00 06 F6 70 70 70 70 70
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 16
+			39 00 00 40 00 00 03 F4 02 74
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 0D
+			39 00 00 40 00 00 02 FB 80
+			39 00 00 40 00 00 02 17 10
+			39 00 00 40 00 00 05 2A 00 00 04 C7
+			39 00 00 40 00 00 05 2B 00 00 0B AF
+			39 00 00 40 00 00 02 2F 02
+			39 00 00 40 00 00 03 5F 00 00
+			39 00 00 40 00 00 02 35 00
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00
+			39 00 00 40 00 00 03 51 00 00
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 03 51 00 00
+			39 00 00 40 00 00 02 53 20
+			39 00 00 40 00 00 02 90 03
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 40 00 00 02 90 43
+			39 00 00 40 00 00 13 91 89 28 00 10 C2 00 02 32 01 9C 00 08 06 67 05 9C 10 F0
+			39 00 00 40 00 00 06 F0 55 AA 52 08 01
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 03 C7 00 00
+			39 00 00 00 00 00 02 26 00
+			05 00 00 00 78 00 01 11
+			05 00 00 00 00 00 01 29];	/* display on */
+		qcom,mdss-dsi-off-command = [
+			05 00 00 00 00 00 01 28		/* display_off */
+			05 00 00 00 64 00 01 10];	/* enter sleep mode */
+
+		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-timing-switch-command-state =
+			"dsi_hs_mode";
+		qcom,compression-mode = "dsc";
+		/* Why QCOM doesn't use this, even it used 2 encoder
+		 * as for that dsi_sw43404_amoled_cmd, for ex */
+		/* qcom,mdss-dsc-encoders = <2>; */
+		qcom,mdss-dsc-version = <0x11>;
+		qcom,mdss-dsc-slice-height = <16>;
+		qcom,mdss-dsc-slice-width = <612>;
+		qcom,mdss-dsc-slice-per-pkt = <2>;
+		qcom,mdss-dsc-bit-per-component = <10>;
+		qcom,mdss-dsc-bit-per-pixel = <8>;
+		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
+	};
+
 };
 
 };
