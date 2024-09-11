@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+#include "volcano-sde-display-iot-mtp-wcd9395.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Volcano6I MTP + WCD9395 AATC";
+	compatible = "qcom,volcano-mtp", "qcom,volcano", "qcom,volcanop-mtp", "qcom,volcanop", "qcom,mtp";
+	qcom,msm-id = <657 0x10000>, <658 0x10000>;
+	qcom,board-id = <8 2>, <8 4>, <8 5>;
+};
