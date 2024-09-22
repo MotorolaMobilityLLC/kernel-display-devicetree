@@ -325,8 +325,8 @@
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 24 09 09 1A 18 09
-				09 09 02 04 00 1E 0E];
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 18 0A
+				0A 09 02 04 00 1E 0F];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
