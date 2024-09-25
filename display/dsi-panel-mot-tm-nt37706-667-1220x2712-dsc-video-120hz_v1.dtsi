@@ -21,7 +21,7 @@
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-pan-physical-width-dimension = <69>;
 		qcom,mdss-pan-physical-height-dimension = <154>;
-		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-bpp = <30>;
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
 
@@ -154,7 +154,7 @@
 				qcom,mdss-dsc-slice-height = <12>;
 				qcom,mdss-dsc-slice-width = <610>;
 				qcom,mdss-dsc-slice-per-pkt = <2>;
-				qcom,mdss-dsc-bit-per-component = <8>;
+				qcom,mdss-dsc-bit-per-component = <10>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
 				qcom,mdss-dsi-dfps-60-command = [
