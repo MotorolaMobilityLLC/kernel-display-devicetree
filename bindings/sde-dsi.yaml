@@ -263,6 +263,10 @@ properties:
   qcom,dsi-select-sec-clocks:
     description: Specifies the required clocks to use for secondary panel
 
+  qcom,dsi-select-sec-sync-clocks:
+    description: Specifies the required clocks to use for secondary
+                panel when sync mode is enabled.
+
   qcom,dsi-display-list:
     description: Specifies the list of supported displays.
     $ref: /schemas/types.yaml#/definitions/string-array
