@@ -90,6 +90,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -260,6 +261,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -404,6 +406,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 02 53 20
@@ -593,6 +596,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 03
 			39 00 00 40 00 00 02 53 28
@@ -759,6 +763,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 04
 			39 00 00 40 00 00 02 53 28
@@ -925,6 +930,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -1087,6 +1093,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -1248,6 +1255,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
 		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
