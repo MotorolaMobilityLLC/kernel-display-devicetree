@@ -138,8 +138,7 @@
 		qcom,sde-sspp-csc-off = <0x1800>;
 		qcom,sde-csc-type = "csc-10bit";
 		qcom,sde-qseed-sw-lib-rev = "qseedv3lite";
-		qcom,sde-qseed-scalar-version = <0x3004>;
-		qcom,sde-sspp-qseed-off = <0x2000>;
+		qcom,sde-qseed-scalar-version = <0x3005>;
 		qcom,sde-mixer-linewidth = <2560>;
 		qcom,sde-sspp-linewidth = <5120>;
 		qcom,sde-wb-linewidth = <4096>;
