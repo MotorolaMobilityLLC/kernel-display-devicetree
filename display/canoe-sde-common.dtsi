@@ -242,7 +242,7 @@
 		qcom,sde-sspp-vig-blocks {
 			vcm@0 {
 				cell-index = <0>;
-				qcom,sde-vig-top-off = <0x1000>;
+				qcom,sde-vig-top-off = <0x1600>;
 				qcom,sde-vig-csc-off = <0x1800>;
 				qcom,sde-vig-qseed-off = <0x2000>;
 				qcom,sde-vig-qseed-size = <0xec>;
@@ -277,7 +277,7 @@
 		qcom,sde-sspp-dma-blocks {
 			dgm@0 {
 				cell-index = <0>;
-				qcom,sde-dma-top-off = <0x1000>;
+				qcom,sde-dma-top-off = <0x1600>;
 				qcom,sde-fp16-igc = <0x200 0x00010000>;
 				qcom,sde-fp16-unmult = <0x200 0x00010000>;
 				qcom,sde-fp16-gc = <0x200 0x00010000>;
