@@ -340,7 +340,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <1224 120 1224 120 1224 120>;
+			qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
 			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
