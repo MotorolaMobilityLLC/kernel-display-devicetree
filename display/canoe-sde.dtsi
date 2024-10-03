@@ -62,6 +62,9 @@
 			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
 	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+	qcom,sde-dspp-ltm-version = <0x00010004>;
+	/* offsets are based off dspp 0, 1, 2, and 3 */
+	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
 
 	/* Pre mdss_core vregs */
 	qcom,platform-supply-entries {

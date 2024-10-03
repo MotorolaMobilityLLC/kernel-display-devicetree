@@ -95,8 +95,8 @@
 		qcom,sde-dither-off = <0xc0 0xc0 0xc0 0xc0 0xc0
 					0xc0 0xc0 0xc0 0xc0 0xc0>;
 		qcom,sde-cwb-dither = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
-		qcom,sde-dither-version = <0x00020000>;
-		qcom,sde-dither-size = <0x20>;
+		qcom,sde-dither-version = <0x00030000>;
+		qcom,sde-dither-size = <0x24>;
 
 		qcom,sde-sspp-type = "vig", "vig", "vig", "vig",
 					"dma", "dma", "dma", "dma", "dma", "dma";
@@ -172,6 +172,14 @@
 		qcom,sde-dram-channels = <4>;
 		qcom,sde-num-nrt-paths = <0>;
 
+		qcom,sde-dspp-spr-off = <0x3400 0x3400 0x3400 0x3400>;
+		qcom,sde-dspp-spr-size = <0x200>;
+		qcom,sde-dspp-spr-version = <0x00020000>;
+
+		qcom,sde-dspp-spr-dither-version = <0x00020000>;
+		/* offsets are based off dspp 0, 1, 2, 3 */
+		qcom,sde-dspp-spr-dither-off = <0x34E0 0x34E0 0x34E0 0x34E0>;
+
 		qcom,sde-uidle-off = <0x6000>;
 		qcom,sde-uidle-size = <0x80>;
 
@@ -216,10 +224,10 @@
 		qcom,sde-qos-cpu-dma-latency = <300>;
 		qcom,sde-qos-cpu-irq-latency = <300>;
 
-		/* offsets are relative to "mdp_phys + qcom,sde-off */
+		/* offsets are relative to regdma_phys */
 		qcom,sde-reg-dma-off = <0 0x800>;
 		qcom,sde-reg-dma-id = <0 1>;
-		qcom,sde-reg-dma-version = <0x00030000>;
+		qcom,sde-reg-dma-version = <0x00040000>;
 		qcom,sde-reg-dma-trigger-off = <0x119c>;
 		qcom,sde-reg-dma-xin-id = <7>;
 		qcom,sde-reg-dma-clk-ctrl = <0x2bc 20>;
@@ -245,11 +253,11 @@
 				qcom,sde-fp16-unmult = <0x200 0x00010000>;
 				qcom,sde-fp16-gc = <0x200 0x00010000>;
 				qcom,sde-fp16-csc = <0x200 0x00010000>;
-				qcom,sde-ucsc-igc = <0x700 0x00010001>;
-				qcom,sde-ucsc-unmult = <0x700 0x00010001>;
-				qcom,sde-ucsc-gc = <0x700 0x00010001>;
-				qcom,sde-ucsc-csc = <0x700 0x00010001>;
-				qcom,sde-ucsc-alpha-dither = <0x700 0x00010000>;
+				qcom,sde-ucsc-igc = <0x1600 0x00010001>;
+				qcom,sde-ucsc-unmult = <0x1600 0x00010001>;
+				qcom,sde-ucsc-gc = <0x1600 0x00010001>;
+				qcom,sde-ucsc-csc = <0x1600 0x00010001>;
+				qcom,sde-ucsc-alpha-dither = <0x1600 0x00010000>;
 			};
 
 			vcm@1 {
@@ -258,11 +266,11 @@
 				qcom,sde-fp16-unmult = <0x280 0x00010000>;
 				qcom,sde-fp16-gc = <0x280 0x00010000>;
 				qcom,sde-fp16-csc = <0x280 0x00010000>;
-				qcom,sde-ucsc-igc = <0x1700 0x00010001>;
-				qcom,sde-ucsc-unmult = <0x1700 0x00010001>;
-				qcom,sde-ucsc-gc = <0x1700 0x00010001>;
-				qcom,sde-ucsc-csc = <0x1700 0x00010001>;
-				qcom,sde-ucsc-alpha-dither = <0x1700 0x00010000>;
+				qcom,sde-ucsc-igc = <0x3600 0x00010001>;
+				qcom,sde-ucsc-unmult = <0x3600 0x00010001>;
+				qcom,sde-ucsc-gc = <0x3600 0x00010001>;
+				qcom,sde-ucsc-csc = <0x3600 0x00010001>;
+				qcom,sde-ucsc-alpha-dither = <0x3600 0x00010000>;
 			};
 		};
 
@@ -293,6 +301,12 @@
 				qcom,sde-ucsc-csc = <0x3600 0x00010001>;
 				qcom,sde-ucsc-alpha-dither = <0x3600 0x00010000>;
 			};
+		};
+
+		qcom,sde-dspp-blocks {
+			qcom,sde-dspp-igc = <0x1260 0x00050001>;
+			qcom,sde-dspp-gamut = <0x1000 0x00040003>;
+			qcom,sde-dspp-pcc = <0x1700 0x00060000>;
 		};
 	};
 };
