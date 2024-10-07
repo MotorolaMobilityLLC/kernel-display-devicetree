@@ -69,6 +69,10 @@ endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_VOLCANO) += display/volcano-sde.dtbo \
+		display/volcano-sde-fp1.dtbo \
+		display/volcano-sde-fp2.dtbo \
+		display/volcano-sde-fp3.dtbo \
+		display/volcano-sde-fp4.dtbo \
 		display/volcano-sde-display-atp-overlay.dtbo \
 		display/volcano-sde-display-idp-overlay.dtbo \
 		display/volcano-sde-display-idp-wcd9395-overlay.dtbo \
