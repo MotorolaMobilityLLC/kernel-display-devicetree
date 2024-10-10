@@ -11,7 +11,7 @@
  */
 &mdss_mdp {
 	mot_tm_nt37706_667_1220p_dsc_vid_120hz_v1: qcom,mdss_dsi_mot_tm_nt37706_667_120hz_dsc_vid_v1 {
-		qcom,mdss-dsi-panel-name = "mipi_mot_vid_tm_1220p_dsc_667_v1";
+		qcom,mdss-dsi-panel-name = "mipi_mot_vid_tm_1220p_dsc_667";
 		qcom,mdss-dsi-panel-supplier = "tm";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,mdss-dsi-panel-physical-type = "oled";
