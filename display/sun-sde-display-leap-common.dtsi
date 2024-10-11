@@ -410,7 +410,7 @@
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
-
+	qcom,partition-refreshrate-enabled;
 	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -550,7 +550,7 @@
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
-
+	qcom,partition-refreshrate-enabled;
 	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120

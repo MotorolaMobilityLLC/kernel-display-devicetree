@@ -1531,6 +1531,28 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-partition-refreshrate-off-command = [
+			39 00 00 00 00 00 02 6B 00
+		];
+
+		qcom,mdss-dsi-partition-refreshrate-off-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-partition-refreshrate-on-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 05
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 2F 02
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 40 00 00 05 6B 01 40 07 C0
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 0f 6B 01 0B 01 01 0B 01 01 0B 01 01 0B 01 01 0B
+			39 00 00 40 00 00 02 6F 20
+			39 00 00 40 00 00 0f 6B 01 00 01 01 00 01 01 00 01 01 00 01 01 00
+			39 00 00 40 00 00 02 6F 30
+			39 00 00 40 00 00 0f 6B 01 0B 01 01 0B 01 01 0B 01 01 0B 01 01 0B
+			39 00 00 40 00 00 06 F0 55 AA 52 08 05
+			39 00 00 00 00 00 02 6B 01
+		];
+		qcom,mdss-dsi-partition-refreshrate-on-command-state = "dsi_hs_mode";
+
 	};
 
 };
