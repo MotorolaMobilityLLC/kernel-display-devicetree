@@ -89,6 +89,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
@@ -366,6 +367,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
@@ -912,6 +914,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
@@ -1185,6 +1188,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
@@ -1458,6 +1462,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
@@ -1727,6 +1732,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
@@ -1996,6 +2002,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 02 6F 04
@@ -2246,6 +2253,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-h-right-border = <0>;
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 06 F0 55 AA 52 08 05
 			39 00 00 40 00 00 02 6B 00
