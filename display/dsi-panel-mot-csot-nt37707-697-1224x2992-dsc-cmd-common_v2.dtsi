@@ -201,7 +201,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -372,7 +372,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -535,7 +535,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -729,7 +729,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -896,7 +896,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -1059,7 +1059,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -1222,7 +1222,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -1366,7 +1366,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
@@ -1518,7 +1518,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 		qcom,mdss-dsi-timing-switch-command-state =
-			"dsi_hs_mode";
+			"dsi_lp_mode";
 		qcom,compression-mode = "dsc";
 		/* Why QCOM doesn't use this, even it used 2 encoder
 		 * as for that dsi_sw43404_amoled_cmd, for ex */
