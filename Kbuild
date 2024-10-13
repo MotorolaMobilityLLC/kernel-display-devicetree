@@ -82,7 +82,9 @@ dtbo-$(CONFIG_ARCH_VOLCANO) += display/volcano-sde.dtbo \
 		display/volcano-sde-display-rumi-overlay.dtbo \
 		display/volcano-sde-display-iot-idp-wcd9395-overlay.dtbo \
 		display/volcano-sde-display-iot-mtp-overlay.dtbo \
-		display/volcano-sde-display-iot-mtp-wcd9395-overlay.dtbo
+		display/volcano-sde-display-iot-mtp-wcd9395-overlay.dtbo \
+		display/volcano-sde-display-iot-mtp-wcd9395-pm7550ba-overlay.dtbo \
+		display/volcano-sde-display-iot-mtp-wingmate-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_VOLCANO) += display/trustedvm-volcano-sde-display-atp-overlay.dtbo \
 		  display/trustedvm-volcano-sde-display-idp-overlay.dtbo \

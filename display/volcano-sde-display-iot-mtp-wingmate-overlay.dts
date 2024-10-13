@@ -1,6 +1,8 @@
 /dts-v1/;
 /plugin/;
 
+#include "volcano-sde-display-iot-mtp-pm7550ba.dtsi"
+
 / {
 	model = "Qualcomm Technologies, Inc. Volcano6I MTP + WCD9378 HSJ + Wingmate";
 	compatible = "qcom,volcano-mtp", "qcom,volcano", "qcom,volcanop-mtp", "qcom,volcanop", "qcom,mtp";
