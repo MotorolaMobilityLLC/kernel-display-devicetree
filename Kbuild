@@ -32,7 +32,8 @@ dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
 		display/parrot-sde-display-rumi-overlay.dtbo \
 		display/parrot-sde-display-qrd-overlay.dtbo
 else
-dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo
+dtbo-$(CONFIG_ARCH_PARROT) += display/trustedvm-parrot-sde-display-idp-overlay.dtbo \
+		display/trustedvm-parrot-sde-display-qrd-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
