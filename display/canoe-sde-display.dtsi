@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+#include "canoe-sde.dtsi"
+#include <dt-bindings/clock/qcom,dispcc-canoe.h>
+
+&soc {
+	sde_wb0: qcom,wb-display@0 {
+		compatible = "qcom,wb-display";
+		cell-index = <0>;
+		label = "wb_display0";
+	};
+
+	sde_wb1: qcom,wb-display@1 {
+		compatible = "qcom,wb-display";
+		cell-index = <1>;
+		label = "wb_display1";
+	};
+};
+
+&mdss_mdp {
+	connectors = <&smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1>;
+};
