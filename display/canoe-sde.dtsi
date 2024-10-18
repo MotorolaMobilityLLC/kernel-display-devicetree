@@ -1,0 +1,107 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+#include <dt-bindings/clock/qcom,dispcc-canoe.h>
+#include <dt-bindings/clock/qcom,gcc-canoe.h>
+#include <dt-bindings/interconnect/qcom,canoe.h>
+#include <dt-bindings/arm/msm/qti-smmu-proxy-dt-ids.h>
+#include "canoe-sde-common.dtsi"
+
+&soc {
+	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
+		iommu-addresses = <&smmu_sde_unsec 0x0 0x00020000>,
+						<&smmu_sde_sec 0x0 0x00020000>;
+	};
+
+	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
+		compatible = "qcom,smmu_sde_unsec";
+		iommus = <&apps_smmu 0x800 0x2>;
+		memory-region = <&smmu_sde_iommu_region_partition>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-earlymap; /* for cont-splash */
+		dma-coherent;
+	};
+
+	smmu_sde_sec: qcom,smmu_sde_sec_cb {
+		compatible = "qcom,smmu_sde_sec";
+		iommus = <&apps_smmu 0x801 0x0>;
+		memory-region = <&smmu_sde_iommu_region_partition>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-vmid = <0xa>;
+	};
+};
+
+&mdss_mdp {
+	clocks =
+		<&gcc GCC_DISP_HF_AXI_CLK>,
+		<&dispcc DISP_CC_MDSS_AHB_CLK>,
+		<&dispcc DISP_CC_MDSS_MDP_CLK>,
+		<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
+		<&dispcc DISP_CC_MDSS_VSYNC_CLK>,
+		<&dispcc DISP_CC_MDSS_MDP_LUT_CLK>;
+
+	clock-names = "gcc_bus", "iface_clk", "branch_clk", "core_clk", "vsync_clk", "lut_clk";
+	clock-rate = <0 0 650000000 650000000 19200000 650000000>;
+	clock-max-rate = <0 0 650000000 650000000 19200000 650000000>;
+
+	vdd-supply = <&disp_cc_mdss_core_gdsc>;
+	mmcx-supply = <&VDD_MMCX_LEVEL>;
+
+	gdsc2-supply = <&dispcc DISP_CC_MDSS_CORE_INT2_GDSC>;
+
+	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
+
+	/* data and reg bus scale settings */
+	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
+			<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
+			<&gem_noc MASTER_APPSS_PROC
+				&config_noc SLAVE_DISPLAY_CFG>;
+	interconnect-names = "qcom,sde-data-bus0",
+			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
+
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+	qcom,sde-dspp-ltm-version = <0x00010004>;
+	/* offsets are based off dspp 0, 1, 2, and 3 */
+	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
+
+	/* Pre mdss_core vregs */
+	qcom,platform-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,platform-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "mmcx";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,platform-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
+
+	/* Post mdss_core vregs */
+	qcom,platform-post-core-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,platform-post-core-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "gdsc2";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
+};
