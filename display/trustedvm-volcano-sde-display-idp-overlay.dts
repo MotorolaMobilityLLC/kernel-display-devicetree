@@ -9,5 +9,5 @@
 	compatible = "qcom,volcano-idp", "qcom,volcano", "qcom,idp";
 	qcom,msm-id = <636 0x10000>, <640 0x10000>, <641 0x10000>,
 			<657 0x10000>, <658 0x10000>;
-	qcom,board-id = <34 0>, <34 1>;
+	qcom,board-id = <34 0>, <34 1>, <34 4>, <34 5>;
 };
