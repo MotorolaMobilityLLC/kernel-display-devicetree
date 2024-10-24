@@ -4,3 +4,18 @@
  */
 
 #include "canoe-sde-display.dtsi"
+
+&dsi_sim_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+};
+
+&dsi_sim_vid {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+};
+
+&sde_dsi {
+	avdd-supply = <&display_panel_avdd>;
+	qcom,dsi-default-panel = <&dsi_sim_cmd>;
+};
