@@ -35,7 +35,7 @@ dtbo-$(CONFIG_ARCH_TUNA) += display/tuna-sde.dtbo \
 		display/tuna-sde-display-atp-overlay.dtbo \
 		display/tuna-sde-display-cdp-overlay.dtbo \
 		display/tuna-sde-display-mtp-overlay.dtbo \
-		display/tuna-sde-display-mtp-kiwi-overlay.dtbo \
+		display/tuna-sde-display-mtp-kiwi-harmonium-overlay.dtbo \
 		display/tuna-sde-display-qrd-overlay.dtbo \
 		display/tuna-sde-display-rumi-overlay.dtbo \
 		display/tuna-sde-display-rcm-overlay.dtbo
@@ -43,7 +43,7 @@ else
 dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-tuna-sde-display-atp-overlay.dtbo \
 		display/trustedvm-tuna-sde-display-cdp-overlay.dtbo \
 		display/trustedvm-tuna-sde-display-mtp-overlay.dtbo \
-		display/trustedvm-tuna-sde-display-mtp-kiwi-overlay.dtbo \
+		display/trustedvm-tuna-sde-display-mtp-kiwi-harmonium-overlay.dtbo \
 		display/trustedvm-tuna-sde-display-qrd-overlay.dtbo \
 		display/trustedvm-tuna-sde-display-rumi-overlay.dtbo \
 		display/trustedvm-tuna-sde-display-rcm-overlay.dtbo
