@@ -6,12 +6,13 @@
 /dts-v1/;
 /plugin/;
 
-#include "tuna-sde-display-mtp-kiwi.dtsi"
+#include "trustedvm-tuna-sde.dtsi"
+#include "trustedvm-tuna-sde-display-mtp-kiwi-harmonium.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Tuna MTP + kiwi WLAN";
+	model = "Qualcomm Technologies, Inc. Tuna SVM MTP + kiwi WLAN + Harmonium";
 	compatible = "qcom,tuna-mtp", "qcom,tuna", "qcom,tunap-mtp", "qcom,tunap",
 			"qcom,mtp";
 	qcom,msm-id = <681 0x10000>, <655 0x10000>;
-	qcom,board-id = <8 2>;
+	qcom,board-id = <8 3>;
 };
