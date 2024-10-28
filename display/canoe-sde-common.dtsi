@@ -245,8 +245,8 @@
 				qcom,sde-vig-csc-off = <0x1800>;
 				qcom,sde-vig-qseed-off = <0x2000>;
 				qcom,sde-vig-qseed-size = <0xec>;
-				qcom,sde-vig-gamut = <0x1C00 0x00060001>;
-				qcom,sde-vig-igc = <0x1d00 0x00060000>;
+				qcom,sde-vig-gamut = <0x1c00 0x00060001>;
+				qcom,sde-vig-igc = <0x1c00 0x00060000>;
 				qcom,sde-vig-inverse-pma;
 				qcom,sde-fp16-igc = <0x200 0x00010000>;
 				qcom,sde-fp16-unmult = <0x200 0x00010000>;
@@ -304,8 +304,15 @@
 
 		qcom,sde-dspp-blocks {
 			qcom,sde-dspp-igc = <0x1260 0x00050001>;
+			qcom,sde-dspp-hsic = <0x800 0x00010007>;
+			qcom,sde-dspp-memcolor = <0x880 0x00010007>;
+			qcom,sde-dspp-hist = <0x800 0x00010007>;
+			qcom,sde-dspp-sixzone = <0x900 0x00020000>;
+			qcom,sde-dspp-vlut = <0xa00 0x00010008>;
 			qcom,sde-dspp-gamut = <0x1000 0x00040003>;
 			qcom,sde-dspp-pcc = <0x1700 0x00060000>;
+			qcom,sde-dspp-gc = <0x17c0 0x00020000>;
+			qcom,sde-dspp-dither = <0x82c 0x00010007>;
 		};
 	};
 };
