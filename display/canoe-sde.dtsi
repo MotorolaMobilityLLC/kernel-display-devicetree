@@ -46,7 +46,7 @@
 	clock-rate = <0 0 650000000 650000000 19200000 650000000>;
 	clock-max-rate = <0 0 650000000 650000000 19200000 650000000>;
 
-	vdd-supply = <&disp_cc_mdss_core_gdsc>;
+	vdd-supply = <&dispcc DISP_CC_MDSS_CORE_GDSC>;
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
 	gdsc2-supply = <&dispcc DISP_CC_MDSS_CORE_INT2_GDSC>;

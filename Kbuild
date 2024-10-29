@@ -1,4 +1,19 @@
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
+		display/canoe-sde-display-cdp-overlay.dtbo \
+		display/canoe-sde-display-mtp-overlay.dtbo \
+		display/canoe-sde-display-rcm-overlay.dtbo \
+		display/canoe-sde-display-cdp-kiwi-overlay.dtbo \
+		display/canoe-sde-display-mtp-kiwi-overlay.dtbo \
+		display/canoe-sde-display-rcm-kiwi-overlay.dtbo \
+		display/canoe-sde-display-cdp-mango-overlay.dtbo \
+		display/canoe-sde-display-mtp-mango-overlay.dtbo \
+		display/canoe-sde-display-rcm-mango-overlay.dtbo \
+		display/canoe-sde-display-mtp-qmp1000-overlay.dtbo \
+		display/canoe-sde-display-mtp-3.5mm-overlay.dtbo
+endif
+
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_SUN) += display/sun-sde.dtbo \
 		display/sun-sde-display-cdp-overlay.dtbo \
 		display/sun-sde-display-mtp-overlay.dtbo \
