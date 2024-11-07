@@ -6,6 +6,9 @@
 / {
 	model = "Qualcomm Technologies, Inc. Volcano6I MTP";
 	compatible = "qcom,volcano-mtp", "qcom,volcano", "qcom,volcanop-mtp", "qcom,volcanop", "qcom,mtp";
-	qcom,msm-id = <657 0x10000>, <658 0x10000>;
+	qcom,msm-id = <0x4000291 0x10000>, <0x4000292 0x10000>,
+			<0x8000291 0x10000>, <0x8000292 0x10000>,
+			<0xC000291 0x10000>, <0xC000292 0x10000>,
+			<0x10000291 0x10000>, <0x10000292 0x10000>;
 	qcom,board-id = <8 3>, <8 6>;
 };
