@@ -10,10 +10,12 @@
 		compatible = "qcom,sde-kms";
 		reg = <0x0 0x09800000 0x0 0x1c8800>,
 			<0x0 0x09b16000 0x0 0x2008>,
-			<0x0 0x09b60000 0x0 0x7000>;
+			<0x0 0x09b60000 0x0 0x7000>,
+			<0x0 0x01100000  0x0 0x1000>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
-			"regdma_phys";
+			"regdma_phys",
+			"ipcc_reg";
 
 		/* interrupt config */
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
@@ -233,6 +235,10 @@
 		qcom,sde-qos-cpu-mask-performance = <0x3>;
 		qcom,sde-qos-cpu-dma-latency = <300>;
 		qcom,sde-qos-cpu-irq-latency = <300>;
+
+		qcom,sde-ipcc-protocol-id = <0x4>;
+		qcom,sde-ipcc-client-dpu-phys-id = <0x15>;
+		qcom,sde-hw-fence-mdp-ctl-offset = <0x40000>;
 
 		/* offsets are relative to regdma_phys */
 		qcom,sde-reg-dma-off = <0 0x800>;
