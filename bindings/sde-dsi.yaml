@@ -192,7 +192,7 @@ properties:
     description: Specifies the default panel.
 
   qcom,mdp:
-    description: Specifies the mdp node which can find panel node from this.
+    description: Specifies the list of phandles to all sde kms device nodes.
 
   qcom,demura-panel-id:
     description: |
