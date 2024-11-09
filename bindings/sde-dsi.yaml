@@ -192,7 +192,7 @@ properties:
     description: Specifies the default panel.
 
   qcom,mdp:
-    description: Specifies the mdp node which can find panel node from this.
+    description: Specifies the list of phandles to all sde kms device nodes.
 
   qcom,demura-panel-id:
     description: |
@@ -262,6 +262,10 @@ properties:
 
   qcom,dsi-select-sec-clocks:
     description: Specifies the required clocks to use for secondary panel
+
+  qcom,dsi-select-sec-sync-clocks:
+    description: Specifies the required clocks to use for secondary
+                panel when sync mode is enabled.
 
   qcom,dsi-display-list:
     description: Specifies the list of supported displays.
