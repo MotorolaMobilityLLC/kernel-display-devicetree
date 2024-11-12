@@ -189,6 +189,9 @@
 		/* offsets are based off dspp 0, 1, 2, 3 */
 		qcom,sde-dspp-spr-dither-off = <0x34E0 0x34E0 0x34E0 0x34E0>;
 
+		qcom,sde-lm-noise-off = <0x320>;
+		qcom,sde-lm-noise-version = <0x00010000>;
+
 		qcom,sde-uidle-off = <0x6000>;
 		qcom,sde-uidle-size = <0x80>;
 
