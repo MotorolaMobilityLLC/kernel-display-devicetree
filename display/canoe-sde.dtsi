@@ -55,6 +55,8 @@
 	clock-rate = <0 0 650000000 650000000 19200000 650000000 650000000>;
 	clock-max-rate = <0 0 650000000 650000000 19200000 650000000 650000000>;
 
+	qcom,hw-fence-sw-version = <0x1>;
+
 	power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>;
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
