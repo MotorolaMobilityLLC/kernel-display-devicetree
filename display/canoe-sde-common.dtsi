@@ -189,6 +189,9 @@
 		/* offsets are based off dspp 0, 1, 2, 3 */
 		qcom,sde-dspp-spr-dither-off = <0x34E0 0x34E0 0x34E0 0x34E0>;
 
+		qcom,sde-lm-noise-off = <0x320>;
+		qcom,sde-lm-noise-version = <0x00010000>;
+
 		qcom,sde-uidle-off = <0x6000>;
 		qcom,sde-uidle-size = <0x80>;
 
@@ -255,8 +258,8 @@
 				qcom,sde-vig-csc-off = <0x1800>;
 				qcom,sde-vig-qseed-off = <0x2000>;
 				qcom,sde-vig-qseed-size = <0xec>;
-				qcom,sde-vig-gamut = <0x1C00 0x00060001>;
-				qcom,sde-vig-igc = <0x1d00 0x00060000>;
+				qcom,sde-vig-gamut = <0x1c00 0x00060001>;
+				qcom,sde-vig-igc = <0x1c00 0x00060000>;
 				qcom,sde-vig-inverse-pma;
 				qcom,sde-fp16-igc = <0x200 0x00010000>;
 				qcom,sde-fp16-unmult = <0x200 0x00010000>;
@@ -314,8 +317,152 @@
 
 		qcom,sde-dspp-blocks {
 			qcom,sde-dspp-igc = <0x1260 0x00050001>;
+			qcom,sde-dspp-hsic = <0x800 0x00010007>;
+			qcom,sde-dspp-memcolor = <0x880 0x00010007>;
+			qcom,sde-dspp-hist = <0x800 0x00010007>;
+			qcom,sde-dspp-sixzone = <0x900 0x00020000>;
+			qcom,sde-dspp-vlut = <0xa00 0x00010008>;
 			qcom,sde-dspp-gamut = <0x1000 0x00040003>;
 			qcom,sde-dspp-pcc = <0x1700 0x00060000>;
+			qcom,sde-dspp-gc = <0x17c0 0x00020000>;
+			qcom,sde-dspp-dither = <0x82c 0x00010007>;
 		};
+	};
+
+	mdss_dsi0: qcom,mdss_dsi_ctrl0@9ac0000 {
+		compatible = "qcom,dsi-ctrl-hw-v2.10";
+		label = "dsi-ctrl-0";
+		cell-index = <0>;
+		frame-threshold-time-us = <800>;
+		reg = <0x09ac0000 0x1000>,
+			  <0x09ba2000 0x4>,
+			  <0x0998f000 0x300>;
+		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
+		interrupt-parent = <&mdss_mdp>;
+		interrupts = <4 0>;
+
+		qcom,ctrl-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,ctrl-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-1p2";
+				qcom,supply-min-voltage = <1200000>;
+				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-enable-load = <16600>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+	};
+
+	mdss_dsi1: qcom,mdss_dsi_ctrl1@9ac3000 {
+		compatible = "qcom,dsi-ctrl-hw-v2.10";
+		label = "dsi-ctrl-1";
+		cell-index = <1>;
+		frame-threshold-time-us = <800>;
+		reg = <0x09ac3000 0x1000>,
+			  <0x09ba2000 0x4>,
+			  <0x09990000 0x300>;
+		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
+		interrupt-parent = <&mdss_mdp>;
+		interrupts = <5 0>;
+
+		qcom,ctrl-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			qcom,ctrl-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-1p2";
+				qcom,supply-min-voltage = <1200000>;
+				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-enable-load = <16600>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+	};
+
+	mdss_dsi_phy0: qcom,mdss_dsi_phy0@9ac1500 {
+		compatible = "qcom,dsi-phy-v7.2";
+		label = "dsi-phy-0";
+		cell-index = <0>;
+		#clock-cells = <1>;
+		reg = <0x9ac1000 0xa00>,
+		      <0x9ac1500 0x400>,
+		      <0x9ac0200 0xa0>;
+		reg-names = "dsi_phy", "pll_base", "dyn_refresh_base";
+		pll-label = "dsi_pll_3nm";
+
+		qcom,platform-strength-ctrl = [55 03
+						55 03
+						55 03
+						55 03
+						55 00];
+		qcom,platform-lane-config = [00 00 0a 0a
+						00 00 0a 0a
+						00 00 0a 0a
+						00 00 0a 0a
+						00 00 8a 8a];
+		qcom,platform-regulator-settings = [1d 1d 1d 1d 1d];
+		qcom,phy-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			qcom,phy-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-0p9";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <880000>;
+				qcom,supply-enable-load = <98000>;
+				qcom,supply-disable-load = <96>;
+			};
+		};
+	};
+
+	mdss_dsi_phy1: qcom,mdss_dsi_phy1@9ac4500 {
+		compatible = "qcom,dsi-phy-v7.2";
+		label = "dsi-phy-1";
+		cell-index = <1>;
+		#clock-cells = <1>;
+		reg = <0x9ac4000 0xa00>,
+		      <0x9ac4500 0x400>,
+		      <0x9ac3200 0xa0>;
+		reg-names = "dsi_phy", "pll_base", "dyn_refresh_base";
+		pll-label = "dsi_pll_3nm";
+
+		qcom,platform-strength-ctrl = [55 03
+						55 03
+						55 03
+						55 03
+						55 00];
+		qcom,platform-regulator-settings = [1d 1d 1d 1d 1d];
+		qcom,platform-lane-config = [00 00 0a 0a
+						00 00 0a 0a
+						00 00 0a 0a
+						00 00 0a 0a
+						00 00 8a 8a];
+		qcom,phy-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			qcom,phy-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-0p9";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <880000>;
+				qcom,supply-enable-load = <98000>;
+				qcom,supply-disable-load = <96>;
+			};
+		};
+	};
+
+	dsi_pll_codes_data:dsi_pll_codes {
+		reg = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+			0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0>;
+		label = "dsi_pll_codes";
 	};
 };
