@@ -7,6 +7,13 @@
 #include "kera-sde-display-common.dtsi"
 
 &soc {
+	sde_wb2: qcom,wb-display@2 {
+		compatible = "qcom,wb-display";
+		cell-index = <0>;
+		label = "wb_display2";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
+	};
 };
 
 &sde_dsi {
@@ -68,7 +75,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb2>;
 };
 
 &dsi_vtdr6130_amoled_cmd {
