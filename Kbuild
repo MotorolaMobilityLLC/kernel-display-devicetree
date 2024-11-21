@@ -65,6 +65,16 @@ dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-tuna-sde-display-atp-overlay.dtbo 
 		display/trustedvm-tuna-sde-display-rcm-overlay.dtbo
 endif
 
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo \
+		display/kera-sde-display-atp-overlay.dtbo \
+		display/kera-sde-display-cdp-overlay.dtbo \
+		display/kera-sde-display-mtp-overlay.dtbo \
+		display/kera-sde-display-qrd-overlay.dtbo \
+		display/kera-sde-display-rumi-overlay.dtbo \
+		display/kera-sde-display-rcm-overlay.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
