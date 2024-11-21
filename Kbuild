@@ -1,5 +1,6 @@
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
+		display/canoe-sde-display-rumi-overlay.dtbo\
 		display/canoe-sde-display-cdp-overlay.dtbo \
 		display/canoe-sde-display-mtp-overlay.dtbo \
 		display/canoe-sde-display-rcm-overlay.dtbo \
