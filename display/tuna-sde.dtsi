@@ -207,27 +207,65 @@
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
 		clock-names = "mdp_core_clk";
 	};
+
+	sde_cesta: qcom,sde_cesta@0x0af30000 {
+		cell-index = <0>;
+		compatible = "qcom,sde-cesta";
+		reg = <0x0af20000 0x850>,
+			<0xaf30000 0x60>,
+			<0xaf31000 0x30>,
+			<0xaf32000 0x30>,
+			<0xaf33000 0x30>,
+			<0xaf34000 0x30>,
+			<0xaf35000 0x30>,
+			<0xaf36000 0x30>;
+		reg-names = "rscc", "wrapper", "scc_0", "scc_1", "scc_2", "scc_3", "scc_4", "scc_5";
+
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>,
+				<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>;
+
+		clock-names = "branch_clk", "core_clk";
+		clock-rate = <660000000 660000000>;
+		clock-max-rate = <660000000 660000000>;
+		clock-mmrm = <0 DISP_CC_MDSS_MDP_CLK_SRC>;
+
+		interconnects = <&mmss_noc MASTER_MDP_DISP_CRM_HW_0
+					&mc_virt SLAVE_EBI1_DISP_CRM_HW_0>,
+				<&mmss_noc MASTER_MDP_DISP_CRM_HW_1
+					&mc_virt SLAVE_EBI1_DISP_CRM_HW_1>,
+				<&mmss_noc MASTER_MDP_DISP_CRM_HW_2
+					&mc_virt SLAVE_EBI1_DISP_CRM_HW_2>,
+				<&mmss_noc MASTER_MDP_DISP_CRM_HW_3
+					&mc_virt SLAVE_EBI1_DISP_CRM_HW_3>,
+				<&mmss_noc MASTER_MDP_DISP_CRM_HW_4
+					&mc_virt SLAVE_EBI1_DISP_CRM_HW_4>,
+				<&mmss_noc MASTER_MDP_DISP_CRM_HW_5
+					&mc_virt SLAVE_EBI1_DISP_CRM_HW_5>,
+				<&mmss_noc MASTER_MDP_DISP_CRM_SW_0
+					&mc_virt SLAVE_EBI1_DISP_CRM_SW_0>;
+		interconnect-names = "qcom,sde-data-bus-hw-0", "qcom,sde-data-bus-hw-1",
+					"qcom,sde-data-bus-hw-2", "qcom,sde-data-bus-hw-3",
+					"qcom,sde-data-bus-hw-4", "qcom,sde-data-bus-hw-5",
+					"qcom,sde-data-bus-sw-0";
+
+		power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>;
+	};
 };
 
 &mdss_mdp {
 	clocks =
 		<&gcc GCC_DISP_HF_AXI_CLK>,
 		<&dispcc DISP_CC_MDSS_AHB_CLK>,
-		<&dispcc DISP_CC_MDSS_MDP_CLK>,
-		<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_VSYNC_CLK>,
 		<&dispcc DISP_CC_MDSS_MDP_LUT_CLK>;
 
 	clock-names = "gcc_bus",
-			"iface_clk", "branch_clk", "core_clk", "vsync_clk",
-			"lut_clk";
-	clock-rate = <0 0 660000000 660000000 19200000 660000000>;
-	clock-max-rate = <0 0 660000000 660000000 19200000 660000000>;
-	clock-mmrm = <0 0 0 DISP_CC_MDSS_MDP_CLK_SRC 0 0>;
+			"iface_clk", "vsync_clk", "lut_clk";
+	clock-rate = <0 0 19200000 660000000>;
+	clock-max-rate = <0 0 19200000 660000000>;
 
 	qcom,hw-fence-sw-version = <0x1>;
 
-	power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>;
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
