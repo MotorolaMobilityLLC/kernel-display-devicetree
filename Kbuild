@@ -73,6 +73,13 @@ dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo \
 		display/kera-sde-display-qrd-overlay.dtbo \
 		display/kera-sde-display-rumi-overlay.dtbo \
 		display/kera-sde-display-rcm-overlay.dtbo
+else
+dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-kera-sde-display-atp-overlay.dtbo \
+		display/trustedvm-kera-sde-display-cdp-overlay.dtbo \
+		display/trustedvm-kera-sde-display-mtp-overlay.dtbo \
+		display/trustedvm-kera-sde-display-qrd-overlay.dtbo \
+		display/trustedvm-kera-sde-display-rumi-overlay.dtbo \
+		display/trustedvm-kera-sde-display-rcm-overlay.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
