@@ -543,6 +543,12 @@ properties:
       "constant-fps-adjust-vfp" = FPS is maintained even after
       dynamic clock switch by changing panel vertical front
       porch values.
+      "adjust-hfp" = Dynamic clock switch is achieved by adjusting the
+      horizontal front porch value according to the qcom,dsi-dyn-hfp-list.
+      FPS may not be maintained after the switch.
+      "adjust-vfp" = Dynamic clock switch is achieved by adjusting the
+      vertical front porch value according to the qcom,dsi-dyn-vfp-list.
+      FPS may not be maintatined after the switch.
       This dyn-clk-type entry is an optional binding which is
       contingent on the enabling of dynamic clock switch.
     $ref: /schemas/types.yaml#/definitions/string-array
@@ -1713,6 +1719,24 @@ properties:
       order of preference.
     $ref: /schemas/types.yaml#/definitions/uint32-array
 
+  qcom,dsi-dyn-clk-hfp-list:
+    description: >
+      An u32 array of horizontal front porch values corresponding to the
+      dsi bit clock frequencies in qcom,dsi-dyn-clk-list for the given mode.
+      This property is essential for the adjust-hfp dynamic clock type,
+      which is used for specific horizontal porch adjustments when maintaining
+      a constant frame rate is not required.
+    $ref: /schemas/types.yaml#/definitions/uint32-array
+
+  qcom,dsi-dyn-clk-vfp-list:
+    description: >
+      An u32 array of vertical front porch values corresponding to the
+      dsi bit clock frequencies in qcom,dsi-dyn-clk-list for the given mode.
+      This property is essential for the adjust-vfp dynamic clock type,
+      which is used for specific horizontal porch adjustments when maintaining
+      a constant frame rate is not required.
+    $ref: /schemas/types.yaml#/definitions/uint32-array
+
   qcom,disable-rsc-solver:
     description: >
       Timing node property to dynamically disable RSC solver for
@@ -1908,7 +1932,7 @@ examples:
         qcom,platform-reset-gpio = <&tlmm 0 0>;
 
         qcom,dsi-dyn-clk-enable;
-        qcom,dsi-dyn-clk-type = "constant-fps-adjust-hfp";
+        qcom,dsi-dyn-clk-type = "adjust-hfp";
 
         qcom,mdss-dsi-display-timings {
           wqhd {
@@ -1988,6 +2012,7 @@ examples:
               qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
 
               qcom,dsi-dyn-clk-list = <524637388 525735938 528842882>;
+              qcom,dsi-dyn-clk-hfp-list = <52 64 96>;
 
               qcom,vert-padding-value = <2940>;
               qcom,mdss-dsc-slice-height = <16>;
