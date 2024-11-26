@@ -66,8 +66,6 @@
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
 		qcom,mdss-dsi-panel-local-hbm-DDIC-type = <0x6126>;
-		qcom,mdss-dsi-panel-local-hbm-THRESHOLD-BL = <14056>;
-		qcom,mdss-dsi-panel-local-hbm-max-hbm-value = <16000>;
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
