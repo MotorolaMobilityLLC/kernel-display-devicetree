@@ -413,6 +413,7 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 	qcom,partition-refreshrate-enabled;
+	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -514,11 +515,11 @@
 			qcom,framerate-group-partition-refreshrate;
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
-			//qcom,mdss-dsi-panel-clockrate = <518000000>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1E 05
-							05 06 02 04 00 12 0A];
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
 		};
 	};
 };
@@ -563,6 +564,7 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 	qcom,partition-refreshrate-enabled;
+	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -664,11 +666,11 @@
 			qcom,framerate-group-partition-refreshrate;
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
-			qcom,mdss-dsi-panel-clockrate = <518000000>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1E 05
-							05 06 02 04 00 12 0A];
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
 		};
 	};
 };
@@ -713,6 +715,7 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 	qcom,partition-refreshrate-enabled;
+	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -814,11 +817,11 @@
 			qcom,framerate-group-partition-refreshrate;
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
-			qcom,mdss-dsi-panel-clockrate = <518000000>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1E 05
-							05 06 02 04 00 12 0A];
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
 		};
 	};
 };
