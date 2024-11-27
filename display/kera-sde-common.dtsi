@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
@@ -13,13 +13,11 @@
 		reg = <0x0ae00000 0x93800>,
 		      <0x0aeb0000 0x2008>,
 		      <0x0af80000 0x7000>,
-		      <0x400000 0x2000>,
-		      <0x0af50000 0x128>;
+		      <0x400000 0x2000>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
 			"regdma_phys",
-			"ipcc_reg",
-			"swfuse_phys";
+			"ipcc_reg";
 
 		/* interrupt config */
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
@@ -31,33 +29,28 @@
 		qcom,sde-off = <0x1000>;
 		qcom,sde-len = <0x488>;
 
-		qcom,sde-ctl-off = <0x16000 0x17000 0x18000
-					0x19000 0x1a000 0x1b000>;
+		qcom,sde-ctl-off = <0x16000 0x17000 0x18000 0x19000>;
 		qcom,sde-ctl-size = <0x1000>;
-		qcom,sde-ctl-display-pref = "primary", "none", "none",
-			    "none", "none", "none";
+		qcom,sde-ctl-display-pref = "primary", "none", "none", "none";
 
 		qcom,sde-mixer-off = <0x45000 0x46000 0x47000
-				      0x48000 0x49000 0x4a000
-				      0x4b000 0x4c000 0x0f0f
-				      0x0f0f  0x0f0f 0x0f0f>;
+				      0x48000 0x0f0f 0x0f0f
+				      0x0f0f 0x0f0f>;
 		qcom,sde-mixer-size = <0x400>;
 		qcom,sde-mixer-display-pref = "primary", "primary", "none",
-					"none", "none", "none", "none", "none",
-					"none", "none", "none", "none";
+					"none", "none", "none", "none", "none";
 
 		qcom,sde-mixer-dcwb-pref = "none", "none", "none", "none",
-					"none", "none", "none", "none",
 					"dcwb", "dcwb", "dcwb", "dcwb";
 
 		qcom,sde-dspp-top-off = <0x1300>;
 		qcom,sde-dspp-top-size = <0x8c>;
 
-		qcom,sde-dspp-off = <0x55000 0x57000 0x59000 0x5b000>;
+		qcom,sde-dspp-off = <0x55000 0x57000 0x59000>;
 		qcom,sde-dspp-size = <0x1800>;
 
 		qcom,sde-dspp-rc-version = <0x00010001>;
-		qcom,sde-dspp-rc-off = <0x15800 0x14800 0x13800 0x12800>;
+		qcom,sde-dspp-rc-off = <0x15800 0x14800 0x13800>;
 		qcom,sde-dspp-rc-size = <0x100>;
 		qcom,sde-dspp-rc-mem-size = <2720>;
 		qcom,sde-dspp-rc-min-region-width = <20>;
@@ -72,13 +65,13 @@
 
 		qcom,sde-dest-scaler-top-off = <0x0008F000>;
 		qcom,sde-dest-scaler-top-size = <0x1C>;
-		qcom,sde-dest-scaler-off = <0x0 0x1000 0x2000 0x3000>;
+		qcom,sde-dest-scaler-off = <0x0 0x1000 0x2000>;
 		qcom,sde-dest-scaler-size = <0x800>;
 
-		qcom,sde-wb-off = <0x65000 0x66000>;
+		qcom,sde-wb-off = <0x66000>;
 		qcom,sde-wb-size = <0x2c8>;
-		qcom,sde-wb-xin-id = <0xa 6>;
-		qcom,sde-wb-id = <1 2>;
+		qcom,sde-wb-xin-id = <6>;
+		qcom,sde-wb-id = <2>;
 
 		qcom,sde-intf-off = <0x35000 0x36000 0x37000 0x38000>;
 		qcom,sde-intf-size = <0x4BC>;
@@ -86,72 +79,64 @@
 		qcom,sde-intf-tear-irq-off = <0 0x36800 0x37800 0>;
 
 		qcom,sde-pp-off = <0x6a000 0x6b000 0x6c000 0x6d000
-					0x6e000 0x6f000 0x70000 0x71000
 					0x67000 0x67400 0x7f000 0x7f400>;
-		qcom,sde-pp-slave = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0>;
+		qcom,sde-pp-slave = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0>;
 		qcom,sde-pp-size = <0x2c>;
-		qcom,sde-pp-merge-3d-id = <0x0 0x0 0x1 0x1 0x2 0x2 0x3 0x3 0x4 0x4 0x5 0x5>;
+		qcom,sde-pp-merge-3d-id = <0x0 0x0 0x1 0x1 0x2 0x2 0x3 0x3>;
 
-		qcom,sde-merge-3d-off = <0x4f000 0x50000 0x51000 0x52000 0x67700 0x7f700>;
+		qcom,sde-merge-3d-off = <0x4f000 0x50000 0x67700 0x7f700>;
 		qcom,sde-merge-3d-size = <0x1c>;
-		qcom,sde-pp-cwb = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
+		qcom,sde-pp-cwb = <0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
 
 		qcom,sde-cdm-off = <0x7a200>;
 		qcom,sde-cdm-size = <0x240>;
 
-		qcom,sde-dsc-off = <0x81000 0x81000 0x82000 0x82000 0x83000 0x83000 0x84000 0x84000>;
+		qcom,sde-dsc-off = <0x81000 0x81000 0x82000>;
 		qcom,sde-dsc-size = <0x8>;
-		qcom,sde-dsc-pair-mask = <2 1 4 3 6 5 8 7>;
+		qcom,sde-dsc-pair-mask = <2 1 0>;
 		qcom,sde-dsc-hw-rev = "dsc_1_2";
-		qcom,sde-dsc-enc = <0x100 0x200 0x100 0x200 0x100 0x200 0x100 0x200>;
+		qcom,sde-dsc-enc = <0x100 0x200 0x100>;
 		qcom,sde-dsc-enc-size = <0x100>;
-		qcom,sde-dsc-ctl = <0xF00 0xF80 0xF00 0xF80 0xF00 0xF80 0xF00 0xF80>;
+		qcom,sde-dsc-ctl = <0xF00 0xF80 0xF00>;
 		qcom,sde-dsc-ctl-size = <0x24>;
-		qcom,sde-dsc-native422-supp = <1 1 1 1 1 1 1 1>;
+		qcom,sde-dsc-native422-supp = <1 1 1>;
 
-		qcom,sde-dither-off = <0xe0 0xe0 0xe0
-				0xe0 0xe0 0xe0 0xe0 0xe0 0xe0 0xe0 0xe0 0xe0>;
-		qcom,sde-cwb-dither = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
+		qcom,sde-dither-off = <0xe0 0xe0 0xe0 0xe0 0xe0 0xe0 0xe0 0xe0>;
+		qcom,sde-cwb-dither = <0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
 		qcom,sde-dither-version = <0x00020000>;
 		qcom,sde-dither-size = <0x20>;
 
-		qcom,sde-sspp-type = "vig", "vig", "vig", "vig",
-					"dma", "dma", "dma", "dma", "dma", "dma";
-		qcom,sde-sspp-off = <0x5000 0x7000 0x9000 0xb000
-					0x25000 0x27000 0x29000 0x2b000 0x2d000 0x2f000>;
+		qcom,sde-sspp-type = "vig", "vig",
+					"dma", "dma", "dma", "dma";
+		qcom,sde-sspp-off = <0x5000 0x7000
+					0x25000 0x27000 0x29000 0x2b000>;
 		qcom,sde-sspp-src-size = <0x344>;
 
-		qcom,sde-sspp-xin-id = <0 4 8 12 1 5 9 13 14 15>;
-		qcom,sde-sspp-excl-rect = <1 1 1 1 1 1 1 1 1 1>;
-		qcom,sde-sspp-smart-dma-priority = <7 8 9 10 1 2 3 4 5 6>;
+		qcom,sde-sspp-xin-id = <0 4 1 5 9 13>;
+		qcom,sde-sspp-excl-rect = <1 1 1 1 1 1>;
+		qcom,sde-sspp-smart-dma-priority = <5 6 1 2 3 4>;
 		qcom,sde-smart-dma-rev = "smart_dma_v2p5";
 
-		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7 10 9 12 11>;
+		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7>;
 
 		qcom,sde-mixer-blend-op-off = <0x40 0x70 0xa0 0xd0 0x100 0x130
 						0x160 0x190 0x1c0 0x1f0 0x220>;
 
-		qcom,sde-max-per-pipe-bw-kbps = <4500000 4500000
-						 4500000 4500000
-						 4500000 4500000
-						 4500000 4500000
-						 4500000 4500000>;
+		qcom,sde-max-per-pipe-bw-kbps = <4300000 4300000
+						 4300000 4300000
+						 4300000 4300000>;
 
-		qcom,sde-max-per-pipe-bw-high-kbps = <5700000 5700000
-						      5700000 5700000
-						      5700000 5700000
-						      5700000 5700000
-						      5700000 5700000>;
+		qcom,sde-max-per-pipe-bw-high-kbps = <4300000 4300000
+						      4300000 4300000
+						      4300000 4300000>;
 
 		/* offsets are relative to "mdp_phys + qcom,sde-off */
 		qcom,sde-sspp-clk-ctrl =
-				<0x4330 0>, <0x6330 0>, <0x8330 0>, <0xa330 0>,
-				<0x24330 0>, <0x26330 0>, <0x28330 0>, <0x2a330 0>,
-				<0x2c330 0>, <0x2e330 0>;
+				<0x4330 0>, <0x6330 0>,
+				<0x24330 0>, <0x26330 0>, <0x28330 0>, <0x2a330 0>;
 		qcom,sde-sspp-clk-status =
-				<0x4334 0>, <0x6334 0>, <0x8334 0>, <0xa334 0>,
-				<0x24334 0>, <0x26334 0>, <0x28334 0>, <0x2a334 0>,
-				<0x2c334 0>, <0x2e334 0>;
+				<0x4334 0>, <0x6334 0>,
+				<0x24334 0>, <0x26334 0>, <0x28334 0>, <0x2a334 0>;
 		qcom,sde-sspp-csc-off = <0x1a00>;
 		qcom,sde-csc-type = "csc-10bit";
 		qcom,sde-qseed-sw-lib-rev = "qseedv3lite";
@@ -165,9 +150,8 @@
 		qcom,sde-max-dest-scaler-output-linewidth = <2560>;
 		qcom,sde-wb-linewidth-linear = <8192>;
 		qcom,sde-mixer-blendstages = <0xb>;
-		qcom,sde-highest-bank-bit = <0x8 0x3>,
-					    <0x7 0x2>;
-		qcom,sde-ubwc-version = <0x50000001>;
+		qcom,sde-highest-bank-bit = <0x8 0x2>;
+		qcom,sde-ubwc-version = <0x40000000>;
 		qcom,sde-ubwc-swizzle = <0x6>;
 		qcom,sde-ubwc-bw-calc-version = <0x1>;
 		qcom,sde-ubwc-static = <0x1>;
@@ -181,43 +165,22 @@
 		qcom,sde-has-dest-scaler;
 		qcom,sde-max-trusted-vm-displays = <1>;
 
-		qcom,sde-max-bw-low-kbps = <18900000>;
-		qcom,sde-max-bw-high-kbps = <28500000>;
+		qcom,sde-max-bw-low-kbps = <6800000>;
+		qcom,sde-max-bw-high-kbps = <14200000>;
 		qcom,sde-min-core-ib-kbps = <2500000>;
 		qcom,sde-min-llcc-ib-kbps = <0>;
-		qcom,sde-min-dram-ib-kbps = <800000>;
-		qcom,sde-dram-channels = <4>;
+		qcom,sde-min-dram-ib-kbps = <1600000>;
+		qcom,sde-dram-channels = <2>;
 		qcom,sde-num-nrt-paths = <0>;
+		qcom,sde-num-ddr-channels =  <2>;
 
-		qcom,sde-dspp-spr-off = <0x15400 0x14400 0x13400 0x12400>;
+		qcom,sde-dspp-spr-off = <0x15400 0x14400 0x13400>;
 		qcom,sde-dspp-spr-size = <0x200>;
 		qcom,sde-dspp-spr-version = <0x00020000>;
 
-		qcom,sde-dspp-demura-off = <0x15600 0x14600 0x13600 0x12600>;
+		qcom,sde-dspp-demura-off = <0x15600 0x14600 0x13600>;
 		qcom,sde-dspp-demura-size = <0x150>;
 		qcom,sde-dspp-demura-version = <0x00030000>;
-
-		qcom,sde-dspp-aiqe-off = <0x39000 0xffffffff 0x3a000 0xffffffff>;
-		qcom,sde-dspp-aiqe-version = <0x00010000>;
-		qcom,sde-dspp-aiqe-size = <0x3fc>;
-
-		qcom,sde-dspp-aiqe-dither-off = <0x39700 0xffffffff 0x3a700 0xffffffff>;
-		qcom,sde-dspp-aiqe-dither-version = <0x00010000>;
-		qcom,sde-dspp-aiqe-dither-size = <0x20>;
-
-		qcom,sde-dspp-aiqe-wrapper-off = <0x39780 0xffffffff 0x3a780 0xffffffff>;
-		qcom,sde-dspp-aiqe-wrapper-version = <0x00010000>;
-		qcom,sde-dspp-aiqe-wrapper-size = <0x1c>;
-
-		qcom,sde-dspp-aiqe-aiscaler-off = <0x30000 0xffffffff>;
-		qcom,sde-dspp-aiqe-aiscaler-version = <0x00010000>;
-		qcom,sde-dspp-aiqe-aiscaler-size = <0x7d0>;
-
-		qcom,sde-aiqe-has-feature-mdnie;
-		qcom,sde-aiqe-has-feature-abc;
-		qcom,sde-aiqe-has-feature-ssrc;
-		qcom,sde-aiqe-has-feature-copr;
-		qcom,sde-aiqe-has-feature-aiscaler;
 
 		qcom,sde-lm-noise-off = <0x320>;
 		qcom,sde-lm-noise-version = <0x00010000>;
@@ -262,7 +225,7 @@
 		qcom,sde-cdp-setting = <1 1>, <1 0>;
 
 		qcom,sde-qos-cpu-mask = <0x3>;
-		qcom,sde-qos-cpu-mask-performance = <0x3>;
+		qcom,sde-qos-cpu-mask-performance = <0x7>;
 		qcom,sde-qos-cpu-dma-latency = <300>;
 		qcom,sde-qos-cpu-irq-latency = <300>;
 
@@ -278,7 +241,7 @@
 		qcom,sde-reg-dma-xin-id = <7>;
 		qcom,sde-reg-dma-clk-ctrl = <0x2bc 20>;
 
-		qcom,sde-secure-sid-mask = <0x0002801 0x0002c01>;
+		qcom,sde-secure-sid-mask = <0x801>;
 
 		qcom,sde-reg-bus,vectors-KBps = <0 0>,
 				<0 14000>,
@@ -383,7 +346,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
-				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-max-voltage = <1320000>;
 				qcom,supply-enable-load = <16600>;
 				qcom,supply-disable-load = <0>;
 			};
@@ -409,7 +372,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
-				qcom,supply-max-voltage = <1200000>;
+				qcom,supply-max-voltage = <1320000>;
 				qcom,supply-enable-load = <16600>;
 				qcom,supply-disable-load = <0>;
 			};
@@ -417,7 +380,7 @@
 	};
 
 	mdss_dsi_phy0: qcom,mdss_dsi_phy0@ae95500 {
-		compatible = "qcom,dsi-phy-v7.2";
+		compatible = "qcom,dsi-phy-v5.2";
 		label = "dsi-phy-0";
 		cell-index = <0>;
 		#clock-cells = <1>;
@@ -425,7 +388,7 @@
 		      <0xae95500 0x400>,
 		      <0xae94200 0xa0>;
 		reg-names = "dsi_phy", "pll_base", "dyn_refresh_base";
-		pll-label = "dsi_pll_3nm";
+		pll-label = "dsi_pll_4nm";
 
 		qcom,platform-strength-ctrl = [55 03
 						55 03
@@ -438,6 +401,7 @@
 						00 00 0a 0a
 						00 00 8a 8a];
 		qcom,platform-regulator-settings = [1d 1d 1d 1d 1d];
+
 		qcom,phy-supply-entries {
 			#address-cells = <1>;
 			#size-cells = <0>;
@@ -445,7 +409,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-0p9";
 				qcom,supply-min-voltage = <880000>;
-				qcom,supply-max-voltage = <880000>;
+				qcom,supply-max-voltage = <950000>;
 				qcom,supply-enable-load = <98000>;
 				qcom,supply-disable-load = <96>;
 			};
@@ -453,7 +417,7 @@
 	};
 
 	mdss_dsi_phy1: qcom,mdss_dsi_phy1@ae97500 {
-		compatible = "qcom,dsi-phy-v7.2";
+		compatible = "qcom,dsi-phy-v5.2";
 		label = "dsi-phy-1";
 		cell-index = <1>;
 		#clock-cells = <1>;
@@ -461,7 +425,7 @@
 		      <0xae97500 0x400>,
 		      <0xae96200 0xa0>;
 		reg-names = "dsi_phy", "pll_base", "dyn_refresh_base";
-		pll-label = "dsi_pll_3nm";
+		pll-label = "dsi_pll_4nm";
 
 		qcom,platform-strength-ctrl = [55 03
 						55 03
@@ -481,7 +445,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-0p9";
 				qcom,supply-min-voltage = <880000>;
-				qcom,supply-max-voltage = <880000>;
+				qcom,supply-max-voltage = <950000>;
 				qcom,supply-enable-load = <98000>;
 				qcom,supply-disable-load = <96>;
 			};
