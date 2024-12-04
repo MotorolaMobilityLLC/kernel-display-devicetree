@@ -132,8 +132,12 @@
 		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
 
 		pinctrl-names = "panel_active", "panel_suspend";
-		pinctrl-0 = <&sde_dsi_active &sde_te_active>;
-		pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
+		pinctrl-0 = <&sde_dsi_active &sde_te_active
+				&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+				&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
+		pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend
+				&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+				&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
 
 		qcom,platform-te-gpio = <&tlmm 86 0>;
 		qcom,panel-te-source = <0>;

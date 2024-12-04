@@ -11,7 +11,9 @@ dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
 		display/canoe-sde-display-mtp-mango-overlay.dtbo \
 		display/canoe-sde-display-rcm-mango-overlay.dtbo \
 		display/canoe-sde-display-mtp-qmp1000-overlay.dtbo \
-		display/canoe-sde-display-mtp-3.5mm-overlay.dtbo
+		display/canoe-sde-display-mtp-3.5mm-overlay.dtbo \
+		display/canoe-sde-display-qrd-sku1-overlay.dtbo \
+		display/canoe-sde-display-qrd-sku2-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)

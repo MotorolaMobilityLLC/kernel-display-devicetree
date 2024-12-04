@@ -33,6 +33,21 @@
 		qcom,proxy-consumer-enable;
 		pinctrl-names = "default";
 	};
+
+	display_panel_vdd: display_gpio_regulator@2 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_vdd";
+		regulator-min-microvolt = <1100000>;
+		regulator-max-microvolt = <1100000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&pmd802x_gpios 2 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_vdd>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&sde_disp0_vdd_active>;
+	};
 };
 
 &sde_dsi {

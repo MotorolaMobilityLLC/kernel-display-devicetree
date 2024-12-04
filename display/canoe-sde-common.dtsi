@@ -108,15 +108,14 @@
 		qcom,sde-dither-version = <0x00030000>;
 		qcom,sde-dither-size = <0x24>;
 
-		qcom,sde-sspp-type = "vig", "vig", "vig", "vig",
-					"dma", "dma", "dma", "dma", "dma", "dma";
-		qcom,sde-sspp-off = <0x2c000 0x35000 0x3e000 0x47000
-					0x98000 0xa1000 0xaa000 0xb3000 0xbc000 0xc5000>;
+		qcom,sde-sspp-type = "vig", "vig", "dma", "dma", "dma", "dma";
+		qcom,sde-sspp-off = <0x2c000 0x35000
+			0x98000 0xa1000 0xaa000 0xb3000>;
 		qcom,sde-sspp-src-size = <0x84>;
+		qcom,sde-sspp-xin-id = <0 4 1 5 9 13>;
+		qcom,sde-sspp-excl-rect = <1 1 1 1 1 1>;
+		qcom,sde-sspp-smart-dma-priority = <5 6 1 2 3 4>;
 
-		qcom,sde-sspp-xin-id = <0 4 8 12 1 5 9 13 14 15>;
-		qcom,sde-sspp-excl-rect = <1 1 1 1 1 1 1 1 1 1>;
-		qcom,sde-sspp-smart-dma-priority = <7 8 9 10 1 2 3 4 5 6>;
 		qcom,sde-smart-dma-rev = "smart_dma_v2p5";
 
 		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7 10 9 12 11>;
@@ -340,7 +339,7 @@
 		cell-index = <0>;
 		frame-threshold-time-us = <800>;
 		reg = <0x0 0x09ac0000 0x0 0x1000>,
-			  <0x0 0x09ba2000 0x0 0x4>,
+			  <0x0 0x9BB1000 0x0 0x4>,
 			  <0x0 0x0998f000 0x0 0x300>;
 		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
 		interrupt-parent = <&mdss_mdp>;
@@ -367,7 +366,7 @@
 		cell-index = <1>;
 		frame-threshold-time-us = <800>;
 		reg = <0x0 0x09ac3000 0x0 0x1000>,
-			  <0x0 0x09ba2000 0x0 0x4>,
+			  <0x0 0x9BB1000 0x0 0x4>,
 			  <0x0 0x09990000 0x0 0x300>;
 		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
 		interrupt-parent = <&mdss_mdp>;
