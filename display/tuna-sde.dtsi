@@ -34,10 +34,11 @@
 		compatible = "qcom,dp-display";
 		status = "disabled";
 
-		//usb-phy = <&usb_qmp_dp_phy>;
+		usb-phy = <&usb_qmp_dp_phy>;
 		qcom,ext-disp = <&ext_disp>;
 		usb-controller = <&usb0>;
 		qcom,altmode-dev = <&altmode 0>;
+		qcom,dp-aux-switch = <&wcd_usbss>;
 
 		reg =  <0xaf54000 0x104>,
 			<0xaf54200 0x0c0>,
@@ -104,7 +105,7 @@
 		vdda-1p2-supply = <&L4B>;
 		vdda-0p9-supply = <&L3B>;
 		vdda_usb-0p9-supply = <&L3B>;
-		//vdd_mx-supply = <&VDD_MXA_LEVEL>;
+		vdd_mx-supply = <&VDD_MXA_LEVEL>;
 		dp_phy_gdsc-supply = <&gcc_usb3_phy_gdsc>;
 
 		qcom,hbr-rbr-voltage-swing = <0x07 0x0f 0x16 0x1f>,
@@ -133,7 +134,7 @@
 				reg = <0>;
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
-				qcom,supply-max-voltage = <1300000>;
+				qcom,supply-max-voltage = <1200000>;
 				qcom,supply-enable-load = <30000>;
 				qcom,supply-disable-load = <0>;
 			};

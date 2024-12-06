@@ -125,6 +125,14 @@
 	qcom,dsi-default-panel = <&dsi_nt37801_amoled_cmd_cphy>;
 };
 
+&sde_dp {
+        status = "ok";
+};
+
+&mdss_mdp {
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb1 &sde_wb2 &sde_dp>;
+};
+
 &qupv3_se4_spi {
 	st_fts@0 {
 		panel = <&dsi_nt37801_amoled_cmd_cphy
