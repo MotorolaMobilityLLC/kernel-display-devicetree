@@ -150,7 +150,8 @@
 		qcom,sde-max-dest-scaler-output-linewidth = <2560>;
 		qcom,sde-wb-linewidth-linear = <8192>;
 		qcom,sde-mixer-blendstages = <0xb>;
-		qcom,sde-highest-bank-bit = <0x8 0x2>;
+		qcom,sde-highest-bank-bit = <0x8 0x2>,
+					    <0x7 0x1>;
 		qcom,sde-ubwc-version = <0x40000000>;
 		qcom,sde-ubwc-swizzle = <0x6>;
 		qcom,sde-ubwc-bw-calc-version = <0x1>;
