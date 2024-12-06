@@ -214,9 +214,8 @@
 	clock-rate = <0 0 0 650000000 650000000 19200000 650000000 650000000>;
 	clock-max-rate = <0 0 0 650000000 650000000 19200000 650000000 650000000>;
 
-	qcom,hw-fence-sw-version = <0x1>;
-
-	power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>;
+	power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>, <&dispcc DISP_CC_MDSS_CORE_INT2_GDSC>;
+	power-domain-names = "core_gdsc", "core_int2_gdsc";
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
