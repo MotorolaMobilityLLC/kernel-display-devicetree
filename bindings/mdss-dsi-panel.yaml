@@ -94,7 +94,9 @@ properties:
       A byte stream formed by multiple dcs packets base on
       qcom dsi controller protocol.
       byte 0: dcs data type
-      byte 1: Unused
+      byte 1: first two most significant bits specify the DSI controller index to allow
+	      unicast command transfer on a given controller provided the MIPI unicast
+	      flag is set i.e. BIT(7) of byte 3.
       byte 2: virtual channel number
       byte 3: Message flags
       byte 4: wait number of specified ms after dcs command transmitted
