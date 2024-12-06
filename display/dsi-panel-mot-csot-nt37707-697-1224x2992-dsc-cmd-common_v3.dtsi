@@ -2532,7 +2532,7 @@ qcom,mdss-dsi-display-timings {
 	timing@8{
 		qcom,mdss-dsi-cmd-mode;
 		/* Actually 10-60-10 hz*/
-		qcom,mdss-dsi-panel-framerate = <120>;
+		qcom,mdss-dsi-panel-framerate = <60>;
 		qcom,mdss-dsi-panel-width = <1224>;
 		qcom,mdss-dsi-panel-height = <2992>;
 		qcom,mdss-dsi-h-front-porch = <20>;
