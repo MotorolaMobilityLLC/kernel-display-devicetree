@@ -8,6 +8,10 @@
 	qcom,board-id = <0 0>;
 };
 
+&sde_dp {
+	qcom,max-pclk-frequency-khz = <675000>;
+};
+
 &mdss_dsi0 {
 	/delete-property/ reg;
 	/delete-property/ reg-names;
