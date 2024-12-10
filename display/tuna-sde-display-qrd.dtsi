@@ -5,6 +5,17 @@
 
 #include "tuna-sde-display.dtsi"
 
+&L3D {
+	qcom,init-voltage = <1090000>;
+};
+
+&dsi_panel_pwr_supply {
+	qcom,panel-supply-entry@1 {
+		qcom,supply-min-voltage = <1090000>;
+		qcom,supply-max-voltage = <1100000>;
+	};
+};
+
 &dsi_nt37801_amoled_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
