@@ -288,10 +288,6 @@
 				qcom,sde-vig-gamut = <0x1c00 0x00060001>;
 				qcom,sde-vig-igc = <0x1c00 0x00060000>;
 				qcom,sde-vig-inverse-pma;
-				qcom,sde-fp16-igc = <0x200 0x00010000>;
-				qcom,sde-fp16-unmult = <0x200 0x00010000>;
-				qcom,sde-fp16-gc = <0x200 0x00010000>;
-				qcom,sde-fp16-csc = <0x200 0x00010000>;
 				qcom,sde-ucsc-igc = <0x1600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x1600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x1600 0x00010001>;
@@ -301,10 +297,6 @@
 
 			vcm@1 {
 				cell-index = <1>;
-				qcom,sde-fp16-igc = <0x280 0x00010000>;
-				qcom,sde-fp16-unmult = <0x280 0x00010000>;
-				qcom,sde-fp16-gc = <0x280 0x00010000>;
-				qcom,sde-fp16-csc = <0x280 0x00010000>;
 				qcom,sde-ucsc-igc = <0x3600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x3600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x3600 0x00010001>;
@@ -317,10 +309,6 @@
 			dgm@0 {
 				cell-index = <0>;
 				qcom,sde-dma-top-off = <0x1600>;
-				qcom,sde-fp16-igc = <0x200 0x00010000>;
-				qcom,sde-fp16-unmult = <0x200 0x00010000>;
-				qcom,sde-fp16-gc = <0x200 0x00010000>;
-				qcom,sde-fp16-csc = <0x200 0x00010000>;
 				qcom,sde-ucsc-igc = <0x1600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x1600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x1600 0x00010001>;
@@ -330,10 +318,6 @@
 
 			dgm@1 {
 				cell-index = <1>;
-				qcom,sde-fp16-igc = <0x200 0x00010000>;
-				qcom,sde-fp16-unmult = <0x200 0x00010000>;
-				qcom,sde-fp16-gc = <0x200 0x00010000>;
-				qcom,sde-fp16-csc = <0x200 0x00010000>;
 				qcom,sde-ucsc-igc = <0x3600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x3600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x3600 0x00010001>;

@@ -229,6 +229,8 @@
 	interconnect-names = "qcom,sde-data-bus0",
 			"qcom,sde-ebi-bus", "qcom,sde-reg-bus";
 
+	qcom,sde-has-idle-pc;
+
 	qcom,sde-ib-bw-vote = <2500000 0 800000>;
 	qcom,sde-dspp-ltm-version = <0x00010004>;
 	/* offsets are based off dspp 0, 1, 2, and 3 */
