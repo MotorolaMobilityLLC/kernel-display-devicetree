@@ -13,11 +13,13 @@
 		reg = <0x0ae00000 0x93800>,
 		      <0x0aeb0000 0x2008>,
 		      <0x0af80000 0x7000>,
-		      <0x400000 0x2000>;
+		      <0x400000 0x2000>,
+		      <0x0af50000 0x140>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
 			"regdma_phys",
-			"ipcc_reg";
+			"ipcc_reg",
+			"swfuse_phys";
 
 		/* interrupt config */
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
