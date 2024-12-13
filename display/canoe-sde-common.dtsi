@@ -259,7 +259,7 @@
 
 		qcom,sde-ipcc-protocol-id = <0x4>;
 		qcom,sde-ipcc-client-dpu-phys-id = <0x15>;
-		qcom,sde-hw-fence-mdp-ctl-offset = <0x40000>;
+		qcom,sde-hw-fence-mdp-ctl-offset = <0x4000>;
 		qcom,sde-ipcc-protocol-offset = <0xc0000>;
 		qcom,sde-ipcc-client-out-phys-id = <24>;
 
