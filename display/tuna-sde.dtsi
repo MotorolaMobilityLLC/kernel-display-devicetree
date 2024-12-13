@@ -183,6 +183,7 @@
 
 	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
 		iommu-addresses = <&smmu_sde_unsec 0x0 0x00060000>,
+				  <&smmu_sde_unsec 0xFC800000 0x02B00000>,
 				  <&smmu_sde_sec 0x0 0x00020000>;
 	};
 
@@ -231,7 +232,7 @@
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
-	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
+	qcom,sde-vm-exclude-reg-names = "ipcc_reg", "swfuse_phys";
 
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
