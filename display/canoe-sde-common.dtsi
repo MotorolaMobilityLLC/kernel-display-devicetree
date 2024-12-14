@@ -28,10 +28,10 @@
 		qcom,sde-len = <0x488>;
 
 		qcom,sde-ctl-off = <0x20000 0x21000 0x22000 0x23000
-					0x24000 0x25000 0x26000 0x27000>;
+					0x24000 0x25000>;
 		qcom,sde-ctl-size = <0x1000>;
 		qcom,sde-ctl-display-pref = "primary", "none", "none", "none",
-					"none", "none", "none", "none";
+					"none", "none";
 
 		qcom,sde-mixer-off = <0x104000  0x10c000 0x114000
 					0x11c000 0x124000 0x12c000
