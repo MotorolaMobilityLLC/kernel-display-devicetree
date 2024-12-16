@@ -79,7 +79,7 @@
 		qcom,aux-cfg8-settings = [40 b7];
 		qcom,aux-cfg9-settings = [44 03];
 
-		qcom,max-pclk-frequency-khz = <675000>;
+		qcom,max-pclk-frequency-khz = <148500>;
 
 		qcom,widebus-enable;
 		qcom,dsc-feature-enable;
