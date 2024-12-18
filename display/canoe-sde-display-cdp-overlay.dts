@@ -9,7 +9,7 @@
 #include "canoe-sde-display-cdp.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Canoe CDP";
+	model = "Qualcomm Technologies, Inc. Canoe CDP + ST54L + Kundu";
 	compatible = "qcom,canoe-cdp", "qcom,canoe", "qcom,canoep-cdp", "qcom,canoep",
 			   "qcom,cdp";
 	qcom,msm-id = <660 0x10000>, <660 0x20000>, <661 0x10000>, <661 0x20000>,

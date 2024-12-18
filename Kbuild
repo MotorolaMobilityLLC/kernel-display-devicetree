@@ -3,15 +3,12 @@ dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
 		display/canoe-sde-display-rumi-overlay.dtbo\
 		display/canoe-sde-display-cdp-overlay.dtbo \
 		display/canoe-sde-display-mtp-overlay.dtbo \
+		display/canoe-sde-display-atp-overlay.dtbo \
 		display/canoe-sde-display-rcm-overlay.dtbo \
 		display/canoe-sde-display-cdp-kiwi-overlay.dtbo \
-		display/canoe-sde-display-mtp-kiwi-overlay.dtbo \
 		display/canoe-sde-display-rcm-kiwi-overlay.dtbo \
-		display/canoe-sde-display-cdp-mango-overlay.dtbo \
-		display/canoe-sde-display-mtp-mango-overlay.dtbo \
-		display/canoe-sde-display-rcm-mango-overlay.dtbo \
-		display/canoe-sde-display-mtp-qmp1000-overlay.dtbo \
-		display/canoe-sde-display-mtp-3.5mm-overlay.dtbo \
+		display/canoe-sde-display-cdp-st54l-pandeiro-overlay.dtbo \
+		display/canoe-sde-display-rcm-st54l-pandeiro-overlay.dtbo \
 		display/canoe-sde-display-qrd-sku1-overlay.dtbo \
 		display/canoe-sde-display-qrd-sku2-overlay.dtbo
 endif
