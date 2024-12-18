@@ -31,6 +31,9 @@
 		qcom,sde-off = <0x1000>;
 		qcom,sde-len = <0x488>;
 
+		qcom,sde-ctl-hyp-off = <0x15000>;
+		qcom,sde-ctl-hyp-size = <0xc00>;
+
 		qcom,sde-ctl-off = <0x16000 0x17000 0x18000
 					0x19000 0x1a000 0x1b000>;
 		qcom,sde-ctl-size = <0x1000>;
