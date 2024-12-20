@@ -4,6 +4,7 @@
  */
 
 #include "canoe-sde.dtsi"
+#include "canoe-sde-display-pinctrl.dtsi"
 #include "canoe-sde-display-common.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
 
@@ -77,6 +78,14 @@
 	vci-supply = <&L13B>;
 	vdd-supply = <&L11B>;
 	tvdd-supply = <&L4B>;
+
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi_active &sde_te_active
+			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
+	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend
+			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
 };
 
 &sde_dsi1 {
@@ -106,6 +115,10 @@
 	vci-supply = <&L13B>;
 	vdd-supply = <&L11B>;
 	tvdd-supply = <&L4B>;
+
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
 };
 
 &mdss_mdp {
