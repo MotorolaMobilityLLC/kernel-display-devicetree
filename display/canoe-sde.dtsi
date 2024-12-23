@@ -217,6 +217,8 @@
 	power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>;
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
+	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
+
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
 	qcom,sde-soccp-controller = <&soccp_pas>;
