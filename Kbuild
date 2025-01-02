@@ -33,6 +33,7 @@ dtbo-$(CONFIG_PARO_DTB) += display/parrot-sde-display-paro-evb-overlay.dtbo
 dtbo-$(CONFIG_MONAI_DTB) += display/parrot-sde-display-monai-dvt1-overlay.dtbo
 dtbo-$(CONFIG_CUSCO_DTB) += display/parrot-sde-display-cusco-evb-overlay.dtbo
 dtbo-$(CONFIG_CUSCO_DTB) += display/parrot-sde-display-cuscoi-evb-overlay.dtbo
+dtbo-$(CONFIG_CUSCO_DTB) += display/parrot-sde-display-cuscoi-noi-evb-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_PARROT) += display/parrot-sde.dtbo \
 		display/parrot-sde-display-atp-overlay.dtbo \
