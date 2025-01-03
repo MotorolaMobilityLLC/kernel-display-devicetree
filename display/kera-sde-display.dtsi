@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <dt-bindings/clock/qcom,dispcc-tuna.h>
@@ -13,6 +13,18 @@
 		label = "wb_display2";
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
 		clock-names = "mdp_core_clk";
+	};
+
+	disp_rdump_memory: disp_rdump_region@0xfc800000 {
+		reg = <0xfc800000 0x00800000>;
+		label = "disp_rdump_region";
+	};
+};
+
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xFC800000 0x0 0x02B00000>;
+		label = "cont_splash_region";
 	};
 };
 
