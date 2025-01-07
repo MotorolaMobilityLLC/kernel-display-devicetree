@@ -1,0 +1,14 @@
+/* This is derivated from qcom cliffs-sde-display-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "cliffs-sde-display-arcfox-common.dtsi"
+
+#define ARCFOX_RADIO_JP 4
+/ {
+	model = "arcfox";
+	compatible = "qcom,cliffs-mtp", "qcom,cliffs", "qcom,mtp";
+	qcom,msm-id = <614 0x10000>, <632 0x10000>;
+	qcom,board-id = <0x43 0xC200>;
+};
