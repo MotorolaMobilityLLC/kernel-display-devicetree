@@ -3,7 +3,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "cliffs-sde-display-arcfox-common.dtsi"
+#include "cliffs-sde-display-arcfox25-common.dtsi"
 
 #define ARCFOX_RADIO_JP 4
 / {
