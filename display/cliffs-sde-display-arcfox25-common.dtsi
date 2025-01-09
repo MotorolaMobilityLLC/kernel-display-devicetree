@@ -1037,7 +1037,10 @@
 	gdx-cli@0 {
 		panel = <&mot_csot_nt37707_1080x1272_dsc_cmd_cli_v0
 			&mot_csot_nt37707_1080x1272_dsc_cmd_cli_v1
-			&mot_csot_nt37707_1080x1272_dsc_cmd_cli_v2
-			&mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_v1>;
+			&mot_csot_nt37707_1080x1272_dsc_cmd_cli_v2>;
+	};
+
+	focaltech@1 {
+		panel = <&mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_v1>;
 	};
 };
