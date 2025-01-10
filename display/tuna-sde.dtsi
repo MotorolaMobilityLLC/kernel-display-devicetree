@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
 #include <dt-bindings/clock/qcom,dispcc-tuna.h>
@@ -222,12 +222,13 @@
 		reg-names = "rscc", "wrapper", "scc_0", "scc_1", "scc_2", "scc_3", "scc_4", "scc_5";
 
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>,
-				<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>;
+				<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
+				<&dispcc DISP_CC_XO_CLK_SRC>;
 
-		clock-names = "branch_clk", "core_clk";
-		clock-rate = <660000000 660000000>;
-		clock-max-rate = <660000000 660000000>;
-		clock-mmrm = <0 DISP_CC_MDSS_MDP_CLK_SRC>;
+		clock-names = "branch_clk", "core_clk", "xo";
+		clock-rate = <660000000 660000000 19200000>;
+		clock-max-rate = <660000000 660000000 19200000>;
+		clock-mmrm = <0 DISP_CC_MDSS_MDP_CLK_SRC 0>;
 
 		interconnects = <&mmss_noc MASTER_MDP_DISP_CRM_HW_0
 					&mc_virt SLAVE_EBI1_DISP_CRM_HW_0>,
