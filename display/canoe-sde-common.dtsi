@@ -10,10 +10,12 @@
 		compatible = "qcom,sde-kms";
 		reg = <0x0 0x09800000 0x0 0x1c8800>,
 			<0x0 0x09b16000 0x0 0x2008>,
-			<0x0 0x09b60000 0x0 0x7000>;
+			<0x0 0x09b60000 0x0 0x7000>,
+			<0x0 0x01100000  0x0 0x1000>;
 		reg-names = "mdp_phys",
 			"vbif_phys",
-			"regdma_phys";
+			"regdma_phys",
+			"ipcc_reg";
 
 		/* interrupt config */
 		interrupts = <GIC_SPI 83 IRQ_TYPE_LEVEL_HIGH>;
@@ -26,10 +28,10 @@
 		qcom,sde-len = <0x488>;
 
 		qcom,sde-ctl-off = <0x20000 0x21000 0x22000 0x23000
-					0x24000 0x25000 0x26000 0x27000>;
+					0x24000 0x25000>;
 		qcom,sde-ctl-size = <0x1000>;
 		qcom,sde-ctl-display-pref = "primary", "none", "none", "none",
-					"none", "none", "none", "none";
+					"none", "none";
 
 		qcom,sde-mixer-off = <0x104000  0x10c000 0x114000
 					0x11c000 0x124000 0x12c000
@@ -59,6 +61,28 @@
 		qcom,sde-dspp-demura-off = <0x3600 0x3600 0x3600 0x3600>;
 		qcom,sde-dspp-demura-size = <0x154>;
 		qcom,sde-dspp-demura-version = <0x00030000>;
+
+		qcom,sde-dspp-aiqe-off = <0xc1000 0xffffffff 0xb2000 0xffffffff>;
+		qcom,sde-dspp-aiqe-version = <0x00010000>;
+		qcom,sde-dspp-aiqe-size = <0x474>;
+
+		qcom,sde-dspp-aiqe-dither-off = <0xc1700 0xffffffff 0xb2700 0xffffffff>;
+		qcom,sde-dspp-aiqe-dither-version = <0x00010000>;
+		qcom,sde-dspp-aiqe-dither-size = <0x20>;
+
+		qcom,sde-dspp-aiqe-wrapper-off = <0xc1780 0xffffffff 0xb2780 0xffffffff>;
+		qcom,sde-dspp-aiqe-wrapper-version = <0x00010000>;
+		qcom,sde-dspp-aiqe-wrapper-size = <0x1c>;
+
+		qcom,sde-dspp-aiqe-aiscaler-off = <0xbb000 0xffffffff>;
+		qcom,sde-dspp-aiqe-aiscaler-version = <0x00010000>;
+		qcom,sde-dspp-aiqe-aiscaler-size = <0x7d0>;
+
+		qcom,sde-aiqe-has-feature-mdnie;
+		qcom,sde-aiqe-has-feature-abc;
+		qcom,sde-aiqe-has-feature-ssrc;
+		qcom,sde-aiqe-has-feature-copr;
+		qcom,sde-aiqe-has-feature-aiscaler;
 
 		qcom,sde-dest-scaler-top-off = <0x00108000>;
 		qcom,sde-dest-scaler-top-size = <0x1c>;
@@ -111,10 +135,10 @@
 		qcom,sde-sspp-off = <0x2c000 0x35000 0x3e000 0x47000
 					0x98000 0xa1000 0xaa000 0xb3000 0xbc000 0xc5000>;
 		qcom,sde-sspp-src-size = <0x84>;
-
 		qcom,sde-sspp-xin-id = <0 4 8 12 1 5 9 13 14 15>;
 		qcom,sde-sspp-excl-rect = <1 1 1 1 1 1 1 1 1 1>;
 		qcom,sde-sspp-smart-dma-priority = <7 8 9 10 1 2 3 4 5 6>;
+
 		qcom,sde-smart-dma-rev = "smart_dma_v2p5";
 
 		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7 10 9 12 11>;
@@ -234,6 +258,12 @@
 		qcom,sde-qos-cpu-dma-latency = <300>;
 		qcom,sde-qos-cpu-irq-latency = <300>;
 
+		qcom,sde-ipcc-protocol-id = <0x4>;
+		qcom,sde-ipcc-client-dpu-phys-id = <0x15>;
+		qcom,sde-hw-fence-mdp-ctl-offset = <0x4000>;
+		qcom,sde-ipcc-protocol-offset = <0xc0000>;
+		qcom,sde-ipcc-client-out-phys-id = <24>;
+
 		/* offsets are relative to regdma_phys */
 		qcom,sde-reg-dma-off = <0 0x800>;
 		qcom,sde-reg-dma-id = <0 1>;
@@ -259,10 +289,6 @@
 				qcom,sde-vig-gamut = <0x1c00 0x00060001>;
 				qcom,sde-vig-igc = <0x1c00 0x00060000>;
 				qcom,sde-vig-inverse-pma;
-				qcom,sde-fp16-igc = <0x200 0x00010000>;
-				qcom,sde-fp16-unmult = <0x200 0x00010000>;
-				qcom,sde-fp16-gc = <0x200 0x00010000>;
-				qcom,sde-fp16-csc = <0x200 0x00010000>;
 				qcom,sde-ucsc-igc = <0x1600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x1600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x1600 0x00010001>;
@@ -272,10 +298,6 @@
 
 			vcm@1 {
 				cell-index = <1>;
-				qcom,sde-fp16-igc = <0x280 0x00010000>;
-				qcom,sde-fp16-unmult = <0x280 0x00010000>;
-				qcom,sde-fp16-gc = <0x280 0x00010000>;
-				qcom,sde-fp16-csc = <0x280 0x00010000>;
 				qcom,sde-ucsc-igc = <0x3600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x3600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x3600 0x00010001>;
@@ -288,10 +310,6 @@
 			dgm@0 {
 				cell-index = <0>;
 				qcom,sde-dma-top-off = <0x1600>;
-				qcom,sde-fp16-igc = <0x200 0x00010000>;
-				qcom,sde-fp16-unmult = <0x200 0x00010000>;
-				qcom,sde-fp16-gc = <0x200 0x00010000>;
-				qcom,sde-fp16-csc = <0x200 0x00010000>;
 				qcom,sde-ucsc-igc = <0x1600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x1600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x1600 0x00010001>;
@@ -301,10 +319,6 @@
 
 			dgm@1 {
 				cell-index = <1>;
-				qcom,sde-fp16-igc = <0x200 0x00010000>;
-				qcom,sde-fp16-unmult = <0x200 0x00010000>;
-				qcom,sde-fp16-gc = <0x200 0x00010000>;
-				qcom,sde-fp16-csc = <0x200 0x00010000>;
 				qcom,sde-ucsc-igc = <0x3600 0x00010001>;
 				qcom,sde-ucsc-unmult = <0x3600 0x00010001>;
 				qcom,sde-ucsc-gc = <0x3600 0x00010001>;
@@ -333,7 +347,7 @@
 		cell-index = <0>;
 		frame-threshold-time-us = <800>;
 		reg = <0x0 0x09ac0000 0x0 0x1000>,
-			  <0x0 0x09ba2000 0x0 0x4>,
+			  <0x0 0x9BB1000 0x0 0x4>,
 			  <0x0 0x0998f000 0x0 0x300>;
 		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
 		interrupt-parent = <&mdss_mdp>;
@@ -360,7 +374,7 @@
 		cell-index = <1>;
 		frame-threshold-time-us = <800>;
 		reg = <0x0 0x09ac3000 0x0 0x1000>,
-			  <0x0 0x09ba2000 0x0 0x4>,
+			  <0x0 0x9BB1000 0x0 0x4>,
 			  <0x0 0x09990000 0x0 0x300>;
 		reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base";
 		interrupt-parent = <&mdss_mdp>;

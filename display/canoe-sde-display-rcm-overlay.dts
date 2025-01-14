@@ -9,7 +9,7 @@
 #include "canoe-sde-display-rcm.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Canoe RCM";
+	model = "Qualcomm Technologies, Inc. Canoe RCM + ST54L + Kundu";
 	compatible = "qcom,canoe-rcm", "qcom,canoe", "qcom,canoep-rcm", "qcom,canoep",
 			   "qcom,rcm";
 	qcom,msm-id = <660 0x10000>, <660 0x20000>, <661 0x10000>, <661 0x20000>,

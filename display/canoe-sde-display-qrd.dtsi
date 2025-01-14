@@ -1,84 +1,58 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024, Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
-#include "tuna-sde-display.dtsi"
-
-&dsi_nt37801_amoled_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <8191>;
-	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
-};
+#include "canoe-sde-display.dtsi"
 
 &dsi_nt37801_amoled_cmd_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
-};
-
-&dsi_nt37801_amoled_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-bl-min-level = <10>;
-	qcom,mdss-dsi-bl-max-level = <4095>;
-	qcom,mdss-brightness-max-level = <8191>;
-	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
 };
 
 &dsi_nt37801_amoled_video_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
 };
 
 &dsi_nt37801_amoled_qsync_cmd_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
 };
 
 &dsi_nt37801_amoled_qsync_video_cphy {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+};
+
+&dsi_sim_panel_au {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
 };
 
 &dsi_sim_cmd {
@@ -122,23 +96,14 @@
 };
 
 &sde_dsi {
+	vdd-supply = <&display_panel_vdd>;
 	qcom,dsi-default-panel = <&dsi_nt37801_amoled_cmd_cphy>;
 };
 
-&sde_dp {
-        status = "ok";
-};
-
-&mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb1 &sde_wb2 &sde_dp>;
-};
-
-&qupv3_se4_spi {
+&qupv3_se19_spi {
 	st_fts@0 {
 		panel = <&dsi_nt37801_amoled_cmd_cphy
 			&dsi_nt37801_amoled_video_cphy
-			&dsi_nt37801_amoled_cmd
-			&dsi_nt37801_amoled_video
 			&dsi_nt37801_amoled_qsync_cmd_cphy
 			&dsi_nt37801_amoled_qsync_video_cphy>;
 	};

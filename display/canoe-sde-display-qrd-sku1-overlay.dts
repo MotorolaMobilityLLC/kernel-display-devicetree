@@ -6,14 +6,14 @@
 /dts-v1/;
 /plugin/;
 
-#include "canoe-sde-display-mtp.dtsi"
+#include "canoe-sde-display-qrd.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Canoe MTP QMP1000";
-	compatible = "qcom,canoe-mtp", "qcom,canoe", "qcom,canoep-mtp", "qcom,canoep",
-			   "qcom,mtp";
+	model = "Qualcomm Technologies, Inc. Canoe QRD + ST54L + Kundu";
+	compatible = "qcom,canoe-qrd", "qcom,canoe", "qcom,canoep-cdp", "qcom,canoep",
+			   "qcom,qrd";
 	qcom,msm-id = <660 0x10000>, <660 0x20000>, <661 0x10000>, <661 0x20000>,
 		      <0x1000294 0x10000>, <0x1000294 0x20000>,
 		      <0x1000295 0x10000>, <0x1000295 0x20000>;
-	qcom,board-id = <0x108 0>;
+	qcom,board-id = <11 0>;
 };

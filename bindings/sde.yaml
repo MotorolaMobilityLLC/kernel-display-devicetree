@@ -257,6 +257,18 @@ properties:
       to zero, feature will remain disabled.
     $ref: /schemas/types.yaml#/definitions/uint32
 
+  qcom,sde-ipcc-protocol-offset:
+    description: |
+      A u32 value to indicate the IPCC protocol offset used to compute
+      the IPCC register address.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
+  qcom,sde-ipcc-client-out-phys-id:
+    description: |
+      A u32 value to indicate the IPCC physical client ID written to the
+      IPC_SEND register for DPU HW to trigger IPCC signals.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
   qcom,sde-sspp-src-size:
     description: A u32 value indicates the address range for each sspp.
     $ref: /schemas/types.yaml#/definitions/uint32
