@@ -956,7 +956,7 @@
 &mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_v1 {
 	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
-	qcom,dsi-supported-dfps-list = <165 120 90 60>;
+	qcom,dsi-supported-dfps-list = <60 90 120 165>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
@@ -974,10 +974,10 @@
 	qcom,platform-sec-vdd-enable-gpio = <&tlmm 170 0>;
 	qcom,mdss-dsi-panel-orientation = "180";
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0A];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0 0 0>;
-	qcom,mdss-dsi-panel-status-read-length = <3>;
+	qcom,mdss-dsi-panel-status-value = <0x9C>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
