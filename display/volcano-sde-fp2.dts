@@ -7,3 +7,19 @@
 	qcom,msm-id = <0x8000291 0x10000>, <0x8000292 0x10000>;
 	qcom,board-id = <0 0>;
 };
+
+&sde_dp {
+	qcom,max-pclk-frequency-khz = <675000>;
+};
+
+&mdss_dsi0 {
+	/delete-property/ reg;
+	/delete-property/ reg-names;
+	reg = <0xae94000 0x1000>,
+		<0xaf0f000 0x4>,
+		<0x0ae36000 0x300>,
+		<0x827C3000 0x1000>;
+
+	reg-names = "dsi_ctrl", "disp_cc_base", "mdp_intf_base", "disp_conf";
+	qcom,sde-vm-exclude-reg-names = "disp_conf";
+};
