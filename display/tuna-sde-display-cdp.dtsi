@@ -401,4 +401,15 @@
 			&dsi_nt37801_amoled_cmd_ddicspr
 			&dsi_nt37801_amoled_video_ddicspr>;
 	};
+
+	goodix-berlin@5d {
+		panel = <&dsi_vtdr6130_amoled_cmd
+			&dsi_vtdr6130_amoled_video
+			&dsi_vtdr6130_amoled_60hz_cmd
+			&dsi_vtdr6130_amoled_60hz_video
+			&dsi_vtdr6130_amoled_90hz_cmd
+			&dsi_vtdr6130_amoled_90hz_video
+			&dsi_vtdr6130_amoled_120hz_cmd
+			&dsi_vtdr6130_amoled_120hz_video>;
+	};
 };
