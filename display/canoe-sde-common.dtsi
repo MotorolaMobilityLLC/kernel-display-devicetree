@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
@@ -37,7 +37,7 @@
 					0x11c000 0x124000 0x12c000
 					0x134000 0x13c000 0x0f0f
 					0x0f0f  0x0f0f 0x0f0f>;
-		qcom,sde-mixer-size = <0x40>;
+		qcom,sde-mixer-size = <0x400>;
 		qcom,sde-mixer-display-pref = "primary", "primary", "none","none",
 					"none", "none", "none", "none",
 					"none", "none", "none", "none";
