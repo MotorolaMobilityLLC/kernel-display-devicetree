@@ -108,3 +108,10 @@
 			&dsi_nt37801_amoled_qsync_video_cphy>;
 	};
 };
+
+&battery_charger {
+	qcom,display-panels = <&dsi_nt37801_amoled_cmd_cphy
+		&dsi_nt37801_amoled_video_cphy
+		&dsi_nt37801_amoled_qsync_cmd_cphy
+		&dsi_nt37801_amoled_qsync_video_cphy>;
+};
