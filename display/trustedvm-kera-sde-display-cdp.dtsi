@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include "trustedvm-kera-sde-display.dtsi"
@@ -153,4 +153,19 @@
 
 &sde_dsi {
 	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_cmd>;
+};
+
+&qupv3_se8_spi {
+	goodix-berlin@0 {
+		panel = <&dsi_vtdr6130_amoled_cmd
+			&dsi_vtdr6130_amoled_video
+			&dsi_vtdr6130_amoled_120hz_cmd
+			&dsi_vtdr6130_amoled_120hz_video
+			&dsi_vtdr6130_amoled_90hz_cmd
+			&dsi_vtdr6130_amoled_90hz_video
+			&dsi_vtdr6130_amoled_60hz_cmd
+			&dsi_vtdr6130_amoled_60hz_video
+			&dsi_vtdr6130_amoled_qsync_144hz_cmd
+			&dsi_vtdr6130_amoled_qsync_144hz_video>;
+	};
 };
