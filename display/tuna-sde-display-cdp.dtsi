@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include "tuna-sde-display.dtsi"
 
-&pm8550vs_g_gpios {
+&pm8550vs_d_gpios {
 	lcd_backlight_ctrl {
 		lcd_backlight_en_default: lcd_backlight_en_default {
 			pins = "gpio4";
@@ -19,7 +19,7 @@
 	};
 };
 
-&pm8550vs_f_gpios {
+&pm8550ve_f_gpios {
 	display_panel_avdd_default: display_panel_avdd_default {
 		pins = "gpio8";
 		function = "normal";
@@ -38,7 +38,7 @@
 		regulator-min-microvolt = <5500000>;
 		regulator-max-microvolt = <5500000>;
 		regulator-enable-ramp-delay = <233>;
-		gpio = <&pm8550vs_f_gpios 8 0>;
+		gpio = <&pm8550ve_f_gpios 8 0>;
 		enable-active-high;
 		regulator-boot-on;
 		proxy-supply = <&display_panel_avdd>;
@@ -265,7 +265,7 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-bklight-en-gpio = <&pm8550vs_g_gpios 4 0>;
+	qcom,platform-bklight-en-gpio = <&pm8550vs_d_gpios 4 0>;
 };
 
 &dsi_sharp_qhd_plus_dsc_video {
@@ -274,7 +274,7 @@
 	qcom,mdss-dsi-bl-min-level = <1>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 14 0>;
-	qcom,platform-bklight-en-gpio = <&pm8550vs_g_gpios 4 0>;
+	qcom,platform-bklight-en-gpio = <&pm8550vs_d_gpios 4 0>;
 };
 
 &dsi_sim_cmd {
