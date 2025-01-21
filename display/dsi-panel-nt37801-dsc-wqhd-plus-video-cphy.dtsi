@@ -24,6 +24,8 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
+		qcom,mdss-pan-physical-width-dimension = <74>;
+		qcom,mdss-pan-physical-height-dimension = <161>;
 		qcom,mdss-dsi-tx-eot-append;
 		qcom,adjust-timer-wakeup-ms = <1>;
 		qcom,panel-cphy-mode;
