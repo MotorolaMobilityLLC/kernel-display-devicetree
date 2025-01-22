@@ -235,6 +235,34 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00 //TE1=0
+			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+			39 00 00 00 00 00 02 2F 02 //120hz
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 1
+		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
+		39 00 00 40 00 00 02 5A 00
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 04 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 10 //Skip Mode DBV切换回seq1 Enable
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00 //TE1=0
+			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+			39 00 00 00 00 00 02 2F 02 //120hz
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 	timing@1{
 		qcom,mdss-dsi-cmd-mode;
@@ -393,6 +421,34 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00 //TE1=0
+			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+			39 00 00 00 00 00 02 2F 03 //165hz
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 1
+		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
+		39 00 00 40 00 00 02 5A 00
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 04 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 10 //Skip Mode DBV切换回seq1 Enable
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00 //TE1=0
+			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+			39 00 00 00 00 00 02 2F 03 //165hz
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 	timing@2{
 		qcom,mdss-dsi-cmd-mode;
@@ -554,6 +610,34 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00 //TE1=0
+			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+			39 00 00 00 00 00 02 2F 04 //90hz
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 1
+		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
+		39 00 00 40 00 00 02 5A 00
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 04 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 10 //Skip Mode DBV切换回seq1 Enable
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00 //TE1=0
+			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+			39 00 00 00 00 00 02 2F 04 //90hz
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 	timing@3{
 		qcom,mdss-dsi-cmd-mode;
@@ -724,6 +808,42 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-lp1-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00
+		39 00 00 40 00 00 02 53 20
+		39 00 00 40 00 00 02 5A 01
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 00 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 1
+		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
+		39 00 00 40 00 00 02 5A 00
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 04 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 10 //Skip Mode DBV切换回seq1 Enable
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00
+		39 00 00 40 00 00 02 53 20
+		39 00 00 40 00 00 02 5A 01
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 00 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 	timing@4{
 		qcom,mdss-dsi-cmd-mode;
@@ -893,6 +1013,42 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-lp1-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00
+		39 00 00 40 00 00 02 53 20
+		39 00 00 40 00 00 02 5A 01
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 01 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 1
+		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
+		39 00 00 40 00 00 02 5A 00
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 04 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 10 //Skip Mode DBV切换回seq1 Enable
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00
+		39 00 00 40 00 00 02 53 20
+		39 00 00 40 00 00 02 5A 01
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 01 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 	timing@5{
 		qcom,mdss-dsi-cmd-mode;
@@ -1062,6 +1218,42 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-lp1-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 0
+		39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+		39 00 00 40 00 00 02 5A 01
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 02 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 1
+		39 00 00 40 00 00 02 53 20 //DBV Diming Enable
+		39 00 00 40 00 00 02 5A 00
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 04 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 10 //Skip Mode DBV切换回seq1 Enable
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+		39 00 00 40 00 00 02 6F 04
+		39 00 00 40 00 00 02 35 00 //TE = 0
+		39 00 00 40 00 00 02 53 20 //DBV Diming Disable
+		39 00 00 40 00 00 02 5A 01
+		39 00 00 40 00 00 02 2F 30
+		39 00 00 40 00 00 03 6D 02 00
+		39 00 00 40 00 00 02 6F 02
+		39 00 00 00 00 00 02 8C 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 	timing@6{
 		qcom,mdss-dsi-cmd-mode;
