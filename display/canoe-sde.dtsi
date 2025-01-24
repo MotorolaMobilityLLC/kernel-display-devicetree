@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
@@ -227,9 +227,13 @@
 	clock-rate = <0 0 0 650000000 650000000 19200000 650000000 650000000>;
 	clock-max-rate = <0 0 0 650000000 650000000 19200000 650000000 650000000>;
 
+	qcom,hw-fence-sw-version = <0x1>;
+
 	power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>, <&dispcc DISP_CC_MDSS_CORE_INT2_GDSC>;
 	power-domain-names = "core_gdsc", "core_int2_gdsc";
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
+
+	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
