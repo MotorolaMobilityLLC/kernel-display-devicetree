@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "parrot-sde-display-mona-common.dtsi"
+#include "parrot-sde-display-monai-common.dtsi"
 
 / {
 	model = "monai";
