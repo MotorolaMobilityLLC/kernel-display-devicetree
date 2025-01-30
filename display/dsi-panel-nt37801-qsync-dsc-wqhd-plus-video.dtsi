@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 &mdss_mdp {
@@ -34,7 +34,7 @@
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
 		qcom,spr-pack-type = "pentile";
 		qcom,qsync-enable;
-		qcom,mdss-dsi-qsync-min-refresh-rate = <80>;
+		qcom,mdss-dsi-qsync-min-refresh-rate = <90>;
 		qcom,mdss-dsi-panel-hdr-enabled;
 		qcom,mdss-dsi-panel-hdr-color-primaries = <15150 15750 34250
 			15700 12250 35800 6750 2550>;

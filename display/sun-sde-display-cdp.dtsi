@@ -333,8 +333,6 @@
 			&dsi_nt37801_amoled_qsync_video
 			&dsi_nt37801_amoled_fhd_plus_cmd
 			&dsi_nt37801_amoled_cmd_ddicspr
-			&dsi_nt37801_amoled_video_ddicspr
-			&dsi_sharp_qhd_plus_dsc_cmd
-			&dsi_sharp_qhd_plus_dsc_video>;
+			&dsi_nt37801_amoled_video_ddicspr>;
 	};
 };

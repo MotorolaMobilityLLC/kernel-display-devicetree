@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include "dsi-panel-sim-cmd.dtsi"
@@ -11,6 +11,8 @@
 #include "dsi-panel-sim-dualmipi-dsc375-cmd.dtsi"
 #include "dsi-panel-sim-dualmipi-video.dtsi"
 #include "dsi-panel-sim-sec-hd-cmd.dtsi"
+#include "dsi-panel-sharp-dsc-qhd-plus-cmd.dtsi"
+#include "dsi-panel-sharp-dsc-qhd-plus-video.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-cmd.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-video.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-120hz-cmd.dtsi"
@@ -135,7 +137,8 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
@@ -143,7 +146,8 @@
 		timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
@@ -151,7 +155,8 @@
 		timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
@@ -159,7 +164,8 @@
 		timing@3 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
@@ -190,7 +196,8 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,dsi-dyn-clk-list = <847480320 844537680 841595040>;
 		};
@@ -214,21 +221,24 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 
 		timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 
 		timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
@@ -255,7 +265,8 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
@@ -381,7 +392,8 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
@@ -403,7 +415,34 @@
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
-			qcom,display-topology = <2 2 1>;
+			qcom,display-topology = <2 2 1>,
+						<1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sharp_qhd_plus_dsc_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 { /* 120 FPS */
+			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 15 07
+				07 07 02 04 00 17 0c];
+			qcom,display-topology = <2 2 2>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_sharp_qhd_plus_dsc_video {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 { /* 120 FPS */
+			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 15 07
+				07 07 02 04 00 17 0c];
+			qcom,display-topology = <2 2 2>;
 			qcom,default-topology-index = <0>;
 		};
 	};

@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-canoe-sde.dtsi"
+#include "trustedvm-canoe-sde-display-qrd.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Canoe QRD - TrustedVM";
+	compatible = "qcom,canoe-qrd", "qcom,canoe", "qcom,canoep-cdp", "qcom,canoep",
+			   "qcom,qrd";
+	qcom,msm-id = <660 0x10000>, <660 0x20000>, <661 0x10000>, <661 0x20000>,
+		      <0x1000294 0x10000>, <0x1000294 0x20000>,
+		      <0x1000295 0x10000>, <0x1000295 0x20000>;
+	qcom,board-id = <11 0>;
+};
