@@ -37,7 +37,7 @@
 #include "dsi-panel-vtdr6130-qsync-dsc-fhd-plus-144hz-video.dtsi"
 #include "dsi-panel-ext-bridge-1080p.dtsi"
 
-#include "canoe-sde-display-pinctrl-common.dtsi"
+#include "canoe-sde-display-pinctrl.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply_sim: dsi_panel_pwr_supply_sim {
@@ -131,6 +131,14 @@
 		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
 		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
 
+		pinctrl-names = "panel_active", "panel_suspend";
+		pinctrl-0 = <&sde_dsi_active &sde_te_active
+				&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+				&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
+		pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend
+				&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+				&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
+
 		qcom,platform-te-gpio = <&tlmm 86 0>;
 		qcom,panel-te-source = <0>;
 
@@ -145,6 +153,10 @@
 
 		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
 		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
+
+		pinctrl-names = "panel_active", "panel_suspend";
+		pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+		pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
 
 		qcom,platform-te-gpio = <&tlmm 87 0>;
 		qcom,panel-te-source = <1>;
