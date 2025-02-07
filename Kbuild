@@ -92,6 +92,11 @@ dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-kera-sde-display-atp-overlay.dtbo 
 		display/trustedvm-kera-sde-display-rcm-overlay.dtbo
 endif
 
+dtbo-$(CONFIG_ARCH_VIENNA) += display/vienna-sde.dtbo \
+		display/vienna-sde-display-wdp-overlay.dtbo \
+		display/vienna-sde-display-idp-overlay.dtbo \
+		display/vienna-sde-display-wrd-overlay.dtbo
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
