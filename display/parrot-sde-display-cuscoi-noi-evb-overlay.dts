@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "parrot-sde-display-cusco-common.dtsi"
+#include "parrot-sde-display-noida-common.dtsi"
 
 #define CUSCOI_RADIO_APEM1 6
 #define CUSCOI_RADIO_INDIA1 7
