@@ -93,6 +93,13 @@ properties:
       defined in property: qcom,sde-sspp-off.
     $ref: /schemas/types.yaml#/definitions/uint32-array
 
+  qcom,sde-ctl-hyp-off:
+    description: |
+      Offset address for the mdp ctl hyp block.
+      The offset is calulated from register "mdp_phys" defined in
+      reg property.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
   qcom,sde-ctl-off:
     description: |
       Array of offset addresses for the available ctl
@@ -275,6 +282,10 @@ properties:
 
   qcom,sde-mixer-size:
     description: A u32 value indicates the address range for each mixer.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
+  qcom,sde-ctl-hyp-size:
+    description: A u32 value indicates the address range for ctl hyp.
     $ref: /schemas/types.yaml#/definitions/uint32
 
   qcom,sde-ctl-size:
