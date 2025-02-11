@@ -775,6 +775,9 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
 			qcom,framerate-group-no-duplicated;
@@ -892,6 +895,9 @@
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
