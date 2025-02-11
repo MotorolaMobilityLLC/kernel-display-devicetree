@@ -183,6 +183,7 @@
 
 	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
 		iommu-addresses = <&smmu_sde_unsec 0x0 0x00060000>,
+				  <&smmu_sde_unsec 0xFC800000 0x02B00000>,
 				  <&smmu_sde_sec 0x0 0x00020000>;
 	};
 
