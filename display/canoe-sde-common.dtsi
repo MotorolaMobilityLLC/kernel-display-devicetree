@@ -86,6 +86,14 @@
 		qcom,sde-aiqe-has-feature-copr;
 		qcom,sde-aiqe-has-feature-aiscaler;
 
+		qcom,sde-dnsc-blur-version = <0x100>;
+		qcom,sde-dnsc-blur-off = <0x1aa000>;
+		qcom,sde-dnsc-blur-size = <0x40>;
+		qcom,sde-dnsc-blur-gaus-lut-off = <0x100>;
+		qcom,sde-dnsc-blur-gaus-lut-size = <0x400>;
+		qcom,sde-dnsc-blur-dither-off = <0x5c0>;
+		qcom,sde-dnsc-blur-dither-size = <0x40>;
+
 		qcom,sde-dest-scaler-top-off = <0x00108000>;
 		qcom,sde-dest-scaler-top-size = <0x1c>;
 		qcom,sde-dest-scaler-off = <0x0 0x8000 0x10000 0x18000>;
