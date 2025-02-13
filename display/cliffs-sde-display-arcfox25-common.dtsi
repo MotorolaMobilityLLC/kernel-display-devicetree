@@ -776,6 +776,16 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
+
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
 		        qcom,mdss-dsi-panel-clockrate = <667500000>;
@@ -852,6 +862,17 @@
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 03 5F 00 00];
 
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
+
+
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
 		        qcom,mdss-dsi-panel-clockrate = <667500000>;
@@ -920,6 +941,17 @@
 	        16000 13250 34500 7500 3000>;
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
+
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -1000,6 +1032,18 @@
 	//	39 00 00 00 00 00 03 5F 00 01];
 	//qcom,mdss-dsi-panel-apl-off-command = [
 	//	39 00 00 00 00 00 03 5F 00 00];
+
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	//qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <0>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{
