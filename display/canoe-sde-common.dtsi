@@ -65,7 +65,7 @@
 		qcom,sde-dspp-demura-version = <0x00030000>;
 
 		qcom,sde-dspp-aiqe-off = <0xc1000 0xffffffff 0xb2000 0xffffffff>;
-		qcom,sde-dspp-aiqe-version = <0x00010000>;
+		qcom,sde-dspp-aiqe-version = <0x00020000>;
 		qcom,sde-dspp-aiqe-size = <0x474>;
 
 		qcom,sde-dspp-aiqe-dither-off = <0xc1700 0xffffffff 0xb2700 0xffffffff>;
@@ -85,6 +85,14 @@
 		qcom,sde-aiqe-has-feature-ssrc;
 		qcom,sde-aiqe-has-feature-copr;
 		qcom,sde-aiqe-has-feature-aiscaler;
+
+		qcom,sde-dnsc-blur-version = <0x100>;
+		qcom,sde-dnsc-blur-off = <0x1aa000>;
+		qcom,sde-dnsc-blur-size = <0x40>;
+		qcom,sde-dnsc-blur-gaus-lut-off = <0x100>;
+		qcom,sde-dnsc-blur-gaus-lut-size = <0x400>;
+		qcom,sde-dnsc-blur-dither-off = <0x5c0>;
+		qcom,sde-dnsc-blur-dither-size = <0x40>;
 
 		qcom,sde-dest-scaler-top-off = <0x00108000>;
 		qcom,sde-dest-scaler-top-size = <0x1c>;
