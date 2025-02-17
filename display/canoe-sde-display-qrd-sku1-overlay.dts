@@ -17,7 +17,3 @@
 		      <0x1000295 0x10000>, <0x1000295 0x20000>;
 	qcom,board-id = <11 0>;
 };
-
-&sde_dsi {
-	vdd-supply = <&display_panel_vdd>;
-};
