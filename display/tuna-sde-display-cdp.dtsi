@@ -76,7 +76,9 @@
 
 &dsi_vtdr6130_amoled_120hz_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
@@ -228,7 +230,61 @@
 
 &dsi_vtdr6130_amoled_120hz_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 14 0>;
+	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+};
+
+&dsi_vtdr6130_amoled_90hz_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 14 0>;
+	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+};
+
+&dsi_vtdr6130_amoled_90hz_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 14 0>;
+	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+};
+
+&dsi_vtdr6130_amoled_60hz_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <10>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 14 0>;
+	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+};
+
+&dsi_vtdr6130_amoled_60hz_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,mdss-brightness-max-level = <8191>;
@@ -257,6 +313,24 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,platform-reset-gpio = <&tlmm 14 0>;
 	qcom,platform-sec-reset-gpio = <&tlmm 126 0>;
+};
+
+&dsi_sharp_4k_dsc_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 14 0>;
+	qcom,platform-bklight-en-gpio = <&pm8550vs_d_gpios 4 0>;
+};
+
+&dsi_sharp_4k_dsc_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 14 0>;
+	qcom,platform-bklight-en-gpio = <&pm8550vs_d_gpios 4 0>;
 };
 
 &dsi_sharp_qhd_plus_dsc_cmd {
@@ -344,5 +418,16 @@
 			&dsi_nt37801_amoled_fhd_plus_cmd
 			&dsi_nt37801_amoled_cmd_ddicspr
 			&dsi_nt37801_amoled_video_ddicspr>;
+	};
+
+	goodix-berlin@5d {
+		panel = <&dsi_vtdr6130_amoled_cmd
+			&dsi_vtdr6130_amoled_video
+			&dsi_vtdr6130_amoled_60hz_cmd
+			&dsi_vtdr6130_amoled_60hz_video
+			&dsi_vtdr6130_amoled_90hz_cmd
+			&dsi_vtdr6130_amoled_90hz_video
+			&dsi_vtdr6130_amoled_120hz_cmd
+			&dsi_vtdr6130_amoled_120hz_video>;
 	};
 };

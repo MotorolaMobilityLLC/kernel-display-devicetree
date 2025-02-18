@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 &mdss_mdp {
@@ -257,6 +257,111 @@
 					[05 01 00 00 00 00 02 28 00
 					05 01 00 00 00 00 02 10 00];
 				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+			};
+
+			timing@7 {
+				cell-index = <7>;
+				qcom,mdss-dsi-panel-framerate = <120>;
+				qcom,mdss-dsi-panel-width = <1200>;
+				qcom,mdss-dsi-panel-height = <3840>;
+				qcom,mdss-dsi-h-front-porch = <20>;
+				qcom,mdss-dsi-h-back-porch = <12>;
+				qcom,mdss-dsi-h-pulse-width = <4>;
+				qcom,mdss-dsi-h-sync-skew = <0>;
+				qcom,mdss-dsi-v-back-porch = <20>;
+				qcom,mdss-dsi-v-front-porch = <20>;
+				qcom,mdss-dsi-v-pulse-width = <2>;
+				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
+				qcom,mdss-dsi-off-command =
+					[05 01 00 00 00 00 02 28 00
+					05 01 00 00 00 00 02 10 00];
+				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+				qcom,mdss-dsi-qsync-on-commands =
+					[15 01 00 00 00 00 02 51 00];
+				qcom,mdss-dsi-qsync-on-commands-state =
+					"dsi_hs_mode";
+				qcom,mdss-dsi-qsync-off-commands =
+					[15 01 00 00 00 00 02 51 00];
+				qcom,mdss-dsi-qsync-off-commands-state =
+					"dsi_hs_mode";
+				qcom,compression-mode = "dsc";
+				qcom,mdss-dsc-slice-height = <40>;
+				qcom,mdss-dsc-slice-width = <1200>;
+				qcom,mdss-dsc-slice-per-pkt = <1>;
+				qcom,mdss-dsc-bit-per-component = <8>;
+				qcom,mdss-dsc-bit-per-pixel = <8>;
+				qcom,mdss-dsc-block-prediction-enable;
+			};
+
+			timing@8 {
+				cell-index = <8>;
+				qcom,mdss-dsi-panel-framerate = <144>;
+				qcom,mdss-dsi-panel-width = <1200>;
+				qcom,mdss-dsi-panel-height = <3200>;
+				qcom,mdss-dsi-h-front-porch = <20>;
+				qcom,mdss-dsi-h-back-porch = <12>;
+				qcom,mdss-dsi-h-pulse-width = <4>;
+				qcom,mdss-dsi-h-sync-skew = <0>;
+				qcom,mdss-dsi-v-back-porch = <20>;
+				qcom,mdss-dsi-v-front-porch = <20>;
+				qcom,mdss-dsi-v-pulse-width = <2>;
+				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
+				qcom,mdss-dsi-off-command =
+					[05 01 00 00 00 00 02 28 00
+					05 01 00 00 00 00 02 10 00];
+				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+				qcom,mdss-dsi-qsync-on-commands =
+					[15 01 00 00 00 00 02 51 00];
+				qcom,mdss-dsi-qsync-on-commands-state =
+					"dsi_hs_mode";
+				qcom,mdss-dsi-qsync-off-commands =
+					[15 01 00 00 00 00 02 51 00];
+				qcom,mdss-dsi-qsync-off-commands-state =
+					"dsi_hs_mode";
+				qcom,compression-mode = "dsc";
+				qcom,mdss-dsc-slice-height = <40>;
+				qcom,mdss-dsc-slice-width = <1200>;
+				qcom,mdss-dsc-slice-per-pkt = <1>;
+				qcom,mdss-dsc-bit-per-component = <8>;
+				qcom,mdss-dsc-bit-per-pixel = <8>;
+				qcom,mdss-dsc-block-prediction-enable;
+			};
+
+			timing@9 {
+				cell-index = <9>;
+				qcom,mdss-dsi-panel-framerate = <144>;
+				qcom,mdss-dsi-panel-width = <1200>;
+				qcom,mdss-dsi-panel-height = <3000>;
+				qcom,mdss-dsi-h-front-porch = <20>;
+				qcom,mdss-dsi-h-back-porch = <12>;
+				qcom,mdss-dsi-h-pulse-width = <4>;
+				qcom,mdss-dsi-h-sync-skew = <0>;
+				qcom,mdss-dsi-v-back-porch = <20>;
+				qcom,mdss-dsi-v-front-porch = <20>;
+				qcom,mdss-dsi-v-pulse-width = <2>;
+				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-on-command = [05 01 00 00 f0 00 01 00];
+				qcom,mdss-dsi-off-command =
+					[05 01 00 00 00 00 02 28 00
+					05 01 00 00 00 00 02 10 00];
+				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+				qcom,mdss-dsi-qsync-on-commands =
+					[15 01 00 00 00 00 02 51 00];
+				qcom,mdss-dsi-qsync-on-commands-state =
+					"dsi_hs_mode";
+				qcom,mdss-dsi-qsync-off-commands =
+					[15 01 00 00 00 00 02 51 00];
+				qcom,mdss-dsi-qsync-off-commands-state =
+					"dsi_hs_mode";
+				qcom,compression-mode = "dsc";
+				qcom,mdss-dsc-slice-height = <40>;
+				qcom,mdss-dsc-slice-width = <1200>;
+				qcom,mdss-dsc-slice-per-pkt = <1>;
+				qcom,mdss-dsc-bit-per-component = <8>;
+				qcom,mdss-dsc-bit-per-pixel = <8>;
+				qcom,mdss-dsc-block-prediction-enable;
 			};
 		};
 	};
