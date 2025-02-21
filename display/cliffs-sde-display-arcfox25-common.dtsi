@@ -828,6 +828,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -914,7 +915,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
-
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -994,7 +995,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
-
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -1087,6 +1088,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-min = <0>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{
