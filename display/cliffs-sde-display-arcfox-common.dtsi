@@ -777,6 +777,7 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -898,6 +899,7 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -1009,6 +1011,7 @@
 	        16000 13250 34500 7500 3000>;
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
