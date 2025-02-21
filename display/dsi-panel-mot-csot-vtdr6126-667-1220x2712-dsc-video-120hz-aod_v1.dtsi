@@ -69,9 +69,23 @@
 		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
 		qcom,mdss-dsi-panel-local-hbm-DDIC-type = <0x6126>;
 
+		/* config switch mode */
+		qcom,mdss-dsi-panel-mode-switch;
+		//qcom,poms-align-panel-vsync;
+		qcom,dynamic-mode-switch-enabled;
+		//qcom,dynamic-mode-switch-type = "dynamic-switch-immediate";
+
+		/* only parse for cmd panel */
+		qcom,mdss-dsi-te-pin-select = <1>;
+		qcom,mdss-dsi-te-dcs-command = <1>;
+		qcom,mdss-dsi-te-check-enable;
+		qcom,mdss-dsi-te-using-te-pin;
+
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
+				qcom,mdss-dsi-video-mode;
+				qcom,mdss-dsi-cmd-mode;
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <1220>;
 				qcom,mdss-dsi-panel-height = <2712>;
@@ -87,7 +101,7 @@
 				qcom,mdss-dsi-h-right-border = <0>;
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
-				qcom,mdss-dsi-on-command = [
+				qcom,vid-on-commands = [
 					39 00 00 40 00 00 03 F0 AA 10
 					39 00 00 40 00 00 18 D0 84 04 60 78 90 00 35 4B 13 4F 00 00 4B 32 4F 00 00 00 04 44 13 13 13
 					39 00 00 40 00 00 03 B9 01 10
@@ -139,6 +153,91 @@
 					05 00 00 00 50 00 01 11
 					05 00 00 00 00 00 01 29
 				];
+
+				qcom,cmd-on-commands = [
+					39 00 00 40 00 00 03 F0 AA 10
+					39 00 00 40 00 00 18 D0 84 04 60 78 90 00 35 4B 13 4F 00 00 4B 32 4F 00 00 00 04 44 13 13 13
+					39 00 00 40 00 00 03 B9 01 10
+					39 00 00 00 00 00 05 CF 09 87 93 09
+
+					39 00 00 40 00 00 05 2A 00 00 04 C3
+					39 00 00 40 00 00 05 2B 00 00 04 AF
+
+					39 00 00 40 00 00 02 03 01
+					39 00 00 40 00 00 02 35 00
+					39 00 00 40 00 00 02 53 20
+					39 00 00 40 00 00 02 59 09
+					39 00 00 40 00 00 03 51 00 00
+					39 00 00 40 00 00 02 5D 00
+					39 00 00 40 00 00 02 5E 00
+					39 00 00 40 00 00 02 6F 01
+					39 00 00 40 00 00 02 6C 01
+
+					39 00 00 40 00 00 1A 70 11 00 00 AB 30 80 0A 98 04 C4 00 0C 02 62 02 62 02 00 01 1A 00 20 02 5B 00
+					39 00 00 40 00 00 02 65 19
+					39 00 00 40 00 00 1A 70 08 00 01 00 BB 07 7B 18 00 10 F0 07 10 20 00 06 0F 0F 33 0E 1C 2A 38 46 54
+					39 00 00 40 00 00 02 65 32
+					39 00 00 40 00 00 1A 70 62 69 70 77 79 7B 7D 7E 02 02 22 00 2A 40 2A BE 3A FC 3A FA 3A F8 3B 38 3B
+					39 00 00 40 00 00 02 65 4B
+					39 00 00 40 00 00 14 70 78 3B B6 4B B6 4B F4 4B F4 6C 34 84 74 00 00 00 00 00 00
+
+					39 00 00 40 00 00 03 FF 5A 80
+					39 00 00 40 00 00 02 65 26
+					39 00 00 40 00 00 02 F7 01
+					39 00 00 40 00 00 02 65 0A
+					39 00 00 40 00 00 02 F9 A8
+
+					39 00 00 40 00 00 03 FF 5A 81
+					39 00 00 40 00 00 02 65 10
+					39 00 00 40 00 00 02 F3 40
+					39 00 00 40 00 00 02 65 02
+					39 00 00 40 00 00 02 F4 27
+					39 00 00 40 00 00 02 65 19
+					39 00 00 40 00 00 02 F8 01
+					39 00 00 40 00 00 02 65 03
+					39 00 00 40 00 00 04 FB F3 F3 F3
+
+					39 00 00 40 00 00 03 FF 5A 82
+					39 00 00 40 00 00 02 65 05
+					39 00 00 40 00 00 02 F9 81
+					39 00 00 40 00 00 03 FF 5A 00
+					39 00 00 40 00 00 03 F0 AA 00
+
+					05 00 00 00 50 00 01 11
+					05 00 00 00 00 00 01 29
+
+					//cmd fod mode
+					39 00 00 00 00 00 01 28
+					39 00 00 00 14 00 01 34
+					39 00 00 00 14 00 02 6F 02
+					39 00 00 00 25 00 01 39
+					05 00 00 00 00 00 01 29
+					05 00 00 00 00 00 01 35
+				];
+
+				qcom,cmd-mode-switch-out-commands = [
+				                39 00 00 00 50 00 01 38
+						39 00 00 00 50 00 02 6F 01];
+				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
+
+				qcom,video-mode-switch-in-commands = [
+						39 00 00 00 00 00 01 60];
+				qcom,video-mode-switch-in-commands-state = "dsi_hs_mode";
+
+				qcom,video-mode-switch-out-commands = [];
+				qcom,video-mode-switch-out-commands-state = "dsi_hs_mode";
+
+
+				qcom,cmd-mode-switch-in-commands = [
+						39 00 00 40 00 00 01 28
+						39 00 00 00 00 00 01 34
+						39 00 00 00 64 00 01 00
+						39 00 00 40 00 00 02 6F 02
+						39 00 00 40 00 00 02 6D 02
+						39 00 00 00 64 00 01 39
+						05 00 00 40 00 00 01 29
+						05 00 00 00 0A 00 01 35];
+				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-off-command = [
 					05 00 00 00 11 00 01 28
