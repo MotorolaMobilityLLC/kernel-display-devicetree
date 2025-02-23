@@ -239,6 +239,14 @@
 	qcom,mdss-dsi-panel-status-value = <0x9C>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
+	qcom,mdss-dsi-panel-AOD-bl-min = <1364>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>; //160nit
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
@@ -281,6 +289,14 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0x9C>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
+	qcom,mdss-dsi-panel-AOD-bl-min = <1364>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>; //160nit
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -325,6 +341,14 @@
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
 
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
+	qcom,mdss-dsi-panel-AOD-bl-min = <2>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <0>; //160nit
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
@@ -367,6 +391,14 @@
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
+	qcom,mdss-dsi-panel-AOD-bl-min = <2>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <0>; //160nit
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
