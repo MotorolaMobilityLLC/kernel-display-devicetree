@@ -67,14 +67,20 @@
 
 		timing@1 {
 			/delete-property/ qcom,mdss-dsi-panel-clockrate;
+			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
+			07 08 02 04 00 19 0c];
 		};
 
 		timing@2 {
 			/delete-property/ qcom,mdss-dsi-panel-clockrate;
+			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1e 05
+			05 06 02 04 00 12 0a];
 		};
 
 		timing@3 {
 			/delete-property/ qcom,mdss-dsi-panel-clockrate;
+			qcom,mdss-dsi-panel-phy-timings = [00 0f 03 03 11 1d 04
+			04 03 02 04 00 0d 09];
 		};
 	};
 };
@@ -111,10 +117,14 @@
 
 		timing@1 {
 			/delete-property/ qcom,mdss-dsi-panel-clockrate;
+			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1e 05
+			05 06 02 04 00 12 0a];
 		};
 
 		timing@2 {
 			/delete-property/ qcom,mdss-dsi-panel-clockrate;
+			qcom,mdss-dsi-panel-phy-timings = [00 0f 03 03 11 1d 04
+			04 03 02 04 00 0d 09];
 		};
 	};
 };
@@ -151,6 +161,8 @@
 
 		timing@1 {
 			/delete-property/ qcom,mdss-dsi-panel-clockrate;
+			qcom,mdss-dsi-panel-phy-timings = [00 0f 03 03 11 1d 04
+			04 03 02 04 00 0d 09];
 		};
 	};
 };
