@@ -86,7 +86,7 @@
 				cell-index = <0>;
 				qcom,mdss-dsi-video-mode;
 				qcom,mdss-dsi-cmd-mode;
-				qcom,mdss-dsi-panel-framerate = <120>;
+				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <1220>;
 				qcom,mdss-dsi-panel-height = <2712>;
 				qcom,mdss-dsi-h-front-porch = <26>;
@@ -95,7 +95,7 @@
 				qcom,mdss-dsi-h-sync-skew = <0>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-v-back-porch = <18>;
-				qcom,mdss-dsi-v-front-porch = <604>;
+				qcom,mdss-dsi-v-front-porch = <3940>;
 				qcom,mdss-dsi-v-pulse-width = <2>;
 				qcom,mdss-dsi-h-left-border = <0>;
 				qcom,mdss-dsi-h-right-border = <0>;
@@ -118,7 +118,7 @@
 					39 00 00 40 00 00 02 5D 00
 					39 00 00 40 00 00 02 5E 00
 					39 00 00 40 00 00 02 6F 01
-					39 00 00 40 00 00 02 6C 01
+					39 00 00 40 00 00 02 6C 03
 
 					39 00 00 40 00 00 1A 70 11 00 00 AB 30 80 0A 98 04 C4 00 0C 02 62 02 62 02 00 01 1A 00 20 02 5B 00
 					39 00 00 40 00 00 02 65 19
@@ -171,7 +171,7 @@
 					39 00 00 40 00 00 02 5D 00
 					39 00 00 40 00 00 02 5E 00
 					39 00 00 40 00 00 02 6F 01
-					39 00 00 40 00 00 02 6C 01
+					39 00 00 40 00 00 02 6C 03
 
 					39 00 00 40 00 00 1A 70 11 00 00 AB 30 80 0A 98 04 C4 00 0C 02 62 02 62 02 00 01 1A 00 20 02 5B 00
 					39 00 00 40 00 00 02 65 19
