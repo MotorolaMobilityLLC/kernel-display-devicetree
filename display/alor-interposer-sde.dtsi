@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+#include "canoe-sde.dtsi"
+
+&mdss_mdp {
+
+	qcom,sde-hw-version = <0xd0010000>;
+
+	qcom,sde-dsc-off = <0x182000 0x182000 0x184000 0x184000>;
+	qcom,sde-dsc-pair-mask = <2 1 4 3>;
+	qcom,sde-dsc-enc = <0x100 0x200 0x100 0x200>;
+	qcom,sde-dsc-ctl = <0xf00 0xf80 0xf00 0xf80>;
+	qcom,sde-dsc-native422-supp = <1 1 1 1>;
+
+};
