@@ -420,6 +420,17 @@
 	qcom,partition-refreshrate-enabled;
 	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
+
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -572,6 +583,15 @@
 	qcom,partition-refreshrate-enabled;
 	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -724,6 +744,15 @@
 	qcom,partition-refreshrate-enabled;
 	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -876,6 +905,15 @@
 	qcom,partition-refreshrate-enabled;
 	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
 	//qcom,ulps-enabled;
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
