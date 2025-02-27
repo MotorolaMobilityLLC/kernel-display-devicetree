@@ -192,7 +192,7 @@ qcom,mdss-dsi-display-timings {
 				39 00 00 40 00 00 02 6D 00
 				39 00 00 00 11 00 01 39
 				05 00 00 00 00 00 01 29];
-		qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
+		qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
 		qcom,cmd-mode-switch-out-commands = [
 				39 00 00 40 00 00 02 A4 01
 				39 00 00 40 00 00 01 38
@@ -205,7 +205,7 @@ qcom,mdss-dsi-display-timings {
 				39 00 00 40 00 00 02 65 0B
 				39 00 00 00 5A 00 03 CF FD 79
 				];
-		qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
+		qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
 	};
 };
 
