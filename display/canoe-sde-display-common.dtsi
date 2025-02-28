@@ -37,6 +37,7 @@
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-video.dtsi"
 #include "dsi-panel-vtdr6130-qsync-dsc-fhd-plus-144hz-cmd.dtsi"
 #include "dsi-panel-vtdr6130-qsync-dsc-fhd-plus-144hz-video.dtsi"
+#include "dsi-panel-dual-rdp370f-rgb-video.dtsi"
 #include "dsi-panel-ext-bridge-1080p.dtsi"
 
 #include "canoe-sde-display-pinctrl-common.dtsi"
@@ -126,6 +127,20 @@
 		};
 	};
 
+	dsi_panel_pwr_supply_raontech: dsi_panel_pwr_supply_raontech {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "avdd";
+			qcom,supply-min-voltage = <4600000>;
+			qcom,supply-max-voltage = <7500000>;
+			qcom,supply-enable-load = <33000>;
+			qcom,supply-disable-load = <1>;
+		};
+	};
+
 	sde_dsi: qcom,dsi-display-primary {
 		compatible = "qcom,dsi-display";
 		label = "primary";
@@ -153,6 +168,22 @@
 
 		qcom,mdp = <&mdss_mdp>;
 		qcom,demura-panel-id = <0x0 0x0>;
+	};
+};
+
+&dsi_dual_rdp370f_rgb_vid {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-panel-status-check-mode = "esd_sw_sim_success";
+	qcom,esd-check-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 17 05 05 14 13 06
+				06 06 02 04 00 14 0b];
+			qcom,display-topology = <2 0 2>;
+			qcom,default-topology-index = <0>;
+		};
 	};
 };
 
