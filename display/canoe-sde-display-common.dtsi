@@ -67,7 +67,7 @@
 			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1800000>;
 			qcom,supply-max-voltage = <1800000>;
-			qcom,supply-enable-load = <150000>;
+			qcom,supply-enable-load = <154000>;
 			qcom,supply-disable-load = <277>;
 			qcom,supply-post-on-sleep = <20>;
 		};
@@ -77,7 +77,7 @@
 			qcom,supply-name = "vdd";
 			qcom,supply-min-voltage = <1000000>;
 			qcom,supply-max-voltage = <1100000>;
-			qcom,supply-enable-load = <420>;
+			qcom,supply-enable-load = <220000>;
 			qcom,supply-disable-load = <3>;
 			qcom,supply-post-on-sleep = <0>;
 		};
@@ -87,7 +87,7 @@
 			qcom,supply-name = "vci";
 			qcom,supply-min-voltage = <3000000>;
 			qcom,supply-max-voltage = <3000000>;
-			qcom,supply-enable-load = <1000>;
+			qcom,supply-enable-load = <10000>;
 			qcom,supply-disable-load = <1>;
 			qcom,supply-post-on-sleep = <0>;
 		};
