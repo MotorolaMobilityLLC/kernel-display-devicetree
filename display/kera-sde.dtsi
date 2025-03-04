@@ -218,8 +218,10 @@
 			<0xaf33000 0x30>,
 			<0xaf34000 0x30>,
 			<0xaf35000 0x30>,
-			<0xaf36000 0x30>;
-		reg-names = "rscc", "wrapper", "scc_0", "scc_1", "scc_2", "scc_3", "scc_4", "scc_5";
+			<0xaf36000 0x30>,
+			<0xaf0f000 0x10>;
+		reg-names = "rscc", "wrapper", "scc_0", "scc_1", "scc_2", "scc_3", "scc_4", "scc_5",
+				"disp_cc";
 
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>,
 				<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
