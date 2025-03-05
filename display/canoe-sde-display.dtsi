@@ -13,12 +13,16 @@
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
 		label = "wb_display0";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	sde_wb1: qcom,wb-display@1 {
 		compatible = "qcom,wb-display";
 		cell-index = <1>;
 		label = "wb_display1";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	display_panel_avdd: display_gpio_regulator@1 {
@@ -48,6 +52,18 @@
 		qcom,proxy-consumer-enable;
 		pinctrl-names = "default";
 		pinctrl-0 = <&sde_disp0_vdd_active>;
+	};
+
+	disp_rdump_memory: disp_rdump_region@0xfc800000 {
+		reg = <0xfc800000 0x00800000>;
+		label = "disp_rdump_region";
+	};
+};
+
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xfc800000 0x0 0x02b00000>;
+		label = "cont_splash_region";
 	};
 };
 
