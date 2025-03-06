@@ -279,7 +279,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
@@ -412,7 +412,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
@@ -545,7 +545,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
@@ -678,7 +678,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
@@ -813,7 +813,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
@@ -900,7 +900,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
 	qcom,mdss-dsi-panel-apl-off-command = [
@@ -986,6 +986,13 @@
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
+
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
 	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
@@ -1070,13 +1077,10 @@
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
-	//qcom,apl-enabled;
-	//qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
-	//qcom,mdss-dsi-panel-apl-on-command = [
-	//	39 00 00 00 00 00 03 5F 00 01];
-	//qcom,mdss-dsi-panel-apl-off-command = [
-	//	39 00 00 00 00 00 03 5F 00 00];
-
+	//DIC OTP enable&threshold default, no need config,
+	//here is only for aura25 tianma cli panel record.
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	//qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
