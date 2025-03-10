@@ -796,6 +796,14 @@
 
 &dsi_sharp_qhd_plus_dsc_cmd {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0c];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x07>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 { /* 120 FPS */
 			qcom,mdss-dsi-panel-phy-timings = [00 1a 07 06 16 15 07
@@ -811,6 +819,13 @@
 	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x1c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 { /* 120 FPS */
