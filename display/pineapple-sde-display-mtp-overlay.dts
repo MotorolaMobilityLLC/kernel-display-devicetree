@@ -7,6 +7,8 @@
 	model = "Qualcomm Technologies, Inc. Pineapple MTP";
 	compatible = "qcom,pineapple-mtp", "qcom,pineapple", "qcom,pineapplep-mtp", "qcom,pineapplep", "qcom,pineappleq-mtp", "qcom,pineappleq", "qcom,mtp";
 	qcom,msm-id = <557 0x10000>, <557 0x20000>, <577 0x10000>, <577 0x20000>,
-			<682 0x10000>, <682 0x20000>, <696 0x20000>;
+			<682 0x10000>, <682 0x20000>, <696 0x20000>,
+			<645 0x10000>, <645 0x20000>, <646 0x10000>, <646 0x20000>,
+			<702 0x10000>, <702 0x20000>;
 	qcom,board-id = <0x8 0>;
 };
