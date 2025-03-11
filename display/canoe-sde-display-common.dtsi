@@ -33,6 +33,7 @@
 #include "dsi-panel-ss-video-psr-vid-vhm.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-120hz-cmd.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-120hz-video.dtsi"
+#include "dsi-panel-vtdr6130-nodsc-fhd-plus-60hz-cmd.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-cmd.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-video.dtsi"
 #include "dsi-panel-vtdr6130-qsync-dsc-fhd-plus-144hz-cmd.dtsi"
@@ -100,6 +101,43 @@
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-post-on-sleep = <20>;
+		};
+	};
+
+	dsi_panel_pwr_supply_vtdr: dsi_panel_pwr_supply_vtdr {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <220000>;
+			qcom,supply-disable-load = <8000>;
+			qcom,supply-post-on-sleep = <20>;
+		};
+
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <10000>;
+			qcom,supply-disable-load = <300>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-post-off-sleep = <2>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <1200000>;
+			qcom,supply-max-voltage = <1292000>;
+			qcom,supply-enable-load = <200000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-post-off-sleep = <2>;
 		};
 	};
 
@@ -336,6 +374,19 @@
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_vtdr6130_amoled_nodsc_60hz_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 21 08 08 19 23 09
+				08 09 02 04 00 1c 0d];
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
