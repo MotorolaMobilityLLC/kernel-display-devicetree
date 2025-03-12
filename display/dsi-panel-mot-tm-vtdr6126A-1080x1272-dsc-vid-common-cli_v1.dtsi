@@ -18,7 +18,7 @@ mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_v1: qcom,mdss_dsi_mot_tm_1080x1272_cmd_cl
 		qcom,mdss-dsi-panel-supplier = "tianma";
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
-		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-bpp = <30>;
 		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
@@ -86,7 +86,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-panel-height = <1272>;
 		qcom,mdss-dsi-h-front-porch = <16>;
 		qcom,mdss-dsi-h-back-porch = <160>;
-		qcom,mdss-dsi-h-pulse-width = <8>;
+		qcom,mdss-dsi-h-pulse-width = <16>;
 		qcom,mdss-dsi-h-sync-skew = <0>;
 		qcom,mdss-dsi-h-sync-pulse = <0>;
 		qcom,mdss-dsi-v-back-porch = <14>;
@@ -171,7 +171,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-slice-height = <12>;
 		qcom,mdss-dsc-slice-width = <540>;
 		qcom,mdss-dsc-slice-per-pkt = <2>;
-		qcom,mdss-dsc-bit-per-component = <8>;
+		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsi-dfps-60-command = [39 00 00 00 00 00 02 6C 03];
