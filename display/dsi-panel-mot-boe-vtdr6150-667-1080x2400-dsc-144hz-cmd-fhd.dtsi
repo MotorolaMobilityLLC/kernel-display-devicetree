@@ -68,7 +68,8 @@
 		qcom,mdss-dsi-panel-lhbm-not-allowed-fps-list = <60 90>;
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
-		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <1322>; //0x052a
+              	qcom,mdss-dsi-panel-local-hbm-DDIC-type = <0x6150>;
+		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <1321>; //0x0529
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-size = <4096>;
 		qcom,mdss-dsi-panel-bl-num = <1>;
