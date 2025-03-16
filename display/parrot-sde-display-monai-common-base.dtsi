@@ -246,6 +246,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-min = <1364>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>; //160nit
+	qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -297,6 +298,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-min = <1364>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>; //160nit
+	qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
