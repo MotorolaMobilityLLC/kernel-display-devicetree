@@ -386,12 +386,15 @@
 &dsi_ss_video_psr_vid_vhm {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
+	qcom,dsi-dyn-clk-enable;
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 2D 0C 0C 1D 27 0C
 					0D 0B 02 04 00 25 11];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
+			qcom,dsi-dyn-clk-list = <1406283648 1412167680 1418051712>;
 		};
 	};
 };
