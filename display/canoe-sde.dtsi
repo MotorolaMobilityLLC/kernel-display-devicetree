@@ -186,6 +186,7 @@
 
 	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
 		iommu-addresses = <&smmu_sde_unsec 0x0 0x0 0x0 0x00020000>,
+				  <&smmu_sde_unsec 0x0 0xfc800000  0x0 0x02b00000>,
 				  <&smmu_sde_sec 0x0 0x0 0x0 0x00020000>;
 	};
 
@@ -254,6 +255,9 @@
 	/* offsets are based off dspp 0, 1, 2, and 3 */
 	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
 
+	nvmem-cells = <&ssip_config>;
+	nvmem-cell-names = "ssip_config";
+
 	/* Pre mdss_core vregs */
 	qcom,platform-supply-entries {
 		#address-cells = <1>;
@@ -279,10 +283,13 @@
 		<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK0_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK0_CLK_SRC>,
+		<&dispcc DISP_CC_ESYNC0_CLK>,
+		<&dispcc DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC0_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
+			"pixel_clk", "pixel_clk_rcg", "esync_clk", "osc_clk",
+			"esc_clk", "xo";
 };
 
 &mdss_dsi1 {
@@ -293,10 +300,13 @@
 		<&dispcc DISP_CC_MDSS_BYTE1_INTF_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK_SRC>,
+		<&dispcc DISP_CC_ESYNC1_CLK>,
+		<&dispcc DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC1_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
-			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
+			"pixel_clk", "pixel_clk_rcg", "esync_clk", "osc_clk",
+			"esc_clk", "xo";
 };
 
 &mdss_dsi_phy0 {

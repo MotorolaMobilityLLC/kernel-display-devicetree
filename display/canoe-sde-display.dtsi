@@ -13,12 +13,16 @@
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
 		label = "wb_display0";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	sde_wb1: qcom,wb-display@1 {
 		compatible = "qcom,wb-display";
 		cell-index = <1>;
 		label = "wb_display1";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
 	};
 
 	display_panel_avdd: display_gpio_regulator@1 {
@@ -49,6 +53,18 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&sde_disp0_vdd_active>;
 	};
+
+	disp_rdump_memory: disp_rdump_region@0xfc800000 {
+		reg = <0xfc800000 0x00800000>;
+		label = "disp_rdump_region";
+	};
+};
+
+&reserved_memory {
+	splash_memory: splash_region {
+		reg = <0x0 0xfc800000 0x0 0x02b00000>;
+		label = "cont_splash_region";
+	};
 };
 
 &sde_dsi {
@@ -70,20 +86,30 @@
 		 * MDP clock nodes, no actual vote shall be added and this
 		 * change is done just to satisfy sync state requirements.
 		 */
-		<&dispcc DISP_CC_MDSS_MDP_CLK>;
+		<&dispcc DISP_CC_MDSS_MDP_CLK>,
+		 /*
+		  * The esync clk RCG is only necessary here to set its parent
+		  * to the pll dsi clk, which also needs to be available at the
+		  * point that its known whether the clock will be used. After
+		  * updating the parent, this clock handle is no longer needed.
+		  */
+		 <&dispcc DISP_CC_ESYNC0_CLK_SRC>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1",
-			"mdp_core_clk";
+			"mdp_core_clk", "esync_clk_rcg";
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
 	vdd-supply = <&L11B>;
 	tvdd-supply = <&L4B>;
 
-	pinctrl-names = "panel_active", "panel_suspend";
-	pinctrl-0 = <&sde_dsi_active &sde_te_active
+	pinctrl-names = "panel_active", "panel_active_with_esync", "panel_suspend";
+	pinctrl-0 = <&sde_dsi_active &sde_te_active &sde_esync0_suspend
 			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
 			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
-	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend
+	pinctrl-1 = <&sde_dsi_active &sde_te_active &sde_esync0_active
+			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
+	pinctrl-2 = <&sde_dsi_suspend &sde_te_suspend &sde_esync0_suspend
 			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
 			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
 };
@@ -107,18 +133,26 @@
 		 * MDP clock nodes, no actual vote shall be added and this
 		 * change is done just to satisfy sync state requirements.
 		 */
-		<&dispcc DISP_CC_MDSS_MDP_CLK>;
+		<&dispcc DISP_CC_MDSS_MDP_CLK>,
+		 /*
+		  * The esync clk RCG is only necessary here to set its parent
+		  * to the pll dsi clk, which also needs to be available at the
+		  * point that its known whether the clock will be used. After
+		  * updating the parent, this clock handle is no longer needed.
+		  */
+		 <&dispcc DISP_CC_ESYNC1_CLK_SRC>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
 			"pll_byte_clk1", "pll_dsi_clk1",
-			"mdp_core_clk";
+			"mdp_core_clk", "esync_clk_rcg";
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
 	vdd-supply = <&L11B>;
 	tvdd-supply = <&L4B>;
 
-	pinctrl-names = "panel_active", "panel_suspend";
-	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
-	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
+	pinctrl-names = "panel_active", "panel_active_with_esync", "panel_suspend";
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active &sde_esync1_suspend>;
+	pinctrl-1 = <&sde_dsi1_active &sde_te1_active &sde_esync1_active>;
+	pinctrl-2 = <&sde_dsi1_suspend &sde_te1_suspend &sde_esync1_suspend>;
 };
 
 &mdss_mdp {
@@ -280,4 +314,17 @@
 			qcom,partial-update-enabled = "single_roi";
 		};
 	};
+};
+
+&dsi_ss_video_psr_vid_vhm {
+	qcom,mdss-esync;
+	qcom,mdss-esync-hsync-milli-pulse-width = <450>;
+	qcom,mdss-esync-emsync-fps = <240>;
+	qcom,mdss-esync-emsync-milli-pulse-width = <200>;
+
+	qcom,qsync-enable;
+	qcom,vrr-enable;
+	qcom,video-psr-enable;
+	qcom,dsi-qsync-avr-step-fps = <240>;
+	qcom,mdss-dsi-qsync-min-refresh-rate = <60>;
 };
