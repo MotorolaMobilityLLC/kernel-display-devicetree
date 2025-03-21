@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 /dts-v1/;
@@ -15,5 +15,6 @@
 	qcom,msm-id = <660 0x10000>, <660 0x20000>, <661 0x10000>, <661 0x20000>,
 		      <0x1000294 0x10000>, <0x1000294 0x20000>,
 		      <0x1000295 0x10000>, <0x1000295 0x20000>;
-	qcom,board-id = <8 0>, <0x20008 0>, <0x30008 0>, <0x40008 0>, <0x50008 0>, <0x60008 0>, <0x70008 0>;
+	qcom,board-id = <8 0>, <0x20008 0>, <0x30008 0>, <0x40008 0>, <0x50008 0>, <0x60008 0>,
+			<0x70008 0>, <0x80008 0>;
 };
