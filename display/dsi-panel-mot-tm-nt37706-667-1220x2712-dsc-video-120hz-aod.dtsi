@@ -278,6 +278,11 @@
 						39 00 00 00 00 00 03 51 05 54];
 				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
 
+				qcom,cmd-mode-backlight-commands = [
+						39 00 00 40 00 00 02 6F 04
+						39 00 00 00 00 00 03 51 05 54];
+				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
+
 				qcom,mdss-dsi-off-command = [
 					05 01 00 00 11 00 01 28
 					05 01 00 00 78 00 01 10];
