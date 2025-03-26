@@ -29,8 +29,6 @@
 		qcom,sde-off = <0x1000>;
 		qcom,sde-len = <0x488>;
 
-		qcom,sde-qultiv-sw-version = <0x1>;
-
 		qcom,sde-ctl-off = <0x20000 0x21000 0x22000 0x23000
 					0x24000 0x25000>;
 		qcom,sde-ctl-size = <0x1000>;
