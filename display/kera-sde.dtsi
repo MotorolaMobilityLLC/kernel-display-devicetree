@@ -230,7 +230,6 @@
 		clock-names = "branch_clk", "core_clk", "xo";
 		clock-rate = <660000000 660000000 19200000>;
 		clock-max-rate = <660000000 660000000 19200000>;
-		clock-mmrm = <0 DISP_CC_MDSS_MDP_CLK_SRC 0>;
 
 		interconnects = <&mmss_noc MASTER_MDP_DISP_CRM_HW_0
 					&mc_virt SLAVE_EBI1_DISP_CRM_HW_0>,
