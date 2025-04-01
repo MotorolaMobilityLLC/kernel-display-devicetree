@@ -223,7 +223,7 @@
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <60 90 120>;
+	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
@@ -239,19 +239,10 @@
 	qcom,mdss-dsi-panel-status-value = <0x9C>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
-	qcom,mdss-dsi-panel-AOD-config-enabled;
-	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
-	qcom,mdss-dsi-panel-AOD-bl-min = <1364>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>; //160nit
-	qcom,mdss-dsi-panel-AOD-command-resend;
-
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 23 09 09 1A 24 09
+			qcom,mdss-dsi-panel-phy-timings = [00 23 09 09 1A 18 09
 				09 09 02 04 00 1D 0E];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -275,7 +266,7 @@
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <60 90 120>;
+	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
@@ -291,19 +282,10 @@
 	qcom,mdss-dsi-panel-status-value = <0x9C>;
 	qcom,mdss-dsi-panel-status-read-length = <1>;
 
-	qcom,mdss-dsi-panel-AOD-config-enabled;
-	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
-	qcom,mdss-dsi-panel-AOD-bl-min = <1364>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>; //160nit
-	qcom,mdss-dsi-panel-AOD-command-resend;
-
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 25 0A
+			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 19 0A
 				0A 0A 02 04 00 20 0F];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -327,7 +309,7 @@
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <60 90 120>;
+	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
@@ -343,18 +325,10 @@
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
 
-	qcom,mdss-dsi-panel-AOD-config-enabled;
-	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
-	qcom,mdss-dsi-panel-AOD-bl-min = <2>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <0>; //160nit
-
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 25 0A
+			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 19 0A
 				0A 0A 02 04 00 20 0F];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -378,7 +352,7 @@
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <60 90 120>;
+	qcom,dsi-supported-dfps-list = <120 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
@@ -394,18 +368,10 @@
 	qcom,mdss-dsi-panel-status-value = <0 0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <3>;
 
-	qcom,mdss-dsi-panel-AOD-config-enabled;
-	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <4300>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6900>;
-	qcom,mdss-dsi-panel-AOD-bl-min = <2>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <0>; //160nit
-
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 25 0A
+			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 19 0A
 				0A 0A 02 04 00 20 0F];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
