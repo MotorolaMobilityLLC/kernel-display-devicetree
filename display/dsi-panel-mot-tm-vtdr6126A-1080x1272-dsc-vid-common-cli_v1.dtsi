@@ -241,7 +241,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-dfps-165-command = [39 00 00 00 00 00 02 6C 00];
 		qcom,mdss-dsi-dfps-165-command-state = "dsi_hs_mode";
 
-		qcom,video-mode-switch-in-commands = [];
+		qcom,video-mode-switch-in-commands = [39 00 00 00 11 00 01 29];
 		qcom,video-mode-switch-in-commands-state = "dsi_hs_mode";
 		qcom,video-mode-switch-out-commands = [39 00 00 00 11 00 01 28];
 		qcom,video-mode-switch-out-commands-state = "dsi_hs_mode";
