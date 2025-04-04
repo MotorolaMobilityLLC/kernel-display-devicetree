@@ -488,6 +488,7 @@ Optional properties:
 - qcom,mdss-dsi-tx-eot-append:		Boolean used to enable appending end of transmission packets.
 - qcom,ulps-enabled:			Boolean to enable support for Ultra Low Power State (ULPS) mode.
 - qcom,suspend-ulps-enabled:		Boolean to enable support for ULPS mode for panels during suspend state.
+- qcom,mdss-dsi-panel-calibration-enabled: Boolean to enable support for panel calibration.
 - qcom,spr-pack-type:		    String to specify the SPR pack type of panel pixel layout
 					Expected string for the pack types supported by MDSS are,
 					"pentile", "rgbw", "yygm", "yygw"
