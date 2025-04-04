@@ -13,13 +13,15 @@ dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
 		display/canoe-sde-display-qrd-sku2-overlay.dtbo \
 		display/alor-interposer-sde-display-mtp-overlay.dtbo \
 		display/alor-interposer-sde-display-rcm-overlay.dtbo \
+		display/alor-interposer-sde-display-qrd-overlay.dtbo \
 		display/alor-interposer-sde.dtbo
 else
 dtbo-$(CONFIG_ARCH_CANOE) += display/trustedvm-canoe-sde-display-mtp-overlay.dtbo \
 		display/trustedvm-canoe-sde-display-cdp-overlay.dtbo \
 		display/trustedvm-canoe-sde-display-qrd-overlay.dtbo \
 		display/trustedvm-alor-interposer-sde-display-mtp-overlay.dtbo \
-		display/trustedvm-alor-interposer-sde-display-rcm-overlay.dtbo
+		display/trustedvm-alor-interposer-sde-display-rcm-overlay.dtbo \
+		display/trustedvm-alor-interposer-sde-display-qrd-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
