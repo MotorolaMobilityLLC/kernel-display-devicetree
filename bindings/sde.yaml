@@ -264,6 +264,14 @@ properties:
       to zero, feature will remain disabled.
     $ref: /schemas/types.yaml#/definitions/uint32
 
+  qcom,sde-qultiv-sw-version:
+    description: |
+      A u32 value to indicate the partial display fuse SW version.
+      If set to a value greather than zero, driver will attempt to enable
+      the feature (if supported by the HW). Otherwise, if this value
+      is not set or set to zero, feature will remain disabled.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
   qcom,sde-ipcc-protocol-offset:
     description: |
       A u32 value to indicate the IPCC protocol offset used to compute
@@ -1683,6 +1691,9 @@ examples:
       qcom,sde-hw-version = <0x70000000>;
       qcom,sde-emulated-env;
       qcom,sde-off = <0x1000>;
+
+      qcom,sde-qultiv-sw-version = <0x1>;
+
       qcom,sde-ctl-off = <0x00002000 0x00002200 0x00002400
                           0x00002600 0x00002800>;
       qcom,sde-ctl-display-pref = "primary", "none", "none",

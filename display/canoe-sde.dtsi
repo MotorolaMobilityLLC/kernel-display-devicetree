@@ -234,7 +234,7 @@
 	power-domain-names = "core_gdsc", "core_int2_gdsc";
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
-	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
+	qcom,sde-vm-exclude-reg-names = "ipcc_reg", "swfuse_phys";
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
@@ -255,8 +255,8 @@
 	/* offsets are based off dspp 0, 1, 2, and 3 */
 	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
 
-	nvmem-cells = <&ssip_config>;
-	nvmem-cell-names = "ssip_config";
+	nvmem-cells = <&ssip_config>, <&disp_qultiv_fuse>;
+	nvmem-cell-names = "ssip_config", "disp_qultiv_fuse";
 
 	/* Pre mdss_core vregs */
 	qcom,platform-supply-entries {
