@@ -234,7 +234,7 @@
 	power-domain-names = "core_gdsc", "core_int2_gdsc";
 	mmcx-supply = <&VDD_MMCX_LEVEL>;
 
-	qcom,sde-vm-exclude-reg-names = "ipcc_reg";
+	qcom,sde-vm-exclude-reg-names = "ipcc_reg", "swfuse_phys";
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
