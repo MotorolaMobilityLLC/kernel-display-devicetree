@@ -70,6 +70,7 @@ DP Controller: Required properties:
 					programmable values.
 - qcom,max-pclk-frequency-khz:	An integer specifying the max. pixel clock in KHz supported by Display Port.
 - qcom,mst-enable:		MST feature enable control node.
+- qcom,dp-mst-lm-merge-en:	Enables utilization of lm_merge for DP-MST, add incase of lm shortage.
 - qcom,dsc-feature-enable:	DSC feature enable control node.
 - qcom,fec-feature-enable:	FEC feature enable control node.
 - qcom,qos-cpu-mask:		A u32 value indicating desired PM QoS CPU affine mask
