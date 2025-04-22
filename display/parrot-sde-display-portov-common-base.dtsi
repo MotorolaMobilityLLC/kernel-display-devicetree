@@ -183,19 +183,6 @@
 	};
 };
 
-&sde_dsi {
-	/delete-property/ vddio-supply;
-	/delete-property/ vci-supply;
-	/delete-property/ lab-supply;
-	/delete-property/ ibb-supply;
-	/delete-property/ extvdd-supply;
-        vddio-supply = <&display_panel_vddio>;
-	vci-supply = <&L4E>;
-	dvdd-supply = <&L1D>;
-
-	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
-};
-
 &mot_dummy_vid_qhd {
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 
