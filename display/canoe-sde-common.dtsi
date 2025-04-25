@@ -38,6 +38,9 @@
 		qcom,sde-ctl-display-pref = "primary", "none", "none", "none",
 					"none", "none";
 
+		qcom,sde-ctl-hyp-off = <0x3000>;
+		qcom,sde-ctl-hyp-size = <0xc00>;
+
 		qcom,sde-mixer-off = <0x104000  0x10c000 0x114000
 					0x11c000 0x124000 0x12c000
 					0x134000 0x13c000 0x0f0f
