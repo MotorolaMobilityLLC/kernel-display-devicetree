@@ -3,9 +3,6 @@
  * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
-#include "dsi-panel-sim-cmd.dtsi"
-#include "dsi-panel-sim-video.dtsi"
-
 &mdss_mdp {
 	qcom,sde-emulated-env;
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb0 &sde_wb1>;
