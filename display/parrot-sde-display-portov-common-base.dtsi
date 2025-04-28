@@ -371,4 +371,7 @@
 	chipone_tddi@0{
 		panel = <&mot_boe_icnl9922c_672_1080x2400_dsc_vid_120hz>;
 	};
+	ilitek@1{
+		panel = <&mot_txd_ili7807s_672_1080x2400_dsc_vid_120hz>;
+	};
 };
