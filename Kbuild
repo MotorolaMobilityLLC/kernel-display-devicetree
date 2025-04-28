@@ -57,6 +57,11 @@ dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-tuna-sde-display-atp-overlay.dtbo 
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
+
+dtbo-$(CONFIG_ROADSTR_DTB) += display/kera-sde-display-roadstr-evb-overlay.dtbo
+#dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo
+else
 dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo \
 		display/kera-sde-display-atp-overlay.dtbo \
 		display/kera-sde-display-cdp-overlay.dtbo \
@@ -64,6 +69,7 @@ dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo \
 		display/kera-sde-display-qrd-overlay.dtbo \
 		display/kera-sde-display-rumi-overlay.dtbo \
 		display/kera-sde-display-rcm-overlay.dtbo
+endif # end of CONFIG_MMI_DEVICE_DTBS
 else
 dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-kera-sde-display-atp-overlay.dtbo \
 		display/trustedvm-kera-sde-display-cdp-overlay.dtbo \
