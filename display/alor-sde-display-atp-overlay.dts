@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "alor-sde-display-mtp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Alor QRD + wcn7750 WLAN + SN220U + Kundu";
+	compatible = "qcom,alor-atp", "qcom,alor", "qcom,atp";
+	qcom,msm-id = <685 0x10000>;
+	qcom,board-id = <0x10021 0>;
+};
