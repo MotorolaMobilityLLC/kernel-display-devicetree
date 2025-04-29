@@ -1,5 +1,5 @@
 &mdss_mdp {
-	mot_txd_ili7807s_672_1080x2400_dsc_vid_120hz: qcom,mdss_dsi_mot_txd_ili7807s_672_1080x2400_dsc_120hz_vid_fhd {
+	mot_txd_ili7807s_672_1080x2400_dsc_vid_120hz: qcom,mdss_dsi_mot_txd_ili7807s_672_dsc_120hz_vid_fhd {
 		qcom,mdss-dsi-panel-name = "mipi_moto_vid_txd_1080p_dsc_672_120hz";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,dsi-ctrl-num = <0>;
