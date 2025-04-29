@@ -3,10 +3,25 @@
  * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
-#include <dt-bindings/clock/qcom,dispcc-canoe.h>
+#include <dt-bindings/clock/qcom,alor-dispcc.h>
 #include "alor-sde-display-common.dtsi"
 
 &soc {
+	sde_wb0: qcom,wb-display@0 {
+		compatible = "qcom,wb-display";
+		cell-index = <0>;
+		label = "wb_display0";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
+	};
+
+	sde_wb1: qcom,wb-display@1 {
+		compatible = "qcom,wb-display";
+		cell-index = <1>;
+		label = "wb_display1";
+		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
+		clock-names = "mdp_core_clk";
+	};
 };
 
 &sde_dsi {
@@ -90,7 +105,8 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec
+			&sde_wb0 &sde_wb1>;
 };
 
 &dsi_vtdr6130_amoled_cmd {
