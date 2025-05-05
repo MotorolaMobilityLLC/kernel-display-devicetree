@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-alor-sde.dtsi"
+#include "trustedvm-alor-sde-display-mtp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Canoe MTP + ST54L + Kundu - TrustedVM";
+	compatible = "qcom,alor-mtp", "qcom,alor", "qcom,mtp";
+	qcom,msm-id = <685 0x10000>;
+	qcom,board-id = <0x10008 0>, <0x20008 0>, <0x30008 0>;
+};
