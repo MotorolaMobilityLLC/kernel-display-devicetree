@@ -3,6 +3,7 @@
  * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
+#include "canoe-sde.dtsi"
 #include "canoe-sde-display-pinctrl.dtsi"
 #include "canoe-sde-display-common.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
