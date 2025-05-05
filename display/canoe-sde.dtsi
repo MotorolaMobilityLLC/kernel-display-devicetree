@@ -222,12 +222,9 @@
 			<0x0 0x9bdc000 0x0 0x30>,
 			<0x0 0x9bdd000 0x0 0x30>,
 			<0x0 0x9bde000 0x0 0x30>,
-			<0x0 0x9bdf000 0x0 0x30>,
-			<0x0 0x9be0000 0x0 0x30>,
-			<0x0 0x9be1000 0x0 0x30>,
 			<0x0 0x9bb1000 0x0 0x10>;
 		reg-names = "rscc", "wrapper", "scc_0", "scc_1", "scc_2", "scc_3",
-			"scc_4", "scc_5", "scc_6", "scc_7", "scc_8", "disp_cc";
+			"scc_4", "scc_5", "disp_cc";
 
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>,
 				<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
@@ -250,19 +247,12 @@
 					&mc_virt SLAVE_EBI1_DISP_CRM_HW_4>,
 				<&mmss_noc MASTER_MDP_DISP_CRM_HW_5
 					&mc_virt SLAVE_EBI1_DISP_CRM_HW_5>,
-				<&mmss_noc MASTER_MDP_DISP_CRM_HW_6
-					&mc_virt SLAVE_EBI1_DISP_CRM_HW_6>,
-				<&mmss_noc MASTER_MDP_DISP_CRM_HW_7
-					&mc_virt SLAVE_EBI1_DISP_CRM_HW_7>,
-				<&mmss_noc MASTER_MDP_DISP_CRM_HW_8
-					&mc_virt SLAVE_EBI1_DISP_CRM_HW_8>,
 				<&mmss_noc MASTER_MDP_DISP_CRM_SW_0
 					&mc_virt SLAVE_EBI1_DISP_CRM_SW_0>;
 		interconnect-names = "qcom,sde-data-bus-hw-0", "qcom,sde-data-bus-hw-1",
 					"qcom,sde-data-bus-hw-2", "qcom,sde-data-bus-hw-3",
 					"qcom,sde-data-bus-hw-4", "qcom,sde-data-bus-hw-5",
-					"qcom,sde-data-bus-hw-6", "qcom,sde-data-bus-hw-7",
-					"qcom,sde-data-bus-hw-8", "qcom,sde-data-bus-sw-0";
+					"qcom,sde-data-bus-sw-0";
 
 		power-domains = <&dispcc DISP_CC_MDSS_CORE_GDSC>, <&dispcc DISP_CC_MDSS_CORE_INT2_GDSC>;
 		power-domain-names = "core_gdsc", "core_int2_gdsc";
