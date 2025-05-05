@@ -9,7 +9,7 @@
 #include "alor-sde-display-mtp.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Alor QRD + wcn7750 WLAN + SN220U + Kundu";
+	model = "Qualcomm Technologies, Inc. Alor ATP + Peach WLAN + ST54L + Kundu";
 	compatible = "qcom,alor-atp", "qcom,alor", "qcom,atp";
 	qcom,msm-id = <685 0x10000>;
 	qcom,board-id = <0x10021 0>;

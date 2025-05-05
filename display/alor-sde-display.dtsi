@@ -4,7 +4,6 @@
  */
 
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
-#include "alor-sde-display-pinctrl.dtsi"
 #include "alor-sde-display-common.dtsi"
 
 &soc {

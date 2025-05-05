@@ -5,6 +5,18 @@
 
 #include "alor-sde-display.dtsi"
 
+&dsi_dual_rdp370f_rgb_vid {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_raontech>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+};
+
+&dsi_rdp370f_rgb_vid {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_raontech>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+};
+
 &dsi_vtdr6130_amoled_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
@@ -267,6 +279,24 @@
 &dsi_dual_sim_dsc_375_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+};
+
+&dsi_sharp_4k_dsc_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
+	qcom,platform-bklight-en-gpio = <&tlmm 54 0>;
+};
+
+&dsi_sharp_4k_dsc_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
+	qcom,platform-bklight-en-gpio = <&tlmm 54 0>;
 };
 
 &dsi_sim_sec_hd_cmd {
