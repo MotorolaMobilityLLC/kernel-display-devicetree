@@ -31,8 +31,8 @@
 		qcom,mdss-dsi-tx-eot-append;
 		qcom,mdss-dsi-rx-eot-ignore;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_292: qcom,mdss-dsi-display-timings {
+			timing_0_293: timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <1080>;

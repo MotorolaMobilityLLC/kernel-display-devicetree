@@ -32,8 +32,8 @@
 		qcom,qsync-enable;
 		qcom,mdss-dsi-qsync-min-refresh-rate = <45>;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_265: qcom,mdss-dsi-display-timings {
+			timing_0_266: timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <1200>;

@@ -30,8 +30,8 @@
 		qcom,mdss-dsi-force-clock-lane-hs;
 		qcom,mdss-dsi-ext-bridge-mode;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_296: qcom,mdss-dsi-display-timings {
+			timing_0_297: timing@0 {
 				qcom,mdss-dsi-panel-width = <1920>;
 				qcom,mdss-dsi-panel-height = <1080>;
 				qcom,mdss-dsi-h-front-porch = <88>;
