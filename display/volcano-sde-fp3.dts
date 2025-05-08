@@ -11,6 +11,7 @@
 &sde_dp {
 	qcom,max-pclk-frequency-khz = <675000>;
 	qcom,mst-enable;
+	qcom,dp-mst-lm-merge-en;
 };
 
 &mdss_dsi0 {
