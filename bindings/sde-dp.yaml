@@ -23,6 +23,15 @@ properties:
   compatible:
     const: qcom,dp-display
 
+  qcom,op-label:
+    enum: [hwio, hfi, hyp]
+    description: Denotes display operation mode for the node.
+
+  status:
+    enum: [okay, disabled]
+    description: Operational status of the device. "okay" means the device is operational,
+      "disabled" means the device is not operational.
+
   reg:
     description: |
       Base address and length of DP hardware's memory mapped regions.
@@ -430,6 +439,8 @@ examples:
     sde_dp: qcom,dp_display@0 {
       cell-index = <0>;
       compatible = "qcom,dp-display";
+      qcom,op-label = "hwio";
+      status = "ok";
 
       qcom,dp-aux-switch = <&fsa4480>;
       qcom,ext-disp = <&ext_disp>;

@@ -17,6 +17,15 @@ properties:
   compatible:
     const: qcom,msm-hdcp
 
+  qcom,op-label:
+    enum: [hwio, hfi, hyp]
+    description: Denotes display operation mode for the node.
+
+  status:
+    enum: [okay, disabled]
+    description: Operational status of the device. "okay" means the device is operational,
+      "disabled" means the device is not operational.
+
 required:
   - compatible
 
@@ -24,5 +33,7 @@ examples:
   - |
     qcom_msmhdcp: qcom,msm_hdcp {
       compatible = "qcom,msm-hdcp";
+      qcom,op-label = "hwio";
+      status = "ok";
     };
 ...
