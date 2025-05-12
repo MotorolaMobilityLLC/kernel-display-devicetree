@@ -37,16 +37,10 @@
 
 		qcom,sde-mixer-off = <0x104000  0x10c000 0x114000
 					0x11c000 0x124000 0x12c000
-					0x134000 0x13c000 0x0f0f
-					0x0f0f  0x0f0f 0x0f0f>;
+					0x134000 0x13c000>;
 		qcom,sde-mixer-size = <0x400>;
 		qcom,sde-mixer-display-pref = "primary", "primary", "none","none",
-					"none", "none", "none", "none",
 					"none", "none", "none", "none";
-
-		qcom,sde-mixer-dcwb-pref = "none", "none", "none", "none",
-					"none", "none", "none", "none",
-					"dcwb", "dcwb", "dcwb", "dcwb";
 
 		qcom,sde-dspp-top-off = <0x1300>;
 		qcom,sde-dspp-top-size = <0x8c>;
@@ -118,7 +112,6 @@
 
 		qcom,sde-merge-3d-off = <0x164000 0x165000 0x166000 0x167000 0x16a700 0x16b700>;
 		qcom,sde-merge-3d-size = <0x1c>;
-		qcom,sde-pp-cwb = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
 
 		qcom,sde-cdm-off = <0x19e000>;
 		qcom,sde-cdm-size = <0x240>;
@@ -136,7 +129,6 @@
 
 		qcom,sde-dither-off = <0xc0 0xc0 0xc0 0xc0 0xc0
 					0xc0 0xc0 0xc0 0xc0 0xc0>;
-		qcom,sde-cwb-dither = <0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x1 0x1 0x1 0x1>;
 		qcom,sde-dither-version = <0x00030000>;
 		qcom,sde-dither-size = <0x24>;
 
@@ -151,7 +143,7 @@
 
 		qcom,sde-smart-dma-rev = "smart_dma_v2p5";
 
-		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7 10 9 12 11>;
+		qcom,sde-mixer-pair-mask = <2 1 4 3 6 5 8 7>;
 
 		qcom,sde-mixer-blend-op-off = <0x40 0x70 0xa0 0xd0 0x100 0x130
 						0x160 0x190 0x1c0 0x1f0 0x220>;
@@ -239,7 +231,6 @@
 
 		qcom,sde-vbif-qos-rt-remap = <4 4 5 5 5 5 5 6 4 4 5 5 5 5 5 6>;
 		qcom,sde-vbif-qos-nrt-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
-		qcom,sde-vbif-qos-cwb-remap = <4 4 5 5 5 5 5 6 4 4 5 5 5 5 5 6>;
 		qcom,sde-vbif-qos-lutdma-remap = <4 4 4 4 5 5 5 5 4 4 4 4 5 5 5 5>;
 		qcom,sde-vbif-qos-offline-wb-remap = <3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3>;
 		qcom,sde-vbif-qos-cnoc-remap = <3 3 4 4 5 5 5 5 3 3 4 4 5 5 5 5>;
