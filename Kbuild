@@ -1,4 +1,10 @@
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
+
+dtbo-$(CONFIG_VANTG_DTB) += display/canoe-sde-display-vantg-evb-overlay.dtbo
+
+else
+
 dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
 		display/canoe-sde-display-rumi-overlay.dtbo\
 		display/canoe-sde-display-cdp-overlay.dtbo \
@@ -16,6 +22,7 @@ dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
 		display/alor-interposer-sde-display-rcm-overlay.dtbo \
 		display/alor-interposer-sde-display-qrd-overlay.dtbo \
 		display/alor-interposer-sde.dtbo
+endif # end of CONFIG_MMI_DEVICE_DTBS
 else
 dtbo-$(CONFIG_ARCH_CANOE) += display/trustedvm-canoe-sde-display-mtp-overlay.dtbo \
 		display/trustedvm-canoe-sde-display-cdp-overlay.dtbo \
