@@ -339,6 +339,8 @@
 					39 01 00 00 00 00 06 F0 55 AA 52 08 01
 				];
 
+				qcom,mdss-dsi-qsync-freq-pattren-needs-selfrefresh =
+					<1 1>;
 				qcom,mdss-dsi-qsync-freq-step-sequence-interval =
 					<0 120000 2>, <0 30000 1>;
 				qcom,mdss-dsi-qsync-freq-step-sequence =
