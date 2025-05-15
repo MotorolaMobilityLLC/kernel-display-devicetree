@@ -15,7 +15,7 @@
 
 &mdss_dsi0 {
 	vdda-1p2-supply = <&L2F>;
-	qcom,split-link-supported;
+
 	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
@@ -32,13 +32,13 @@
 
 &mdss_dsi1 {
 	vdda-1p2-supply = <&L2F>;
-	qcom,split-link-supported;
+
 	clocks = <&dispcc DISP_CC_MDSS_BYTE1_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE1_CLK_SRC>,
 		<&dispcc DISP_CC_MDSS_BYTE1_INTF_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK_SRC>,
-		<&dispcc DISP_CC_ESYNC0_CLK>,
+		<&dispcc DISP_CC_ESYNC1_CLK>,
 		<&dispcc DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC1_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
@@ -52,6 +52,7 @@
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
+	pll_codes_region = <&dsi_pll_codes_data>;
 };
 
 &mdss_dsi_phy1 {
@@ -59,4 +60,5 @@
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
+	pll_codes_region = <&dsi_pll_codes_data>;
 };
