@@ -20,6 +20,7 @@
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-90hz-cmd.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-90hz-video.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-60hz-cmd.dtsi"
+#include "dsi-panel-vtdr6130-nodsc-fhd-plus-60hz-cmd.dtsi"
 #include "dsi-panel-vtdr6130-dsc-fhd-plus-60hz-video.dtsi"
 #include "dsi-panel-vtdr6130-qsync-dsc-fhd-plus-144hz-cmd.dtsi"
 #include "dsi-panel-vtdr6130-qsync-dsc-fhd-plus-144hz-video.dtsi"
@@ -371,6 +372,29 @@
 				04 03 02 04 00 0d 09];
 			qcom,display-topology = <2 2 1>,
 						<1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_vtdr6130_amoled_nodsc_60hz_cmd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,mdss-dsi-panel-phy-timings = [00 22 08 08 19 23 09
+				08 09 02 04 00 1c 0d];
+			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
 	};
