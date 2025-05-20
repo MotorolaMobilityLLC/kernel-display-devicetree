@@ -3,7 +3,6 @@
  * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
-#include "canoe-sde.dtsi"
 #include "canoe-sde-display-pinctrl.dtsi"
 #include "canoe-sde-display-common.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
@@ -64,6 +63,19 @@
 	splash_memory: splash_region {
 		reg = <0x0 0xfc800000 0x0 0x02b00000>;
 		label = "cont_splash_region";
+	};
+	/*
+	 * Demura memory regions are to be commented out if
+	 * feature not in use.
+	 */
+	demura_memory_0: demura_region_0 {
+		reg = <0x0 0x0 0x0 0x0>;
+		label = "demura hfc region 0";
+	};
+
+	demura_memory_1: demura_region_1 {
+		reg = <0x0 0x0 0x0 0x0>;
+		label = "demura hfc region 1";
 	};
 };
 
@@ -347,4 +359,17 @@
 	qcom,video-psr-enable;
 	qcom,dsi-qsync-avr-step-fps = <240>;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <60>;
+};
+
+&dsi_nt37802_amoled_video_psr_vhm {
+	qcom,mdss-esync;
+	qcom,mdss-esync-hsync-milli-pulse-width = <500>;
+	qcom,mdss-esync-emsync-fps = <120>;
+	qcom,mdss-esync-emsync-milli-pulse-width = <500>;
+
+	qcom,qsync-enable;
+	qcom,vrr-enable;
+	qcom,video-psr-enable;
+	qcom,dsi-qsync-avr-step-fps = <120>;
+	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
 };
