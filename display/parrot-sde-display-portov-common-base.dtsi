@@ -266,6 +266,7 @@
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,platform-reset-gpio-always-on;
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,tp_state_check_enable;
         qcom,tp_state_need_reset;
