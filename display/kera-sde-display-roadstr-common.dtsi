@@ -103,8 +103,8 @@
 	qcom,mdss-dsi-display-timings {
 		       timing@0 {
 		               //qcom,mdss-dsi-panel-clockrate = <1095000000>;
-		               qcom,mdss-dsi-panel-phy-timings = [00 1E 08 07 18 16 08
-		                       08 08 02 04 00 1A 0D];
+		               qcom,mdss-dsi-panel-phy-timings = [00 21 08 08 19 17 08
+		                       08 09 02 04 00 1C 0D];
 		               qcom,display-topology = <2 2 1>;
 		               qcom,default-topology-index = <0>;
 		       };
@@ -115,7 +115,7 @@
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
 	qcom,dsi-supported-dfps-list = <120 90 60>;
-	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	//qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 	qcom,mdss-dsi-pan-dfps-send-command;
 
@@ -153,8 +153,8 @@
 	qcom,mdss-dsi-display-timings {
 		       timing@0 {
 		               //qcom,mdss-dsi-panel-clockrate = <1095000000>;
-		               qcom,mdss-dsi-panel-phy-timings = [00 1E 08 07 18 16 08
-		                       08 08 02 04 00 1A 0D];
+		               qcom,mdss-dsi-panel-phy-timings = [00 21 08 08 19 17 08
+		                       08 09 02 04 00 1C 0D];
 		               qcom,display-topology = <2 2 1>;
 		               qcom,default-topology-index = <0>;
 		       };
@@ -190,6 +190,7 @@
 
 &qupv3_se8_spi {
 	goodix-berlin@0 {
-		panel = <&mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz>;
+		panel = <&mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz
+                        &mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz_v0>;
 	};
 };
