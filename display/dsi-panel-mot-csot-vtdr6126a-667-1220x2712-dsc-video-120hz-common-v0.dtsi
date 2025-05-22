@@ -61,9 +61,9 @@
 		qcom,mdss-dsi-hbm-fod-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
-		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <4271>;
+		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <3525>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-size = <4272>;
+		qcom,mdss-dsi-panel-local-hbm-alpha-size = <3526>;
 		qcom,mdss-dsi-panel-bl-num = <1>;
 
 		qcom,mdss-dsi-display-timings {
