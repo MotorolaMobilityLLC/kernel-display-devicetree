@@ -349,7 +349,7 @@
 		<&dispcc DISP_CC_MDSS_PCLK0_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK0_CLK_SRC>,
 		<&dispcc DISP_CC_ESYNC0_CLK>,
-		<&dispcc DISP_CC_OSC_CLK>,
+		<&dispcc_mx DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC0_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
@@ -366,7 +366,7 @@
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK>,
 		<&dispcc DISP_CC_MDSS_PCLK1_CLK_SRC>,
 		<&dispcc DISP_CC_ESYNC1_CLK>,
-		<&dispcc DISP_CC_OSC_CLK>,
+		<&dispcc_mx DISP_CC_OSC_CLK>,
 		<&dispcc DISP_CC_MDSS_ESC1_CLK>,
 		<&rpmhcc RPMH_CXO_CLK>;
 	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
