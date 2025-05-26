@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
@@ -185,7 +185,7 @@
 		qcom,sde-max-trusted-vm-displays = <1>;
 
 		qcom,sde-max-bw-low-kbps = <18900000>;
-		qcom,sde-max-bw-high-kbps = <28500000>;
+		qcom,sde-max-bw-high-kbps = <24200000>;
 		qcom,sde-min-core-ib-kbps = <2500000>;
 		qcom,sde-min-llcc-ib-kbps = <0>;
 		qcom,sde-min-dram-ib-kbps = <800000>;
