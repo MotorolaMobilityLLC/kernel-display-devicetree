@@ -3,6 +3,7 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
+#include "canoe-sde.dtsi"
 #include "canoe-sde-display-pinctrl.dtsi"
 #include "canoe-sde-display-common.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
