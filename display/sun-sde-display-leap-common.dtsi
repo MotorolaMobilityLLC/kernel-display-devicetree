@@ -592,6 +592,7 @@
 		39 00 00 40 00 00 03 5F 00 01
 		39 00 00 00 00 00 03 51 3F FC
 	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -753,6 +754,7 @@
 		39 00 00 40 00 00 03 5F 00 01
 		39 00 00 00 00 00 03 51 3F FC
 	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -914,6 +916,7 @@
 		39 00 00 40 00 00 03 5F 00 01
 		39 00 00 00 00 00 03 51 3F FC
 	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
@@ -1071,6 +1074,17 @@
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <4272>;
 
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
+
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
 			qcom,framerate-group-no-duplicated;
@@ -1192,6 +1206,17 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <4272>;
+
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
@@ -1315,6 +1340,17 @@
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <4272>;
 
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
+
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
 			qcom,framerate-group-no-duplicated;
@@ -1436,6 +1472,17 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <4272>;
+
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
