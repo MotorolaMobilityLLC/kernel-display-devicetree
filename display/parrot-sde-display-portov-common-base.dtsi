@@ -388,12 +388,12 @@
                 aw99703,hwen-gpio = <&pm6150l_gpios 10 0>;
                 aw99703,bl-map = <3>; /* brightness map level 1:256,2:1024,3:2048 */
                 aw99703,using-lsb;
-                aw99703,ovp-level = <2>; /* 0:17.5V, 1:24V, 2:31V, 3:38V, 4:41.5V */
-                aw99703,ocp-level = <1>; /* 0:0.9A, 1:1.8A, 2:2.7A, 3:3.4A */
+                aw99703,ovp-level = <3>; /* 0:17.5V, 1:24V, 2:31V, 3:38V, 4:41.5V */
+                aw99703,ocp-level = <2>; /* 0:0.9A, 1:1.8A, 2:2.7A, 3:3.4A */
                 aw99703,switch-freq = <1>; /* 1000kHz(default) */
                 aw99703,auto-freq-high = <0x10>;
                 aw99703,auto-freq-low = <0x05>;
-                aw99703,bl-fscal-led = <0x17>; /* 23.2mA */
+                aw99703,bl-fscal-led = <0x1E>; /* 28.8mA */
                 aw99703,bl-channel = <3>; /* 3 led string */
                 aw99703,turn-on-ramp = <0x00>; /* 512us */
                 aw99703,turn-off-ramp = <0x04>; /* 8ms */
@@ -401,15 +401,15 @@
                 aw99703,i2c-trans-dim = <1>; /* 128ms */
                 aw99703,pwm-mode = <1>; /* 1 pwm enable,0 PWM disable */
                 aw99703,map-type = <0>; /* 0 exponential, 4 linear */
-		current-align-type = <1>;
+		current-align-type = <0x03>; /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
                 aw99703,work-mode = <1>; /* backlight */
-		aw99703,default-brightness = <1810>;
+		aw99703,default-brightness = <889>;
 
 		/* ktd3136*/
 		ktd,hwen-gpio = <&pm6150l_gpios 10 0>;
                 ktd,using-lsb;
                 ktd,pwm-frequency = <1>; /* 1MHZ */
-                ktd,bl-fscal-led = <0xC9>; /* 25mA */
+                ktd,bl-fscal-led = <0xF1>; /* 29mA */
                 ktd,turn-on-ramp = <0x00>;
                 ktd,turn-off-ramp = <0x04>;
                 ktd,pwm-trans-dim = <0>;
@@ -421,9 +421,9 @@
                 ktd,ocp-level = <2600>;
                 ktd,switching-frequency = <1>;
                 ktd,inductor-current = <1>;
-                ktd,default-brightness = <1023>;
+                ktd,default-brightness = <889>;
                 ktd,map-type = <0>; /* 0 exponential, 1 linear */
-                ktd,current-align-type = <0x01>;
+                ktd,current-align-type = <0x03>;  /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
 	};
 };
 
