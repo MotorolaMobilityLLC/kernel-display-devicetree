@@ -95,16 +95,6 @@
 			qcom,supply-disable-load = <1>;
 			qcom,supply-post-on-sleep = <0>;
 		};
-
-		qcom,panel-supply-entry@3 {
-			reg = <3>;
-			qcom,supply-name = "tvdd";
-			qcom,supply-min-voltage = <1800000>;
-			qcom,supply-max-voltage = <1800000>;
-			qcom,supply-enable-load = <0>;
-			qcom,supply-disable-load = <0>;
-			qcom,supply-post-on-sleep = <20>;
-		};
 	};
 
 	dsi_panel_pwr_supply_vtdr: dsi_panel_pwr_supply_vtdr {
