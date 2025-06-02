@@ -338,6 +338,12 @@
 						&timing_17_262
 						&timing_18
 						&timing_18_216
+						&timing_18_119
+						&timing_18_241
+						&timing_19_120
+						&timing_19_242
+						&timing_20_121
+						&timing_20_243
 						&timing_1_100
 						&timing_1_113
 						&timing_1_126
@@ -423,27 +429,21 @@
 						&timing_6_251
 						&timing_7
 						&timing_7_106
-						&timing_7_119
 						&timing_7_132
 						&timing_7_205
 						&timing_7_225
-						&timing_7_241
 						&timing_7_252
 						&timing_8
 						&timing_8_107
-						&timing_8_120
 						&timing_8_133
 						&timing_8_206
 						&timing_8_226
-						&timing_8_242
 						&timing_8_253
 						&timing_9
 						&timing_9_108
-						&timing_9_121
 						&timing_9_134
 						&timing_9_207
 						&timing_9_227
-						&timing_9_243
 						&timing_9_254
 						&vcm_0
 						&vcm_1
