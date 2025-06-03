@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 &mdss_mdp {
@@ -32,8 +32,8 @@
 		qcom,mdss-dsi-panel-peak-brightness = <6450000>;
 		qcom,mdss-dsi-panel-blackness-level = <4961>;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_328: qcom,mdss-dsi-display-timings {
+			timing_0_329: timing@0 {
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <3120>;
 				qcom,mdss-dsi-h-front-porch = <72>;

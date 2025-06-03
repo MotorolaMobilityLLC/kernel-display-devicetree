@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 &mdss_mdp {
@@ -39,8 +39,8 @@
 		qcom,mdss-dsi-te-using-te-pin;
 		qcom,panel-ack-disabled;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_217: qcom,mdss-dsi-display-timings {
+			timing_0_218: timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <1440>;
@@ -235,7 +235,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@1 {
+			timing_1_219: timing@1 {
 				cell-index = <1>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -287,7 +287,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@2 {
+			timing_2_220: timing@2 {
 				cell-index = <2>;
 				qcom,mdss-dsi-panel-framerate = <90>;
 				qcom,mdss-dsi-panel-width = <1440>;
@@ -482,7 +482,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@3 {
+			timing_3_221: timing@3 {
 				cell-index = <3>;
 				qcom,mdss-dsi-panel-framerate = <180>;
 				qcom,mdss-dsi-panel-width = <1080>;
@@ -677,7 +677,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@4 {
+			timing_4_222: timing@4 {
 				cell-index = <4>;
 				qcom,mdss-dsi-panel-framerate = <240>;
 				qcom,mdss-dsi-panel-width = <1080>;
@@ -872,7 +872,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@5 {
+			timing_5_223: timing@5 {
 				cell-index = <5>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -922,7 +922,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@6 {
+			timing_6_224: timing@6 {
 				cell-index = <6>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -973,7 +973,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@7 {
+			timing_7_225: timing@7 {
 				cell-index = <7>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -1024,7 +1024,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@8 {
+			timing_8_226: timing@8 {
 				cell-index = <8>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -1075,7 +1075,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@9 {
+			timing_9_227: timing@9 {
 				cell-index = <9>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -1126,7 +1126,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@10 {
+			timing_10_228: timing@10 {
 				cell-index = <10>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -1176,7 +1176,7 @@
 				qcom,src-chroma-format = <1>;
 			};
 
-			timing@11 {
+			timing_11_229: timing@11 {
 				cell-index = <11>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;

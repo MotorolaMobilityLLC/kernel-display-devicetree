@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 &mdss_mdp {
@@ -48,8 +48,8 @@
 		qcom,mdss-dsi-te-dcs-command = <1>;
 		qcom,mdss-dsi-te-check-enable;
 		qcom,mdss-dsi-te-using-te-pin;
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_281: qcom,mdss-dsi-display-timings {
+			timing_0_282: timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-cmd-mode;
 				qcom,mdss-dsi-video-mode;
@@ -235,7 +235,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing@1 {
+			timing_1_283: timing@1 {
 				cell-index = <1>;
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <1080>;
@@ -341,7 +341,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing@2 {
+			timing_2_284: timing@2 {
 				cell-index = <2>;
 				qcom,mdss-dsi-panel-framerate = <90>;
 				qcom,mdss-dsi-panel-width = <1080>;
@@ -447,7 +447,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing@3 {
+			timing_3_285: timing@3 {
 				cell-index = <3>;
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <1080>;

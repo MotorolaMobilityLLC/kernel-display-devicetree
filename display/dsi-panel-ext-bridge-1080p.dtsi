@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 &mdss_mdp {
@@ -30,8 +30,8 @@
 		qcom,mdss-dsi-force-clock-lane-hs;
 		qcom,mdss-dsi-ext-bridge-mode;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_296: qcom,mdss-dsi-display-timings {
+			timing_0_297: timing@0 {
 				qcom,mdss-dsi-panel-width = <1920>;
 				qcom,mdss-dsi-panel-height = <1080>;
 				qcom,mdss-dsi-h-front-porch = <88>;

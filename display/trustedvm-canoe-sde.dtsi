@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
 #include <dt-bindings/clock/qcom,gcc-canoe.h>
 #include "canoe-sde-common.dtsi"
+#include "trustedvm-canoe-avf-required-subnodes.dtsi"
 
 &soc {
 	/* dummy display clock provider */
