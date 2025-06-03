@@ -37,8 +37,8 @@
 		qcom,mdss-dsi-panel-peak-brightness = <6450000>;
 		qcom,mdss-dsi-panel-blackness-level = <4961>;
 
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_326: qcom,mdss-dsi-display-timings {
+			timing_0_327: timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <3120>;
