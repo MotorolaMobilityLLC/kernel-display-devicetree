@@ -35,8 +35,8 @@
 		qcom,mdss-dsi-reset-sequence = <1 0>, <0 0>, <1 0>;
 		qcom,panel-ack-disabled;
 
-		qcom_mdss_dsi_display_timings_269: qcom,mdss-dsi-display-timings {
-			timing_0_270: timing@0 {
+		qcom,mdss-dsi-display-timings {
+			timing@0 {
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <2560>;
 				qcom,mdss-dsi-h-front-porch = <8>;

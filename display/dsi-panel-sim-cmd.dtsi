@@ -46,8 +46,8 @@
 		qcom,panel-ack-disabled;
 		qcom,qsync-enable;
 
-		qcom_mdss_dsi_display_timings_197: qcom,mdss-dsi-display-timings {
-			timing_0_198: timing@0 {
+		qcom,mdss-dsi-display-timings {
+			timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -168,7 +168,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_1_199: timing@1 {
+			timing@1 {
 				cell-index = <1>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -231,7 +231,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_2_200: timing@2 {
+			timing@2 {
 				cell-index = <2>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -297,7 +297,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_3_201: timing@3 {
+			timing@3 {
 				cell-index = <3>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <1280>;
@@ -359,7 +359,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_4_202: timing@4 {
+			timing@4 {
 				cell-index = <4>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -420,7 +420,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_5_203: timing@5 {
+			timing@5 {
 				cell-index = <5>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -487,7 +487,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_6_204: timing@6 {
+			timing@6 {
 				cell-index = <6>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -554,7 +554,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_7_205: timing@7 {
+			timing@7 {
 				cell-index = <7>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -619,7 +619,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_8_206: timing@8 {
+			timing@8 {
 				cell-index = <8>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <2340>;
@@ -680,7 +680,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_9_207: timing@9 {
+			timing@9 {
 				cell-index = <9>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -740,7 +740,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_10_208: timing@10 {
+			timing@10 {
 				cell-index = <10>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -800,7 +800,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_11_209: timing@11 {
+			timing@11 {
 				cell-index = <11>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -860,7 +860,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_12_210: timing@12 {
+			timing@12 {
 				cell-index = <12>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -920,7 +920,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_13_211: timing@13 {
+			timing@13 {
 				cell-index = <13>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -980,7 +980,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_14_212: timing@14 {
+			timing@14 {
 				cell-index = <14>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -1040,7 +1040,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_15_213: timing@15 {
+			timing@15 {
 				cell-index = <15>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -1099,7 +1099,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_16_214: timing@16 {
+			timing@16 {
 				cell-index = <16>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -1158,7 +1158,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_17_215: timing@17 {
+			timing@17 {
 				cell-index = <17>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3660>;
@@ -1217,7 +1217,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_18_216: timing@18 {
+			timing@18 {
 				cell-index = <18>;
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <3200>;
