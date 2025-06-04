@@ -204,7 +204,6 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,platform-reset-gpio-always-on;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,suspend-ulps-enabled;
 	qcom,tp_state_check_enable;
         qcom,deep-standby-need-twice-reset;
 
@@ -326,7 +325,6 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,platform-reset-gpio-always-on;
 	qcom,mdss-dsi-bl-inverted-dbv;
-	qcom,suspend-ulps-enabled;
 	qcom,tp_state_check_enable;
 	qcom,deep-standby-need-twice-reset;
 
