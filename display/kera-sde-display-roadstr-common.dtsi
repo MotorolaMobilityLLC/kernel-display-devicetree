@@ -125,9 +125,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;//
-	qcom,mdss-dsi-bl-max-level = <16383>;
+	qcom,mdss-dsi-bl-max-level = <16180>;
 	qcom,mdss-dsi-bl-default-level = <8064>;
-	qcom,mdss-brightness-max-level = <16383>;
+	qcom,mdss-brightness-max-level = <16180>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
