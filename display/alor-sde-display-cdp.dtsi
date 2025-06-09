@@ -8,13 +8,13 @@
 &dsi_dual_rdp370f_rgb_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_raontech>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
-	qcom,platform-reset-gpio = <&tlmm 98 0>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
 };
 
 &dsi_rdp370f_rgb_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_raontech>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
-	qcom,platform-reset-gpio = <&tlmm 98 0>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
 };
 
 &dsi_vtdr6130_amoled_cmd {
