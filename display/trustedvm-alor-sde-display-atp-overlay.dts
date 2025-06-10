@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 /dts-v1/;
@@ -10,8 +10,9 @@
 #include "trustedvm-alor-sde-display-mtp.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Alor ATP + Peach WLAN + ST54L + Kundu - TrustedVM";
-	compatible = "qcom,alor-atp", "qcom,alor", "qcom,atp";
+	model = "Qualcomm Technologies, Inc. Alor SVM ATP";
+	compatible = "qcom,alor-atp", "qcom,alor", "qcom,alorp-atp",
+			"qcom,alorp", "qcom,atp";
 	qcom,msm-id = <685 0x10000>;
 	qcom,board-id = <0x10021 0>;
 };
