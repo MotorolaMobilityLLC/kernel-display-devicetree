@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-alor-sde.dtsi"
+#include "trustedvm-alor-sde-display-qrd.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Alor SVM QRD";
+	compatible = "qcom,alor-qrd", "qcom,alor", "qcom,alorp-qrd", "qcom,alorp",
+			   "qcom,qrd";
+	qcom,msm-id = <685 0x10000>;
+	qcom,board-id = <0x1000b 0>,<0x2000b 0>;
+};

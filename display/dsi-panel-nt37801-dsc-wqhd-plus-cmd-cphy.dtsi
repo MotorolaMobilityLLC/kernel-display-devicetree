@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 &mdss_mdp {
@@ -78,7 +78,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
-				qcom,mdss-dsi-panel-clockrate = <728870000>;
+				qcom,mdss-dsi-panel-clockrate = <736150000>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 2f 00
@@ -172,7 +172,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
-				qcom,mdss-dsi-panel-clockrate = <548200000>;
+				qcom,mdss-dsi-panel-clockrate = <553680000>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 2f 01
@@ -274,7 +274,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-jitter = <0x4 0x1>;
-				qcom,mdss-dsi-panel-clockrate = <728870000>;
+				qcom,mdss-dsi-panel-clockrate = <736150000>;
 
 				qcom,mdss-dsi-timing-switch-command = [
 					39 01 00 00 00 00 02 2f 00
