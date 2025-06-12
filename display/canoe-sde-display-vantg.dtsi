@@ -209,7 +209,7 @@
 };
 
 &qupv3_se19_spi {
-	st_fts@0 {
+	goodix-berlin@0 {
 		panel = <&mot_boe_ili97680A_678_1264x2780_dsc_cmd_v0
 		&mot_boe_ili97680A_678_1264x2780_dsc_cmd_v1>;
 	};
