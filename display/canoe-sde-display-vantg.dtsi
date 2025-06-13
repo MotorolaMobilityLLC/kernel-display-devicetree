@@ -59,6 +59,11 @@
        qcom,init-voltage = <1250000>;
 };
 
+&sde_dp {
+	mmi,aux-switch-enable-gpio = <&tlmm 96 0>;
+	mmi,aux-switch-flip-gpio = <&tlmm 87 0>;
+};
+
 &mdss_mdp {
 	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp>;
 };
