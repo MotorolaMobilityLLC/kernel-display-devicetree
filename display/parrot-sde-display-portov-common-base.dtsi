@@ -198,7 +198,7 @@
 	qcom,mdss-dsi-bl-min-level = <9>;
 	qcom,mdss-dsi-bl-max-level = <2047>;
 	qcom,mdss-brightness-max-level = <2047>;
-	qcom,mdss-dsi-bl-default-level = <1810>;
+	qcom,mdss-dsi-bl-default-level = <1251>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -264,7 +264,7 @@
 	qcom,mdss-dsi-bl-min-level = <9>;
 	qcom,mdss-dsi-bl-max-level = <2047>;
 	qcom,mdss-brightness-max-level = <2047>;
-	qcom,mdss-dsi-bl-default-level = <1810>;
+	qcom,mdss-dsi-bl-default-level = <1251>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -321,7 +321,7 @@
 	qcom,mdss-dsi-bl-min-level = <9>;
 	qcom,mdss-dsi-bl-max-level = <2047>;
 	qcom,mdss-brightness-max-level = <2047>;
-	qcom,mdss-dsi-bl-default-level = <1810>;
+	qcom,mdss-dsi-bl-default-level = <1251>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-te-gpio = <&tlmm 99 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -403,7 +403,7 @@
                 aw99703,map-type = <0>; /* 0 exponential, 4 linear */
 		current-align-type = <0x03>; /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
                 aw99703,work-mode = <1>; /* backlight */
-		aw99703,default-brightness = <889>;
+		aw99703,default-brightness = <1251>;
 
 		/* ktd3136*/
 		ktd,hwen-gpio = <&pm6150l_gpios 10 0>;
@@ -421,7 +421,7 @@
                 ktd,ocp-level = <2600>;
                 ktd,switching-frequency = <1>;
                 ktd,inductor-current = <1>;
-                ktd,default-brightness = <889>;
+                ktd,default-brightness = <1251>;
                 ktd,map-type = <0>; /* 0 exponential, 1 linear */
                 ktd,current-align-type = <0x03>;  /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
 	};
