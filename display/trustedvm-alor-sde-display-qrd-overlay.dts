@@ -13,6 +13,6 @@
 	model = "Qualcomm Technologies, Inc. Alor SVM QRD";
 	compatible = "qcom,alor-qrd", "qcom,alor", "qcom,alorp-qrd", "qcom,alorp",
 			   "qcom,qrd";
-	qcom,msm-id = <685 0x10000>;
-	qcom,board-id = <0x1000b 0>,<0x2000b 0>;
+	qcom,msm-id = <685 0x10000>, <727 0x10000>;
+	qcom,board-id = <0x1000b 0>,<0x2000b 0>, <0x1010B 0>;
 };
