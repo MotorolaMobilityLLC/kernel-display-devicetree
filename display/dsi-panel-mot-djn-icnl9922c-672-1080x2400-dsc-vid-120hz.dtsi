@@ -19,7 +19,7 @@
 		qcom,mdss-dsi-lane-3-state;
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
-		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 30>;
+		qcom,mdss-dsi-reset-sequence = <1 10>, <0 2>, <1 10>;
 		qcom,mdss-dsi-tx-eot-append;
 		qcom,adjust-timer-wakeup-ms = <1>;
 
@@ -43,8 +43,8 @@
 					39 00 00 40 00 00 03 51 07 FF
 					39 00 00 40 00 00 03 53 2C 00
 					39 00 00 40 02 00 03 55 03 00
-					05 00 00 00 78 00 02 11 00
-					05 00 00 00 14 00 02 29 00
+					05 00 00 00 5A 00 02 11 00
+					05 00 00 00 0A 00 02 29 00
 					39 00 00 00 00 00 03 AC 05 00
 				];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
