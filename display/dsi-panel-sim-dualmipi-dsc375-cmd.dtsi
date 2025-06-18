@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 &mdss_mdp {
@@ -42,8 +42,8 @@
 		qcom,mdss-dsi-te-using-te-pin;
 		qcom,panel-ack-disabled;
 
-		qcom_mdss_dsi_display_timings_244: qcom,mdss-dsi-display-timings {
-			timing_0_245: timing@0 {
+		qcom,mdss-dsi-display-timings {
+			timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
@@ -93,7 +93,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_1_246: timing@1 {
+			timing@1 {
 				cell-index = <1>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
@@ -143,7 +143,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_2_247: timing@2 {
+			timing@2 {
 				cell-index = <2>;
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <3840>;
@@ -193,7 +193,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_3_248: timing@3 {
+			timing@3 {
 				cell-index = <4>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
@@ -243,7 +243,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_4_249: timing@4 {
+			timing@4 {
 				cell-index = <5>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
@@ -293,7 +293,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_5_250: timing@5 {
+			timing@5 {
 				cell-index = <6>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
@@ -343,7 +343,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_6_251: timing@6 {
+			timing@6 {
 				cell-index = <7>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
@@ -393,7 +393,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_7_252: timing@7 {
+			timing@7 {
 				cell-index = <8>;
 				qcom,mdss-dsi-panel-framerate = <30>;
 				qcom,mdss-dsi-panel-width = <720>;
@@ -572,7 +572,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_8_253: timing@8 {
+			timing@8 {
 				cell-index = <9>;
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <720>;
@@ -751,7 +751,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_9_254: timing@9 {
+			timing@9 {
 				cell-index = <10>;
 				qcom,mdss-dsi-panel-framerate = <90>;
 				qcom,mdss-dsi-panel-width = <720>;
@@ -930,7 +930,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_10_255: timing@10 {
+			timing@10 {
 				cell-index = <11>;
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <720>;
@@ -1109,7 +1109,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_11_256: timing@11 {
+			timing@11 {
 				cell-index = <12>;
 				qcom,mdss-dsi-panel-width = <2520>;
 				qcom,mdss-dsi-panel-height = <2160>;
@@ -1159,7 +1159,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_12_257: timing@12 {
+			timing@12 {
 				cell-index = <13>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
@@ -1209,7 +1209,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_13_258: timing@13 {
+			timing@13 {
 				cell-index = <14>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
@@ -1259,7 +1259,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_14_259: timing@14 {
+			timing@14 {
 				cell-index = <15>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
@@ -1309,7 +1309,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_15_260: timing@15 {
+			timing@15 {
 				cell-index = <16>;
 				qcom,mdss-dsi-panel-width = <360>;
 				qcom,mdss-dsi-panel-height = <1280>;
@@ -1359,7 +1359,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_16_261: timing@16 {
+			timing@16 {
 				cell-index = <17>;
 				qcom,mdss-dsi-panel-width = <540>;
 				qcom,mdss-dsi-panel-height = <1920>;
@@ -1409,7 +1409,7 @@
 				qcom,mdss-dsc-block-prediction-enable;
 			};
 
-			timing_17_262: timing@17 {
+			timing@17 {
 				cell-index = <18>;
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <2560>;
