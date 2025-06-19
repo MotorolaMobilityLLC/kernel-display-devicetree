@@ -12,6 +12,8 @@
 		compatible = "qcom,wb-display";
 		cell-index = <0>;
 		label = "wb_display0";
+		qcom,op-label = "hwio";
+		status = "ok";
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
 		clock-names = "mdp_core_clk";
 	};
@@ -20,6 +22,8 @@
 		compatible = "qcom,wb-display";
 		cell-index = <1>;
 		label = "wb_display1";
+		qcom,op-label = "hwio";
+		status = "ok";
 		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
 		clock-names = "mdp_core_clk";
 	};

@@ -4,6 +4,7 @@
  */
 
 #include "canoe-sde-display.dtsi"
+#include "canoe-sde-display-hfi.dtsi"
 
 &dsi_nt37801_amoled_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;

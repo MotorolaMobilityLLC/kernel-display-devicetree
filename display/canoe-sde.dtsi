@@ -25,16 +25,22 @@
 
 	qcom_msmhdcp: qcom,msm_hdcp {
 		compatible = "qcom,msm-hdcp";
+		qcom,op-label = "hwio";
+		status = "ok";
 	};
 
 	sde_dp_pll: qcom,dp_pll@88eb000 {
 		compatible = "qcom,dp-pll-3nm-v1";
+		qcom,op-label = "hwio";
+		status = "ok";
 		#clock-cells = <1>;
 	};
 
 	sde_dp: qcom,dp_display@9ad2000 {
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
+		qcom,op-label = "hwio";
+		status = "ok";
 
 		usb-phy = <&usb_qmp_dp_phy>;
 		qcom,ext-disp = <&ext_disp>;
@@ -192,6 +198,8 @@
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
+		qcom,op-label = "hwio";
+		status = "ok";
 		iommus = <&apps_smmu 0x800 0x2>;
 		memory-region = <&smmu_sde_iommu_region_partition>;
 		qcom,iommu-faults = "non-fatal";
@@ -203,6 +211,8 @@
 
 	smmu_sde_sec: qcom,smmu_sde_sec_cb {
 		compatible = "qcom,smmu_sde_sec";
+		qcom,op-label = "hwio";
+		status = "ok";
 		iommus = <&apps_smmu 0x801 0x0>;
 		memory-region = <&smmu_sde_iommu_region_partition>;
 		qcom,iommu-faults = "non-fatal";
@@ -214,6 +224,8 @@
 	sde_cesta: qcom,sde_cesta@0x9bd8000 {
 		cell-index = <0>;
 		compatible = "qcom,sde-cesta";
+		qcom,op-label = "hwio";
+		status = "ok";
 		reg = <0x0 0x09bc2000 0x0 0x850>,
 			<0x0 0x9bd8000 0x0 0x60>,
 			<0x0 0x9bd9000 0x0 0x30>,

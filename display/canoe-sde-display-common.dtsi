@@ -188,6 +188,8 @@
 	sde_dsi: qcom,dsi-display-primary {
 		compatible = "qcom,dsi-display";
 		label = "primary";
+		qcom,op-label = "hwio";
+		status = "ok";
 
 		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
 		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
@@ -203,6 +205,8 @@
 	sde_dsi1: qcom,dsi-display-secondary {
 		compatible = "qcom,dsi-display";
 		label = "secondary";
+		qcom,op-label = "hwio";
+		status = "ok";
 
 		qcom,dsi-ctrl = <&mdss_dsi0 &mdss_dsi1>;
 		qcom,dsi-phy = <&mdss_dsi_phy0 &mdss_dsi_phy1>;
