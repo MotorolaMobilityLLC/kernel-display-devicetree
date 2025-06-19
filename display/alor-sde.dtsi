@@ -6,10 +6,9 @@
 #include <dt-bindings/interrupt-controller/arm-gic.h>
 #include <dt-bindings/soc/qcom,ipcc.h>
 #include <dt-bindings/interconnect/qcom,alor.h>
-#include <dt-bindings/clock/qcom,alor-dispcc.h>
 #include <dt-bindings/clock/qcom,alor-gcc.h>
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
-#include <dt-bindings/clock/qcom,alor-tcsrcc.h>
+#include <dt-bindings/clock/qcom,tcsrcc-canoe.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 #include <dt-bindings/arm/msm/qti-smmu-proxy-dt-ids.h>
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
