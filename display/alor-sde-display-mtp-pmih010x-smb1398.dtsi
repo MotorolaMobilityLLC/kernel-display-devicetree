@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include "alor-sde-display-mtp.dtsi"
+
+&sde_dp {
+	status = "ok";
+};
+
+&mdss_mdp {
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec
+			&sde_wb0 &sde_wb1 &sde_dp>;
+};

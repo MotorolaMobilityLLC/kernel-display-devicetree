@@ -64,11 +64,11 @@
 		compatible = "qcom,dp-display";
 		status = "disabled";
 
-		//usb-phy = <&usb_qmp_dp_phy>;
+		usb-phy = <&usb_qmp_dp_phy>;
 		qcom,ext-disp = <&ext_disp>;
 		usb-controller = <&usb0>;
-		//qcom,altmode-dev = <&altmode 0>;
-		//qcom,dp-aux-switch = <&wcd_usbss>;
+		qcom,altmode-dev = <&altmode 0>;
+		qcom,dp-aux-switch = <&wcd_usbss>;
 
 		reg =   <0x0 0x9ad2000 0x0 0x10c>,
 			<0x0 0x9ad2200 0x0 0x0c8>,
