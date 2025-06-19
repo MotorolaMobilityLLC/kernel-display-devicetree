@@ -3,14 +3,15 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
+
 /dts-v1/;
 /plugin/;
 
-#include "alor-sde-display-mtp.dtsi"
+#include "alor-sde-display-mtp-pmih010x-smb1398.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. Alor MTP + WCN7750 WLAN + PM7750BA SMB1500 + ST54L + Panderio";
+	model = "Qualcomm Technologies, Inc. Alor MTP + Peach WLAN + PMIH010X SMB1398 + SN220U + Panderio";
 	compatible = "qcom,alor-mtp", "qcom,alor", "qcom,mtp";
 	qcom,msm-id = <685 0x10000>;
-	qcom,board-id = <0x10008 0>, <0x20008 0>;
+	qcom,board-id = <0x30008 0>;
 };
