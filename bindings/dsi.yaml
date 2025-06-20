@@ -18,7 +18,18 @@ maintainers:
 
 properties:
   compatible:
-    const: qcom,mdss-dsi-ctrl
+    enum:
+      - qcom,mdss-dsi-ctrl
+      - qcom,dsi-ctrl-hfi-hw-v2.10
+
+  qcom,op-label:
+    description: Denotes display operation mode for the node.
+    enum: [hwio, hfi, hyp]
+
+  status:
+      enum: [okay, disabled]
+      description: Operational status of the device. "okay" means the device is operational,
+        "disabled" means the device is not operational.
 
   reg:
     description: Physical base address and length of the registers of controller
@@ -139,6 +150,8 @@ examples:
   - |
     dsi0: dsi@fd922800 {
       compatible = "qcom,mdss-dsi-ctrl";
+      qcom,op-label = "hwio";
+      status = "ok";
       qcom,dsi-host-index = <0>;
       interrupt-parent = <&mdp>;
       interrupts = <4 0>;
