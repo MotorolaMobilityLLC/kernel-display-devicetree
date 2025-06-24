@@ -1,0 +1,175 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include <dt-bindings/clock/qcom,x1e80100-dispcc.h>
+#include <dt-bindings/clock/qcom,x1p42100-gcc.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
+#include <dt-bindings/clock/qcom,x1e80100-tcsr.h>
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
+#include "x1p42100-sde-common.dtsi"
+
+&soc {
+	ext_disp: qcom,msm-ext-disp {
+		compatible = "qcom,msm-ext-disp";
+
+		ext_disp_audio_codec: qcom,msm-ext-disp-audio-codec-rx {
+			compatible = "qcom,msm-ext-disp-audio-codec-rx";
+		};
+	};
+
+	qcom_msmhdcp: qcom,msm_hdcp {
+		compatible = "qcom,msm-hdcp";
+	};
+
+	sde_edp_pll: qcom,edp_pll@0aec5000 {
+		status = "no";
+		compatible = "qcom,edp-pll-4nm";
+		label = "dp3";
+		#clock-cells = <1>;
+	};
+
+	sde_edp: qcom,dp_display@0aea0000 {
+		status = "no";
+		cell-index = <3>;
+		qcom,intf-index = <2>;
+		compatible = "qcom,edp-display";
+		label = "drm_edp";
+
+		reg =   <0x0 0x0aea0000 0x0 0x10c>,
+			<0x0 0x0aea0200 0x0 0x0c8>,
+			<0x0 0x0aea0400 0x0 0xb78>,
+			<0x0 0x0aea1000 0x0 0x0a0>,
+			<0x0 0x0aec5a00 0x0 0x200>,
+			<0x0 0x0aec5200 0x0 0x200>,
+			<0x0 0x0aec5600 0x0 0x200>,
+			<0x0 0x0af08000 0x0 0x1f>,
+			<0x0 0x0aec5000 0x0 0x200>,
+			<0x0 0x0aee4000 0x0 0x034>,
+			<0x0 0x0af09000 0x0 0x014>;
+		reg-names = "dp_ahb", "dp_aux", "dp_link",
+			"dp_p0", "dp_phy", "dp_ln_tx0", "dp_ln_tx1",
+			"dp_mmss_cc", "dp_pll",
+			"hdcp_physical", "gdsc";
+
+		qcom,pclk-reg-off = <0>;
+		interrupt-parent = <&mdss_mdp>;
+		interrupts = <15 0>;
+
+		qcom,dp-aux-switch = <&sde_edp>;
+
+		#clock-cells = <1>;
+		clocks = <&dispcc DISP_CC_MDSS_DPTX3_AUX_CLK>,
+			<&rpmhcc RPMH_CXO_CLK>,
+			<&tcsrcc TCSR_EDP_CLKREF_EN>,
+			<&dispcc DISP_CC_MDSS_DPTX3_LINK_CLK>,
+			<&dispcc DISP_CC_MDSS_DPTX3_LINK_CLK_SRC>,
+			<&dispcc DISP_CC_MDSS_DPTX3_LINK_INTF_CLK>,
+			<&sde_edp_pll 0>,
+			<&dispcc DISP_CC_MDSS_DPTX3_PIXEL0_CLK_SRC>,
+			<&sde_edp_pll 1>,
+			<&rpmhcc RPMH_CXO_CLK>,
+			<&dispcc DISP_CC_MDSS_DPTX3_PIXEL0_CLK>;
+		clock-names = "core_aux_clk", "rpmh_cxo_clk", "core_edp_refclk",
+			"link_clk", "link_clk_src", "link_iface_clk",
+			"link_parent",
+			"pixel_clk_rcg", "pixel_parent",
+			"pixel1_clk_rcg",
+			"strm0_pixel_clk";
+
+		qcom,dp-pll = <&sde_edp_pll>;
+		qcom,phy-version = <0x500>;
+		qcom,phy-mode = "edp";
+		qcom,aux-cfg0-settings = [24 00];
+		qcom,aux-cfg1-settings = [28 00];
+		qcom,aux-cfg2-settings = [2c A4];
+		qcom,aux-cfg3-settings = [30 00];
+		qcom,aux-cfg4-settings = [34 0a];
+		qcom,aux-cfg5-settings = [38 26];
+		qcom,aux-cfg6-settings = [3c 0a];
+		qcom,aux-cfg7-settings = [40 03];
+		qcom,aux-cfg8-settings = [44 37];
+		qcom,aux-cfg9-settings = [48 03];
+
+		qcom,max-pclk-frequency-khz = <675000>;
+		qcom,display-type = "primary";
+
+		qcom,widebus-enable;
+		qcom,4ppc-enable;
+		qcom,dsc-feature-enable;
+		qcom,fec-feature-enable;
+
+		qcom,qos-cpu-mask = <0xf>;
+		qcom,qos-cpu-latency-us = <300>;
+
+		vdda-1p2-supply = <&L2J>;
+		vdda-0p9-supply = <&L3J>;
+		vdd_mx-supply = <&VDD_MXA_LEVEL>;
+
+		qcom,hbr-rbr-voltage-swing = <0x0b 0x11 0x17 0x1c>,
+					<0x10 0x19 0x1f 0xff>,
+					<0x19 0x1f 0xff 0xff>,
+					<0x1f 0xff 0xff 0xff>;
+		qcom,hbr-rbr-pre-emphasis = <0x0c 0x15 0x19 0x1e>,
+					<0x0b 0x15 0x19 0xff>,
+					<0x0e 0x14 0xff 0xff>,
+					<0x0d 0xff 0xff 0xff>;
+
+		qcom,hbr2-3-voltage-swing = <0x07 0x0f 0x16 0x1f>,
+					<0x0d 0x16 0x1e 0xff>,
+					<0x11 0x1b 0xff 0xff>,
+					<0x16 0xff 0xff 0xff>;
+		qcom,hbr2-3-pre-emphasis = <0x05 0x11 0x17 0x1d>,
+					<0x05 0x11 0x18 0xff>,
+					<0x06 0x11 0xff 0xff>,
+					<0x00 0xff 0xff 0xff>;
+
+		qcom,ctrl-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,ctrl-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-1p2";
+				qcom,supply-min-voltage = <1256000>;
+				qcom,supply-max-voltage = <1256000>;
+				qcom,supply-enable-load = <30100>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+
+		qcom,phy-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,phy-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-0p9";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <920000>;
+				qcom,supply-enable-load = <115000>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+
+		qcom,pll-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,pll-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdd_mx";
+				qcom,supply-min-voltage =
+						<RPMH_REGULATOR_LEVEL_TURBO>;
+				qcom,supply-max-voltage =
+						<RPMH_REGULATOR_LEVEL_MAX>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+	};
+};
+
+&mdss_mdp {
+};
