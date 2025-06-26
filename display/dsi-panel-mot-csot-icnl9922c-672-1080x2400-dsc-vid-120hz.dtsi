@@ -1,6 +1,6 @@
 &mdss_mdp {
-	mot_djn_icnl9922c_672_1080x2400_dsc_vid_120hz: qcom,mdss_dsi_mot_djn_icnl9922c_672_dsc_120hz_vid_fhd {
-		qcom,mdss-dsi-panel-name = "mipi_mot_vid_djn_1080p_dsc_672_120hz";
+	mot_csot_icnl9922c_672_1080x2400_dsc_vid_120hz: qcom,mdss_dsi_mot_csot_icnl9922c_672_dsc_120hz_vid_fhd {
+		qcom,mdss-dsi-panel-name = "mipi_mot_vid_csot_1080p_dsc_672_120hz";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;

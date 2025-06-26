@@ -8,7 +8,7 @@
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
 #include "dsi-panel-mot-boe-icnl9922c-672-1080x2400-dsc-vid-120hz.dtsi"
 #include "dsi-panel-mot-txd-ili7807s-672-1080x2400-dsc-vid-120hz.dtsi"
-#include "dsi-panel-mot-djn-icnl9922c-672-1080x2400-dsc-vid-120hz.dtsi"
+#include "dsi-panel-mot-csot-icnl9922c-672-1080x2400-dsc-vid-120hz.dtsi"
 
 &pm6150l_gpios {
 	display_panel_supply_ctrl {
@@ -314,7 +314,7 @@
 
 };
 
-&mot_djn_icnl9922c_672_1080x2400_dsc_vid_120hz {
+&mot_csot_icnl9922c_672_1080x2400_dsc_vid_120hz {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
 	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
@@ -440,7 +440,7 @@
 &qupv3_se9_spi {
 	chipone_tddi@0{
 		panel = <&mot_boe_icnl9922c_672_1080x2400_dsc_vid_120hz
-			 &mot_djn_icnl9922c_672_1080x2400_dsc_vid_120hz>;
+			 &mot_csot_icnl9922c_672_1080x2400_dsc_vid_120hz>;
 	};
 	ilitek@1{
 		panel = <&mot_txd_ili7807s_672_1080x2400_dsc_vid_120hz>;
