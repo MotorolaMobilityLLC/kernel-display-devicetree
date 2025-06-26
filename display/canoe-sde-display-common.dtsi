@@ -498,6 +498,17 @@
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 		};
+
+		timing_2_323: timing@2 {
+			qcom,mdss-esync-hsync-milli-pulse-width = <500>;
+			qcom,mdss-esync-emsync-fps = <90>;
+			qcom,mdss-esync-emsync-milli-pulse-width = <500>;
+			qcom,dsi-qsync-mode-avr-step-fps = <90>;
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 18 0A
+					0A 09 02 04 00 1E 0F];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
 	};
 };
 
