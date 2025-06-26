@@ -297,7 +297,9 @@
 	goodix-berlin@0 {
 		panel = <&mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz
                         &mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz_v0
-			&mot_csot_nt37706_667_1220p_dsc_vid_120hz_v1
-			&mot_boe_nt37706_667_1220p_dsc_vid_120hz_v1>;
+			&mot_csot_nt37706_667_1220p_dsc_vid_120hz_v1>;
+	};
+        focaltech@1 {
+		panel = <&mot_boe_nt37706_667_1220p_dsc_vid_120hz_v1>;
 	};
 };
