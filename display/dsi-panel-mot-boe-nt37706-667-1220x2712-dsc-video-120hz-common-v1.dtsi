@@ -91,8 +91,10 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-on-command = [
-					39 00 00 00 00 00 05 FF AA 55 A5 80
+					39 00 00 00 00 00 06 F0 55 AA 52 08 08
+					39 00 00 00 00 00 02 BF 61
 
+					39 00 00 00 00 00 05 FF AA 55 A5 80
 					39 00 00 00 00 00 02 6F 0B
 					39 00 00 00 00 00 02 F5 02
 
@@ -111,12 +113,7 @@
 
 					39 00 00 00 00 00 02 6F 32
 					39 00 00 00 00 00 02 F2 00
-					39 00 00 00 00 00 05 FF AA 55 A5 81
 
-					39 00 00 00 00 00 02 6F 3C
-					39 00 00 00 00 00 02 F5 84
-
-					39 00 00 00 00 00 05 FF AA 55 A5 80
 					39 00 00 00 00 00 02 6F 31
 					39 00 00 00 00 00 03 F8 01 8E
 
@@ -129,9 +126,13 @@
 					39 00 00 00 00 00 02 6F 0B
 					39 00 00 00 00 00 02 FD 40
 
-					39 00 00 00 00 00 05 FF AA 55 A5 80
 					39 00 00 00 00 00 02 6F 1A
 					39 00 00 00 00 00 02 FE 00
+
+					39 00 00 00 00 00 05 FF AA 55 A5 81
+
+					39 00 00 00 00 00 02 6F 3C
+					39 00 00 00 00 00 02 F5 84
 
 					39 00 00 00 00 00 02 17 03
 					39 00 00 00 00 00 02 71 00
@@ -171,7 +172,7 @@
 				];
 
 				qcom,mdss-dsi-off-command = [
-					05 01 00 00 11 00 01 28
+					05 01 00 00 0A 00 01 28
 					05 01 00 00 78 00 01 10];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
@@ -184,19 +185,18 @@
 				qcom,mdss-dsc-bit-per-component = <10>;
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
-/*
+
 				qcom,mdss-dsi-dfps-60-command = [
-						39 00 00 00 00 00 02 2F 03];
+						39 00 00 00 00 00 02 2F 04];
 				qcom,mdss-dsi-dfps-60-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-90-command = [
-						39 00 00 00 00 00 02 2F 02];
+						39 00 00 00 00 00 02 2F 03];
 				qcom,mdss-dsi-dfps-90-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-120-command = [
-						39 00 00 00 00 00 02 2F 00];
+						39 00 00 00 00 00 02 2F 02];
 				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
-*/
 
 			};
 		};
