@@ -206,6 +206,7 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,tp_state_check_enable;
         qcom,deep-standby-need-twice-reset;
+        qcom,mdss-dsi-lp11-init;
 	qcom,platform-need-execute-shutdown;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
@@ -330,6 +331,7 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,tp_state_check_enable;
 	qcom,deep-standby-need-twice-reset;
+	qcom,mdss-dsi-lp11-init;
 	qcom,platform-need-execute-shutdown;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
