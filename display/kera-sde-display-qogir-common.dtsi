@@ -384,11 +384,11 @@
 	qcom,mdss-dsi-display-timings {
 		timing@0{
 			qcom,framerate-group-unrestricted;
-			qcom,mdss-dsi-panel-clockrate = <590000000>;
+		        qcom,mdss-dsi-panel-clockrate = <798000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1E 06
-							05 06 02 04 00 13 0A];
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
 		};
 	};
 };
@@ -421,7 +421,6 @@
 
 &qupv3_se8_spi {
 	goodix-berlin@0 {
-		panel = <&mot_csot_nt37707A_697_1224x2992_dsc_cmd_v0
-                        &mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_v0>;
+		panel = <&mot_csot_nt37707A_697_1224x2992_dsc_cmd_v0>;
 	};
 };
