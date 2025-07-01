@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include <dt-bindings/clock/qcom,alor-dispcc.h>
+#include <dt-bindings/clock/qcom,dispcc-canoe.h>
 #include <dt-bindings/clock/qcom,alor-gcc.h>
 #include "alor-sde-common.dtsi"
 
