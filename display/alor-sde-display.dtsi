@@ -3,7 +3,7 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include <dt-bindings/clock/qcom,dispcc-canoe.h>
+#include <dt-bindings/clock/qcom,alor-dispcc.h>
 #include "alor-sde-display-common.dtsi"
 
 &soc {
