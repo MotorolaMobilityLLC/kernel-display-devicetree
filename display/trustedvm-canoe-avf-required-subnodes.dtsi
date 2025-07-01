@@ -20,8 +20,6 @@
 						&config_319
 						&dgm_0
 						&dgm_1
-						&dgm_2
-						&dgm_3
 						&dsi_dual_3840x2400_120hz_sim_vid
 						&dsi_dual_rdp370f_rgb_vid
 						&dsi_dual_sim_cmd
@@ -197,11 +195,8 @@
 						&qcom_phy_supply_entry_0
 						&qcom_phy_supply_entry_0_4
 						&qcom_sde_dspp_blocks
-						&qcom_sde_dspp_blocks1
 						&qcom_sde_sspp_dma_blocks
-						&qcom_sde_sspp_dma_blocks1
 						&qcom_sde_sspp_vig_blocks
-						&qcom_sde_sspp_vig_blocks1
 						&sde_dsi
 						&sde_dsi1
 						&sde_dsi1_active
@@ -451,7 +446,5 @@
 						&timing_9_254
 						&vcm_0
 						&vcm_1
-						&vcm_2
-						&vcm_3
 	>;
 };
