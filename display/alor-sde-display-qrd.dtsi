@@ -157,12 +157,3 @@
 			&dsi_nt37801_amoled_video_cphy_spr>;
 	};
 };
-
-&sde_dp {
-	status = "ok";
-};
-
-&mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec
-			&sde_wb0 &sde_wb1 &sde_dp>;
-};
