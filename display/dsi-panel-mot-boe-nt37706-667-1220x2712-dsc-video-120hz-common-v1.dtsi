@@ -48,28 +48,33 @@
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-				39 00 00 40 00 00 03 51 3F 34
-				39 00 00 00 00 00 03 B8 00 00];
+				39 00 00 40 00 00 03 51 3F 34];
 		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-off-command = [
-				39 00 00 00 00 00 2A A9 02 00 C0 2E 2F 32 60 02 00 C0 30 33 04 57 00 88 02 00 C7 01 01 01 01 00 5F 00 01 00 00 01 00 8B 00 00 00 01 00 87 00 00 20];
+				39 00 00 00 00 00 14 A9 01 00 87 00 00 20 01 00 51 09 0A 00 00 02 00 B2 1E 1E 80];
 		qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
-				39 00 00 40 00 00 2C A9 02 00 C0 2E 2F 32 60 02 00 C0 30 33 09 99 00 88 02 00 C7 01 01 09 01 00 5F 00 01 00 40 01 00 8B 00 00 10 01 00 87 00 02 25 3F FC
 				39 00 00 40 00 00 06 F0 55 AA 52 08 00
-				39 00 00 40 00 00 02 6F 32
-				39 00 00 40 00 00 02 DF 05
-				39 00 00 40 00 00 06 F0 55 AA 52 08 08
-				39 00 00 40 00 00 02 6F 4A
-				39 00 00 00 00 00 03 B8 00 00
+				39 00 00 40 00 00 02 6F 31
+				39 00 00 40 00 00 02 DF 00
+				39 00 00 00 00 00 27 A9 02 08 B8 4A 4B 07 5F 01 00 87 00 00 05 02 00 B2 1E 1E 00 02 00 DF 00 00 01 02 00 DF 32 32 05 01 00 51 09 0A 8D C0
 				];
 		qcom,mdss-dsi-hbm-fod-on-command-state = "dsi_hs_mode";
 
+		qcom,mdss-dsi-panel-local-hbm-on-cmds-enabled;
+		qcom,mdss-dsi-hbm-fod-on-cmds-line-diff = <3>;  //which line in mdss-dsi-hbm-fod-on-command start to be replaced with cmds-h / cmds-l
+		qcom,mdss-dsi-hbm-fod-on-cmds-h-command = [
+				39 00 00 00 00 00 27 A9 02 08 B8 4A 4B 07 5F 01 00 87 00 00 05 02 00 B2 1E 1E 00 02 00 DF 00 00 01 02 00 DF 32 32 05 01 00 51 09 0A 8D C0
+				];
+		qcom,mdss-dsi-hbm-fod-on-cmds-l-command = [
+				39 00 00 00 00 00 27 A9 02 08 B8 4A 4B 07 08 01 00 87 00 00 25 02 00 B2 1E 1E 00 02 00 DF 00 00 01 02 00 DF 32 32 15 01 00 51 09 0A 8D C0
+				];
+
 		qcom,mdss-dsi-panel-local-hbm-enabled;
-		//qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <7461>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0xB8>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16181>;
+		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <3519>;
+		//qcom,mdss-dsi-panel-local-hbm-alpha-register = <0xA9>;
+		//qcom,mdss-dsi-panel-local-hbm-alpha-size = <16181>;
 		//qcom,mdss-dsi-panel-bl-num = <1>;
 
 		qcom,mdss-dsi-display-timings {
