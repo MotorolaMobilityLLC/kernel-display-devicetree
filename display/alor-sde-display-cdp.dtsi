@@ -18,8 +18,8 @@
 };
 
 &dsi_vtdr6130_amoled_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
@@ -55,8 +55,8 @@
 };
 
 &dsi_vtdr6130_amoled_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
@@ -68,7 +68,7 @@
 };
 
 &dsi_vtdr6130_amoled_120hz_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -243,7 +243,7 @@
 };
 
 &dsi_vtdr6130_amoled_120hz_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -273,7 +273,7 @@
 };
 
 &dsi_vtdr6130_amoled_qsync_144hz_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -283,7 +283,7 @@
 };
 
 &dsi_vtdr6130_amoled_qsync_144hz_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <10>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
@@ -378,4 +378,13 @@
 			&dsi_vtdr6130_amoled_qsync_144hz_video
 			&dsi_vtdr6130_amoled_nodsc_60hz_cmd>;
 	};
+};
+
+&sde_dp {
+	status = "ok";
+};
+
+&mdss_mdp {
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec
+			&sde_wb0 &sde_wb1 &sde_dp>;
 };

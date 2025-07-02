@@ -1,0 +1,47 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include <dt-bindings/arm/msm/qti-smmu-proxy-dt-ids.h>
+#include "canoe-sde-common-hfi.dtsi"
+
+&soc {
+	smmu_sde_iommu_region_partition1: smmu_sde_iommu_region_partition@1 {
+		iommu-addresses = <&smmu_sde_unsec1 0x0 0x0 0x0 0x00020000>,
+				  <&smmu_sde_unsec1 0x0 0xfc800000  0x0 0x02b00000>,
+				  <&smmu_sde_sec1 0x0 0x0 0x0 0x00020000>;
+	};
+
+	smmu_sde_unsec1: qcom,smmu_sde_unsec_cb@1 {
+		qcom,op-label = "hfi";
+		status = "disabled";
+		compatible = "qcom,smmu_sde_unsec";
+		iommus = <&apps_smmu 0x800 0x2>;
+		memory-region = <&smmu_sde_iommu_region_partition1>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-earlymap; /* for cont-splash */
+		dma-coherent;
+	};
+
+	smmu_sde_sec1: qcom,smmu_sde_sec_cb@1 {
+		qcom,op-label = "hfi";
+		status = "disabled";
+		compatible = "qcom,smmu_sde_sec";
+		iommus = <&apps_smmu 0x801 0x0>;
+		memory-region = <&smmu_sde_iommu_region_partition1>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-vmid = <0xa>;
+	};
+};
+
+&mdss_mdp1 {
+	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
+
+	qcom,sde-dspp-ltm-version = <0x00010004>;
+	/* offsets are based off dspp 0, 1, 2, and 3 */
+	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
+
+	nvmem-cells = <&ssip_config>;
+	nvmem-cell-names = "ssip_config";
+};

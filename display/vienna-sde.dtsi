@@ -1,0 +1,60 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+#include <dt-bindings/soc/qcom,ipcc.h>
+#include <dt-bindings/clock/qcom,gcc-vienna.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
+#include <dt-bindings/arm/msm/qti-smmu-proxy-dt-ids.h>
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
+#include "vienna-sde-common.dtsi"
+
+&soc {
+
+	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
+		compatible = "qcom,smmu_sde_unsec";
+		iommus = <&apps_smmu 0x600 0x2>;
+//		memory-region = <&smmu_sde_iommu_region_partition>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-earlymap; /* for cont-splash */
+		dma-coherent;
+
+	};
+
+	smmu_sde_sec: qcom,smmu_sde_sec_cb {
+		compatible = "qcom,smmu_sde_sec";
+		iommus = <&apps_smmu 0x601 0x0>;
+//		memory-region = <&smmu_sde_iommu_region_partition>;
+		qcom,iommu-faults = "non-fatal";
+		qcom,iommu-vmid = <0xa>;
+
+	};
+};
+
+&mdss_mdp {
+
+	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
+
+	/*interrconnects  moved to dcp */
+
+	qcom,sde-has-idle-pc;
+
+	qcom,sde-ib-bw-vote = <2500000 0 800000>;
+	qcom,sde-dspp-ltm-version = <0x00010004>;
+	/* offsets are based off dspp 0, 1, 2, and 3 */
+	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
+
+};
+
+&mdss_dsi0 {
+	vdda-1p2-supply = <&L26A>;
+};
+
+&mdss_dsi_phy0 {
+	vdda-0p9-supply = <&L25A>;
+	qcom,panel-allow-phy-poweroff;
+	qcom,dsi-pll-ssc-en;
+	qcom,dsi-pll-ssc-mode = "down-spread";
+};

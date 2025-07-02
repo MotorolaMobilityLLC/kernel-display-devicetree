@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include "dsi-panel-rm6d030-amoled-139-cmd.dtsi"
+
+&dsi_rm6d030_amoled_139_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_nolab_amoled>;
+	qcom,platform-reset-gpio = <&pmw6100_gpios 2 0>;
+	qcom,platform-en-gpio = <&pmw6100_gpios 1 0>;
+};
+
+&sde_dsi {
+	qcom,dsi-default-panel = <&dsi_rm6d030_amoled_139_cmd>;
+};
+
+&i2c9 {
+	raydium_ts@39 {
+		panel = <&dsi_rm6d030_amoled_139_cmd>;
+	};
+};

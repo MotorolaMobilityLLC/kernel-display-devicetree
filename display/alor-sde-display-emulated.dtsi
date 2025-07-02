@@ -7,7 +7,7 @@
 	qcom,sde-emulated-env;
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &sde_wb0 &sde_wb1>;
 	/delete-property/ qcom,sde-has-idle-pc;
-	qcom,sde-hw-version = <0xd0000000>;
+	qcom,sde-hw-version = <0xd0010000>;
 };
 
 &reserved_memory {

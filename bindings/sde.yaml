@@ -21,7 +21,18 @@ description: |
 
 properties:
   compatible:
-    const: qcom,sde-kms
+    enum:
+      - qcom,sde-kms
+      - qcom,sde-kms-hfi
+
+  qcom,op-label:
+    enum: [hwio, hfi, hyp]
+    description: Denotes display operation mode for the node.
+
+  status:
+    enum: [okay, disabled]
+    description: Operational status of the device. "okay" means the device is operational,
+      "disabled" means the device is not operational.
 
   qcom,msm-hdmi-audio-rx:
   type: object
@@ -1617,6 +1628,15 @@ patternProperties:
         - qcom,smmu_sde_nrt_sec:
             description: smmu context bank device for secure sde non-real time domain.
 
+    qcom,op-label:
+      enum: [hwio, hfi, hyp]
+      description: Denotes display operation mode for the node.
+
+    status:
+      enum: [okay, disabled]
+      description: Operational status of the device. "okay" means the device is operational,
+        "disabled" means the device is not operational.
+
 required:
   - compatible
   - reg
@@ -1651,6 +1671,8 @@ examples:
   - |
     mdss_mdp: qcom,mdss_mdp@900000 {
       compatible = "qcom,sde-kms";
+      qcom,op-label = "hwio";
+      status = "ok";
       reg = <0x00900000 0x90000>,
             <0x009b0000 0x1040>,
             <0x009b8000 0x1040>,
@@ -2099,11 +2121,15 @@ examples:
 
       smmu_kms_unsec: qcom,smmu_kms_unsec_cb {
         compatible = "qcom,smmu_sde_unsec";
+        qcom,op-label = "hwio";
+        status = "ok";
         iommus = <&mmss_smmu 0>;
       };
 
       smmu_kms_sec: qcom,smmu_kms_sec_cb {
         compatible = "qcom,smmu_sde_sec";
+        qcom,op-label = "hwio";
+        status = "ok";
         iommus = <&mmss_smmu 1>;
       };
     };

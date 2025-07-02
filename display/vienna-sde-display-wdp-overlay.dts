@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "vienna-sde-display.dtsi"
+#include "vienna-sde-display-wdp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Vienna WDP";
+	compatible = "qcom,vienna-wdp", "qcom,vienna", "qcom,wdp";
+	qcom,msm-id = <669 0x10000>, <670 0x10000>;
+	qcom,board-id = <0x10024 0x0>, <0x10024 0x01>;
+};

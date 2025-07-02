@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+&sde_edp_pll {
+	status = "ok";
+};
+
+&sde_edp {
+	status = "ok";
+};
+
+&mdss_mdp {
+	connectors = <&sde_edp>;
+};
