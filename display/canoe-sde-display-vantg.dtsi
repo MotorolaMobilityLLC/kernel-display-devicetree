@@ -209,11 +209,11 @@
 		timing@3 {//60hz
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1079000000>;
+			qcom,mdss-dsi-panel-clockrate = <539000000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 24 09 09 1A 18 09
-							09 09 02 04 00 1E 0E];
+			qcom,mdss-dsi-panel-phy-timings = [00 14 05 05 13 1F 05
+							05 06 02 04 00 12 0A];
 		};
 		timing@4 { //30
 			qcom,framerate-group-no-duplicated;
