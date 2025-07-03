@@ -403,6 +403,8 @@
                 aw99703,turn-off-ramp = <0x04>; /* 8ms */
                 aw99703,pwm-trans-dim = <0>; /* 2ms */
                 aw99703,i2c-trans-dim = <1>; /* 128ms */
+                aw99703,skip-first-trans;
+                aw99703,reset-trans-delay;
                 aw99703,pwm-mode = <1>; /* 1 pwm enable,0 PWM disable */
                 aw99703,map-type = <0>; /* 0 exponential, 4 linear */
 		current-align-type = <0x03>; /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
