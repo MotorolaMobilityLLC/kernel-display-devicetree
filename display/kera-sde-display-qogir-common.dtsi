@@ -424,3 +424,10 @@
 		panel = <&mot_csot_nt37707A_697_1224x2992_dsc_cmd_v0>;
 	};
 };
+
+&qupv3_se0_spi {
+	focaltech@0 {
+		panel = <&mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_v0>;
+	};
+};
+
