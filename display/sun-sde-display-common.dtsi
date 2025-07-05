@@ -1006,6 +1006,14 @@
 			qcom,default-topology-index = <0>;
 			qcom,qsync-mode-min-refresh-rate = <30>;
 		};
+
+		timing@19 { /* WQHD 165FPS cmd mode*/
+			qcom,mdss-dsi-panel-phy-timings = [00 39 0e 0e 17 14 0e
+				0e 0e 02 04 00 2c 11];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,qsync-mode-min-refresh-rate = <30>;
+		};
 	};
 };
 
