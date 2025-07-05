@@ -11,6 +11,6 @@
 / {
 	model = "Qualcomm Technologies, Inc. Alor ATP + Peach WLAN + ST54L + Kundu";
 	compatible = "qcom,alor-atp", "qcom,alor", "qcom,atp";
-	qcom,msm-id = <685 0x10000>;
+	qcom,msm-id = <685 0x10000>, <727 0x10000>;
 	qcom,board-id = <0x10021 0>;
 };
