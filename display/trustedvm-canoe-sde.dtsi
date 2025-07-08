@@ -9,6 +9,10 @@
 #include "trustedvm-canoe-avf-required-subnodes.dtsi"
 
 &soc {
+	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
+		iommu-addresses = <&smmu_sde_unsec 0x0 0x0 0x0 0x00020000>;
+	};
+
 	/* dummy display clock provider */
 	clock_cpucc: qcom,cpucc {
 		compatible = "qcom,dummycc";
@@ -18,8 +22,8 @@
 
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
 		compatible = "qcom,smmu_sde_unsec";
+		memory-region = <&smmu_sde_iommu_region_partition>;
 		iommus = <&apps_smmu 0x804 0x2>;
-		qcom,iommu-dma-addr-pool = <0x00020000 0xfffe0000>;
 		qcom,iommu-faults = "non-fatal";
 		dma-coherent;
 	};
