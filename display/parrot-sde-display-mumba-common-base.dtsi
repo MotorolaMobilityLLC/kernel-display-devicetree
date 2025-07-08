@@ -55,7 +55,7 @@
 			qcom,supply-enable-load = <100000>;
 			qcom,supply-disable-load = <100>;
 			qcom,supply-pre-on-sleep = <3>;
-			qcom,supply-post-on-sleep = <2>;
+			qcom,supply-post-on-sleep = <4>;
 		};
 
 		qcom,panel-supply-entry@2 {
@@ -205,6 +205,8 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,tp_state_check_enable;
         qcom,deep-standby-need-twice-reset;
+        qcom,mdss-dsi-lp11-init;
+        qcom,platform-need-execute-shutdown;
 
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
