@@ -129,9 +129,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-max-level = <16300>;
 	qcom,mdss-dsi-bl-default-level = <10230>;
-	qcom,mdss-brightness-max-level = <16380>;
+	qcom,mdss-brightness-max-level = <16300>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -159,6 +159,27 @@
 	        16000 13250 34500 7500 3000>;
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 04 FF 5A A5 1F
+		39 00 00 40 00 00 1f C3 FA FF FF E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9
+		39 00 00 40 00 00 04 FF 5A A5 1E
+		39 00 00 40 00 00 02 9A 13
+		39 00 00 40 00 00 02 80 89
+		39 00 00 40 00 00 04 FF 5A A5 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 04 FF 5A A5 1F
+		39 00 00 40 00 00 1f C3 FA FF FF E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9 AA E9 E9 E9 E9
+		39 00 00 40 00 00 04 FF 5A A5 1E
+		39 00 00 40 00 00 02 9A 13
+		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 04 FF 5A A5 00
+		39 00 00 00 00 00 03 51 3F AC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 
 	qcom,apl-enabled;
 	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16000>;
