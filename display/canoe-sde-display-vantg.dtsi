@@ -16,8 +16,8 @@
 	qcom,panel-supply-entry@0 {
 		reg = <0>;
 		qcom,supply-name = "vddio";
-		qcom,supply-min-voltage = <1800000>;
-		qcom,supply-max-voltage = <1800000>;
+		qcom,supply-min-voltage = <1850000>;
+		qcom,supply-max-voltage = <1850000>;
 		qcom,supply-enable-load = <300000>;
 		qcom,supply-disable-load = <100>;
 		qcom,supply-pre-on-sleep = <0>;
@@ -29,7 +29,7 @@
 		reg = <1>;
 		qcom,supply-name = "vdd";
 		qcom,supply-min-voltage = <1200000>;
-		qcom,supply-max-voltage = <1250000>;
+		qcom,supply-max-voltage = <1200000>;
 		qcom,supply-enable-load = <300000>;
 		qcom,supply-disable-load = <100>;
 		qcom,supply-pre-on-sleep = <0>;
@@ -41,9 +41,9 @@
         qcom,panel-supply-entry@2 {
 		reg = <2>;
 		qcom,supply-name = "vci";
-		qcom,supply-min-voltage = <3000000>;
-		qcom,supply-max-voltage = <3000000>;
-		qcom,supply-enable-load = <300000>;
+		qcom,supply-min-voltage = <3100000>;
+		qcom,supply-max-voltage = <3100000>;
+		qcom,supply-enable-load = <3100000>;
 		qcom,supply-disable-load = <0>;
 		qcom,supply-pre-on-sleep = <0>;
 		qcom,supply-post-on-sleep = <0>;
@@ -54,11 +54,20 @@
 };
 
 &L11B {
-       regulator-min-microvolt = <1250000>;
-       regulator-max-microvolt = <1250000>;
-       qcom,init-voltage = <1250000>;
+       regulator-min-microvolt = <1200000>;
+       regulator-max-microvolt = <1200000>;
+       qcom,init-voltage = <1200000>;
 };
-
+&L12B {
+       regulator-min-microvolt = <1850000>;
+       regulator-max-microvolt = <1850000>;
+       qcom,init-voltage = <1850000>;
+};
+&L13B {
+       regulator-min-microvolt = <3100000>;
+       regulator-max-microvolt = <3100000>;
+       qcom,init-voltage = <3100000>;
+};
 &sde_dp {
 	mmi,aux-switch-enable-gpio = <&tlmm 96 0>;
 	mmi,aux-switch-flip-gpio = <&tlmm 87 0>;
