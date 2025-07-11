@@ -138,9 +138,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16300>;
+	qcom,mdss-dsi-bl-max-level = <16180>;
 	qcom,mdss-dsi-bl-default-level = <10230>;
-	qcom,mdss-brightness-max-level = <16300>;
+	qcom,mdss-brightness-max-level = <16180>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
@@ -186,7 +186,7 @@
 		39 00 00 40 00 00 02 9A 13
 		39 00 00 40 00 00 02 80 A9
 		39 00 00 40 00 00 04 FF 5A A5 00
-		39 00 00 00 00 00 03 51 3F AC
+		39 00 00 00 00 00 03 51 3F F8
 	];
 	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 
