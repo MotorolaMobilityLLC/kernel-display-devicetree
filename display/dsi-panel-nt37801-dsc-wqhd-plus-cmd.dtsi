@@ -59,6 +59,7 @@
 			15700 12250 35800 6750 2550>;
 		qcom,mdss-dsi-panel-peak-brightness = <13000000>;
 		qcom,mdss-dsi-panel-blackness-level = <10>;
+		qcom,mdss-dsi-panel-privacy-enabled;
 		qcom_mdss_dsi_display_timings_145: qcom,mdss-dsi-display-timings {
 			timing_0_146: timing@0 {
 				cell-index = <0>;
