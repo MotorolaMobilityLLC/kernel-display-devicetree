@@ -106,7 +106,7 @@
 
 &mdss_mdp {
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec
-			&sde_wb0 &sde_wb1>;
+			&sde_wb0 &sde_wb1 &sde_cesta>;
 };
 
 &dsi_vtdr6130_amoled_cmd {
