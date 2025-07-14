@@ -118,14 +118,17 @@
 	vdd-supply = <&L11B>;
 	tvdd-supply = <&L4B>;
 
-	pinctrl-names = "panel_active", "panel_active_with_esync", "panel_suspend";
+	pinctrl-names = "panel_active", "panel_active_with_esync", "panel_active_with_esync_without_te", "panel_suspend";
 	pinctrl-0 = <&sde_dsi_active &sde_te_active &sde_esync0_suspend
 			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
 			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
 	pinctrl-1 = <&sde_dsi_active &sde_te_active &sde_esync0_active
 			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
 			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
-	pinctrl-2 = <&sde_dsi_suspend &sde_te_suspend &sde_esync0_suspend
+	pinctrl-2 = <&sde_dsi_active &sde_te_function0 &sde_esync0_active
+			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
+			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
+	pinctrl-3 = <&sde_dsi_suspend &sde_te_suspend &sde_esync0_suspend
 			&sde_mdp_vsync_p_1p2_active &sde_mdp_vsync_p_1p8_active
 			&sde_disp0_rst_1p2_active &sde_disp0_rst_1p8_active>;
 };
@@ -165,10 +168,11 @@
 	vdd-supply = <&L11B>;
 	tvdd-supply = <&L4B>;
 
-	pinctrl-names = "panel_active", "panel_active_with_esync", "panel_suspend";
+	pinctrl-names = "panel_active", "panel_active_with_esync", "panel_active_with_esync_without_te", "panel_suspend";
 	pinctrl-0 = <&sde_dsi1_active &sde_te1_active &sde_esync1_suspend>;
 	pinctrl-1 = <&sde_dsi1_active &sde_te1_active &sde_esync1_active>;
-	pinctrl-2 = <&sde_dsi1_suspend &sde_te1_suspend &sde_esync1_suspend>;
+	pinctrl-2 = <&sde_dsi1_active &sde_te1_function0 &sde_esync1_active>;
+	pinctrl-3 = <&sde_dsi1_suspend &sde_te1_suspend &sde_esync1_suspend>;
 };
 
 &mdss_mdp {

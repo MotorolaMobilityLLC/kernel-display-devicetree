@@ -11,6 +11,6 @@
 / {
 	model = "Qualcomm technologies, Inc. ALOR RUMI";
 	compatible = "qcom,alor-rumi", "qcom,alor", "qcom,rumi";
-	qcom,msm-id = <685 0x10000>;
+	qcom,msm-id = <685 0x10000>, <727 0x10000>;
 	qcom,board-id = <15 0>;
 };

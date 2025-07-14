@@ -13,6 +13,6 @@
 	model = "Qualcomm Technologies, Inc. Alor SVM MTP";
 	compatible = "qcom,alor-mtp", "qcom,alor", "qcom,alorp-mtp",
 			"qcom,alorp", "qcom,mtp";
-	qcom,msm-id = <685 0x10000>;
+	qcom,msm-id = <685 0x10000>, <727 0x10000>;
 	qcom,board-id = <0x10008 0>, <0x20008 0>, <0x30008 0>;
 };
