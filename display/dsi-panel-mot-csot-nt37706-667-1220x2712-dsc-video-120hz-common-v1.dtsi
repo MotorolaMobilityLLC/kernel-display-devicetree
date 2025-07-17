@@ -40,6 +40,12 @@
 		qcom,mdss-dsi-wr-mem-start = <0x2c>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
 
+		qcom,check_pcd;
+		qcom,pcd-reg-read-enabled;
+		qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
+		qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
+		qcom,mdss-dsi-panel-pcd-reg-command = [06 01 00 01 00 00 01 D0];
+
 		qcom,mdss-dsi-dc-off-command = [
 			39 00 00 40 00 00 02 6F 01
 			39 00 00 40 00 00 02 8B 00
@@ -208,6 +214,16 @@
 						39 00 00 00 00 00 02 2F 00];
 				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
 
+				qcom,mdss-dsi-pcd-check-enable-command = [
+					39 00 00 40 00 00 06 F0 55 AA 52 08 01
+					39 00 00 00 00 00 03 D0 00 80
+					];
+				qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+				qcom,mdss-dsi-pcd-check-disable-command = [
+					39 00 00 40 00 00 06 F0 55 AA 52 08 01
+					39 00 00 00 00 00 03 D0 00 00
+					];
+				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 			};
 		};
 	};
