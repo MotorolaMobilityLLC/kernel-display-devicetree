@@ -51,6 +51,7 @@
 						&dsi_panel_pwr_supply_vtdr
 						&dsi_pll_codes_data
 						&dsi_rdp370f_rgb_vid
+						&dsi_rm6d030_amoled_139_cmd
 						&dsi_sharp_4k_dsc_cmd
 						&dsi_sharp_4k_dsc_video
 						&dsi_sharp_qhd_plus_dsc_cmd
