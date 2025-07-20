@@ -4,6 +4,7 @@
  */
 
 /dts-v1/;
+/plugin/;
 
 #include "x1p42100-sde.dtsi"
 
