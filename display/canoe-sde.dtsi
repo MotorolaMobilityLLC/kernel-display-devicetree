@@ -116,7 +116,7 @@
 		vdda-0p9-supply = <&L4F>;
 		vdda_usb-0p9-supply = <&L4F>;
 		vdd_mx-supply = <&VDD_MXA_LEVEL>;
-		dp_phy_gdsc-supply = <&gcc_usb3_phy_gdsc>;
+		power-domains = <&gcc GCC_USB3_PHY_GDSC>;
 
 		qcom,hbr-rbr-voltage-swing = <0x27 0x2f 0x36 0x3f>,
 					<0x31 0x3e 0x3f 0xff>,
