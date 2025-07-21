@@ -33,7 +33,7 @@
 	sde_edp: qcom,dp_display@0aea0000 {
 		status = "no";
 		cell-index = <3>;
-		qcom,intf-index = <2>;
+		qcom,intf-index = <3>;
 		compatible = "qcom,edp-display";
 		label = "drm_edp";
 
@@ -80,6 +80,7 @@
 
 		qcom,dp-pll = <&sde_edp_pll>;
 		qcom,phy-version = <0x500>;
+		qcom,phy-revision = "v2";
 		qcom,phy-mode = "edp";
 		qcom,aux-cfg0-settings = [24 00];
 		qcom,aux-cfg1-settings = [28 00];

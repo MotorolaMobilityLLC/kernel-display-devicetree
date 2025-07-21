@@ -9,6 +9,34 @@
 
 &sde_edp {
 	status = "ok";
+	qcom,dp-low-power-hw-hpd;
+	pinctrl-names = "mdss_dp_hpd_active", "mdss_dp_hpd_tlmm", "mdss_dp_hpd_ctrl", "mdss_dp_active", "mdss_dp_sleep";
+	pinctrl-0 = <&edp_hpd_ctrl>;
+	pinctrl-1 = <&edp_hpd_ctrl>;
+	pinctrl-2 = <&edp_hpd_ctrl>;
+	pinctrl-3 = <&edp_hpd_ctrl>;
+	pinctrl-4 = <&edp_hpd_ctrl>;
+	qcom,dp-hpd-gpio = <&tlmm 119 0>;
+	qcom,edp-vcc-en-gpio = <&tlmm 70 0>;
+	qcom,edp-backlight-pwr-gpio = <&pmc8380_d_gpios 10 0>;
+	qcom,edp-pwm-en-gpio =  <&pmk8550_gpios 5 0>;
+	qcom,edp-backlight-en-gpio = <&pmc8380_d_gpios 4 0>;
+};
+
+&tlmm {
+	edp_hpd_ctrl: hpd_ctrl@119 {
+		mux {
+			pins = "gpio119";
+			function = "edp0_hot";
+		};
+
+		config {
+			pins = "gpio119";
+			bias-disable;
+			input-enable;
+			drive-strength = <2>;
+		};
+	};
 };
 
 &mdss_mdp {
