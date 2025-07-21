@@ -11,6 +11,7 @@ dtbo-$(CONFIG_ARCH_CANOE) += display/canoe-sde.dtbo \
 		display/canoe-sde-display-rcm-st54l-pandeiro-overlay.dtbo \
 		display/canoe-sde-display-qrd-sku1-overlay.dtbo \
 		display/canoe-sde-display-qrd-sku2-overlay.dtbo \
+		display/canoe-sde-display-hdk-overlay.dtbo \
 		display/alor-interposer-sde-display-mtp-overlay.dtbo \
 		display/alor-interposer-sde-display-rcm-overlay.dtbo \
 		display/alor-interposer-sde-display-qrd-overlay.dtbo \
