@@ -62,6 +62,13 @@
 				];
 				qcom,mdss-dsi-off-deep-standby-command-state =  "dsi_lp_mode";
 
+				qcom,mdss-dsi-off-post-command = [
+					39 00 00 40 00 00 04 F0 99 22 0C
+					39 00 00 40 00 00 0B D0 0C 23 18 FF FF 00 80 0C 00 00
+					39 00 00 00 01 00 04 D0 0C 23 C0
+				];
+				qcom,mdss-dsi-off-post-command-state =  "dsi_lp_mode";
+
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-slice-height = <12>;
 				qcom,mdss-dsc-slice-width = <540>;
