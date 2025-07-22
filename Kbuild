@@ -62,7 +62,8 @@ ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ROADSTR_DTB) += display/kera-sde-display-roadstr-evb-overlay.dtbo
 #dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo
 
-dtbo-$(CONFIG_QOGIR_DTB) += display/kera-sde-display-qogir-evb-overlay.dtbo
+dtbo-$(CONFIG_QOGIR_DTB) += display/kera-sde-display-qogir-evb-overlay.dtbo \
+                            display/kera-sde-display-qogir-evb2-overlay.dtbo
 
 else
 dtbo-$(CONFIG_ARCH_KERA) += display/kera-sde.dtbo \
