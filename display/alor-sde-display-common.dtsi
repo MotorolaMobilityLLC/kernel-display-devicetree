@@ -84,6 +84,7 @@
 			qcom,supply-enable-load = <220000>;
 			qcom,supply-disable-load = <3>;
 			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-post-off-sleep = <2>;
 		};
 
 		qcom,panel-supply-entry@2 {
@@ -94,6 +95,7 @@
 			qcom,supply-enable-load = <10000>;
 			qcom,supply-disable-load = <1>;
 			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-post-off-sleep = <2>;
 		};
 	};
 
