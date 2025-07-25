@@ -1,0 +1,17 @@
+/* This is derivated from qcom volcano-sde-display-qrd-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "volcano-sde-display-marvel-common.dtsi"
+
+/ {
+	model = "marvel";
+	compatible = "qcom,volcano-qrd", "qcom,volcano", "qcom,volcanop-qrd", "qcom,volcanop", "qcom,qrd";
+	qcom,msm-id = <636 0x10000>, <640 0x10000>, <641 0x10000>, <712 0x10000>,
+			<0x4000291 0x10000>, <0x4000292 0x10000>,
+			<0x8000291 0x10000>, <0x8000292 0x10000>,
+			<0xC000291 0x10000>, <0xC000292 0x10000>,
+			<0x10000291 0x10000>, <0x10000292 0x10000>;
+	qcom,board-id = <0x41 0x9000>;
+};
