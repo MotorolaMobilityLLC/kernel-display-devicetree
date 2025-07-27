@@ -11,6 +11,6 @@
 / {
 	model = "Qualcomm Technologies, Inc. Kera RUMI";
 	compatible = "qcom,kera-rumi", "qcom,kera", "qcom,rumi";
-	qcom,msm-id = <659 0x10000>;
+	qcom,msm-id = <659 0x10000>, <720 0x10000>, <721 0x10000>;
 	qcom,board-id = <15 0>;
 };
