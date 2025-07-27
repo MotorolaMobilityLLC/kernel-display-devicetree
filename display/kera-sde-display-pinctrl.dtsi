@@ -111,4 +111,108 @@
 			};
 		};
 	};
+
+	hdmi_ddc_scl_active: hdmi_ddc_scl_active {
+		mux {
+			pins = "gpio6";
+			function = "hdmi_ddc_scl";
+		};
+
+		config {
+			pins = "gpio6";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+
+	hdmi_ddc_scl_suspend: hdmi_ddc_scl_suspend {
+		mux {
+			pins = "gpio6";
+			function = "hdmi_ddc_scl";
+		};
+
+		config {
+			pins = "gpio6";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+
+	hdmi_ddc_sda_active: hdmi_ddc_sda_active {
+		mux {
+			pins = "gpio7";
+			function = "hdmi_ddc_sda";
+		};
+
+		config {
+			pins = "gpio7";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+
+	hdmi_ddc_sda_suspend: hdmi_ddc_sda_suspend {
+		mux {
+			pins = "gpio7";
+			function = "hdmi_ddc_sda";
+		};
+
+		config {
+			pins = "gpio7";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+
+	hdmi_cec_active: hdmi_cec_active {
+		mux {
+			pins = "gpio46";
+			function = "hdmi_tx_cec";
+		};
+
+		config {
+			pins = "gpio46";
+			drive-strength = <16>;
+			bias-pull-up;
+		};
+	};
+
+	hdmi_cec_suspend: hdmi_cec_suspend {
+		mux {
+			pins = "gpio46";
+			function = "hdmi_tx_cec";
+		};
+
+		config {
+			pins = "gpio46";
+			drive-strength = <2>;
+			bias-pull-up;
+		};
+	};
+
+	hdmi_hpd_active: hdmi_hpd_active {
+		mux {
+			pins = "gpio47";
+			function = "hdmi_hot_plug";
+		};
+
+		config {
+			pins = "gpio47";
+			drive-strength = <16>;
+			bias-pull-down;
+		};
+	};
+
+	hdmi_hpd_suspend: hdmi_hpd_suspend {
+		mux {
+			pins = "gpio47";
+			function = "hdmi_hot_plug";
+		};
+
+		config {
+			pins = "gpio47";
+			drive-strength = <2>;
+			bias-pull-down;
+		};
+	};
 };

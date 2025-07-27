@@ -30,6 +30,111 @@
 		#clock-cells = <1>;
 	};
 
+	sde_hdmi_pll: qcom,hdmi_pll@88ea000 {
+		compatible = "qcom,hdmi-pll-snps-4nm";
+		label = "hdmi";
+		#clock-cells = <1>;
+	};
+
+	sde_hdmi: qcom,hdmi_display@af54000 {
+		status = "disabled";
+		compatible = "qcom,hdmi-display";
+
+		reg = <0x0aea0000 0x67c>,
+			<0x0aea1000 0x3d4>,
+			<0x0aee0000 0x2c>;
+		reg-names = "hdmi_ctrl", "hdmi_phy", "hdcp_phy";
+
+		interrupt-parent = <&mdss_mdp>;
+		interrupts = <8 0>;
+
+		qcom,ext-disp = <&ext_disp>;
+
+		#clock-cells = <1>;
+
+		clocks = <&dispcc DISP_CC_MDSS_HDMI_AHBM_CLK>,
+			<&rpmhcc RPMH_CXO_CLK>,
+			<&tcsrcc TCSR_HDMI_CLKREF_EN>,
+			<&dispcc DISP_CC_MDSS_HDMI_APP_CLK>,
+			<&dispcc DISP_CC_MDSS_HDMI_APP_CLK_SRC>,
+			<&dispcc DISP_CC_MDSS_HDMI_PCLK_CLK>,
+			<&dispcc DISP_CC_MDSS_HDMI_PCLK_CLK_SRC>,
+			<&sde_hdmi_pll 0>,
+			<&dispcc DISP_CC_MDSS_HDMI_INTF_CLK>,
+			<&dispcc DISP_CC_MDSS_HDMI_PCLK_DIV_CLK_SRC>;
+		clock-names = "core_ahbm_clk", "rpmh_cxo_clk",
+			"core_hdmi_refclk", "core_app_clk", "core_app_clk_rcg",
+			"pixel_clk", "pixel_clk_rcg", "pixel_parent",
+			"pixel_iface_clk", "pixel_iface_clk_rcg";
+
+		qcom,hdmi-pll = <&sde_hdmi_pll>;
+		qcom,hdmi-phy-snps-4nm;
+		qcom,pll-clk-factor;
+
+		vdda-1p2-supply = <&L4B>;
+		vdda-0p9-supply = <&L2B>;
+		vdd_mx-supply = <&VDD_MXA_LEVEL>;
+
+		qcom,ctrl-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,ctrl-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-1p2";
+				qcom,supply-min-voltage = <1200000>;
+				qcom,supply-max-voltage = <1320000>;
+				qcom,supply-enable-load = <30000>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+
+		qcom,phy-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,phy-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdda-0p9";
+				qcom,supply-min-voltage = <912000>;
+				qcom,supply-max-voltage = <950000>;
+				qcom,supply-enable-load = <114000>;
+				qcom,supply-disable-load = <0>;
+			};
+
+		};
+
+		qcom,pll-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,pll-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdd_mx";
+				qcom,supply-min-voltage =
+						<RPMH_REGULATOR_LEVEL_TURBO>;
+				qcom,supply-max-voltage =
+						<RPMH_REGULATOR_LEVEL_MAX>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+
+		qcom,hpd-supply-entries {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			qcom,hpd-supply-entry@0 {
+				reg = <0>;
+				qcom,supply-name = "vdd_5p0";
+				qcom,supply-min-voltage = <5000000>;
+				qcom,supply-max-voltage = <5000000>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
+		};
+	};
+
 	sde_dp: qcom,dp_display@af54000 {
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
