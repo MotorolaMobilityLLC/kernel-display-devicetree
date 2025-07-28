@@ -6,7 +6,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "alor-sde-display-cdp.dtsi"
+#include "alor-sde-display-rcm.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Alor RCM + wcn7750 WLAN + Kundu";
