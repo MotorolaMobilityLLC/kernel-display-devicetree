@@ -798,6 +798,26 @@ properties:
       List of panel commands to indicate to the panel the beginning of the fifth
       frequency stepping pattern, and information about that pattern.
 
+  qcom,mdss-dsi-em-pulse-switch-command:
+    description: >
+      List of panel commands to notify panel to switch EM pulse framerate. It's
+      used by the AVR/EM fps switch feature.
+
+  qcom,mdss-dsi-em-pulse-switch-command-state:
+    description: >
+      String that specifies the ctrl state for sending resolution switch
+      commands.
+      "dsi_lp_mode" = DSI low power mode (default)
+      "dsi_hs_mode" = DSI high speed mode
+    $ref: /schemas/types.yaml#/definitions/string-array
+    default: dsi_lp_mode
+    enum: [dsi_lp_mode, dsi_hs_mode]
+
+  qcom,mdss-dsi-panel-esync-emsync-switch-enabled:
+    description: >
+      Boolean entry to enable emsync fps switch feature. This property must be
+      set along with "qcom,mdss-esync", otherwise it won't take effect.
+
   qcom,vrr-enable:
     description: >
       Boolean entry that restricts the inter-vsync frame latching to discrete
@@ -1896,6 +1916,7 @@ examples:
         qcom,ulps-enabled;
         qcom,suspend-ulps-enabled;
         qcom,mdss-esync;
+        qcom,mdss-dsi-panel-esync-emsync-switch-enabled;
         qcom,mdss-esync-milli-skew = <150>;
         qcom,mdss-esync-hsync-milli-pulse-width = <750>;
         qcom,mdss-esync-emsync-fps = <240>;
@@ -1995,6 +2016,10 @@ examples:
                 29 00 00 00 00 00 02 F1 00];
               qcom,mdss-dsi-timing-switch-command-state = "dsi_lp_mode";
               qcom,qsync-mode-min-refresh-rate = <48>;
+              qcom,mdss-esync-milli-skew = <150>;
+              qcom,mdss-esync-hsync-milli-pulse-width = <750>;
+              qcom,mdss-esync-emsync-fps = <240>;
+              qcom,mdss-esync-emsync-milli-pulse-width = <300>;
               qcom,dsi-qsync-mode-avr-step-fps = <360>;
               qcom,mdss-dsi-qsync-on-commands = [15 01 00 00 00 00 02 51 00];
               qcom,mdss-dsi-qsync-on-commands-state = "dsi_hs_mode";
@@ -2012,6 +2037,9 @@ examples:
               qcom,cmd-mode-switch-out-commands = [
                 39 01 00 00 00 00 06 b2 00 5d 01 02 50];
               qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
+              qcom,mdss-dsi-em-pulse-switch-command = [05 01 00 00 a0 00 02 11 00
+                05 01 00 00 02 00 02 29 00];
+              qcom,mdss-dsi-em-pulse-switch-command-state = "dsi_hs_mode";
 
               qcom,dsi-dyn-clk-list = <524637388 525735938 528842882>;
               qcom,dsi-dyn-clk-hfp-list = <52 64 96>;

@@ -371,9 +371,7 @@
 
 &dsi_nt37802_amoled_video_psr_vhm {
 	qcom,mdss-esync;
-	qcom,mdss-esync-hsync-milli-pulse-width = <500>;
-	qcom,mdss-esync-emsync-fps = <120>;
-	qcom,mdss-esync-emsync-milli-pulse-width = <500>;
+	qcom,mdss-dsi-panel-esync-emsync-switch-enabled;
 
 	qcom,qsync-enable;
 	qcom,vrr-enable;
