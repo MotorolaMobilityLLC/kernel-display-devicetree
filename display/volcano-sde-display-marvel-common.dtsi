@@ -1,1 +1,29 @@
-#include "volcano-sde-display-qrd.dtsi"
+#include "volcano-sde-display.dtsi"
+#include "dsi-panel-mot-dummy-qhd-video.dtsi"
+
+&mdss_mdp {
+	connectors = <&sde_dsi &smmu_sde_unsec &sde_wb2 &sde_rscc>;
+};
+
+&sde_dp {
+	status = "disabled";
+};
+
+&sde_dsi {
+	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
+};
+
+&mot_dummy_vid_qhd {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,platform-reset-gpio = <&tlmm 12 0>;
+	qcom,mdss-dsi-display-timings {
+		timing@0{
+			qcom,mdss-dsi-panel-width = <1080>;
+			qcom,mdss-dsi-panel-height = <2400>;
+
+			qcom,display-topology = <1 0 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
