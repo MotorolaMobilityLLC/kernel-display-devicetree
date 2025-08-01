@@ -7,7 +7,7 @@
 
 / {
 	model = "marvel";
-	compatible = "qcom,volcano-qrd", "qcom,volcano", "qcom,volcanop-qrd", "qcom,volcanop", "qcom,qrd";
+	compatible = "qcom,volcano-mtp", "qcom,volcano", "qcom,volcanop-mtp", "qcom,volcanop", "qcom,mtp", "moto,marvel";
 	qcom,msm-id = <636 0x10000>, <640 0x10000>, <641 0x10000>, <712 0x10000>,
 			<0x4000291 0x10000>, <0x4000292 0x10000>,
 			<0x8000291 0x10000>, <0x8000292 0x10000>,
