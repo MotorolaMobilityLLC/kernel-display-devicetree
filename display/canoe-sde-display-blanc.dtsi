@@ -84,6 +84,12 @@
 		regulator-boot-on;
 		depends-on-supply = <&gpio_expander>;
 	};
+
+	dp_aux_flip_switch: dp_aux_flip {
+		compatible = "dp-aux-flip";
+		aux-switch-enable-gpio = <&tlmm 94 0>;
+		aux-switch-flip-gpio = <&tlmm 87 0>;
+	};
 };
 
 &L11B {
@@ -106,9 +112,9 @@
 };
 
 &sde_dp {
-	mmi,aux-switch-enable-gpio = <&tlmm 96 0>;
+	mmi,aux-switch-enable-gpio = <&tlmm 94 0>;
 	mmi,aux-switch-flip-gpio = <&tlmm 87 0>;
-    /delete-property/ qcom,dp-aux-switch;
+	qcom,dp-aux-switch = <&dp_aux_flip_switch>;
 };
 
 &sde_dsi {
@@ -118,7 +124,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp>;
 };
 
 &mot_csot_nt37900_785_2296x2000_dsc_cmd {
