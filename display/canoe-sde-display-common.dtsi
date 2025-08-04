@@ -1206,6 +1206,14 @@
 			qcom,default-topology-index = <0>;
 			qcom,qsync-mode-min-refresh-rate = <30>;
 		};
+
+		timing_20: timing@20 {
+			qcom,mdss-dsi-panel-phy-timings = [00 3d 0f 0f 19 15 0f
+				10 0e 02 04 00 2f 13];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,qsync-mode-min-refresh-rate = <30>;
+		};
 	};
 };
 
