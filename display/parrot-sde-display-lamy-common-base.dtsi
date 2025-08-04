@@ -6,12 +6,6 @@
 #include "parrot-sde-display-pinctrl.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
-#include "dsi-panel-mot-tm-nt37706-667-1220x2712-dsc-video-120hz.dtsi"
-#include "dsi-panel-mot-tm-nt37706-667-1220x2712-dsc-video-120hz_v1.dtsi"
-#include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-video-120hz.dtsi"
-#include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-vid-common-lhbm.dtsi"
-#include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-video-120hz_v1.dtsi"
-#include "dsi-panel-mot-csot-vtdr6126-667-1220x2712-dsc-vid-common-lhbm_v1.dtsi"
 #include "dsi-panel-mot-tm-nt37706-667-1220x2712-dsc-video-120hz_thp.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126a-667-1220x2712-dsc-video-120hz_thp.dtsi"
 
@@ -210,178 +204,6 @@
 	};
 };
 
-&mot_tm_nt37706_667_1220p_dsc_vid_120hz {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-no-panel-on-read-support;
-	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16120>;
-	qcom,mdss-brightness-max-level = <16120>;
-	qcom,mdss-dsi-bl-default-level = <6552>;
-	qcom,platform-reset-gpio = <&tlmm 98 0>;
-	qcom,platform-te-gpio = <&tlmm 99 0>;
-	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
-	qcom,mdss-dsi-bl-inverted-dbv;
-
-	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-
-	qcom,dsi-supported-dfps-list = <120 90 60>;
-	qcom,mdss-dsi-pan-enable-dynamic-fps;
-	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
-	qcom,mdss-dsi-pan-dfps-send-command;
-
-        qcom,cellid-read-enabled;
-        qcom,mdss-dsi-panel-cellid-read-length = <23>;
-        qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 AC];
-
-	qcom,esd-check-enabled;
-	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0A];
-	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0x9C>;
-	qcom,mdss-dsi-panel-status-read-length = <1>;
-
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 23 09 09 1A 18 09
-				09 09 02 04 00 1D 0E];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
-		};
-	};
-
-};
-
-&mot_tm_nt37706_667_1220p_dsc_vid_120hz_v1 {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-no-panel-on-read-support;
-	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16120>;
-	qcom,mdss-brightness-max-level = <16120>;
-	qcom,mdss-dsi-bl-default-level = <6552>;
-	qcom,platform-reset-gpio = <&tlmm 98 0>;
-	qcom,platform-te-gpio = <&tlmm 99 0>;
-	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
-	qcom,mdss-dsi-bl-inverted-dbv;
-
-	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-
-	qcom,dsi-supported-dfps-list = <120 90 60>;
-	qcom,mdss-dsi-pan-enable-dynamic-fps;
-	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
-	qcom,mdss-dsi-pan-dfps-send-command;
-
-        qcom,cellid-read-enabled;
-        qcom,mdss-dsi-panel-cellid-read-length = <23>;
-        qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 AC];
-
-	qcom,esd-check-enabled;
-	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0A];
-	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0x9C>;
-	qcom,mdss-dsi-panel-status-read-length = <1>;
-
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 19 0A
-				0A 0A 02 04 00 20 0F];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
-		};
-	};
-
-};
-
-&mot_csot_vtdr6126_667_1220p_dsc_vid_120hz {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-no-panel-on-read-support;
-	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16120>;
-	qcom,mdss-brightness-max-level = <16120>;
-	qcom,mdss-dsi-bl-default-level = <6552>;
-	qcom,platform-reset-gpio = <&tlmm 98 0>;
-	qcom,platform-te-gpio = <&tlmm 99 0>;
-	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
-	qcom,mdss-dsi-bl-inverted-dbv;
-
-	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-
-	qcom,dsi-supported-dfps-list = <120 90 60>;
-	qcom,mdss-dsi-pan-enable-dynamic-fps;
-	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
-	qcom,mdss-dsi-pan-dfps-send-command;
-
-        qcom,cellid-read-enabled;
-        qcom,mdss-dsi-panel-cellid-read-length = <23>;
-        qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
-
-	qcom,esd-check-enabled;
-	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
-	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0 0 0>;
-	qcom,mdss-dsi-panel-status-read-length = <3>;
-
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 19 0A
-				0A 0A 02 04 00 20 0F];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
-		};
-	};
-
-};
-
-&mot_csot_vtdr6126_667_1220p_dsc_vid_120hz_v1 {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
-	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
-	qcom,mdss-dsi-no-panel-on-read-support;
-	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16120>;
-	qcom,mdss-brightness-max-level = <16120>;
-	qcom,mdss-dsi-bl-default-level = <6552>;
-	qcom,platform-reset-gpio = <&tlmm 98 0>;
-	qcom,platform-te-gpio = <&tlmm 99 0>;
-	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
-	qcom,mdss-dsi-bl-inverted-dbv;
-
-	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
-
-	qcom,dsi-supported-dfps-list = <120 90 60>;
-	qcom,mdss-dsi-pan-enable-dynamic-fps;
-	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
-	qcom,mdss-dsi-pan-dfps-send-command;
-
-        qcom,cellid-read-enabled;
-        qcom,mdss-dsi-panel-cellid-read-length = <23>;
-        qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
-
-	qcom,esd-check-enabled;
-	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
-	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0 0 0>;
-	qcom,mdss-dsi-panel-status-read-length = <3>;
-
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
-			/*120HZ timing*/
-			qcom,mdss-dsi-panel-phy-timings = [00 26 0A 0A 1B 19 0A
-				0A 0A 02 04 00 20 0F];
-			qcom,display-topology = <1 1 1>;
-			qcom,default-topology-index = <0>;
-		};
-	};
-
-};
-
 &mot_tm_nt37706_667_1220p_dsc_vid_120hz_thp {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
@@ -470,11 +292,7 @@
 
 &qupv3_se9_spi {
 	goodix-berlin@0 {
-		panel = <&mot_tm_nt37706_667_1220p_dsc_vid_120hz
-			&mot_csot_vtdr6126_667_1220p_dsc_vid_120hz
-			&mot_tm_nt37706_667_1220p_dsc_vid_120hz_v1
-			&mot_csot_vtdr6126_667_1220p_dsc_vid_120hz_v1
-			&mot_tm_nt37706_667_1220p_dsc_vid_120hz_thp
-			&mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz_thp>;
+		panel = <&mot_tm_nt37706_667_1220p_dsc_vid_120hz_thp
+			 &mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz_thp>;
 	};
 };
