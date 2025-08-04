@@ -101,7 +101,7 @@
 };
 
 &sde_dsi {
-	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
+	qcom,dsi-default-panel = <&mot_boe_nt37713_678_1272x2772_dsc_vid>;
 
 	vddio-supply = <&L9B>;
 	vdd-supply = <&L6F>;
