@@ -3,12 +3,12 @@
 #include "cliffs-sde-display.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v0.dtsi"
-#include "dsi-panel-mot-csot25-nt37707-1080x1272-dsc-cmd-common-cli_v0.dtsi"
+#include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v0.dtsi"
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v2.dtsi"
 #include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v3.dtsi"
-#include "dsi-panel-mot-csot25-nt37707-1080x1272-dsc-cmd-common-cli_v1.dtsi"
-#include "dsi-panel-mot-csot25-nt37707-1080x1272-dsc-cmd-common-cli_v2.dtsi"
+#include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v1.dtsi"
+#include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v2.dtsi"
 #include "dsi-panel-mot-tm-vtdr6126A-1080x1272-dsc-vid-common-cli_v1.dtsi"
 
 &tlmm {
@@ -290,7 +290,7 @@
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
@@ -299,7 +299,7 @@
 		timing@1 { //90
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <600000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1F 06
@@ -308,7 +308,7 @@
 		timing@2 { //60
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			qcom,mdss-dsi-panel-clockrate = <500000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -318,6 +318,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -326,6 +327,7 @@
 		timing@4 { //24
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
@@ -333,6 +335,7 @@
 		};
 		timing@5 { //10 independent
 			qcom,framerate-group-special-idle-10hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
@@ -340,6 +343,7 @@
 		};
 		timing@6 { //1 independent
 			qcom,framerate-group-special-idle-1hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
@@ -347,7 +351,7 @@
 		};
 		timing@7 { //165
 			qcom,framerate-group-no-duplicated;
-			qcom,mdss-dsi-panel-clockrate = <1100000000>;
+			//qcom,mdss-dsi-panel-clockrate = <1100000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 19 09
@@ -403,7 +407,7 @@
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
@@ -412,7 +416,7 @@
 		timing@1 { //90
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <600000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1F 06
@@ -421,7 +425,7 @@
 		timing@2 { //60
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			qcom,mdss-dsi-panel-clockrate = <500000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -431,6 +435,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -439,6 +444,7 @@
 		timing@4 { //24
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
@@ -446,6 +452,7 @@
 		};
 		timing@5 { //10 independent
 			qcom,framerate-group-special-idle-10hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
@@ -453,6 +460,7 @@
 		};
 		timing@6 { //1 independent
 			qcom,framerate-group-special-idle-1hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
@@ -460,7 +468,7 @@
 		};
 		timing@7 { //165
 			qcom,framerate-group-no-duplicated;
-			qcom,mdss-dsi-panel-clockrate = <1100000000>;
+			//qcom,mdss-dsi-panel-clockrate = <1100000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 19 09
@@ -516,7 +524,7 @@
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
@@ -525,7 +533,7 @@
 		timing@1 { //90
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <600000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1F 06
@@ -534,7 +542,7 @@
 		timing@2 { //60
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			qcom,mdss-dsi-panel-clockrate = <500000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -544,6 +552,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -552,6 +561,7 @@
 		timing@4 { //24
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
@@ -559,6 +569,7 @@
 		};
 		timing@5 { //10 independent
 			qcom,framerate-group-special-idle-10hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
@@ -566,6 +577,7 @@
 		};
 		timing@6 { //1 independent
 			qcom,framerate-group-special-idle-1hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
@@ -573,7 +585,7 @@
 		};
 		timing@7 { //165
 			qcom,framerate-group-no-duplicated;
-			qcom,mdss-dsi-panel-clockrate = <1100000000>;
+			//qcom,mdss-dsi-panel-clockrate = <1100000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 19 09
@@ -629,7 +641,7 @@
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <777000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -638,7 +650,7 @@
 		timing@1 { //90
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -647,7 +659,7 @@
 		timing@2 { //60
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <800000000>;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -657,6 +669,7 @@
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -665,6 +678,7 @@
 		timing@4 { //24
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -672,7 +686,7 @@
 		};
 		timing@5 { //10 independent
 			qcom,framerate-group-special-idle-10hz;
-			qcom,mdss-mdp-transfer-time-us = <6795>;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -680,7 +694,7 @@
 		};
 		timing@6 { //1 independent
 			qcom,framerate-group-special-idle-1hz;
-			qcom,mdss-mdp-transfer-time-us = <6795>;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
@@ -688,7 +702,7 @@
 		};
 		timing@7 { //165
 			qcom,framerate-group-no-duplicated;
-			qcom,mdss-dsi-panel-clockrate = <1100000000>;
+			//qcom,mdss-dsi-panel-clockrate = <880000000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
@@ -743,17 +757,12 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
-	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
-
-	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
-	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
 		        qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -761,6 +770,7 @@
 							04 03 02 04 00 0E 09];
 		};
 		timing@1{//165hz
+			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -768,6 +778,8 @@
 							05 06 02 04 00 13 0A];
 		};
 		timing@2{//90hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -775,6 +787,43 @@
 							04 03 02 04 00 0E 09];
 		};
 		timing@3{//60hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@4{//30hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,framerate-group-90hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@5{//24hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@6{//10hz
+			qcom,framerate-group-special-idle-10hz;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@7{//1hz
+			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -830,17 +879,12 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
-	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
-
-	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
-	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
 		        qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -848,6 +892,7 @@
 							04 03 02 04 00 0E 09];
 		};
 		timing@1{//165hz
+			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -855,6 +900,8 @@
 							05 06 02 04 00 13 0A];
 		};
 		timing@2{//90hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -862,6 +909,43 @@
 							04 03 02 04 00 0E 09];
 		};
 		timing@3{//60hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@4{//30hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,framerate-group-90hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@5{//24hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@6{//10hz
+			qcom,framerate-group-special-idle-10hz;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@7{//1hz
+			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -907,27 +991,12 @@
 	        16000 13250 34500 7500 3000>;
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
-
-	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16100>;
-	qcom,mdss-dsi-panel-apl-on-command = [
-		39 00 00 00 00 00 03 5F 00 01];
-	qcom,mdss-dsi-panel-apl-off-command = [
-		39 00 00 00 00 00 03 5F 00 00];
-
-	qcom,mdss-dsi-panel-AOD-config-enabled;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-BL = <5292>;
-	qcom,mdss-dsi-panel-AOD-bl-cmd-update;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1312>;
-	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <5292>;
-
-	qcom,mdss-dsi-panel-AOD-bl-min = <1312>; //5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <8236>; //160nit
-	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <0>;
+	qcom,mdss-dsi-panel-sf-brightnesszone-enable = <1>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0{//120hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
 		        qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -935,6 +1004,7 @@
 							04 03 02 04 00 0E 09];
 		};
 		timing@1{//165hz
+			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -942,6 +1012,8 @@
 							05 06 02 04 00 13 0A];
 		};
 		timing@2{//90hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
@@ -949,6 +1021,43 @@
 							04 03 02 04 00 0E 09];
 		};
 		timing@3{//60hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@4{//30hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,framerate-group-90hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@5{//24hz
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@6{//10hz
+			qcom,framerate-group-special-idle-10hz;
+			qcom,mdss-dsi-panel-clockrate = <667500000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 10 04 04 12 11 04
+							04 03 02 04 00 0E 09];
+		};
+		timing@7{//1hz
+			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <667500000>;
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
