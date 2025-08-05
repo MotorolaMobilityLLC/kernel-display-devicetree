@@ -6,9 +6,53 @@
 #include "canoe-sde-display.dtsi"
 #include "dsi-panel-mot-dummy-qhd-video.dtsi"
 #include "dsi-panel-mot-csot-nt37900-785-2296x2000-dsc-cmd-common.dtsi"
+#include "dsi-panel-mot-csot-nt37707-667-1080x2640-dsc-cmd-common_v3.dtsi"
 
 &soc {
 	dsi_panel_pwr_supply_main: dsi_panel_pwr_supply_main {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <300000>;
+			qcom,supply-disable-load = <100>;
+			qcom,supply-pre-on-sleep = <0>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-pre-off-sleep = <0>;
+			qcom,supply-post-off-sleep = <0>;
+		};
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <1200000>;
+			qcom,supply-max-voltage = <1200000>;
+			qcom,supply-enable-load = <300000>;
+			qcom,supply-disable-load = <100>;
+			qcom,supply-pre-on-sleep = <0>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-pre-off-sleep = <0>;
+			qcom,supply-post-off-sleep = <1>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <300000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-pre-on-sleep = <0>;
+			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-pre-off-sleep = <0>;
+			qcom,supply-post-off-sleep = <1>;
+		};
+	};
+
+	dsi_panel_pwr_supply_sec: dsi_panel_pwr_supply_sec {
 		#address-cells = <1>;
 		#size-cells = <0>;
 
@@ -85,6 +129,40 @@
 		depends-on-supply = <&gpio_expander>;
 	};
 
+	sec_panel_vddio: display_gpio_regulator@7 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "sec_panel_vddio";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&gpio_expander 7 0>;
+		enable-active-high;
+		regulator-boot-on;
+		depends-on-supply = <&gpio_expander>;
+	};
+	sec_panel_vdd: display_gpio_regulator@8 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "sec_panel_vdd";
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&gpio_expander 5 0>;
+		enable-active-high;
+		regulator-boot-on;
+		depends-on-supply = <&gpio_expander>;
+	};
+	sec_panel_vci: display_gpio_regulator@9 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "sec_panel_vci";
+		regulator-min-microvolt = <3000000>;
+		regulator-max-microvolt = <3000000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&gpio_expander 6 0>;
+		enable-active-high;
+		regulator-boot-on;
+		depends-on-supply = <&gpio_expander>;
+	};
+
 	dp_aux_flip_switch: dp_aux_flip {
 		compatible = "dp-aux-flip";
 		aux-switch-enable-gpio = <&tlmm 94 0>;
@@ -123,8 +201,132 @@
 	vci-supply = <&primary_panel_vci>;
 };
 
+&sde_dsi1 {
+	vddio-supply = <&sec_panel_vddio>;
+	vdd-supply = <&sec_panel_vdd>;
+	vci-supply = <&sec_panel_vci>;
+};
+
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp>;
+};
+
+&mot_csot_nt37707_667_1080x2640_dsc_cmd_v3 {
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_main>;
+	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_sec>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <420>;
+	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-default-level = <10230>;
+	qcom,mdss-brightness-max-level = <16380>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+	qcom,platform-sec-reset-gpio = <&tlmm 54 0>;
+	//qcom,platform-te-gpio = <&tlmm 55 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	//qcom,apl-enabled;
+	//qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	//qcom,mdss-dsi-panel-apl-on-command = [
+	//	39 00 00 00 00 00 03 5F 00 01];
+	//qcom,mdss-dsi-panel-apl-off-command = [
+	//	39 00 00 00 00 00 03 5F 00 00];
+
+	//qcom,ulps-enabled;
+	qcom,mdss-dsi-display-timings {
+		timing@0 { //120
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@1 { //90
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <600000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1F 06
+							05 06 02 04 00 13 0A];
+		};
+		timing@2 { //60
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <500000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@3 { //30
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,framerate-group-90hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@4 { //24
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,mdss-dsi-panel-clockrate = <800000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 15 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@5 { //10 independent
+			qcom,framerate-group-special-idle-10hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
+							07 08 02 04 00 18 0C];
+		};
+		timing@6 { //1 independent
+			qcom,framerate-group-special-idle-1hz;
+			//qcom,mdss-dsi-panel-clockrate = <809000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 07 17 15 07
+							07 08 02 04 00 18 0C];
+		};
+		timing@7 { //165
+			qcom,framerate-group-no-duplicated;
+			//qcom,mdss-dsi-panel-clockrate = <1100000000>;
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 19 09
+							0A 09 02 04 00 1E 0F];
+		};
+	};
 };
 
 &mot_csot_nt37900_785_2296x2000_dsc_cmd {
