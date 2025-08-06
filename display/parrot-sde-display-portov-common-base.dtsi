@@ -407,7 +407,7 @@
                 aw99703,reset-trans-delay;
                 aw99703,pwm-mode = <1>; /* 1 pwm enable,0 PWM disable */
                 aw99703,map-type = <0>; /* 0 exponential, 4 linear */
-		current-align-type = <0x03>; /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
+		current-align-type = <0x04>; /* 0-none, 1-450nit, 2-1000nit, 3-gamma1.5 1000nit, 4-1050nit */
                 aw99703,work-mode = <1>; /* backlight */
 		aw99703,default-brightness = <1251>;
 
@@ -429,7 +429,7 @@
                 ktd,inductor-current = <1>;
                 ktd,default-brightness = <1251>;
                 ktd,map-type = <0>; /* 0 exponential, 1 linear */
-                ktd,current-align-type = <0x03>;  /* 0-none,  1-450nit,  2-1000nit,  3-gamma1.5 1000nit */
+                ktd,current-align-type = <0x04>;  /* 0-none, 1-450nit, 2-1000nit, 3-gamma1.5 1000nit, 4-1050nit */
 	};
 };
 
