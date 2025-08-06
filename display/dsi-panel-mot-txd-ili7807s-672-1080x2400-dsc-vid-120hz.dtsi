@@ -85,6 +85,8 @@
 					39 00 00 00 01 00 04 FF 78 07 00
 					05 00 00 00 14 00 01 28
 					05 00 00 00 69 00 01 10
+					39 00 00 40 00 00 04 FF 78 07 06
+					39 00 00 00 00 00 02 8D DC
 				];
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
 				qcom,compression-mode = "dsc";
