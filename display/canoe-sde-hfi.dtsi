@@ -44,4 +44,19 @@
 
 	nvmem-cells = <&ssip_config>;
 	nvmem-cell-names = "ssip_config";
+
+	/* Pre mdss_core vregs */
+	qcom,platform-supply-entries {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,platform-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "mmcx";
+			qcom,supply-min-voltage = <0>;
+			qcom,supply-max-voltage = <0>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+	};
 };
