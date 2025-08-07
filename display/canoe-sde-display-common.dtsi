@@ -476,6 +476,13 @@
 &dsi_nt37802_amoled_video_psr_vhm {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+
 	qcom_mdss_dsi_display_timings_320: qcom,mdss-dsi-display-timings {
 		timing_0_321: timing@0 {
 			qcom,mdss-esync-hsync-milli-pulse-width = <500>;
