@@ -5,6 +5,17 @@
 
 #include "trustedvm-canoe-sde-display.dtsi"
 
+&dsi_nt37802_amoled_video_psr_vhm {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <15>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <8191>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+};
+
 &dsi_vtdr6130_amoled_cmd {
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
