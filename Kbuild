@@ -32,14 +32,14 @@ dtbo-$(CONFIG_ARCH_ALOR) += display/alor-sde.dtbo \
 		display/alor-sde-display-mtp-overlay.dtbo \
 		display/alor-sde-display-qrd-overlay.dtbo \
 		display/alor-sde-display-rcm-overlay.dtbo \
-		display/alor-sde-display-rumi-overlay.dtbo \
-		display/alor-sde-display-mtp-pmih010x-smb1398-overlay.dtbo
+		display/alor-sde-display-rumi-overlay.dtbo
 else
 dtbo-$(CONFIG_ARCH_ALOR) += display/trustedvm-alor-sde-display-atp-overlay.dtbo \
 		display/trustedvm-alor-sde-display-cdp-overlay.dtbo \
 		display/trustedvm-alor-sde-display-mtp-overlay.dtbo \
 		display/trustedvm-alor-sde-display-qrd-overlay.dtbo \
-		display/trustedvm-alor-sde-display-rcm-overlay.dtbo
+		display/trustedvm-alor-sde-display-rcm-overlay.dtbo \
+		display/alor-sde-display-mtp-pmih010x-smb1398-overlay.dtbo
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
