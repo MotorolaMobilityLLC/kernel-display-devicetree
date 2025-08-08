@@ -6,7 +6,6 @@
 #include <dt-bindings/clock/qcom,dispcc-canoe.h>
 #include <dt-bindings/clock/qcom,alor-gcc.h>
 #include "alor-sde-common.dtsi"
-#include "trustedvm-alor-avf-required-subnodes.dtsi"
 
 &soc {
 	/* dummy display clock provider */
