@@ -1,0 +1,58 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include "kera-sde-display-cdp.dtsi"
+
+&tlmm {
+	display_hdmi_vdd_default: display_hdmi_vdd_default {
+		mux {
+			pins = "gpio10";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio10";
+			drive-strength = <8>;
+			bias-disable = <0>;
+			output-high;
+		};
+	};
+
+};
+
+&soc {
+	display_hdmi_vdd: display_gpio_regulator@1 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_hdmi_vdd";
+		regulator-min-microvolt = <5000000>;
+		regulator-max-microvolt = <5000000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&tlmm 10 0>;
+		enable-active-high;
+		proxy-supply = <&display_hdmi_vdd>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_hdmi_vdd_default>;
+	};
+};
+
+&mdss_mdp {
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb2
+			&sde_hdmi &sde_dp>;
+};
+
+&sde_hdmi {
+	status = "ok";
+	qcom,ddc-clk-gpio = <&tlmm 6 0>;
+	qcom,ddc-data-gpio = <&tlmm 7 0>;
+	qcom,hdmi-cec-gpio = <&tlmm 46 0>;
+	qcom,hdmi-hpd-gpio = <&tlmm 47 0>;
+	pinctrl-names = "mdss_hdmi_active", "mdss_hdmi_sleep";
+	pinctrl-0 = <&hdmi_ddc_scl_active &hdmi_ddc_sda_active
+			&hdmi_cec_active &hdmi_hpd_active>;
+	pinctrl-1= <&hdmi_ddc_scl_suspend &hdmi_ddc_sda_suspend
+			&hdmi_cec_suspend &hdmi_hpd_suspend>;
+	vdd_5p0-supply = <&display_hdmi_vdd>;
+};

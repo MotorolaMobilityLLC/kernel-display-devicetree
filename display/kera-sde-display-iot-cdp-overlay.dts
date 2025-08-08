@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "kera-sde-display-iot-cdp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Kera IOT CDP";
+	compatible = "qcom,kera-cdp", "qcom,kera", "qcom,kerap-cdp",
+			"qcom,kerap", "qcom,cdp";
+	qcom,msm-id = <686 0x10000>, <659 0x10000>;
+	qcom,board-id = <0x50001 0>;
+};
