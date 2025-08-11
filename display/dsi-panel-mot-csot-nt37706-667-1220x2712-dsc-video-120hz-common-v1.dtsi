@@ -61,6 +61,7 @@
 		qcom,mdss-dsi-panel-AOD-config-enabled;
 		qcom,mdss-dsi-panel-AOD-bl-vid-update;
 		qcom,mdss-dsi-panel-AOD-command-resend;
+		qcom,mdss-dsi-panel-AOD-cmd-out-delay-ms-post = <150>;
 
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
@@ -366,11 +367,6 @@
 					39 00 00 00 00 00 03 D0 00 00
 					];
 				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
-
-				qcom,video-mode-switch-in-commands = [39 00 00 00 00 00 01 38];
-				qcom,video-mode-switch-in-commands-state = "dsi_hs_mode";
-				qcom,video-mode-switch-out-commands = [39 00 00 00 00 00 01 39];
-				qcom,video-mode-switch-out-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-switch-in-commands = [
 					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
