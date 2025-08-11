@@ -36,41 +36,45 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <1 1>, <0 2>, <1 20>;
-/*
+
 		qcom,mdss-dsi-wr-mem-start = <0x2c>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
 
 		qcom,mdss-dsi-dc-off-command = [
-				39 01 00 00 00 00 02 5E 00];
+				39 00 00 40 00 00 02 6F 01
+				39 00 00 00 00 00 02 8B 00];
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-dc-on-command = [
-				39 01 00 00 00 00 02 5E 01];
+				39 00 00 40 00 00 02 6F 01
+				39 00 00 00 00 00 02 8B 01];
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-				39 00 00 40 00 00 03 51 3E 80
-				39 00 00 00 00 00 02 62 00];
+				39 00 00 00 00 00 03 51 3E 80];
 		qcom,mdss-dsi-hbm-off-command = [
-				39 00 00 00 00 00 02 62 00];
+				39 00 00 40 00 00 06 F0 55 AA 52 08 02
+				39 00 00 40 00 00 02 6F 02
+				39 00 00 40 00 00 02 D2 20
+				39 00 00 40 00 00 02 87 00
+				39 00 00 40 00 00 02 6F 01
+				39 00 00 00 00 00 02 8B 00];
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
-				39 00 00 40 00 00 05 63 10 00 1A 3C
-				39 01 00 00 00 00 02 62 03];
+				39 00 00 40 00 00 06 F0 55 AA 52 08 02
+				39 00 00 40 00 00 02 6F 02
+				39 00 00 40 00 00 02 D2 21
+				39 00 00 40 00 00 02 6F 01
+				39 00 00 40 00 00 02 8B 01
+				39 00 00 00 00 00 02 87 25];
 
-		qcom,mdss-dsi-panel-local-hbm-enabled;
-		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <6715>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
-		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
-		qcom,mdss-dsi-panel-bl-num = <1>;
-*/
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <1272>;
 				qcom,mdss-dsi-panel-height = <2772>;
-				qcom,mdss-dsi-h-front-porch = <22>;
+				qcom,mdss-dsi-h-front-porch = <108>;
 				qcom,mdss-dsi-h-back-porch = <20>;
 				qcom,mdss-dsi-h-pulse-width = <4>;
 				qcom,mdss-dsi-h-sync-skew = <0>;
@@ -141,7 +145,7 @@
 					39 00 00 00 00 00 02 90 03
 					39 00 00 00 00 00 02 6F 01
 					39 00 00 00 00 00 02 90 43
-					39 00 00 00 00 00 13 91 AB A8 00 0C D2 00 02 59 01 29 00 08 09 75 07 32 10 F0
+					39 00 00 00 00 00 13 91 AB A8 00 0C C2 00 02 3E 01 37 00 08 08 BB 07 32 10 F0
 					39 00 00 00 00 00 02 53 20
 					39 00 00 00 00 00 02 88 01
 					39 00 00 00 00 00 03 81 01 19
@@ -150,6 +154,11 @@
 					39 00 00 00 00 00 03 51 36 E8
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 3E 80
+					39 00 00 00 00 00 02 62 81
+					39 00 00 00 00 00 02 6F 01
+					39 00 00 00 00 00 05 62 12 10 12 12
+					39 00 00 00 00 00 02 6F 05
+					39 00 00 00 00 00 05 62 1F 1F 1F 1F
 					39 00 00 00 00 00 02 2F 01
 					05 00 00 00 78 00 01 11
 					05 00 00 00 00 00 01 29

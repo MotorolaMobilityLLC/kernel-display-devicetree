@@ -50,12 +50,12 @@
 &mot_boe_nt37713_678_1272x2772_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <144 120 90 60>;
+	qcom,dsi-supported-dfps-list = <120 144 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
-	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
+	qcom,dsi-supported-dfps-vfp-list = <48 44 996 2892>;
+	qcom,dsi-supported-dfps-hfp-list = <108 16 108 108>;
 	qcom,mdss-dsi-pan-dfps-send-command;
-
-	//qcom,dsi-dyn-clk-enable;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
 	qcom,mdss-dsi-no-panel-on-read-support;
@@ -75,23 +75,24 @@
 	        16000 13000 35500 7000 2500>;
 	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
 	qcom,mdss-dsi-panel-blackness-level = <1>;
-/*
+
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
-	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0A];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0 0 0>;
-	qcom,mdss-dsi-panel-status-read-length = <3>;
+	qcom,mdss-dsi-panel-status-value = <0x9C>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
 	qcom,esd-check-enabled;
 
 	qcom,cellid-read-enabled;//
 	qcom,mdss-dsi-panel-cellid-read-length = <23>;
-	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
-*/
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 AC];
+	qcom,mdss-dsi-panel-cellid-command-state = "dsi_lp_mode";
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
-			qcom,mdss-dsi-panel-phy-timings = [00 22 08 09 19 17 09
-				09 09 02 04 00 1C 0E];
+			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 12 05
+				05 06 02 04 00 12 0A];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
