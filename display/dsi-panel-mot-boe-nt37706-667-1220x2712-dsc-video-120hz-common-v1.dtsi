@@ -1,4 +1,4 @@
-/* Copyright (c) 2019-2021, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2019-2021, 2025, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -199,9 +199,9 @@
 
 					39 00 00 00 00 00 03 81 01 19
 
-					39 00 00 00 00 00 03 51 36 EC
+					39 00 00 00 00 00 03 51 00 00
 					39 00 00 00 00 00 02 6F 04
-					39 00 00 00 00 00 03 51 2C B8
+					39 00 00 00 00 00 03 51 00 00
 
 					//AOD info
 					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
@@ -305,7 +305,7 @@
 
 					39 00 00 00 00 00 03 81 01 19
 
-					39 00 00 00 00 00 03 51 36 EC
+					39 00 00 00 00 00 03 51 00 00
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 2C B8
 
