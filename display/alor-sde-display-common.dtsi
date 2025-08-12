@@ -79,7 +79,7 @@
 		qcom_panel_supply_entry_1: qcom,panel-supply-entry@1 {
 			reg = <1>;
 			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <1000000>;
+			qcom,supply-min-voltage = <1030000>;
 			qcom,supply-max-voltage = <1100000>;
 			qcom,supply-enable-load = <220000>;
 			qcom,supply-disable-load = <3>;
@@ -125,8 +125,8 @@
 		qcom_panel_supply_entry_2_8: qcom,panel-supply-entry@2 {
 			reg = <2>;
 			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <1200000>;
-			qcom,supply-max-voltage = <1292000>;
+			qcom,supply-min-voltage = <1030000>;
+			qcom,supply-max-voltage = <1100000>;
 			qcom,supply-enable-load = <200000>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-post-on-sleep = <0>;
