@@ -5,6 +5,34 @@
 
 #include "alor-sde-display.dtsi"
 
+&soc {
+	display_panel_avdd: display_gpio_regulator@0 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_avdd";
+		regulator-min-microvolt = <5500000>;
+		regulator-max-microvolt = <5500000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&pm8550_gpios 11 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_avdd>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+	};
+};
+
+&pm8550_gpios {
+	display_panel_avdd_default: display_panel_avdd_default {
+		pins = "gpio11";
+		function = "normal";
+		input-disable;
+		output-enable;
+		bias-disable;
+		power-source = <1>;
+		qcom,drive-strength = <3>;
+	};
+};
+
 &dsi_dual_rdp370f_rgb_vid {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_raontech>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
@@ -299,6 +327,24 @@
 	qcom,platform-bklight-en-gpio = <&tlmm 54 0>;
 };
 
+&dsi_sharp_qhd_plus_dsc_cmd {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_avdd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
+	qcom,platform-bklight-en-gpio = <&tlmm 54 0>;
+};
+
+&dsi_sharp_qhd_plus_dsc_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_avdd>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
+	qcom,platform-bklight-en-gpio = <&tlmm 54 0>;
+};
+
 &dsi_sim_sec_hd_cmd {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,panel-sec-supply-entries = <&dsi_panel_pwr_supply_sim>;
@@ -309,6 +355,7 @@
 };
 
 &sde_dsi {
+	avdd-supply = <&display_panel_avdd>;
 	qcom,dsi-default-panel = <&dsi_nt37801_amoled_cmd>;
 };
 
