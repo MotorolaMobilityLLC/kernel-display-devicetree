@@ -25,3 +25,7 @@
 &sde_dsi {
 	vdd-supply = <&display_panel_vdd>;
 };
+
+&sde_dsi2 {
+	vdd-supply = <&display_panel_vdd>;
+};
