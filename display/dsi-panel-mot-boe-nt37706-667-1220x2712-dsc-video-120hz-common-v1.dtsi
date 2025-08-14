@@ -60,7 +60,6 @@
 
 		qcom,mdss-dsi-panel-AOD-config-enabled;
 		qcom,mdss-dsi-panel-AOD-bl-vid-update;
-		qcom,mdss-dsi-panel-AOD-command-resend;
 
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;
@@ -411,7 +410,7 @@
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 00 10
 					];
-				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
+				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
 
 				qcom,cmd-mode-switch-out-commands = [
 					//CDM exit
@@ -439,12 +438,12 @@
 					39 00 00 00 00 00 02 6F 08
 					39 00 00 00 00 00 02 B5 00
 					];
-				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
+				qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
 
 				qcom,cmd-mode-backlight-commands = [
 					39 00 00 00 00 00 03 51 00 10
 					];
-				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
+				qcom,cmd-mode-backlight-commands-state = "dsi_lp_mode";
 
 			};
 		};

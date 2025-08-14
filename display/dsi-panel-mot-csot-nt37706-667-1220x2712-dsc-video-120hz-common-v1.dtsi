@@ -60,7 +60,6 @@
 
 		qcom,mdss-dsi-panel-AOD-config-enabled;
 		qcom,mdss-dsi-panel-AOD-bl-vid-update;
-		qcom,mdss-dsi-panel-AOD-command-resend;
 		qcom,mdss-dsi-panel-AOD-cmd-out-delay-ms-post = <150>;
 
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
@@ -322,6 +321,17 @@
 					39 00 00 00 00 00 07 E5 06 0B 10 16 16 15
 					39 00 00 00 00 00 07 E6 00 00 00 00 00 00
 
+					39 00 00 40 00 00 06 F0 55 AA 52 08 00
+					39 00 00 40 00 00 03 C0 30 01
+					39 00 00 40 00 00 02 17 21
+					39 00 00 40 00 00 02 71 10
+					39 00 00 40 00 00 06 F0 55 AA 52 08 01
+					39 00 00 40 00 00 02 6F 0B
+					39 00 00 40 00 00 02 D2 02
+					39 00 00 40 00 00 06 F0 55 AA 52 08 04
+					39 00 00 40 00 00 02 6F 08
+					39 00 00 00 00 00 02 B5 00
+
 					05 00 00 00 78 00 01 11
 
 					//cmd aod mode
@@ -369,20 +379,32 @@
 				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-switch-in-commands = [
+					//cmd idle
+					39 00 00 40 00 00 06 F0 55 AA 52 08 00
+					39 00 00 40 00 00 03 C0 30 01
+					39 00 00 40 00 00 02 17 21
+					39 00 00 40 00 00 02 71 10
+					39 00 00 40 00 00 06 F0 55 AA 52 08 01
+					39 00 00 40 00 00 02 6F 0B
+					39 00 00 40 00 00 02 D2 02
+					39 00 00 40 00 00 06 F0 55 AA 52 08 04
+					39 00 00 40 00 00 02 6F 08
+					39 00 00 40 00 00 02 B5 00
+
 					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
 					39 00 00 00 00 00 01 39
 					];
-				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
+				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
 
 				qcom,cmd-mode-switch-out-commands = [
 					39 00 00 00 00 00 01 38
 					];
-				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
+				qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
 
 				qcom,cmd-mode-backlight-commands = [
 					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
 					];
-				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
+				qcom,cmd-mode-backlight-commands-state = "dsi_lp_mode";
 
 			};
 		};
