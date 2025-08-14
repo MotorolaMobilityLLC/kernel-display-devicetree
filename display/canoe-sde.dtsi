@@ -342,6 +342,7 @@
 
 &mdss_dsi0 {
 	vdda-1p2-supply = <&L1D>;
+	vdda-1p2-parent-supply = <&S7F>;
 	qcom,split-link-supported;
 	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
@@ -359,6 +360,7 @@
 
 &mdss_dsi1 {
 	vdda-1p2-supply = <&L1D>;
+	vdda-1p2-parent-supply = <&S7F>;
 	qcom,split-link-supported;
 	clocks = <&dispcc DISP_CC_MDSS_BYTE1_CLK>,
 		<&dispcc DISP_CC_MDSS_BYTE1_CLK_SRC>,
@@ -376,6 +378,7 @@
 
 &mdss_dsi_phy0 {
 	vdda-0p9-supply = <&L3D>;
+	vdda-0p9-parent-supply = <&S7G>;
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
@@ -384,6 +387,7 @@
 
 &mdss_dsi_phy1 {
 	vdda-0p9-supply = <&L3D>;
+	vdda-0p9-parent-supply = <&S7G>;
 	qcom,panel-allow-phy-poweroff;
 	qcom,dsi-pll-ssc-en;
 	qcom,dsi-pll-ssc-mode = "down-spread";
