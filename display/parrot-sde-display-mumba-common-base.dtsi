@@ -11,7 +11,7 @@
 
 &pm6150l_gpios {
 	display_panel_supply_ctrl {
-		display_panel_avdd_default: display_panel_avdd_default {
+		panel_avdd_default: panel_avdd_default {
 			pins = "gpio3";
 			function = "normal";
 			input-disable;
@@ -21,7 +21,7 @@
 			qcom,drive-strength = <2>;
 		};
 
-		display_panel_avee_default: display_panel_avee_default {
+		panel_avee_default: panel_avee_default {
 			pins = "gpio4";
 			function = "normal";
 			input-disable;
@@ -82,7 +82,7 @@
 		regulator-boot-on;
 		proxy-supply = <&display_panel_lab>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_avdd_default>;
+		pinctrl-0 = <&panel_avdd_default>;
 	};
 
 	display_panel_ibb: display_pwr_regulator@2 {
@@ -96,7 +96,7 @@
 		regulator-boot-on;
 		proxy-supply = <&display_panel_ibb>;
 		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_avee_default>;
+		pinctrl-0 = <&panel_avee_default>;
 	};
 
 	sde_dsi: qcom,dsi-display-primary {
