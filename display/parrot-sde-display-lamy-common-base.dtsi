@@ -8,6 +8,7 @@
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
 #include "dsi-panel-mot-tm-nt37706-667-1220x2712-dsc-video-120hz_thp.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126a-667-1220x2712-dsc-video-120hz_thp.dtsi"
+#include "dsi-panel-mot-csot-vtdr6126a-667-1220x2712-dsc-vid-thp-lhbm.dtsi"
 
 &pm6150l_gpios {
 	display_panel_supply_ctrl {
