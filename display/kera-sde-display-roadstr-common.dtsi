@@ -64,9 +64,6 @@
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb2 &sde_cesta>;
 };
 
-&sde_dp {
-	status = "disabled";
-};
 
 &mot_csot_vtdr6126a_667_1220p_dsc_vid_120hz {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
