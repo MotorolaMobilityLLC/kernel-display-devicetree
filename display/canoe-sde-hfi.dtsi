@@ -38,6 +38,11 @@
 &mdss_mdp1 {
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
+	mmcx-supply = <&VDD_MMCX_LEVEL>;
+	cx-supply = <&VDD_CX_LEVEL>;
+	mxc-supply = <&VDD_MXC_LEVEL>;
+	mx-supply = <&VDD_MXA_LEVEL>;
+
 	qcom,sde-dspp-ltm-version = <0x00010004>;
 	/* offsets are based off dspp 0, 1, 2, and 3 */
 	qcom,sde-dspp-ltm-off = <0x3300 0x3300 0x3300 0x3300>;
@@ -53,8 +58,35 @@
 		qcom,platform-supply-entry@0 {
 			reg = <0>;
 			qcom,supply-name = "mmcx";
-			qcom,supply-min-voltage = <0>;
-			qcom,supply-max-voltage = <0>;
+			qcom,supply-min-voltage = <416>;
+			qcom,supply-max-voltage = <416>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,platform-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "cx";
+			qcom,supply-min-voltage = <480>;
+			qcom,supply-max-voltage = <480>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,platform-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "mxc";
+			qcom,supply-min-voltage = <456>;
+			qcom,supply-max-voltage = <456>;
+			qcom,supply-enable-load = <0>;
+			qcom,supply-disable-load = <0>;
+		};
+
+		qcom,platform-supply-entry@3 {
+			reg = <3>;
+			qcom,supply-name = "mx";
+			qcom,supply-min-voltage = <456>;
+			qcom,supply-max-voltage = <456>;
 			qcom,supply-enable-load = <0>;
 			qcom,supply-disable-load = <0>;
 		};
