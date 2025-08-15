@@ -2,6 +2,7 @@ ifneq ($(CONFIG_ARCH_QTI_VM), y)
 ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
 
 dtbo-$(CONFIG_LEAP_DTB) += display/sun-sde-display-leap-evb-overlay.dtbo
+dtbo-$(CONFIG_LHOTSE_DTB) += display/sun-sde-display-lhotse-evt-overlay.dtbo
 
 else
 
