@@ -394,17 +394,17 @@
 					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
 					39 00 00 00 00 00 01 39
 					];
-				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-switch-out-commands = [
 					39 00 00 00 00 00 01 38
 					];
-				qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-backlight-commands = [
 					39 00 00 00 00 00 08 A9 01 00 51 04 05 05 54
 					];
-				qcom,cmd-mode-backlight-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
 
 			};
 		};
