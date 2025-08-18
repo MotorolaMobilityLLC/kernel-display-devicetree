@@ -291,6 +291,8 @@
 
 	qti,smmu-proxy-cb-id = <QTI_SMMU_PROXY_DISPLAY_CB>;
 
+	qcom,sde-soccp-controller = <&soccp_pas>;
+
 	/* data and reg bus scale settings */
 	interconnects = <&mmss_noc MASTER_MDP &gem_noc SLAVE_LLCC>,
 		<&mc_virt MASTER_LLCC &mc_virt SLAVE_EBI1>,
