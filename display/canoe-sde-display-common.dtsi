@@ -82,7 +82,7 @@
 		qcom_panel_supply_entry_1: qcom,panel-supply-entry@1 {
 			reg = <1>;
 			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <1000000>;
+			qcom,supply-min-voltage = <1045000>;
 			qcom,supply-max-voltage = <1100000>;
 			qcom,supply-enable-load = <220000>;
 			qcom,supply-disable-load = <3>;
@@ -478,6 +478,21 @@
 
 	qcom_mdss_dsi_display_timings_320: qcom,mdss-dsi-display-timings {
 		timing_0_321: timing@0 {
+			qcom,mdss-esync-hsync-milli-pulse-width = <500>;
+			qcom,mdss-esync-emsync-fps = <120>;
+			qcom,mdss-esync-emsync-milli-pulse-width = <500>;
+			qcom,dsi-qsync-mode-avr-step-fps = <120>;
+			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 18 0A
+					0A 09 02 04 00 1E 0F];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+
+		timing_1_322: timing@1 {
+			qcom,mdss-esync-hsync-milli-pulse-width = <500>;
+			qcom,mdss-esync-emsync-fps = <360>;
+			qcom,mdss-esync-emsync-milli-pulse-width = <500>;
+			qcom,dsi-qsync-mode-avr-step-fps = <360>;
 			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 18 0A
 					0A 09 02 04 00 1E 0F];
 			qcom,display-topology = <2 2 1>;
@@ -1187,6 +1202,14 @@
 		timing_19: timing@19 { /* WQHD 165FPS cmd mode*/
 			qcom,mdss-dsi-panel-phy-timings = [00 39 0e 0e 17 14 0e
 				0e 0e 02 04 00 2c 11];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,qsync-mode-min-refresh-rate = <30>;
+		};
+
+		timing_20: timing@20 {
+			qcom,mdss-dsi-panel-phy-timings = [00 3d 0f 0f 19 15 0f
+				10 0e 02 04 00 2f 13];
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
 			qcom,qsync-mode-min-refresh-rate = <30>;

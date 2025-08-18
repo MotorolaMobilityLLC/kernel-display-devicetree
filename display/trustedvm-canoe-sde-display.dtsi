@@ -23,6 +23,10 @@
 			"pll_byte_clk1", "pll_dsi_clk1";
 };
 
+&dsi_nt37802_amoled_video_psr_vhm {
+	qcom,hwfence_sw_override_always;
+};
+
 &mdss_mdp {
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec>;
 };
