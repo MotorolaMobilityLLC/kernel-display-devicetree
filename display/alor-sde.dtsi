@@ -68,7 +68,7 @@
 		qcom,ext-disp = <&ext_disp>;
 		usb-controller = <&usb0>;
 		qcom,altmode-dev = <&altmode 0>;
-		qcom,dp-aux-switch = <&redriver_mmi>;
+		qcom,dp-aux-switch = <&wcd_usbss>;
 
 		reg =   <0x0 0x9ad2000 0x0 0x10c>,
 			<0x0 0x9ad2200 0x0 0x0c8>,
