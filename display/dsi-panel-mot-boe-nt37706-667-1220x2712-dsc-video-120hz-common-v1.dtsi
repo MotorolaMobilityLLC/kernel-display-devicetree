@@ -377,11 +377,6 @@
 					];
 				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 
-				qcom,video-mode-switch-in-commands = [39 00 00 00 00 00 01 38];
-				qcom,video-mode-switch-in-commands-state = "dsi_hs_mode";
-				qcom,video-mode-switch-out-commands = [39 00 00 00 00 00 01 39];
-				qcom,video-mode-switch-out-commands-state = "dsi_hs_mode";
-
 				qcom,cmd-mode-switch-in-commands = [
 					//CMD IDLE setting
 					39 00 00 40 00 00 06 F0 55 AA 52 08 00
@@ -437,6 +432,8 @@
 					39 00 00 00 00 00 06 F0 55 AA 52 08 04
 					39 00 00 00 00 00 02 6F 08
 					39 00 00 00 00 00 02 B5 00
+
+					39 00 00 00 00 00 03 51 19 1a
 					];
 				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
 
