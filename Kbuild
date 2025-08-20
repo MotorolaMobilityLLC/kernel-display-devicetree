@@ -2,7 +2,7 @@ ifneq ($(CONFIG_ARCH_QTI_VM), y)
 ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
 
 dtbo-$(CONFIG_VANTG_DTB) += display/canoe-sde-display-vantg-evb-overlay.dtbo
-dtbo-$(CONFIG_BLANC_DTB) += display/canoe-sde-display-blanc-evb-overlay.dtbo
+dtbo-$(CONFIG_BLANC_DTB) += display/alor-sde-display-blanc-evb-overlay.dtbo
 dtbo-$(CONFIG_VANTAGE_DTB) += display/alor-sde-display-vantage-dvt1b-overlay.dtbo
 
 else
