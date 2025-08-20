@@ -479,10 +479,10 @@
 	status = "ok";
 };
 
-/*&qupv3_se19_spi {
+&qupv3_se4_spi {
 	goodix-berlin@0 {
 		panel = <&mot_boe_ili97680A_678_1264x2780_dsc_cmd_v0
 		&mot_boe_ili97680A_678_1264x2780_dsc_cmd_v1
 		&mot_boe_ili97680A_678_1264x2780_dsc_cmd_v2>;
 	};
-}*/
+};
