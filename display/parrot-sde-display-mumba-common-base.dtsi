@@ -8,6 +8,7 @@
 #include <dt-bindings/clock/qcom,dispcc-parrot.h>
 #include "dsi-panel-mot-boe-icnl9922c-672-1080x2400-dsc-vid-120hz_mumbai.dtsi"
 #include "dsi-panel-mot-csot-icnl9922c-672-1080x2400-dsc-vid-120hz_mumbai.dtsi"
+#include "dsi-panel-mot-txd-ili7807s-672-1080x2400-dsc-vid-120hz_mumbai.dtsi"
 
 &pm6150l_gpios {
 	display_panel_supply_ctrl {
@@ -321,6 +322,65 @@
 
 };
 
+&mot_txd_ili7807s_672_1080x2400_dsc_vid_120hz_mumbai {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_i2c";
+	//qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-min-level = <9>;
+	qcom,mdss-dsi-bl-max-level = <2047>;
+	qcom,mdss-brightness-max-level = <2047>;
+	qcom,mdss-dsi-bl-default-level = <1251>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+	qcom,platform-te-gpio = <&tlmm 99 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,platform-reset-gpio-always-on;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,tp_state_check_enable;
+	qcom,mdss-dsi-lp11-init;
+	qcom,platform-need-execute-shutdown;
+
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,dsi-supported-dfps-list = <120 90 60 30>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
+
+	qcom,mdss-dsi-cabc-mv-command = [
+			39 00 00 40 00 00 04 FF 78 07 00
+			39 00 00 00 00 00 02 55 03
+			];
+	qcom,mdss-dsi-cabc-mv-command-state =  "dsi_hs_mode";
+	qcom,mdss-dsi-cabc-ui-command = [
+			39 00 00 40 00 00 04 FF 78 07 00
+			39 00 00 00 00 00 02 55 01
+			];
+	qcom,mdss-dsi-cabc-ui-command-state =  "dsi_hs_mode";
+	qcom,mdss-dsi-cabc-dis-command = [
+			39 00 00 40 00 00 04 FF 78 07 00
+			39 00 00 00 00 00 02 55 00
+			];
+	qcom,mdss-dsi-cabc-dis-command-state =  "dsi_hs_mode";
+
+	qcom,esd-check-enabled;
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			/*120HZ timing*/
+			qcom,mdss-dsi-panel-phy-timings = [00 1a 06 06 16 14 07
+				06 07 02 04 00 16 0b];
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+
+};
+
 &qupv3_se2_i2c {
 	status = "ok";
 
@@ -385,5 +445,8 @@
 	chipone_tddi@0{
 		panel = <&mot_boe_icnl9922c_672_1080x2400_dsc_vid_120hz_mumbai
 		         &mot_csot_icnl9922c_672_1080x2400_dsc_vid_120hz_mumbai>;
+	};
+	ilitek@1{
+		panel = <&mot_txd_ili7807s_672_1080x2400_dsc_vid_120hz_mumbai>;
 	};
 };
