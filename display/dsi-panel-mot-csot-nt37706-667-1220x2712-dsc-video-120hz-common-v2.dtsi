@@ -69,6 +69,19 @@
 		qcom,mdss-dsi-panel-AOD-bl-mid = <5292>;   //0x14AC, 5-160nit
 		qcom,mdss-dsi-panel-AOD-bl-hig = <16380>;   //0x3FFC, >160nit
 
+		qcom,apl-enabled;
+		qcom,mdss-dsi-panel-apl-with-backlight;
+		qcom,mdss-dsi-panel-apl-bl-pos = <13>;
+		qcom,mdss-dsi-panel-apl-reg = <0xA9>;
+		qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15999>;
+		qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
+		qcom,mdss-dsi-panel-apl-on-command = [
+			39 00 00 00 00 00 16 A9 01 00 5F 00 01 00 01 01 00 51 00 01 3E 80 01 00 51 04 05 3F FC
+			];
+		qcom,mdss-dsi-panel-apl-off-command = [
+			39 00 00 00 00 00 16 A9 01 00 5F 00 01 00 00 01 00 51 00 01 3E 79 01 00 51 04 05 3F FC
+			];
+
 		qcom,mdss-dsi-dc-off-command = [
 			39 00 00 40 00 00 02 6F 01
 			39 00 00 40 00 00 02 8B 00
@@ -85,8 +98,8 @@
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-			39 00 00 40 00 00 03 51 3F FC
-			39 00 00 00 00 00 03 B8 00 00];
+			39 00 00 00 00 00 16 A9 01 00 5F 00 01 00 01 01 00 51 00 01 3F FC 01 00 51 04 05 3F FC
+			];
 		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-off-command = [
 				39 00 00 00 00 00 2A A9 02 00 C0 2E 2F 62 30 02 00 C0 30 33 07 54 00 99 02 00 C7 01 01 01 01 00 5F 00 01 00 00 01 00 8B 00 00 00 01 00 87 00 00 20];
