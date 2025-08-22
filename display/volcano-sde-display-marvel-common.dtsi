@@ -88,6 +88,35 @@
 	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 AC];
 	qcom,mdss-dsi-panel-cellid-command-state = "dsi_lp_mode";
 
+	qcom,check_pcd;
+	qcom,pcd-reg-read-enabled;
+	qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
+	qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
+	qcom,mdss-dsi-panel-pcd-reg-command = [06 01 00 01 00 00 01 D0];
+
+	// only parse for cmd panel
+	qcom,mdss-dsi-te-pin-select = <1>;
+	qcom,mdss-dsi-te-dcs-command = <1>;
+	qcom,mdss-dsi-te-using-te-pin;
+	qcom,mdss-dsi-te-check-enable;
+
+	//AOD: config switch mode
+	qcom,mdss-dsi-panel-mode-switch;
+	//qcom,poms-align-panel-vsync;
+	qcom,dynamic-mode-switch-enabled;
+	//qcom,dynamic-mode-switch-type = "dynamic-switch-immediate";
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+	qcom,mdss-dsi-panel-AOD-command-resend;
+
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <1364>;   //0x0554, <5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>;   //0x14AC, 5-160nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>;   //0x3FFC, >160nit
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
