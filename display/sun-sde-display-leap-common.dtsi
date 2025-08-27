@@ -11,6 +11,7 @@
 #include "dsi-panel-mot-csot-nt37707-697-1224x2992-dsc-cmd-common_v3.dtsi"
 #include "dsi-panel-mot-csot-nt37707-697-1224x2992-dsc-cmd-common_v4.dtsi"
 #include "dsi-panel-mot-csot-nt37707-697-1224x2992-dsc-cmd-common_v5.dtsi"
+#include "dsi-panel-mot-csot-nt37707A-697-1224x2992-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v2.dtsi"
 #include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v3.dtsi"
 #include "dsi-panel-mot-csot-nt37707-1080x1272-dsc-cmd-common-cli_v4.dtsi"
@@ -1026,6 +1027,148 @@
 	};
 };
 
+&mot_csot_nt37707A_697_1224x2992_dsc_cmd_v1 {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_main>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <420>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
+	qcom,mdss-dsi-bl-default-level = <8190>;
+	qcom,mdss-brightness-max-level = <15584>;
+	qcom,platform-reset-gpio = <&tlmm 98 0>;
+	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <36>;
+	qcom,mdss-dsi-panel-cellid-offset = <13>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 AC];
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <20000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <12000>;
+	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 00 00 00 03 5F 00 01];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 00 00 00 03 5F 00 00];
+	qcom,partition-refreshrate-enabled;
+	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
+	//qcom,ulps-enabled;
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 03 5F 00 00
+		39 00 00 00 00 00 03 51 2C 50
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 03 5F 00 01
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-display-timings {
+		timing@0 { //120
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
+		};
+		timing@1 { //90
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <777000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 1B 07 06 16 21 07
+							07 07 02 04 00 17 0C];
+		};
+		timing@2 { //60
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <518000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1E 05
+							05 06 02 04 00 12 0A];
+		};
+		timing@3 { //30
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
+		};
+		timing@4 { //24
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
+		};
+		timing@5 { //10 independent
+			qcom,framerate-group-special-idle-10hz;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
+		};
+		timing@6 { //1 independent
+			qcom,framerate-group-special-idle-1hz;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <1036000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 22 09 09 19 18 09
+							09 09 02 04 00 1D 0E];
+		};
+		timing@7 { //165
+			qcom,framerate-group-no-duplicated;
+			//qcom,partial-update-enabled = "single_roi";
+			//qcom,panel-roi-alignment = <1224 160 1224 160 1224 160>;
+			qcom,mdss-dsi-panel-clockrate = <1424000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 2E 0C 0C 1D 1B 0C
+							0D 0B 02 04 00 25 11];
+		};
+	};
+};
+
 &mot_csot_nt37707_1080x1272_dsc_cmd_cli_v2 {
 	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 
@@ -1590,7 +1733,8 @@
 			&mot_csot_nt37707_697_1224x2992_dsc_cmd_v2
 			&mot_csot_nt37707_697_1224x2992_dsc_cmd_v3
 			&mot_csot_nt37707_697_1224x2992_dsc_cmd_v4
-			&mot_csot_nt37707_697_1224x2992_dsc_cmd_v5>;
+			&mot_csot_nt37707_697_1224x2992_dsc_cmd_v5
+			&mot_csot_nt37707A_697_1224x2992_dsc_cmd_v1>;
 	};
 };
 
