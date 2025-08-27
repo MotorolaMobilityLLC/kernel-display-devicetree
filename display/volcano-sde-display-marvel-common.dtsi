@@ -123,7 +123,7 @@
 };
 
 &qupv3_se0_spi {
-	goodix-berlin@0 {
+	goodix-berlin-mmi@0 {
 		panel = <&mot_boe_nt37713_678_1272x2772_dsc_vid>;
 	};
 };
