@@ -92,6 +92,9 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -268,6 +271,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -280,6 +286,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-lp2-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -296,6 +305,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -328,6 +340,9 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -477,6 +492,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -489,6 +507,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-lp2-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -505,6 +526,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -537,6 +561,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 02 53 20
@@ -721,6 +748,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 02 53 20
@@ -737,6 +767,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-lp2-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -753,6 +786,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 02 53 20
@@ -790,6 +826,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 03
 			39 00 00 40 00 00 02 53 28
@@ -953,6 +992,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 03
 			39 00 00 40 00 00 02 53 28
@@ -972,6 +1014,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-lp2-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -988,6 +1033,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 03
 			39 00 00 40 00 00 02 53 28
@@ -1028,6 +1076,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 04
 			39 00 00 40 00 00 02 53 28
@@ -1191,6 +1242,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 04
 			39 00 00 40 00 00 02 53 28
@@ -1210,6 +1264,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-lp2-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -1226,6 +1283,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 04
 			39 00 00 40 00 00 02 53 28
@@ -1266,6 +1326,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -1444,6 +1507,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-mdp-transfer-time-us = <7933>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -1621,6 +1687,9 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -1770,6 +1839,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -1782,6 +1854,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-lp2-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE = 1
 			39 00 00 40 00 00 02 53 20 //DBV Diming Enable
@@ -1798,6 +1873,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 00 //exit MAFR
 			39 00 00 40 00 00 02 6F 02
 			39 00 00 40 00 00 02 8C 10
 			39 00 00 40 00 00 02 8C 00
@@ -1808,6 +1886,212 @@ qcom,mdss-dsi-display-timings {
 		];
 		qcom,mdss-dsi-nolp-command-state =
 			"dsi_lp_mode";
+	};
+
+	timing@8{
+		qcom,mdss-dsi-cmd-mode;
+		/* Actually 10-60-10 hz*/
+		qcom,mdss-dsi-panel-framerate = <60>;
+		qcom,mdss-dsi-panel-width = <1224>;
+		qcom,mdss-dsi-panel-height = <2992>;
+		qcom,mdss-dsi-h-front-porch = <20>;
+		qcom,mdss-dsi-h-back-porch = <16>;
+		qcom,mdss-dsi-h-pulse-width = <16>;
+		qcom,mdss-dsi-h-sync-skew = <0>;
+		qcom,mdss-dsi-h-sync-pulse = <0>;
+		qcom,mdss-dsi-v-back-porch = <2>;
+		qcom,mdss-dsi-v-front-porch = <2>;
+		qcom,mdss-dsi-v-pulse-width = <2>;
+		qcom,mdss-dsi-h-left-border = <0>;
+		qcom,mdss-dsi-h-right-border = <0>;
+		qcom,mdss-dsi-v-top-border = <0>;
+		qcom,mdss-dsi-v-bottom-border = <0>;
+	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
+		qcom,mdss-dsi-timing-switch-command = [
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 01
+			39 00 00 40 00 00 02 5A 00
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 2F 01
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 40 00 00 05 6B 03 E8 07 D0
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 0f 6B 01 05 01 01 05 01 01 05 01 01 05 01 01 05
+			39 00 00 40 00 00 02 6F 20
+			39 00 00 40 00 00 0f 6B 01 00 01 01 00 01 01 00 01 01 00 01 01 00
+			39 00 00 40 00 00 02 6F 30
+			39 00 00 40 00 00 0f 6B 01 05 01 01 05 01 01 05 01 01 05 01 01 05
+			39 00 00 00 11 00 02 6B 01
+		];
+		qcom,mdss-dsi-on-command = [
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 05 C6 33 A3 33 33
+			39 00 00 40 00 00 02 6F 0D
+			39 00 00 40 00 00 02 C2 1F
+			39 00 00 40 00 00 06 F0 55 AA 52 08 01
+			39 00 00 40 00 00 02 6F 2F
+			39 00 00 40 00 00 02 C3 44
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F 0D
+			39 00 00 40 00 00 02 C2 1A
+			39 00 00 40 00 00 06 F0 55 AA 52 08 04
+			39 00 00 40 00 00 02 B1 00
+			39 00 00 40 00 00 02 6F 0A
+			39 00 00 40 00 00 02 B1 20
+			39 00 00 40 00 00 02 6F 07
+			39 00 00 40 00 00 04 B1 00 00 00
+			39 00 00 40 00 00 02 6F 0B
+			39 00 00 40 00 00 02 B1 00
+			39 00 00 40 00 00 02 6F 06
+			39 00 00 40 00 00 02 8D 05
+			39 00 00 40 00 00 02 5A 01
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F 31
+			39 00 00 40 00 00 04 C0 00 23 00
+			39 00 00 40 00 00 02 6F 35
+			39 00 00 40 00 00 04 C0 44 41 44
+			39 00 00 40 00 00 06 F0 55 AA 52 08 04
+			39 00 00 40 00 00 02 C0 20
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 21
+			39 00 00 40 00 00 02 F5 03
+			39 00 00 40 00 00 02 6F 43
+			39 00 00 40 00 00 19 F5 01 02 01 04 00 01 02 00 00 00 43 02 00 00 10 00 00 10 05 00 11 31 12 11
+			39 00 00 40 00 00 02 6F 1D
+			39 00 00 40 00 00 04 FB 64 07 80
+			39 00 00 40 00 00 02 6F 07
+			39 00 00 40 00 00 02 FC 04
+			39 00 00 40 00 00 02 6F 30
+			39 00 00 40 00 00 02 FE 20
+			39 00 00 40 00 00 05 FF AA 55 A5 84
+			39 00 00 40 00 00 02 6F 9A
+			39 00 00 40 00 00 02 F3 0F
+			39 00 00 40 00 00 02 6F 9F
+			39 00 00 40 00 00 02 F4 00
+			39 00 00 40 00 00 02 6F E9
+			39 00 00 40 00 00 02 F4 03
+			39 00 00 40 00 00 02 6F 28
+			39 00 00 40 00 00 02 F8 00
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 0F
+			39 00 00 40 00 00 02 F5 0E
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F 78
+			39 00 00 40 00 00 18 B0 10 00 2A 00 C2 01 DA 03 7C 05 B1 08 80 0B EE 0F FF 05 55 05 56 05 55
+			39 00 00 40 00 00 02 6F 6F
+			39 00 00 40 00 00 07 B0 02 64 04 C8 02 64
+			39 00 00 40 00 00 06 F0 55 AA 52 08 08
+			39 00 00 40 00 00 17 C1 8D FF DD FF FF DD FF FF DD FF FF DD FF FF EE FF FF AA 7C 1E 0E FF
+			39 00 00 40 00 00 02 6F 23
+			39 00 00 40 00 00 15 C1 0D FF DD FF FF DD FF FF DD FF FF DD FF FF EE FF FF AA 7C 1E
+			39 00 00 40 00 00 02 6F 37
+			39 00 00 40 00 00 15 C1 0D FF DD FF FF DD FF FF DD FF FF DD FF FF EE FF FF FF FF FF
+			39 00 00 40 00 00 02 6F 4B
+			39 00 00 40 00 00 15 C1 0D FF DD FF FF DD FF FF DD FF FF DD FF FF EE FF FF AA 7C 1E
+			39 00 00 40 00 00 02 6F 5F
+			39 00 00 40 00 00 15 C1 0D FF DD FF FF DD FF FF DD FF FF DD FF FF EE FF FF FF FF FF
+			39 00 00 40 00 00 02 6F 73
+			39 00 00 40 00 00 15 C1 0D FF DD FF FF DD FF FF DD FF FF DD FF FF EE FF FF AA 7C 1E
+			39 00 00 40 00 00 11 BA 00 04 03 A4 03 A4 05 B8 05 B8 07 D8 07 D8 0A 84
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 11 BA 0A 84 0D C3 0D C3 0D C4 0D C4 1D 24 1D 24 2C 50
+			39 00 00 40 00 00 02 6F 20
+			39 00 00 40 00 00 0d BA 2C 50 36 E8 36 E8 3A FE 3A FE 3F FC
+			39 00 00 40 00 00 02 6F 20
+			39 00 00 40 00 00 04 C1 04 52 CD
+			39 00 00 40 00 00 02 6F 1D
+			39 00 00 40 00 00 04 C1 00 80 FF
+			39 00 00 40 00 00 02 6F 07
+			39 00 00 40 00 00 02 51 00
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 F9 04
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 0D
+			39 00 00 40 00 00 02 FB 80
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 02 FB 40
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 0C
+			39 00 00 40 00 00 02 FD 08
+			39 00 00 40 00 00 05 FF AA 55 A5 81
+			39 00 00 40 00 00 02 6F 05
+			39 00 00 40 00 00 03 FE 3C 3C
+			39 00 00 40 00 00 05 FF AA 55 A5 80
+			39 00 00 40 00 00 02 6F 0A
+			39 00 00 40 00 00 06 F6 70 70 70 70 70
+			39 00 00 40 00 00 05 2A 00 00 04 C7
+			39 00 00 40 00 00 05 2B 00 00 0B AF
+			39 00 00 40 00 00 02 2F 02
+			39 00 00 40 00 00 03 5F 00 00
+			39 00 00 40 00 00 02 35 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 02 35 00
+			39 00 00 40 00 00 03 51 00 00
+			39 00 00 40 00 00 02 6F 04
+			39 00 00 40 00 00 03 51 00 00
+			39 00 00 40 00 00 02 53 20
+			39 00 00 40 00 00 02 90 03
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 40 00 00 02 90 43
+			39 00 00 40 00 00 13 91 AB 28 00 10 C2 00 02 32 01 9C 00 08 06 67 05 9C 10 F0
+                	05 00 00 00 78 00 01 11
+			05 00 00 00 00 00 01 29];	/* display on */
+		qcom,mdss-dsi-off-command = [
+			05 00 00 00 00 00 01 28		/* display_off */
+			05 00 00 00 64 00 01 10];	/* enter sleep mode */
+
+		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-timing-switch-command-state =
+			"dsi_lp_mode";
+		qcom,compression-mode = "dsc";
+		/* Why QCOM doesn't use this, even it used 2 encoder
+		 * as for that dsi_sw43404_amoled_cmd, for ex */
+		/* qcom,mdss-dsc-encoders = <2>; */
+		qcom,mdss-dsc-version = <0x11>;
+		qcom,mdss-dsc-slice-height = <16>;
+		qcom,mdss-dsc-slice-width = <612>;
+		qcom,mdss-dsc-slice-per-pkt = <2>;
+		qcom,mdss-dsc-bit-per-component = <10>;
+		qcom,mdss-dsc-bit-per-pixel = <8>;
+		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsi-partition-refreshrate-off-command = [
+			39 00 00 00 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 00 00 00 02 B2 00
+		];
+
+		qcom,mdss-dsi-partition-refreshrate-off-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-partition-refreshrate-on-command = [
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 06 F0 55 AA 52 08 00
+			39 00 00 40 00 00 02 6F CC
+			39 00 00 40 00 00 02 B2 01
+			39 00 00 40 00 00 02 5A 00
+			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 2F 01
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 40 00 00 05 6B 03 E8 07 D0
+			39 00 00 40 00 00 02 6F 10
+			39 00 00 40 00 00 0f 6B 01 05 01 01 05 01 01 05 01 01 05 01 01 05
+			39 00 00 40 00 00 02 6F 20
+			39 00 00 40 00 00 0f 6B 01 00 01 01 00 01 01 00 01 01 00 01 01 00
+			39 00 00 40 00 00 02 6F 30
+			39 00 00 40 00 00 0f 6B 01 05 01 01 05 01 01 05 01 01 05 01 01 05
+			39 00 00 00 11 00 02 6B 01
+		];
+		qcom,mdss-dsi-partition-refreshrate-on-command-state = "dsi_hs_mode";
+
 	};
 };
 
