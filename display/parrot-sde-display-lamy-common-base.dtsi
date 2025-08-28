@@ -275,9 +275,9 @@
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 66];
-	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
-	qcom,mdss-dsi-panel-status-value = <0 0 0>;
-	qcom,mdss-dsi-panel-status-read-length = <3>;
+	qcom,mdss-dsi-panel-status-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-panel-status-value = <0 0>;
+	qcom,mdss-dsi-panel-status-read-length = <2>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
