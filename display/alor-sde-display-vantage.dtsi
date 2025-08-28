@@ -4,7 +4,7 @@
  */
 
 #include "alor-sde-display.dtsi"
-#include "dsi-panel-mot-dummy-qhd-video.dtsi"
+#include "dsi-panel-mot-dummy-qhd-video-dsi1.dtsi"
 #include "dsi-panel-mot-boe-ili97680A-678-1264x2780-dsc-cmd-common_vantage_v1.dtsi"
 #include "dsi-panel-mot-boe-ili97680A-678-1264x2780-dsc-cmd-common_vantage_v2.dtsi"
 #include "dsi-panel-mot-boe-ili97680A-678-1264x2780-dsc-cmd-common_vantage_v3.dtsi"
@@ -568,6 +568,9 @@
 };
 
 &mot_dummy_vid_qhd {
+	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,dsi-ctrl-num = <1>;
+	qcom,dsi-phy-num = <1>;
 	qcom,platform-reset-gpio = <&tlmm 146 0>;
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
