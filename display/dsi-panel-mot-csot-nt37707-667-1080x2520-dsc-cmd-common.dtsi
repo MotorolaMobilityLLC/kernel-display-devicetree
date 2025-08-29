@@ -14,7 +14,7 @@ mot_csot_nt37707_667_1080x2520_dsc_cmd: qcom,mdss_dsi_mot_csot_nt37707_667_1080x
 compatible = "qcom,mdss-dsi-panel";
 qcom,mdss-dsi-panel-name = "mipi_mot_cmd_csot_1080p_dsc_667";
 qcom,mdss-dsi-panel-supplier = "csot";
-qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
+qcom,mdss-dsi-panel-type = "dsi_video_mode";
 qcom,mdss-dsi-virtual-channel-id = <0>;
 qcom,mdss-dsi-stream = <0>;
 qcom,mdss-pan-physical-width-dimension = <69>;
@@ -159,6 +159,8 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 00 00 00 02 6F 02
 		39 00 00 00 00 00 03 C7 00 00
 		39 00 00 00 00 00 02 26 00
+		39 00 00 00 00 00 04 17 03 00 20
+		39 00 00 00 00 00 05 3B 00 1C 00 2C
                 05 00 00 00 78 00 01 11
                 05 00 00 00 00 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
