@@ -83,15 +83,12 @@
 		qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
-				39 00 00 40 00 00 06 F0 55 AA 52 08 00
-				39 00 00 40 00 00 02 6F 31
-				39 00 00 40 00 00 02 DF 00
 				39 00 00 00 00 00 27 A9 02 08 B8 4A 4B 07 5F 01 00 87 00 00 05 02 00 B2 1E 1E 00 02 00 DF 00 00 01 02 00 DF 32 32 05 01 00 51 09 0A 8D C0
 				];
 		qcom,mdss-dsi-hbm-fod-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-panel-local-hbm-bl-cmds-enabled;
-		qcom,mdss-dsi-panel-local-hbm-bl-cmds-line-diff = <3>;  //line in mdss-dsi-hbm-fod-on-command to be replaced with new bl-cmds-<num>
+		qcom,mdss-dsi-panel-local-hbm-bl-cmds-line-diff = <0>;  //line in mdss-dsi-hbm-fod-on-command to be replaced with new bl-cmds-<num>
 		qcom,mdss-dsi-panel-local-hbm-bl-thresholds = <3520>;   //  <3520 6000>
 		qcom,mdss-dsi-panel-local-hbm-bl-cmds-count = <2>;	//  <3>
 		qcom,mdss-dsi-panel-local-hbm-bl-cmds-len = <0x27>;
@@ -202,6 +199,10 @@
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 00 00
 
+					39 00 00 40 00 00 06 F0 55 AA 52 08 00
+					39 00 00 40 00 00 02 6F 31
+					39 00 00 40 00 00 02 DF 03
+
 					//AOD info
 					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
 
@@ -308,6 +309,10 @@
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 2C B8
 
+					39 00 00 40 00 00 06 F0 55 AA 52 08 00
+					39 00 00 40 00 00 02 6F 31
+					39 00 00 40 00 00 02 DF 03
+
 					//CMD IDLE setting
 					39 00 00 00 00 00 06 F0 55 AA 52 08 00
 					39 00 00 00 00 00 02 C0 30
@@ -355,15 +360,15 @@
 				qcom,mdss-dsc-block-prediction-enable;
 
 				qcom,mdss-dsi-dfps-60-command = [
-						39 00 00 00 00 00 02 2F 04];
+						39 00 00 00 00 00 0D A9 02 00 DF 31 31 03 01 00 2F 00 00 04];
 				qcom,mdss-dsi-dfps-60-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-90-command = [
-						39 00 00 00 00 00 02 2F 03];
+						39 00 00 00 00 00 0D A9 02 00 DF 31 31 02 01 00 2F 00 00 03];
 				qcom,mdss-dsi-dfps-90-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-120-command = [
-						39 00 00 00 00 00 02 2F 02];
+						39 00 00 00 00 00 0D A9 02 00 DF 31 31 00 01 00 2F 00 00 02];
 				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-pcd-check-enable-command = [
