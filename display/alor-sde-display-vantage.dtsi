@@ -8,7 +8,7 @@
 #include "dsi-panel-mot-boe-ili97680A-678-1264x2780-dsc-cmd-common_vantage_v1.dtsi"
 #include "dsi-panel-mot-boe-ili97680A-678-1264x2780-dsc-cmd-common_vantage_v2.dtsi"
 #include "dsi-panel-mot-boe-ili97680A-678-1264x2780-dsc-cmd-common_vantage_v3.dtsi"
-/*&soc {
+&soc {
 	dsi_panel_pwr_supply_urus: dsi_panel_pwr_supply_urus {
 		#address-cells = <1>;
 		#size-cells = <0>;
@@ -52,7 +52,6 @@
         };
 	};
 };
-
 &L11B {
        regulator-min-microvolt = <1200000>;
        regulator-max-microvolt = <1200000>;
@@ -67,7 +66,8 @@
        regulator-min-microvolt = <3100000>;
        regulator-max-microvolt = <3100000>;
        qcom,init-voltage = <3100000>;
-};*/
+};
+
 &sde_dp {
 	mmi,aux-switch-enable-gpio = <&tlmm 119 0>;
 	mmi,aux-switch-flip-gpio = <&tlmm 120 0>;
@@ -81,7 +81,7 @@
 	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 	qcom,dsi-ctrl-num = <1>;
 	qcom,dsi-phy-num = <1>;
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_urus>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
@@ -241,7 +241,7 @@
 	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 	qcom,dsi-ctrl-num = <1>;
 	qcom,dsi-phy-num = <1>;
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_urus>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
@@ -402,7 +402,7 @@
 	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
 	qcom,dsi-ctrl-num = <1>;
 	qcom,dsi-phy-num = <1>;
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_urus>;
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
@@ -558,6 +558,7 @@
 		};
 	};
 };
+
 &mot_dummy_vid_qhd {
        qcom,mdss-dsi-display-timings {
                 timing@0{
