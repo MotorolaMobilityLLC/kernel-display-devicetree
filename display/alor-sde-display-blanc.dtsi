@@ -8,6 +8,32 @@
 #include "dsi-panel-mot-csot-nt37900-809-2484x2232-dsc-cmd-common.dtsi"
 #include "dsi-panel-mot-csot-nt37707-667-1080x2520-dsc-cmd-common.dtsi"
 
+&sde_dsi1_active {
+	mux_147: mux {
+		pins = "gpio88";
+		function = "gpio";
+	};
+
+	config_148: config {
+		pins = "gpio88";
+		drive-strength = <8>;   /* 8 mA */
+		bias-disable = <0>;   /* no pull */
+	};
+};
+
+&sde_dsi1_suspend {
+	mux_149: mux {
+		pins = "gpio88";
+		function = "gpio";
+	};
+
+	config_150: config {
+		pins = "gpio88";
+		drive-strength = <2>;   /* 2 mA */
+		bias-pull-down;         /* PULL DOWN */
+	};
+};
+
 &soc {
 	dsi_panel_pwr_supply_main: dsi_panel_pwr_supply_main {
 		#address-cells = <1>;
@@ -174,12 +200,21 @@
 	vddio-supply = <&primary_panel_vddio>;
 	vdd-supply = <&primary_panel_vdd>;
 	vci-supply = <&primary_panel_vci>;
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi_active &sde_te_active>;
+	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
+	/delete-property/ pinctrl-2;
 };
 
 &sde_dsi1 {
 	vddio-supply = <&sec_panel_vddio>;
 	vdd-supply = <&sec_panel_vdd>;
 	vci-supply = <&sec_panel_vci>;
+
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi1_active &sde_te1_active>;
+	pinctrl-1 = <&sde_dsi1_suspend &sde_te1_suspend>;
+	/delete-property/ pinctrl-2;
 };
 
 &mdss_mdp {

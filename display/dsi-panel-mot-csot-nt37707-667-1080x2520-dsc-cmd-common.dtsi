@@ -182,7 +182,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
-		//qcom,mdss-dsc-novateck-ic;
+		qcom,mdss-dsc-novateck-ic;
 	};
 };
 
