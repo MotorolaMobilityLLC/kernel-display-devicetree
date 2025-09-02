@@ -92,9 +92,15 @@
 
 	qcom,check_pcd;
 	qcom,pcd-reg-read-enabled;
+	qcom,pcd-reg-check-before-read;
 	qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
 	qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
 	qcom,mdss-dsi-panel-pcd-reg-command = [06 01 00 01 00 00 01 D0];
+	qcom,mdss-dsi-panel-pcd-reg-pass-array-size = <4>;
+	qcom,mdss-dsi-panel-pcd-reg-pass-array = <0x80 0x81 0x82 0x83>;
+	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>;
+	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //pcd reg read seq interval per screen on.
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //pcd reg read time interval in minutes.
 
 	// only parse for cmd panel
 	qcom,mdss-dsi-te-pin-select = <1>;
@@ -173,9 +179,15 @@
 
 	qcom,check_pcd;
 	qcom,pcd-reg-read-enabled;
+	qcom,pcd-reg-check-before-read;
 	qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
 	qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
 	qcom,mdss-dsi-panel-pcd-reg-command = [06 01 00 01 00 00 01 D0];
+	qcom,mdss-dsi-panel-pcd-reg-pass-array-size = <4>;
+	qcom,mdss-dsi-panel-pcd-reg-pass-array = <0x80 0x81 0x82 0x83>;
+	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>;
+	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //pcd reg read seq interval per screen on.
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //pcd reg read time interval in minutes.
 
 	// only parse for cmd panel
 	qcom,mdss-dsi-te-pin-select = <1>;
