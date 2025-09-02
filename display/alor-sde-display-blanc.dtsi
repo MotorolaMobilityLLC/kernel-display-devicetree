@@ -191,9 +191,16 @@
 
 	dp_aux_flip_switch: dp_aux_flip {
 		compatible = "dp-aux-flip";
-		aux-switch-enable-gpio = <&tlmm 94 0>;
-		aux-switch-flip-gpio = <&tlmm 87 0>;
+		mmi,aux-switch-enable-gpio = <&tlmm 119 0>;
+		mmi,aux-switch-flip-gpio = <&tlmm 120 0>;
 	};
+};
+
+&sde_dp {
+	status = "ok";
+	mmi,aux-switch-enable-gpio = <&tlmm 119 0>;
+	mmi,aux-switch-flip-gpio = <&tlmm 120 0>;
+	qcom,dp-aux-switch = <&dp_aux_flip_switch>;
 };
 
 &sde_dsi {
@@ -218,7 +225,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp>;
 };
 
 
@@ -350,10 +357,6 @@
 
 &sde_dsi {
 	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
-};
-
-&sde_dp {
-	status = "disabled";
 };
 
 &qupv3_se4_spi {
