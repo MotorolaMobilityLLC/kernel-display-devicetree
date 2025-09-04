@@ -42,9 +42,15 @@
 
 		qcom,check_pcd;
 		qcom,pcd-reg-read-enabled;
+		qcom,pcd-reg-check-before-read;
 		qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
 		qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
 		qcom,mdss-dsi-panel-pcd-reg-command = [06 01 00 01 00 00 01 D0];
+		qcom,mdss-dsi-panel-pcd-reg-pass-min = <0x0>;
+		qcom,mdss-dsi-panel-pcd-reg-pass-max = <0xB4>;
+		qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>; //150ms delay before read pcd reg per IC req
+		qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
+		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
 
 		// only parse for cmd panel
 		qcom,mdss-dsi-te-pin-select = <1>;
