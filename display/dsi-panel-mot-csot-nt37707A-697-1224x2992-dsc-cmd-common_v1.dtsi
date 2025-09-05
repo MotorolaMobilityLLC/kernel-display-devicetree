@@ -116,6 +116,9 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -220,6 +223,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 2F 02
 			39 00 00 40 00 00 03 5F 00 00
 			39 00 00 40 00 00 02 35 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 03 51 00 00
@@ -281,6 +287,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -306,6 +315,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -335,6 +347,9 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -439,6 +454,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 2F 04
 			39 00 00 40 00 00 03 5F 00 00
 			39 00 00 40 00 00 02 35 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 03 51 00 00
@@ -473,6 +491,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -498,6 +519,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -1586,6 +1610,9 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
 		qcom,mdss-dsi-timing-switch-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -1690,7 +1717,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 2F 03
 			39 00 00 40 00 00 03 5F 00 00
 			39 00 00 40 00 00 02 35 00
-			39 00 00 40 00 00 03 51 00 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 03 51 00 00
@@ -1725,6 +1754,9 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
@@ -1750,6 +1782,9 @@ qcom,mdss-dsi-display-timings {
 			"dsi_lp_mode";
 		qcom,mdss-dsi-nolp-command = [
 			39 00 00 40 00 00 02 6B 00
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 8C 10
+			39 00 00 40 00 00 02 8C 00
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00 //TE1=0
 			39 00 00 40 00 00 02 53 20 //DBV Diming Disable
