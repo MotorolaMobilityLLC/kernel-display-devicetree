@@ -52,6 +52,19 @@ qcom,mdss-dsi-panel-peak-brightness = <4200000>;
 
 qcom,mdss-dsi-panel-blackness-level = <3230>;
 
+qcom,check_pcd;
+qcom,pcd-reg-read-enabled;
+qcom,pcd-reg-check-before-read;
+qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
+qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
+qcom,mdss-dsi-panel-pcd-reg-command = [
+		06 01 00 01 00 00 01 C5];
+qcom,mdss-dsi-panel-pcd-reg-pass-min = <0x0>;
+qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x29>;
+qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <0>; //150ms delay before read pcd reg per IC req
+qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
+qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
+
 qcom,mdss-dsi-dc-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 08
 			39 00 00 40 00 00 02 98 02
@@ -132,7 +145,7 @@ qcom,mdss-dsi-dc-on-command = [
 		];
 qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 //qcom,mdss-dsi-nt37705-dc-detect-fps;
-qcom,check_pcd;
+//qcom,check_pcd;
 
 qcom,mdss-dsi-display-timings {
 	timing@0{
@@ -264,6 +277,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@1{
@@ -395,6 +416,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@2{
@@ -526,6 +555,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@3{
@@ -665,6 +702,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@4{
@@ -805,6 +850,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@5{
@@ -945,6 +998,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@6{
@@ -1084,6 +1145,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@7{
@@ -1224,6 +1293,14 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-component = <10>;
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 
 	timing@8{
@@ -1390,6 +1467,14 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 		];
 		qcom,mdss-dsi-qsync-off-commands-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-enable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 03
+			];
+		qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-pcd-check-disable-command = [
+			39 00 00 00 00 00 04 FF 5A A5 00
+			];
+		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 	};
 };
 
