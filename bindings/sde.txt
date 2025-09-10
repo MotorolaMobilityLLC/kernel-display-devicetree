@@ -601,6 +601,8 @@ Optional properties:
 - qcom,sde-dnsc-blur-dither-off:	An array of u32 values with the offset for dither
 				block, from the dnsc-blur-off
 - qcom,sde-dnsc-blur-dither-size:	A u32 value indicates the dither block address range.
+- qcom,sde-enable-hibernation:	A boolean property to to indicate hibernation support is available
+				or not.
 
 Bus Scaling:
 - interconnects                 An array of 4 cell properties with the format of
