@@ -308,6 +308,8 @@
 
 &qupv3_se0_spi {
 	goodix-berlin-mmi@0 {
-		panel = <&mot_boe_nt37713_678_1272x2772_dsc_vid>;
+		panel = <&mot_boe_nt37713_678_1272x2772_dsc_vid
+			      &mot_boe_nt37713_678_1272x2772_dsc_vid_v1
+			      &mot_tm_vtdr6126a_678_1272x2772_dsc_vid>;
 	};
 };
