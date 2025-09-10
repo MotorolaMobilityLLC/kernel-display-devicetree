@@ -55,7 +55,7 @@
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
 	qcom,dsi-supported-dfps-vfp-list = <48 44 996 2892>;
-	qcom,dsi-supported-dfps-hfp-list = <108 16 108 108>;
+	qcom,dsi-supported-dfps-hfp-list = <109 29 109 109>;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
@@ -121,8 +121,8 @@
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
-			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 12 05
-				05 06 02 04 00 12 0A];
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+				0B 0A 02 04 00 21 10];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
