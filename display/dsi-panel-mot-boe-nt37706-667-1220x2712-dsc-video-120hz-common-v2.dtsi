@@ -74,6 +74,19 @@
 		qcom,mdss-dsi-panel-AOD-bl-mid = <11448>;   //0x2CB8, 5-160nit
 		qcom,mdss-dsi-panel-AOD-bl-hig = <16380>;   //0x3FFC, >160nit
 
+		qcom,apl-enabled;
+		qcom,mdss-dsi-panel-apl-with-backlight;
+		qcom,mdss-dsi-panel-apl-bl-pos = <13>;
+		qcom,mdss-dsi-panel-apl-reg = <0xA9>;
+		qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15999>;
+		qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
+		qcom,mdss-dsi-panel-apl-on-command = [
+			39 00 00 00 00 00 16 A9 01 00 5F 00 01 00 01 01 00 51 00 01 3E 80 01 00 51 04 05 3F FC
+			];
+		qcom,mdss-dsi-panel-apl-off-command = [
+			39 00 00 00 00 00 16 A9 01 00 5F 00 01 00 00 01 00 51 00 01 3E 79 01 00 51 04 05 3F FC
+			];
+
 		qcom,mdss-dsi-dc-off-command = [
 			39 00 00 00 00 00 03 8B 00 00];
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
@@ -82,7 +95,8 @@
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-				39 00 00 00 00 00 03 51 3F FF];
+			39 00 00 00 00 00 16 A9 01 00 5F 00 01 00 01 01 00 51 00 01 3F FF 01 00 51 04 05 3F FC
+			];
 		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-off-command = [
 				39 00 00 00 00 00 14 A9 01 00 87 00 00 20 01 00 51 09 0A 00 00 02 00 B2 1E 1E 80];
@@ -196,7 +210,7 @@
 					39 00 00 00 00 00 02 2F 04
 
 					39 00 00 00 00 00 02 35 00
-					39 00 00 00 00 00 03 5F 00 01
+					39 00 00 00 00 00 03 5F 00 00
 
 					39 00 00 00 00 00 03 81 01 19
 
@@ -204,10 +218,6 @@
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 00 00
 					39 00 00 00 00 00 02 57 80
-
-					39 00 00 00 00 00 06 F0 55 AA 52 08 06
-					39 00 00 00 00 00 02 6F 02
-					39 00 00 00 00 00 02 BC 55
 
 					39 00 00 40 00 00 06 F0 55 AA 52 08 00
 					39 00 00 40 00 00 02 6F 31
@@ -311,7 +321,7 @@
 					39 00 00 00 00 00 02 2F 04
 
 					39 00 00 00 00 00 02 35 00
-					39 00 00 00 00 00 03 5F 00 01
+					39 00 00 00 00 00 03 5F 00 00
 
 					39 00 00 00 00 00 03 81 01 19
 
@@ -319,10 +329,6 @@
 					39 00 00 00 00 00 02 6F 04
 					39 00 00 00 00 00 03 51 2C B8
 					39 00 00 00 00 00 02 57 80
-
-					39 00 00 00 00 00 06 F0 55 AA 52 08 06
-					39 00 00 00 00 00 02 6F 02
-					39 00 00 00 00 00 02 BC 55
 
 					39 00 00 40 00 00 06 F0 55 AA 52 08 00
 					39 00 00 40 00 00 02 6F 31
