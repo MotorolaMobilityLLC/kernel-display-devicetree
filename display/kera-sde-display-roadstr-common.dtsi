@@ -383,8 +383,8 @@
 		       timing@0 {
 		               qcom,framerate-group-no-duplicated;
 		               //qcom,mdss-dsi-panel-clockrate = <1095000000>;
-		               qcom,mdss-dsi-panel-phy-timings = [00 20 08 08 18 17 08
-		                       08 08 02 04 00 1B 0D];
+		               qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 24 0A
+		                       0A 09 02 04 00 1E 0F];
 		               qcom,display-topology = <2 2 1>;
 		               qcom,default-topology-index = <0>;
 		       };
@@ -437,8 +437,8 @@
 		       timing@0 {
 		               qcom,framerate-group-no-duplicated;
 		               //qcom,mdss-dsi-panel-clockrate = <1095000000>;
-		               qcom,mdss-dsi-panel-phy-timings = [00 20 08 08 18 17 08
-		                       08 08 02 04 00 1B 0D];
+		               qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 24 0A
+		                       0A 09 02 04 00 1E 0F];
 		               qcom,display-topology = <2 2 1>;
 		               qcom,default-topology-index = <0>;
 		       };
