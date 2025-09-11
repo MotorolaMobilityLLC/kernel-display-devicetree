@@ -37,6 +37,18 @@
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <0 10>, <1 1>, <0 1>, <1 11>;
 
+		qcom,check_pcd;
+		qcom,pcd-reg-read-enabled;
+		qcom,pcd-reg-check-before-read;
+		qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
+		qcom,mdss-dsi-panel-pcd-reg-mask = <0x7F>;
+		qcom,mdss-dsi-panel-pcd-reg-command = [06 01 00 01 00 00 01 D0];
+		qcom,mdss-dsi-panel-pcd-reg-pass-min = <0x10>;
+		qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x56>;
+		qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <50>; //50ms delay before read pcd reg per IC req
+		qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
+		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
+
 		qcom,mdss-dsi-dc-on-command = [
 				39 00 00 40 00 00 02 6F 01
 				39 00 00 00 00 00 02 8B 81];
@@ -146,6 +158,18 @@
 				qcom,mdss-dsi-dfps-120-command = [
 						39 00 00 00 00 00 15 A9 01 00 2F 00 00 01 02 00 DF 38 39 0C F8 02 00 DF 31 32 01 1A];
 				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
+
+				qcom,mdss-dsi-pcd-check-enable-command = [
+						39 00 00 40 00 00 06 F0 55 AA 52 08 01
+						39 00 00 40 00 00 02 6F 01
+						39 00 00 00 00 00 02 D0 80];
+				qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
+
+				qcom,mdss-dsi-pcd-check-disable-command = [
+						39 00 00 40 00 00 06 F0 55 AA 52 08 01
+						39 00 00 40 00 00 02 6F 01
+						39 00 00 00 00 00 02 D0 00];
+				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 			};
 		};
 	};
