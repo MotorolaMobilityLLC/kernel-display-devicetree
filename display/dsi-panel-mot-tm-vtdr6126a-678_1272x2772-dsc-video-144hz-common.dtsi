@@ -56,6 +56,12 @@
 				39 00 00 40 00 00 05 63 10 00 1A 3C
 				39 01 00 00 00 00 02 62 03];
 
+		qcom,mdss-dsi-panel-local-hbm-enabled;
+		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <3519>;
+		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
+		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
+		qcom,mdss-dsi-panel-bl-num = <1>;
+
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;

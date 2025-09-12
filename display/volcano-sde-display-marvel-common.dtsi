@@ -3,6 +3,7 @@
 #include "dsi-panel-mot-boe-nt37713-678_1272x2772-dsc-video-144hz-common.dtsi"
 #include "dsi-panel-mot-boe-nt37713-678_1272x2772-dsc-video-144hz-common-v1.dtsi"
 #include "dsi-panel-mot-tm-vtdr6126a-678_1272x2772-dsc-video-144hz-common.dtsi"
+#include "dsi-panel-mot-tm-vtdr6126a-678_1272x2772-dsc-video-144hz-common-lhbm.dtsi"
 
 &mdss_mdp {
 	connectors = <&sde_dsi &smmu_sde_unsec &sde_wb2 &sde_rscc>;
