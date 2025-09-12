@@ -26,6 +26,7 @@
 		qcom,mdss-dsi-backlight-on-dimming-enabled;
 		qcom,mdss-dsi-backlight-on-dimming = <150 30>;
 		qcom,mdss-dsi-backlight-on-threshold = <700>;
+		qcom,mdss-dsi-backlight-default = <1638>;
 		qcom,mdss-dsi-tx-eot-append;
 		qcom,adjust-timer-wakeup-ms = <1>;
 
