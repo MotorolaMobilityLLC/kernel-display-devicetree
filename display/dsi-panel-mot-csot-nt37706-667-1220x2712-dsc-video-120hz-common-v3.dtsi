@@ -50,7 +50,7 @@
 		qcom,mdss-dsi-panel-pcd-reg-pass-array = <0x80 0x81 0x82 0x83>;
 		qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>;
 		qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //pcd reg read seq interval per screen on.
-		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //pcd reg read time interval in minutes.
+		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 		// only parse for cmd panel
 		qcom,mdss-dsi-te-pin-select = <1>;
