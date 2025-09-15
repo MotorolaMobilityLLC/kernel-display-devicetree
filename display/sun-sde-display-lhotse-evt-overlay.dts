@@ -7,7 +7,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "sun-sde-display-leap-common.dtsi"
+#include "sun-sde-display-lhotse-common.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Sun QRD SKU2 V8 Power Grid";
