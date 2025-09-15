@@ -33,6 +33,7 @@
 		qcom,mdss-dsi-lp11-init;
 		qcom,mdss-dsi-panel-dimming-enabled;
 		qcom,bl-update-flag = "delay_until_first_frame";
+		qcom,mdss-disable-cesta-hw-sleep;
 
 		qcom_mdss_dsi_display_timings_330: qcom,mdss-dsi-display-timings {
 			timing_0_331: timing@0 {
