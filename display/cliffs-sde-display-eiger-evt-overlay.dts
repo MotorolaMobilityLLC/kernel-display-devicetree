@@ -1,0 +1,13 @@
+/* This is derivated from qcom cliffs-sde-display-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+// This file is copied from: cliffs-sde-display-arcfox-pvt2-overlay.dts
+#include "cliffs-sde-display-arcfox25-common.dtsi"
+
+/ {
+	model = "eiger";
+	compatible = "qcom,cliffs-mtp", "qcom,cliffs", "qcom,mtp";
+	qcom,msm-id = <614 0x10000>, <632 0x10000>;
+	qcom,board-id = <0x46 0xA000>;
+};

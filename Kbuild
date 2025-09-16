@@ -78,6 +78,7 @@ dtbo-$(CONFIG_ARCFOX_DTB) += display/cliffs-sde-display-arcfox-evt3-overlay.dtbo
                              display/cliffs-sde-display-arcfox-pvt2-overlay.dtbo
 dtbo-$(CONFIG_CTWO_DTB) += display/cliffs-sde-display-ctwo-evb3-overlay.dtbo
 dtbo-$(CONFIG_MARVEL_DTB) += display/volcano-sde-display-marvel-evb-overlay.dtbo
+dtbo-$(CONFIG_EIGER_DTB) += display/cliffs-sde-display-eiger-evt-overlay.dtbo
 
 else
 dtbo-$(CONFIG_ARCH_CLIFFS) += display/cliffs-sde.dtbo \
