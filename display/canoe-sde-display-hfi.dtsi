@@ -6,6 +6,24 @@
 #include "canoe-sde-hfi.dtsi"
 #include "canoe-sde-display-common-hfi.dtsi"
 
+&soc {
+	sde_wb2: qcom,wb-display@2 {
+		compatible = "qcom,wb-display";
+		cell-index = <0>;
+		label = "wb_display0";
+		qcom,op-label = "hfi";
+		status = "disabled";
+	};
+
+	sde_wb3: qcom,wb-display@3 {
+		compatible = "qcom,wb-display";
+		cell-index = <1>;
+		label = "wb_display1";
+		qcom,op-label = "hfi";
+		status = "disabled";
+	};
+};
+
 &sde_dsi2 {
 	vddio-supply = <&L12B>;
 	vci-supply = <&L13B>;
@@ -37,5 +55,6 @@
 };
 
 &mdss_mdp1 {
-	connectors = <&sde_dsi2 &sde_dsi3 &smmu_sde_unsec1 &smmu_sde_sec1>;
+	connectors = <&sde_dsi2 &sde_dsi3 &smmu_sde_unsec1 &smmu_sde_sec1
+			&sde_wb2 &sde_wb3>;
 };
