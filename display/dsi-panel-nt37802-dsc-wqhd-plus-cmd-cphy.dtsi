@@ -3,7 +3,7 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-&mdss_mdp {
+&mdss_mdp{
 	dsi_nt37802_amoled_cmd_cphy: qcom,mdss_dsi_nt37802_wqhd_plus_cmd_cphy {
 		qcom,mdss-dsi-panel-name =
 			"nt37802 amoled cmd mode dsi csot panel with DSC CPHY";
@@ -139,7 +139,19 @@
 					15 00 00 00 00 00 02 6F 04
 					15 00 00 00 00 00 02 B2 30
 					05 00 00 00 78 00 01 11
-					05 00 00 00 00 00 01 29
+					05 01 00 00 78 00 01 29
+					0a 01 00 00 00 00 80 12 00 00 89 30 80
+					   0c 80 05 a0 00 14 02 d0 02 d0 02 00
+					   02 86 00 20 02 15 00 0a 00 0d 05 7a
+					   03 d1 18 00 10 f0 03 0c 20 00 06 0b
+					   0b 33 0e 1c 2a 38 46 54 62 69 70 77
+					   79 7b 7d 7e 01 02 01 00 09 40 09 be
+					   19 fc 19 fa 19 f8 1a 38 1a 78 1a b6
+					   2a b6 2a f4 2a f4 4b 34 63 74 74 00
+					   00 00 00 00 00 00 00 00 00 00 00 00
+					   00 00 00 00 00 00 00 00 00 00 00 00
+					   00 00 00 00 00 00 00 00 00 00 00 00
+					   00 00
 				];
 
 				qcom,mdss-dsi-off-command = [
