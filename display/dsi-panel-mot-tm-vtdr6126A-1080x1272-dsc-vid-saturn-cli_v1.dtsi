@@ -1,0 +1,296 @@
+/* Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+&mdss_mdp {
+mot_tm_vtdr6126A_1080x1272_dsc_cmd_cli_sn_v1: qcom,mdss_dsi_mot_tm_1080x1272_cmd_cli_sv1 {
+		qcom,mdss-dsi-panel-name =
+			"mipi_mot_cmd_tm_1080x1272_363";
+		qcom,mdss-dsi-panel-type = "dsi_video_mode";
+		qcom,mdss-dsi-panel-physical-type = "oled";
+		qcom,mdss-dsi-panel-supplier = "tianma";
+		qcom,mdss-dsi-virtual-channel-id = <0>;
+		qcom,mdss-dsi-stream = <0>;
+		qcom,mdss-dsi-bpp = <30>;
+		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
+		qcom,mdss-dsi-underflow-color = <0xff>;
+		qcom,mdss-dsi-border-color = <0>;
+		qcom,mdss-pan-physical-width-dimension = <65>;
+		qcom,mdss-pan-physical-height-dimension = <77>;
+		qcom,dsi-ctrl-num = <0>;
+		qcom,dsi-phy-num = <0>;
+
+		qcom,dsi-sec-ctrl-num = <1>;
+		qcom,dsi-sec-phy-num = <1>;
+
+qcom,mdss-dsi-traffic-mode = "burst_mode";
+qcom,mdss-dsi-bllp-eof-power-mode;
+qcom,mdss-dsi-bllp-power-mode;
+qcom,mdss-dsi-lane-0-state;
+qcom,mdss-dsi-lane-1-state;
+qcom,mdss-dsi-lane-2-state;
+qcom,mdss-dsi-lane-3-state;
+
+qcom,mdss-dsi-dma-trigger = "trigger_sw";
+qcom,mdss-dsi-mdp-trigger = "none";
+qcom,mdss-dsi-reset-sequence = <0 3>, <1 1>, <0 5>, <1 20>;
+qcom,mdss-dsi-lp11-init;
+qcom,mdss-dsi-tx-eot-append;
+qcom,mdss-dsi-te-pin-select = <1>;
+qcom,mdss-dsi-te-dcs-command = <1>;
+qcom,mdss-dsi-te-using-te-pin;
+qcom,mdss-dsi-te-check-enable;
+qcom,mdss-dsi-force-clock-lane-hs;
+
+/* config switch mode */
+qcom,mdss-dsi-panel-mode-switch;
+//qcom,poms-align-panel-vsync;
+qcom,dynamic-mode-switch-enabled;
+//qcom,dynamic-mode-switch-type = "dynamic-switch-immediate";
+
+qcom,mdss-dsi-bl-min-level = <4>;
+qcom,mdss-dsi-bl-max-level = <14056>;
+qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+
+qcom,mdss-dsi-panel-hdr-enabled;
+qcom,mdss-dsi-panel-hdr-color-primaries = <14500 15500 32000
+	        17000 15500 30000 8000 3000>;
+qcom,mdss-dsi-panel-peak-brightness = <4200000>;
+
+qcom,mdss-dsi-panel-blackness-level = <3230>;
+
+qcom,mdss-dsi-dc-off-command = [
+		39 00 00 00 00 00 02 5E 00
+		];
+
+qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
+qcom,mdss-dsi-dc-on-command = [
+		39 00 00 00 00 00 02 5E 01
+		];
+
+qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
+
+qcom,mdss-dsi-display-timings {
+	timing@0{
+		cell-index = <0>;
+		qcom,mdss-dsi-video-mode;
+		qcom,mdss-dsi-cmd-mode;
+		qcom,mdss-dsi-panel-framerate = <60>;
+		qcom,mdss-dsi-panel-width = <1080>;
+		qcom,mdss-dsi-panel-height = <1272>;
+		qcom,mdss-dsi-h-front-porch = <16>;
+		qcom,mdss-dsi-h-back-porch = <160>;
+		qcom,mdss-dsi-h-pulse-width = <16>;
+		qcom,mdss-dsi-h-sync-skew = <0>;
+		qcom,mdss-dsi-h-sync-pulse = <0>;
+		qcom,mdss-dsi-v-back-porch = <14>;
+		qcom,mdss-dsi-v-front-porch = <2408>;
+		qcom,mdss-dsi-v-pulse-width = <2>;
+		qcom,mdss-dsi-h-left-border = <0>;
+		qcom,mdss-dsi-h-right-border = <0>;
+		qcom,mdss-dsi-v-top-border = <0>;
+		qcom,mdss-dsi-v-bottom-border = <0>;
+		qcom,vid-on-commands = [
+			39 00 00 00 00 00 03 F0 AA 10
+			39 00 00 00 00 00 14 D0 84 68 22 22 84 0F 0C 0C 55 55 10 00 05 0C 0C 55 55 10 00
+			39 00 00 00 00 00 16 D1 00 39 2A 2A 2A 2A 15 00 00 19 00 00 00 00 38 15 19 00 00 00 00
+			39 00 00 00 00 00 02 03 01
+			39 00 00 00 00 00 02 35 00
+			39 00 00 00 00 00 03 51 00 00
+			39 00 00 00 00 00 02 53 20
+			39 00 00 00 00 00 02 59 09
+			39 00 00 00 00 00 02 5E 00
+			39 00 00 00 00 00 02 6C 03
+			39 00 00 00 00 00 02 6D 00
+			39 00 00 00 00 00 02 6F 01
+			39 00 00 00 00 00 02 72 00
+
+			39 00 00 00 00 00 03 F0 AA 10
+			39 00 00 00 00 00 03 B9 01 09
+
+			39 00 00 00 00 00 03 F0 AA 16
+			39 00 00 00 00 00 11 D1 00 01 00 00 01 00 00 01 00 00 01 00 00 00 00 00
+			39 00 00 00 00 00 03 F0 AA 1B
+			39 00 00 00 00 00 02 E7 7F
+			39 00 00 00 00 00 02 65 08
+			39 00 00 00 00 00 05 E7 00 0E 02 02
+			39 00 00 00 00 00 02 65 0E
+			39 00 00 00 00 00 03 E7 08 01
+
+			39 00 00 00 00 00 03 F0 AA 12
+			39 00 00 00 00 00 02 65 01
+			39 00 00 00 00 00 02 D6 06
+			39 00 00 00 00 00 02 65 0B
+			39 00 00 00 00 00 02 E9 00
+
+			39 00 00 00 00 00 03 FF 5A 80
+			39 00 00 00 00 00 02 F9 10
+			39 00 00 00 00 00 02 65 0A
+			39 00 00 00 00 00 02 F9 1E
+			39 00 00 00 00 00 02 65 25
+			39 00 00 00 00 00 02 fd 01
+
+			39 00 00 00 00 00 03 FF 5A 83
+			39 00 00 00 00 00 02 65 09
+			39 00 00 00 00 00 03 F7 10 10
+			39 00 00 00 00 00 02 65 0B
+			39 00 00 00 00 00 02 F7 03
+
+			39 00 00 00 00 00 03 FF 5A 81
+			39 00 00 00 00 00 02 65 03
+			39 00 00 00 00 00 02 F3 61
+			39 00 00 00 00 00 02 65 0B
+			39 00 00 00 00 00 02 F3 78
+
+			39 00 00 00 00 00 03 FF 5A 00
+			39 00 00 00 00 00 03 F0 AA 00
+
+			05 00 00 00 78 00 01 11
+			05 00 00 00 00 00 01 29];	/* display on */
+		qcom,cmd-on-commands = [
+			39 00 00 00 00 00 03 F0 AA 10
+			39 00 00 00 00 00 14 D0 84 68 22 22 84 0F 0C 0C 55 55 10 00 05 0C 0C 55 55 10 00
+			39 00 00 00 00 00 16 D1 00 39 2A 2A 2A 2A 15 00 00 19 00 00 00 00 38 15 19 00 00 00 00
+			39 00 00 00 00 00 02 03 01
+			39 00 00 00 00 00 02 35 00
+			39 00 00 00 00 00 03 51 00 00
+			39 00 00 00 00 00 02 53 20
+			39 00 00 00 00 00 02 59 09
+			39 00 00 00 00 00 02 5E 00
+			39 00 00 00 00 00 02 6C 03
+			39 00 00 00 00 00 02 6D 00
+			39 00 00 00 00 00 02 6F 01
+			39 00 00 00 00 00 02 72 00
+
+			39 00 00 00 00 00 03 F0 AA 10
+			39 00 00 00 00 00 03 B9 01 09
+
+			39 00 00 00 00 00 03 F0 AA 16
+			39 00 00 00 00 00 11 D1 00 01 00 00 01 00 00 01 00 00 01 00 00 00 00 00
+			39 00 00 00 00 00 03 F0 AA 1B
+			39 00 00 00 00 00 02 E7 7F
+			39 00 00 00 00 00 02 65 08
+			39 00 00 00 00 00 05 E7 00 0E 02 02
+			39 00 00 00 00 00 02 65 0E
+			39 00 00 00 00 00 03 E7 08 01
+
+			39 00 00 00 00 00 03 F0 AA 12
+			39 00 00 00 00 00 02 65 01
+			39 00 00 00 00 00 02 D6 06
+			39 00 00 00 00 00 02 65 0B
+			39 00 00 00 00 00 02 E9 00
+
+			39 00 00 00 00 00 03 FF 5A 80
+			39 00 00 00 00 00 02 F9 10
+			39 00 00 00 00 00 02 65 0A
+			39 00 00 00 00 00 02 F9 1E
+			39 00 00 00 00 00 02 65 25
+			39 00 00 00 00 00 02 fd 01
+
+			39 00 00 00 00 00 03 FF 5A 83
+			39 00 00 00 00 00 02 65 09
+			39 00 00 00 00 00 03 F7 10 10
+			39 00 00 00 00 00 02 65 0B
+			39 00 00 00 00 00 02 F7 03
+
+			39 00 00 00 00 00 03 FF 5A 81
+			39 00 00 00 00 00 02 65 03
+			39 00 00 00 00 00 02 F3 61
+			39 00 00 00 00 00 02 65 0B
+			39 00 00 00 00 00 02 F3 78
+
+			39 00 00 00 00 00 03 FF 5A 00
+			39 00 00 00 00 00 03 F0 AA 00
+
+			05 00 00 00 78 00 01 11
+			05 00 00 00 00 00 01 29
+
+			//cmd aod mode
+			39 00 00 40 00 00 01 28
+			39 00 00 40 00 00 02 6F 02
+			39 00 00 40 00 00 02 6D 00
+			39 00 00 00 11 00 01 39
+			05 00 00 00 00 00 01 29];	/* display on */
+		qcom,mdss-dsi-off-command = [
+			05 01 00 00 00 00 01 28		/* display_off */
+			05 00 00 00 64 00 01 10];	/* enter sleep mode */
+
+		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-timing-switch-command-state =
+			"dsi_hs_mode";
+		qcom,compression-mode = "dsc";
+		/* Why QCOM doesn't use this, even it used 2 encoder
+		 * as for that dsi_sw43404_amoled_cmd, for ex */
+		/* qcom,mdss-dsc-encoders = <2>; */
+		qcom,mdss-dsc-version = <0x12>;
+		qcom,mdss-dsc-slice-height = <12>;
+		qcom,mdss-dsc-slice-width = <540>;
+		qcom,mdss-dsc-slice-per-pkt = <2>;
+		qcom,mdss-dsc-bit-per-component = <10>;
+		qcom,mdss-dsc-bit-per-pixel = <8>;
+		qcom,mdss-dsc-block-prediction-enable;
+		qcom,mdss-dsi-dfps-60-command = [39 00 00 00 00 00 02 6C 03];
+		qcom,mdss-dsi-dfps-60-command-state = "dsi_hs_mode";
+
+		qcom,mdss-dsi-dfps-90-command = [39 00 00 00 00 00 02 6c 02];
+		qcom,mdss-dsi-dfps-90-command-state = "dsi_hs_mode";
+
+		qcom,mdss-dsi-dfps-120-command = [39 00 00 00 00 00 02 6c 01];
+		qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
+
+		qcom,mdss-dsi-dfps-165-command = [39 00 00 00 00 00 02 6C 00];
+		qcom,mdss-dsi-dfps-165-command-state = "dsi_hs_mode";
+
+		qcom,video-mode-switch-in-commands = [39 00 00 00 11 00 01 29];
+		qcom,video-mode-switch-in-commands-state = "dsi_hs_mode";
+		qcom,video-mode-switch-out-commands = [39 00 00 00 11 00 01 28];
+		qcom,video-mode-switch-out-commands-state = "dsi_hs_mode";
+
+		qcom,cmd-mode-switch-in-commands = [
+				39 00 00 40 00 00 03 F0 AA 12
+				39 00 00 40 00 00 02 65 01
+				39 00 00 40 00 00 02 D6 06
+				39 00 00 40 00 00 02 6F 02
+				39 00 00 40 00 00 02 6D 01
+				39 00 00 00 11 00 01 39
+				05 00 00 00 00 00 01 29];
+		qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
+		qcom,cmd-mode-switch-in2-commands = [
+				39 00 00 40 00 00 03 F0 AA 12
+				39 00 00 40 00 00 02 65 01
+				39 00 00 40 00 00 02 D6 01
+				39 00 00 40 00 00 02 6F 02
+				39 00 00 40 00 00 02 6D 01
+				39 00 00 00 11 00 01 39
+				05 00 00 00 00 00 01 29];
+		qcom,cmd-mode-switch-in2-commands-state = "dsi_hs_mode";
+		qcom,cmd-mode-switch-out-commands = [
+				39 00 00 40 00 00 02 A4 01
+				39 00 00 40 00 00 01 38
+				39 00 00 40 00 00 02 6F 01
+				39 00 00 40 00 00 02 A4 00
+				39 00 00 40 00 00 02 A6 01
+				39 00 00 40 00 00 03 F0 AA 10
+				39 00 00 40 00 00 02 65 09
+				39 00 00 40 00 00 02 CF 5B
+				39 00 00 40 00 00 02 65 0B
+				39 00 00 00 5A 00 03 CF FD 79
+				];
+		qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
+		qcom,cmd-mode-backlight-commands = [
+				39 00 00 00 00 00 02 6D 01];
+		qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
+	};
+};
+
+};
+
+};
