@@ -74,13 +74,13 @@
 				qcom,mdss-dsi-panel-framerate = <120>;
 				qcom,mdss-dsi-panel-width = <1272>;
 				qcom,mdss-dsi-panel-height = <2772>;
-				qcom,mdss-dsi-h-front-porch = <108>;
-				qcom,mdss-dsi-h-back-porch = <20>;
-				qcom,mdss-dsi-h-pulse-width = <4>;
+				qcom,mdss-dsi-h-front-porch = <109>;
+				qcom,mdss-dsi-h-back-porch = <16>;
+				qcom,mdss-dsi-h-pulse-width = <16>;
 				qcom,mdss-dsi-h-sync-skew = <0>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-v-back-porch = <22>;
-				qcom,mdss-dsi-v-front-porch = <48>;
+				qcom,mdss-dsi-v-front-porch = <84>;
 				qcom,mdss-dsi-v-pulse-width = <2>;
 				qcom,mdss-dsi-h-left-border = <0>;
 				qcom,mdss-dsi-h-right-border = <0>;
@@ -130,7 +130,7 @@
 					39 00 00 00 00 00 02 90 43
 					39 00 00 00 00 00 13 91 AB A8 00 0C C2 00 02 3E 01 37 00 08 08 BB 07 32 10 F0
 					39 00 00 00 00 00 02 53 20
-					39 00 00 00 00 00 02 88 02
+					39 00 00 00 00 00 02 88 21
 					39 00 00 00 00 00 03 81 01 19
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 03 5F 00 00
@@ -190,7 +190,7 @@
 					39 00 00 00 00 00 02 90 43
 					39 00 00 00 00 00 13 91 AB A8 00 0C C2 00 02 3E 01 37 00 08 08 BB 07 32 10 F0
 					39 00 00 00 00 00 02 53 20
-					39 00 00 00 00 00 02 88 02
+					39 00 00 00 00 00 02 88 21
 					39 00 00 00 00 00 03 81 01 19
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 03 5F 00 00
@@ -261,7 +261,7 @@
 				qcom,video-mode-switch-out-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-switch-in-commands = [
-					39 00 00 40 00 00 08 A9 01 00 51 04 05 05 54
+					39 00 00 40 00 00 08 A9 01 00 51 04 05 2C 50
 					39 00 00 00 00 00 01 39
 					];
 				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
@@ -272,7 +272,7 @@
 				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-backlight-commands = [
-					39 00 00 00 00 00 08 A9 01 00 51 04 05 05 54
+					39 00 00 00 00 00 08 A9 01 00 51 04 05 2C 50
 					];
 				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
 

@@ -94,8 +94,8 @@
 	qcom,dsi-supported-dfps-list = <120 144 90 60>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
-	qcom,dsi-supported-dfps-vfp-list = <48 44 996 2892>;
-	qcom,dsi-supported-dfps-hfp-list = <108 16 108 108>;
+	qcom,dsi-supported-dfps-vfp-list = <84 84 1044 2964>;
+	qcom,dsi-supported-dfps-hfp-list = <109 29 109 109>;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
@@ -103,7 +103,7 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;//
 	qcom,mdss-dsi-bl-max-level = <16153>;
-	qcom,mdss-dsi-bl-default-level = <10230>;
+	qcom,mdss-dsi-bl-default-level = <6735>;
 	qcom,mdss-brightness-max-level = <16153>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
 	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
@@ -164,9 +164,9 @@
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
 
-	qcom,mdss-dsi-panel-AOD-bl-min = <1364>;   //0x0554, <5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>;   //0x14AC, 5-160nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>;   //0x3FFC, >160nit
+	qcom,mdss-dsi-panel-AOD-bl-min = <16>;   //0x0010, <5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <11344>;   //0x2C50, 5-160nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <16000>;   //0x3E80, >160nit
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -194,7 +194,7 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;//
 	qcom,mdss-dsi-bl-max-level = <16153>;
-	qcom,mdss-dsi-bl-default-level = <10230>;
+	qcom,mdss-dsi-bl-default-level = <6735>;
 	qcom,mdss-brightness-max-level = <16153>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
 	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
@@ -255,9 +255,9 @@
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
 
-	qcom,mdss-dsi-panel-AOD-bl-min = <1364>;   //0x0554, <5nit
-	qcom,mdss-dsi-panel-AOD-bl-mid = <5292>;   //0x14AC, 5-160nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <16380>;   //0x3FFC, >160nit
+	qcom,mdss-dsi-panel-AOD-bl-min = <16>;   //0x0010, <5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <11344>;   //0x2C50, 5-160nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <16000>;   //0x3E80, >160nit
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
