@@ -186,7 +186,7 @@
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
 	qcom,dsi-supported-dfps-vfp-list = <48 44 996 2892>;
-	qcom,dsi-supported-dfps-hfp-list = <109 29 109 109>;
+	qcom,dsi-supported-dfps-hfp-list = <108 28 108 108>;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
