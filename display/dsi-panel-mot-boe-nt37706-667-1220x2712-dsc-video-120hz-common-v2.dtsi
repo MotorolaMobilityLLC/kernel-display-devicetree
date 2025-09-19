@@ -66,6 +66,7 @@
 
 		qcom,mdss-dsi-panel-AOD-config-enabled;
 		qcom,mdss-dsi-panel-AOD-bl-vid-update;
+		qcom,mdss-dsi-panel-AOD-cmd-out-delay-ms-post = <120>;
 
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;
 		qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;
