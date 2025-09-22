@@ -4,6 +4,7 @@
  */
 
 #include "dsi-panel-nt37801-dsc-wqhd-plus-cmd.dtsi"
+#include "dsi-panel-nt37801-dsc-wqhd-plus-cmd-sl.dtsi"
 #include "dsi-panel-nt37801-dsc-wqhd-plus-cmd-cphy.dtsi"
 #include "dsi-panel-nt37801-dsc-wqhd-plus-video.dtsi"
 #include "dsi-panel-nt37801-dsc-wqhd-plus-video-cphy.dtsi"
@@ -576,6 +577,20 @@
 		};
 
 		timing_4: timing@4 {
+			qcom,mdss-dsi-panel-phy-timings = [00 28 0a 0b 1b 1a 0a
+					0b 0a 02 04 00 21 0f];
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
+&dsi_nt37801_amoled_cmd_sl {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+	qcom,dsi-select-sec-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	//TODOVARA the timing node.
+	qcom_mdss_dsi_display_timings_400: qcom,mdss-dsi-display-timings {
+		timing_0_300: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 28 0a 0b 1b 1a 0a
 					0b 0a 02 04 00 21 0f];
 			qcom,display-topology = <2 2 1>;
