@@ -145,6 +145,8 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
 
+	qcom,mdss-disable-cesta-hw-sleep;
+
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
 	        16000 13250 34500 7500 3000>;
@@ -194,6 +196,8 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-disable-cesta-hw-sleep;
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <15635 16450 34000
@@ -247,6 +251,8 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
 
+	qcom,mdss-disable-cesta-hw-sleep;
+
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <15635 16450 34000
 	        16000 13250 34500 7500 3000>;
@@ -298,6 +304,8 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-disable-cesta-hw-sleep;
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <15635 16450 34000
@@ -351,6 +359,8 @@
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
 
+	qcom,mdss-disable-cesta-hw-sleep;
+
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <15635 16450 34000
 	        16000 13250 34500 7500 3000>;
@@ -402,6 +412,8 @@
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-disable-cesta-hw-sleep;
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 	qcom,mdss-dsi-panel-hdr-color-primaries = <15635 16450 34000
