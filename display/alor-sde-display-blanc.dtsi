@@ -578,7 +578,9 @@
 
 &qupv3_se4_spi {
 	goodix-berlin@0 {
-		panel = <&mot_csot_nt37900_809_2484x2232_dsc_cmd>;
+		panel = <
+			&mot_csot_nt37900_809_2484x2232_dsc_cmd_v1
+			&mot_csot_nt37900_809_2484x2232_dsc_cmd>;
 	};
 };
 
