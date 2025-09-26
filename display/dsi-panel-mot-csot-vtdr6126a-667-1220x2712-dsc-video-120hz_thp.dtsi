@@ -63,7 +63,7 @@
 
 		qcom,mdss-dsi-hbm-on-command = [
 				39 00 00 40 00 00 02 62 00
-				39 00 00 00 00 00 03 51 3E 80];
+				39 00 00 00 00 00 03 51 3F FC];
 		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-off-command = [
