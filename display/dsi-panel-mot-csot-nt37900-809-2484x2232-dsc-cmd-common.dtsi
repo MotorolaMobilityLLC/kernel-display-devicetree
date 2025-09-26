@@ -85,7 +85,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 02 53 20
-			39 00 00 00 0A 00 02 2F 00
+			39 00 00 00 00 00 02 2F 00
 		];
 		qcom,mdss-dsi-on-command = [
 		//Flash  Auto Program Set
@@ -186,9 +186,6 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 02 53 20
 		39 00 00 00 00 00 02 2F 00
 
-		//TE skip opt
-		39 00 00 40 00 00 03 5A 01 01
-
 		//VESA, slice 8 (2-dec  8bit
 		39 00 00 40 00 00 03 90 03 43
 		39 00 00 40 00 00 13 91 AB 28 00 08 C2 00 03 6D 01 01 00 11 0D B7 05 87 10 F0
@@ -238,7 +235,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 00
 			39 00 00 40 00 00 02 53 20
-			39 00 00 00 0C 00 02 2F 01
+			39 00 00 00 0B 00 02 2F 01
 		];
 		qcom,mdss-dsi-on-command = [
 		//Flash  Auto Program Set
@@ -340,10 +337,6 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 02 53 20
 		39 00 00 00 00 00 02 2F 01
 
-
-		//TE skip opt
-		39 00 00 40 00 00 03 5A 01 01
-
 		//VESA, slice 8 (2-dec  8bit
 		39 00 00 40 00 00 03 90 03 43
 		39 00 00 40 00 00 13 91 AB 28 00 08 C2 00 03 6D 01 01 00 11 0D B7 05 87 10 F0
@@ -400,7 +393,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 6D 03
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F 08
-			39 00 00 00 12 00 02 B2 80
+			39 00 00 00 11 00 02 B2 80
 		];
 		qcom,mdss-dsi-on-command = [
 		//Flash  Auto Program Set
@@ -509,10 +502,6 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 02 6F 08
 		39 00 00 40 00 00 02 B2 80
 
-
-		//TE skip opt
-		39 00 00 40 00 00 03 5A 01 01
-
 		//VESA, slice 8 (2-dec  8bit
 		39 00 00 40 00 00 03 90 03 43
 		39 00 00 40 00 00 13 91 AB 28 00 08 C2 00 03 6D 01 01 00 11 0D B7 05 87 10 F0
@@ -562,7 +551,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 6F 04
 			39 00 00 40 00 00 02 35 03
 			39 00 00 40 00 00 02 53 20
-			39 00 00 40 00 00 02 5A 02
+			39 00 00 40 00 00 02 5A 00
 			39 00 00 40 00 00 02 2F 30
 			39 00 00 40 00 00 03 6D 01 00
 			39 00 00 40 00 00 02 6F 06
@@ -572,7 +561,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 B2 C0
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F 05
-			39 00 00 00 0A 00 03 B2 04 04
+			39 00 00 00 00 00 03 B2 04 04
 		];
 		qcom,mdss-dsi-on-command = [
 		//Flash  Auto Program Set
@@ -672,7 +661,7 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 02 6F 04
 		39 00 00 40 00 00 02 35 03
 		39 00 00 40 00 00 02 53 20
-		39 00 00 40 00 00 02 5A 02
+		39 00 00 40 00 00 02 5A 00
 		39 00 00 40 00 00 02 2F 30
 		39 00 00 40 00 00 03 6D 01 00
 		39 00 00 40 00 00 02 6F 06
@@ -683,9 +672,6 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 05
 		39 00 00 00 00 00 03 B2 04 04
-
-		//TE skip opt
-		39 00 00 40 00 00 03 5A 01 01
 
 		//VESA, slice 8 (2-dec  8bit
 		39 00 00 40 00 00 03 90 03 43
@@ -746,7 +732,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 B2 C0
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F 05
-			39 00 00 00 0A 00 03 B2 05 05
+			39 00 00 00 00 00 03 B2 05 05
 		];
 		qcom,mdss-dsi-on-command = [
 		//Flash  Auto Program Set
@@ -858,9 +844,6 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 02 6F 05
 		39 00 00 40 00 00 03 B2 05 05
 
-		//TE skip opt
-		39 00 00 40 00 00 03 5A 01 01
-
 		//VESA, slice 8 (2-dec  8bit
 		39 00 00 40 00 00 03 90 03 43
 		39 00 00 40 00 00 13 91 AB 28 00 08 C2 00 03 6D 01 01 00 11 0D B7 05 87 10 F0
@@ -891,12 +874,12 @@ qcom,mdss-dsi-display-timings {
 
 	timing@5{
 		qcom,mdss-dsi-cmd-mode;
-		qcom,mdss-dsi-panel-framerate = <10>;
+		qcom,mdss-dsi-panel-framerate = <120>;	/* Actually 10 hz*/
 		qcom,mdss-dsi-panel-width = <2484>;
 		qcom,mdss-dsi-panel-height = <2232>;
 		qcom,mdss-dsi-h-front-porch = <20>;
 		qcom,mdss-dsi-h-back-porch = <20>;
-		qcom,mdss-dsi-h-pulse-width = <16>;
+		qcom,mdss-dsi-h-pulse-width = <14>;
 		qcom,mdss-dsi-h-sync-skew = <0>;
 		qcom,mdss-dsi-h-sync-pulse = <0>;
 		qcom,mdss-dsi-v-back-porch = <40>;
@@ -917,7 +900,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 03 6D 03 00
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F 08
-			39 00 00 00 0A 00 02 B2 C0
+			39 00 00 00 00 00 02 B2 C0
 		];
 		qcom,mdss-dsi-on-command = [
 		//Flash  Auto Program Set
@@ -1025,9 +1008,6 @@ qcom,mdss-dsi-display-timings {
 		39 00 00 40 00 00 06 F0 55 AA 52 08 00
 		39 00 00 40 00 00 02 6F 08
 		39 00 00 40 00 00 02 B2 C0
-
-		//TE skip opt
-		39 00 00 40 00 00 03 5A 01 01
 
 		//VESA, slice 8 (2-dec  8bit
 		39 00 00 40 00 00 03 90 03 43
