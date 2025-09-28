@@ -261,6 +261,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -398,6 +401,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -535,6 +541,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -680,6 +689,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -826,6 +838,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -972,6 +987,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -1118,6 +1136,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -1263,6 +1284,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
@@ -1412,6 +1436,9 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			05 00 00 00 78 00 01 11 //Delay 120ms
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
 			05 00 00 00 14 00 01 29];	/* display on */
 		qcom,mdss-dsi-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 00
