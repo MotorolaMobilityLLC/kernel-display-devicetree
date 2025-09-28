@@ -292,6 +292,46 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 			];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 00 00
+			39 00 00 40 00 00 02 F2 00 // 120Hz Frame Skip mode Exit
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 77 00
+			39 00 00 40 00 00 02 F2 00
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 00 00
+			39 00 00 40 00 00 02 F2 00 // 120Hz Frame Skip mode Exit
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 
 	timing@1{
@@ -432,6 +472,46 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 			];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 00 00
+			39 00 00 40 00 00 02 F2 00 // 120Hz Frame Skip mode Exit
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 06
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 77 00
+			39 00 00 40 00 00 02 F2 00
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 00 00
+			39 00 00 40 00 00 02 F2 00 // 120Hz Frame Skip mode Exit
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 06
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 
 	timing@2{
@@ -572,6 +652,46 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 			];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 00 00
+			39 00 00 40 00 00 02 F2 00 // 120Hz Frame Skip mode Exit
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 02
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 77 00
+			39 00 00 40 00 00 02 F2 00
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 00 00
+			39 00 00 40 00 00 02 F2 00 // 120Hz Frame Skip mode Exit
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 02
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 
 	timing@3{
@@ -720,6 +840,54 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 			];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 01 00
+			39 00 00 40 00 00 02 F2 01
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 77 00
+			39 00 00 40 00 00 02 F2 00
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 01 00
+			39 00 00 40 00 00 02 F2 01
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 
 	timing@4{
@@ -869,6 +1037,54 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 			];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 03 00
+			39 00 00 40 00 00 02 F2 03
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 77 00
+			39 00 00 40 00 00 02 F2 00
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 03 00
+			39 00 00 40 00 00 02 F2 03
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 
 	timing@5{
@@ -1018,6 +1234,54 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 00 00 00 04 FF 5A A5 00
 			];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp1-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 04 00
+			39 00 00 40 00 00 02 F2 04
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp1-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-lp2-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 77 00
+			39 00 00 40 00 00 02 F2 00
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-lp2-command-state =
+			"dsi_lp_mode";
+		qcom,mdss-dsi-nolp-command = [
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 04 FF 5A A5 00
+			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 04 FF 5A A5 2D
+			39 00 00 40 00 00 03 83 04 00
+			39 00 00 40 00 00 02 F2 04
+			39 00 00 40 00 00 04 FF 5A A5 53
+			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
+			39 00 00 40 00 00 04 FF 5A A5 4F
+			39 00 00 40 00 00 02 8B 78
+			39 00 00 00 00 00 04 FF 5A A5 00
+		];
+		qcom,mdss-dsi-nolp-command-state =
+			"dsi_lp_mode";
 	};
 
 	timing@6{
