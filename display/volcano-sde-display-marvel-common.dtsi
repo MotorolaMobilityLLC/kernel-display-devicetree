@@ -91,11 +91,11 @@
 &mot_boe_nt37713_678_1272x2772_dsc_vid_v1 {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <120 144 90 60>;
+	qcom,dsi-supported-dfps-list = <60 90 120 144>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
-	qcom,dsi-supported-dfps-vfp-list = <84 84 1044 2964>;
-	qcom,dsi-supported-dfps-hfp-list = <108 28 108 108>;
+	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84  >;
+	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28  >;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
@@ -159,7 +159,7 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-command-resend;
+	//qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
@@ -170,7 +170,10 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-unrestricted;
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
+					        //qcom,mdss-dsi-panel-clockrate = <630000000>;
 			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
 				0B 0A 02 04 00 21 10];
 			qcom,display-topology = <1 1 1>;
@@ -182,11 +185,11 @@
 &mot_boe_nt37713_678_1272x2772_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <120 144 90 60>;
+	qcom,dsi-supported-dfps-list = <60 90 120 144 >;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
-	qcom,dsi-supported-dfps-vfp-list = <48 44 996 2892>;
-	qcom,dsi-supported-dfps-hfp-list = <108 28 108 108>;
+	qcom,dsi-supported-dfps-vfp-list = <2892 996 48 44  >;
+	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28  >;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
@@ -261,7 +264,10 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
+			qcom,framerate-group-no-duplicated;
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
+			qcom,framerate-group-unrestricted;
+								        //qcom,mdss-dsi-panel-clockrate = <630000000>;
 			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
 				0B 0A 02 04 00 21 10];
 			qcom,display-topology = <1 1 1>;
@@ -391,6 +397,7 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
+			qcom,framerate-group-no-duplicated;
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
 			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
 				0B 0A 02 04 00 21 10];
