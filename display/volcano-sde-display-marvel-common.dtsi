@@ -279,10 +279,10 @@
 &mot_tm_vtdr6126a_678_1272x2772_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <120 144 90 60>;
+	qcom,dsi-supported-dfps-list = <60 144 120 90>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
-	qcom,dsi-supported-dfps-vfp-list = <84 84 1044 2964>;
+	qcom,dsi-supported-dfps-vfp-list = <2964 84 84 1044>;
 	qcom,dsi-supported-dfps-hfp-list = <108 28 108 108>;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
@@ -330,8 +330,34 @@
 	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
 	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
 
+	// only parse for cmd panel
+	qcom,mdss-dsi-te-pin-select = <1>;
+	qcom,mdss-dsi-te-dcs-command = <1>;
+	qcom,mdss-dsi-te-using-te-pin;
+	qcom,mdss-dsi-te-check-enable;
+	qcom,mdss-dsi-wr-mem-start = <0x2c>;
+	qcom,mdss-dsi-wr-mem-continue = <0x3c>;
+
+	//AOD: config switch mode
+	qcom,mdss-dsi-panel-mode-switch;
+	//qcom,poms-align-panel-vsync;
+	qcom,dynamic-mode-switch-enabled;
+	//qcom,dynamic-mode-switch-type = "dynamic-switch-immediate";
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+	qcom,mdss-dsi-panel-AOD-command-resend;
+
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <0>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
+			qcom,framerate-group-no-duplicated;
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
 			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
 				0B 0A 02 04 00 21 10];
