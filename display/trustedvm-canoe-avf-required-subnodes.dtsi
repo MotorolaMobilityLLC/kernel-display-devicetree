@@ -179,6 +179,7 @@
 						&qcom_mdss_dsi_display_timings_326
 						&qcom_mdss_dsi_display_timings_328
 						&qcom_mdss_dsi_display_timings_330
+						&qcom_mdss_dsi_display_timings_402
 						&qcom_panel_supply_entry_0
 						&qcom_panel_supply_entry_0_11
 						&qcom_panel_supply_entry_0_5
@@ -265,6 +266,7 @@
 						&timing_0_293
 						&timing_0_295
 						&timing_0_297
+						&timing_0_302
 						&timing_0_31
 						&timing_0_33
 						&timing_0_35
@@ -298,6 +300,7 @@
 						&timing_0_327
 						&timing_0_329
 						&timing_0_331
+						&timing_0_402
 						&timing_1
 						&timing_10
 						&timing_10_109
