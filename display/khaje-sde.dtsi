@@ -11,10 +11,10 @@
 
 &soc {
 	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
-		iommu-addresses = <&smmu_sde_unsec 0x0 0x00060000>,
-				  <&smmu_sde_unsec 0xE1000000 0x02400000>,
-				  <&smmu_sde_sec 0x0 0x00020000>;
-	};
+		iommu-addresses = <&smmu_sde_unsec 0x0 0x0 0x0 0x00020000>,
+				  <&smmu_sde_unsec 0x0 0x5c000000 0x0 0x00f00000>,
+				  <&smmu_sde_sec 0x0 0x0 0x0 0x00020000>;
+ };
 	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
                 compatible = "qcom,smmu_sde_unsec";
                 iommus = <&apps_smmu 0x420 0x2>;
