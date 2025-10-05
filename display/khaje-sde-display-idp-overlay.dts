@@ -7,7 +7,7 @@
 /plugin/;
 
 #include "khaje-sde-display-idp.dtsi"
-//#include "khaje-sde-display-idp-pm7250b.dtsi"
+#include "khaje-sde-display-idp-pm7250b.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Khaje IDP";
