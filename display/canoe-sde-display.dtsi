@@ -64,10 +64,6 @@
 };
 
 &reserved_memory {
-	splash_memory: splash_region {
-		reg = <0x0 0xfc800000 0x0 0x02b00000>;
-		label = "cont_splash_region";
-	};
 	/*
 	 * Demura memory regions are to be commented out if
 	 * feature not in use.
