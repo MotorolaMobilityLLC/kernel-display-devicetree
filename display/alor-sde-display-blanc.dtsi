@@ -484,7 +484,8 @@
 
 	//qcom,ulps-enabled;
 	qcom,partition-refreshrate-enabled;
-	qcom,mdss-dsi-panel-boundaryLine-reg-count = <6>;
+	qcom,mdss-dsi-panel-boundaryLine-reg-count = <8>;
+	qcom,mdss-dsi-panel-partition-refreshrate-slice-h = <8>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
