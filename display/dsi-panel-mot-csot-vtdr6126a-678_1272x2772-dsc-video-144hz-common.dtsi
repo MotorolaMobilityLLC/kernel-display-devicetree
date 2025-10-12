@@ -1,4 +1,4 @@
-/* Copyright (c) 2019-2025, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2019-2025, Motorola Mobility LLC. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -65,7 +65,9 @@
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
-				qcom,mdss-dsi-panel-framerate = <120>;
+				qcom,mdss-dsi-video-mode;
+				qcom,mdss-dsi-cmd-mode;
+				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <1272>;
 				qcom,mdss-dsi-panel-height = <2772>;
 				qcom,mdss-dsi-h-front-porch = <108>;
@@ -74,19 +76,21 @@
 				qcom,mdss-dsi-h-sync-skew = <0>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-v-back-porch = <22>;
-				qcom,mdss-dsi-v-front-porch = <84>;
+				qcom,mdss-dsi-v-front-porch = <2964>;
 				qcom,mdss-dsi-v-pulse-width = <2>;
 				qcom,mdss-dsi-h-left-border = <0>;
 				qcom,mdss-dsi-h-right-border = <0>;
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
-				qcom,mdss-dsi-on-command = [
+				qcom,vid-on-commands = [
 					39 00 00 00 00 00 02 A4 01
 					39 00 00 00 00 00 01 38
 					39 00 00 00 00 00 02 6F 01
 					39 00 00 00 00 00 02 A4 00
 
 					39 00 00 00 00 00 02 03 01
+					39 00 00 00 00 00 05 2A 00 00 04 F8
+					39 00 00 00 00 00 05 2B 00 00 05 40
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 03 51 00 00
 					39 00 00 00 00 00 02 53 20
@@ -95,7 +99,7 @@
 					39 00 00 00 00 00 02 B0 80
 					39 00 00 00 00 00 02 5E 00
 					39 00 00 00 00 00 02 6B 01
-					39 00 00 00 00 00 02 6C 01
+					39 00 00 00 00 00 02 6C 03
 					39 00 00 00 00 00 02 6D 00
 					39 00 00 00 00 00 02 6F 01
 					39 00 00 00 00 00 5F 70 12 00 00 AB 30 80 0A D4 04 F8 00 0C 02 7C 02 7C 02 00 01 1B 00 20 02 71 00 08 00 01 00 BB 07 32 18 00 10 F0 07 10 20 00 06 0F 0F 33 0E 1C 2A 38 46 54 62 69 70 77 79 7B 7D 7E 02 02 22 00 2A 40 2A BE 3A FC 3A FA 3A F8 3B 38 3B 78 3B B6 4B B6 4B F4 4B F4 6C 34 84 74 00 00 00 00 00 00
@@ -130,6 +134,68 @@
 					39 00 00 00 00 00 03 FF 5A 00
 
 					05 00 00 00 78 00 01 11
+					05 00 00 00 00 00 01 29
+				];
+
+				qcom,cmd-on-commands = [
+					39 00 00 00 00 00 02 A4 01
+					39 00 00 00 00 00 01 38
+					39 00 00 00 00 00 02 6F 01
+					39 00 00 00 00 00 02 A4 00
+
+					39 00 00 00 00 00 02 03 01
+					39 00 00 00 00 00 05 2A 00 00 04 F8
+					39 00 00 00 00 00 05 2B 00 00 05 40
+					39 00 00 00 00 00 02 35 00
+					39 00 00 00 00 00 03 51 00 00
+					39 00 00 00 00 00 02 53 20
+					39 00 00 00 00 00 02 59 09
+					39 00 00 00 00 00 03 F0 AA 18
+					39 00 00 00 00 00 02 B0 80
+					39 00 00 00 00 00 02 5E 00
+					39 00 00 00 00 00 02 6B 01
+					39 00 00 00 00 00 02 6C 03
+					39 00 00 00 00 00 02 6D 00
+					39 00 00 00 00 00 02 6F 01
+					39 00 00 00 00 00 5F 70 12 00 00 AB 30 80 0A D4 04 F8 00 0C 02 7C 02 7C 02 00 01 1B 00 20 02 71 00 08 00 01 00 BB 07 32 18 00 10 F0 07 10 20 00 06 0F 0F 33 0E 1C 2A 38 46 54 62 69 70 77 79 7B 7D 7E 02 02 22 00 2A 40 2A BE 3A FC 3A FA 3A F8 3B 38 3B 78 3B B6 4B B6 4B F4 4B F4 6C 34 84 74 00 00 00 00 00 00
+
+					39 00 00 00 00 00 02 72 00
+
+					39 00 00 00 00 00 03 ff 5a 80
+					39 00 00 00 00 00 02 65 25
+					39 00 00 00 00 00 02 fd 01
+					39 00 00 00 00 00 03 f0 aa 1c
+					39 00 00 00 00 00 15 c1 0D C0 0F E4 12 08 1D 28 36 E8 39 70 3B F8 3E 80 3F 3E 3F FC
+					39 00 00 00 00 00 1F c2 5E 52 73 50 44 62 40 34 4F 2A 22 36 18 14 20 09 06 0F 97 97 97 B4 B3 BA C3 BF CB C3 BF CB
+					39 00 00 00 00 00 21 c4 01 FF 02 02 02 04 04 04 04 04 04 06 06 07 1B 16 1C 1E 1A 1F 21 20 25 28 28 2C 3F 3C 44 47 44 4D
+					39 00 00 00 00 00 03 FF 5A 83
+					39 00 00 00 00 00 02 65 0B
+					39 00 00 00 00 00 02 F7 03
+					39 00 00 00 00 00 03 FF 5A 83
+					39 00 00 00 00 00 02 65 09
+					39 00 00 00 00 00 03 F7 10 10
+					39 00 00 00 00 00 03 F0 AA 16
+					39 00 00 00 00 00 11 D1 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+					39 00 00 00 00 00 03 FF 5A 81
+					39 00 00 00 00 00 02 65 03
+					39 00 00 00 00 00 02 f3 49
+					39 00 00 00 00 00 02 65 0B
+					39 00 00 00 00 00 02 f3 58
+					39 00 00 00 00 00 03 FF 5A 80
+					39 00 00 00 00 00 02 65 0A
+					39 00 00 00 00 00 02 F9 1E
+
+					39 00 00 00 00 00 03 F0 AA 00
+					39 00 00 00 00 00 03 FF 5A 00
+
+					05 00 00 00 78 00 01 11
+					05 00 00 00 00 00 01 29
+
+					//cmd aod mode
+					05 00 00 40 00 00 01 28
+					39 00 00 40 00 00 02 6F 02
+					05 00 00 40 00 00 01 39
+					39 00 00 00 11 00 02 6D 01
 					05 00 00 00 00 00 01 29
 				];
 
@@ -174,6 +240,24 @@
 					39 00 00 40 00 00 03 F0 AA 00
 					39 00 00 00 00 00 03 FF 5A 00];
 				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
+
+				qcom,cmd-mode-switch-in-commands = [
+					05 00 00 40 00 00 01 28
+					39 00 00 40 00 00 02 6F 02
+					05 00 00 40 00 00 01 39
+					39 00 00 00 11 00 02 6D 01
+					05 00 00 00 00 00 01 29];
+
+				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
+
+				qcom,cmd-mode-switch-out-commands = [
+					39 00 00 40 00 00 03 51 19 1A
+					39 00 00 00 5A 00 02 A6 01];
+				qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
+
+				qcom,cmd-mode-backlight-commands = [
+					39 00 00 00 00 00 02 6D 01];
+				qcom,cmd-mode-backlight-commands-state = "dsi_lp_mode";
 			};
 		};
 	};
