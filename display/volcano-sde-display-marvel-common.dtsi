@@ -278,7 +278,7 @@
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
 	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
-	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
+	qcom,dsi-supported-dfps-hfp-list = <124 124 124 40>;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
@@ -368,8 +368,8 @@
 		timing@0 {
 			qcom,framerate-group-no-duplicated;
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
-			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 26 0A
-				0B 0A 02 04 00 21 10];
+			qcom,mdss-dsi-panel-phy-timings = [00 2A 0B 0B 1C 26 0B
+				0C 0B 02 04 00 23 10];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
@@ -383,7 +383,7 @@
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
 	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
-	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
+	qcom,dsi-supported-dfps-hfp-list = <124 124 124 40>;
 	qcom,mdss-dsi-pan-dfps-send-command;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
@@ -473,8 +473,8 @@
 		timing@0 {
 			qcom,framerate-group-no-duplicated;
 			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
-			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 26 0A
-				0B 0A 02 04 00 21 10];
+			qcom,mdss-dsi-panel-phy-timings = [00 2A 0B 0B 1C 26 0B
+				0C 0B 02 04 00 23 10];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
