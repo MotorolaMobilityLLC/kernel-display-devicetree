@@ -159,7 +159,6 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	//qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
@@ -250,7 +249,6 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
@@ -340,7 +338,6 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
@@ -444,7 +441,6 @@
 
 	qcom,mdss-dsi-panel-AOD-config-enabled;
 	qcom,mdss-dsi-panel-AOD-bl-vid-update;
-	qcom,mdss-dsi-panel-AOD-command-resend;
 
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
