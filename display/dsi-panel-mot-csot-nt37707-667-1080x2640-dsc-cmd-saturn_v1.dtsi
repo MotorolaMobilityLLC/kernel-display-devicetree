@@ -215,8 +215,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 6F 01
 			39 00 00 40 00 00 02 B7 36
 			39 00 00 40 00 00 05 FF AA 55 A5 80
-			39 00 00 40 00 00 02 6F 12
-			39 00 00 00 00 00 04 F4 00 00 00];
+			39 00 00 40 00 00 02 6F 13
+			39 00 00 00 00 00 03 F4 00 00];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-lp1-command = [
 			39 00 00 40 00 00 02 6F 04
@@ -568,8 +568,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 6F 01
 			39 00 00 40 00 00 02 B7 36
 			39 00 00 40 00 00 05 FF AA 55 A5 80
-			39 00 00 40 00 00 02 6F 12
-			39 00 00 00 00 00 04 F4 00 00 00];
+			39 00 00 40 00 00 02 6F 13
+			39 00 00 00 00 00 03 F4 00 00];
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-lp1-command = [
 		39 00 00 40 00 00 02 6F 04
