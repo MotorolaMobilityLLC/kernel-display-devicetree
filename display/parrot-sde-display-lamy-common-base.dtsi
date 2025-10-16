@@ -279,6 +279,19 @@
 	qcom,mdss-dsi-panel-status-value = <0 0>;
 	qcom,mdss-dsi-panel-status-read-length = <2>;
 
+	qcom,panel-od-enabled;
+	qcom,mdss-dsi-bl-od-threshold = <1739>; /* Corresponds to 10 nits */
+	qcom,mdss-dsi-panel-od-on-command = [
+		39 00 00 40 00 00 03 F0 AA 19
+		39 00 00 40 00 00 02 C0 A2
+		39 00 00 00 00 00 03 51 03 6E];
+	qcom,mdss-dsi-panel-od-on-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-od-off-command = [
+		39 00 00 40 00 00 03 F0 AA 19
+		39 00 00 40 00 00 02 C0 02
+		39 00 00 00 00 00 03 51 03 6E];
+	qcom,mdss-dsi-panel-od-off-command-state = "dsi_lp_mode";
+
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
 			/*120HZ timing*/
