@@ -596,3 +596,10 @@
 		         &mot_boe_ili97680A_678_1264x2780_dsc_cmd_v3>;
 	};
 };
+
+&battery_charger {
+        qcom,display-panels = <&mot_boe_ili97680A_678_1264x2780_dsc_cmd_v1
+                               &mot_boe_ili97680A_678_1264x2780_dsc_cmd_v2
+                               &mot_boe_ili97680A_678_1264x2780_dsc_cmd_v3>;
+
+};
