@@ -75,7 +75,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp &sde_cesta>;
 };
 &mot_boe_ili97680A_678_1264x2780_dsc_cmd_v1 {
 	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
