@@ -47,27 +47,27 @@
 		qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x56>;
 		qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <50>; //50ms delay before read pcd reg per IC req
 		qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
-		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
+		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 		qcom,mdss-dsi-dc-on-command = [
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 00 00 00 02 8B 81];
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 00 00 00 02 8B 81];
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-dc-off-command = [
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 00 00 00 02 8B 00];
+			39 00 00 40 00 00 02 6F 01
+			39 00 00 00 00 00 02 8B 00];
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-				39 00 00 40 00 00 0E A9 01 00 87 00 00 20 01 00 51 09 0A 00 00
-				39 00 00 00 00 00 03 51 3F FC];
+			39 00 00 40 00 00 0E A9 01 00 87 00 00 20 01 00 51 09 0A 00 00
+			39 00 00 00 00 00 03 51 3F FC];
 
 		qcom,mdss-dsi-hbm-off-command = [
-				39 00 00 00 00 00 0E A9 01 00 87 00 00 20 01 00 51 09 0A 00 00];
+			39 00 00 00 00 00 0E A9 01 00 87 00 00 20 01 00 51 09 0A 00 00];
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
-				39 00 00 00 00 00 0E A9 01 00 87 00 00 25 01 00 51 09 0A BE 80];
+			39 00 00 00 00 00 0E A9 01 00 87 00 00 25 01 00 51 09 0A BE 80];
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
