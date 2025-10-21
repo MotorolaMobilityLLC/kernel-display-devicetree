@@ -3,7 +3,7 @@
 /dts-v1/;
 /plugin/;
 // This file is copied from: cliffs-sde-display-arcfox-pvt2-overlay.dts
-#include "cliffs-sde-display-arcfox25-common.dtsi"
+#include "cliffs-sde-display-eiger-common.dtsi"
 
 / {
 	model = "eiger";
