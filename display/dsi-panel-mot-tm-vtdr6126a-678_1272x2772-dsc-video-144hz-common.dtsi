@@ -39,23 +39,23 @@
 		qcom,mdss-dsi-force-clock-lane-hs;
 
 		qcom,mdss-dsi-dc-off-command = [
-				39 00 00 00 00 00 02 5E 00];
+			39 00 00 00 00 00 02 5E 00];
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-dc-on-command = [
-				39 00 00 00 00 00 02 5E 01];
+			39 00 00 00 00 00 02 5E 01];
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-				39 00 00 40 00 00 02 62 00
-				39 00 00 00 00 00 03 51 3E 80];
+			39 00 00 40 00 00 02 62 00
+			39 00 00 00 00 00 03 51 3E 80];
 		qcom,mdss-dsi-hbm-off-command = [
-				39 00 00 40 00 00 02 62 00
-				39 00 00 00 00 00 03 51 2C 50];
+			39 00 00 40 00 00 02 62 00
+			39 00 00 00 00 00 03 51 2C 50];
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
-				39 00 00 40 00 00 05 63 10 00 1A 3C
-				39 01 00 00 00 00 02 62 03];
+			39 00 00 40 00 00 05 63 10 00 1A 3C
+			39 01 00 00 00 00 02 62 03];
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
 		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <3519>;
@@ -150,7 +150,7 @@
 					39 00 00 00 00 00 03 F0 AA 00
 					39 00 00 00 00 00 03 FF 5A 00
 
-					05 00 00 00 78 00 01 11
+					05 00 00 00 55 00 01 11
 					05 00 00 00 00 00 01 29
 				];
 
@@ -221,7 +221,7 @@
 					39 00 00 00 00 00 03 F0 AA 00
 					39 00 00 00 00 00 03 FF 5A 00
 
-					05 00 00 00 78 00 01 11
+					05 00 00 00 55 00 01 11
 					05 00 00 00 00 00 01 29
 
 					//cmd aod mode
@@ -249,19 +249,19 @@
 				qcom,mdss-dsc-block-prediction-enable;
 
 				qcom,mdss-dsi-dfps-60-command = [
-						39 00 00 00 00 00 02 6C 03];
+					39 00 00 00 00 00 02 6C 03];
 				qcom,mdss-dsi-dfps-60-command-state = "dsi_lp_mode";
 
 				qcom,mdss-dsi-dfps-90-command = [
-						39 00 00 00 00 00 02 6C 02];
+					39 00 00 00 00 00 02 6C 02];
 				qcom,mdss-dsi-dfps-90-command-state = "dsi_lp_mode";
 
 				qcom,mdss-dsi-dfps-120-command = [
-						39 00 00 00 00 00 02 6C 01];
+					39 00 00 00 00 00 02 6C 01];
 				qcom,mdss-dsi-dfps-120-command-state = "dsi_lp_mode";
 
 				qcom,mdss-dsi-dfps-144-command = [
-						39 00 00 00 00 00 02 6C 00];
+					39 00 00 00 00 00 02 6C 00];
 				qcom,mdss-dsi-dfps-144-command-state = "dsi_lp_mode";
 
 				qcom,mdss-dsi-pcd-check-enable-command = [
