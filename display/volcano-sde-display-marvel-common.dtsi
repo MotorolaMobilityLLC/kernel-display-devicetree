@@ -33,8 +33,8 @@
 		qcom,panel-supply-entry@1 {
 			reg = <1>;
 			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <1200000>;
-			qcom,supply-max-voltage = <1200000>;
+			qcom,supply-min-voltage = <1250000>;
+			qcom,supply-max-voltage = <1250000>;
 			qcom,supply-enable-load = <299000>;
 			qcom,supply-disable-load = <0>;
 			qcom,supply-post-on-sleep = <0>;
@@ -78,8 +78,8 @@
 		qcom,panel-supply-entry@2 {
 			reg = <2>;
 			qcom,supply-name = "vdd";
-			qcom,supply-min-voltage = <1200000>;
-			qcom,supply-max-voltage = <1200000>;
+			qcom,supply-min-voltage = <1250000>;
+			qcom,supply-max-voltage = <1250000>;
 			qcom,supply-enable-load = <100000>;
 			qcom,supply-disable-load = <100>;
 			qcom,supply-post-on-sleep = <0>;
@@ -460,6 +460,12 @@
 			qcom,default-topology-index = <0>;
 		};
 	};
+};
+
+&L6F {
+       regulator-min-microvolt = <1250000>;
+       regulator-max-microvolt = <1250000>;
+       qcom,init-voltage = <1250000>;
 };
 
 &sde_dsi {
