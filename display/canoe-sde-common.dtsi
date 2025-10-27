@@ -401,6 +401,15 @@
 				qcom,supply-enable-load = <16600>;
 				qcom,supply-disable-load = <0>;
 			};
+
+			qcom_ctrl_supply_entry_0_1: qcom,ctrl-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda-1p2-parent";
+				qcom,supply-min-voltage = <1224000>;
+				qcom,supply-max-voltage = <1372000>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
 		};
 	};
 
@@ -427,6 +436,15 @@
 				qcom,supply-min-voltage = <1200000>;
 				qcom,supply-max-voltage = <1200000>;
 				qcom,supply-enable-load = <16600>;
+				qcom,supply-disable-load = <0>;
+			};
+
+			qcom_ctrl_supply_entry_0_3: qcom,ctrl-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda-1p2-parent";
+				qcom,supply-min-voltage = <1224000>;
+				qcom,supply-max-voltage = <1372000>;
+				qcom,supply-enable-load = <0>;
 				qcom,supply-disable-load = <0>;
 			};
 		};
@@ -469,6 +487,15 @@
 				qcom,supply-enable-load = <98000>;
 				qcom,supply-disable-load = <96>;
 			};
+
+			qcom_phy_supply_entry_0_5: qcom,phy-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda-0p9-parent";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <1100000>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
+			};
 		};
 	};
 
@@ -508,6 +535,15 @@
 				qcom,supply-max-voltage = <880000>;
 				qcom,supply-enable-load = <98000>;
 				qcom,supply-disable-load = <96>;
+			};
+
+			qcom_phy_supply_entry_0_6: qcom,phy-supply-entry@1 {
+				reg = <1>;
+				qcom,supply-name = "vdda-0p9-parent";
+				qcom,supply-min-voltage = <880000>;
+				qcom,supply-max-voltage = <1100000>;
+				qcom,supply-enable-load = <0>;
+				qcom,supply-disable-load = <0>;
 			};
 		};
 	};
