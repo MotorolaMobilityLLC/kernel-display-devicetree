@@ -284,7 +284,7 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
 	qcom,mdss-dsi-bl-max-level = <16153>;
-	qcom,mdss-dsi-bl-default-level = <10230>;
+	qcom,mdss-dsi-bl-default-level = <6735>;
 	qcom,mdss-brightness-max-level = <16153>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
 	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
@@ -387,7 +387,7 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
 	qcom,mdss-dsi-bl-max-level = <16153>;
-	qcom,mdss-dsi-bl-default-level = <10230>;
+	qcom,mdss-dsi-bl-default-level = <6735>;
 	qcom,mdss-brightness-max-level = <16153>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
 	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
