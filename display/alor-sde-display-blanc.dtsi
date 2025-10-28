@@ -616,3 +616,10 @@
 		panel = <&mot_csot_nt37707_667_1080x2520_dsc_cmd>;
 	};
 };
+
+&goodix_fingerprint {
+	qcom,display-panels =  <&mot_csot_nt37900_809_2484x2232_dsc_cmd_v1
+			       &mot_csot_nt37900_809_2484x2232_dsc_cmd>;
+	qcom,display-panels-fold= <&mot_csot_nt37707_667_1080x2520_dsc_cmd>;
+};
+
