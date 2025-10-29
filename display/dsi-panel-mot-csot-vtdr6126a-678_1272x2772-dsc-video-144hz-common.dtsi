@@ -240,9 +240,9 @@
 				qcom,mdss-dsi-pcd-check-enable-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-pcd-check-disable-command = [
-					39 00 00 40 00 00 03 D0 08 00
-					39 00 00 40 00 00 03 F0 AA 00
-					39 00 00 00 00 00 03 FF 5A 00];
+					39 00 00 40 00 00 03 F0 AA 12
+					39 00 00 40 00 00 03 D0 00 00
+					39 00 00 00 00 00 03 F0 AA 00];
 				qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-switch-in-commands = [
