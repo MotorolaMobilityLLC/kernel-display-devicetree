@@ -48,14 +48,17 @@
 		qcom,mdss-dsi-hbm-on-command = [
 			39 00 00 40 00 00 02 62 00
 			39 00 00 00 00 00 03 51 3E 80];
+		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-off-command = [
 			39 00 00 40 00 00 02 62 00
 			39 00 00 00 00 00 03 51 2C 50];
+		qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
 			39 00 00 40 00 00 05 63 10 00 1A 3C
 			39 01 00 00 00 00 02 62 03];
+		qcom,mdss-dsi-hbm-fod-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
 		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <3519>;
@@ -217,19 +220,19 @@
 
 				qcom,mdss-dsi-dfps-60-command = [
 					39 00 00 00 00 00 02 6C 03];
-				qcom,mdss-dsi-dfps-60-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-dfps-60-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-90-command = [
 					39 00 00 00 00 00 02 6C 02];
-				qcom,mdss-dsi-dfps-90-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-dfps-90-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-120-command = [
 					39 00 00 00 00 00 02 6C 01];
-				qcom,mdss-dsi-dfps-120-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-144-command = [
 					39 00 00 00 00 00 02 6C 00];
-				qcom,mdss-dsi-dfps-144-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-dfps-144-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-pcd-check-enable-command = [
 					39 00 00 40 00 00 03 F0 AA 12
@@ -249,16 +252,16 @@
 					39 00 00 00 11 00 02 6D 01
 					05 00 00 00 00 00 01 29];
 
-				qcom,cmd-mode-switch-in-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-switch-out-commands = [
 					39 00 00 40 00 00 03 51 19 1A
 					39 00 00 00 5A 00 02 A6 01];
-				qcom,cmd-mode-switch-out-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-backlight-commands = [
 					39 00 00 00 00 00 02 6D 01];
-				qcom,cmd-mode-backlight-commands-state = "dsi_lp_mode";
+				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
 			};
 		};
 	};
