@@ -143,7 +143,7 @@
 	qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x02C0>;
 	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>;
 	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //pcd reg read seq interval per screen on.
-	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //pcd reg read time interval in minutes.
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 	// only parse for cmd panel
 	qcom,mdss-dsi-te-pin-select = <1>;
@@ -232,7 +232,7 @@
 	qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x02C0>;
 	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>;
 	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //pcd reg read seq interval per screen on.
-	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //pcd reg read time interval in minutes.
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 	// only parse for cmd panel
 	qcom,mdss-dsi-te-pin-select = <1>;
@@ -321,7 +321,7 @@
 	qcom,mdss-dsi-panel-pcd-reg-pass-max = <0xDC>;
 	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>; //150ms delay before read pcd reg per IC req
 	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
-	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 	// only parse for cmd panel
 	qcom,mdss-dsi-te-pin-select = <1>;
@@ -426,7 +426,7 @@
 	qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x85>;
 	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>; //150ms delay before read pcd reg per IC req
 	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
-	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 	// only parse for cmd panel
 	qcom,mdss-dsi-te-pin-select = <1>;
