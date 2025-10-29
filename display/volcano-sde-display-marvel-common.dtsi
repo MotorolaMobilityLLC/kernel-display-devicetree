@@ -107,7 +107,6 @@
 	qcom,mdss-dsi-bl-default-level = <6735>;
 	qcom,mdss-brightness-max-level = <16153>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
-	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
 
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
@@ -197,7 +196,6 @@
 	qcom,mdss-dsi-bl-default-level = <6735>;
 	qcom,mdss-brightness-max-level = <16153>;
 	qcom,platform-reset-gpio = <&tlmm 12 0>;
-	qcom,bl-dsc-cmd-state = "dsi_lp_mode";
 
 	qcom,mdss-dsi-bl-inverted-dbv;
 	qcom,mdss-dsi-bl-is-exponent;
