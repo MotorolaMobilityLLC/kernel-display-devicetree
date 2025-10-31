@@ -8,6 +8,8 @@
 #include "dsi-panel-mot-tm-vtdr6126a-678_1272x2772-dsc-video-144hz-common-lhbm-v1.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126a-678_1272x2772-dsc-video-144hz-common.dtsi"
 #include "dsi-panel-mot-csot-vtdr6126a-678_1272x2772-dsc-video-144hz-common-lhbm.dtsi"
+#include "dsi-panel-mot-csot-vtdr6126a-678_1272x2772-dsc-video-144hz-common_v1.dtsi"
+#include "dsi-panel-mot-csot-vtdr6126a-678_1272x2772-dsc-video-144hz-common-lhbm-v1.dtsi"
 
 &mdss_mdp {
 	connectors = <&sde_dsi &smmu_sde_unsec &sde_wb2 &sde_rscc>;
@@ -571,6 +573,98 @@
 	};
 };
 
+&mot_csot_vtdr6126a_678_1272x2772_dsc_vid_v1 {
+	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
+
+	qcom,dsi-supported-dfps-list = <60 90 120 144>;
+	qcom,mdss-dsi-pan-enable-dynamic-fps;
+	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
+	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
+	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
+	qcom,mdss-dsi-pan-dfps-send-command;
+
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <420>;
+	qcom,mdss-dsi-bl-max-level = <16153>;
+	qcom,mdss-dsi-bl-default-level = <6735>;
+	qcom,mdss-brightness-max-level = <16153>;
+	qcom,platform-reset-gpio = <&tlmm 12 0>;
+
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <14950 15750 34000
+	        16000 13000 35500 7000 2500>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0A];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9C>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
+	qcom,mdss-dsi-panel-cellid-command-state = "dsi_hs_mode";
+
+	qcom,check_pcd;
+	qcom,pcd-reg-read-enabled;
+	qcom,pcd-reg-check-before-read;
+	qcom,mdss-dsi-panel-pcd-reg-read-length = <1>;
+	qcom,mdss-dsi-panel-pcd-reg-mask = <0xFF>;
+	qcom,mdss-dsi-panel-pcd-reg-command = [
+		39 00 00 40 00 00 03 F0 AA 12
+		39 00 00 00 00 00 02 65 04
+		06 01 00 01 00 00 01 D0];
+	qcom,mdss-dsi-panel-pcd-reg-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-panel-pcd-reg-pass-min = <0x80>;
+	qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x85>;
+	qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>; //150ms delay before read pcd reg per IC req
+	qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
+	qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
+
+	// only parse for cmd panel
+	qcom,mdss-dsi-te-pin-select = <1>;
+	qcom,mdss-dsi-te-dcs-command = <1>;
+	qcom,mdss-dsi-te-using-te-pin;
+	qcom,mdss-dsi-te-check-enable;
+	qcom,mdss-dsi-wr-mem-start = <0x2c>;
+	qcom,mdss-dsi-wr-mem-continue = <0x3c>;
+
+	//AOD: config switch mode
+	qcom,mdss-dsi-panel-mode-switch;
+	//qcom,poms-align-panel-vsync;
+	qcom,dynamic-mode-switch-enabled;
+	//qcom,dynamic-mode-switch-type = "dynamic-switch-immediate";
+
+	qcom,mdss-dsi-panel-AOD-config-enabled;
+	qcom,mdss-dsi-panel-AOD-bl-vid-update;
+
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
+	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
+
+	qcom,mdss-dsi-panel-AOD-bl-min = <0>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
+
+	qcom,mdss-dsi-display-timings {
+		timing@0 {
+			qcom,framerate-group-no-duplicated;
+			//qcom,mdss-dsi-panel-clockrate = <1095000000>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 26 0A
+				0B 0A 02 04 00 21 10];
+			qcom,display-topology = <1 1 1>;
+			qcom,default-topology-index = <0>;
+		};
+	};
+};
+
 &L6F {
        regulator-min-microvolt = <1250000>;
        regulator-max-microvolt = <1250000>;
@@ -606,6 +700,7 @@
 			 &mot_boe_nt37713_678_1272x2772_dsc_vid_v1
 			 &mot_tm_vtdr6126a_678_1272x2772_dsc_vid
 			 &mot_tm_vtdr6126a_678_1272x2772_dsc_vid_v1
-			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid>;
+			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid
+			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid_v1>;
 	};
 };
