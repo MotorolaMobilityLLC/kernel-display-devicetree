@@ -68,6 +68,11 @@
 				39 00 00 40 00 00 02 8B 01
 				39 00 00 00 00 00 02 87 25];
 
+		qcom,mdss-dsi-panel-lhbm-wait-fps-valid;
+		qcom,mdss-dsi-panel-local-hbm-wait-fps-count = <30>;
+		qcom,mdss-dsi-panel-local-hbm-wait-fps-interval = <1>;
+		qcom,mdss-dsi-panel-lhbm-not-allowed-fps-list = <60 90 144>;
+
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
