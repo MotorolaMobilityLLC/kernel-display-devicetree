@@ -63,7 +63,7 @@ qcom,mdss-dsi-panel-pcd-reg-pass-min = <0x0>;
 qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x29>;
 qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <0>; //150ms delay before read pcd reg per IC req
 qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
-qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <60>; //60 minutes check time interval for pcd reg read
+qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes check time interval for pcd reg read
 
 qcom,mdss-dsi-dc-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 4F
