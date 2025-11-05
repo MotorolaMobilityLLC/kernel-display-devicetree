@@ -1,0 +1,13 @@
+/dts-v1/;
+/plugin/;
+
+#include "volcano-sde.dtsi"
+
+/ {
+	qcom,msm-id = <636 0x10000>, <640 0x10000>, <641 0x10000>, <712 0x10000>;
+	qcom,board-id = <0 0>;
+};
+
+&mdss_dsi_phy0 {
+	/delete-property/ qcom,dsi-pll-ssc-en;
+};

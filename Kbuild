@@ -77,7 +77,6 @@ dtbo-$(CONFIG_ARCH_CLIFFS) += display/cliffs-sde.dtbo
 dtbo-$(CONFIG_ARCFOX_DTB) += display/cliffs-sde-display-arcfox-evt3-overlay.dtbo \
                              display/cliffs-sde-display-arcfox-pvt2-overlay.dtbo
 dtbo-$(CONFIG_CTWO_DTB) += display/cliffs-sde-display-ctwo-evb3-overlay.dtbo
-dtbo-$(CONFIG_MARVEL_DTB) += display/volcano-sde-display-marvel-evb-overlay.dtbo
 dtbo-$(CONFIG_EIGER_DTB) += display/cliffs-sde-display-eiger-evt-overlay.dtbo
 
 else
@@ -100,6 +99,7 @@ dtbo-$(CONFIG_ARCH_CLIFFS) += display/trustedvm-cliffs-sde-display-mtp-overlay.d
 endif
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 dtbo-$(CONFIG_ARCH_VOLCANO) += display/volcano-sde.dtbo \
 		display/volcano-sde-fp1.dtbo \
 		display/volcano-sde-fp2.dtbo \
@@ -117,6 +117,10 @@ dtbo-$(CONFIG_ARCH_VOLCANO) += display/volcano-sde.dtbo \
 		display/volcano-sde-display-iot-mtp-wcd9395-overlay.dtbo \
 		display/volcano-sde-display-iot-mtp-wcd9395-pm7550ba-overlay.dtbo \
 		display/volcano-sde-display-iot-mtp-wingmate-overlay.dtbo
+else
+dtbo-$(CONFIG_MARVEL_DTB) += display/volcano-sde-marvel.dtbo \
+		display/volcano-sde-display-marvel-evb-overlay.dtbo
+endif # end of CONFIG_MMI_DEVICE_DTBS
 else
 dtbo-$(CONFIG_ARCH_VOLCANO) += display/trustedvm-volcano-sde-display-atp-overlay.dtbo \
 		  display/trustedvm-volcano-sde-display-idp-overlay.dtbo \
