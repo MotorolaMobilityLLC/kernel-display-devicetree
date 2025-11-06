@@ -488,7 +488,7 @@
 	qcom,mdss-dsi-panel-partition-refreshrate-slice-h = <8>;
 	qcom,mdss-dsi-panel-partition-refreshrate-min-boundaryLine = <0>;
 	qcom,mdss-dsi-panel-partition-refreshrate-max-boundaryLine = <2232>;
-	qcom,mdss-dsi-panel-partition-refreshrate-under-dfps-list = <120 60>;
+	qcom,mdss-dsi-panel-partition-refreshrate-under-dfps-list = <120 90 60>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //60
@@ -558,16 +558,6 @@
 		};
 		timing@6 { //1
 			qcom,framerate-group-special-idle-1hz;
-			qcom,partial-update-enabled = "single_roi";
-			qcom,panel-roi-alignment = <2484 160 2484 160 2484 160>;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
-			qcom,display-topology = <2 2 1>;
-			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
-		};
-		timing@7 { //10-120-10
-			qcom,framerate-group-partition-refreshrate;
 			qcom,partial-update-enabled = "single_roi";
 			qcom,panel-roi-alignment = <2484 160 2484 160 2484 160>;
 			qcom,mdss-dsi-panel-clockrate = <1467720000>;
