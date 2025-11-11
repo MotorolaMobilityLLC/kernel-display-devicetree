@@ -126,6 +126,10 @@ dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-kera-sde-display-atp-overlay.dtbo 
 		display/trustedvm-kera-sde-display-rcm-overlay.dtbo
 endif
 
+ifneq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-$(CONFIG_ARCH_MALABAR) += display/malabar-sde.dtbo
+endif
+
 dtbo-$(CONFIG_ARCH_VIENNA) += display/vienna-sde.dtbo \
 		display/vienna-sde-display-wdp-overlay.dtbo \
 		display/vienna-sde-display-idp-overlay.dtbo \
