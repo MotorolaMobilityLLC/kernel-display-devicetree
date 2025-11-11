@@ -273,6 +273,7 @@
         qcom,cellid-read-enabled;
         qcom,mdss-dsi-panel-cellid-read-length = <23>;
         qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
+        qcom,mdss-dsi-panel-cellid-command-state = "dsi_hs_mode";
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -282,17 +283,25 @@
 	qcom,mdss-dsi-panel-status-read-length = <2>;
 
 	qcom,panel-od-enabled;
-	qcom,mdss-dsi-bl-od-threshold = <1739>; /* Corresponds to 10 nits */
+	qcom,mdss-dsi-bl-od-threshold = <1740>; /* Corresponds to 10 nits */
 	qcom,mdss-dsi-panel-od-on-command = [
+		39 00 00 40 00 00 02 A4 02
 		39 00 00 40 00 00 03 F0 AA 19
 		39 00 00 40 00 00 02 C0 A2
-		39 00 00 00 00 00 03 51 03 6E];
-	qcom,mdss-dsi-panel-od-on-command-state = "dsi_lp_mode";
+		39 00 00 40 00 00 03 51 03 6E
+		39 00 00 40 00 00 03 F0 AA 00
+		39 00 00 40 00 00 02 A4 00
+		39 00 00 00 00 00 02 A6 02];
+	qcom,mdss-dsi-panel-od-on-command-state = "dsi_hs_mode";
 	qcom,mdss-dsi-panel-od-off-command = [
+		39 00 00 40 00 00 02 A4 02
 		39 00 00 40 00 00 03 F0 AA 19
 		39 00 00 40 00 00 02 C0 02
-		39 00 00 00 00 00 03 51 03 6E];
-	qcom,mdss-dsi-panel-od-off-command-state = "dsi_lp_mode";
+		39 00 00 40 00 00 03 51 03 6E
+		39 00 00 40 00 00 03 F0 AA 00
+		39 00 00 40 00 00 02 A4 00
+		39 00 00 00 00 00 02 A6 02];
+	qcom,mdss-dsi-panel-od-off-command-state = "dsi_hs_mode";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -330,6 +339,7 @@
         qcom,cellid-read-enabled;
         qcom,mdss-dsi-panel-cellid-read-length = <23>;
         qcom,mdss-dsi-panel-cellid-command = [06 01 00 01 00 00 01 5A];
+        qcom,mdss-dsi-panel-cellid-command-state = "dsi_hs_mode";
 
 	qcom,esd-check-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
@@ -339,17 +349,25 @@
 	qcom,mdss-dsi-panel-status-read-length = <2>;
 
 	qcom,panel-od-enabled;
-	qcom,mdss-dsi-bl-od-threshold = <1739>; /* Corresponds to 10 nits */
+	qcom,mdss-dsi-bl-od-threshold = <1740>; /* Corresponds to 10 nits */
 	qcom,mdss-dsi-panel-od-on-command = [
+		39 00 00 40 00 00 02 A4 02
 		39 00 00 40 00 00 03 F0 AA 19
 		39 00 00 40 00 00 02 C0 A2
-		39 00 00 00 00 00 03 51 03 6E];
-	qcom,mdss-dsi-panel-od-on-command-state = "dsi_lp_mode";
+		39 00 00 40 00 00 03 51 03 6E
+		39 00 00 40 00 00 03 F0 AA 00
+		39 00 00 40 00 00 02 A4 00
+		39 00 00 00 00 00 02 A6 02];
+	qcom,mdss-dsi-panel-od-on-command-state = "dsi_hs_mode";
 	qcom,mdss-dsi-panel-od-off-command = [
+		39 00 00 40 00 00 02 A4 02
 		39 00 00 40 00 00 03 F0 AA 19
 		39 00 00 40 00 00 02 C0 02
-		39 00 00 00 00 00 03 51 03 6E];
-	qcom,mdss-dsi-panel-od-off-command-state = "dsi_lp_mode";
+		39 00 00 40 00 00 03 51 03 6E
+		39 00 00 40 00 00 03 F0 AA 00
+		39 00 00 40 00 00 02 A4 00
+		39 00 00 00 00 00 02 A6 02];
+	qcom,mdss-dsi-panel-od-off-command-state = "dsi_hs_mode";
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {

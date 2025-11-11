@@ -47,6 +47,7 @@
 			39 00 00 40 00 00 03 F0 AA 12
 			39 00 00 00 00 00 02 65 04
 			06 01 00 01 00 00 01 D0];
+		qcom,mdss-dsi-panel-pcd-reg-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-panel-pcd-reg-pass-min = <0x80>;
 		qcom,mdss-dsi-panel-pcd-reg-pass-max = <0x83>;
 		qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>; //150ms delay before read pcd reg per IC req
@@ -62,13 +63,17 @@
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
-			39 00 00 40 00 00 02 62 00
-			39 00 00 00 00 00 03 51 3F FC];
+			39 00 00 40 00 00 02 A4 02
+			39 00 00 40 00 00 03 F0 AA 19
+			39 00 00 40 00 00 02 C0 02
+			39 00 00 40 00 00 03 51 3F FC
+			39 00 00 40 00 00 03 F0 AA 00
+			39 00 00 40 00 00 02 A4 00
+			39 00 00 00 00 00 02 A6 02];
 		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-off-command = [
-			39 00 00 40 00 00 02 62 00
-			39 00 00 00 00 00 03 51 2C 50];
+			39 00 00 00 00 00 02 62 00];
 		qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-fod;
@@ -82,6 +87,11 @@
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
 		qcom,mdss-dsi-panel-local-hbm-DDIC-type = <0x6126>;
+
+		qcom,mdss-dsi-panel-lhbm-wait-fps-valid;
+		qcom,mdss-dsi-panel-local-hbm-wait-fps-count = <30>;
+		qcom,mdss-dsi-panel-local-hbm-wait-fps-interval = <1>;
+		qcom,mdss-dsi-panel-lhbm-not-allowed-fps-list = <60 90>;
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
@@ -224,15 +234,15 @@
 				qcom,mdss-dsc-block-prediction-enable;
 
 				qcom,mdss-dsi-dfps-60-command = [
-						39 00 00 00 00 00 02 6C 03];
+					39 00 00 00 00 00 02 6C 03];
 				qcom,mdss-dsi-dfps-60-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-90-command = [
-						39 00 00 00 00 00 02 6C 02];
+					39 00 00 00 00 00 02 6C 02];
 				qcom,mdss-dsi-dfps-90-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-dfps-120-command = [
-						39 00 00 00 00 00 02 6C 01];
+					39 00 00 00 00 00 02 6C 01];
 				qcom,mdss-dsi-dfps-120-command-state = "dsi_hs_mode";
 
 				qcom,mdss-dsi-pcd-check-enable-command = [
