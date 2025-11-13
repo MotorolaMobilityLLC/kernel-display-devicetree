@@ -445,7 +445,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 60 06
 			39 00 00 40 00 00 04 FF 5A A5 53
 			39 00 00 40 00 00 02 86 3D //Exit 165 DC code
-			39 00 00 00 00 00 04 FF 5A A5 00
+			39 00 00 00 07 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
 			39 00 00 40 00 00 04 FF 5A A5 06 //esd check
