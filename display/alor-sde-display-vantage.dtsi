@@ -482,6 +482,11 @@
 		39 00 00 40 00 00 02 E0 00
 		39 00 00 00 00 00 04 FF 5A A5 00];
 
+	qcom,switch-timing-delay-enabled;
+	qcom,switch-orig-timing-list = <165>;
+	qcom,switch-active-timing-list = <60>;
+	qcom,switch-delay-list = <17>;
+
 	//qcom,ulps-enabled;
 	qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
@@ -647,6 +652,11 @@
 		39 00 00 40 00 00 04 FF 5A A5 49
 		39 00 00 40 00 00 02 E0 00
 		39 00 00 00 00 00 04 FF 5A A5 00];
+
+	qcom,switch-timing-delay-enabled;
+	qcom,switch-orig-timing-list = <165>;
+	qcom,switch-active-timing-list = <60>;
+	qcom,switch-delay-list = <17>;
 
 	//qcom,ulps-enabled;
 	qcom,qsync-enable;
