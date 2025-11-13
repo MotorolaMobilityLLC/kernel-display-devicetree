@@ -280,6 +280,7 @@
 	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
 	qcom,dsi-supported-dfps-hfp-list = <124 124 124 40>;
 	qcom,mdss-dsi-pan-dfps-send-command;
+	qcom,dsi-supported-dfps-cmd-delay-effect-list = <144>;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-no-panel-on-read-support;
@@ -393,6 +394,7 @@
 	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
 	qcom,dsi-supported-dfps-hfp-list = <124 124 124 40>;
 	qcom,mdss-dsi-pan-dfps-send-command;
+	qcom,dsi-supported-dfps-cmd-delay-effect-list = <144>;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-no-panel-on-read-support;
@@ -506,6 +508,7 @@
 	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
 	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
 	qcom,mdss-dsi-pan-dfps-send-command;
+	qcom,dsi-supported-dfps-cmd-delay-effect-list = <144>;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-no-panel-on-read-support;
@@ -598,6 +601,7 @@
 	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
 	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
 	qcom,mdss-dsi-pan-dfps-send-command;
+	qcom,dsi-supported-dfps-cmd-delay-effect-list = <144>;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_vtdr>;
 	qcom,mdss-dsi-no-panel-on-read-support;
