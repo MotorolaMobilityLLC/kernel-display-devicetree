@@ -573,9 +573,9 @@
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
 
-	qcom,mdss-dsi-panel-AOD-bl-min = <0>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-min = <2>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <0>; //160nit
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
@@ -665,9 +665,9 @@
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-min-nit = <1112>;	//5nit
 	qcom,mdss-dsi-panel-AOD-THRESHOLD-hig-nit = <6735>;	//160nit
 
-	qcom,mdss-dsi-panel-AOD-bl-min = <0>; //5nit
+	qcom,mdss-dsi-panel-AOD-bl-min = <2>; //5nit
 	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
-	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
+	qcom,mdss-dsi-panel-AOD-bl-hig = <0>; //160nit
 
 	qcom,apl-enabled;
 	qcom,mdss-dsi-panel-apl-with-backlight;
