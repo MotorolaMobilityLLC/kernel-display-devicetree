@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-chora-sde.dtsi"
+#include "trustedvm-chora-sde-display-mtp-lcd.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Chora MTP LCD";
+	compatible = "qcom,chora-mtp-lcd", "qcom,chora", "qcom,mtp-lcd";
+	qcom,msm-id = <724 0x10000>, <744 0x10000>;
+	qcom,board-id = <0x10108 0x0>, <0x20008 0x0>;
+};

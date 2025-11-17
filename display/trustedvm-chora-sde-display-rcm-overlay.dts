@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-chora-sde.dtsi"
+#include "trustedvm-chora-sde-display-rcm.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Chora SVM RCM";
+	compatible = "qcom,chora-rcm", "qcom,chora", "qcom,rcm";
+	qcom,msm-id = <724 0x10000>, <744 0x10000>;
+	qcom,board-id = <0x10015 0x0>, <0x20015 0x0>;
+};
