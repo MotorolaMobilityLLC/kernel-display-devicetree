@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "malabar-sde-display-mtp.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Malabar  MTP + WCN3950";
+	compatible = "qcom,malabar-mtp", "qcom,malabar", "qcom,malabarp-mtp", "qcom,malabarp",
+			"qcom,mtp";
+	qcom,msm-id = <733 0x10000>, <757 0x10000>;
+	qcom,board-id = <10008 0>, <0x20008 0>;
+};
