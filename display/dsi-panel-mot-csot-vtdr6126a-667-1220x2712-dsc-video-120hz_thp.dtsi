@@ -96,7 +96,7 @@
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
-				qcom,mdss-dsi-panel-framerate = <120>;
+				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <1220>;
 				qcom,mdss-dsi-panel-height = <2712>;
 				qcom,mdss-dsi-h-front-porch = <26>;
@@ -105,7 +105,7 @@
 				qcom,mdss-dsi-h-sync-skew = <0>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-v-back-porch = <18>;
-				qcom,mdss-dsi-v-front-porch = <604>;
+				qcom,mdss-dsi-v-front-porch = <3940>;
 				qcom,mdss-dsi-v-pulse-width = <2>;
 				qcom,mdss-dsi-h-left-border = <0>;
 				qcom,mdss-dsi-h-right-border = <0>;
@@ -176,7 +176,7 @@
 					39 00 00 00 00 00 02 53 20
 					39 00 00 00 00 00 02 59 09
 					39 00 00 00 00 00 02 5E 00
-					39 00 00 00 00 00 02 6C 01
+					39 00 00 00 00 00 02 6C 03
 					39 00 00 00 00 00 02 6F 01
 					39 00 00 00 00 00 02 72 00
 
@@ -187,6 +187,10 @@
 					39 00 00 00 00 00 1A 70 62 69 70 77 79 7B 7D 7E 02 02 22 00 2A 40 2A BE 3A FC 3A FA 3A F8 3B 38 3B
 					39 00 00 00 00 00 02 65 4B
 					39 00 00 00 00 00 14 70 78 3B B6 4B B6 4B F4 4B F4 6C 34 84 74 00 00 00 00 00 00
+
+					39 00 00 00 00 00 03 F0 AA 12
+					39 00 00 00 00 00 02 65 0B
+					39 00 00 00 00 00 02 E9 00
 
 					39 00 00 00 00 00 03 F0 AA 16
 					39 00 00 00 00 00 11 D1 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -214,10 +218,9 @@
 					39 00 00 00 00 00 02 CF 5B
 					39 00 00 00 00 00 02 65 0B
 					39 00 00 00 00 00 03 CF FD 79
-					39 00 00 00 00 00 03 44 06 8C
 					39 00 00 00 00 00 03 FF 5A 00
 					39 00 00 00 00 00 03 F0 AA 00
-					05 00 00 00 55 00 01 11
+					05 00 00 00 78 00 01 11
 					05 00 00 00 00 00 01 29
 				];
 
