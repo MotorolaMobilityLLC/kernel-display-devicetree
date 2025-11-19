@@ -1,0 +1,25 @@
+
+/* Copyright (c) 2019-2025, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&mot_csot_nt37706_667_1220p_dsc_vid_120hz_v3 {
+	#include "dsi-panel-mot-csot-nt37706-667-1220x2712-dsc-video-120hz-common-lhbm-v3-common.dtsi"
+};
+
+&mot_csot_nt37706_667_1220p_dsc_vid_120hz_v31 {
+	#include "dsi-panel-mot-csot-nt37706-667-1220x2712-dsc-video-120hz-common-lhbm-v3-common.dtsi"
+};
+
+&mot_csot_nt37706_667_1220p_dsc_vid_120hz_v32 {
+	#include "dsi-panel-mot-csot-nt37706-667-1220x2712-dsc-video-120hz-common-lhbm-v3-common.dtsi"
+};
+
