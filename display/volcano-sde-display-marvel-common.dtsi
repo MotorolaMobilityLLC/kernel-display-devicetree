@@ -351,7 +351,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
 
-	//qcom,panel-od-enabled;
+	qcom,panel-od-enabled;
 	qcom,mdss-dsi-bl-od-threshold = <878>;
 	qcom,mdss-dsi-panel-od-on-command = [
 		39 00 00 40 00 00 02 A4 01
@@ -464,7 +464,7 @@
 	qcom,mdss-dsi-panel-AOD-bl-mid = <1>; //60nit
 	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
 
-	//qcom,panel-od-enabled;
+	qcom,panel-od-enabled;
 	qcom,mdss-dsi-bl-od-threshold = <878>;
 	qcom,mdss-dsi-panel-od-on-command = [
 		39 00 00 40 00 00 02 A4 01
