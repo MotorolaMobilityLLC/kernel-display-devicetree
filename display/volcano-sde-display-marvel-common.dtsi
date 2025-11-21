@@ -99,9 +99,10 @@
 	qcom,dsi-supported-dfps-list = <60 90 120 144>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
-	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84  >;
-	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28  >;
+	qcom,dsi-supported-dfps-vfp-list = <2964 1044 84 84>;
+	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
 	qcom,mdss-dsi-pan-dfps-send-command;
+	qcom,dsi-supported-dfps-cmd-delay-effect-list = <144>;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
 	qcom,mdss-dsi-no-panel-on-read-support;
@@ -185,12 +186,13 @@
 &mot_boe_nt37713_678_1272x2772_dsc_vid {
 	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 
-	qcom,dsi-supported-dfps-list = <60 90 120 144 >;
+	qcom,dsi-supported-dfps-list = <60 90 120 144>;
 	qcom,mdss-dsi-pan-enable-dynamic-fps;
 	qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_cus";
-	qcom,dsi-supported-dfps-vfp-list = <2892 996 48 44  >;
-	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28  >;
+	qcom,dsi-supported-dfps-vfp-list = <2892 996 48 44>;
+	qcom,dsi-supported-dfps-hfp-list = <108 108 108 28>;
 	qcom,mdss-dsi-pan-dfps-send-command;
+	qcom,dsi-supported-dfps-cmd-delay-effect-list = <144>;
 
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_marvel>;
 	qcom,mdss-dsi-no-panel-on-read-support;
