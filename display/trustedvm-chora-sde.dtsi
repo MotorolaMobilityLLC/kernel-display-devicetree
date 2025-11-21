@@ -4,9 +4,60 @@
  */
 
 #include <dt-bindings/clock/qcom,chora-dispcc.h>
+#include <dt-bindings/clock/qcom,chora-gcc.h>
 #include "chora-sde-common.dtsi"
 
 &soc {
+	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
+		iommu-addresses = <&smmu_sde_unsec 0x0 0x0 0x0 0x00020000>;
+	};
+
+	/* dummy display clock provider */
+	clock_cpucc: qcom,cpucc {
+		compatible = "qcom,dummycc";
+		clock-output-names = "cpucc_clocks";
+		#clock-cells = <1>;
+	};
+
+	smmu_sde_unsec: qcom,smmu_sde_unsec_cb {
+		compatible = "qcom,smmu_sde_unsec";
+		memory-region = <&smmu_sde_iommu_region_partition>;
+		iommus = <&apps_smmu 0x403 0x0>,
+			<&apps_smmu 0x404 0x2>;
+		qcom,iommu-faults = "non-fatal";
+		dma-coherent;
+	};
+};
+
+&mdss_mdp {
+	reg = <0x0 0x0ae00000 0x0 0x84000>,
+		<0x0 0x0aeb0000 0x0 0x2008>,
+		<0x0 0x0af80000 0x0 0x7000>,
+		<0x0 0x0ae8f000 0x0 0x02c>;
+
+	reg-names = "mdp_phys",
+		"vbif_phys",
+		"regdma_phys",
+		"sid_phys";
+
+	qcom,sde-vm-exclude-reg-names = "sid_phys";
+
+	qcom,sde-hw-version =<0xA0030000>;
+
+	clocks =
+		<&gcc GCC_DISP_HF_AXI_CLK>,
+		<&gcc GCC_DISP_GPLL0_DIV_CLK_SRC>,
+		<&dispcc DISP_CC_MDSS_AHB_CLK>,
+		<&dispcc DISP_CC_MDSS_MDP_CLK>,
+		<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
+		<&dispcc DISP_CC_MDSS_VSYNC_CLK>,
+		<&dispcc DISP_CC_MDSS_MDP_LUT_CLK>;
+
+	clock-names = "gcc_bus", "div_clk",
+			"iface_clk", "branch_clk", "core_clk", "vsync_clk",
+			"lut_clk";
+
+	qcom,sde-trusted-vm-env;
 };
 
 &mdss_dsi0 {
@@ -23,3 +74,4 @@
 &mdss_dsi_phy0 {
 	qcom,dsi-pll-in-trusted-vm;
 };
+
