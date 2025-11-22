@@ -73,6 +73,10 @@
 		qcom,mdss-dsi-panel-local-hbm-wait-fps-interval = <1>;
 		qcom,mdss-dsi-panel-lhbm-not-allowed-fps-list = <60 90 144>;
 
+		qcom,mdss-dsi-panel-lhbm-wait-bl-valid;
+		qcom,mdss-dsi-panel-local-hbm-wait-bl-count = <30>;
+		qcom,mdss-dsi-panel-local-hbm-wait-bl-interval = <1>;
+
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
 				cell-index = <0>;
