@@ -55,9 +55,7 @@
 				39 00 00 40 00 00 06 F0 55 AA 52 08 02
 				39 00 00 40 00 00 02 6F 02
 				39 00 00 40 00 00 02 D2 20
-				39 00 00 40 00 00 02 87 00
-				39 00 00 40 00 00 02 6F 01
-				39 00 00 00 00 00 02 8B 00];
+				39 00 00 40 00 00 02 87 00];
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
@@ -76,6 +74,8 @@
 		qcom,mdss-dsi-panel-lhbm-wait-bl-valid;
 		qcom,mdss-dsi-panel-local-hbm-wait-bl-count = <30>;
 		qcom,mdss-dsi-panel-local-hbm-wait-bl-interval = <1>;
+
+		qcom,mdss-dsi-panel-lhbm-with-dc;
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
@@ -146,7 +146,7 @@
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 03 5F 00 00
 					39 00 00 00 00 00 02 6F 04
-					39 00 00 00 00 00 03 51 3E 80
+					39 00 00 00 00 00 03 51 00 10
 					39 00 00 00 00 00 06 F0 55 AA 52 08 09
 					39 00 00 00 00 00 03 D0 FF 00
 					39 00 00 00 00 00 02 6F 02
@@ -235,7 +235,7 @@
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 03 5F 00 00
 					39 00 00 00 00 00 02 6F 04
-					39 00 00 00 00 00 03 51 3E 80
+					39 00 00 00 00 00 03 51 00 10
 					39 00 00 00 00 00 06 F0 55 AA 52 08 09
 					39 00 00 00 00 00 03 D0 FF 00
 					39 00 00 00 00 00 02 6F 02
@@ -343,7 +343,7 @@
 					39 00 00 40 00 00 06 F0 55 AA 52 08 00
 					39 00 00 40 00 00 04 BE 40 40 47
 					39 00 00 40 00 00 02 6F 04
-					39 00 00 00 00 00 03 51 3E 80
+					39 00 00 00 00 00 03 51 00 10
 					];
 				qcom,cmd-mode-switch-in-commands-state = "dsi_hs_mode";
 
@@ -355,7 +355,7 @@
 
 				qcom,cmd-mode-backlight-commands = [
 					39 00 00 40 00 00 02 6F 04
-					39 00 00 00 00 00 03 51 3E 80
+					39 00 00 00 00 00 03 51 00 10
 					];
 				qcom,cmd-mode-backlight-commands-state = "dsi_hs_mode";
 
