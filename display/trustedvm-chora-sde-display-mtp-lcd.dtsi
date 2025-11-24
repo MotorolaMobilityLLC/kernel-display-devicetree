@@ -51,3 +51,11 @@
 &sde_dsi {
 	qcom,dsi-default-panel = <&dsi_ft8726_fhd_plus_120_video>;
 };
+
+&qupv3_se4_i2c {
+	focaltech@38 {
+		panel = <&dsi_ft8726_fhd_plus_120_video
+		&dsi_ft8726_fhd_plus_90_video
+		&dsi_ft8726_fhd_plus_60_video>;
+	};
+};
