@@ -481,7 +481,7 @@
 		39 00 00 40 00 00 02 80 89
 		39 00 00 00 00 00 04 FF 5A A5 00];
 
-	qcom,odc-enabled;
+	/*qcom,odc-enabled;
 	qcom,mdss-dsi-panel-ODC-THRESHOLD-BL = <1920>;
 	qcom,mdss-dsi-panel-odc-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 49
@@ -490,7 +490,7 @@
 	qcom,mdss-dsi-panel-odc-off-command = [
 		39 00 00 40 00 00 04 FF 5A A5 49
 		39 00 00 40 00 00 02 E0 00
-		39 00 00 00 00 00 04 FF 5A A5 00];
+		39 00 00 00 00 00 04 FF 5A A5 00];*/
 
 	qcom,switch-timing-delay-enabled;
 	qcom,switch-orig-timing-list = <165>;
@@ -653,7 +653,7 @@
 		39 00 00 40 00 00 02 80 89
 		39 00 00 00 00 00 04 FF 5A A5 00];
 
-	qcom,odc-enabled;
+	/*qcom,odc-enabled;
 	qcom,mdss-dsi-panel-ODC-THRESHOLD-BL = <1920>;
 	qcom,mdss-dsi-panel-odc-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 49
@@ -662,7 +662,7 @@
 	qcom,mdss-dsi-panel-odc-off-command = [
 		39 00 00 40 00 00 04 FF 5A A5 49
 		39 00 00 40 00 00 02 E0 00
-		39 00 00 00 00 00 04 FF 5A A5 00];
+		39 00 00 00 00 00 04 FF 5A A5 00];*/
 
 	qcom,switch-timing-delay-enabled;
 	qcom,switch-orig-timing-list = <165>;
