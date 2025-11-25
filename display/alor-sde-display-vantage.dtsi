@@ -75,6 +75,13 @@
 	qcom,dp-aux-switch = <&redriver_mmi>;
 };
 
+&sde_dsi {
+	pinctrl-names = "panel_active", "panel_suspend";
+	pinctrl-0 = <&sde_dsi_active &sde_te_active>;
+	pinctrl-1 = <&sde_dsi_suspend &sde_te_suspend>;
+	/delete-property/ pinctrl-2;
+};
+
 &mdss_mdp {
 	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp &sde_cesta>;
 };
