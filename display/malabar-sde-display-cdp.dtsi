@@ -142,3 +142,20 @@
 
 	qcom,dsi-default-panel = <&dsi_vtdr6130_amoled_cmd>;
 };
+
+&qupv3_se3_spi {
+	goodix-berlin@0 {
+		iovdd-supply = <&L9B>;
+		panel = <&dsi_vtdr6130_amoled_cmd
+			&dsi_vtdr6130_amoled_video
+			&dsi_vtdr6130_amoled_60hz_cmd
+			&dsi_vtdr6130_amoled_60hz_video
+			&dsi_vtdr6130_amoled_90hz_cmd
+			&dsi_vtdr6130_amoled_90hz_video
+			&dsi_vtdr6130_amoled_120hz_cmd
+			&dsi_vtdr6130_amoled_120hz_video
+			&dsi_vtdr6130_amoled_nodsc_60hz_cmd
+			&dsi_vtdr6130_amoled_qsync_144hz_cmd
+			&dsi_vtdr6130_amoled_qsync_144hz_video>;
+	};
+};
