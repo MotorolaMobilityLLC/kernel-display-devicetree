@@ -165,7 +165,7 @@
 		39 00 00 00 00 00 04 FF 5A A5 00];
 
 	//qcom,ulps-enabled;
-	qcom,qsync-enable;
+	//qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -327,7 +327,7 @@
 		39 00 00 00 00 00 04 FF 5A A5 00];
 
 	//qcom,ulps-enabled;
-	qcom,qsync-enable;
+	//qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -498,7 +498,7 @@
 	qcom,switch-delay-list = <17>;
 
 	//qcom,ulps-enabled;
-	qcom,qsync-enable;
+	//qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
@@ -670,7 +670,7 @@
 	qcom,switch-delay-list = <17>;
 
 	//qcom,ulps-enabled;
-	qcom,qsync-enable;
+	//qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //120
