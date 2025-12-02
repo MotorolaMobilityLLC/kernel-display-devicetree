@@ -70,12 +70,6 @@
        qcom,init-voltage = <3100000>;
 };
 
-&sde_dp {
-	mmi,aux-switch-enable-gpio = <&tlmm 119 0>;
-	mmi,aux-switch-flip-gpio = <&tlmm 120 0>;
-	qcom,dp-aux-switch = <&redriver_mmi>;
-};
-
 &sde_dsi {
 	pinctrl-names = "panel_active", "panel_suspend";
 	pinctrl-0 = <&sde_dsi_active &sde_te_active>;
@@ -84,7 +78,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_dp &sde_cesta>;
+	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb0 &sde_wb1 &sde_cesta>;
 };
 &mot_boe_ili97680A_678_1264x2780_dsc_cmd_v1 {
 	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
@@ -830,10 +824,6 @@
 
 &sde_dsi {
 	qcom,dsi-default-panel = <&mot_dummy_vid_qhd>;
-};
-
-&sde_dp {
-	status = "ok";
 };
 
 &qupv3_se4_spi {
