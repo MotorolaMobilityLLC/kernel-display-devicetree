@@ -3,8 +3,8 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include "khaje-sde.dtsi"
 #include "khaje-sde-display-common.dtsi"
+#include <dt-bindings/clock/qcom,dispcc-khaje.h>
 
 &soc{
 	disp_rdump_memory: disp_rdump_region@5c000000 {

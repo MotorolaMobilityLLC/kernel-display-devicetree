@@ -1,0 +1,29 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include <dt-bindings/clock/qcom,chora-dispcc.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
+#include "chora-sde-common.dtsi"
+
+&mdss_dsi0 {
+	vdda-1p2-supply = <&L3C>;
+	clocks = <&dispcc DISP_CC_MDSS_BYTE0_CLK>,
+		<&dispcc DISP_CC_MDSS_BYTE0_CLK_SRC>,
+		<&dispcc DISP_CC_MDSS_BYTE0_INTF_CLK>,
+		<&dispcc DISP_CC_MDSS_PCLK0_CLK>,
+		<&dispcc DISP_CC_MDSS_PCLK0_CLK_SRC>,
+		<&dispcc DISP_CC_MDSS_ESC0_CLK>,
+		<&rpmhcc RPMH_CXO_CLK>;
+	clock-names = "byte_clk", "byte_clk_rcg", "byte_intf_clk",
+			"pixel_clk", "pixel_clk_rcg", "esc_clk", "xo";
+};
+
+&mdss_dsi_phy0 {
+	vdda-0p9-supply = <&L2B>;
+	qcom,panel-allow-phy-poweroff;
+	qcom,dsi-pll-ssc-en;
+	qcom,dsi-pll-ssc-mode = "down-spread";
+	pll_codes_region = <&dsi_pll_codes_data>;
+};
