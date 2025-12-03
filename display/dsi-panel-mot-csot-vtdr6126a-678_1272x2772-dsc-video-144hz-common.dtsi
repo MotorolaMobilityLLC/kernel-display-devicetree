@@ -224,7 +224,7 @@
 					05 01 00 00 11 00 01 28
 					05 01 00 00 78 00 01 10];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
-				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
+				qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
 
 				qcom,compression-mode = "dsc";
 				qcom,mdss-dsc-version = <0x12>;
