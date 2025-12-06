@@ -497,6 +497,10 @@
 	qcom,switch-active-timing-list = <60>;
 	qcom,switch-delay-list = <17>;
 
+	qcom,mdss-dsi-rate-switch-interval-enabled;
+	qcom,mdss-dsi-rate-switch-interval-multiplier = <3>;
+	qcom,mdss-dsi-rate-switch-min-forced-delay = <12>;
+
 	//qcom,ulps-enabled;
 	//qcom,qsync-enable;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
@@ -668,6 +672,10 @@
 	qcom,switch-orig-timing-list = <165>;
 	qcom,switch-active-timing-list = <60>;
 	qcom,switch-delay-list = <17>;
+
+	qcom,mdss-dsi-rate-switch-interval-enabled;
+	qcom,mdss-dsi-rate-switch-interval-multiplier = <3>;
+	qcom,mdss-dsi-rate-switch-min-forced-delay = <12>;
 
 	//qcom,ulps-enabled;
 	//qcom,qsync-enable;
