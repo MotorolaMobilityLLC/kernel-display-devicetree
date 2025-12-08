@@ -879,6 +879,7 @@
 			 &mot_tm_vtdr6126a_678_1272x2772_dsc_vid
 			 &mot_tm_vtdr6126a_678_1272x2772_dsc_vid_v1
 			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid
-			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid_v1>;
+			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid_v1
+			 &mot_csot_vtdr6126a_678_1272x2772_dsc_vid_v2>;
 	};
 };
