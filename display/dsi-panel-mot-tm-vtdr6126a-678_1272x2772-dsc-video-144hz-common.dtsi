@@ -379,7 +379,7 @@
 					39 00 00 40 00 00 02 6F 01
 					39 00 00 40 00 00 03 44 00 00
 					39 00 00 40 00 00 02 A4 00
-					39 00 00 00 5A 00 02 A6 01];
+					39 00 00 00 46 00 02 A6 01];
 				qcom,cmd-mode-switch-out-commands-state = "dsi_hs_mode";
 
 				qcom,cmd-mode-backlight-commands = [
