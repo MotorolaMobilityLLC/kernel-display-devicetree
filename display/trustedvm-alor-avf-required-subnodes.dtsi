@@ -43,6 +43,7 @@
 						&dsi_nt37801_amoled_video_cphy
 						&dsi_nt37801_amoled_video_cphy_spr
 						&dsi_nt37801_amoled_video_ddicspr
+						&dsi_nt37802_amoled_video_psr_vhm
 						&dsi_panel_pwr_supply
 						&dsi_panel_pwr_supply_avdd
 						&dsi_panel_pwr_supply_raontech
@@ -52,6 +53,8 @@
 						&dsi_rdp370f_rgb_vid
 						&dsi_sharp_4k_dsc_cmd
 						&dsi_sharp_4k_dsc_video
+						&dsi_sharp_qhd_plus_dsc_cmd
+						&dsi_sharp_qhd_plus_dsc_video
 						&dsi_sim_cmd
 						&dsi_sim_dsc_10b_cmd
 						&dsi_sim_dsc_375_cmd
@@ -91,6 +94,7 @@
 						&qcom_ctrl_supply_entry_0
 						&qcom_ctrl_supply_entry_0_2
 						&qcom_mdss_dsi_display_timings
+						&qcom_mdss_dsi_display_timings_1
 						&qcom_mdss_dsi_display_timings_111
 						&qcom_mdss_dsi_display_timings_12
 						&qcom_mdss_dsi_display_timings_122
@@ -143,8 +147,13 @@
 						&qcom_mdss_dsi_display_timings_292
 						&qcom_mdss_dsi_display_timings_294
 						&qcom_mdss_dsi_display_timings_296
+						&qcom_mdss_dsi_display_timings_3
 						&qcom_mdss_dsi_display_timings_30
 						&qcom_mdss_dsi_display_timings_32
+						&qcom_mdss_dsi_display_timings_320
+						&qcom_mdss_dsi_display_timings_326
+						&qcom_mdss_dsi_display_timings_328
+						&qcom_mdss_dsi_display_timings_330
 						&qcom_mdss_dsi_display_timings_34
 						&qcom_mdss_dsi_display_timings_36
 						&qcom_mdss_dsi_display_timings_41
@@ -232,6 +241,7 @@
 						&timing_0_194
 						&timing_0_196
 						&timing_0_198
+						&timing_0_2
 						&timing_0_21
 						&timing_0_218
 						&timing_0_23
@@ -256,9 +266,14 @@
 						&timing_0_295
 						&timing_0_297
 						&timing_0_31
+						&timing_0_321
+						&timing_0_327
+						&timing_0_329
 						&timing_0_33
+						&timing_0_331
 						&timing_0_35
 						&timing_0_37
+						&timing_0_4
 						&timing_0_42
 						&timing_0_44
 						&timing_0_48
@@ -324,6 +339,7 @@
 						&timing_18_216
 						&timing_18_241
 						&timing_19_144
+						&timing_19_217
 						&timing_19_242
 						&timing_1_100
 						&timing_1_113
@@ -340,6 +356,8 @@
 						&timing_1_246
 						&timing_1_275
 						&timing_1_283
+						&timing_1_322
+						&timing_1_332
 						&timing_1_38
 						&timing_1_45
 						&timing_1_59
@@ -349,6 +367,7 @@
 						&timing_2
 						&timing_20_145
 						&timing_20_243
+						&timing_20_299
 						&timing_2_101
 						&timing_2_114
 						&timing_2_127
@@ -363,6 +382,8 @@
 						&timing_2_25
 						&timing_2_276
 						&timing_2_284
+						&timing_2_323
+						&timing_2_333
 						&timing_2_39
 						&timing_2_46
 						&timing_2_60
