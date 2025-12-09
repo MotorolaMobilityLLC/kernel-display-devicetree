@@ -379,3 +379,16 @@
 	qcom,dsi-qsync-avr-step-fps = <120>;
 	qcom,mdss-dsi-qsync-min-refresh-rate = <1>;
 };
+
+&dsi_sim_sl_vid_vhm {
+	qcom,mdss-esync;
+	qcom,mdss-esync-hsync-milli-pulse-width = <500>;
+	qcom,mdss-esync-emsync-fps = <240>;
+	qcom,mdss-esync-emsync-milli-pulse-width = <200>;
+
+	qcom,qsync-enable;
+	qcom,vrr-enable;
+	qcom,video-psr-enable;
+	qcom,dsi-qsync-avr-step-fps = <240>;
+	qcom,mdss-dsi-qsync-min-refresh-rate = <60>;
+};
