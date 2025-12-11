@@ -6,7 +6,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "chora-sde-display-mtp.dtsi"
+#include "chora-sde-display-mtp-lcd.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Chora MTP LCD";
