@@ -357,6 +357,10 @@
 	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
 
 	qcom,panel-od-enabled;
+	qcom,panel-od-bypass-in-cmd;
+	qcom,mdss-dsi-panel-od-reg = <0xC0>;
+	qcom,mdss-dsi-panel-od-on-val = <0xA0>;
+	qcom,mdss-dsi-panel-od-off-val = <0x00>;
 	qcom,mdss-dsi-bl-od-threshold = <2168>;
 	qcom,mdss-dsi-panel-od-on-command = [
 		39 00 00 40 00 00 02 A4 01
@@ -471,6 +475,10 @@
 	qcom,mdss-dsi-panel-AOD-bl-hig = <2>; //160nit
 
 	qcom,panel-od-enabled;
+	qcom,panel-od-bypass-in-cmd;
+	qcom,mdss-dsi-panel-od-reg = <0xC0>;
+	qcom,mdss-dsi-panel-od-on-val = <0xA0>;
+	qcom,mdss-dsi-panel-od-off-val = <0x00>;
 	qcom,mdss-dsi-bl-od-threshold = <2168>;
 	qcom,mdss-dsi-panel-od-on-command = [
 		39 00 00 40 00 00 02 A4 01
@@ -811,6 +819,10 @@
 	qcom,mdss-dsi-panel-apl-off-command-state = "dsi_hs_mode";
 
 	qcom,panel-od-enabled;
+	qcom,panel-od-bypass-in-cmd;
+	qcom,mdss-dsi-panel-od-reg = <0xC0>;
+	qcom,mdss-dsi-panel-od-on-val = <0xA2>;
+	qcom,mdss-dsi-panel-od-off-val = <0x00>;
 	qcom,mdss-dsi-bl-od-threshold = <2168>;
 	qcom,mdss-dsi-panel-od-on-command = [
 		39 00 00 40 00 00 02 A4 01
