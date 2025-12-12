@@ -805,19 +805,14 @@
 };
 
 &mot_dummy_vid_qhd {
-       qcom,mdss-dsi-display-timings {
-                timing@0{
-                       qcom,mdss-dsi-panel-width = <1080>;
-                       qcom,mdss-dsi-panel-height = <2400>;
-               };
-       };
-};
-
-&mot_dummy_vid_qhd {
+	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,dsi-ctrl-num = <1>;
+	qcom,dsi-phy-num = <1>;
 	qcom,platform-reset-gpio = <&tlmm 146 0>;
-	qcom,dsi-select-clocks = "pll_byte_clk0", "pll_dsi_clk0";
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
+                       qcom,mdss-dsi-panel-width = <1080>;
+                       qcom,mdss-dsi-panel-height = <2400>;
 			qcom,display-topology = <1 0 1>;
 			qcom,default-topology-index = <0>;
 		};
