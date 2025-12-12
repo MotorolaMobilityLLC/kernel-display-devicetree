@@ -296,7 +296,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-pcd-check-disable-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-partition-refreshrate-off-command = [
-			39 00 00 00 00 00 02 6B 00
+			39 00 00 40 00 00 02 6B 00
 			39 00 00 40 00 00 06 F0 55 AA 52 08 00
 			39 00 00 40 00 00 02 6F CC
 			39 00 00 40 00 00 02 B2 00
