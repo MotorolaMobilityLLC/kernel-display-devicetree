@@ -49,8 +49,8 @@
 		cell-index = <0>;
 		compatible = "qcom,sde-rsc";
 		status = "disabled";
-		reg = <0xaf20000 0x4d68>,
-			<0xaf30000 0x3fd4>;
+		reg = <0x0 0xaf20000 0x0 0x4d68>,
+			<0x0 0xaf30000 0x0 0x3fd4>;
 		reg-names = "drv", "wrapper";
 		qcom,sde-rsc-version = <5>;
 
