@@ -53,6 +53,7 @@
 		qcom,mdss-dsi-panel-pcd-reg-read-delay-ms = <150>; //150ms delay before read pcd reg per IC req
 		qcom,mdss-dsi-panel-pcd-reg-seq-interval = <30>; //30 seq interval per screen on times
 		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
+		qcom,mdss-dsi-panel-pcd-value-zero_valid; //avoid vtdr6126a pcd read not on D0 lane lp11 state
 
 		qcom,mdss-dsi-dc-on-command = [
 			39 00 00 00 00 00 02 5E 01];
