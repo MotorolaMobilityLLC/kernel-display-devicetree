@@ -50,15 +50,10 @@
 		qcom,mdss-dsi-panel-pcd-check-time-interval-in-minutes = <480>; //480 minutes/8hours for pcd reg read time interval
 
 		qcom,mdss-dsi-dc-on-command = [
-			39 00 00 40 00 00 06 F0 55 AA 52 08 00
-			39 00 00 40 00 00 02 6F DF
-			39 00 00 40 00 00 06 B2 00 00 0D BF 06
-			39 00 00 40 00 00 02 6F 01
-			39 00 00 00 00 00 02 8B 81];
+			39 00 00 00 00 00 16 A9 02 00 B2 DF DF 00 02 00 B2 E0 E3 00 0D BF 06 01 00 8B 01 01 81];
 		qcom,mdss-dsi-dc-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-dc-off-command = [
-			39 00 00 40 00 00 02 6F 01
-			39 00 00 00 00 00 02 8B 00];
+			39 00 00 00 00 00 16 A9 02 00 B2 DF DF 00 02 00 B2 E0 E3 00 0D BF 06 01 00 8B 01 01 00];
 		qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-hbm-on-command = [
