@@ -3,43 +3,65 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include <dt-bindings/clock/qcom,chora-dispcc.h>
-#include "chora-sde-display-common.dtsi"
-
-&soc {
-	sde_wb2: qcom,wb-display@2 {
-		compatible = "qcom,wb-display";
-		cell-index = <0>;
-		label = "wb_display2";
-		clocks = <&dispcc DISP_CC_MDSS_MDP_CLK>;
-		clock-names = "mdp_core_clk";
-	};
-};
+#include <dt-bindings/clock/qcom,malabar-dispcc.h>
+#include "malabar-sde-display-common.dtsi"
 
 &sde_dsi {
 	clocks = <&mdss_dsi_phy0 0>,
 		 <&mdss_dsi_phy0 1>,
-		 /*
-		  * Currently the dsi clock handles are under the dsi
-		  * controller DT node. As soon as the controller probe
-		  * finishes, the dispcc sync state can get called before
-		  * the dsi_display probe potentially disturbing the clock
-		  * votes for cont_splash use case. Hence we are no longer
-		  * protected by the component model in this case against the
-		  * disp cc sync state getting triggered after the dsi_ctrl
-		  * probe. To protect against this incorrect sync state trigger
-		  * add this dummy MDP clk vote handle to the dsi_display
-		  * DT node. Since the dsi_display driver does not parse
-		  * MDP clock nodes, no actual vote shall be added and this
-		  * change is done just to satisfy sync state requirements.
-		  */
+		/*
+		 * Currently the dsi clock handles are under the dsi
+		 * controller DT node. As soon as the controller probe
+		 * finishes, the dispcc sync state can get called before
+		 * the dsi_display probe potentially disturbing the clock
+		 * votes for cont_splash use case. Hence we are no longer
+		 * protected by the component model in this case against the
+		 * disp cc sync state getting triggered after the dsi_ctrl
+		 * probe. To protect against this incorrect sync state trigger
+		 * add this dummy MDP clk vote handle to the dsi_display
+		 * DT node. Since the dsi_display driver does not parse
+		 * MDP clock nodes, no actual vote shall be added and this
+		 * change is done just to satisfy sync state requirements.
+		 */
 		 <&dispcc DISP_CC_MDSS_MDP_CLK>;
 	clock-names = "pll_byte_clk0", "pll_dsi_clk0",
-		      "mdp_core_clk";
+			"mdp_core_clk";
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb2>;
+	connectors = <&sde_dsi>;
+};
+
+&soc {
+	display_panel_vddio: display_gpio_regulator@0 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_vddio";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&tlmm 56 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_vddio>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_vddio_default>;
+	};
+
+	display_panel_vdd: display_gpio_regulator@1 {
+		compatible = "qti-regulator-fixed";
+		regulator-name = "display_panel_vdd";
+		regulator-min-microvolt = <1300000>;
+		regulator-max-microvolt = <1300000>;
+		regulator-enable-ramp-delay = <233>;
+		gpio = <&tlmm 57 0>;
+		enable-active-high;
+		regulator-boot-on;
+		proxy-supply = <&display_panel_vdd>;
+		qcom,proxy-consumer-enable;
+		pinctrl-names = "default";
+		pinctrl-0 = <&display_panel_vdd_default>;
+	};
 };
 
 &dsi_vtdr6130_amoled_cmd {
