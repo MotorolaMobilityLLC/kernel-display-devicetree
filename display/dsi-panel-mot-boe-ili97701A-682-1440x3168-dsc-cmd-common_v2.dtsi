@@ -74,6 +74,7 @@ qcom,mdss-dsi-hbm-fod-on-command = [
 qcom,mdss-dsi-dc-off-command = [
 			39 00 00 40 00 00 04 FF 5A A5 4F
 			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 02 81 0C
 			39 00 00 40 00 00 04 FF 5A A5 23
 			39 00 00 40 00 00 02 A9 0E
 			39 00 00 40 00 00 02 AA 11
@@ -105,6 +106,7 @@ qcom,mdss-dsi-dc-off-command-state = "dsi_hs_mode";
 qcom,mdss-dsi-dc-on-command = [
 			39 00 00 40 00 00 04 FF 5A A5 4F
 			39 00 00 40 00 00 02 88 78
+			39 00 00 40 00 00 02 81 0C
 			39 00 00 40 00 00 04 FF 5A A5 23
 			39 00 00 40 00 00 02 A9 8E
 			39 00 00 40 00 00 02 AA 11
@@ -157,8 +159,16 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //120hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 00
+			39 00 00 40 00 00 02 F2 00 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -207,8 +217,16 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //120hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 00
+			39 00 00 40 00 00 02 F2 00 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -217,6 +235,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -279,8 +315,15 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //144hz
 			39 00 00 40 00 00 02 60 01
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 84 00
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB 20 83
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -329,8 +372,15 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //144hz
 			39 00 00 40 00 00 02 60 01
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 84 00
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB 20 83
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -339,6 +389,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -401,8 +469,15 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //90hz
 			39 00 00 40 00 00 02 60 02
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 85 00
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -451,8 +526,15 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //90hz
 			39 00 00 40 00 00 02 60 02
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 85 00
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -461,6 +543,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -524,8 +624,16 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //60hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 01
+			39 00 00 40 00 00 02 F2 01 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -574,8 +682,16 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //60hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 01
+			39 00 00 40 00 00 02 F2 01 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -584,6 +700,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -647,8 +781,16 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //30hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 28 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 03
+			39 00 00 40 00 00 02 F2 03 //TE
+			39 00 00 40 00 00 02 CD 21 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 80 //dimming enable
+			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -697,8 +839,16 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //30hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 28 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 03
+			39 00 00 40 00 00 02 F2 03 //TE
+			39 00 00 40 00 00 02 CD 21 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 80 //dimming enable
+			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -707,6 +857,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -770,8 +938,16 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //24hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 28 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 04
+			39 00 00 40 00 00 02 F2 04 //TE
+			39 00 00 40 00 00 02 CD 21 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 80 //dimming enable
+			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -820,8 +996,16 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //24hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 28 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 04
+			39 00 00 40 00 00 02 F2 04 //TE
+			39 00 00 40 00 00 02 CD 21 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 80 //dimming enable
+			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -830,6 +1014,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -893,8 +1095,16 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //10hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 0B
+			39 00 00 40 00 00 02 F2 00 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -943,8 +1153,16 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //10hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 0B
+			39 00 00 40 00 00 02 F2 00 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -953,6 +1171,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
@@ -1016,8 +1252,16 @@ qcom,mdss-dsi-display-timings {
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //1hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 77
+			39 00 00 40 00 00 02 F2 00 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -1066,8 +1310,16 @@ qcom,mdss-dsi-display-timings {
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //1hz
 			39 00 00 40 00 00 02 60 00
+			39 00 00 40 00 00 02 53 20 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 2D
 			39 00 00 40 00 00 02 83 77
+			39 00 00 40 00 00 02 F2 00 //TE
+			39 00 00 40 00 00 02 CD 01 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 24
+			39 00 00 40 00 00 03 85 31 00 //dimming disable
+			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 04 FF 5A A5 02
+                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1076,6 +1328,24 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 09 ED FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 09 EE FF FF FF FF FF FF FF FF
 			39 00 00 40 00 00 04 FF 5A A5 00
+
+                     	39 00 00 40 00 00 04 FF 5A A5 2D //1hz transition frame
+                     	39 00 00 40 00 00 02 97 03
+                     	39 00 00 40 00 00 02 B1 03
+                     	39 00 00 40 00 00 03 98 03 00
+                     	39 00 00 40 00 00 03 99 05 00
+                     	39 00 00 40 00 00 03 9A 0B 00
+                     	39 00 00 40 00 00 03 9B 17 00
+                     	39 00 00 40 00 00 03 A0 00 00
+                     	39 00 00 40 00 00 03 A1 01 02
+
+			39 00 00 40 00 00 04 FF 5A A5 08 //esd check fail fix
+			39 00 00 40 00 00 02 F5 00
+			39 00 00 40 00 00 02 F6 00
+			39 00 00 40 00 00 02 F7 00
+
+			39 00 00 40 00 00 04 FF 5A A5 2D //DBV DIMMING for low refreshrate
+                     	39 00 00 40 00 00 02 CE 55
 
 			39 00 00 40 00 00 04 FF 5A A5 07 //10bit 3.75x
 			39 00 00 40 00 00 02 8A 01
