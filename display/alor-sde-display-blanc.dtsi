@@ -713,7 +713,7 @@
 	qcom,mdss-dsi-panel-partition-refreshrate-slice-h = <8>;
 	qcom,mdss-dsi-panel-partition-refreshrate-min-boundaryLine = <0>;
 	qcom,mdss-dsi-panel-partition-refreshrate-max-boundaryLine = <2232>;
-	qcom,mdss-dsi-panel-partition-refreshrate-under-dfps-list = <120 90 60>;
+	qcom,mdss-dsi-panel-partition-refreshrate-under-dfps-list = <120 90>;
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 { //60
