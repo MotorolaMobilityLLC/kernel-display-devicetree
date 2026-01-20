@@ -41,19 +41,19 @@
 		"sid_phys";
 
 	qcom,sde-vm-exclude-reg-names = "sid_phys";
-	qcom,tvm-include-reg = <0x0 0xaf20000 0x0 0x4d68>,
-				<0x0 0xaf30000 0x0 0x3fd4>;
+	qcom,tvm-include-reg = <0xaf20000 0x4d68>,
+				<0xaf30000 0x3fd4>;
 
 	qcom,sde-hw-version =<0xA0030000>;
 
 	clocks =
-		<&gcc GCC_DISP_HF_AXI_CLK>,
-		<&gcc GCC_DISP_GPLL0_DIV_CLK_SRC>,
-		<&dispcc DISP_CC_MDSS_AHB_CLK>,
-		<&dispcc DISP_CC_MDSS_MDP_CLK>,
-		<&dispcc DISP_CC_MDSS_MDP_CLK_SRC>,
-		<&dispcc DISP_CC_MDSS_VSYNC_CLK>,
-		<&dispcc DISP_CC_MDSS_MDP_LUT_CLK>;
+		<&clock_cpucc GCC_DISP_HF_AXI_CLK>,
+		<&clock_cpucc GCC_DISP_GPLL0_DIV_CLK_SRC>,
+		<&clock_cpucc DISP_CC_MDSS_AHB_CLK>,
+		<&clock_cpucc DISP_CC_MDSS_MDP_CLK>,
+		<&clock_cpucc DISP_CC_MDSS_MDP_CLK_SRC>,
+		<&clock_cpucc DISP_CC_MDSS_VSYNC_CLK>,
+		<&clock_cpucc DISP_CC_MDSS_MDP_LUT_CLK>;
 
 	clock-names = "gcc_bus", "div_clk",
 			"iface_clk", "branch_clk", "core_clk", "vsync_clk",
