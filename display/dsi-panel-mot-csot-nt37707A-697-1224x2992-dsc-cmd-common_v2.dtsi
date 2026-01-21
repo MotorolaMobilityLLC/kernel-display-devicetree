@@ -12,7 +12,7 @@
 &mdss_mdp {
 mot_csot_nt37707A_697_1224x2992_dsc_cmd_v2: qcom,mdss_dsi_mot_csot_nt37707A_697_1224x2992_dsc_cmd_v2 {
 compatible = "qcom,mdss-dsi-panel";
-qcom,mdss-dsi-panel-name = "mipi_mot_cmd_csot_1224p_dsc_697";
+qcom,mdss-dsi-panel-name = "mipi_mot_cmd_csot_1224p_c10_dsc_697";
 qcom,mdss-dsi-panel-supplier = "csot";
 qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
 qcom,mdss-dsi-virtual-channel-id = <0>;
