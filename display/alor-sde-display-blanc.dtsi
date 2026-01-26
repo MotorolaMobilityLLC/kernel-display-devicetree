@@ -621,55 +621,55 @@
 		timing@0 { //120
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@1 { //90
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1100790000>;
+			qcom,mdss-mdp-transfer-time-us = <7144>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
-							0A 09 02 04 00 1E 0F];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@2 { //60
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <733860000>;
+			qcom,mdss-mdp-transfer-time-us = <12500>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 1A 06 06 16 20 07
-							06 07 02 04 00 16 0B];
+			qcom,mdss-dsi-panel-phy-timings = [00 1E 08 07 18 22 08
+							08 08 02 04 00 1A 0D];
 		};
 		timing@3 { //30
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@4 { //24
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@5 { //10
 			qcom,framerate-group-special-idle-10hz;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 	};
 };
@@ -718,63 +718,63 @@
 		timing@0 { //60
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <733860000>;
+			qcom,mdss-mdp-transfer-time-us = <12500>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 1A 06 06 16 20 07
-							06 07 02 04 00 16 0B];
+			qcom,mdss-dsi-panel-phy-timings = [00 1E 08 07 18 22 08
+							08 08 02 04 00 1A 0D];
 		};
 		timing@1 { //120
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@2 { //90
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1100790000>;
+			qcom,mdss-mdp-transfer-time-us = <7144>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 24 0A 0A 1A 25 09
-							0A 09 02 04 00 1E 0F];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@3 { //30
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@4 { //24
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@5 { //10
 			qcom,framerate-group-special-idle-10hz;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 		timing@6 { //1
 			qcom,framerate-group-special-idle-1hz;
-			qcom,mdss-dsi-panel-clockrate = <1467720000>;
+			qcom,mdss-dsi-panel-clockrate = <1560700000>;
 			qcom,display-topology = <2 2 1>;
 			qcom,default-topology-index = <0>;
-			qcom,mdss-dsi-panel-phy-timings = [00 30 0C 0D 1E 1B 0C
-							0D 0C 02 04 00 27 11];
+			qcom,mdss-dsi-panel-phy-timings = [00 36 0D 0D 1F 1C 0D
+							0E 0C 02 04 00 2A 12];
 		};
 	};
 };
