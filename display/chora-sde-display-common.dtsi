@@ -29,7 +29,7 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-		qcom,panel-supply-entry@0 {
+		qcom_panel_supply_entry_0: qcom,panel-supply-entry@0 {
 			reg = <0>;
 			qcom,supply-name = "dummy";
 			qcom,supply-min-voltage = <1800000>;
@@ -44,7 +44,7 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-		qcom,panel-supply-entry@0 {
+		qcom_panel_supply_entry_0_1: qcom,panel-supply-entry@0 {
 			reg = <0>;
 			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1800000>;
@@ -54,7 +54,7 @@
 			qcom,supply-post-on-sleep = <20>;
 		};
 
-		qcom,panel-supply-entry@1 {
+		qcom_panel_supply_entry_1: qcom,panel-supply-entry@1 {
 			reg = <1>;
 			qcom,supply-name = "vci";
 			qcom,supply-min-voltage = <3000000>;
@@ -65,7 +65,7 @@
 			qcom,supply-post-off-sleep = <2>;
 		};
 
-		qcom,panel-supply-entry@2 {
+		qcom_panel_supply_entry_2: qcom,panel-supply-entry@2 {
 			reg = <2>;
 			qcom,supply-name = "vdd";
 			qcom,supply-min-voltage = <1200000>;
@@ -81,7 +81,7 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-		qcom,panel-supply-entry@0 {
+		qcom_panel_supply_entry_0_2: qcom,panel-supply-entry@0 {
 			reg = <0>;
 			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1800000>;
@@ -91,7 +91,7 @@
 			qcom,supply-post-on-sleep = <10>;
 		};
 
-		qcom,panel-supply-entry@1 {
+		qcom_panel_supply_entry_1_3: qcom,panel-supply-entry@1 {
 			reg = <1>;
 			qcom,supply-name = "extdvdd";
 			qcom,supply-min-voltage = <1300000>;
@@ -102,7 +102,7 @@
 			qcom,supply-post-off-sleep = <10>;
 		};
 
-		qcom,panel-supply-entry@2 {
+		qcom_panel_supply_entry_2_4: qcom,panel-supply-entry@2 {
 			reg = <2>;
 			qcom,supply-name = "lab";
 			qcom,supply-min-voltage = <5400000>;
@@ -111,7 +111,7 @@
 			qcom,supply-disable-load = <0>;
 		 };
 
-		qcom,panel-supply-entry@3 {
+		qcom_panel_supply_entry_3: qcom,panel-supply-entry@3 {
 			reg = <3>;
 			qcom,supply-name = "ibb";
 			qcom,supply-min-voltage = <5400000>;
@@ -156,8 +156,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings: qcom,mdss-dsi-display-timings {
+		timing_0: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -165,7 +165,7 @@
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 
-		timing@1 {
+		timing_1: timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -173,7 +173,7 @@
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 
-		timing@2 {
+		timing_2: timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -181,7 +181,7 @@
 			qcom,dsi-dyn-clk-list = <813936000 818175250 822414500>;
 		};
 
-		timing@3 {
+		timing_3: timing@3 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -210,8 +210,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_5: qcom,mdss-dsi-display-timings {
+		timing_0_6: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -234,22 +234,22 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_7: qcom,mdss-dsi-display-timings {
+		timing_0_8: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@1 {
+		timing_1_9: timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@2 {
+		timing_2_10: timing@2 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <1 1 1>;
@@ -274,8 +274,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_11: qcom,mdss-dsi-display-timings {
+		timing_0_12: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 19 06 06 15 20 07
 				06 07 02 04 00 16 0b];
 			qcom,display-topology = <1 1 1>;
@@ -296,15 +296,15 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_13: qcom,mdss-dsi-display-timings {
+		timing_0_14: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1e 05
 				05 06 02 04 00 12 0a];
 			qcom,display-topology = <1 1 1>;
 			qcom,default-topology-index = <0>;
 		};
 
-		timing@1 {
+		timing_1_15: timing@1 {
 			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1e 05
 				05 06 02 04 00 12 0a];
 			qcom,display-topology = <1 1 1>;
@@ -325,8 +325,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_16: qcom,mdss-dsi-display-timings {
+		timing_0_17: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 13 05 04 13 1e 05
 				05 06 02 04 00 12 0a];
 			qcom,display-topology = <1 1 1>;
@@ -347,8 +347,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_18: qcom,mdss-dsi-display-timings {
+		timing_0_19: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 0f 03 03 11 1d 04
 				04 03 02 04 00 0d 09];
 			qcom,display-topology = <1 1 1>;
@@ -369,8 +369,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_20: qcom,mdss-dsi-display-timings {
+		timing_0_21: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 0f 03 03 11 1d 04
 				04 03 02 04 00 0d 09];
 			qcom,display-topology = <1 1 1>;
@@ -391,8 +391,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_22: qcom,mdss-dsi-display-timings {
+		timing_0_23: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -413,8 +413,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_24: qcom,mdss-dsi-display-timings {
+		timing_0_25: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 08 07 17 22 07
 				07 08 02 04 00 19 0c];
 			qcom,display-topology = <1 1 1>;
@@ -444,8 +444,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_26: qcom,mdss-dsi-display-timings {
+		timing_0_27: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 1c 07 07 17 15 07
 				07 08 02 04 00 18 0c];
 			qcom,display-topology = <1 1 1>;
@@ -473,8 +473,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_28: qcom,mdss-dsi-display-timings {
+		timing_0_29: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 16 05 05 14 1f 06
 				05 06 02 04 00 13 0a];
 			qcom,display-topology = <1 1 1>;
@@ -497,8 +497,8 @@
 
 	qcom,mdss-dsi-panel-hdr-enabled;
 
-	qcom,mdss-dsi-display-timings {
-		timing@0 {
+	qcom_mdss_dsi_display_timings_30: qcom,mdss-dsi-display-timings {
+		timing_0_31: timing@0 {
 			qcom,mdss-dsi-panel-phy-timings = [00 10 03 03 11 1e 04
 				04 03 02 04 00 0e 09];
 			qcom,display-topology = <1 1 1>;

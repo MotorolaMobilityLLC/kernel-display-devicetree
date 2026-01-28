@@ -6,6 +6,7 @@
 #include <dt-bindings/clock/qcom,chora-dispcc.h>
 #include <dt-bindings/clock/qcom,chora-gcc.h>
 #include "chora-sde-common.dtsi"
+#include "trustedvm-chora-avf-required-subnodes.dtsi"
 
 &soc {
 	smmu_sde_iommu_region_partition: smmu_sde_iommu_region_partition {
