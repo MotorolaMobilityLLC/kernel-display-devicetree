@@ -3,7 +3,7 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include "malabar-sde-display.dtsi"
+#include "trustedvm-malabar-sde-display.dtsi"
 
 &pm6450_pwm_1 {
 	status = "okay";
@@ -20,33 +20,6 @@
 			power-source = <0>;
 			qcom,drive-strength = <3>;
 		};
-	};
-
-	display_panel_avdd_default: display_panel_avdd_default {
-		pins = "gpio6";
-		function = "normal";
-		input-disable;
-		output-enable;
-		bias-disable;
-		power-source = <0>;
-		qcom,drive-strength = <2>;
-	};
-};
-
-&soc {
-	display_panel_avdd: display_gpio_regulator@0 {
-		compatible = "qti-regulator-fixed";
-		regulator-name = "display_panel_avdd";
-		regulator-min-microvolt = <5500000>;
-		regulator-max-microvolt = <5500000>;
-		regulator-enable-ramp-delay = <233>;
-		gpio = <&pm6450_gpios 6 0>;
-		enable-active-high;
-		regulator-boot-on;
-		proxy-supply = <&display_panel_avdd>;
-		qcom,proxy-consumer-enable;
-		pinctrl-names = "default";
-		pinctrl-0 = <&display_panel_avdd_default>;
 	};
 };
 
@@ -65,7 +38,6 @@
 };
 
 &dsi_ft8726_fhd_plus_120_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -75,7 +47,6 @@
 };
 
 &dsi_ft8726_fhd_plus_90_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -85,7 +56,6 @@
 };
 
 &dsi_ft8726_fhd_plus_60_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_pwm";
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -95,30 +65,22 @@
 };
 
 &dsi_sim_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &dsi_sim_vid {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &dsi_sim_dsc_375_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &dsi_sim_dsc_10b_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &sde_dsi {
-	vddio-supply = <&display_panel_vddio>;
-	vdd-supply = <&display_panel_vdd>;
-	avdd-supply = <&display_panel_avdd>;
-
 	pwms = <&pm6450_pwm_1 0 0>;
 
 	pinctrl-names = "panel_active", "panel_suspend", "pwm_pin";
@@ -126,12 +88,3 @@
 
 	qcom,dsi-default-panel = <&dsi_ft8726_fhd_plus_120_video>;
 };
-
-&qupv3_se3_i2c {
-	focaltech@38 {
-		panel = <&dsi_ft8726_fhd_plus_120_video
-			&dsi_ft8726_fhd_plus_90_video
-			&dsi_ft8726_fhd_plus_60_video>;
-	};
-};
-

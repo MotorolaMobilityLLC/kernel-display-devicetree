@@ -3,10 +3,9 @@
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
-#include "malabar-sde-display.dtsi"
+#include "trustedvm-malabar-sde-display.dtsi"
 
 &dsi_ft8726_fhd_plus_120_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd_labibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -15,7 +14,6 @@
 };
 
 &dsi_ft8726_fhd_plus_90_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd_labibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -24,7 +22,6 @@
 };
 
 &dsi_ft8726_fhd_plus_60_video {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lcd_labibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_wled";
 	qcom,bl-pmic-pwm-period-usecs = <100>;
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -33,38 +30,21 @@
 };
 
 &dsi_sim_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &dsi_sim_vid {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &dsi_sim_dsc_375_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &dsi_sim_dsc_10b_cmd {
-	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_sim>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 };
 
 &sde_dsi {
-	vddio-supply = <&display_panel_vddio>;
-	vdd-supply = <&display_panel_vdd>;
-	lab-supply = <&lcdb_ldo_vreg>;
-	ibb-supply = <&lcdb_ncp_vreg>;
-
 	qcom,dsi-default-panel = <&dsi_ft8726_fhd_plus_120_video>;
-};
-
-&qupv3_se3_i2c {
-	focaltech@38 {
-		panel = <&dsi_ft8726_fhd_plus_120_video
-			&dsi_ft8726_fhd_plus_90_video
-			&dsi_ft8726_fhd_plus_60_video>;
-	};
 };

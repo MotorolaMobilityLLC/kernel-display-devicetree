@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "trustedvm-malabar-sde.dtsi"
+#include "trustedvm-malabar-sde-display-cdp-lcd.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Malabar  CDP + LCD";
+	compatible = "qcom,malabar-cdp", "qcom,malabar", "qcom,malabarp-cdp", "qcom,malabarp",
+			"qcom,cdp";
+	qcom,msm-id = <733 0x10000>, <757 0x10000>;
+	qcom,board-id = <0x20001 0>;
+};
+
