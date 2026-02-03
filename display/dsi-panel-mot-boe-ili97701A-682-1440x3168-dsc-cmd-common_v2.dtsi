@@ -179,8 +179,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
+
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -255,8 +254,7 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
+
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -343,8 +341,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB 20 83
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -418,8 +414,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB 20 83
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -496,6 +490,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsi-v-top-border = <0>;
 		qcom,mdss-dsi-v-bottom-border = <0>;
 	        qcom,mdss-dsi-panel-jitter = <0x20 0xa>;
+	        qcom,mdss-mdp-transfer-time-us = <7933>;
 	        qcom,mdss-dsi-timing-switch-command = [
 	        	39 00 00 40 00 00 04 FF 5A A5 00 //90hz
 			39 00 00 40 00 00 02 60 02
@@ -506,8 +501,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -581,8 +574,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -671,8 +662,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -747,8 +736,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -837,8 +824,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 80 //dimming enable
 			39 00 00 40 00 00 03 86 31 80 //dimming enable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -913,8 +898,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 80 //dimming enable
 			39 00 00 40 00 00 03 86 31 80 //dimming enable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1003,8 +986,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 80 //dimming enable
 			39 00 00 40 00 00 03 86 31 80 //dimming enable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -1079,8 +1060,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 80 //dimming enable
 			39 00 00 40 00 00 03 86 31 80 //dimming enable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1169,8 +1148,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -1245,8 +1222,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1335,8 +1310,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 			39 00 00 00 00 00 04 FF 5A A5 00
 	        ];
 		qcom,mdss-dsi-on-command = [
@@ -1411,8 +1384,6 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 04 FF 5A A5 24
 			39 00 00 40 00 00 03 85 31 00 //dimming disable
 			39 00 00 40 00 00 03 86 31 00 //dimming disable
-			39 00 00 40 00 00 04 FF 5A A5 02
-                     	39 00 00 40 00 00 03 AB B0 82
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
