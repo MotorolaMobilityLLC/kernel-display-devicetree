@@ -12,6 +12,7 @@
 #include "dsi-panel-mot-boe-ili97701A-682-1440x3168-dsc-cmd-common_v0.dtsi"
 #include "dsi-panel-mot-boe-ili97701A-682-1440x3168-dsc-cmd-common_v1.dtsi"
 #include "dsi-panel-mot-boe-ili97701A-682-1440x3168-dsc-cmd-common_v2.dtsi"
+#include "dsi-panel-mot-boe-ili97701A-682-1440x3168-dsc-cmd-common_v3.dtsi"
 &soc {
 	dsi_panel_pwr_supply_urus: dsi_panel_pwr_supply_urus {
 		#address-cells = <1>;
@@ -995,6 +996,146 @@
 	};
 };
 
+&mot_boe_ili97701A_682_1440x3168_dsc_cmd_v3 {
+	qcom,dsi-select-clocks = "pll_byte_clk1", "pll_dsi_clk1";
+	qcom,dsi-ctrl-num = <1>;
+	qcom,dsi-phy-num = <1>;
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_urus>;
+	qcom,mdss-dsi-no-panel-on-read-support;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <420>;
+	qcom,mdss-dsi-bl-max-level = <16180>;
+	qcom,mdss-dsi-bl-default-level = <7001>;
+	qcom,mdss-brightness-max-level = <16180>;
+	qcom,platform-reset-gpio = <&tlmm 146 0>;
+	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,mdss-dsi-bl-is-exponent;
+
+	qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
+	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+	qcom,mdss-dsi-panel-status-value = <0x9c>;
+	qcom,mdss-dsi-panel-status-read-length = <1>;
+	qcom,esd-check-enabled;
+	qcom,cellid-read-enabled;
+	qcom,mdss-dsi-panel-cellid-send-command-enabled;
+	qcom,mdss-dsi-panel-cellid-send-command = [
+		39 00 00 00 00 00 04 FF 5A A5 1D];
+	qcom,mdss-dsi-panel-cellid-read-length = <23>;
+	qcom,mdss-dsi-panel-cellid-offset = <0>;
+	qcom,mdss-dsi-panel-cellid-command = [
+		06 01 00 01 00 00 01 80];
+	qcom,mdss-dsi-panel-cellid-send-back-command = [
+		39 00 00 00 00 00 04 FF 5A A5 00];
+
+	qcom,mdss-dsi-panel-hdr-enabled;
+	qcom,mdss-dsi-panel-hdr-color-primaries = <15600 16450 34000
+	        16000 13250 34500 7500 3000>;
+	qcom,mdss-dsi-panel-peak-brightness = <15000000>;
+	qcom,mdss-dsi-panel-blackness-level = <1>;
+
+	qcom,mdss-dsi-hbm-off-command = [
+		39 00 00 40 00 00 04 FF 5A A5 1E
+		39 00 00 40 00 00 02 80 89
+		39 00 00 40 00 00 04 FF 5A A5 00
+		39 00 00 00 00 00 02 6E 00
+	];
+	qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+	qcom,mdss-dsi-hbm-on-command = [
+		39 00 00 40 00 00 04 FF 5A A5 1E
+		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 04 FF 5A A5 00
+		39 00 00 00 00 00 03 51 3F FC
+	];
+	qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
+
+	qcom,apl-enabled;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <16000>;
+	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
+	qcom,mdss-dsi-panel-apl-on-command = [
+		39 00 00 40 00 00 04 FF 5A A5 1E
+		39 00 00 40 00 00 02 80 A9
+		39 00 00 00 00 00 04 FF 5A A5 00];
+	qcom,mdss-dsi-panel-apl-off-command = [
+		39 00 00 40 00 00 04 FF 5A A5 1E
+		39 00 00 40 00 00 02 80 89
+		39 00 00 00 00 00 04 FF 5A A5 00];
+
+	//qcom,ulps-enabled;
+	qcom,mdss-dsi-display-timings {
+		timing@0 { //120
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+		timing@1 { //144
+			qcom,framerate-group-no-duplicated;
+			qcom,mdss-dsi-panel-clockrate = <1480000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 2F 0D 0D 1E 1C 0C
+							0D 0C 02 04 00 27 11];
+		};
+		timing@2 { //90
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-90hz-based;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+		timing@3 { //60
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+		timing@4 { //30
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+		timing@5 { //24
+			qcom,framerate-group-no-duplicated;
+			qcom,framerate-group-120hz-based;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+		timing@6 { //10
+			qcom,framerate-group-special-idle-10hz;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+		timing@7 { //1
+			qcom,framerate-group-special-idle-1hz;
+			qcom,mdss-dsi-panel-clockrate = <1234000000>;
+			qcom,display-topology = <2 2 1>;
+			qcom,default-topology-index = <0>;
+			qcom,mdss-dsi-panel-phy-timings = [00 29 0A 0B 1B 1A 0A
+							0B 0A 02 04 00 21 10];
+		};
+	};
+};
+
 &mot_dummy_vid_qhd {
        qcom,mdss-dsi-display-timings {
                 timing@0{
@@ -1029,7 +1170,8 @@
 		         &mot_boe_ili97680A_678_1264x2780_dsc_cmd_v4
 		         &mot_boe_ili97701A_682_1440x3168_dsc_cmd_v0
 		         &mot_boe_ili97701A_682_1440x3168_dsc_cmd_v1
-		         &mot_boe_ili97701A_682_1440x3168_dsc_cmd_v2>;
+		         &mot_boe_ili97701A_682_1440x3168_dsc_cmd_v2
+		         &mot_boe_ili97701A_682_1440x3168_dsc_cmd_v3>;
 	};
 };
 
