@@ -295,11 +295,11 @@
 		interrupt-parent = <&mdss_mdp>;
 		interrupts = <4 0>;
 
-		qcom,ctrl-supply-entries {
+		qcom_ctrl_supply_entries: qcom,ctrl-supply-entries {
 			#address-cells = <1>;
 			#size-cells = <0>;
 
-			qcom,ctrl-supply-entry@0 {
+			qcom_ctrl_supply_entry_0: qcom,ctrl-supply-entry@0 {
 				reg = <0>;
 				qcom,supply-name = "vdda-1p2";
 				qcom,supply-min-voltage = <1200000>;
@@ -333,11 +333,11 @@
 						00 00 8a 8a];
 		qcom,platform-regulator-settings = [1d 1d 1d 1d 1d];
 
-		qcom,phy-supply-entries {
+		qcom_phy_supply_entries: qcom,phy-supply-entries {
 			#address-cells = <1>;
 			#size-cells = <0>;
 
-			qcom,phy-supply-entry@0 {
+			qcom_phy_supply_entry_0: qcom,phy-supply-entry@0 {
 				reg = <0>;
 				qcom,supply-name = "vdda-0p9";
 				qcom,supply-min-voltage = <880000>;

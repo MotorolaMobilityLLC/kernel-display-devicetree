@@ -35,8 +35,8 @@
 
 		qcom,mdss-dsi-wr-mem-start = <0x2c>;
 		qcom,mdss-dsi-wr-mem-continue = <0x3c>;
-		qcom,mdss-dsi-display-timings {
-			timing@0 {
+		qcom_mdss_dsi_display_timings_45: qcom,mdss-dsi-display-timings {
+			timing_0_46: timing@0 {
 				cell-index = <0>;
 				qcom,mdss-dsi-panel-framerate = <60>;
 				qcom,mdss-dsi-panel-width = <1080>;
