@@ -85,6 +85,18 @@ qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 00 00 00 02 5F 10
 		];
 
+qcom,mdss-dsi-hbm-off-command = [
+               39 00 00 40 00 00 02 5F 10
+               39 00 00 00 00 00 03 51 2C 50
+               ];
+qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
+qcom,mdss-dsi-hbm-on-command = [
+               39 00 00 40 00 00 02 5F 00
+               39 00 00 00 00 00 03 51 3F FC
+               ];
+qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
+
+
 qcom,mdss-dsi-display-timings {
 
 	timing@0{
