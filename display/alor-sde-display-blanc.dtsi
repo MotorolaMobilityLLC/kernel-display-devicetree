@@ -203,6 +203,7 @@
 &sde_dp {
 	status = "ok";
 	qcom,dp-downgrade;
+	qcom,dp-hbr3-disable;
 	mmi,aux-switch-enable-gpio = <&tlmm 119 0>;
 	mmi,aux-switch-flip-gpio = <&tlmm 120 0>;
 	qcom,dp-aux-switch = <&dp_aux_flip_switch>;
