@@ -176,9 +176,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -204,7 +204,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14258>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -308,9 +308,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -336,7 +336,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	//qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14893>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -386,9 +386,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -414,7 +414,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	//qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14893>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -549,9 +549,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -577,7 +577,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 	qcom,is_legacy_panel;
 	//qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14893>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -711,9 +711,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -739,7 +739,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 	qcom,is_legacy_panel;
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14893>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -873,9 +873,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -901,7 +901,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 	qcom,is_legacy_panel;
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14893>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -1035,9 +1035,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -1063,7 +1063,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 	qcom,is_legacy_panel;
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <14893>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -1197,9 +1197,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -1353,9 +1353,9 @@
 	qcom,mdss-dsi-no-panel-on-read-support;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <15200>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <15200>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-reset-gpio = <&tlmm 98 0>;
 	qcom,platform-vdd-enable-gpio = <&tlmm 111 0>;
 	qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -1511,9 +1511,9 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <16380>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-sec-reset-gpio = <&tlmm 73 0>;
 	/* qcom,platform-sec-vio-enable-gpio = <&tlmm 97 0>; */
 	qcom,platform-sec-vdd-enable-gpio = <&tlmm 60 0>;
@@ -1541,7 +1541,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15584>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -1644,9 +1644,9 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <16380>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-sec-reset-gpio = <&tlmm 73 0>;
 	/* qcom,platform-sec-vio-enable-gpio = <&tlmm 97 0>; */
 	qcom,platform-sec-vdd-enable-gpio = <&tlmm 60 0>;
@@ -1674,7 +1674,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15584>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -1777,9 +1777,9 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <16380>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-sec-reset-gpio = <&tlmm 73 0>;
 	/* qcom,platform-sec-vio-enable-gpio = <&tlmm 97 0>; */
 	qcom,platform-sec-vdd-enable-gpio = <&tlmm 60 0>;
@@ -1807,7 +1807,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15584>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
@@ -1910,9 +1910,9 @@
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-sec-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <420>;
-	qcom,mdss-dsi-bl-max-level = <16380>;
+	qcom,mdss-dsi-bl-max-level = <15584>;
 	qcom,mdss-dsi-bl-default-level = <8190>;
-	qcom,mdss-brightness-max-level = <16380>;
+	qcom,mdss-brightness-max-level = <15584>;
 	qcom,platform-sec-reset-gpio = <&tlmm 73 0>;
 	/* qcom,platform-sec-vio-enable-gpio = <&tlmm 97 0>; */
 	qcom,platform-sec-vdd-enable-gpio = <&tlmm 60 0>;
@@ -1940,7 +1940,7 @@
 	qcom,mdss-dsi-panel-blackness-level = <1>;
 
 	qcom,apl-enabled;
-	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15584>;
+	qcom,mdss-dsi-panel-APL-THRESHOLD-BL = <15102>;
 	qcom,mdss-dsi-panel-APL-FUNC-ID = <0>;
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 00 00 00 03 5F 00 01];
