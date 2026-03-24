@@ -906,6 +906,7 @@
 	qcom,mdss-dsi-hbm-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
 		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 02 85 08
 		39 00 00 40 00 00 04 FF 5A A5 00
 		39 00 00 00 00 00 03 51 3F FC
 	];
@@ -917,6 +918,7 @@
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
 		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 02 85 08
 		39 00 00 00 00 00 04 FF 5A A5 00];
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
@@ -1115,6 +1117,7 @@
 	qcom,mdss-dsi-hbm-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
 		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 02 85 08
 		39 00 00 40 00 00 04 FF 5A A5 00
 		39 00 00 00 00 00 03 51 3F FC
 	];
@@ -1126,6 +1129,7 @@
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
 		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 02 85 08
 		39 00 00 00 00 00 04 FF 5A A5 00];
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
@@ -1324,6 +1328,7 @@
 	qcom,mdss-dsi-hbm-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
 		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 02 85 08
 		39 00 00 40 00 00 04 FF 5A A5 00
 		39 00 00 00 00 00 03 51 3F FC
 	];
@@ -1335,6 +1340,7 @@
 	qcom,mdss-dsi-panel-apl-on-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
 		39 00 00 40 00 00 02 80 A9
+		39 00 00 40 00 00 02 85 08
 		39 00 00 00 00 00 04 FF 5A A5 00];
 	qcom,mdss-dsi-panel-apl-off-command = [
 		39 00 00 40 00 00 04 FF 5A A5 1E
