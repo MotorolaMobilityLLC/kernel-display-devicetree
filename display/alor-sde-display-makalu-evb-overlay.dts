@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "alor-sde-display-makalu.dtsi"
+
+/ {
+	model = "makalu";
+	compatible = "qcom,alor-qrd", "qcom,alor", "qcom,qrd";
+	qcom,msm-id = <685 0x10000>;
+	qcom,board-id = <0x48 0x9100>;
+};
