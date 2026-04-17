@@ -205,8 +205,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 00 00 00 04 FF 5A A5 00
 
@@ -311,8 +311,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -454,8 +454,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 84 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -558,8 +558,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 84 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -702,8 +702,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 85 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -806,8 +806,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 85 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -951,8 +951,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 01 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -1056,8 +1056,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 01 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1201,8 +1201,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 03 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -1306,8 +1306,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 03 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1451,8 +1451,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 04 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -1556,8 +1556,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 04 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1701,8 +1701,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -1806,8 +1806,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -1951,8 +1951,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale disable
@@ -2056,8 +2056,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -2200,8 +2200,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -2305,8 +2305,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -2448,8 +2448,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 84 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -2552,8 +2552,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 84 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -2696,8 +2696,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 85 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -2800,8 +2800,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 85 00
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -2945,8 +2945,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 01 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -3050,8 +3050,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 01 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -3195,8 +3195,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 03 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -3300,8 +3300,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 03 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -3445,8 +3445,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 04 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -3550,8 +3550,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 04 //TE
 			39 00 00 40 00 00 02 CD 21 //dimming enable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 80 //dimming enable
-			39 00 00 40 00 00 03 86 31 80 //dimming enable
+			39 00 00 40 00 00 03 8B 31 80 //dimming enable
+			39 00 00 40 00 00 03 8C 31 80 //dimming enable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -3695,8 +3695,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -3800,8 +3800,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
@@ -3945,8 +3945,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 			39 00 00 00 00 00 04 FF 5A A5 00
 
 			39 00 00 40 00 00 04 FF 5A A5 00 //scale enable
@@ -4050,8 +4050,8 @@ qcom,mdss-dsi-display-timings {
 			39 00 00 40 00 00 02 F2 00 //TE
 			39 00 00 40 00 00 02 CD 01 //dimming disable
 			39 00 00 40 00 00 04 FF 5A A5 24
-			39 00 00 40 00 00 03 85 31 00 //dimming disable
-			39 00 00 40 00 00 03 86 31 00 //dimming disable
+			39 00 00 40 00 00 03 8B 31 00 //dimming disable
+			39 00 00 40 00 00 03 8C 31 00 //dimming disable
 
 			39 00 00 40 00 00 04 FF 5A A5 08 //esd check
 			39 00 00 40 00 00 02 D2 01
