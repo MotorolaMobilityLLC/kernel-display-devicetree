@@ -6,6 +6,8 @@ dtbo-$(CONFIG_BLANC_DTB) += display/alor-sde-display-blanc-evb-overlay.dtbo
 dtbo-$(CONFIG_MAKALU_DTB) += display/alor-sde-display-makalu-evb-overlay.dtbo
 dtbo-$(CONFIG_VANTAGE_DTB) += display/alor-sde-display-vantage-dvt1b-overlay.dtbo
 dtbo-$(CONFIG_AVR_DTB) += display/alor-sde-display-avr-evb-overlay.dtbo
+dtbo-$(CONFIG_ELETRE_DTB) += display/alor-sde-display-eletre-evb-overlay.dtbo 
+
 
 else
 
