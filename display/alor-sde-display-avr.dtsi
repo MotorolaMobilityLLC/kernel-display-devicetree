@@ -997,6 +997,7 @@
 							0B 0A 02 04 00 21 10];
 		};
 		timing@8 { //1080p 120hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1006,6 +1007,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@9 { //1080p 144hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <864000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1014,6 +1016,7 @@
 							07 08 02 04 00 19 0C];
 		};
 		timing@10 { //1080p 90hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1023,6 +1026,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@11 { //1080p 60hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1032,6 +1036,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@12 { //1080p 30hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1041,6 +1046,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@13 { //1080p 24hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1050,6 +1056,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@14 { //1080p 10hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-special-idle-10hz;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1058,6 +1065,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@15 { //1080p 1hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1208,6 +1216,7 @@
 							0B 0A 02 04 00 21 10];
 		};
 		timing@8 { //1080p 120hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1217,6 +1226,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@9 { //1080p 144hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <864000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1225,6 +1235,7 @@
 							07 08 02 04 00 19 0C];
 		};
 		timing@10 { //1080p 90hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1234,6 +1245,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@11 { //1080p 60hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1243,6 +1255,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@12 { //1080p 30hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1252,6 +1265,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@13 { //1080p 24hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1261,6 +1275,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@14 { //1080p 10hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-special-idle-10hz;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1269,6 +1284,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@15 { //1080p 1hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1419,6 +1435,7 @@
 							0B 0A 02 04 00 21 10];
 		};
 		timing@8 { //1080p 120hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1428,6 +1445,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@9 { //1080p 144hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,mdss-dsi-panel-clockrate = <864000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1436,6 +1454,7 @@
 							07 08 02 04 00 19 0C];
 		};
 		timing@10 { //1080p 90hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-90hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1445,6 +1464,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@11 { //1080p 60hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1454,6 +1474,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@12 { //1080p 30hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1463,6 +1484,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@13 { //1080p 24hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-no-duplicated;
 			qcom,framerate-group-120hz-based;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
@@ -1472,6 +1494,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@14 { //1080p 10hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-special-idle-10hz;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
 			qcom,display-topology = <2 2 1>;
@@ -1480,6 +1503,7 @@
 							06 07 02 04 00 16 0B];
 		};
 		timing@15 { //1080p 1hz
+			qcom,framerate-group-resolution-1080p;
 			qcom,framerate-group-special-idle-1hz;
 			qcom,mdss-dsi-panel-clockrate = <720000000>;
 			qcom,display-topology = <2 2 1>;
